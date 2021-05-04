@@ -333,10 +333,31 @@ template {
 } */
 @font-face {
   font-style: normal;
-  font-weight: 400;
-  font-family: "";
+  font-weight: 300;
+  font-family: "Proxima Nova";
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2"), url("../fonts/.woff") format("woff"); }
+  src: url("../fonts/ProximaNova-Light.woff2") format("woff2"), url("../fonts/ProximaNova-Light.woff") format("woff"); }
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Proxima Nova";
+  font-display: swap;
+  src: url("../fonts/ProximaNova-Reg.woff2") format("woff2"), url("../fonts/ProximaNova-Reg.woff") format("woff"); }
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Proxima Nova";
+  font-display: swap;
+  src: url("../fonts/ProximaNova-Semibold.woff2") format("woff2"), url("../fonts/ProximaNova-Semibold.woff") format("woff"); }
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Proxima Nova";
+  font-display: swap;
+  src: url("../fonts/ProximaNova-Bold.woff2") format("woff2"), url("../fonts/ProximaNova-Bold.woff") format("woff"); }
 
 *,
 *::before,
@@ -359,15 +380,15 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
-  font-family: "", "Arial", sans-serif;
-  color: #000000;
-  background-color: #ffffff;
+  line-height: 22px;
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  color: #505050;
+  background-color: #f2f2f2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
 a {
-  color: #000000;
+  color: #0098c1;
   text-decoration: none; }
 
 img,
@@ -540,7 +561,7 @@ button,
           align-items: center;
   min-height: 100px;
   padding: 0 40px;
-  background-color: #2c39f2; }
+  background-color: #0098c1; }
   .header__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -568,7 +589,7 @@ button,
 .footer {
   min-height: 100px;
   padding: 0 60px;
-  background-color: #2c39f2; }
+  background-color: #0098c1; }
 
 .modal {
   position: fixed;
