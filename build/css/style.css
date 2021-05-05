@@ -1386,6 +1386,37 @@ p {
     line-height: 22px;
     color: #505050; }
 
+.schedule ol,
+.schedule ul {
+  list-style-type: none; }
+
+.schedule__program {
+  padding: 15px 0;
+  margin: 0; }
+
+.schedule__days {
+  padding-left: 238px; }
+  @media (max-width: 1439px) {
+    .schedule__days {
+      padding-left: 90px; } }
+  @media (max-width: 1023px) {
+    .schedule__days {
+      padding-left: 0; } }
+
+.schedule__day {
+  padding-left: 0; }
+
+.info-bottom {
+  margin: 10px 0;
+  padding: 30px 0 30px 238px;
+  border-top: 1px solid #0098c1; }
+  @media (max-width: 1439px) {
+    .info-bottom {
+      padding: 30px 0 30px 90px; } }
+  @media (max-width: 1023px) {
+    .info-bottom {
+      padding: 30px 0 30px 0; } }
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
