@@ -1,0 +1,88 @@
+.search-input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @include viewport--sm {
+    border-top: 1px solid $color-default-white;
+    border-bottom: 1px solid $color-default-white;
+  }
+}
+
+.search-input__label {
+  width: 100%;
+  font-size: 0;
+}
+
+.search-input__input {
+  width: 100%;
+  border: none;
+  padding: 20px;
+  padding-left: 10px;
+  font-size: 38px;
+  font-weight: 300;
+  line-height: 51px;
+  border-radius: 0;
+  color: $color-blue;
+
+  &:focus {
+    outline: none;
+  }
+
+  @include viewport--sm {
+    font-size: 33px;
+    line-height: 44px;
+    color: $color-default-white;
+    padding: 10px;
+    padding-left: 0;
+    background-color: $color-blue;
+  }
+}
+
+.search-input__input::placeholder {
+  font-size: 38px;
+  font-weight: 300;
+  line-height: 51px;
+  color: $color-blue;
+
+  @include viewport--sm {
+    font-size: 33px;
+    line-height: 44px;
+    color: $color-default-white;
+  }
+}
+
+.search-input__button {
+  display: block;
+  border: none;
+  background-color: $color-default-white;
+  font-size: 0;
+  padding-left: 0;
+  cursor: pointer;
+  transition: opacity $default-transition-settings;
+
+  svg {
+    fill: $color-blue;
+    width: 20px;
+    height: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+    outline: none;
+  }
+
+  @include viewport--sm {
+    background-color: transparent;
+
+    svg {
+      fill: $color-default-white;
+    }
+  }
+}

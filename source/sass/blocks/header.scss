@@ -1,36 +1,240 @@
 .header {
+  min-height: 150px;
   display: flex;
-  align-items: center;
-  min-height: 100px;
-  padding: 0 40px;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  transition: transform 0.3s ease;
 
-  background-color: $color-white;
-
-  &__wrapper {
-    display: flex;
-    align-items: center;
+  @include viewport--sm {
+    background-color: $color-default-white;
+    min-height: 91px;
   }
 
-  a,
-  p {
-    color: $color-blue;
-  }
+  &__main {
+    background-color: $color-default-white;
 
-  ul {
-    display: flex;
-    margin: 0;
-    margin-right: 20px;
-    margin-left: 60px;
-    padding: 0;
+    a {
+      color: $color-blue;
+      line-height: 21px;
+      font-weight: 600;
+    }
 
-    list-style: none;
+    @include viewport--sm {
+      order: 1;
 
-    li {
-      margin-right: 20px;
+      a {
+        font-size: 18px;
+        line-height: 24px;
+      }
     }
   }
 
-  .main-nav__toggle {
+  &__main-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+
+  &__main-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    svg {
+      margin-left: 10px;
+    }
+
+    @media (max-width: 1279px) {
+      position: absolute;
+      top: 40px;
+      right: 80px;
+    }
+
+    @include viewport--sm {
+      right: 20px;
+      top: 50%;
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    min-height: 50px;
+    list-style: none;
+    align-items: center;
+
+    li {
+      margin-left: 20px;
+    }
+
+    a {
+      color: $color-nobel;
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+
+      &:hover,
+      &:active {
+        color: $color-gray-dark;
+
+        svg {
+          fill: $color-gray-dark;
+        }
+      }
+    }
+
+    svg {
+      fill: $color-gray;
+      margin-top: 8px;
+      transition: 0.3s ease;
+    }
+
+    @include viewport--sm {
+      order: 2;
+      display: none;
+    }
+  }
+
+  &__logo {
+    margin-right: auto;
+  }
+
+  &__logo--desktop {
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  &__logo--mobile {
+    display: none;
+
+    @include viewport--sm {
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      svg {
+        fill: $color-blue;
+      }
+    }
+  }
+
+  &__item--terms,
+  &__item--search {
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  &__search {
+    display: flex;
+  }
+}
+
+.header__search.header__search--hidden {
+  display: none;
+}
+
+.header--mobile-opened {
+  background-color: $color-blue;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+
+  .main-nav__wrapper {
+    display: flex;
+  }
+
+  .main-nav {
+    margin-top: 160px;
+  }
+
+  .header__main {
+    background-color: $color-blue;
+  }
+
+  .header__main-wrapper {
+    padding-bottom: 10px;
+  }
+
+  .main-nav__list,
+  .header__top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    li {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    a {
+      padding: 10px;
+      padding-left: 0;
+      width: 100%;
+    }
+  }
+
+  .header__top {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    height: auto;
+
+    a {
+      display: inline-block;
+      font-size: 16px;
+      line-height: 21px;
+
+      &:hover,
+      &:active {
+        color: $color-default-white;
+      }
+    }
+  }
+
+  a {
+    color: $color-default-white;
+  }
+
+  svg {
+    fill: $color-default-white;
+  }
+
+  .header__logo--mobile {
+    top: 90px;
+
+    svg {
+      width: 92px;
+      height: 82px;
+    }
+  }
+
+  .header__search.header__search--hidden {
+    display: block;
+  }
+
+  .header__main-right {
     display: none;
   }
+}
+
+main {
+  height: 5000px;
 }
