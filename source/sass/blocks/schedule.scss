@@ -1,0 +1,27 @@
+.schedule {
+  ol,
+  ul {
+    list-style-type: none;
+  }
+
+  &__program {
+    padding: 15px 0;
+    margin: 0;
+  }
+
+  &__days {
+    padding-left: 238px;
+
+    @include viewport--lg {
+      padding-left: 90px;
+    }
+
+    @include viewport--md {
+      padding-left: 0;
+    }
+  }
+
+  &__day {
+    padding-left: 0;
+  }
+}
