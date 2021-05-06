@@ -1396,9 +1396,6 @@ p {
   .header--mobile-opened .header__main-right {
     display: none; }
 
-main {
-  height: 5000px; }
-
 .footer {
   min-height: 100px;
   padding: 0 60px;
