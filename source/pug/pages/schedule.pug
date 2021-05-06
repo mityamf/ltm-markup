@@ -1,0 +1,18 @@
+extends ../base/layout
+
+block variables
+  - var title = "Расписание"
+  - var hasHeader = true
+  - var hasFooter = true
+
+block main
+  include ../data/schedule
+  main.container
+    div.schedule
+      ul.schedule__program
+        each program in programs
+          +renderProgram(program.title, program.schedule)
+      include ../data/info-bottom
+
+
+

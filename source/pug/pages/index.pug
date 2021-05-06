@@ -59,15 +59,26 @@ block main
         src: "main.html"
       },
       {
-        name: "Название страницы (состояние страницы, если отдельное) — ссылка на страницу",
-        src: "#"
+        name: "Новости — news.html",
+        src: "news.html"
+      },
+      {
+        name: "Об ивенте - about.html",
+        src: "about.html"
+      },
+      {
+        name: "Расписание - schedule.html",
+        src: "schedule.html"
       },
     ]
 
   main.container.main-index
-    img(src="https://via.placeholder.com/300x150" width="300" alt="Логотип проекта")
+    img(src="../img/sprite/logo.svg" width="300" alt="Логотип проекта")
     h1 Список страниц и компонентов
     ol
       each page in pages
         li
           a(href= page.src)= page.name
+
+
+

@@ -2,7 +2,7 @@
 //---------------------------------
 
 @import "vendor/normalize";
-// @import "vendor/swiper";
+@import "vendor/swiper";
 
 // Global
 //---------------------------------
@@ -13,6 +13,7 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
+@import "global/text";
 
 // Blocks
 //---------------------------------
@@ -20,6 +21,11 @@
 @import "blocks/header";
 @import "blocks/footer";
 @import "blocks/modal";
+
+@import "blocks/about";
+@import "blocks/schedule";
+@import "blocks/info-bottom";
+@import "blocks/news";
 
 
 // используйте это для отключения ховеров на тач устройствах
