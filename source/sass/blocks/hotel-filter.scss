@@ -1,0 +1,17 @@
+.hotel-filter {
+  &__list {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__list li {
+    margin-right: 5px;
+  }
+
+  &__link {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: lighter;
+  }
+}

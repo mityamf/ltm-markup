@@ -1,0 +1,10 @@
+mixin renderHotelCard(title, photoList, logo)
+  - var cls = ['hotel-card__photo--big', 'hotel-card__photo--small']
+  li.hotel-card
+    ul.hotel-card__photos
+      each photo, index in photoList
+        li.hotel-card__photo
+          img(src=photo, class=cls[index % 2])
+    div.hotel-card__info
+      img(src=logo)
+      h2.hotel-card__title=title

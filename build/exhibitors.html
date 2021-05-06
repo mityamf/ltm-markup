@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>События</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Luxury Travel Mart - the leading luxury travel exhibition">
+    <link rel="preload" href="fonts/ProximaNova-Reg.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div style="display:none"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="logo" viewBox="0 0 178 66.278">
+  <path id="Path_1" data-name="Path 1" d="M804.628,222.26h2.064V214.4h2.815v-1.8H801.8v1.8h2.828Z" transform="translate(-718.893 -208.546)" fill="#0098c1"/>
+  <path id="Path_2" data-name="Path 2" d="M878.864,218.205h4.555v4.054H885.5V212.6h-2.077v3.791h-4.555V212.6H876.8v9.66h2.065Z" transform="translate(-784.509 -208.546)" fill="#0098c1"/>
+  <path id="Path_3" data-name="Path 3" d="M971.232,220.445h-4.78v-2.19h4.68v-1.8h-4.68V214.4h4.78v-1.8H964.4v9.66h6.832Z" transform="translate(-861.149 -208.546)" fill="#0098c1"/>
+  <path id="Path_4" data-name="Path 4" d="M1073.444,220.445h-4.079V212.6H1067.3v9.66h6.144Z" transform="translate(-951.173 -208.546)" fill="#0098c1"/>
+  <path id="Path_5" data-name="Path 5" d="M1137.632,220.445h-4.78v-2.19h4.68v-1.8h-4.68V214.4h4.78v-1.8H1130.8v9.66h6.832Z" transform="translate(-1006.728 -208.546)" fill="#0098c1"/>
+  <path id="Path_6" data-name="Path 6" d="M1195.865,220.62h4.142l.588,1.639h2.352l-3.729-9.659h-2.578l-3.741,9.659h2.34Zm2.077-5.968,1.5,4.154h-3.016Z" transform="translate(-1061.058 -208.546)" fill="#0098c1"/>
+  <path id="Path_7" data-name="Path 7" d="M1292.234,217.342c0-2.915-2.1-4.842-5.13-4.842h-3.8v9.66h3.8C1290.132,222.172,1292.234,220.258,1292.234,217.342Zm-6.882-3.028h1.752a2.823,2.823,0,0,1,3.028,3.028,2.892,2.892,0,0,1-3.028,3.015h-1.752Z" transform="translate(-1140.147 -208.459)" fill="#0098c1"/>
+  <rect id="Rectangle_3" data-name="Rectangle 3" width="2.052" height="9.659" transform="translate(153.914 4.054)" fill="#0098c1"/>
+  <path id="Path_8" data-name="Path 8" d="M1410.594,218.668l-4.479-6.068H1404v9.66h2.052v-6.306l4.6,6.306h1.99V212.6h-2.052Z" transform="translate(-1245.744 -208.546)" fill="#0098c1"/>
+  <path id="Path_9" data-name="Path 9" d="M1492.43,215.867v1.8h2.553v1.164a3.241,3.241,0,0,1-2.052.738,3.182,3.182,0,0,1,0-6.356,2.732,2.732,0,0,1,2.29,1.264l1.714-.926a4.53,4.53,0,0,0-3.991-2.152,5.007,5.007,0,1,0,0,10.01,5.376,5.376,0,0,0,4.117-1.827v-3.7h-4.63Z" transform="translate(-1319.059 -207.496)" fill="#0098c1"/>
+  <path id="Path_10" data-name="Path 10" d="M802.3,328v9.659h6.144v-1.814h-4.091V328Z" transform="translate(-719.331 -309.507)" fill="#0098c1"/>
+  <path id="Path_11" data-name="Path 11" d="M863,328v5.806c0,2.377,1.426,4.029,4.367,4.029s4.354-1.639,4.354-4.041V328h-2.1v5.743a2.271,2.271,0,1,1-4.542,0V328Z" transform="translate(-772.436 -309.507)" fill="#0098c1"/>
+  <path id="Path_12" data-name="Path 12" d="M946.3,332.7l-3.5,4.955h2.44l2.44-3.541,2.415,3.541h2.465l-3.5-4.967L952.334,328h-2.477l-2.177,3.291L945.453,328h-2.44Z" transform="translate(-842.251 -309.507)" fill="#0098c1"/>
+  <path id="Path_13" data-name="Path 13" d="M1035.354,337.835c2.94,0,4.367-1.639,4.367-4.041V328h-2.1v5.743a2.271,2.271,0,1,1-4.542,0V328H1031v5.806C1031,336.183,1032.414,337.835,1035.354,337.835Z" transform="translate(-919.415 -309.507)" fill="#0098c1"/>
+  <path id="Path_14" data-name="Path 14" d="M1120.764,334.131h1.5l1.9,3.428h2.365l-2.177-3.679a2.783,2.783,0,0,0,2.115-2.865,3.013,3.013,0,0,0-3.253-3.116H1118.7v9.659h2.052v-3.428Zm0-4.417h2.165a1.309,1.309,0,1,1,0,2.6h-2.165Z" transform="translate(-996.142 -309.419)" fill="#0098c1"/>
+  <path id="Path_15" data-name="Path 15" d="M1189.529,337.659h2.052v-3.954l3.7-5.706h-2.352l-2.377,3.879-2.4-3.879H1185.8l3.729,5.706Z" transform="translate(-1054.846 -309.507)" fill="#0098c1"/>
+  <path id="Path_16" data-name="Path 16" d="M804.628,452.972h2.064v-7.858h2.815V443.3H801.8v1.814h2.828Z" transform="translate(-718.893 -410.38)" fill="#0098c1"/>
+  <path id="Path_17" data-name="Path 17" d="M878.952,449.531h1.514l1.9,3.428h2.365l-2.19-3.679a2.771,2.771,0,0,0,2.115-2.865,3.009,3.009,0,0,0-3.241-3.116H876.9v9.659h2.052Zm0-4.417h2.165a1.309,1.309,0,1,1,0,2.6h-2.165Z" transform="translate(-784.597 -410.38)" fill="#0098c1"/>
+  <path id="Path_18" data-name="Path 18" d="M952.306,443.3h-2.578L946,452.972h2.352l.613-1.639h4.141l.6,1.639h2.34Zm-2.79,6.219,1.5-4.154,1.5,4.154Z" transform="translate(-845.051 -410.38)" fill="#0098c1"/>
+  <path id="Path_19" data-name="Path 19" d="M1028.919,452.972l3.729-9.672H1030.3l-2.665,7.432-2.678-7.432H1022.6l3.741,9.672Z" transform="translate(-912.066 -410.38)" fill="#0098c1"/>
+  <path id="Path_20" data-name="Path 20" d="M1119.744,445.114V443.3H1112.9v9.672h6.844v-1.814h-4.78v-2.19h4.68v-1.814h-4.68v-2.039Z" transform="translate(-991.068 -410.38)" fill="#0098c1"/>
+  <path id="Path_21" data-name="Path 21" d="M1183.4,443.3v9.672h6.131v-1.814h-4.079V443.3Z" transform="translate(-1052.747 -410.38)" fill="#0098c1"/>
+  <path id="Path_22" data-name="Path 22" d="M802.5,568.372h6.832v-1.814h-4.767v-2.19h4.68v-1.814h-4.68v-2.039h4.767V558.7H802.5Z" transform="translate(-719.506 -511.341)" fill="#0098c1"/>
+  <path id="Path_23" data-name="Path 23" d="M874.447,558.7h-2.478l-2.19,3.3-2.215-3.3h-2.44l3.278,4.717-3.5,4.955h2.453l2.427-3.541,2.427,3.541h2.465l-3.5-4.98Z" transform="translate(-774.098 -511.341)" fill="#0098c1"/>
+  <path id="Path_24" data-name="Path 24" d="M961.884,568.372V558.7h-2.065v3.8h-4.567v-3.8H953.2v9.672h2.052v-4.067h4.567v4.067Z" transform="translate(-851.35 -511.341)" fill="#0098c1"/>
+  <rect id="Rectangle_4" data-name="Rectangle 4" width="2.065" height="9.659" transform="translate(112.798 47.359)" fill="#0098c1"/>
+  <path id="Path_25" data-name="Path 25" d="M1081.594,563.38a2.145,2.145,0,0,0,1.664-2.215,2.5,2.5,0,0,0-2.778-2.465h-5.08v9.672h5.243a2.55,2.55,0,0,0,2.815-2.6A2.375,2.375,0,0,0,1081.594,563.38Zm-4.142-2.9h2.578a1.042,1.042,0,0,1,1.126,1.064,1.024,1.024,0,0,1-1.126,1.039h-2.578Zm2.653,6.106h-2.653V564.33h2.653a1.134,1.134,0,0,1,1.251,1.126A1.1,1.1,0,0,1,1080.1,566.583Z" transform="translate(-958.26 -511.341)" fill="#0098c1"/>
+  <rect id="Rectangle_5" data-name="Rectangle 5" width="2.065" height="9.659" transform="translate(127.1 47.359)" fill="#0098c1"/>
+  <path id="Path_26" data-name="Path 26" d="M1184.9,560.514h2.828v7.858h2.065v-7.858h2.815V558.7H1184.9Z" transform="translate(-1054.059 -511.341)" fill="#0098c1"/>
+  <rect id="Rectangle_6" data-name="Rectangle 6" width="2.052" height="9.659" transform="translate(140.225 47.359)" fill="#0098c1"/>
+  <path id="Path_27" data-name="Path 27" d="M1295.943,557.5a4.993,4.993,0,1,0,5.055,4.992A4.851,4.851,0,0,0,1295.943,557.5Zm0,8.171a3.181,3.181,0,1,1,2.94-3.178A2.936,2.936,0,0,1,1295.943,565.671Z" transform="translate(-1146.796 -510.291)" fill="#0098c1"/>
+  <path id="Path_28" data-name="Path 28" d="M1388.064,562.066l4.6,6.306h1.99V558.7h-2.064v6.068l-4.467-6.068H1386v9.672h2.064Z" transform="translate(-1229.997 -511.341)" fill="#0098c1"/>
+  <rect id="Rectangle_7" data-name="Rectangle 7" width="0.551" height="4.417" transform="translate(82.819 60.647)" fill="#0098c1"/>
+  <path id="Path_29" data-name="Path 29" d="M816.539,674a1.593,1.593,0,0,0-1.139.538v-.463h-.5v3.191h.5v-2.34a1.221,1.221,0,0,1,.951-.5c.425,0,.713.175.713.738v2.09h.5v-2.24A.915.915,0,0,0,816.539,674Z" transform="translate(-730.354 -612.214)" fill="#0098c1"/>
+  <path id="Path_30" data-name="Path 30" d="M860.5,669.3h2.89v-.488h-2.34V667.3h2.29v-.5h-2.29v-1.414h2.34V664.9H860.5Z" transform="translate(-770.249 -604.253)" fill="#0098c1"/>
+  <path id="Path_31" data-name="Path 31" d="M891.826,674a1.68,1.68,0,0,0-1.276.526l.238.35a1.3,1.3,0,0,1,.976-.451c.463,0,.8.25.8.676v.576a1.335,1.335,0,0,0-1.051-.438,1.045,1.045,0,0,0-1.114,1.051,1.063,1.063,0,0,0,1.114,1.064,1.377,1.377,0,0,0,1.051-.438v.363h.5v-2.2C893.065,674.3,892.5,674,891.826,674Zm.738,2.59a1.065,1.065,0,0,1-.876.4.706.706,0,1,1,0-1.4,1.065,1.065,0,0,1,.876.4Z" transform="translate(-796.408 -612.214)" fill="#0098c1"/>
+  <path id="Path_32" data-name="Path 32" d="M919.276,674.9c0-.288.275-.5.7-.5a1.25,1.25,0,0,1,.951.4l.238-.338a1.6,1.6,0,0,0-1.189-.463c-.763,0-1.189.425-1.189.913,0,1.189,1.977.713,1.977,1.476,0,.313-.263.551-.751.551a1.469,1.469,0,0,1-1.051-.45l-.263.35a1.715,1.715,0,0,0,1.289.5c.826,0,1.264-.425,1.264-.963C921.252,675.139,919.276,675.6,919.276,674.9Z" transform="translate(-821.167 -612.214)" fill="#0098c1"/>
+  <path id="Path_33" data-name="Path 33" d="M944.751,671.3c-.213,0-.325-.175-.325-.413v-1.977h.651v-.438h-.651V667.6h-.5v.876H943.4v.438h.526V671a.658.658,0,0,0,.713.751.857.857,0,0,0,.6-.2l-.15-.375A.522.522,0,0,1,944.751,671.3Z" transform="translate(-842.776 -606.615)" fill="#0098c1"/>
+  <path id="Path_34" data-name="Path 34" d="M963.776,674a1.6,1.6,0,0,0-1.576,1.677,1.584,1.584,0,0,0,1.626,1.677,1.777,1.777,0,0,0,1.276-.488l-.238-.325a1.38,1.38,0,0,1-.989.4,1.122,1.122,0,0,1-1.151-1.1h2.59v-.125A1.548,1.548,0,0,0,963.776,674Zm-1.051,1.477a1.063,1.063,0,0,1,1.039-1.064,1.031,1.031,0,0,1,1.051,1.064Z" transform="translate(-859.224 -612.214)" fill="#0098c1"/>
+  <path id="Path_35" data-name="Path 35" d="M995.3,674.588v-.513h-.5v3.191h.5V675a1.168,1.168,0,0,1,.863-.513.52.52,0,0,1,.2.025V674A1.4,1.4,0,0,0,995.3,674.588Z" transform="translate(-887.745 -612.214)" fill="#0098c1"/>
+  <path id="Path_36" data-name="Path 36" d="M1015.239,674a1.593,1.593,0,0,0-1.139.538v-.463h-.5v3.191h.5v-2.34a1.221,1.221,0,0,1,.951-.5c.425,0,.713.175.713.738v2.09h.5v-2.24A.915.915,0,0,0,1015.239,674Z" transform="translate(-904.193 -612.214)" fill="#0098c1"/>
+  <path id="Path_37" data-name="Path 37" d="M1059.2,669.3h2.89v-.488h-2.34V667.3h2.29v-.5h-2.29v-1.414h2.34V664.9h-2.89Z" transform="translate(-944.087 -604.253)" fill="#0098c1"/>
+  <path id="Path_38" data-name="Path 38" d="M1092.565,677.04a1.211,1.211,0,0,1-.951.488c-.425,0-.713-.163-.713-.726v-2.1h-.5v2.252a.9.9,0,0,0,1.013,1.013,1.583,1.583,0,0,0,1.139-.526v.45h.5V674.7h-.5v2.34Z" transform="translate(-971.383 -612.827)" fill="#0098c1"/>
+  <path id="Path_39" data-name="Path 39" d="M1121.4,674.588v-.513h-.5v3.191h.5V675a1.168,1.168,0,0,1,.863-.513.52.52,0,0,1,.2.025V674A1.382,1.382,0,0,0,1121.4,674.588Z" transform="translate(-998.067 -612.214)" fill="#0098c1"/>
+  <path id="Path_40" data-name="Path 40" d="M1139.777,674a1.68,1.68,0,1,0,1.577,1.677A1.565,1.565,0,0,0,1139.777,674Zm0,2.9a1.246,1.246,0,1,1,1.063-1.239A1.11,1.11,0,0,1,1139.777,676.9Z" transform="translate(-1013.202 -612.214)" fill="#0098c1"/>
+  <path id="Path_41" data-name="Path 41" d="M1172.777,674a1.314,1.314,0,0,0-1.076.551v-.476h-.5v4.417h.5v-1.7a1.3,1.3,0,0,0,1.076.563,1.478,1.478,0,0,0,1.426-1.677C1174.2,674.626,1173.627,674,1172.777,674Zm-.113,2.9a1.177,1.177,0,0,1-.951-.513v-1.439a1.2,1.2,0,0,1,.951-.513c.638,0,1.026.526,1.026,1.226S1173.3,676.9,1172.664,676.9Z" transform="translate(-1042.073 -612.214)" fill="#0098c1"/>
+  <path id="Path_42" data-name="Path 42" d="M1202.977,674a1.6,1.6,0,0,0-1.577,1.677,1.577,1.577,0,0,0,1.626,1.677,1.776,1.776,0,0,0,1.276-.488l-.238-.325a1.38,1.38,0,0,1-.989.4,1.122,1.122,0,0,1-1.151-1.1h2.59v-.125A1.562,1.562,0,0,0,1202.977,674Zm-1.064,1.477a1.063,1.063,0,0,1,1.038-1.064,1.031,1.031,0,0,1,1.051,1.064Z" transform="translate(-1068.494 -612.214)" fill="#0098c1"/>
+  <path id="Path_43" data-name="Path 43" d="M1232.975,694.8a.35.35,0,0,0-.351.35.316.316,0,0,0,.313.338c.038,0,.075,0,.088-.013a.993.993,0,0,1-.425.613l.238.2a1.3,1.3,0,0,0,.551-1A.446.446,0,0,0,1232.975,694.8Z" transform="translate(-1095.79 -630.412)" fill="#0098c1"/>
+  <path id="Path_44" data-name="Path 44" d="M1265.353,666.226a1.281,1.281,0,0,0-1.376-1.326H1262.2v4.417h.551v-1.752h.876l1.126,1.752h.651l-1.189-1.8A1.231,1.231,0,0,0,1265.353,666.226Zm-2.6.838v-1.689h1.163a.845.845,0,1,1,0,1.689Z" transform="translate(-1121.687 -604.253)" fill="#0098c1"/>
+  <path id="Path_45" data-name="Path 45" d="M1297.564,677.04a1.21,1.21,0,0,1-.951.488c-.426,0-.713-.163-.713-.726v-2.1h-.5v2.252a.9.9,0,0,0,1.013,1.013,1.583,1.583,0,0,0,1.139-.526v.45h.5V674.7h-.5v2.34Z" transform="translate(-1150.733 -612.827)" fill="#0098c1"/>
+  <path id="Path_46" data-name="Path 46" d="M1324.363,674.9c0-.288.275-.5.713-.5a1.25,1.25,0,0,1,.951.4l.238-.338a1.6,1.6,0,0,0-1.189-.463c-.763,0-1.189.425-1.189.913,0,1.189,1.977.713,1.977,1.476,0,.313-.263.551-.751.551a1.469,1.469,0,0,1-1.051-.45l-.263.35a1.715,1.715,0,0,0,1.289.5c.826,0,1.251-.425,1.251-.963C1326.34,675.139,1324.363,675.6,1324.363,674.9Z" transform="translate(-1175.579 -612.214)" fill="#0098c1"/>
+  <path id="Path_47" data-name="Path 47" d="M1350.263,674.9c0-.288.275-.5.713-.5a1.251,1.251,0,0,1,.951.4l.238-.338a1.6,1.6,0,0,0-1.189-.463c-.763,0-1.189.425-1.189.913,0,1.189,1.977.713,1.977,1.476,0,.313-.263.551-.751.551a1.469,1.469,0,0,1-1.051-.45l-.263.35a1.715,1.715,0,0,0,1.289.5c.826,0,1.251-.425,1.251-.963C1352.24,675.139,1350.263,675.6,1350.263,674.9Z" transform="translate(-1198.239 -612.214)" fill="#0098c1"/>
+  <rect id="Rectangle_8" data-name="Rectangle 8" width="0.5" height="3.191" transform="translate(154.977 61.861)" fill="#0098c1"/>
+  <path id="Path_48" data-name="Path 48" d="M1377.525,665.6a.334.334,0,0,0-.325.338.323.323,0,0,0,.325.325.334.334,0,0,0,.338-.325A.354.354,0,0,0,1377.525,665.6Z" transform="translate(-1222.298 -604.865)" fill="#0098c1"/>
+  <path id="Path_49" data-name="Path 49" d="M1391.127,674a1.68,1.68,0,0,0-1.276.526l.238.35a1.3,1.3,0,0,1,.976-.451c.463,0,.8.25.8.676v.576a1.334,1.334,0,0,0-1.051-.438,1.045,1.045,0,0,0-1.114,1.051,1.063,1.063,0,0,0,1.114,1.064,1.377,1.377,0,0,0,1.051-.438v.363h.5v-2.2C1392.353,674.3,1391.8,674,1391.127,674Zm.738,2.59a1.064,1.064,0,0,1-.875.4.706.706,0,1,1,0-1.4,1.064,1.064,0,0,1,.875.4Z" transform="translate(-1233.234 -612.214)" fill="#0098c1"/>
+  <path id="Path_50" data-name="Path 50" d="M1435.965,668.041a6.3,6.3,0,0,0,.6-1.139l-.425-.188a4.112,4.112,0,0,1-.476,1c-.175-.188-.35-.375-.525-.588-.138-.163-.325-.388-.513-.626.563-.288,1.126-.588,1.126-1.239a.882.882,0,0,0-1-.863,1.053,1.053,0,0,0-1.114,1.026,2.032,2.032,0,0,0,.338.988,1.48,1.48,0,0,0-.976,1.314,1.218,1.218,0,0,0,1.376,1.226,1.742,1.742,0,0,0,1.276-.538c.175.188.35.35.475.463h.688C1436.5,668.579,1436.228,668.3,1435.965,668.041Zm-1.189-3.253a.48.48,0,0,1,.526.5c0,.438-.4.676-.876.9a1.641,1.641,0,0,1-.263-.763A.612.612,0,0,1,1434.777,664.788Zm-.338,3.754a.837.837,0,0,1-.888-.851,1.117,1.117,0,0,1,.651-.951c.175.25.375.488.55.7.125.15.363.4.613.663A1.326,1.326,0,0,1,1434.439,668.542Z" transform="translate(-1271.116 -603.815)" fill="#0098c1"/>
+  <path id="Path_51" data-name="Path 51" d="M1486.365,668.379a1.791,1.791,0,0,1,0-3.578,1.513,1.513,0,0,1,1.214.638l.463-.263a1.977,1.977,0,0,0-1.677-.876,2.277,2.277,0,0,0,0,4.554,1.993,1.993,0,0,0,1.677-.876l-.463-.263A1.471,1.471,0,0,1,1486.365,668.379Z" transform="translate(-1315.822 -603.728)" fill="#0098c1"/>
+  <rect id="Rectangle_9" data-name="Rectangle 9" width="0.551" height="4.417" transform="translate(173.095 60.647)" fill="#0098c1"/>
+  <path id="Path_52" data-name="Path 52" d="M1535.113,665.589c0-.413.375-.7.9-.7a1.672,1.672,0,0,1,1.276.526l.325-.4a2.06,2.06,0,0,0-1.564-.613c-.863,0-1.514.5-1.514,1.226,0,1.576,2.615.951,2.615,2.089,0,.338-.25.763-1.039.763a1.89,1.89,0,0,1-1.389-.626l-.325.413a2.171,2.171,0,0,0,1.689.7c1.189,0,1.627-.651,1.627-1.3C1537.728,666.014,1535.113,666.577,1535.113,665.589Z" transform="translate(-1359.828 -603.815)" fill="#0098c1"/>
+  <path id="Path_53" data-name="Path 53" d="M139.2,241.035h69.043V180.2H139.2Zm67.7-59.508h0v58.182H140.526l-.012-58.182Z" transform="translate(-139.2 -180.2)" fill="#0098c1"/>
+  <path id="Path_54" data-name="Path 54" d="M190.281,234.76h-5.668V224.8H183.8v10.686h6.481Z" transform="translate(-178.219 -219.219)" fill="#0098c1"/>
+  <path id="Path_55" data-name="Path 55" d="M243.966,235.573a3.467,3.467,0,0,0,3.666-3.553V224.8h-.813v7.107a2.854,2.854,0,1,1-5.706,0V224.8H240.3v7.22A3.481,3.481,0,0,0,243.966,235.573Z" transform="translate(-227.65 -219.219)" fill="#0098c1"/>
+  <path id="Path_56" data-name="Path 56" d="M308.013,235.486l2.79-4.755,2.79,4.755h.938l-3.3-5.48,3.066-5.205h-.926l-2.565,4.492-2.553-4.492H307.3l3.065,5.205-3.266,5.48Z" transform="translate(-286.092 -219.219)" fill="#0098c1"/>
+  <path id="Path_57" data-name="Path 57" d="M378.266,235.573a3.467,3.467,0,0,0,3.666-3.553V224.8h-.813v7.107a2.854,2.854,0,1,1-5.706,0V224.8H374.6v7.22A3.481,3.481,0,0,0,378.266,235.573Z" transform="translate(-345.146 -219.219)" fill="#0098c1"/>
+  <path id="Path_58" data-name="Path 58" d="M453.288,230.656h2.94l2.553,4.917h.951l-2.578-4.93a2.978,2.978,0,0,0,1.814-.963,2.883,2.883,0,0,0,.651-1.914,2.779,2.779,0,0,0-3.053-2.865H452.5v10.673h.813v-4.917Zm0-5.042h3.153a2.172,2.172,0,1,1,0,4.329h-3.153Z" transform="translate(-413.299 -219.307)" fill="#0098c1"/>
+  <path id="Path_59" data-name="Path 59" d="M516.341,235.486h.813v-4.429l3.153-6.256h-.876l-2.653,5.405-2.715-5.405H513.2l3.141,6.256Z" transform="translate(-466.404 -219.219)" fill="#0098c1"/>
+  <path id="Path_60" data-name="Path 60" d="M186.978,350.586h.813v-9.96h3.191V339.9H183.8v.726h3.178Z" transform="translate(-178.219 -319.918)" fill="#0098c1"/>
+  <path id="Path_61" data-name="Path 61" d="M252,339.9v10.673h.813v-4.9h2.94l2.553,4.917h.951l-2.578-4.93a2.945,2.945,0,0,0,1.814-.963,2.883,2.883,0,0,0,.651-1.914,2.783,2.783,0,0,0-3.066-2.865H252Zm6.319,2.878a2.074,2.074,0,0,1-2.352,2.165h-3.153v-4.317h3.153A2.066,2.066,0,0,1,258.319,342.778Z" transform="translate(-237.886 -319.918)" fill="#0098c1"/>
+  <path id="Path_62" data-name="Path 62" d="M320.182,347.983l.926,2.59h.876L318.055,339.9h-.726L313.4,350.573h.876l.926-2.59Zm-2.49-6.994,2.227,6.281h-4.467Z" transform="translate(-291.604 -319.918)" fill="#0098c1"/>
+  <path id="Path_63" data-name="Path 63" d="M378.654,349.159l-3-9.259H374.8l3.516,10.685H379l3.5-10.685h-.851Z" transform="translate(-345.321 -319.918)" fill="#0098c1"/>
+  <path id="Path_64" data-name="Path 64" d="M451.281,349.86h-5.668v-4.3h4.83v-.713h-4.83v-4.217h5.668V339.9H444.8v10.685h6.481Z" transform="translate(-406.562 -319.918)" fill="#0098c1"/>
+  <path id="Path_65" data-name="Path 65" d="M516.981,349.86h-5.668V339.9H510.5v10.685h6.481Z" transform="translate(-464.042 -319.918)" fill="#0098c1"/>
+  <path id="Path_66" data-name="Path 66" d="M184.613,456.877l3.3,7.307h.8l3.241-7.307v8.809h.813V455h-.813l-3.629,8.233L184.613,455H183.8v10.686h.813Z" transform="translate(-178.219 -420.616)" fill="#0098c1"/>
+  <path id="Path_67" data-name="Path 67" d="M268.429,455,264.5,465.685h.863l.926-2.59h4.98l.926,2.59h.876L269.155,455Zm-1.877,7.37,2.227-6.281,2.24,6.281Z" transform="translate(-248.822 -420.616)" fill="#0098c1"/>
+  <path id="Path_68" data-name="Path 68" d="M348.494,459.792a2.953,2.953,0,0,0,.638-1.927A2.783,2.783,0,0,0,346.066,455H342v10.686h.813v-4.917h2.94l2.553,4.917h.951l-2.578-4.93A3.149,3.149,0,0,0,348.494,459.792Zm-5.681.25v-4.317h3.153a2.166,2.166,0,1,1,0,4.317Z" transform="translate(-316.625 -420.616)" fill="#0098c1"/>
+  <path id="Path_69" data-name="Path 69" d="M405.2,455.726h3.191v9.96h.8v-9.96h3.2V455H405.2Z" transform="translate(-371.917 -420.616)" fill="#0098c1"/>
+  <path id="Path_70" data-name="Path 70" d="M473.49,454.5a2.093,2.093,0,0,0-2.09,2.09,2.031,2.031,0,0,0,.613,1.489,2,2,0,0,0,1.477.613,2.093,2.093,0,0,0,2.1-2.1,1.984,1.984,0,0,0-.613-1.476A2.081,2.081,0,0,0,473.49,454.5Zm1.276,3.378a1.809,1.809,0,1,1-1.276-3.091,1.758,1.758,0,0,1,1.276.526,1.828,1.828,0,0,1,0,2.565Z" transform="translate(-429.834 -420.179)" fill="#0098c1"/>
+  <path id="Path_71" data-name="Path 71" d="M483.239,463.977v-.35a.635.635,0,0,0-.125-.363.537.537,0,0,0-.388-.225,1.07,1.07,0,0,0,.338-.113.505.505,0,0,0,.225-.451.6.6,0,0,0-.363-.588,1.579,1.579,0,0,0-.626-.088h-.8v2.3h.413v-.9h.313a.972.972,0,0,1,.45.075.58.58,0,0,1,.213.526v.25c0,.013.013.013.013.025s0,.012.012.025h.388l-.012-.025C483.252,464.077,483.239,464.04,483.239,463.977Zm-.6-1.089a1.035,1.035,0,0,1-.388.05h-.363V462.1h.338a1.128,1.128,0,0,1,.488.088.366.366,0,0,1,.15.338A.331.331,0,0,1,482.639,462.889Z" transform="translate(-438.67 -426.565)" fill="#0098c1"/>
+</symbol></svg>
+    </div>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__wrapper"><a class="header__logo" href="main.html" aria-label="Переход на главную">Логотип</a>
+          <nav class="main-nav">
+            <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
+              <svg width="20" height="20" aria-hidden="true">
+                <use xlink:href="#icon-burger"></use>
+              </svg>
+            </button>
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list">
+                <li><a class="main-nav__link" href="#">Страница 1</a></li>
+                <li><a class="main-nav__link" href="#">Страница 2</a></li>
+                <li><a class="main-nav__link" href="#">Страница 3</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main class="container">
+        <div class="choose-event">
+          <h2 class="title--h2">Choose the Event:</h2>
+          <ul class="choose-event__cards">
+            <li class="choose-event__card choose-event__card--available">
+              <h3 class="choose-event__card-title">Luxury Travel Mart Kyiv 2019 at the Intercontinental Kyiv, Ukraine</h3><span class="choose-event__card-date">24 September 2019</span><span class="choose-event__card-status">Available</span>
+            </li>
+            <li class="choose-event__card choose-event__card--available">
+              <h3 class="choose-event__card-title">Luxury Travel Mart Kyiv 2019 at the Intercontinental Kyiv, Ukraine</h3><span class="choose-event__card-date">24 September 2019</span><span class="choose-event__card-status">Available</span>
+            </li>
+            <li class="choose-event__card choose-event__card--available">
+              <h3 class="choose-event__card-title">Luxury Travel Mart Moscow 2019 at The Ritz-Carlton, Moscow, Russia</h3><span class="choose-event__card-date">1 October 2019</span><span class="choose-event__card-status">Available</span>
+            </li>
+            <li class="choose-event__card choose-event__card--waiting">
+              <h3 class="choose-event__card-title">Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan</h3><span class="choose-event__card-date">3 March 2020</span><span class="choose-event__card-status">Waiting list</span>
+            </li>
+            <li class="choose-event__card choose-event__card--waiting">
+              <h3 class="choose-event__card-title">Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia</h3><span class="choose-event__card-date">20 June 2020</span><span class="choose-event__card-status">Waiting list</span>
+            </li>
+          </ul>
+          <ul class="hotel-filters">
+            <li class="hotel-filter hotel-filter--list">
+              <div class="hotel-filter__filter">
+                <h3 class="title--h3">Alphabetically:</h3>
+                <ul class="hotel-filter__list">
+                  <li><a class="hotel-filter__link" href="#">#</a></li>
+                  <li><a class="hotel-filter__link" href="#">A</a></li>
+                  <li><a class="hotel-filter__link" href="#">B</a></li>
+                  <li><a class="hotel-filter__link" href="#">C</a></li>
+                  <li><a class="hotel-filter__link" href="#">D</a></li>
+                  <li><a class="hotel-filter__link" href="#">E</a></li>
+                  <li><a class="hotel-filter__link" href="#">F</a></li>
+                  <li><a class="hotel-filter__link" href="#">G</a></li>
+                  <li><a class="hotel-filter__link" href="#">H</a></li>
+                  <li><a class="hotel-filter__link" href="#">I</a></li>
+                  <li><a class="hotel-filter__link" href="#">J</a></li>
+                  <li><a class="hotel-filter__link" href="#">K</a></li>
+                  <li><a class="hotel-filter__link" href="#">L</a></li>
+                  <li><a class="hotel-filter__link" href="#">M</a></li>
+                  <li><a class="hotel-filter__link" href="#">N</a></li>
+                  <li><a class="hotel-filter__link" href="#">O</a></li>
+                  <li><a class="hotel-filter__link" href="#">P</a></li>
+                  <li><a class="hotel-filter__link" href="#">Q</a></li>
+                  <li><a class="hotel-filter__link" href="#">R</a></li>
+                  <li><a class="hotel-filter__link" href="#">S</a></li>
+                  <li><a class="hotel-filter__link" href="#">T</a></li>
+                  <li><a class="hotel-filter__link" href="#">U</a></li>
+                  <li><a class="hotel-filter__link" href="#">V</a></li>
+                  <li><a class="hotel-filter__link" href="#">W</a></li>
+                  <li><a class="hotel-filter__link" href="#">X</a></li>
+                  <li><a class="hotel-filter__link" href="#">Y</a></li>
+                  <li><a class="hotel-filter__link" href="#">Z</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="hotel-filter hotel-filter--drop-down">
+              <div class="hotel-filter__filter">
+                <h3 class="title--h3">By Country:</h3>
+                <select class="input-drop-down" id="hotel-select">
+                  <option class="input-drop-down__option" value="Afghanistan">Afghanistan</option>
+                  <option class="input-drop-down__option" value="Russia">Russia</option>
+                  <option class="input-drop-down__option" value="United States of America">United States of America</option>
+                  <option class="input-drop-down__option" value="China">China</option>
+                </select>
+              </div>
+            </li>
+            <li class="hotel-filter hotel-filter--drop-down">
+              <div class="hotel-filter__filter">
+                <h3 class="title--h3">By type of business</h3>
+                <select class="input-drop-down" id="hotel-select">
+                  <option class="input-drop-down__option" value="Apartments &amp; villas rental">Apartments &amp; villas rental</option>
+                  <option class="input-drop-down__option" value="Hello, hello">Hello, hello</option>
+                  <option class="input-drop-down__option" value="Come with kittens">Come with kittens</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="exhibitors">
+          <ul class="hotel-cards">
+            <li class="hotel-card">
+              <ul class="hotel-card__photos">
+                <li class="hotel-card__photo"><img class="hotel-card__photo--big" src="../img/content/exhibition-mandarin-1.jpg"/></li>
+                <li class="hotel-card__photo"><img class="hotel-card__photo--small" src="../img/content/exhibition-mandarin-2.jpg"/></li>
+                <li class="hotel-card__photo"><img class="hotel-card__photo--big" src="../img/content/exhibition-mandarin-2.jpg"/></li>
+                <li class="hotel-card__photo"><img class="hotel-card__photo--small" src="../img/content/exhibition-mandarin-2.jpg"/></li>
+                <li class="hotel-card__photo"><img class="hotel-card__photo--big" src="../img/content/exhibition-mandarin-2.jpg"/></li>
+                <li class="hotel-card__photo"><img class="hotel-card__photo--small" src="../img/content/exhibition-mandarin-2.jpg"/></li>
+                <li class="hotel-card__photo"><img class="hotel-card__photo--big" src="../img/content/exhibition-mandarin-2.jpg"/></li>
+              </ul>
+              <div class="hotel-card__info"><img src="../img/svg/mandarin-logo.svg"/>
+                <h2 class="hotel-card__title">Mandarin Oriental Hotel Group</h2>
+              </div>
+            </li>
+            <li class="hotel-card">
+              <ul class="hotel-card__photos">
+                <li class="hotel-card__photo"><img class="hotel-card__photo--big" src="../img/content/exhibition-ritz-1.jpg"/></li>
+                <li class="hotel-card__photo"><img class="hotel-card__photo--small" src="../img/content/exhibition-ritz-2.jpg"/></li>
+              </ul>
+              <div class="hotel-card__info"><img src="../img/svg/ritz-logo.svg"/>
+                <h2 class="hotel-card__title">The Ritz-Carlton, Moscow and Very long name for best usability at this site. Name participant have to be loong</h2>
+              </div>
+            </li>
+            <li class="hotel-card">
+              <ul class="hotel-card__photos">
+                <li class="hotel-card__photo"><img class="hotel-card__photo--big" src="../img/content/exhibition-hyatt-1.jpg"/></li>
+                <li class="hotel-card__photo"><img class="hotel-card__photo--small" src="../img/content/exhibition-hyatt-2.jpg"/></li>
+              </ul>
+              <div class="hotel-card__info"><img src="../img/svg/hyatt-logo.svg"/>
+                <h2 class="hotel-card__title">Hyatt Regency Moscow Petrovsky Park</h2>
+              </div>
+            </li>
+            <li class="hotel-card">
+              <ul class="hotel-card__photos">
+                <li class="hotel-card__photo"><img class="hotel-card__photo--big" src="../img/content/exhibition-hyatt-1.jpg"/></li>
+                <li class="hotel-card__photo"><img class="hotel-card__photo--small" src="../img/content/exhibition-hyatt-2.jpg"/></li>
+              </ul>
+              <div class="hotel-card__info"><img src="../img/svg/hyatt-logo.svg"/>
+                <h2 class="hotel-card__title">Hyatt Regency Moscow Petrovsky Park</h2>
+              </div>
+            </li>
+          </ul>
+          <div class="alphabet-hotel">
+            <ul class="alphabet-hotel__block-list">
+              <li class="alphabet-hotel__block-item">
+                <h3 class="title--h3">#</h3>
+                <ul class="alphabet-hotel__hotels">
+                  <li><span>7° South Seychelles</span></li>
+                </ul>
+              </li>
+              <li class="alphabet-hotel__block-item">
+                <h3 class="title--h3">A</h3>
+                <ul class="alphabet-hotel__hotels">
+                  <li><span>Al Khalidiah Tourism Group of companies</span></li>
+                  <li><span>AMAN</span></li>
+                  <li><span>Ambotis Premum Club</span></li>
+                  <li><span>Anantara Maldives &amp; Naladhu</span></li>
+                  <li><span>Arminas Travel, Мексика / Banyan Tree</span></li>
+                </ul>
+              </li>
+              <li class="alphabet-hotel__block-item">
+                <h3 class="title--h3">B</h3>
+                <ul class="alphabet-hotel__hotels">
+                  <li><span>Baglioni Hotels &amp; Resorts</span></li>
+                  <li><span>Belmond</span></li>
+                  <li><span>Biblos Resort Alaçatı</span></li>
+                  <li><span>Breidenbacher Hof, a Capella Hotel / Elite Expert</span></li>
+                </ul>
+              </li>
+              <li class="alphabet-hotel__block-item">
+                <h3 class="title--h3">C</h3>
+                <ul class="alphabet-hotel__hotels">
+                  <li><span>Cheval Blanc</span></li>
+                  <li><span>Clinic Lemanic</span></li>
+                  <li><span>Corinthia Hotel London</span></li>
+                  <li><span>Crossroads Maldives</span></li>
+                  <li><span>Crystal Cruises</span></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+      <footer class="footer"></footer>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

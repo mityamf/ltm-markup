@@ -24,6 +24,13 @@
 @import "blocks/about";
 @import "blocks/schedule";
 @import "blocks/info-bottom";
+@import "source/sass/blocks/hotel-cards";
+@import "source/sass/blocks/hotel-card";
+@import "source/sass/blocks/exhibitions";
+@import "source/sass/blocks/alphabet-hotel";
+@import "source/sass/blocks/choose-event";
+@import "source/sass/blocks/hotel-filter";
+@import "source/sass/blocks/hotel-filters";
 
 // используйте это для отключения ховеров на тач устройствах
 // ! но не используйте это для текстовых полей ( input, textarea )

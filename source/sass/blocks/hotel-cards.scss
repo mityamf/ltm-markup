@@ -1,0 +1,7 @@
+.hotel-cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  width: calc(100% + 15px);
+  margin-bottom: -15px;
+}

@@ -1,0 +1,33 @@
+extends ../base/layout
+
+block variables
+  - var title = "События"
+  - var hasHeader = true
+  - var hasFooter = true
+
+block main
+  include ../data/hotel-cards
+  include ../data/alphabet-hotel
+  include ../data/choose-event-card
+  include ../data/choose-event
+  include ../data/hotel-filters
+
+  main.container
+    div.choose-event
+      h2.title--h2=chooseEvent.title
+      ul.choose-event__cards
+        each event in chooseEventCard
+          +renderEvent(event.title, event.date, event.status, event.textStatus)
+      ul.hotel-filters
+        each filter in filters
+          +renderFilter(filter.title, filter.mod, filter.filterList)
+
+    div.exhibitors
+      ul.hotel-cards
+        each hotel in hotelCards
+          +renderHotelCard(hotel.title, hotel.photoList, hotel.logo)
+
+      div.alphabet-hotel
+        ul.alphabet-hotel__block-list
+          each hotel in alphabetHotel
+            +renderAlphabetHotel(hotel.title, hotel.hotelList)
