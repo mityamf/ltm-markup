@@ -1,8 +1,8 @@
-mixin promo
+mixin promo(titleItem, btnItem, imgItem, img2xItem, widthItem, heightItem)
   section.promo
     picture
-      img.promo__img(src="./img/bg/bg-home.png" srcset="./img/bg/bg-home@2x.png" width="1920" height="534" alt="promo image")
+      img.promo__img(src=imgitem srcset=img2xItem width=widthItem height=heightItem alt="promo image")
 
-    .container
-      h2.promo__title The leading luxury travel exhibition in eastern europe, russia AND cis
-      a.promo__reg(href="#") Registration
+    .promo__info.container
+      h2.promo__title= titleItem
+      a.promo__reg(href="#")= btnItem

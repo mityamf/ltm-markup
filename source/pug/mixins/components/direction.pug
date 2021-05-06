@@ -1,5 +1,5 @@
-mixin direction(titleItem, dataItem, statusItem, timeItem)
+mixin direction(titleItem, dataItem, statusItem, timeItem, classStatus)
   li.direction__item
     h2.direction__title= titleItem
     time(datatime=timeItem).direction__data= dataItem
-    span.direction__status= statusItem
+    span.direction__status(class=classStatus)= statusItem

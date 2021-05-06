@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   min-height: 227px;
-  border-top: 1.5px solid #0098c1;
+  border-top: 1.5px solid $color-blue;
 
   @include viewport--sm {
     display: grid;
