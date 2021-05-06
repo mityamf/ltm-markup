@@ -1,0 +1,114 @@
+.main-nav {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    li {
+      margin-right: 10px;
+    }
+  }
+
+  @media (max-width: 1279px) {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  &__wrapper {
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  @include viewport--sm {
+    position: relative;
+  }
+}
+
+.main-nav__link {
+  display: inline-block;
+  padding: 10px;
+
+  &--active {
+    color: $color-gray-dark;
+  }
+}
+
+.main-nav__toggle {
+  display: none;
+
+  @include viewport--sm {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: transform $default-transition-settings;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+      outline: none;
+    }
+  }
+}
+
+.main-nav__toggle::before,
+.main-nav__toggle::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 2px;
+
+  background-color: $color-blue;
+
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.main-nav__toggle::after {
+  top: 8px;
+  box-shadow: 0 8px 0 0 $color-blue;
+}
+
+.header--mobile-opened .main-nav__toggle {
+  width: 26px;
+  height: 26px;
+  top: -55px;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 26px;
+    height: 2px;
+
+    background-color: $color-default-white;
+
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+    box-shadow: none;
+  }
+}
