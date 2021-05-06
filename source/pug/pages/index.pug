@@ -59,8 +59,16 @@ block main
         src: "main.html"
       },
       {
-        name: "Название страницы (состояние страницы, если отдельное) — ссылка на страницу",
-        src: "#"
+        name: "Новости — news.html",
+        src: "news.html"
+      },
+      {
+        name: "Об ивенте - about.html",
+        src: "about.html"
+      },
+      {
+        name: "Расписание - schedule.html",
+        src: "schedule.html"
       },
     ]
 
@@ -71,3 +79,6 @@ block main
       each page in pages
         li
           a(href= page.src)= page.name
+
+
+
