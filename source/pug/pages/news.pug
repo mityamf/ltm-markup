@@ -1,0 +1,33 @@
+extends ../base/layout
+
+block data
+  include ../data/news
+
+block variables
+  - var title = "Новости"
+  - var hasHeader = true
+  - var hasFooter = true
+
+block main
+
+  main
+    .container
+      .news
+        .news__title-container
+          h2.news__title LTM News
+          a.news__nav-button(href="#")
+            +img("svg", "icon-back", "svg", "12", "20")
+            span Back
+        ul.news__list
+          each news in newsList
+            li.news__item
+              .news__image-container
+                +img("content", news.image, "jpg", "222", "222", news.title)
+              .news__content
+                time.news__date(datetime=news.datetime) #{news.date}
+                h3 #{news.title}
+                p #{news.text}
+              a.news__button.news__button--open-news(href="#")
+                +img("svg", "icon-arrow", "svg", "20", "14")
+                span.visually-hidden read more
+        a.news__button.news__button--more(href="#") More News
