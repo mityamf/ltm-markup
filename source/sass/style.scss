@@ -19,7 +19,10 @@
 //---------------------------------
 
 @import "blocks/header";
-@import "blocks/footer";
+@import "blocks/footer/footer";
+@import "blocks/footer/logotip";
+@import "blocks/footer/mailing";
+@import "blocks/footer/menu";
 @import "blocks/modal";
 @import "blocks/about";
 

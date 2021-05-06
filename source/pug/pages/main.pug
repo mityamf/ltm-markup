@@ -14,7 +14,16 @@ block variables
 
 block main
   main
-   .container
+    .container
+      +promo
+      section.direction
+        h2.visually-hidden List of available destinations
+        ul.catalog.catalog__list
+          +direction("Luxury Travel Mart Kyiv 2019 at the Intercontinental Kyiv, Ukraine", "24 September 2019", "Registration ending soon", "24.09.2019")
+          +direction("Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan", "27 September 2019", "Available", "27.09.2019")
+          +direction("Luxury Travel Mart Moscow 2019 at The Ritz-Carlton, Moscow, Russia", "1 October 2019", "Available", "01.10.2019")
+          +direction("Luxury Travel Mart Moscow 2020 at Hyatt Regency Moscow, Russia", "27–28 February 2020", "Available", "27.02.2020")
+          +direction("Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan", "3 March 2020", "Waiting list", "03.03.2020")
+          +direction("Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia", "20 June 2020", "Waiting list", "20.06.2020")
 
 block modals
-
