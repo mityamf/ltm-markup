@@ -1372,7 +1372,8 @@ p {
     margin-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 50px;
-    height: auto; }
+    height: auto;
+    background-color: #0098c1; }
     .header--mobile-opened .header__top a {
       display: inline-block;
       font-size: 16px;
