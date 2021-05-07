@@ -11,6 +11,15 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 30px;
+
+  &--newpage {
+    margin-bottom: 0;
+
+    @include viewport--md {
+      order: 1;
+      text-align: center;
+    }
+  }
 }
 
 .news__title {
@@ -19,9 +28,13 @@
 
   font-size: 38px;
   line-height: 46px;
-  letter-spacing: 1.8px;
   font-weight: 300;
   color: $color-blue;
+
+  @include viewport--md {
+    font-size: 32px;
+    line-height: 38px;
+  }
 }
 
 .news__nav-button {
@@ -136,6 +149,15 @@
   @include viewport--md {
     padding: 0;
   }
+
+  &--newpage {
+    align-self: flex-start;
+    padding: 0;
+
+    @include viewport--md {
+      order: 0;
+    }
+  }
 }
 
 .news__content h3 {
@@ -190,5 +212,14 @@
 
   &--more {
     padding: 18px 69px 15px 69px;
+  }
+}
+
+.news__full-content {
+  max-width: 936px;
+  margin: 0 auto;
+
+  @include viewport--md {
+    order: 2;
   }
 }
