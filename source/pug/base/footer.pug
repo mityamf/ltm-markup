@@ -17,14 +17,20 @@ mixin footer
           label(for="check") I agree
       .footer__menu.menu
         ul.menu__list
-          a.menu__item(href="#") Terms Conditions
-          a.menu__item(href="#") Have a question?
-          a.menu__item(href="#") Privacy policy
-          a.menu__item(href="#") Cookie policy
+          li
+            a.menu__item(href="#") Terms Conditions
+          li
+            a.menu__item(href="#") Have a question?
+          li
+            a.menu__item(href="#") Privacy policy
+          li
+            a.menu__item(href="#") Cookie policy
         ul.menu__account
-          a.menu__account--social(href="#")
-            +icon("fb-icon", 10, 25)
-          a.menu__account--social(href="#")
-            +icon("inst-icon", 22, 22)
+          li
+            a.menu__account-social(href="#")
+              +icon("fb-icon", 10, 25)
+          li
+            a.menu__account-social(href="#")
+              +icon("inst-icon", 22, 22)
       .footer__info
-        span.footer__info--info &copy; All right reserved by Artyom Polanskiy and Travel Media LLC.
+        span.footer__info-info &copy; All right reserved by Artyom Polanskiy and Travel Media LLC.
