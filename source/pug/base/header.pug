@@ -2,34 +2,72 @@ mixin header(headerMod, currentPage)
   -
     var headerLinks = [
       {
-        href: "#",
-        text: "Страница 1"
+        href: "about.html",
+        text: "About LTM"
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "Registration"
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "Detailed Schedule"
+      },
+      {
+        href: "#",
+        text: "Exhibitors"
+      },
+      {
+        href: "gallery.html",
+        text: "Gallery"
+      },
+      {
+        href: "#",
+        text: "Organizers"
+      },
+      {
+        href: "#",
+        text: "Partners"
+      },
+      {
+        href: "#",
+        text: "Contacts"
       },
     ]
 
   header(class=(headerMod) ? "header header--" + headerMod : "header")
-    .header__wrapper
-      if(currentPage === "main")
-        a.header__logo Логотип
-      else
-        a.header__logo(href="main.html", aria-label="Переход на главную") Логотип
-      nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
-        .main-nav__wrapper
-          ul.main-nav__list
-            each link, index in headerLinks
-              if(index === currentPage)
-                li
-                  a.main-nav__link.main-nav__link--active=link.text
-              else
-                li
-                  a.main-nav__link(href=link.href)=link.text
+    ul.header__top.container
+      li.header__item.header__item--search
+        a(href="#").header__search-button
+          +icon("icon-search", 17, 17)
+      li.header__item.header__item--terms
+        a(href="#").header__link Terms & Conditions
+      li.header__item
+        a(href="page-rus.html").header__link Рус
+    .header__main
+      .header__main-wrapper.container
+        if(currentPage === "main")
+          a.header__logo.header__logo--desktop
+            +icon("logo-desktop", 178, 67)
+          a.header__logo.header__logo--mobile
+            +icon("logo-mobile", 53, 47)
+        else
+          a.header__logo.header__logo--desktop(href="main.html", aria-label="Переход на главную")
+            +icon("logo-desktop", 178, 67)
+          a.header__logo.header__logo--mobile(href="main.html", aria-label="Переход на главную")
+            +icon("logo-mobile", 53, 47)
+        nav.main-nav
+          button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+          .main-nav__wrapper
+            ul.main-nav__list
+              each link in headerLinks
+                if(link.text === currentPage)
+                  li
+                    a.main-nav__link.main-nav__link--active= link.text
+                else
+                  li
+                    a.main-nav__link(href=link.href)= link.text
+        a(href="#").header__link.header__link--sigh-in.header__main-right
+          span Sign in
+          +icon("icon-sign-in", 26, 30)
+      +search
