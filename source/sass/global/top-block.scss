@@ -1,0 +1,32 @@
+.top-block {
+  display: flex;
+  height: 534px;
+  width: 100%;
+  max-width: 1920px;
+  padding: 45px 0;
+
+  @include viewport--lg {
+    height: 522px;
+    padding: 50px 0;
+  }
+
+  @include viewport--md {
+    height: 375px;
+    padding: 10px 0;
+  }
+
+  .title--h1 {
+    margin: auto auto 0 auto;
+
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: lighter;
+    color: $color-default-white;
+    text-align: center;
+
+    @include viewport--md {
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+}

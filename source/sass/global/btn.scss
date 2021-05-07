@@ -1,0 +1,46 @@
+.btn {
+  display: inline-block;
+  padding: 18px 0;
+
+  font-size: 16px;
+  line-height: 19px;
+
+  &--white {
+    border: 1px solid $color-blue;
+    background-color: transparent;
+
+    color: $color-blue;
+
+    transition: color background-color $default-transition-settings;
+  }
+
+  &--white:hover,
+  &--white:active {
+    border-color: transparent;
+    background-color: $color-blue;
+
+    color: $color-default-white;
+  }
+
+  &--white:focus {
+    border-color: transparent;
+    background-color: $color-gray;
+
+    color: $color-default-white;
+  }
+
+  &--white:disabled {
+    border-color: transparent;
+    background-color: $color-white;
+
+    color: $color-gray;
+  }
+
+  &--blue {
+    background-color: $color-blue;
+
+    color: $color-default-white;
+
+    transition: color background-color $default-transition-settings;
+  }
+}
