@@ -1,0 +1,24 @@
+extends ../base/layout
+
+block data
+  include ../data/news
+
+block variables
+  - var title = "Новости"
+  - var hasHeader = true
+  - var hasFooter = true
+
+block main
+  main
+    .container
+      .news
+        .news__title-container.news__title-container--newpage
+          h2.news__title #{newsList[0].title}
+          a.news__nav-button(href="news.html")
+            img(src="img/svg/icon-back.svg", width="12", height="20")
+            span Back
+        time.news__date.news__date--newpage(datetime=newsList[0].datetime) #{newsList[0].date}
+        .news__full-content
+          each text in newsList[0].content
+            p=text
+
