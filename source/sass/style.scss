@@ -22,11 +22,17 @@
 //---------------------------------
 
 @import "blocks/header";
-@import "blocks/footer";
+@import "blocks/footer/footer";
+@import "blocks/footer/logotip";
+@import "blocks/footer/mailing";
+@import "blocks/footer/menu";
+@import "blocks/main/promo";
+@import "blocks/main/direction";
+@import "blocks/main/news-home";
+@import "blocks/main/interaction";
 @import "blocks/modal";
 @import "blocks/main-nav";
 @import "blocks/search";
-
 @import "blocks/about";
 @import "blocks/schedule";
 @import "blocks/info-bottom";

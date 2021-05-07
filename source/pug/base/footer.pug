@@ -1,2 +1,36 @@
-mixin footer(footerMod)
-  footer(class= (footerMod) ? "footer footer--" + footerMod : "footer")
+mixin footer
+  footer.container
+    .footer
+      ul.footer__logotip.logotip
+        li.logotip__list
+          a.logotip__item(href="#")
+            img(src="./img/svg/g10.svg" alt="company logo" width="80" height="84")
+        li.logotip__list
+          a.logotip__item(href="#")
+            img(src="./img/svg/TM-logo.svg" alt="company logo" width="130" height="57")
+      .footer__mailing.mailing
+        form.mailing__form(action="#" method="POST")
+          input.mailing__email(type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters")
+          label(for="mailing")
+          button.mailing__btn Ok
+          input.mailing__check(type="checkbox" id="check" name="check" value="yes")
+          label(for="check") I agree
+      .footer__menu.menu
+        ul.menu__list
+          li
+            a.menu__item(href="#") Terms Conditions
+          li
+            a.menu__item(href="#") Have a question?
+          li
+            a.menu__item(href="#") Privacy policy
+          li
+            a.menu__item(href="#") Cookie policy
+        ul.menu__account
+          li
+            a.menu__account-social(href="#")
+              +icon("fb-icon", 10, 25)
+          li
+            a.menu__account-social(href="#")
+              +icon("inst-icon", 22, 22)
+      .footer__info
+        span.footer__info-info &copy; All right reserved by Artyom Polanskiy and Travel Media LLC.

@@ -1,0 +1,8 @@
+mixin promo(titleItem, btnItem, imgItem, img2xItem, widthItem, heightItem)
+  section.promo
+    picture
+      img.promo__img(src=imgItem srcset=img2xItem width=widthItem height=heightItem alt="promo image")
+
+    .promo__info.container
+      h2.promo__title= titleItem
+      a.promo__reg(href="#")= btnItem
