@@ -24,8 +24,8 @@
   }
 
   @include viewport--sm {
-    max-width: 254px;
-    width: 72%;
+    max-width: inherit;
+    width: 85%;
     padding: 7px 9px 6px 8px;
   }
 }

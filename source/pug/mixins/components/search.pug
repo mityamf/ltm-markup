@@ -1,0 +1,7 @@
+mixin search(inputValue)
+  .header__search.header__search--hidden.container
+    form(action="/" class='search-input' autocomplete="off" + (attributes.class ? ' ' + attributes.class : ''))
+      button.search-input__button(type="submit") Поиск
+        +icon("icon-search", 33, 26)
+      label.search-input__label Строка поиска
+        input.search-input__input(type="search" name="search" placeholder="Search" value=inputValue)

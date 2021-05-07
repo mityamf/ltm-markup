@@ -4,6 +4,7 @@
   justify-content: space-between;
   min-height: 227px;
   border-top: 1.5px solid $color-blue;
+  margin-top: 80px;
 
   @include viewport--sm {
     display: grid;
@@ -23,7 +24,7 @@
 }
 
 .footer__mailing {
-  width: 37%;
+  //width: 37%;
   padding-top: 39px;
 
   @include viewport--sm {
@@ -33,7 +34,7 @@
 }
 
 .footer__menu {
-  width: 22%;
+  //width: 22%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

@@ -1,7 +1,7 @@
 extends ../base/layout
 
 block data
-  include ../data/placeholder
+  include ../data/news
 
 block variables
   - var title = "Luxury Travel Mart — Главная"
@@ -30,16 +30,13 @@ block main
           +direction("Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan", "3 March 2020", "Waiting list", "03.03.2020", "direction__status--waiting")
         .swiper-slide
           +direction("Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia", "20 June 2020", "Waiting list", "20.06.2020", "direction__status--waiting")
-        .swiper-slide
-          +direction("Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia", "20 June 2020", "Waiting list", "20.06.2020", "direction__status--waiting")
-        .swiper-slide
-          +direction("Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia", "20 June 2020", "Waiting list", "20.06.2020", "direction__status--waiting")
-        .swiper-slide
-          +direction("Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia", "20 June 2020", "Waiting list", "20.06.2020", "direction__status--waiting")
       .direction__arrow.swiper-button-next.direction__arrow--right
         +icon("arrow-right", "11", "19")
       .direction__arrow.swiper-button-prev.direction__arrow--left
         +icon("arrow-left", "11", "19")
+
+    +news-home()
+
 
 block modals
 

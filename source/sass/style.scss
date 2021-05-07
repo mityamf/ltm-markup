@@ -25,9 +25,14 @@
 @import "blocks/footer/menu";
 @import "blocks/main/promo";
 @import "blocks/main/direction";
+@import "blocks/main/news-home";
 @import "blocks/modal";
+@import "blocks/main-nav";
+@import "blocks/search";
 @import "blocks/about";
-
+@import "blocks/schedule";
+@import "blocks/info-bottom";
+@import "blocks/news";
 
 // используйте это для отключения ховеров на тач устройствах
 // ! но не используйте это для текстовых полей ( input, textarea )
