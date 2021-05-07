@@ -21,11 +21,17 @@ block main
       ul.hotel-filters
         each filter in filters
           +renderFilter(filter.title, filter.mod, filter.filterList)
+        li.hotel-filter--btns
+          div.hotel-filter--btns-wrapper
+            +icon("icon-filters", 17, 17)
+            button.btn.btn--white.hotel-filter--btn-filters="filters"
+          button.btn.btn--white.hotel-filter--clear="Clear all"
+          button.btn.btn--white.hotel-filter--btn-clear="Clear all filters"
 
     div.exhibitors
       ul.hotel-cards
         each hotel in hotelCards
-          +renderHotelCard(hotel.title, hotel.photoList, hotel.logo)
+          +renderHotelCard(hotel.title, hotel.photoList, hotel.logo, hotel.link)
 
       div.alphabet-hotel
         ul.alphabet-hotel__block-list

@@ -3,6 +3,7 @@
 
 @import "vendor/normalize";
 @import "vendor/swiper";
+@import "node_modules/choices.js/src/styles/choices";
 
 // Global
 //---------------------------------
@@ -14,6 +15,8 @@
 @import "global/utils";
 @import "global/container";
 @import "global/text";
+@import "global/btn";
+@import "global/top-block";
 
 // Blocks
 //---------------------------------
@@ -35,6 +38,7 @@
 @import "source/sass/blocks/choose-event";
 @import "source/sass/blocks/hotel-filter";
 @import "source/sass/blocks/hotel-filters";
+@import "source/sass/vendor/choices";
 
 // используйте это для отключения ховеров на тач устройствах
 // ! но не используйте это для текстовых полей ( input, textarea )

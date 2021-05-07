@@ -16,7 +16,13 @@
     <rect id="Rectangle_10-2" data-name="Rectangle 10" width="25" height="2" transform="translate(20 37)" fill="#0098c1"/>
     <rect id="Rectangle_10-3" data-name="Rectangle 10" width="25" height="2" transform="translate(20 46)" fill="#0098c1"/>
   </g>
-</symbol><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="icon-search" viewBox="0 0 14.482 15">
+</symbol><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="icon-filters" viewBox="0 0 16.495 16.357">
+  <g id="ico_filtres" transform="translate(-124.5 -125.6)">
+    <path id="&#x41A;&#x43E;&#x43D;&#x442;&#x443;&#x440;_1374" data-name="&#x41A;&#x43E;&#x43D;&#x442;&#x443;&#x440; 1374" d="M125.5,129.093h8.943a2.487,2.487,0,0,0,4.553,0h.985a1,1,0,1,0,0-2.007H139a2.487,2.487,0,0,0-4.553,0H125.5a1,1,0,1,0,0,2.007Zm11.22-2.007a1,1,0,1,1-1,1A1.006,1.006,0,0,1,136.724,127.086Z" fill="#0098c1"/>
+    <path id="&#x41A;&#x43E;&#x43D;&#x442;&#x443;&#x440;_1375" data-name="&#x41A;&#x43E;&#x43D;&#x442;&#x443;&#x440; 1375" d="M139.991,308.486h-.985a2.487,2.487,0,0,0-4.553,0H125.5a1,1,0,1,0,0,2.007h8.943a2.487,2.487,0,0,0,4.553,0h.985a1,1,0,0,0,.006-2.007Zm-3.268,2.007a1,1,0,1,1,1-1A1.006,1.006,0,0,1,136.724,310.493Z" transform="translate(0 -170.023)" fill="#0098c1"/>
+    <path id="&#x41A;&#x43E;&#x43D;&#x442;&#x443;&#x440;_1376" data-name="&#x41A;&#x43E;&#x43D;&#x442;&#x443;&#x440; 1376" d="M140.085,217.786h-8.943a2.487,2.487,0,0,0-4.553,0H125.6a1,1,0,1,0,0,2.007h.985a2.487,2.487,0,0,0,4.553,0h8.943a1,1,0,0,0,0-2.007Zm-11.22,2.007a1,1,0,1,1,1-1A1.006,1.006,0,0,1,128.865,219.793Z" transform="translate(-0.094 -85.012)" fill="#0098c1"/>
+  </g>
+</symbol><symbol id="icon-search" viewBox="0 0 14.482 15">
   <path id="_002-search" data-name="002-search" d="M15.246,13.663,11.676,9.95A6.054,6.054,0,1,0,7.04,12.112a5.991,5.991,0,0,0,3.47-1.1l3.6,3.741a.79.79,0,1,0,1.139-1.1ZM7.04,1.58A4.476,4.476,0,1,1,2.564,6.056,4.481,4.481,0,0,1,7.04,1.58Z" transform="translate(-0.984)"/>
 </symbol><symbol id="icon-sign-in" viewBox="0 0 25.169 29.589">
   <g id="&#x421;&#x433;&#x440;&#x443;&#x43F;&#x43F;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x442;&#x44C;_3" data-name="&#x421;&#x433;&#x440;&#x443;&#x43F;&#x43F;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x442;&#x44C; 3" transform="translate(0)">
@@ -232,108 +238,111 @@
                 </ul>
               </div>
             </li>
-            <li class="hotel-filter hotel-filter--drop-down">
+            <li class="hotel-filter hotel-filter--dropdown">
               <div class="hotel-filter__filter">
                 <h3 class="title--h3">By Country:</h3>
-                <select class="input-drop-down" id="hotel-select">
-                  <option class="input-drop-down__option" value="Afghanistan">Afghanistan</option>
-                  <option class="input-drop-down__option" value="Russia">Russia</option>
-                  <option class="input-drop-down__option" value="United States of America">United States of America</option>
-                  <option class="input-drop-down__option" value="China">China</option>
+                <select class="input-dropdown" id="hotel-select" multiple="multiple">
+                  <option class="input-dropdown__option" value="Afghanistan">Afghanistan</option>
+                  <option class="input-dropdown__option" value="Russia">Russia</option>
+                  <option class="input-dropdown__option" value="United States of America">United States of America</option>
+                  <option class="input-dropdown__option" value="China">China</option>
                 </select>
               </div>
             </li>
-            <li class="hotel-filter hotel-filter--drop-down">
+            <li class="hotel-filter hotel-filter--dropdown">
               <div class="hotel-filter__filter">
                 <h3 class="title--h3">By type of business</h3>
-                <select class="input-drop-down" id="hotel-select">
-                  <option class="input-drop-down__option" value="Apartments &amp; villas rental">Apartments &amp; villas rental</option>
-                  <option class="input-drop-down__option" value="Hello, hello">Hello, hello</option>
-                  <option class="input-drop-down__option" value="Come with kittens">Come with kittens</option>
+                <select class="input-dropdown" id="hotel-select" multiple="multiple">
+                  <option class="input-dropdown__option" value="Apartments &amp; villas rental">Apartments &amp; villas rental</option>
+                  <option class="input-dropdown__option" value="Hello, hello">Hello, hello</option>
+                  <option class="input-dropdown__option" value="Come with kittens">Come with kittens</option>
                 </select>
               </div>
+            </li>
+            <li class="hotel-filter hotel-filter--dropdown dropdown-mobile">
+              <div class="hotel-filter__filter">
+                <h3 class="title--h3">Exhibitor’s name</h3>
+                <select class="input-dropdown" id="hotel-select" multiple="multiple">
+                  <option class="input-dropdown__option" value="Hyatt">Hyatt</option>
+                  <option class="input-dropdown__option" value="Mandarin Oriental Hotel">Mandarin Oriental Hotel</option>
+                  <option class="input-dropdown__option" value="Awesome hotel Ritz">Awesome hotel Ritz</option>
+                </select>
+              </div>
+            </li>
+            <li class="hotel-filter--btns">
+              <div class="hotel-filter--btns-wrapper">
+                <svg width="17" height="17" aria-hidden="true">
+                  <use xlink:href="#icon-filters"></use>
+                </svg>
+                <button class="btn btn--white hotel-filter--btn-filters">filters</button>
+              </div>
+              <button class="btn btn--white hotel-filter--clear">Clear all</button>
+              <button class="btn btn--white hotel-filter--btn-clear">Clear all filters</button>
             </li>
           </ul>
         </div>
         <div class="exhibitors">
           <ul class="hotel-cards">
-            <li class="hotel-card">
-              <ul class="hotel-card__photos">
-                <li class="hotel-card__photo"><img class="hotel-card__photo--big" src="../img/content/exhibition-mandarin-1.jpg"/></li>
-                <li class="hotel-card__photo"><img class="hotel-card__photo--small" src="../img/content/exhibition-mandarin-2.jpg"/></li>
-                <li class="hotel-card__photo"><img class="hotel-card__photo--big" src="../img/content/exhibition-mandarin-2.jpg"/></li>
-                <li class="hotel-card__photo"><img class="hotel-card__photo--small" src="../img/content/exhibition-mandarin-2.jpg"/></li>
-                <li class="hotel-card__photo"><img class="hotel-card__photo--big" src="../img/content/exhibition-mandarin-2.jpg"/></li>
-                <li class="hotel-card__photo"><img class="hotel-card__photo--small" src="../img/content/exhibition-mandarin-2.jpg"/></li>
-                <li class="hotel-card__photo"><img class="hotel-card__photo--big" src="../img/content/exhibition-mandarin-2.jpg"/></li>
-              </ul>
-              <div class="hotel-card__info"><img src="../img/svg/mandarin-logo.svg"/>
-                <h2 class="hotel-card__title">Mandarin Oriental Hotel Group</h2>
-              </div>
-            </li>
-            <li class="hotel-card">
-              <ul class="hotel-card__photos">
-                <li class="hotel-card__photo"><img class="hotel-card__photo--big" src="../img/content/exhibition-ritz-1.jpg"/></li>
-                <li class="hotel-card__photo"><img class="hotel-card__photo--small" src="../img/content/exhibition-ritz-2.jpg"/></li>
-              </ul>
-              <div class="hotel-card__info"><img src="../img/svg/ritz-logo.svg"/>
-                <h2 class="hotel-card__title">The Ritz-Carlton, Moscow and Very long name for best usability at this site. Name participant have to be loong</h2>
-              </div>
-            </li>
-            <li class="hotel-card">
-              <ul class="hotel-card__photos">
-                <li class="hotel-card__photo"><img class="hotel-card__photo--big" src="../img/content/exhibition-hyatt-1.jpg"/></li>
-                <li class="hotel-card__photo"><img class="hotel-card__photo--small" src="../img/content/exhibition-hyatt-2.jpg"/></li>
-              </ul>
-              <div class="hotel-card__info"><img src="../img/svg/hyatt-logo.svg"/>
-                <h2 class="hotel-card__title">Hyatt Regency Moscow Petrovsky Park</h2>
-              </div>
-            </li>
-            <li class="hotel-card">
-              <ul class="hotel-card__photos">
-                <li class="hotel-card__photo"><img class="hotel-card__photo--big" src="../img/content/exhibition-hyatt-1.jpg"/></li>
-                <li class="hotel-card__photo"><img class="hotel-card__photo--small" src="../img/content/exhibition-hyatt-2.jpg"/></li>
-              </ul>
-              <div class="hotel-card__info"><img src="../img/svg/hyatt-logo.svg"/>
-                <h2 class="hotel-card__title">Hyatt Regency Moscow Petrovsky Park</h2>
-              </div>
-            </li>
+            <li class="hotel-card"><a class="hotel-card__link" href="#">
+                <ul class="hotel-card__photos"><img class="hotel-card__photo--big" src="../img/content/exhibition-mandarin-1.jpg"/><img class="hotel-card__photo--small" src="../img/content/exhibition-mandarin-2.jpg"/>
+                </ul>
+                <div class="hotel-card__info"><img src="../img/svg/mandarin-logo.svg"/>
+                  <h2 class="hotel-card__title">Mandarin Oriental Hotel Group</h2>
+                </div></a></li>
+            <li class="hotel-card"><a class="hotel-card__link" href="#">
+                <ul class="hotel-card__photos"><img class="hotel-card__photo--big" src="../img/content/exhibition-ritz-1.jpg"/><img class="hotel-card__photo--small" src="../img/content/exhibition-ritz-2.jpg"/>
+                </ul>
+                <div class="hotel-card__info"><img src="../img/svg/ritz-logo.svg"/>
+                  <h2 class="hotel-card__title">The Ritz-Carlton, Moscow and Very long name for best usability at this site. Name participant have to be loong</h2>
+                </div></a></li>
+            <li class="hotel-card"><a class="hotel-card__link" href="#">
+                <ul class="hotel-card__photos"><img class="hotel-card__photo--big" src="../img/content/exhibition-hyatt-1.jpg"/><img class="hotel-card__photo--small" src="../img/content/exhibition-hyatt-2.jpg"/>
+                </ul>
+                <div class="hotel-card__info"><img src="../img/svg/hyatt-logo.svg"/>
+                  <h2 class="hotel-card__title">Hyatt Regency Moscow Petrovsky Park</h2>
+                </div></a></li>
+            <li class="hotel-card"><a class="hotel-card__link" href="#">
+                <ul class="hotel-card__photos"><img class="hotel-card__photo--big" src="../img/content/exhibition-hyatt-1.jpg"/><img class="hotel-card__photo--small" src="../img/content/exhibition-hyatt-2.jpg"/>
+                </ul>
+                <div class="hotel-card__info"><img src="../img/svg/hyatt-logo.svg"/>
+                  <h2 class="hotel-card__title">Hyatt Regency Moscow Petrovsky Park</h2>
+                </div></a></li>
           </ul>
           <div class="alphabet-hotel">
             <ul class="alphabet-hotel__block-list">
               <li class="alphabet-hotel__block-item">
                 <h3 class="title--h3">#</h3>
                 <ul class="alphabet-hotel__hotels">
-                  <li><span>7° South Seychelles</span></li>
+                  <li><a href="#">7° South Seychelles</a></li>
                 </ul>
               </li>
               <li class="alphabet-hotel__block-item">
                 <h3 class="title--h3">A</h3>
                 <ul class="alphabet-hotel__hotels">
-                  <li><span>Al Khalidiah Tourism Group of companies</span></li>
-                  <li><span>AMAN</span></li>
-                  <li><span>Ambotis Premum Club</span></li>
-                  <li><span>Anantara Maldives &amp; Naladhu</span></li>
-                  <li><span>Arminas Travel, Мексика / Banyan Tree</span></li>
+                  <li><a href="#">Al Khalidiah Tourism Group of companies</a></li>
+                  <li><a href="#">AMAN</a></li>
+                  <li><a href="#">Ambotis Premum Club</a></li>
+                  <li><a href="#">Anantara Maldives &amp; Naladhu</a></li>
+                  <li><a href="#">Arminas Travel, Мексика / Banyan Tree</a></li>
                 </ul>
               </li>
               <li class="alphabet-hotel__block-item">
                 <h3 class="title--h3">B</h3>
                 <ul class="alphabet-hotel__hotels">
-                  <li><span>Baglioni Hotels &amp; Resorts</span></li>
-                  <li><span>Belmond</span></li>
-                  <li><span>Biblos Resort Alaçatı</span></li>
-                  <li><span>Breidenbacher Hof, a Capella Hotel / Elite Expert</span></li>
+                  <li><a href="#">Baglioni Hotels &amp; Resorts</a></li>
+                  <li><a href="#">Belmond</a></li>
+                  <li><a href="#">Biblos Resort Alaçatı</a></li>
+                  <li><a href="#">Breidenbacher Hof, a Capella Hotel / Elite Expert</a></li>
                 </ul>
               </li>
               <li class="alphabet-hotel__block-item">
                 <h3 class="title--h3">C</h3>
                 <ul class="alphabet-hotel__hotels">
-                  <li><span>Cheval Blanc</span></li>
-                  <li><span>Clinic Lemanic</span></li>
-                  <li><span>Corinthia Hotel London</span></li>
-                  <li><span>Crossroads Maldives</span></li>
-                  <li><span>Crystal Cruises</span></li>
+                  <li><a href="#">Cheval Blanc</a></li>
+                  <li><a href="#">Clinic Lemanic</a></li>
+                  <li><a href="#">Corinthia Hotel London</a></li>
+                  <li><a href="#">Crossroads Maldives</a></li>
+                  <li><a href="#">Crystal Cruises</a></li>
                 </ul>
               </li>
             </ul>

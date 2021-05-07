@@ -1,8 +1,8 @@
-mixin renderAlphabetHotel(title, hotelList)
+mixin renderAlphabetHotel(title, hotelList, link)
   li.alphabet-hotel__block-item
     h3.title--h3=title
     ul.alphabet-hotel__hotels
       each hotel in hotelList
         li
-          span=hotel
+          a(href=hotel.link)=hotel.name
 
