@@ -26,8 +26,8 @@ block main
               .news__content
                 time.news__date(datetime=news.datetime) #{news.date}
                 h3 #{news.title}
-                p #{news.text}
-              a.news__button.news__button--open-news(href="#")
+                p #{news.preview}
+              a.news__button.news__button--open-news(href="full-news.html")
                 img(src="img/svg/icon-arrow.svg", width="20", height="14")
                 span.visually-hidden read more
         a.news__button.news__button--more(href="#") More News
