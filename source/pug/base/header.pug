@@ -18,7 +18,7 @@ mixin header(headerMod, currentPage)
         text: "Exhibitors"
       },
       {
-        href: "#",
+        href: "gallery.html",
         text: "Gallery"
       },
       {
@@ -60,13 +60,13 @@ mixin header(headerMod, currentPage)
           button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
           .main-nav__wrapper
             ul.main-nav__list
-              each link, index in headerLinks
-                if(index === currentPage)
+              each link in headerLinks
+                if(link.text === currentPage)
                   li
-                    a.main-nav__link.main-nav__link--active=link.text
+                    a.main-nav__link.main-nav__link--active= link.text
                 else
                   li
-                    a.main-nav__link(href=link.href)=link.text
+                    a.main-nav__link(href=link.href)= link.text
         a(href="#").header__link.header__link--sigh-in.header__main-right
           span Sign in
           +icon("icon-sign-in", 26, 30)
