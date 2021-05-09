@@ -1,6 +1,10 @@
 .news-home {
   display: flex;
   padding-bottom: 37px;
+
+  @include viewport--sm {
+    flex-direction: column;
+  }
 }
 
 .news-home__about {
@@ -10,10 +14,14 @@
 
   &-title {
     margin: 0;
-    color: #0098C1;
+    color: $color-blue;
     font-size: 36px;
     font-weight: 300;
     padding-bottom: 13px;
+
+    @include viewport--sm {
+      font-size: 32px;
+    }
   }
 
   &-text {
@@ -26,6 +34,16 @@
   .news-home__button-open {
     bottom: 52px;
   }
+
+  @include viewport--sm {
+    width: 100%;
+    border-bottom: 1px solid #0098c1;
+    padding-bottom: 52px;
+
+    .news-home__button-open {
+      bottom: 20px;
+    }
+  }
 }
 
 .news-home__info {
@@ -37,7 +55,7 @@
 
   &-title {
     margin: 0;
-    color: #0098C1;
+    color: $color-blue;
     font-size: 38px;
     font-weight: 300;
     padding-bottom: 13px;
@@ -80,11 +98,11 @@
   &-date {
     padding-left: 16px;
     font-size: 12px;
-    color: #9F9F9F;
+    color: $color-nobel;
   }
 
   h3 {
-    color: #0098C1;
+    color: $color-blue;
     font-size: 24px;
     font-weight: 300;
     margin: 0;
@@ -98,7 +116,7 @@
     font-size: 16px;
     line-height: 22px;
     padding-left: 16px;
-    color: #505050;
+    color: $color-gray-dark;
     max-height: 115px;
     overflow: hidden;
   }
@@ -107,18 +125,26 @@
     text-align: center;
     font-weight: 600;
   }
+
+  @include viewport--sm {
+    width: 100%;
+
+    &-title {
+      font-size: 32px;
+    }
+  }
 }
 
 .news-home__button {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #0098c1;
+  border: 1px solid $color-blue;
   border-radius: 1px;
   font-size: 16px;
   line-height: 19px;
   font-weight: 600;
-  color: #0098c1;
+  color: $color-blue;
 
   &-open {
     position: absolute;
@@ -127,4 +153,3 @@
     padding: 4px 41px;
   }
 }
-
