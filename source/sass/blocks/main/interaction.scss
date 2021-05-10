@@ -113,5 +113,10 @@
       bottom: -23px;
       padding: 4px 41px;
     }
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
   }
 }

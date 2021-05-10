@@ -59,8 +59,37 @@ block main
       h1 Компоненты, используемые в вёрстке
 
       section
-        h2 Название компонента или группы компонентов
+        h2 1. Блок promo
 
-        p Класс компонента \ модификаторы
-        p(style="color: red;") При необходимости, подсказки \ предупреждение \ важная информация
-        div Компонент
+        p Используется на разных страницах
+        p(style="color: red;") Кнопка регистрации скрывается заменой класса "promo__reg" на "promo__none"
+        div
+          +promo("The leading luxury travel exhibition in eastern europe, russia AND cis", "Registration", "./img/bg/bg-home.png", "./img/bg/bg-home@2x.png", "1920", "534", "./img/bg/LTM_28_02_1942.png 1x, ./img/bg/LTM_28_02_1942@2x.png 2x", "promo__reg")
+
+      section
+        h2 2. Блок направлений
+
+        p Используется на разных страницах
+        p(style="color: red;")
+        div.direction.container.swiper-container.mySwiper
+          ul.direction__list.swiper-wrapper
+            +direction("Luxury Travel Mart Kyiv 2019 at the Intercontinental Kyiv, Ukraine", "24 September 2019", "Registration ending soon", "24.09.2019", "direction__status--ending")
+            +direction("Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan", "27 September 2019", "Available", "27.09.2019", "direction__status--available")
+            +direction("Luxury Travel Mart Moscow 2019 at The Ritz-Carlton, Moscow, Russia", "1 October 2019", "Available", "01.10.2019", "direction__status--available")
+            +direction("Luxury Travel Mart Moscow 2020 at Hyatt Regency Moscow, Russia", "27–28 February 2020", "Available", "27.02.2020", "direction__status--available")
+            +direction("Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan", "3 March 2020", "Waiting list", "03.03.2020", "direction__status--waiting")
+            +direction("Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia", "20 June 2020", "Waiting list", "20.06.2020", "direction__status--waiting")
+          .direction__arrow.swiper-button-next.direction__arrow--right
+            +icon("arrow-right", "11", "19")
+          .direction__arrow.swiper-button-prev.direction__arrow--left
+            +icon("arrow-left", "11", "19")
+
+      section
+        h2 3. Кнопка перехода в блок
+
+        p Используется на разных страницах
+        p(style="color: red;")
+        div
+          a.news-home__button.news-home__button-open(href="#" style="position: inherit; display: inline-block;")
+            img(src="img/svg/icon-arrow.svg", width="20", height="14", alt="arrow")
+            span.visually-hidden read more

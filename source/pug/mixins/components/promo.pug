@@ -1,8 +1,9 @@
-mixin promo(titleItem, btnItem, imgItem, img2xItem, widthItem, heightItem)
+mixin promo(titleItem, btnItem, imgItem, img2xItem, widthItem, heightItem, imgSource, classItem, promoItem)
   section.promo
     picture
+      source(media="(max-width: 767px)" srcset=imgSource)
       img.promo__img(src=imgItem srcset=img2xItem width=widthItem height=heightItem alt="promo image")
 
-    .promo__info.container
+    .container(class=promoItem)
       h2.promo__title= titleItem
-      a.promo__reg(href="#")= btnItem
+      a(href="registration.html" class=classItem)= btnItem
