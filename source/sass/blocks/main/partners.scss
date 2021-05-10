@@ -28,6 +28,11 @@
   @include viewport--sm {
     padding-right: 10px;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 }
 
 .partners__btn {

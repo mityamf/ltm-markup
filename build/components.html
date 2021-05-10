@@ -2308,10 +2308,68 @@
         <div class="container"><a class="components-backwards" href="index.html"><span>&larr;</span><span>вернуться на разводящую</span></a>
           <h1>Компоненты, используемые в вёрстке</h1>
           <section>
-            <h2>Название компонента или группы компонентов</h2>
-            <p>Класс компонента \ модификаторы</p>
-            <p style="color: red;">При необходимости, подсказки \ предупреждение \ важная информация</p>
-            <div>Компонент</div>
+            <h2>1. Блок promo</h2>
+            <p>Используется на разных страницах</p>
+            <p style="color: red;">Кнопка регистрации скрывается заменой класса "promo__reg" на "promo__none"</p>
+            <div>
+              <section class="promo">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="./img/bg/LTM_28_02_1942.png 1x, ./img/bg/LTM_28_02_1942@2x.png 2x"/><img class="promo__img" src="./img/bg/bg-home.png" srcset="./img/bg/bg-home@2x.png" width="1920" height="534" alt="promo image"/>
+                </picture>
+                <div class="container">
+                  <h2 class="promo__title">The leading luxury travel exhibition in eastern europe, russia AND cis</h2><a class="promo__reg" href="registration.html">Registration</a>
+                </div>
+              </section>
+            </div>
+          </section>
+          <section>
+            <h2>2. Блок направлений</h2>
+            <p>Используется на разных страницах</p>
+            <p style="color: red;"></p>
+            <div class="direction container swiper-container mySwiper">
+              <ul class="direction__list swiper-wrapper">
+                <li class="direction__item swiper-slide">
+                  <h2 class="direction__title">Luxury Travel Mart Kyiv 2019 at the Intercontinental Kyiv, Ukraine</h2>
+                  <time class="direction__data" datatime="24.09.2019">24 September 2019</time><span class="direction__status direction__status--ending">Registration ending soon</span>
+                </li>
+                <li class="direction__item swiper-slide">
+                  <h2 class="direction__title">Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan</h2>
+                  <time class="direction__data" datatime="27.09.2019">27 September 2019</time><span class="direction__status direction__status--available">Available</span>
+                </li>
+                <li class="direction__item swiper-slide">
+                  <h2 class="direction__title">Luxury Travel Mart Moscow 2019 at The Ritz-Carlton, Moscow, Russia</h2>
+                  <time class="direction__data" datatime="01.10.2019">1 October 2019</time><span class="direction__status direction__status--available">Available</span>
+                </li>
+                <li class="direction__item swiper-slide">
+                  <h2 class="direction__title">Luxury Travel Mart Moscow 2020 at Hyatt Regency Moscow, Russia</h2>
+                  <time class="direction__data" datatime="27.02.2020">27–28 February 2020</time><span class="direction__status direction__status--available">Available</span>
+                </li>
+                <li class="direction__item swiper-slide">
+                  <h2 class="direction__title">Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan</h2>
+                  <time class="direction__data" datatime="03.03.2020">3 March 2020</time><span class="direction__status direction__status--waiting">Waiting list</span>
+                </li>
+                <li class="direction__item swiper-slide">
+                  <h2 class="direction__title">Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia</h2>
+                  <time class="direction__data" datatime="20.06.2020">20 June 2020</time><span class="direction__status direction__status--waiting">Waiting list</span>
+                </li>
+              </ul>
+              <div class="direction__arrow swiper-button-next direction__arrow--right">
+                <svg width="11" height="19" aria-hidden="true">
+                  <use xlink:href="#arrow-right"></use>
+                </svg>
+              </div>
+              <div class="direction__arrow swiper-button-prev direction__arrow--left">
+                <svg width="11" height="19" aria-hidden="true">
+                  <use xlink:href="#arrow-left"></use>
+                </svg>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>3. Кнопка перехода в блок</h2>
+            <p>Используется на разных страницах</p>
+            <p style="color: red;"></p>
+            <div><a class="news-home__button news-home__button-open" href="#" style="position: inherit; display: inline-block;"><img src="img/svg/icon-arrow.svg" width="20" height="14" alt="arrow"><span class="visually-hidden">read more</span></a></div>
           </section>
         </div>
       </main>
