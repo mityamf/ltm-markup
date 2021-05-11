@@ -1,0 +1,5 @@
+mixin direction(titleItem, dataItem, statusItem, timeItem, classStatus)
+  li.direction__item.swiper-slide
+    h2.direction__title= titleItem
+    time(datatime=timeItem).direction__data= dataItem
+    span.direction__status(class=classStatus)= statusItem
