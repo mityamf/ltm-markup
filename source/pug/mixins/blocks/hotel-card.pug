@@ -5,6 +5,6 @@ mixin renderHotelCard(title, photoList, logo, link)
       ul.hotel-card__photos
         each photo, index in photoList
           img(src=photo, class=mod[index % 2])
-      div.hotel-card__info
+      .hotel-card__info
         img(src=logo)
         h2.hotel-card__title=title
