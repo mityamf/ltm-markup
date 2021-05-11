@@ -1,0 +1,28 @@
+extends ../base/layout
+
+block data
+  include ../data/privacy-policy
+
+block variables
+  - var title = "Политика конфиденциальности"
+  - var hasHeader = true
+  - var hasFooter = true
+
+block main
+  main
+    .container
+      .privacy-policy
+        .privacy-policy__title-container
+          h2.privacy-policy__title.title.title--h2 Privacy Policy
+          a.privacy-policy__nav-button(href="main.html")
+            img(src="img/svg/icon-back.svg", width="12", height="20")
+            span Back
+        time.privacy-policy__date(datetime=privacyPolicy.datetime)= privacyPolicy.date
+        .privacy-policy__wrapper
+          p= privacyPolicy.text
+          ul.privacy-policy__list
+            each item in privacyPolicy.content
+              li.privacy-policy__item
+                h3.privacy-policy__question.title.title--h3= item.question
+                each paragraph in item.answer
+                  p= paragraph

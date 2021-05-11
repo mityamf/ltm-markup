@@ -1,0 +1,30 @@
+extends ../base/layout
+
+block data
+  include ../data/partners
+
+block variables
+  - var title = "Партнеры"
+  - var hasHeader = true
+  - var hasFooter = true
+
+block main
+
+  main
+    .container
+      .partners
+        h2.partners__title.title.title--h2 Partners
+        ul.partners__list
+          each partner in partners
+            li.partners__item
+              .partners__image-container
+                img(src=partner.logo)
+              .partners__item-container
+                .partners__top-line
+                  h3.partners__name.title.title--h3 #{partner.name}
+                  span.partners__rank #{partner.rank}
+                a.partners__link(href=partner.link) #{partner.link}
+                p #{partner.text}
+                a.partners__button.partners__button--read-more(href="newpage.html")
+                  img(src="img/svg/icon-arrow.svg", width="20", height="14")
+                  span.visually-hidden read more
