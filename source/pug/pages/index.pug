@@ -82,6 +82,10 @@ block main
         name: "Регистрация - registration.html",
         src: "registration.html"
       },
+      {
+        name: "Регистрация экспонента - exhibitor.html",
+        src: "exhibitor.html"
+      },
     ]
 
   main.container.main-index
@@ -91,4 +95,3 @@ block main
       each page in pages
         li
           a(href= page.src)= page.name
-
