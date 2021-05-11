@@ -1,0 +1,49 @@
+.privacy-policy__title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.privacy-policy__title {
+  margin-bottom: 0;
+}
+
+.privacy-policy__nav-button {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+
+  @include viewport--md {
+    display: none;
+  }
+}
+
+.privacy-policy__date {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  color: $color-gray;
+}
+
+.privacy-policy__wrapper {
+  max-width: 936px;
+  margin: 0 auto;
+}
+
+.privacy-policy__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.privacy-policy__item {
+  margin-bottom: 24px;
+}
+
+.privacy-policy__question {
+  margin: 0;
+}
