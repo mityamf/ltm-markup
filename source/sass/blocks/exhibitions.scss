@@ -1,0 +1,9 @@
+.exhibitors {
+  display: flex;
+
+  background-color: $color-white;
+
+  @include viewport--lg {
+    justify-content: center;
+  }
+}

@@ -5,6 +5,7 @@ import {initModals} from './modules/init-modals';
 import {stickNav} from './modules/stick-nav';
 import {initSearch} from './modules/search';
 import {initMenu} from './modules/init-menu';
+import {initSwiper} from './modules/init-swiper';
 
 // Utils
 // ---------------------------------
@@ -19,3 +20,5 @@ initModals();
 stickNav();
 initSearch();
 initMenu();
+initSwiper();
+

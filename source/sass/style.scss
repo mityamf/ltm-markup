@@ -3,6 +3,7 @@
 
 @import "vendor/normalize";
 @import "vendor/swiper";
+@import "node_modules/choices.js/src/styles/choices";
 
 // Global
 //---------------------------------
@@ -14,16 +15,28 @@
 @import "global/utils";
 @import "global/container";
 @import "global/text";
+@import "global/btn";
+@import "global/top-block";
 
 // Blocks
 //---------------------------------
 
 @import "blocks/header";
-@import "blocks/footer";
+@import "blocks/footer/footer";
+@import "blocks/footer/logotip";
+@import "blocks/footer/mailing";
+@import "blocks/footer/menu";
+@import "blocks/main/promo";
+@import "blocks/main/direction";
+@import "blocks/main/news-home";
+@import "blocks/main/interaction";
+@import "blocks/main/partners";
+@import "blocks/registration/registration";
+@import "blocks/registration/terms";
+@import "blocks/registration/exhibitor";
 @import "blocks/modal";
 @import "blocks/main-nav";
 @import "blocks/search";
-
 @import "blocks/about";
 @import "blocks/schedule";
 @import "blocks/info-bottom";
@@ -31,7 +44,16 @@
 @import "blocks/organizers";
 @import "blocks/partners";
 @import "blocks/privacy-policy";
-@import "blocks/contact-us"
+@import "blocks/contact-us";
+@import "source/sass/blocks/hotel-cards";
+@import "source/sass/blocks/hotel-card";
+@import "source/sass/blocks/exhibitions";
+@import "source/sass/blocks/alphabet-hotel";
+@import "source/sass/blocks/choose-event";
+@import "source/sass/blocks/hotel-filter";
+@import "source/sass/blocks/hotel-filters";
+@import "source/sass/blocks/hotel-page";
+@import "source/sass/vendor/choices";
 
 // используйте это для отключения ховеров на тач устройствах
 // ! но не используйте это для текстовых полей ( input, textarea )
