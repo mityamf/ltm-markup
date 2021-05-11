@@ -42,18 +42,18 @@
 @import "blocks/info-bottom";
 @import "blocks/news";
 @import "blocks/organizers";
-@import "blocks/partners";
+@import "blocks/partners-page";
 @import "blocks/privacy-policy";
 @import "blocks/contact-us";
-@import "source/sass/blocks/hotel-cards";
-@import "source/sass/blocks/hotel-card";
-@import "source/sass/blocks/exhibitions";
-@import "source/sass/blocks/alphabet-hotel";
-@import "source/sass/blocks/choose-event";
-@import "source/sass/blocks/hotel-filter";
-@import "source/sass/blocks/hotel-filters";
-@import "source/sass/blocks/hotel-page";
-@import "source/sass/vendor/choices";
+@import "blocks/hotel-cards";
+@import "blocks/hotel-card";
+@import "blocks/exhibitions";
+@import "blocks/alphabet-hotel";
+@import "blocks/choose-event";
+@import "blocks/hotel-filter";
+@import "blocks/hotel-filters";
+@import "blocks/hotel-page";
+@import "vendor/choices";
 
 // используйте это для отключения ховеров на тач устройствах
 // ! но не используйте это для текстовых полей ( input, textarea )
