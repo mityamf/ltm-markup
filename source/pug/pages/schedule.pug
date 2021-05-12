@@ -8,9 +8,11 @@ block variables
   - var desktopImage = "img/bg/schedule-page-desktop.png"
   - var tabletImage = "img/bg/schedule-page-tablet.png"
   - var mobileImage = "img/bg/schedule-page-mobile.png"
+  - var currentPage = "Detailed Schedule"
 
 block main
   include ../data/schedule
+  include ../data/info-bottom
 
   +renderTopBlock(text, desktopImage, tabletImage, mobileImage)
   main.container
@@ -18,7 +20,3 @@ block main
       ul.schedule__program
         each program in programs
           +renderProgram(program.title, program.schedule)
-      include ../data/info-bottom
-
-
-
