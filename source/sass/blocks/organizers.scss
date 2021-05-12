@@ -1,0 +1,42 @@
+.organizers__title {
+  margin-bottom: 25px;
+}
+
+.organizers__wrapper {
+  max-width: 936px;
+  margin: 0 auto;
+}
+
+.organizers__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.organizers__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 48px;
+
+  @include viewport--md {
+    align-items: center;
+  }
+}
+
+.organizers__image-container {
+  img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.organizers__name {
+  margin-top: 25px;
+  margin-bottom: 12px;
+}
+
+.organozers__item p {
+  margin: 0;
+  padding: 0;
+}

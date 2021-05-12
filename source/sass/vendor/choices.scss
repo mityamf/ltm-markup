@@ -1,3 +1,5 @@
+@import "node_modules/choices.js/src/styles/choices";
+
 .choices {
   height: 49px;
 
@@ -12,6 +14,8 @@
   }
 
   &__list--dropdown .choices__item--selectable {
+    background-color: transparent;
+
     font-size: 24px;
     line-height: 29px;
     color: $color-blue;
@@ -21,7 +25,13 @@
     display: none;
   }
 
+  &__input {
+    background-color: transparent;
+  }
+
   &__inner {
+    background-color: transparent;
+
     font-size: 24px;
     line-height: 29px;
     color: $color-blue;

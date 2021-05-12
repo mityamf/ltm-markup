@@ -27,6 +27,11 @@
     list-style-type: none;
   }
 
+  li > svg {
+    display: block;
+    margin: 0 auto 17px auto;
+  }
+
   &__aside {
     width: 40%;
     padding-left: 10px;

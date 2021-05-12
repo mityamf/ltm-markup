@@ -14,21 +14,6 @@
     transition: color background-color $default-transition-settings;
   }
 
-  &--white:hover,
-  &--white:active {
-    border-color: transparent;
-    background-color: $color-blue;
-
-    color: $color-default-white;
-  }
-
-  &--white:focus {
-    border-color: transparent;
-    background-color: $color-gray;
-
-    color: $color-default-white;
-  }
-
   &--white:disabled {
     border-color: transparent;
     background-color: $color-white;
@@ -38,9 +23,42 @@
 
   &--blue {
     background-color: $color-blue;
+    border: none;
 
     color: $color-default-white;
 
     transition: color background-color $default-transition-settings;
+  }
+
+  &--white:hover,
+  &--white:focus {
+    border-color: transparent;
+    background-color: $color-blue;
+
+    color: $color-default-white;
+  }
+
+  &--white:active {
+    border-color: transparent;
+    background-color: $color-gray;
+
+    color: $color-default-white;
+  }
+
+  @include viewport--md {
+    &--white:hover,
+    &--white:focus {
+      border-color: $color-blue;
+      background-color: transparent;
+
+      color: $color-blue;
+    }
+
+    &--white:active {
+      border-color: transparent;
+      background-color: $color-gray;
+
+      color: $color-default-white;
+    }
   }
 }

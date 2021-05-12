@@ -1,0 +1,12 @@
+extends ../base/layout
+
+block variables
+  - var title = "LK-Exhibitor Account"
+  - var hasHeader = true
+  - var hasFooter = true
+
+block main
+  include ../data/support-contacts
+
+  main.container
+    +renderSupportContacts(contactsList)

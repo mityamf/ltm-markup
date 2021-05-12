@@ -4,18 +4,20 @@ block variables
   - var title = "Об ивенте"
   - var hasHeader = true
   - var hasFooter = true
-  - var background = "../img/bg/bg-about-page-desktop.png"
   - var text = "THE LEADING LUXURY TRAVEL EXHIBITION IN EASTERN EUROPE, RUSSIA & CIS"
+  - var desktopImage = "img/bg/about-page-desktop.png"
+  - var tabletImage = "img/bg/about-page-tablet.png"
+  - var mobileImage = "img/bg/news-page-mobile.png"
+  - var currentPage = "About LTM"
 
 block main
   include ../data/about
   include ../data/benefits
-  include ../mixins/blocks/top-block
 
-  +renderTopBlock(background, text)
+  +renderTopBlock(text, desktopImage, tabletImage, mobileImage)
   main.container
-    div.about
-      div.about__content
+    .about
+      .about__content
         h2.title--h2=aboutEvent.title
         ul
           each text in aboutEvent.textList
@@ -38,5 +40,5 @@ block main
         ol
           each benefit in benefits
             li
-              img(src=benefit.src)
+              +icon(benefit.src, benefit.width, benefit.height)
               span=benefit.text

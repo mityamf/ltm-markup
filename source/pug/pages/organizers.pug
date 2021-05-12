@@ -1,0 +1,24 @@
+extends ../base/layout
+
+block data
+  include ../data/organizers
+
+block variables
+  - var title = "Организаторы"
+  - var hasHeader = true
+  - var hasFooter = true
+
+block main
+
+  main
+    .container
+      .organizers
+        h2.organizers__title.title.title--h2 Organizers
+        .organizers__wrapper
+          ul.organizers__list
+            each organizer in organizersList
+              li.organizers__item
+                .organizers__image-container
+                  img(src=organizer.logo)
+                h3.organizers__name.title.title--h3 #{organizer.title}
+                p #{organizer.text}
