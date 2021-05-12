@@ -3,7 +3,6 @@
 
 @import "vendor/normalize";
 @import "vendor/swiper";
-@import "node_modules/choices.js/src/styles/choices";
 
 // Global
 //---------------------------------
@@ -21,6 +20,7 @@
 // Blocks
 //---------------------------------
 
+@import "vendor/choices";
 @import "blocks/header";
 @import "blocks/footer/footer";
 @import "blocks/footer/logotip";
@@ -41,10 +41,6 @@
 @import "blocks/schedule";
 @import "blocks/info-bottom";
 @import "blocks/news";
-@import "blocks/organizers";
-@import "blocks/partners-page";
-@import "blocks/privacy-policy";
-@import "blocks/contact-us";
 @import "blocks/hotel-cards";
 @import "blocks/hotel-card";
 @import "blocks/exhibitions";
@@ -53,7 +49,13 @@
 @import "blocks/hotel-filter";
 @import "blocks/hotel-filters";
 @import "blocks/hotel-page";
-@import "vendor/choices";
+@import "blocks/edit";
+@import "blocks/edit-buttons";
+@import "blocks/support-contacts";
+@import "blocks/organizers";
+@import "blocks/partners-page";
+@import "blocks/privacy-policy";
+@import "blocks/contact-us";
 
 // используйте это для отключения ховеров на тач устройствах
 // ! но не используйте это для текстовых полей ( input, textarea )

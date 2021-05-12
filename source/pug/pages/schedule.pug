@@ -8,6 +8,7 @@ block variables
   - var desktopImage = "img/bg/schedule-page-desktop.png"
   - var tabletImage = "img/bg/schedule-page-tablet.png"
   - var mobileImage = "img/bg/schedule-page-mobile.png"
+  - var currentPage = "Detailed Schedule"
 
 block main
   include ../data/schedule
@@ -19,6 +20,3 @@ block main
         each program in programs
           +renderProgram(program.title, program.schedule)
       include ../data/info-bottom
-
-
-
