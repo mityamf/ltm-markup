@@ -1,0 +1,14 @@
+extends ../base/layout
+
+block variables
+  - var title = "Редактирование страницы отеля"
+  - var hasHeader = true
+  - var hasFooter = true
+
+block main
+  include ../data/hotel-page-editing
+  include ../data/support-contacts
+
+  main.container
+    +renderEditBlock(editingBlockList, buttonsList)
+

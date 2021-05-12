@@ -57,6 +57,20 @@
   }
 }
 
+.direction__swiper {
+  position: relative;
+  margin: 0;
+  padding: 0 3.33%;
+
+  .swiper-container {
+    position: static;
+  }
+
+  @include viewport--sm {
+    display: none;
+  }
+}
+
 .direction__arrow {
   outline: none;
   align-self: center;
@@ -70,14 +84,6 @@
 .direction__arrow,
 .swiper-button-prev::after {
   content: none;
-}
-
-.direction__arrow--left {
-  margin-right: 19px;
-}
-
-.direction__arrow--right {
-  margin-right: 9px;
 }
 
 .direction__list,

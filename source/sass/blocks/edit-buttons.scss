@@ -1,0 +1,42 @@
+.edit-buttons {
+  display: flex;
+  justify-content: flex-end;
+  width: 698px;
+  padding-left: 237px;
+  padding-top: 20px;
+
+  .btn:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 10px;
+
+    @include viewport--lg {
+      width: 178px;
+    }
+  }
+
+  @include viewport--lg {
+    padding-left: 0;
+    width: 100%;
+  }
+
+  @include viewport--sm {
+    flex-wrap: wrap;
+    padding: 20px 0;
+    margin: 0 auto -20px auto;
+    width: 222px;
+    flex-direction: column-reverse;
+
+    .btn:not(:last-child) {
+      margin-right: 0;
+    }
+
+    .btn {
+      width: 100%;
+      margin: 0 auto 20px auto;
+    }
+  }
+}

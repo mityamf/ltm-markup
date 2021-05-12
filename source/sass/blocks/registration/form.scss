@@ -1,0 +1,59 @@
+.form-reg__info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.form-reg {
+  width: 100%;
+
+  &__title {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0;
+    color: $color-blue;
+    padding-top: 27px;
+    align-items: center;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    max-width: 462px;
+    width: 33%;
+    padding-right: 0%;
+    padding-bottom: 20px;
+
+    label {
+      padding-bottom: 5px;
+    }
+
+    input {
+      border: 1px solid $color-blue;
+      //
+      width: 460px;
+      height: 42px;
+      padding-left: 10px;
+      font-size: 24px;
+      font-weight: 300;
+      outline: none;
+    }
+
+    select {
+      border: 1px solid $color-blue;
+      width: 460px;
+      height: 42px;
+      padding-left: 10px;
+      font-size: 24px;
+      font-weight: 300;
+      color: $color-blue;
+    }
+
+    h3 {
+      margin: 0;
+      font-weight: 300;
+      padding-bottom: 5px;
+    }
+  }
+}
