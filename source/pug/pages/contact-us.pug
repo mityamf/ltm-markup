@@ -2,14 +2,21 @@ extends ../base/layout
 
 block data
   include ../data/contact-us
+  include ../mixins/blocks/top-block
 
 block variables
   - var title = "Контакты"
   - var hasHeader = true
   - var hasFooter = true
+  - var currentPage = "Contacts"
+  - var text = "THE LEADING LUXURY TRAVEL EXHIBITION IN EASTERN EUROPE, RUSSIA & CIS"
+  - var desktopImage = "img/bg/bg-003-desktop.jpg"
+  - var tabletImage = "img/bg/bg-003-tablet.jpg"
+  - var mobileImage = "img/bg/bg-006-mobile.jpg"
 
 block main
 
+  +renderTopBlock(text, desktopImage, tabletImage, mobileImage)
   main
     .container
       .contact-us
@@ -30,7 +37,7 @@ block main
                   img(src="img/svg/ico_sendingmessage.svg", width="42", height="18")
           .contact-us__office
             .contact-us__logo-container
-              img(src=office.logo, width="138" height="61")
+              img(src= office.logo.src, width= office.logo.width height= office.logo.height)
             .contact-us__office-info
               h3.contact-us__office-name.title.title--h3= office.name
               p= office.address

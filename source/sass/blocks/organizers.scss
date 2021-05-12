@@ -1,5 +1,9 @@
 .organizers__title {
   margin-bottom: 25px;
+
+  @include viewport--lg {
+    margin-bottom: 31px;
+  }
 }
 
 .organizers__wrapper {
@@ -16,7 +20,7 @@
 .organizers__item {
   display: flex;
   flex-direction: column;
-  margin-bottom: 48px;
+  margin-bottom: 64px;
 
   @include viewport--md {
     align-items: center;
@@ -32,11 +36,11 @@
 }
 
 .organizers__name {
-  margin-top: 25px;
-  margin-bottom: 12px;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
-.organozers__item p {
+.organizers__item p {
   margin: 0;
   padding: 0;
 }

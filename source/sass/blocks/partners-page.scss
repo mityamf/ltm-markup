@@ -1,3 +1,13 @@
+.partners-page {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+
+  @include viewport--lg {
+    margin-bottom: 10px;
+  }
+}
+
 .partners-page__title {
   margin-bottom: 0;
 }
@@ -9,6 +19,12 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @include viewport--lg {
+    width: 100%;
+    max-width: 930px;
+    margin: 0 auto;
+  }
 }
 
 .partners-page__item {
@@ -29,6 +45,10 @@
   @include viewport--sm {
     flex-direction: column;
     align-items: center;
+
+    &:nth-last-of-type(2) {
+      border-bottom: 1px solid $color-gray-light;
+    }
   }
 }
 
@@ -76,7 +96,13 @@
 
   @include viewport--sm {
     align-self: center;
+    width: 250px;
     margin-bottom: 9px;
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
   }
 }
 
@@ -85,6 +111,11 @@
   padding: 0;
 
   text-align: right;
+
+  @include viewport--sm {
+    align-self: center;
+    text-align: center;
+  }
 }
 
 .partners-page__rank {
@@ -139,5 +170,19 @@
   &--read-more {
     padding: 4px 41px;
     margin: auto 0 30px auto;
+  }
+}
+
+.partners-page__button-up {
+  display: block;
+  margin-left: auto;
+  margin-right: -65px;
+
+  @include viewport--xl {
+    margin-right: 0;
+  }
+
+  @include viewport--sm {
+    margin: 0 auto;
   }
 }

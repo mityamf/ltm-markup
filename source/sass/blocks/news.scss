@@ -2,7 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 35px;
+  margin-top: 27px;
+  margin-bottom: 80px;
+
+  @include viewport--lg {
+    margin-bottom: 50px;
+  }
 }
 
 .news__title-container {
@@ -40,6 +45,7 @@
 .news__nav-button {
   display: flex;
   align-items: center;
+  margin-right: 24px;
 
   img {
     margin-right: 5px;
@@ -63,6 +69,12 @@
   padding: 0;
 
   list-style: none;
+
+  @include viewport--lg {
+    column-gap: 10px;
+    row-gap: 65px;
+    margin-bottom: 50px;
+  }
 
   @include viewport--md {
     grid-template-columns: 1fr;
@@ -139,12 +151,17 @@
 
 .news__date {
   display: block;
+  margin-top: -2px;
   padding: 0 16px;
 
   font-size: 12px;
   line-height: 14px;
   font-weight: 400;
   color: $color-gray;
+
+  @include viewport--lg {
+    padding: 0 10px;
+  }
 
   @include viewport--md {
     padding: 0;
@@ -162,13 +179,19 @@
 
 .news__content h3 {
   margin: 0;
+  margin-top: -5px;
   margin-bottom: 5px;
   padding: 0 16px;
 
   font-size: 24px;
   line-height: 29px;
+  letter-spacing: 0.04em;
   font-weight: 300;
   color: $color-blue;
+
+  @include viewport--lg {
+    padding: 0 10px;
+  }
 
   @include viewport--md {
     padding: 0;
@@ -186,6 +209,10 @@
   font-weight: 400;
   color: $color-gray-dark;
 
+  @include viewport--lg {
+    padding: 0 10px;
+  }
+
   @include viewport--md {
     padding: 0;
   }
@@ -197,6 +224,7 @@
   justify-content: center;
   border: 1px solid $color-blue;
   border-radius: 1px;
+  box-sizing: border-box;
 
   font-size: 16px;
   line-height: 19px;
@@ -208,16 +236,24 @@
     right: 0;
     bottom: 0;
     padding: 4px 41px;
+
+    @include viewport--lg {
+    padding: 4px 32px;
+  }
   }
 
   &--more {
-    padding: 18px 69px 15px 69px;
+    padding: 15px 69px 12px 69px;
   }
 }
 
 .news__full-content {
   max-width: 936px;
   margin: 0 auto;
+
+  @include viewport--lg {
+    margin-top: 17px;
+  }
 
   @include viewport--md {
     order: 2;

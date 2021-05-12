@@ -1,5 +1,5 @@
 mixin renderTopBlock(text, desktopImage, tabletImage, mobileImage)
-  .top-block
+  .top-block#top-block
     img(src=desktopImage, width="100%", height="100%",
       srcset=desktopImage + ' 1280w,' + tabletImage + ' 1024w,' + mobileImage + ' 768w',
       alt="Фоновое изображение")
