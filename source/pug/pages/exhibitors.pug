@@ -17,13 +17,19 @@ block main
   include ../data/choose-event
   include ../data/hotel-filters
 
-  +renderTopBlock(text, desktopImage, tabletImage, mobileImage)
+  //+renderTopBlock(text, desktopImage, tabletImage, mobileImage)
   main.container
-    .choose-event
-      h2.title--h2=chooseEvent.title
-      ul.choose-event__cards
-        each event in chooseEventCard
-          +renderEvent(event.title, event.date, event.status, event.textStatus)
+
+      section.direction.container.swiper-container.mySwiper
+        h2.title--h2=chooseEvent.title
+        ul.direction__list.swiper-wrapper
+          each event in chooseEventCard
+            +direction(event.titleItem, event.dataItem, event.statusItem, event.timeItem, event.classStatus)
+        .direction__arrow.swiper-button-next.direction__arrow--right
+          +icon("arrow-right", 11, 19)
+        .direction__arrow.swiper-button-prev.direction__arrow--left
+          +icon("arrow-left", 11, 19)
+
       ul.hotel-filters
         each filter in filters
           +renderFilter(filter.title, filter.mod, filter.filterList)

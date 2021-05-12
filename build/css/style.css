@@ -3462,62 +3462,6 @@ p {
   .alphabet-hotel {
     display: none; } }
 
-.choose-event__cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style-type: none; }
-  @media (max-width: 1023px) {
-    .choose-event__cards {
-      display: none; } }
-
-.choose-event__card {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  width: 222px;
-  margin-right: 15px;
-  padding-bottom: 15px;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  border: 1px solid transparent;
-  text-align: center; }
-  .choose-event__card:hover, .choose-event__card:focus {
-    border-color: #0098c1; }
-  .choose-event__card:last-child {
-    margin-right: 0; }
-
-.choose-event__card--available > .choose-event__card-status {
-  color: #78b17c; }
-
-.choose-event__card--waiting > .choose-event__card-status {
-  color: #9f9f9f; }
-
-.choose-event__card-title {
-  margin: 10px 10px 16px 10px;
-  font-size: 16px;
-  line-height: 19px;
-  font-weight: normal; }
-
-.choose-event__card-date {
-  display: block;
-  padding-top: 8px;
-  border-top: 1px solid #0098c1;
-  font-size: 12px;
-  line-height: 14px; }
-
-.choose-event__card-status {
-  display: block;
-  font-size: 12px;
-  line-height: 14px; }
-
 .hotel-filter {
   width: 30%;
   margin-right: 20px;

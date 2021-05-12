@@ -2476,29 +2476,48 @@
           </div>
         </div>
       </header>
-      <div class="top-block"><img src="img/bg/news-page-desktop.png" width="100%" height="100%" srcset="img/bg/news-page-desktop.png 1280w,img/bg/news-page-tablet.png 1024w,img/bg/news-page-mobile.png 768w" alt="Фоновое изображение"/>
-        <h1 class="title--h1">THE LEADING LUXURY TRAVEL EXHIBITION IN EASTERN EUROPE, RUSSIA &amp; CIS</h1>
-      </div>
+      <!--+renderTopBlock(text, desktopImage, tabletImage, mobileImage)-->
       <main class="container">
         <div class="choose-event">
           <h2 class="title--h2">Choose the Event:</h2>
-          <ul class="choose-event__cards">
-            <li class="choose-event__card choose-event__card--available">
-              <h3 class="choose-event__card-title">Luxury Travel Mart Kyiv 2019 at the Intercontinental Kyiv, Ukraine</h3><span class="choose-event__card-date">24 September 2019</span><span class="choose-event__card-status">Available</span>
-            </li>
-            <li class="choose-event__card choose-event__card--available">
-              <h3 class="choose-event__card-title">Luxury Travel Mart Kyiv 2019 at the Intercontinental Kyiv, Ukraine</h3><span class="choose-event__card-date">24 September 2019</span><span class="choose-event__card-status">Available</span>
-            </li>
-            <li class="choose-event__card choose-event__card--available">
-              <h3 class="choose-event__card-title">Luxury Travel Mart Moscow 2019 at The Ritz-Carlton, Moscow, Russia</h3><span class="choose-event__card-date">1 October 2019</span><span class="choose-event__card-status">Available</span>
-            </li>
-            <li class="choose-event__card choose-event__card--waiting">
-              <h3 class="choose-event__card-title">Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan</h3><span class="choose-event__card-date">3 March 2020</span><span class="choose-event__card-status">Waiting list</span>
-            </li>
-            <li class="choose-event__card choose-event__card--waiting">
-              <h3 class="choose-event__card-title">Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia</h3><span class="choose-event__card-date">20 June 2020</span><span class="choose-event__card-status">Waiting list</span>
-            </li>
-          </ul>
+          <section class="direction container swiper-container mySwiper">
+            <ul class="direction__list swiper-wrapper">
+              <li class="direction__item swiper-slide">
+                <h2 class="direction__title">Luxury Travel Mart Kyiv 2019 at the Intercontinental Kyiv, Ukraine</h2>
+                <time class="direction__data" datatime="24.09.2019">24 September 2019</time><span class="direction__status direction__status--available">Available</span>
+              </li>
+              <li class="direction__item swiper-slide">
+                <h2 class="direction__title">Luxury Travel Mart Kyiv 2019 at the Intercontinental Kyiv, Ukraine</h2>
+                <time class="direction__data" datatime="24.09.2019">24 September 2019</time><span class="direction__status direction__status--available">Available</span>
+              </li>
+              <li class="direction__item swiper-slide">
+                <h2 class="direction__title">Luxury Travel Mart Moscow 2019 at The Ritz-Carlton, Moscow, Russia</h2>
+                <time class="direction__data" datatime="01.10.2019">1 October 2019</time><span class="direction__status direction__status--available">Available</span>
+              </li>
+              <li class="direction__item swiper-slide">
+                <h2 class="direction__title">Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan</h2>
+                <time class="direction__data" datatime="03.03.2020">3 March 2020</time><span class="direction__status direction__status--waiting">Waiting list</span>
+              </li>
+              <li class="direction__item swiper-slide">
+                <h2 class="direction__title">Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia</h2>
+                <time class="direction__data" datatime="20.06.2020">20 June 2020</time><span class="direction__status direction__status--waiting">Waiting list</span>
+              </li>
+              <li class="direction__item swiper-slide">
+                <h2 class="direction__title">Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia</h2>
+                <time class="direction__data" datatime="20.06.2019">20-28 June 2020</time><span class="direction__status direction__status--ending">Registration ending soon</span>
+              </li>
+            </ul>
+            <div class="direction__arrow swiper-button-next direction__arrow--right">
+              <svg width="11" height="19" aria-hidden="true">
+                <use xlink:href="#arrow-right"></use>
+              </svg>
+            </div>
+            <div class="direction__arrow swiper-button-prev direction__arrow--left">
+              <svg width="11" height="19" aria-hidden="true">
+                <use xlink:href="#arrow-left"></use>
+              </svg>
+            </div>
+          </section>
           <ul class="hotel-filters">
             <li class="hotel-filter hotel-filter--list">
               <div class="hotel-filter__filter">
