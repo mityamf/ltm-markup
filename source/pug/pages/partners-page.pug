@@ -2,14 +2,21 @@ extends ../base/layout
 
 block data
   include ../data/partners-page
+  include ../mixins/blocks/top-block
 
 block variables
   - var title = "Партнеры"
   - var hasHeader = true
   - var hasFooter = true
+  - var currentPage = "Partners"
+  - var text = "THE LEADING LUXURY TRAVEL EXHIBITION IN EASTERN EUROPE, RUSSIA & CIS"
+  - var desktopImage = "img/bg/bg-004-desktop.jpg"
+  - var tabletImage = "img/bg/bg-004-tablet.jpg"
+  - var mobileImage = "img/bg/bg-006-mobile.jpg"
 
 block main
 
+  +renderTopBlock(text, desktopImage, tabletImage, mobileImage)
   main
     .container
       .partners-page
@@ -25,6 +32,8 @@ block main
                   span.partners-page__rank #{partner.rank}
                 a.partners-page__link(href=partner.link) #{partner.link}
                 p #{partner.text}
-                a.partners-page__button.partners-page__button--read-more(href="newpage.html")
+                a.partners-page__button.partners-page__button--read-more(href="#")
                   img(src="img/svg/icon-arrow.svg", width="20", height="14")
                   span.visually-hidden read more
+        a.partners-page__button-up(href="#top-block")
+          img(src="img/svg/icon-button-up.svg", width="54", height="54")

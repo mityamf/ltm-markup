@@ -2,14 +2,21 @@ extends ../base/layout
 
 block data
   include ../data/organizers
+  include ../mixins/blocks/top-block
 
 block variables
   - var title = "Организаторы"
   - var hasHeader = true
   - var hasFooter = true
+  - var currentPage = "Organizers"
+  - var text = "THE LEADING LUXURY TRAVEL EXHIBITION IN EASTERN EUROPE, RUSSIA & CIS"
+  - var desktopImage = "img/bg/bg-003-desktop.jpg"
+  - var tabletImage = "img/bg/bg-003-tablet.jpg"
+  - var mobileImage = "img/bg/bg-006-mobile.jpg"
 
 block main
 
+  +renderTopBlock(text, desktopImage, tabletImage, mobileImage)
   main
     .container
       .organizers
@@ -19,6 +26,6 @@ block main
             each organizer in organizersList
               li.organizers__item
                 .organizers__image-container
-                  img(src=organizer.logo)
+                  img(src= organizer.logo.src, width= organizer.logo.width, height= organizer.logo.height)
                 h3.organizers__name.title.title--h3 #{organizer.title}
                 p #{organizer.text}
