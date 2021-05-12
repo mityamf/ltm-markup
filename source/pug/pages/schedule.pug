@@ -12,7 +12,6 @@ block variables
 
 block main
   include ../data/schedule
-  include ../data/info-bottom
 
   +renderTopBlock(text, desktopImage, tabletImage, mobileImage)
   main.container
@@ -20,3 +19,4 @@ block main
       ul.schedule__program
         each program in programs
           +renderProgram(program.title, program.schedule)
+      include ../data/info-bottom
