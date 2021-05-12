@@ -1,6 +1,6 @@
 const initSwiper = () => {
+  /* eslint-disable */
   let swiper = new Swiper('.mySwiper', {
-    slidesPerView: 6,
     spaceBetween: 0,
     slidesPerGroup: 3,
     loop: false,
@@ -12,6 +12,14 @@ const initSwiper = () => {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 4,
+      },
+      1280: {
+        slidesPerView: 6,
+      },
     },
   });
 
@@ -27,7 +35,7 @@ const initSwiper = () => {
   //    nextEl: ".swiper-button-next1",
   //    prevEl: ".swiper-button-prev1",
   //  },
-  //});
+  //  });
 };
 
 export {initSwiper};

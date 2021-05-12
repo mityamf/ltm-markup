@@ -25,5 +25,3 @@ document.querySelectorAll('.input-dropdown')
     });
     choiceHandler(choiceElement);
   });
-
-
