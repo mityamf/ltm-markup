@@ -7,6 +7,8 @@ import {initSearch} from './modules/search';
 import {initMenu} from './modules/init-menu';
 import {initSwiper} from './modules/init-swiper';
 
+
+import {dropdown} from './modules/as1';
 // Utils
 // ---------------------------------
 
@@ -21,3 +23,6 @@ stickNav();
 initSearch();
 initMenu();
 initSwiper();
+
+
+dropdown();
