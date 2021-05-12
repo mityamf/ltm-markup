@@ -1,0 +1,28 @@
+.hotel-headline {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+
+  border-bottom: 1px solid $color-blue;
+
+  .title--h2 {
+    margin: 0 0 15px 0;
+
+    @include viewport--sm {
+      margin: 0;
+
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  span {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+
+  svg {
+    margin: auto 0;
+  }
+}

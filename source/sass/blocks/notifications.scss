@@ -1,0 +1,118 @@
+.notifications {
+  padding-bottom: 50px;
+
+  &__table {
+    width: 100%;
+    margin-bottom: 20px;
+
+    border-collapse: collapse;
+  }
+
+  &__row {
+    padding: 0;
+    margin: 0;
+
+    @include viewport--sm {
+      display: flex;
+      flex-direction: column-reverse;
+      position: relative;
+      padding: 17px;
+
+      &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 17px;
+        left: 17px;
+        width: 10px;
+        height: 10px;
+
+        border-radius: 100%;
+      }
+    }
+  }
+
+  &__row--new {
+    &::before {
+      background-color: $color-blue;
+    }
+  }
+
+  &__row--opened {
+    &::before {
+      background-color: $color-gray;
+    }
+  }
+
+  &__row:first-child {
+    font-size: 12px;
+    line-height: 20px;
+    text-align: left;
+    color: $color-nobel;
+
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  tr:nth-child(even) {
+    background-color: $color-gray-light;
+  }
+
+  th:first-child,
+  th:last-child {
+    width: 215px;
+
+    @include viewport--lg {
+      width: 7%;
+      max-width: 124px;
+    }
+
+    @include viewport--md {
+      display: none;
+    }
+  }
+
+  &--theme {
+    font-size: 12px;
+    line-height: 20px;
+    text-align: left;
+
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  &--icon {
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  &--message {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: normal;
+    text-align: left;
+  }
+
+  &--date,
+  &--time {
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: normal;
+    text-align: left;
+  }
+
+  &--time {
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  &--date {
+    @include viewport--sm {
+      text-align: right;
+    }
+  }
+}

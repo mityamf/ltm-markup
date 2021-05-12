@@ -1,0 +1,19 @@
+.headline-back {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include viewport--sm {
+    flex-direction: row-reverse;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+}

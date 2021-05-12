@@ -1,14 +1,18 @@
 extends ../base/layout
 
 block variables
-  - var title = "LK-Exhibitor Notifications"
+  - var title = "LK-Exhibitor Account"
   - var hasHeader = true
   - var hasFooter = true
 
 block main
-  include ../data/hotel-page-editing
   include ../data/support-contacts
+  include ../data/notifications
 
   main.container
-    +renderEditBlock(editingBlockList, buttonsList)
+    +renderHotelHeadline(hotelHeadline.title, hotelHeadline.logo, hotelHeadline.note, hotelHeadline.logoWidth, hotelHeadline.logoHeight)
+    .notifications
+      +renderHeadlineWithBackButton("Notifications")
+      +renderNotifications(notifications)
+      button(class="btn btn--white btn--more" type="button") All Notifications
     +renderSupportContacts(contactsList)

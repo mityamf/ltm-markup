@@ -1,0 +1,46 @@
+.account-hotel-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 0 30px 0;
+
+  @include viewport--sm {
+    flex-wrap: wrap;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 935px;
+
+    @include viewport--sm {
+      width: 100%;
+    }
+  }
+
+  &__link-more {
+    text-align: right;
+  }
+
+  &__interactive {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @include viewport--sm {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__link-hotel {
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    line-height: 29px;
+
+    @include viewport--sm {
+      display: none;
+    }
+  }
+}

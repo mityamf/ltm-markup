@@ -61,4 +61,10 @@
       color: $color-default-white;
     }
   }
+
+  &--more {
+    display: block;
+    margin: 0 auto;
+    padding: 20px 30px;
+  }
 }

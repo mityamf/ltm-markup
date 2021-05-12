@@ -17,10 +17,11 @@ block main
   include ../data/choose-event
   include ../data/hotel-filters
 
-  //+renderTopBlock(text, desktopImage, tabletImage, mobileImage)
+  +renderTopBlock(text, desktopImage, tabletImage, mobileImage)
   main.container
 
-      section.direction.container.swiper-container.mySwiper
+    section.direction.direction__swiper
+      .swiper-container.mySwiper
         h2.title--h2=chooseEvent.title
         ul.direction__list.swiper-wrapper
           each event in chooseEventCard
@@ -30,15 +31,15 @@ block main
         .direction__arrow.swiper-button-prev.direction__arrow--left
           +icon("arrow-left", 11, 19)
 
-      ul.hotel-filters
-        each filter in filters
-          +renderFilter(filter.title, filter.mod, filter.filterList)
-        li.hotel-filter--btns
-          .hotel-filter--btns-wrapper
-            +icon("icon-filters", 17, 17)
-            button.btn.btn--white.hotel-filter--btn-filters(type="button")="filters"
-          button.btn.btn--white.hotel-filter--clear(type="reset")="Clear all"
-          button.btn.btn--white.hotel-filter--btn-clear(type="reset")="Clear all filters"
+    ul.hotel-filters
+      each filter in filters
+        +renderFilter(filter.title, filter.mod, filter.filterList)
+      li.hotel-filter--btns
+        .hotel-filter--btns-wrapper
+          +icon("icon-filters", 17, 17)
+          button.btn.btn--white.hotel-filter--btn-filters(type="button")="filters"
+        button.btn.btn--white.hotel-filter--clear(type="reset")="Clear all"
+        button.btn.btn--white.hotel-filter--btn-clear(type="reset")="Clear all filters"
 
     .exhibitors
       ul.hotel-cards
