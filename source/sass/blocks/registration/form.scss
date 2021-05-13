@@ -9,6 +9,7 @@
   &__title {
     display: inline-flex;
     width: 100%;
+    line-height: 30px;
     font-size: 24px;
     font-weight: 300;
     margin: 0;
@@ -74,6 +75,7 @@
     padding-bottom: 20px;
 
     label {
+      font-weight: 600;
       padding-bottom: 5px;
     }
 
@@ -81,19 +83,24 @@
       border: 1px solid $color-blue;
       height: 42px;
       padding-left: 10px;
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 300;
       color: $color-blue;
       outline: none;
       cursor: pointer;
       background-color: $color-white;
+
+      &:focus,
+      &:hover {
+        opacity: 0.8;
+      }
     }
 
     select {
       border: 1px solid $color-blue;
       height: 42px;
       padding-left: 10px;
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 300;
       color: $color-blue;
       background-color: $color-white;
@@ -103,11 +110,16 @@
       background-image: url("../img/svg/icon-check.svg");
       appearance: none;
       background-position: right 0.7em top 50%, 0 0;
+
+      &:focus,
+      &:hover {
+        opacity: 0.8;
+      }
     }
 
     h3 {
       margin: 0;
-      font-weight: 300;
+      font-weight: 600;
       padding-bottom: 5px;
     }
   }
@@ -147,12 +159,17 @@
       width: 222px;
       height: 49px;
       border: 1px solid $color-blue;
-      font-size: 21px;
+      font-size: 17px;
       font-weight: 600;
       color: $color-blue;
       display: flex;
       align-items: center;
       justify-content: center;
+
+      &:focus,
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 
@@ -186,6 +203,15 @@
       margin: 0;
       padding-bottom: 5px;
     }
+  }
+
+  .direction__list {
+    padding-top: 0;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 40%;
   }
 }
 
@@ -241,8 +267,8 @@
   top: calc(100% - 1px);
   min-width: 100%;
   padding: 6px 10px;
-  border: 1px solid #0098c1;
-  background-color: #f2f2f2;
+  border: 1px solid $color-blue;
+  background-color: $color-white;
   z-index: 3;
 }
 
@@ -256,7 +282,6 @@
 }
 
 .form-reg__check {
-  //position: absolute;
   z-index: -1;
   opacity: 0;
 }
@@ -289,8 +314,117 @@
 
 .form-reg__check:checked + label::before {
   border-color: $color-blue;
-  //background-color: $color-blue;
   background-image: url("../img/svg/check.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.form-reg__submit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  label {
+    color: #505050;
+    font-weight: 600;
+    padding-bottom: 33px;
+    font-size: 17px;
+  }
+
+  button {
+    cursor: pointer;
+    outline: 0;
+    width: 222px;
+    height: 49px;
+    border: 1px solid $color-blue;
+    color: $color-blue;
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 48px;
+
+    &:focus,
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.form-reg__slider {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    place-content: center;
+  }
+
+  .form-reg__check {
+    z-index: -1;
+    opacity: 0;
+  }
+
+  .form-reg__check + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    color: $color-blue;
+    font-size: 21px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &:focus,
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .form-reg__check + label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 2px solid $color-gray;
+    margin-right: 0.5em;
+  }
+
+  .form-reg__check:checked + label::before {
+    border-color: $color-blue;
+    background-image: url("../img/svg/check.svg");
+    background-repeat: no-repeat;
+    border: 1px solid $color-blue;
+    background-position: center;
+  }
+}
+
+.adoption__title {
+  color: $color-blue;
+  margin: 0;
+  font-weight: 300;
+  font-size: 24px;
+  padding-top: 29px;
+  padding-bottom: 15px;
+}
+
+.adoption__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.adoption__item {
+  width: 100%;
+  max-width: 222px;
+
+  h4 {
+    margin: 0;
+    font-weight: 300;
+    padding-bottom: 6px;
+  }
+
+  time {
+    font-size: 14px;
+    color: $color-blue;
+  }
 }

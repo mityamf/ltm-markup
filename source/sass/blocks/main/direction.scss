@@ -59,8 +59,9 @@
 
 .direction__swiper {
   position: relative;
-  margin: 0;
-  padding: 0 3.33%;
+  margin: 0 auto;
+  padding: 0 2.6%;
+  max-width: 1510px;
 
   .swiper-container {
     position: static;
@@ -90,3 +91,4 @@
 .swiper-slide {
   height: inherit;
 }
+

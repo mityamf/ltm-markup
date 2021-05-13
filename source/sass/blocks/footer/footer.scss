@@ -4,7 +4,6 @@
   justify-content: space-between;
   min-height: 227px;
   border-top: 1.5px solid $color-blue;
-  margin-top: 80px;
 
   @include viewport--sm {
     display: grid;

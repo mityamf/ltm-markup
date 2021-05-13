@@ -91,6 +91,7 @@
 
 .mailing__check:checked + label::before {
   border-color: $color-blue;
-  //background-color: $color-blue;
   background-image: url("../img/svg/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }

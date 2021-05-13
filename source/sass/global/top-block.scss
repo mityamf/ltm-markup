@@ -67,11 +67,17 @@
     margin-bottom: 45px;
     padding: 0 40px;
 
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 36px;
+    line-height: 43px;
+    letter-spacing: 0.057em;
     font-weight: lighter;
     color: $color-default-white;
     text-align: center;
+
+    @include viewport--lg {
+      font-size: 30px;
+      line-height: 36px;
+    }
 
     @include viewport--md {
       padding: 0 16px;

@@ -51,7 +51,10 @@
 .exhibitor-reg {
   display: flex;
   flex-wrap: wrap;
-  // justify-content: space-between;
+
+  &__block {
+    display: flex;
+  }
 }
 
 .exhibitor-reg__title {
@@ -60,6 +63,7 @@
   padding-top: 29px;
   font-size: 38px;
   font-weight: 300;
+  line-height: 30px;
   color: $color-blue;
 }
 

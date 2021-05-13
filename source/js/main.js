@@ -6,9 +6,8 @@ import {stickNav} from './modules/stick-nav';
 import {initSearch} from './modules/search';
 import {initMenu} from './modules/init-menu';
 import {initSwiper} from './modules/init-swiper';
-
-
-import {dropdown} from './modules/as1';
+import {initSmoothAnchors} from './modules/init-smooth-anchors';
+import {dropdown} from './modules/dropdown';
 // Utils
 // ---------------------------------
 
@@ -23,6 +22,5 @@ stickNav();
 initSearch();
 initMenu();
 initSwiper();
-
-
 dropdown();
+initSmoothAnchors();
