@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54" height="54" viewBox="0 0 54 54">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="54" height="54" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Компонент_5" data-name="Компонент 5" clip-path="url(#clip-path)">
+    <circle id="Эллипс_15" data-name="Эллипс 15" cx="27" cy="27" r="27" fill="#0098c1"/>
+    <path id="Контур_988" data-name="Контур 988" d="M9640.215,3845.422l15.455-15.455,15.455,15.455" transform="translate(-9629 -3811)" fill="none" stroke="#fff" stroke-width="4"/>
+  </g>
+</svg>

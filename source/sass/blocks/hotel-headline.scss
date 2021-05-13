@@ -36,3 +36,8 @@
     margin: auto 0;
   }
 }
+
+.container--no-padding > .hotel-headline {
+  padding-left: 17px;
+  padding-right: 17px;
+}

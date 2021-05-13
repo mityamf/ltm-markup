@@ -3923,6 +3923,7 @@ p {
     .support-contacts {
       padding: 0 0 50px 0; } }
   .support-contacts .title--h3 {
+    margin-top: 19px;
     margin-bottom: 30px; }
   .support-contacts__list {
     display: -webkit-box;
@@ -3971,6 +3972,10 @@ p {
     display: block;
     margin-bottom: 10px;
     text-align: center; }
+
+.container--no-padding > .support-contacts {
+  padding-left: 17px;
+  padding-right: 17px; }
 
 .organizers__title {
   margin-bottom: 25px; }
@@ -4391,12 +4396,60 @@ p {
   .hotel-headline svg {
     margin: auto 0; }
 
+.container--no-padding > .hotel-headline {
+  padding-left: 17px;
+  padding-right: 17px; }
+
 .notifications {
-  padding-bottom: 50px; }
+  padding-bottom: 66px;
+  position: relative; }
+  @media (max-width: 1439px) {
+    .notifications {
+      padding-bottom: 47px; } }
+  @media (max-width: 767px) {
+    .notifications {
+      padding-bottom: 28px; }
+      .notifications .btn {
+        padding: 15px;
+        width: 222px; } }
+  .notifications__up-link {
+    display: none; }
+    @media (max-width: 1439px) {
+      .notifications__up-link {
+        display: block;
+        position: absolute;
+        width: 54px;
+        height: 54px;
+        right: 0;
+        bottom: 22px; } }
+    @media (max-width: 767px) {
+      .notifications__up-link {
+        display: none; } }
+  .notifications .btn--mobile {
+    display: none; }
+    @media (max-width: 767px) {
+      .notifications .btn--mobile {
+        display: block; } }
+  .notifications .btn--desktop {
+    display: block;
+    padding: 15px;
+    width: 222px; }
+    @media (max-width: 1439px) {
+      .notifications .btn--desktop {
+        width: 182px; } }
+    @media (max-width: 767px) {
+      .notifications .btn--desktop {
+        display: none; } }
   .notifications__table {
     width: 100%;
     margin-bottom: 20px;
     border-collapse: collapse; }
+    @media (max-width: 1439px) {
+      .notifications__table {
+        margin-bottom: 16px; } }
+    @media (max-width: 767px) {
+      .notifications__table {
+        margin-bottom: 30px; } }
   .notifications__row {
     padding: 0;
     margin: 0; }
@@ -4410,7 +4463,7 @@ p {
             -ms-flex-direction: column-reverse;
                 flex-direction: column-reverse;
         position: relative;
-        padding: 17px; }
+        padding: 13px 15px 13px 15px; }
         .notifications__row::before {
           display: block;
           content: "";
@@ -4440,38 +4493,66 @@ p {
     @media (max-width: 1439px) {
       .notifications th:first-child,
       .notifications th:last-child {
-        width: 7%;
+        width: 11%;
         max-width: 124px; } }
     @media (max-width: 1023px) {
       .notifications th:first-child,
       .notifications th:last-child {
         display: none; } }
   .notifications--theme {
+    width: 235px;
     font-size: 12px;
     line-height: 20px;
     text-align: left; }
+    @media (max-width: 1439px) {
+      .notifications--theme {
+        width: 182px; } }
     @media (max-width: 767px) {
       .notifications--theme {
         display: none; } }
-  @media (max-width: 767px) {
-    .notifications--icon {
-      display: none; } }
+  .notifications--icon {
+    width: 90px;
+    text-align: left; }
+    @media (max-width: 1439px) {
+      .notifications--icon {
+        width: 68px; } }
+    @media (max-width: 1023px) {
+      .notifications--icon {
+        padding-left: 10px; } }
+    @media (max-width: 767px) {
+      .notifications--icon {
+        display: none; } }
   .notifications--message {
+    width: 500px;
     font-size: 16px;
     line-height: 22px;
     font-weight: normal;
     text-align: left; }
+    @media (max-width: 1439px) {
+      .notifications--message {
+        width: 470px; } }
+    @media (max-width: 767px) {
+      .notifications--message {
+        width: 100%; } }
   .notifications--date, .notifications--time {
     font-size: 11px;
     line-height: 13px;
     font-weight: normal;
     text-align: left; }
+  @media (max-width: 1023px) {
+    .notifications--time {
+      padding-right: 10px; } }
   @media (max-width: 767px) {
     .notifications--time {
       display: none; } }
-  @media (max-width: 767px) {
-    .notifications--date {
-      text-align: right; } }
+  .notifications--date {
+    width: 130px; }
+    @media (max-width: 767px) {
+      .notifications--date {
+        width: auto;
+        text-align: right; } }
+  .notifications th {
+    height: 38px; }
 
 .notification-message__info-block {
   display: none; }
@@ -4534,6 +4615,17 @@ p {
   @media (max-width: 767px) {
     .headline-back .title--h2 {
       margin-bottom: 15px; } }
+
+.container--no-padding .headline-back {
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-bottom: 14px; }
+  @media (max-width: 1439px) {
+    .container--no-padding .headline-back {
+      padding-bottom: 0; } }
+  @media (max-width: 767px) {
+    .container--no-padding .headline-back {
+      padding-bottom: 14px; } }
 
 .account-hotel-info {
   display: -webkit-box;
