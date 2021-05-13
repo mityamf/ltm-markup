@@ -1,0 +1,41 @@
+.hotel-photos {
+  @include viewport--sm {
+    display: flex;
+  }
+
+  picture:first-child img {
+    height: 459px;
+    width: auto;
+    max-width: 698px;
+    object-fit: cover;
+
+    @include viewport--lg {
+      height: 371px;
+      max-width: 458px;
+    }
+
+    @include viewport--sm {
+      height: 375px;
+      max-width: none;
+    }
+  }
+
+  img {
+    width: auto;
+    height: 222px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+
+    float: left;
+    object-fit: cover;
+
+    @include viewport--lg {
+      height: 178px;
+    }
+
+    @include viewport--sm {
+      height: 375px;
+      width: 100%;
+    }
+  }
+}

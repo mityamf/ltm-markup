@@ -1,5 +1,6 @@
 .edit {
   padding: 10px 0 50px 0;
+  clear: both;
 
   &__wrapper {
     display: grid;
@@ -112,6 +113,7 @@
       width: 100%;
       text-align: center;
       margin-bottom: 20px;
+      padding: 17px;
     }
   }
 
@@ -123,5 +125,9 @@
   &__buttons--left {
     display: flex;
     flex-direction: row;
+
+    @include viewport--sm {
+      flex-direction: column-reverse;
+    }
   }
 }

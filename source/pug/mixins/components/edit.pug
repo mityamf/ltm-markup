@@ -1,4 +1,4 @@
-mixin renderEditBlock(editingBlockList, buttonsList)
+mixin renderEditBlock(editingBlockList, buttons)
  .edit
    .edit__wrapper
      each block in editingBlockList
@@ -19,10 +19,11 @@ mixin renderEditBlock(editingBlockList, buttonsList)
              option(value=text, class="input-dropdown__option")=text
 
    - var buttonModClass = "edit__buttons--right"
-   if buttons.borderLeft
+   if buttons.leftBorder
      -var buttonModClass = "edit__buttons--left"
+
    .edit__buttons(class=buttonModClass)
-     each button in buttonsList
+     each button in buttons.buttonList
        button(class=button.theme + " btn " + button.mod, type=button.type)=button.text
 
 

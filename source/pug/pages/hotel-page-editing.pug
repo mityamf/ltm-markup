@@ -1,14 +1,24 @@
 extends ../base/layout
 
 block variables
-  - var title = "Редактирование страницы отеля"
+  - var title = "LK Exhibitor Edit Company Info"
   - var hasHeader = true
   - var hasFooter = true
 
 block main
   include ../data/hotel-page-editing
   include ../data/support-contacts
+  include ../data/hotel-photos
 
-  main.container
-    +renderEditBlock(editingBlockList, buttons.buttonList)
+  main.container.hotel-page-edit
+    +renderHotelHeadline(hotelHeadline.title, hotelHeadline.logo, hotelHeadline.note, hotelHeadline.logoWidth, hotelHeadline.logoHeight)
+    +renderHeadlineWithBackButton("Edit Company Info")
+
+    .hotel-photos
+      each photo in hotelPhotos
+        picture
+          img(src=photo.src, srcset=photo.srcset)
+
+    +renderEditBlock(editingBlockList, buttons)
+    +renderSupportContacts(contactsList)
 
