@@ -5,6 +5,7 @@
 
   @include viewport--sm {
     flex-direction: row-reverse;
+    align-items: baseline;
   }
 
   &__button {
@@ -15,5 +16,11 @@
   svg {
     margin-right: 5px;
     vertical-align: middle;
+  }
+
+  .title--h2 {
+    @include viewport--sm {
+      margin-bottom: 15px;
+    }
   }
 }

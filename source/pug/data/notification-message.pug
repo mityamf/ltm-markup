@@ -1,4 +1,13 @@
 -
+  var hotelHeadline = {
+    title: "Mandarin Oriental Hotel Group",
+    note: "Exhibitor",
+    logo: "mandarin-logo",
+    logoWidth: "103px",
+    logoHeight: "80px"
+  }
+
+-
   var editingBlockList = [
     {
       title: "From:",
@@ -20,21 +29,18 @@
         "A leader in the spa field, the Group was the first to launch its signature “Time Ritual” which encourages guests to book time rather than specific treatments, so that services can be tailor-made to meet specific needs.",
         "Mandarin Oriental offers some of the most exciting hotel dining in the world today. The Group’s passion for creating memorable dining experiences has been recognized in the Michelin Guide, with a total of 21 Michelin stars being awarded to 14 diverse restaurants from around the world in the 2018 list. This is more than any other hotel brand in the world."
       ],
-    }
+    },
   ]
 
 -
-  var buttonsList = [
-    {
-      text: "Back",
-      type: "reset",
-      theme: "btn--white",
-      mod: "edit-buttons__cancel"
-    },
-    {
-      text: "Answer",
-      type: "submit",
-      theme: "btn--blue",
-      mod: "edit-buttons__save"
-    }
-  ]
+  var buttons = {
+    leftBorder: false,
+    buttonList: [
+      {
+        text: "OK",
+        type: "submit",
+        theme: "btn--blue",
+        mod: "edit__buttons--save"
+      },
+    ]
+  }

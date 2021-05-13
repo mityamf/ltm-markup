@@ -17,7 +17,11 @@ mixin renderEditBlock(editingBlockList, buttonsList)
          select(id="hotel-editor-select", class="input-dropdown", multiple)
            each text in block.content
              option(value=text, class="input-dropdown__option")=text
-   .edit-buttons
+
+   - var buttonModClass = "edit__buttons--right"
+   if buttons.borderLeft
+     -var buttonModClass = "edit__buttons--left"
+   .edit__buttons(class=buttonModClass)
      each button in buttonsList
        button(class=button.theme + " btn " + button.mod, type=button.type)=button.text
 

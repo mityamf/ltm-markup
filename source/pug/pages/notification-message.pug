@@ -6,12 +6,15 @@ block variables
   - var hasFooter = true
 
 block main
-  include ../data/hotel-page-editing
+  include ../data/notification-message
   include ../data/support-contacts
-  include ../data/notifications
 
   main.container
     +renderHotelHeadline(hotelHeadline.title, hotelHeadline.logo, hotelHeadline.note, hotelHeadline.logoWidth, hotelHeadline.logoHeight)
-    +renderHeadlineWithBackButton("Notifications")
-    +renderEditBlock(editingBlockList, buttonsList)
+    +renderHeadlineWithBackButton("Notification")
+    .notification-message
+      .notification-message__info-block
+        span="Luxury Travel Mart Organizer"
+        span="Appointment"
+      +renderEditBlock(editingBlockList, buttons.buttonList)
     +renderSupportContacts(contactsList)
