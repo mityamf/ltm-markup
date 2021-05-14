@@ -1,0 +1,32 @@
+mixin renderEditComponent(photo)
+  .hotel-photos__edit
+    .hotel-photos__buttons
+      label
+        input(type="file")
+        +icon("icon-file-photo", 50, 50)
+      button(type="button")
+        +icon("icon-del-photo", 50, 50)
+      .hotel-photos__text
+        span=photo.text
+        span=photo.min
+        span=photo.max
+
+mixin renderEditPhotos(photoList, cover)
+  .top-block.top-block--edit
+    img(src=cover.src, srcset=cover.srcset)
+    +renderEditComponent(cover)
+  ul.hotel-photos.hotel-photos--is-edit
+    each photo in photoList
+      li.hotel-photos__item
+        picture
+          img(src=photo.src, srcset=photo.srcset)
+        +renderEditComponent(photo)
+
+mixin renderHotelPhotos(photoList)
+  ul.hotel-photos.hotel-photos--view-mode
+    each photo in photoList
+      li.hotel-photos__item
+        picture
+          img(src=photo.src, srcset=photo.srcset)
+        button.hotel-photos__more-button(type="button", aria-pressed="Показать больше фото")
+          +icon("icon-plus5", 48, 38)

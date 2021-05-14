@@ -10,8 +10,25 @@ block main
   include ../data/support-contacts
   include ../data/notifications
   include ../data/account
+  include ../data/account-events
 
   main.container
     +renderHotelHeadline(hotelHeadline.title, hotelHeadline.logo, hotelHeadline.note, hotelHeadline.logoWidth, hotelHeadline.logoHeight)
     +renderAccountHotelInfo(accountHotelInfo.text, accountHotelInfo.link, accountHotelInfo.buttonText)
+    +renderEventsList(eventList.title, eventList.subtitle, eventList.hotelList)
+    .account__contact-us
+      .account__admin
+        h3.title--h3=administrator.title
+        .account__admin-wrapper
+          img(src=administrator.src, width="103", height="103")
+          span=administrator.name
+            span=administrator.position
+        span=administrator.text
+      .account__notifications
+        h3.title--h3=administrator.title
+          +renderNotifications(notifications)
+            button(class="btn btn--white btn--more btn--desktop" type="button") All Notifications
+            button(class="btn btn--white btn--more btn--mobile" type="button") More
+            a(href="#top", class="notifications__up-link", aria-label="Вернуться в начало")
+              +icon("icon-arrow-up", 54, 54)
     +renderSupportContacts(contactsList)

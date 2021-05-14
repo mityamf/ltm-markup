@@ -1,0 +1,75 @@
+.account {
+  &__event-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    list-style-type: none;
+  }
+
+  .title--h3 {
+    margin: 0;
+  }
+
+  .title--h4 {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-blue;
+  }
+
+  &__event--paid .account__event-status {
+    color: $color-green;
+  }
+
+  &__event--unpaid .account__event-status {
+    color: $color-gray;
+  }
+
+  &__event--not-registered .account__event-status {
+    color: $color-red;
+  }
+
+  &__event-status {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  &__event-description {
+    display: block;
+
+    font-size: 12px;
+    line-height: 15px;
+    color: $color-nobel;
+  }
+
+  &__event-date {
+    display: block;
+
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-blue;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  &__contact-us {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__admin {
+    width: 340px;
+  }
+
+  &__admin-wrapper {
+    display: flex;
+  }
+
+  &__notifications .notifications--time {
+    width: 60px;
+  }
+}

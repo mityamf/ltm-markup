@@ -11,16 +11,13 @@ block variables
 
 block main
   include ../data/hotel-page
+  include ../data/hotel-photos
 
   +renderTopBlock(text, desktopImage, tabletImage, mobileImage)
   main.container
       .hotel-page
-        .hotel-page__photo-list
-          each photo in hotel.photoList
-            img(src=photo)
-        a.news__nav-button(href="#")
-          img(src="img/svg/icon-back.svg", width="12", height="20")
-          span Back
+        +renderHotelPhotos(hotelPhotos.photoList)
+
         .hotel-page__info-block
           img(src=hotel.logo)
           .hotel-page__description
