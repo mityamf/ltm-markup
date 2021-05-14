@@ -28,6 +28,11 @@
     width: 72%;
     padding: 7px 9px 6px 8px;
   }
+
+  @media (max-width: 365px) {
+    max-width: inherit;
+    width: 70%;
+  }
 }
 
 ::-webkit-input-placeholder {
@@ -64,6 +69,7 @@
 }
 
 .mailing__check + label {
+  width: 100%;
   display: inline-flex;
   align-items: center;
   user-select: none;

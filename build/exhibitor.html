@@ -2803,8 +2803,7 @@
             </div>
             <div class="form-reg__submit container">
               <input class="form-reg__check" type="checkbox" id="yes" name="check" value="yes"/>
-              <label for="yes">I have read and agree to the terms &#38; conditions of participations</label>
-              <button type="submit">Send</button>
+              <label for="yes">I have read and agree to the terms &#38; conditions of participations</label><a href="#" data-modal="submission">Send</a>
             </div>
           </form>
         </section>
@@ -2845,6 +2844,23 @@
           <div class="footer__info"><span class="footer__info-info">&copy; All right reserved by Artyom Polanskiy and Travel Media LLC.</span></div>
         </div>
       </footer>
+    </div>
+    <div class="modal modal--preload modal--submission">
+      <div class="modal__wrapper submission__wrapper">
+        <div class="modal__overlay submission__overlay"></div>
+        <div class="modal__content submission__content"><a class="submission__logo">
+            <svg width="324" height="122" aria-hidden="true">
+              <use xlink:href="#logo-desktop"></use>
+            </svg></a>
+          <p class="submission__description">Thank you! Your information has been sent</p>
+          <button class="submission__close-button modal__close-button" type="button">ok</button>
+          <button class="modal__close-btn btn-reset submission__close-btn" type="button" aria-label="Закрыть попап">
+            <svg width="33" height="33" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
