@@ -10,7 +10,7 @@
   @include viewport--sm {
     background-color: $color-default-white;
     min-height: 91px;
-    z-index: 1;
+    z-index: 10;
   }
 
   &__link {
@@ -23,10 +23,12 @@
     a {
       line-height: 21px;
       font-weight: 600;
+      letter-spacing: 0.045em;
     }
 
     @include viewport--sm {
       order: 1;
+      margin-top: 15px;
 
       a {
         font-size: 18px;
@@ -39,7 +41,7 @@
     display: flex;
     align-items: center;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     position: relative;
   }
 
@@ -47,23 +49,17 @@
     display: flex;
     align-items: center;
     margin-left: auto;
+    margin-bottom: 10px;
     min-width: 87px;
 
     svg {
-      margin-left: 10px;
+      margin-left: 5px;
     }
-
-    /*@media (max-width: 1279px) {
-      position: absolute;
-      top: 40px;
-      right: 80px;
-    }*/
 
     @include viewport--sm {
       position: absolute;
-      right: 20px;
-      top: 30px;
-      // transform: translateY(-50%);
+      right: 13px;
+      top: 32px;
       min-width: 26px;
 
       span {
@@ -72,6 +68,8 @@
 
       svg {
         margin-left: 0;
+        width: 22px;
+        height: 26px;
       }
     }
   }
@@ -80,13 +78,13 @@
     display: flex;
     justify-content: flex-end;
     margin-left: auto;
-    min-height: 50px;
+    min-height: 30px;
     list-style: none;
     align-items: center;
     background-color: $color-white;
 
     li {
-      margin-left: 20px;
+      margin-left: 15px;
     }
 
     a {
@@ -94,6 +92,8 @@
       font-size: 12px;
       line-height: 20px;
       font-weight: 600;
+      padding: 5px;
+      padding-right: 0;
       transition: color 0.3s ease;
 
       &:hover,
@@ -108,7 +108,7 @@
 
     svg {
       fill: $color-gray;
-      margin-top: 8px;
+      margin-top: 5px;
       transition: 0.3s ease;
     }
 
@@ -120,6 +120,18 @@
 
   &__logo {
     margin-right: auto;
+
+    svg {
+      width: 222px;
+      height: 83px;
+    }
+
+    @include viewport--lg {
+      svg {
+        width: 178px;
+        height: 66px;
+      }
+    }
   }
 
   &__logo--desktop {
@@ -139,6 +151,8 @@
       transform: translateX(-50%);
 
       svg {
+        width: 53px;
+        height: 47px;
         fill: $color-blue;
       }
     }
@@ -175,15 +189,14 @@
   }
 
   .main-nav {
-    margin-top: 160px;
+    margin-top: 190px;
+    margin-right: 0;
+    margin-bottom: 6px;
   }
 
   .header__main {
     background-color: $color-blue;
-  }
-
-  .header__main-wrapper {
-    padding-bottom: 10px;
+    margin-top: 0;
   }
 
   .main-nav__list,
@@ -200,12 +213,13 @@
     a {
       padding: 10px;
       padding-left: 0;
+      padding-bottom: 12.5px;
       width: 100%;
     }
   }
 
   .header__top {
-    margin-top: 10px;
+    margin-top: 35px;
     padding-bottom: 10px;
     margin-bottom: 50px;
     height: auto;
@@ -232,11 +246,11 @@
   }
 
   .header__logo--mobile {
-    top: 90px;
+    top: 83px;
 
     svg {
-      width: 92px;
-      height: 82px;
+      width: 105px;
+      height: 92px;
     }
   }
 
