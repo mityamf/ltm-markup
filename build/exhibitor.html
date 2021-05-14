@@ -2482,43 +2482,69 @@
             <source media="(max-width: 767px)" srcset="./img/bg/regBg-mobile.png 1x, ./img/bg/regBg-mobile@2x.png 2x"/><img class="promo__img" src="./img/bg/reg-bg.png" srcset="./img/bg/reg-bg@2x.png" width="1920" height="534" alt="promo image"/>
           </picture>
           <div class="container promo__info-reg">
-            <h2 class="promo__title">The leading luxury travel exhibition in eastern europe, russia &amp; cis</h2><a class=".promo__none" href="registration.html"></a>
+            <h2 class="promo__title">The leading luxury travel exhibition in eastern europe, russia &amp; cis</h2><a class="promo__none" href="registration.html"></a>
           </div>
         </section>
-        <section class="exhibitor-reg container">
-          <h2 class="exhibitor-reg__title">Exhibitor Registration</h2><a class="exhibitor-reg__btn" href="registration.html"><img src="img/svg/icon-back.svg" width="12" height="20"><span>Back</span></a>
-          <form class="exhibitor-reg__form form-reg" action="#">
-            <div class="form-reg__">
-              <h3 class="form-reg__title">Please select the event you would like to register for:</h3>
+        <section class="exhibitor-reg">
+          <div class="exhibitor-reg__block container">
+            <h2 class="exhibitor-reg__title">Exhibitor Registration</h2><a class="exhibitor-reg__btn" href="registration.html"><img src="img/svg/icon-back.svg" width="12" height="20" alt="back"><span>Back</span></a>
+          </div>
+          <form class="exhibitor-reg__form form-reg" action="#" method="POST">
+            <div class="form-reg__direction container">
+              <h3 class="form-reg__title form-reg__title-one">Please select the event you would like to register for:</h3>
+            </div>
+            <div class="direction__swiper">
               <div class="swiper-container mySwiper">
-                <ul class="direction__list swiper-wrapper">
-                  <input class="mailing__check" type="checkbox" id="check" name="check" value="yes">
-                  <label for="check"></label>
-                  <li class="direction__item swiper-slide">
-                    <h2 class="direction__title">Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan</h2>
-                    <time class="direction__data" datatime="27.09.2019">27 September 2019</time><span class="direction__status direction__status--available">Available</span>
-                  </li>
-                  <li class="direction__item swiper-slide">
-                    <h2 class="direction__title">Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan</h2>
-                    <time class="direction__data" datatime="27.09.2019">27 September 2019</time><span class="direction__status direction__status--available">Available</span>
-                  </li>
-                  <li class="direction__item swiper-slide">
-                    <h2 class="direction__title">Luxury Travel Mart Moscow 2019 at The Ritz-Carlton, Moscow, Russia</h2>
-                    <time class="direction__data" datatime="01.10.2019">1 October 2019</time><span class="direction__status direction__status--available">Available</span>
-                  </li>
-                  <li class="direction__item swiper-slide">
-                    <h2 class="direction__title">Luxury Travel Mart Moscow 2020 at Hyatt Regency Moscow, Russia</h2>
-                    <time class="direction__data" datatime="27.02.2020">27–28 February 2020</time><span class="direction__status direction__status--available">Available</span>
-                  </li>
-                  <li class="direction__item swiper-slide">
-                    <h2 class="direction__title">Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan</h2>
-                    <time class="direction__data" datatime="03.03.2020">3 March 2020</time><span class="direction__status direction__status--waiting">Waiting list</span>
-                  </li>
-                  <li class="direction__item swiper-slide">
-                    <h2 class="direction__title">Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia</h2>
-                    <time class="direction__data" datatime="20.06.2020">20 June 2020</time><span class="direction__status direction__status--waiting">Waiting list</span>
-                  </li>
-                </ul>
+                <div class="swiper-wrapper">
+                  <div class="form-reg__slider">
+                    <input class="form-reg__check" type="checkbox" id="choices" name="check" value="choices" checked="checked"/>
+                    <label for="choices"></label>
+                    <li class="direction__item swiper-slide">
+                      <h2 class="direction__title">Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan</h2>
+                      <time class="direction__data" datatime="27.09.2019">27 September 2019</time><span class="direction__status direction__status--available">Available</span>
+                    </li>
+                  </div>
+                  <div class="form-reg__slider">
+                    <input class="form-reg__check" type="checkbox" id="choices1" name="check" value="choices" checked="checked"/>
+                    <label for="choices1"></label>
+                    <li class="direction__item swiper-slide">
+                      <h2 class="direction__title">Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan</h2>
+                      <time class="direction__data" datatime="27.09.2019">27 September 2019</time><span class="direction__status direction__status--available">Available</span>
+                    </li>
+                  </div>
+                  <div class="form-reg__slider">
+                    <input class="form-reg__check" type="checkbox" id="choices2" name="check" value="choices"/>
+                    <label for="choices2"></label>
+                    <li class="direction__item swiper-slide">
+                      <h2 class="direction__title">Luxury Travel Mart Moscow 2019 at The Ritz-Carlton, Moscow, Russia</h2>
+                      <time class="direction__data" datatime="01.10.2019">1 October 2019</time><span class="direction__status direction__status--available">Available</span>
+                    </li>
+                  </div>
+                  <div class="form-reg__slider">
+                    <input class="form-reg__check" type="checkbox" id="choices3" name="check" value="choices"/>
+                    <label for="choices3"></label>
+                    <li class="direction__item swiper-slide">
+                      <h2 class="direction__title">Luxury Travel Mart Moscow 2020 at Hyatt Regency Moscow, Russia</h2>
+                      <time class="direction__data" datatime="27.02.2020">27–28 February 2020</time><span class="direction__status direction__status--available">Available</span>
+                    </li>
+                  </div>
+                  <div class="form-reg__slider">
+                    <input class="form-reg__check" type="checkbox" id="choices4" name="check" value="choices"/>
+                    <label for="choices4"></label>
+                    <li class="direction__item swiper-slide">
+                      <h2 class="direction__title">Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan</h2>
+                      <time class="direction__data" datatime="03.03.2020">3 March 2020</time><span class="direction__status direction__status--waiting">Waiting list</span>
+                    </li>
+                  </div>
+                  <div class="form-reg__slider">
+                    <input class="form-reg__check" type="checkbox" id="choices5" name="check" value="choices"/>
+                    <label for="choices5"></label>
+                    <li class="direction__item swiper-slide">
+                      <h2 class="direction__title">Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia</h2>
+                      <time class="direction__data" datatime="20.06.2020">20 June 2020</time><span class="direction__status direction__status--waiting">Waiting list</span>
+                    </li>
+                  </div>
+                </div>
                 <div class="direction__arrow swiper-button-next direction__arrow--right">
                   <svg width="11" height="19" aria-hidden="true">
                     <use xlink:href="#arrow-right"></use>
@@ -2531,75 +2557,241 @@
                 </div>
               </div>
             </div>
-            <div class="form-reg__info">
-              <h3 class="form-reg__title">Information about company:</h3>
+            <div class="form-reg__adoption adoption container">
+              <h3 class="adoption__title">You have selected the following events:</h3>
+              <ul class="adoption__list">
+                <li class="adoption__item">
+                  <h4>Luxury Travel Mart Kyiv 2019 at the Intercontinental Kyiv, Ukraine</h4>
+                  <time class="adoption__data">24 September 2019</time>
+                </li>
+                <li class="adoption__item">
+                  <h4>Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan</h4>
+                  <time class="adoption__data">27 September 2019</time>
+                </li>
+              </ul>
+            </div>
+            <div class="form-reg__info container">
+              <h3 class="form-reg__title form-reg__title-two"> Information about company:</h3>
               <div class="form-reg__block">
                 <label for="nameCompany">Company or hotel name</label>
-                <input type="nameCompany" name="nameCompany" id="nameCompany" placeholder="Company (brand) name" required="required">
+                <input type="text" name="nameCompany" id="nameCompany" placeholder="Company (brand) name" required="required"/>
               </div>
               <div class="form-reg__block">
                 <label for="nameOfficial">Official name for invoice, if different</label>
-                <input type="nameOfficial" name="nameOfficial" id="nameOfficial" placeholder="Official name" required="required">
+                <input type="text" name="nameOfficial" id="nameOfficial" placeholder="Official name" required="required"/>
               </div>
               <div class="form-reg__block">
                 <label for="login">Please, create your login</label>
-                <input type="login" name="login" id="login" placeholder="Create your login" required="required">
+                <input type="text" name="login" id="login" placeholder="Create your login" required="required"/>
               </div>
               <div class="form-reg__block">
                 <label for="address">Official address</label>
-                <input type="address" name="address" id="address" placeholder="Address" required="required">
+                <input type="text" name="address" id="address" placeholder="Address" required="required"/>
               </div>
               <div class="form-reg__block">
-                <h3>City</h3>
+                <h3 class="form-reg__block-title">City</h3>
                 <select>
                   <option>Aachen</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
+                  <option value="London">London</option>
+                  <option value="Japan">Japan</option>
+                  <option value="Almaty">Almaty</option>
+                  <option value="Moscow">Moscow</option>
+                  <option value="Petersburg">Petersburg</option>
                 </select>
               </div>
               <div class="form-reg__block">
-                <h3>Country</h3>
+                <h3 class="form-reg__block-title">Country</h3>
                 <select>
                   <option>Aphhanistan</option>
                   <option value="Aphhanistan">Aphhanistan</option>
-                  <option value="Aphhanistan">Aphhanistan</option>
-                  <option value="Aphhanistan">Aphhanistan</option>
-                  <option value="Aphhanistan">Aphhanistan</option>
-                  <option value="Aphhanistan">Aphhanistan</option>
-                  <option value="Aphhanistan">Aphhanistan</option>
+                  <option value="Aphhanistan">Aphhanistan1</option>
+                  <option value="Aphhanistan">Aphhanistan2</option>
+                  <option value="Aphhanistan">Aphhanistan3</option>
+                  <option value="Aphhanistan">Aphhanistan4</option>
+                  <option value="Aphhanistan">Aphhanistan5</option>
                 </select>
               </div>
               <div class="form-reg__block">
-                <h3>Area of the business</h3>
+                <h3 class="form-reg__block-title">Area of the business</h3>
                 <select>
                   <option>Chois area of the business</option>
-                  <option value="22">22</option>
-                  <option value="23">23</option>
-                  <option value="35">35</option>
-                  <option value="43">43</option>
-                  <option value="34">34</option>
-                  <option value="35">35</option>
+                  <option value="business">business</option>
+                  <option value="trade">trade</option>
+                  <option value="sale">sale</option>
+                  <option value="entertainment">entertainment</option>
+                  <option value="journeys">journeys</option>
+                  <option value="sale">sale</option>
                 </select>
               </div>
               <div class="form-reg__block">
                 <label for="Web-site">Web-site</label>
-                <input type="Web-site" name="Web-site" id="Web-site" placeholder="https://" required="required">
+                <input type="text" name="Web-site" id="Web-site" placeholder="https://" required="required"/>
+              </div>
+              <div class="form-reg__block form-reg__textarea">
+                <h3 class="form-reg__block-title">Company (brand) description</h3>
+                <textarea name="Company description" cols="30" rows="10">Company description</textarea>
               </div>
             </div>
-            <div>
-              <h3 class="form-reg__title">Location of your business:</h3>
+            <div class="form-reg__location container">
+              <h3 class="form-reg__title form-reg__title-three">Location of your business:</h3>
+              <div class="form-reg__dropdown">
+                <h4>North America</h4>
+                <button class="form-reg__btn" type="button">All selected</button>
+                <div class="form-reg__content">
+                  <div class="form-reg__list">
+                    <input class="form-reg__check" id="choices-0" type="checkbox" name="complex" value="complex-0"/>
+                    <label for="choices-0">choices-3</label>
+                    <input class="form-reg__check" id="choices-1" type="checkbox" name="complex" value="complex-1"/>
+                    <label for="choices-1">choices-3</label>
+                    <input class="form-reg__check" id="choices-2" type="checkbox" name="complex" value="complex-2"/>
+                    <label for="choices-2">choices-3</label>
+                  </div>
+                </div>
+                <div class="form-reg__overlay"></div>
+              </div>
+              <div class="form-reg__dropdown">
+                <h4>Europe</h4>
+                <button class="form-reg__btn" type="button">All selected</button>
+                <div class="form-reg__content">
+                  <div class="form-reg__list">
+                    <input class="form-reg__check" id="choices-3" type="checkbox" name="complex" value="complex-0"/>
+                    <label for="choices-3">choices-3</label>
+                    <input class="form-reg__check" id="choices-3" type="checkbox" name="complex" value="complex-1"/>
+                    <label for="choices-3">choices-3</label>
+                    <input class="form-reg__check" id="choices-4" type="checkbox" name="complex" value="complex-2"/>
+                    <label for="choices-4">choices-3</label>
+                  </div>
+                </div>
+                <div class="form-reg__overlay"></div>
+              </div>
+              <div class="form-reg__dropdown">
+                <h4>South America</h4>
+                <button class="form-reg__btn" type="button">All selected</button>
+                <div class="form-reg__content">
+                  <div class="form-reg__list">
+                    <input class="form-reg__check" id="choices-5" type="checkbox" name="complex" value="complex-0"/>
+                    <label for="choices-5">choices-1</label>
+                    <input class="form-reg__check" id="choices-6" type="checkbox" name="complex" value="complex-1"/>
+                    <label for="choices-6">choices-2</label>
+                    <input class="form-reg__check" id="choices-7" type="checkbox" name="complex" value="complex-2"/>
+                    <label for="choices-7">choices-3</label>
+                  </div>
+                </div>
+                <div class="form-reg__overlay"></div>
+              </div>
+              <div class="form-reg__dropdown">
+                <h4>Africa</h4>
+                <button class="form-reg__btn" type="button">All selected</button>
+                <div class="form-reg__content">
+                  <div class="form-reg__list">
+                    <input class="form-reg__check" id="choices-8" type="checkbox" name="complex" value="complex-0"/>
+                    <label for="choices-8">choices-4</label>
+                    <input class="form-reg__check" id="choices-9" type="checkbox" name="complex" value="complex-1"/>
+                    <label for="choices-9">choices-5</label>
+                    <input class="form-reg__check" id="choices-10" type="checkbox" name="complex" value="complex-2"/>
+                    <label for="choices-10">choices-6</label>
+                  </div>
+                </div>
+                <div class="form-reg__overlay"></div>
+              </div>
+              <div class="form-reg__dropdown">
+                <h4>Asia</h4>
+                <button class="form-reg__btn" type="button">All selected</button>
+                <div class="form-reg__content">
+                  <div class="form-reg__list">
+                    <input class="form-reg__check" id="choices-11" type="checkbox" name="complex" value="complex-0"/>
+                    <label for="choices-11">choices-7</label>
+                    <input class="form-reg__check" id="choices-12" type="checkbox" name="complex" value="complex-1"/>
+                    <label for="choices-12">choices-8</label>
+                    <input class="form-reg__check" id="choices-13" type="checkbox" name="complex" value="complex-2"/>
+                    <label for="choices-13">choices-9</label>
+                  </div>
+                </div>
+                <div class="form-reg__overlay"></div>
+              </div>
+              <div class="form-reg__dropdown">
+                <h4>Oceania</h4>
+                <button class="form-reg__btn" type="button">All selected</button>
+                <div class="form-reg__content">
+                  <div class="form-reg__list">
+                    <input class="form-reg__check" id="choices-14" type="checkbox" name="complex" value="complex-0"/>
+                    <label for="choices-14">choices-10</label>
+                    <input class="form-reg__check" id="choices-15" type="checkbox" name="complex" value="complex-1"/>
+                    <label for="choices-15">choices-11</label>
+                    <input class="form-reg__check" id="choices-16" type="checkbox" name="complex" value="complex-2"/>
+                    <label for="choices-16">choices-12</label>
+                  </div>
+                </div>
+                <div class="form-reg__overlay"></div>
+              </div>
+              <input class="form-reg__check" type="checkbox" id="Global" name="Global" value="Global"/>
+              <label for="Global">Global/Worldwide</label>
             </div>
-            <div>
-              <h3 class="form-reg__title">Information about you:</h3>
+            <div class="form-reg__info container">
+              <h3 class="form-reg__title form-reg__title-four">Information about you:</h3>
+              <div class="form-reg__block">
+                <label for="First_name">Participant first name</label>
+                <input type="text" name="First_name" id="First_name" placeholder="First name" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <label for="Last_name">Participant last name</label>
+                <input type="text" name="Last_name" id="Last_name" placeholder="Last name" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <h3 class="form-reg__block-title">Title</h3>
+                <select>
+                  <option>Aachen</option>
+                  <option value="Mr">Mr.</option>
+                  <option value="Mrs">Mrs.</option>
+                  <option value="Ms">Ms.</option>
+                  <option value="Dr">Dr.</option>
+                </select>
+              </div>
+              <div class="form-reg__block">
+                <label for="title">Job title:</label>
+                <input type="text" name="title" id="title" placeholder="Job title" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <label for="tel">Telephone</label>
+                <input type="text" name="tel" id="tel" placeholder="+1 (111) 111 11 11" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <label for="skype">Skype</label>
+                <input type="text" name="" id="skype" placeholder="E-mail" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <label for="E-mail">E-mail</label>
+                <input type="text" name="E-mail" id="E-mail" placeholder="E-mail" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <label for="con_e-mail">Please, confirm your e-mail</label>
+                <input type="text" name="con_e-mail" id="con_e-mail" placeholder="Confirm e-mail" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <label for="alt_e-mail">Alternative e-mail</label>
+                <input type="text" name="alt_e-mail" id="alt_e-mail" placeholder="Alternative e-mail" required="required"/>
+              </div>
             </div>
-            <div>
-              <h3 class="form-reg__title">Upload photos and logo</h3>
+            <div class="form-reg__upload container">
+              <h3 class="form-reg__title form-reg__title-five">Upload photos and logo</h3>
+              <p class="form-reg__text">This photos will be representative your company at the Luxury Travel Mart Exhibitors catalogue. Please choose the best photos for your page.<br>You might change any images in your profile after registration.</p>
+              <div class="form-reg__wrapper">
+                <div class="form-reg__up">
+                  <h4 class="form-reg__title-up">Upload photo</h4>
+                  <label for="upload_photo">Choose files</label>
+                  <input type="file" name="upload_photo" id="upload_photo" required="required"/>
+                </div><span>Upload up to 14 photos. JPG, PNG. Min. 8, Max. 14 images.</span>
+              </div>
+              <div class="form-reg__wrapper">
+                <div class="form-reg__up">
+                  <h4 class="form-reg__title-up">Upload logo</h4>
+                  <label for="upload_logo">Choose file</label>
+                  <input type="file" name="upload_logo" id="upload_logo" required="required"/>
+                </div><span>SVG, JPG or PNG, Max. 3 mb.</span>
+              </div>
             </div>
-            <div>
-              <h3 class="form-reg__title">Terms &#38; Conditions</h3>
+            <div class="form-reg__terms terms container">
+              <h3 class="form-reg__title form-reg__title-six">Terms &#38; Conditions</h3>
               <div class="terms__block">
                 <p class="terms__text">Rates for participation at each event supplied on request only.</p>
                 <p class="terms__text">Confirmation and participation at the event is subject to the approval of the organizers only. Please note that completing the registration form does not guarantee your automatic confirmation for the event. All registrations will be reviewed and potential exhibitors should meet the criteria for exhibition participants.</p>
@@ -2609,10 +2801,11 @@
                 <p class="terms__text">A block of rooms will be reserved at each of the venue hotels. Rates will be provided upon request.</p>
               </div>
             </div>
+            <div class="form-reg__submit container">
+              <input class="form-reg__check" type="checkbox" id="yes" name="check" value="yes"/>
+              <label for="yes">I have read and agree to the terms &#38; conditions of participations</label><a href="#" data-modal="submission">Send</a>
+            </div>
           </form>
-          <input class="mailing__check" type="checkbox" id="check" name="check" value="yes">
-          <label for="check">I have read and agree to the terms &#38; conditions of participations</label>
-          <button>Send</button>
         </section>
       </main>
       <footer class="container">
@@ -2651,6 +2844,23 @@
           <div class="footer__info"><span class="footer__info-info">&copy; All right reserved by Artyom Polanskiy and Travel Media LLC.</span></div>
         </div>
       </footer>
+    </div>
+    <div class="modal modal--preload modal--submission">
+      <div class="modal__wrapper submission__wrapper">
+        <div class="modal__overlay submission__overlay"></div>
+        <div class="modal__content submission__content"><a class="submission__logo">
+            <svg width="324" height="122" aria-hidden="true">
+              <use xlink:href="#logo-desktop"></use>
+            </svg></a>
+          <p class="submission__description">Thank you! Your information has been sent</p>
+          <button class="submission__close-button modal__close-button" type="button">ok</button>
+          <button class="modal__close-btn btn-reset submission__close-btn" type="button" aria-label="Закрыть попап">
+            <svg width="33" height="33" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
