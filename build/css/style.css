@@ -342,6 +342,8 @@ template {
   padding: 0;
   /* Fix of Webkit flickering */
   z-index: 1; }
+  .swiper-container [hidden] {
+    display: none; }
 
 .swiper-container-vertical > .swiper-wrapper {
   -webkit-box-orient: vertical;
@@ -3975,32 +3977,20 @@ p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     padding: 0;
-    width: 100%;
-    margin-bottom: -80px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     list-style-type: none; }
-    @media (max-width: 1439px) {
-      .support-contacts__list {
-        margin-bottom: -50px; } }
     @media (max-width: 767px) {
       .support-contacts__list {
         margin: 0; } }
   .support-contacts__item {
-    width: calc((100% / 4));
-    margin-bottom: 80px;
+    margin-bottom: 20px;
     text-align: center; }
-    @media (max-width: 1439px) {
-      .support-contacts__item {
-        margin-bottom: 50px; } }
     @media (max-width: 767px) {
       .support-contacts__item {
-        width: 100%;
-        margin: 0; } }
-  @media (max-width: 767px) {
-    .support-contacts__item:not(:first-child) {
-      display: none; } }
+        width: 100%; } }
   .support-contacts__info {
     display: block; }
   .support-contacts__link {
@@ -4014,7 +4004,7 @@ p {
     height: 103px;
     margin: 0 auto 20px auto;
     border-radius: 100%; }
-  .support-contacts span {
+  .support-contacts__text {
     display: block;
     margin-bottom: 10px;
     text-align: center; }
@@ -4628,6 +4618,10 @@ p {
         text-align: right; } }
   .notifications th {
     height: 38px; }
+
+@media (max-width: 1439px) {
+  .notification-message .edit__buttons--save {
+    padding: 17px 79px; } }
 
 .notification-message__info-block {
   display: none; }

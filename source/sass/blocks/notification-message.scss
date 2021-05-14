@@ -1,4 +1,11 @@
 .notification-message {
+
+  @include viewport--lg {
+    .edit__buttons--save {
+      padding: 17px 79px;
+    }
+  }
+
   &__info-block {
     display: none;
 

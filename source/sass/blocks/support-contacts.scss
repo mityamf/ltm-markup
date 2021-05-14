@@ -12,16 +12,10 @@
 
   &__list {
     display: flex;
-    flex-wrap: wrap;
     padding: 0;
-    width: 100%;
-    margin-bottom: -80px;
+    justify-content: space-between;
 
     list-style-type: none;
-
-    @include viewport--lg {
-      margin-bottom: -50px;
-    }
 
     @include viewport--sm {
       margin: 0;
@@ -29,24 +23,12 @@
   }
 
   &__item {
-    width: calc((100% / 4));
-    margin-bottom: 80px;
+    margin-bottom: 20px;
 
     text-align: center;
 
-    @include viewport--lg {
-      margin-bottom: 50px;
-    }
-
     @include viewport--sm {
       width: 100%;
-      margin: 0;
-    }
-  }
-
-  &__item:not(:first-child) {
-    @include viewport--sm {
-      display: none;
     }
   }
 
@@ -71,7 +53,7 @@
     border-radius: 100%;
   }
 
-  span {
+  &__text {
     display: block;
     margin-bottom: 10px;
 
