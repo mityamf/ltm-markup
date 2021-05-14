@@ -4446,6 +4446,35 @@ p {
   padding-left: 17px;
   padding-right: 17px; }
 
+.hotel-headline--account-page .account-hotel-info__link-hotel {
+  display: none; }
+
+@media (max-width: 767px) {
+  .hotel-headline--account-page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    text-align: center;
+    padding: 30px 17px 10px 17px;
+    border: none; }
+    .hotel-headline--account-page .account-hotel-info__link-hotel {
+      display: block;
+      margin: 15px 0 0 0;
+      font-size: 20px;
+      line-height: 24px; }
+    .hotel-headline--account-page svg {
+      margin: 0 auto 20px auto;
+      width: 103px;
+      height: 80px; }
+    .hotel-headline--account-page .title--h2 {
+      margin-bottom: 10px;
+      font-size: 32px;
+      line-height: 38px; } }
+
 .notifications {
   padding-bottom: 66px;
   position: relative; }
@@ -4680,7 +4709,8 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 17px 0 30px 0; }
+  padding: 17px 0 30px 0;
+  clear: both; }
   @media (max-width: 767px) {
     .account-hotel-info {
       -ms-flex-wrap: wrap;
@@ -4715,7 +4745,7 @@ p {
     @media (max-width: 767px) {
       .account-hotel-info__interactive {
         display: block;
-        margin: 0 auto; } }
+        margin: 20px auto 0  auto; } }
   .account-hotel-info__link-hotel {
     margin-bottom: 20px;
     font-size: 24px;
@@ -4723,6 +4753,14 @@ p {
     @media (max-width: 767px) {
       .account-hotel-info__link-hotel {
         display: none; } }
+
+.container--no-padding > .account-hotel-info {
+  padding-left: 17px;
+  padding-right: 17px; }
+
+.account__event-block {
+  padding: 20px 0;
+  border-top: 1px solid #0098c1; }
 
 .account__event-list {
   display: -webkit-box;
@@ -4732,10 +4770,19 @@ p {
   margin: 0;
   list-style-type: none; }
 
-.account .title--h3 {
-  margin: 0; }
+.account__event {
+  margin-right: 30px;
+  width: 341px; }
 
-.account .title--h4 {
+.account__event button {
+  display: block;
+  width: 222px;
+  margin: 15px auto 0 auto; }
+
+.account__event-block > .title--h3 {
+  margin: 0 0 20px 0; }
+
+.account__event-block .title--h4 {
   margin: 0;
   font-size: 16px;
   line-height: 19px;
@@ -4751,8 +4798,26 @@ p {
   color: #d57c68; }
 
 .account__event-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 10px;
+  margin-top: 15px;
   font-size: 12px;
   line-height: 20px; }
+
+.account__event-status svg {
+  margin-right: 15px; }
 
 .account__event-description {
   display: block;
@@ -4775,18 +4840,107 @@ p {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  padding: 20px 0;
+  border-top: 1px solid #0098c1; }
+  @media (max-width: 767px) {
+    .account__contact-us {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
 
 .account__admin {
   width: 340px; }
+  @media (max-width: 767px) {
+    .account__admin {
+      width: 100%; } }
+
+.account__admin img {
+  margin-right: 15px;
+  border-radius: 100%; }
+  @media (max-width: 767px) {
+    .account__admin img {
+      display: block;
+      margin: 0 auto; } }
+
+.account__admin span {
+  display: block; }
+
+.account__admin-info {
+  padding-top: 20px; }
+
+.account__admin-name {
+  font-size: 16px;
+  line-height: 20px;
+  color: #505050; }
+
+.account__admin-position {
+  font-size: 12px;
+  line-height: 20px;
+  color: #9f9f9f; }
+
+.account__admin-text {
+  font-size: 12px;
+  line-height: 20px;
+  color: #9f9f9f;
+  text-align: center; }
+
+.account__contact-button {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  display: block;
+  border: none;
+  background-color: transparent; }
 
 .account__admin-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  padding: 40px 0;
+  position: relative; }
+  @media (max-width: 767px) {
+    .account__admin-wrapper {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      display: block;
+      margin: 0 auto;
+      text-align: center; } }
+
+@media (max-width: 767px) {
+  .account__notifications {
+    width: 100%; } }
+
+.account__notifications .title--h3 {
+  padding-left: 17px;
+  padding-right: 17px; }
 
 .account__notifications .notifications--time {
   width: 60px; }
+
+.account__notifications .btn--mobile {
+  display: none; }
+  @media (max-width: 767px) {
+    .account__notifications .btn--mobile {
+      display: block; } }
+
+.account__notifications .btn--desktop {
+  display: block;
+  padding: 15px;
+  width: 222px; }
+  @media (max-width: 1439px) {
+    .account__notifications .btn--desktop {
+      width: 182px; } }
+  @media (max-width: 767px) {
+    .account__notifications .btn--desktop {
+      display: none; } }
+
+.account__notifications tr:nth-child(even) {
+  background-color: #d6d6d6; }
+
+.container--no-padding .account__admin,
+.container--no-padding .account__event-block {
+  padding-left: 17px;
+  padding-right: 17px; }
 
 .hotel-page-edit .hotel-headline,
 .hotel-page-edit .headline-back {
@@ -4802,9 +4956,6 @@ p {
   margin-right: -15px;
   margin-bottom: -15px;
   padding: 0; }
-  @media (max-width: 767px) {
-    .hotel-photos {
-      display: none; } }
   .hotel-photos__more-button {
     display: none; }
   .hotel-photos--view-mode > .hotel-photos__item:last-child {
@@ -4842,6 +4993,8 @@ p {
       .hotel-photos__item:first-child img {
         height: 375px;
         max-width: none; } }
+  .hotel-photos__item:not(:first-child) {
+    display: none; }
   .hotel-photos img {
     width: auto;
     height: 222px;

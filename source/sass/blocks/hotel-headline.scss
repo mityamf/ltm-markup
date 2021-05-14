@@ -41,3 +41,38 @@
   padding-left: 17px;
   padding-right: 17px;
 }
+
+.hotel-headline--account-page {
+  .account-hotel-info__link-hotel {
+    display: none;
+  }
+
+  @include viewport--sm {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 30px 17px 10px 17px;
+    border: none;
+
+    .account-hotel-info__link-hotel {
+      display: block;
+      margin: 15px 0 0 0;
+
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    svg {
+      margin: 0 auto 20px auto;
+      width: 103px;
+      height: 80px;
+    }
+
+    .title--h2 {
+      margin-bottom: 10px;
+
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+}
