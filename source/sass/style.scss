@@ -15,7 +15,7 @@
 @import "global/container";
 @import "global/text";
 @import "global/btn";
-@import "global/top-block";
+@import "source/sass/components/top-block";
 
 // Blocks
 //---------------------------------
@@ -40,25 +40,25 @@
 @import "blocks/search";
 @import "blocks/about";
 @import "blocks/schedule";
-@import "blocks/info-bottom";
+@import "source/sass/components/info-bottom";
 @import "blocks/news";
 @import "blocks/hotel-cards";
-@import "blocks/hotel-card";
+@import "source/sass/components/hotel-card";
 @import "blocks/exhibitions";
-@import "blocks/alphabet-hotel";
+@import "source/sass/components/alphabet-hotel";
 @import "blocks/hotel-filter";
 @import "blocks/hotel-filters";
 @import "blocks/hotel-page";
 @import "blocks/edit";
-@import "blocks/support-contacts";
+@import "source/sass/components/support-contacts";
 @import "blocks/organizers";
 @import "blocks/partners-page";
 @import "blocks/privacy-policy";
 @import "blocks/contact-us";
-@import "blocks/hotel-headline";
+@import "source/sass/components/hotel-headline";
 @import "blocks/notifications";
 @import "blocks/notification-message";
-@import "blocks/headline-back";
+@import "source/sass/components/headline-back";
 @import "blocks/account/account-hotel-info";
 @import "blocks/account/account";
 @import "blocks/hotel-page-edit";

@@ -21,6 +21,10 @@ mixin renderEditPhotos(photoList, cover)
         picture
           img(src=photo.src, srcset=photo.srcset)
         +renderEditComponent(photo)
+    li.hotel-photos__item.hotel-photos__item--upload
+      label
+        input(type="file")
+        +icon("icon-file-photo", 50, 50)
 
 mixin renderHotelPhotos(photoList)
   ul.hotel-photos.hotel-photos--view-mode

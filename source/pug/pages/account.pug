@@ -23,23 +23,16 @@ block main
     +renderHotelPhotos(hotelPhotos.photoList)
     +renderAccountHotelInfo(accountHotelInfo.text, accountHotelInfo.link, accountHotelInfo.buttonText)
     +renderEventsList(eventList.title, eventList.subtitle, eventList.hotelList)
+
     .account__contact-us
       .account__admin
-        h3.title--h3=administrator.title
-        .account__admin-wrapper
-          button(class="account__contact-button" type="button")
-            +icon("icon-write", 18, 24)
-          img(src=administrator.src, width="103", height="103")
-          .account__admin-info
-            span.account__admin-name=administrator.name
-            span.account__admin-name=administrator.lastName
-            span.account__admin-position=administrator.position
-        span.account__admin-text=administrator.text
+        +renderAccountAdmin(administrator.title, administrator.src, administrator.name, administrator.lastName, administrator.position, administrator.text)
       .account__notifications
-        h3.title--h3=administrator.title
+        +renderHeadline3(administrator.title)
         +renderNotifications(notifications)
         button(class="btn btn--white btn--more btn--desktop" type="button") All Notifications
         button(class="btn btn--white btn--more btn--mobile" type="button") More
         a(href="#top", class="notifications__up-link", aria-label="Вернуться в начало")
           +icon("icon-arrow-up", 54, 54)
+
     +renderSupportContacts(contactsList)

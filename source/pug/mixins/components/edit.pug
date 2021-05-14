@@ -3,13 +3,12 @@ mixin renderEditBlock(editingBlockList, buttons)
    .edit__wrapper
      each block in editingBlockList
        if block.type === "text"
-         h3.title--h3=block.title
+         +renderHeadline3(block.title)
        else
          h3(class="title--h3 title--small")=block.title
        if block.type === "text"
          .edit__text-block
-           each text in block.content
-             p=text
+           +renderTextContentBlock(block.content)
        if block.type === "input"
          label.edit__label
            input.edit__input(type="text", value=block.content)

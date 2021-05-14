@@ -53,10 +53,6 @@
     }
   }
 
-  &__item:not(:first-child) {
-    display: none;
-  }
-
   img {
     width: auto;
     height: 222px;
@@ -113,7 +109,8 @@
     line-height: 22px;
   }
 
-  &__buttons > label {
+  &__buttons > label,
+  &__item--upload label {
     position: relative;
     overflow: hidden;
     width: 50px;
@@ -121,7 +118,13 @@
     margin-right: 15px;
   }
 
-  &__buttons input {
+  &__item--upload label {
+    display: block;
+    margin: auto;
+  }
+
+  &__buttons input,
+  &__item--upload input {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -131,5 +134,14 @@
   &__buttons > button {
     border: none;
     background: transparent;
+  }
+
+  &__item--upload {
+    width: 222px;
+    height: 148px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: grey;
   }
 }

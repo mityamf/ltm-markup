@@ -14,9 +14,17 @@ block main
   include ../data/schedule
 
   +renderTopBlock(text, desktopImage, tabletImage, mobileImage)
+
   main.container
     .schedule
-      ul.schedule__program
+      .schedule__program
         each program in programs
-          +renderProgram(program.title, program.schedule)
-      include ../data/info-bottom
+          +renderHeadline2(program.title)
+          .schedule__days
+            each schedule in program.schedules
+              +renderHeadline2(schedule.subtitle)
+              .schedule__day
+                +renderTextContentBlock(schedule.textList)
+
+    .info-bottom
+      +renderTextContentBlock(scheduleInfoList)

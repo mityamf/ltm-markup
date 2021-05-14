@@ -14,7 +14,9 @@ block main
   include ../data/hotel-photos
 
   +renderTopBlock(text, desktopImage, tabletImage, mobileImage)
+
   main.container
+
       .hotel-page
         +renderHotelPhotos(hotelPhotos.photoList)
 
@@ -24,8 +26,7 @@ block main
             .hotel-page__title
               h2.title--h2=hotel.title
               a.hotel-page__link(href=hotel.link)=hotel.link
-            ul.hotel-page__text-list
-              li
-                each text in hotel.textList
-                  p=text
+            .hotel-page__text-list
+              +renderTextContentBlock(hotel.textList)
+
 
