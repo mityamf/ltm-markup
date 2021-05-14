@@ -125,5 +125,35 @@
       }
     }
   }
+
+  &__button-next,
+  &__button-prev {
+    position: absolute;
+    top: 50%;
+    margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
+    z-index: 50;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    width: 19px;
+    height: 30px;
+    color: $color-default-white;
+  }
+
+  &__button-next {
+    right: 10px;
+    left: auto;
+  }
+
+  &__button-prev {
+    right: auto;
+    left: 10px;
+
+    svg {
+      transform: rotate(-180deg);
+    }
+  }
 }
 

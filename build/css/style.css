@@ -1640,7 +1640,7 @@ p {
     background-image: url("../img/svg/icon-check.svg"); }
 
 .header {
-  min-height: 150px;
+  min-height: 146px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1650,11 +1650,12 @@ p {
           flex-direction: column;
   position: sticky;
   top: 0;
+  background-color: #f2f2f2;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-  z-index: 10; }
+  z-index: 110; }
   @media (max-width: 767px) {
     .header {
       background-color: #ffffff;
@@ -3746,6 +3747,37 @@ p {
       line-height: 20px;
       font-weight: 600;
       letter-spacing: 0.2px; }
+
+.photo__button-next, .photo__button-prev {
+  position: absolute;
+  top: 50%;
+  margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
+  z-index: 50;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: transparent;
+  width: 19px;
+  height: 30px;
+  color: #ffffff; }
+
+.photo__button-next {
+  right: 10px;
+  left: auto; }
+
+.photo__button-prev {
+  right: auto;
+  left: 10px; }
+  .photo__button-prev svg {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg); }
 
 .video ul {
   list-style: none;
