@@ -1,0 +1,72 @@
+@import "node_modules/choices.js/src/styles/choices";
+
+.choices {
+  height: 49px;
+
+  &__item--choice.is-selected::before {
+    content: "";
+    width: 11px;
+    height: 9px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url("../img/svg/icon-small-check.svg");
+    background-size: cover;
+  }
+
+  &__list--dropdown .choices__item--selectable {
+    background-color: transparent;
+
+    font-size: 24px;
+    line-height: 29px;
+    color: $color-blue;
+  }
+
+  &__inner .choices__list--multiple .choices__item:not(:first-child) {
+    display: none;
+  }
+
+  &__input {
+    background-color: transparent;
+  }
+
+  &__inner {
+    background-color: transparent;
+
+    font-size: 24px;
+    line-height: 29px;
+    color: $color-blue;
+
+    border: 1px solid $color-blue;
+  }
+
+  &__list--dropdown {
+    margin-top: 5px;
+  }
+
+  .choices__list--multiple .choices__item,
+  .choices__list--multiple .choices__item.is-highlighted {
+    background-color: transparent;
+    border: 0;
+
+    font-size: 24px;
+    line-height: 29px;
+    color: $color-blue;
+  }
+
+  &[data-type*="select-multiple"]::after {
+    content: "";
+    height: 17px;
+    width: 29px;
+    position: absolute;
+    right: 11.5px;
+    top: 50%;
+    margin-top: -7.5px;
+
+    border-style: none;
+    border-color: transparent;
+    border-width: 0;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    background-image: url("../img/svg/icon-check.svg");
+  }
+}

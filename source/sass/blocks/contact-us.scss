@@ -1,0 +1,157 @@
+.contact-us {
+  margin-bottom: 70px;
+}
+
+.contact-us__wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1365px;
+  margin: 0 auto;
+}
+
+.contact-us__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  margin-top: 60px;
+  margin-left: 35px;
+  padding: 0;
+  list-style: none;
+
+  @include viewport--md {
+    align-items: center;
+  }
+
+  @include viewport--sm {
+    margin-left: 0;
+  }
+}
+
+.contact-us__item {
+  position: relative;
+  display: flex;
+  width: 46%;
+  margin-bottom: 97px;
+
+  @include viewport--md {
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 97px;
+  }
+
+  @include viewport--sm {
+    width: 100%;
+    max-width: 320px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.contact-us__image-container {
+  flex-shrink: 0;
+  width: 103px;
+  height: 103px;
+  margin-right: 76px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    vertical-align: middle;
+  }
+
+  @include viewport--md {
+    margin-right: 30px;
+  }
+
+  @include viewport--sm {
+    margin-right: 0;
+  }
+}
+
+.contact-us__item-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-us__name {
+  padding-right: 45px;
+  margin-top: 28px;
+  margin-bottom: 3px;
+
+  @include viewport--md {
+    padding-right: 0;
+  }
+}
+
+.contact-us__item-container p {
+  margin: 0;
+  padding: 0;
+
+  &:last-of-type {
+    margin-bottom: 11px;
+  }
+}
+
+.contact-us__tel {
+  display: block;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.06em;
+  margin-bottom: 3px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.contact-us__mail {
+  position: absolute;
+  top: 35px;
+  right: 0;
+}
+
+.contact-us__office {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  width: 46.3%;
+  margin-top: 27px;
+
+  @include viewport--md {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  @include viewport--sm {
+    width: 100%;
+    max-width: 320px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.contact-us__office-name {
+  margin-top: 3px;
+  margin-bottom: 1px;
+}
+
+.contact-us__office-info p {
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  line-height: 22px;
+}
+
+.contact-us__logo-container {
+  flex-shrink: 0;
+  margin-right: 57px;
+
+  @include viewport--sm {
+    margin-right: 0;
+    margin-bottom: 56px;
+  }
+}

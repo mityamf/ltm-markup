@@ -1,0 +1,39 @@
+extends ../base/layout
+
+block data
+  include ../data/privacy-policy
+  include ../mixins/blocks/top-block
+
+block variables
+  - var title = "Политика конфиденциальности"
+  - var hasHeader = true
+  - var hasFooter = true
+  - var currentPage = ""
+  - var text = "THE LEADING LUXURY TRAVEL EXHIBITION IN EASTERN EUROPE, RUSSIA & CIS"
+  - var desktopImage = "img/bg/bg-005-desktop.jpg"
+  - var tabletImage = "img/bg/bg-005-tablet.jpg"
+  - var mobileImage = "img/bg/bg-006-mobile.jpg"
+
+block main
+
+  +renderTopBlock(text, desktopImage, tabletImage, mobileImage)
+  main
+    .container
+      .privacy-policy
+        .privacy-policy__title-container
+          .privacy-policy__title-wrapper
+            h2.privacy-policy__title.title.title--h2 Privacy Policy
+            time.privacy-policy__date(datetime=privacyPolicy.datetime)= privacyPolicy.date
+          a.privacy-policy__nav-button(href="main.html")
+            img(src="img/svg/icon-back.svg", width="12", height="20")
+            span Back
+        .privacy-policy__wrapper
+          p= privacyPolicy.text
+          ul.privacy-policy__list
+            each item in privacyPolicy.content
+              li.privacy-policy__item
+                h3.privacy-policy__question.title.title--h3= item.question
+                each paragraph in item.answer
+                  p= paragraph
+        a.privacy-policy__button-up(href="#top-block")
+          img(src="img/svg/icon-button-up.svg", width="54", height="54")

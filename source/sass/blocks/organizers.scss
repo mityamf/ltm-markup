@@ -1,0 +1,46 @@
+.organizers__title {
+  margin-bottom: 25px;
+
+  @include viewport--lg {
+    margin-bottom: 31px;
+  }
+}
+
+.organizers__wrapper {
+  max-width: 936px;
+  margin: 0 auto;
+}
+
+.organizers__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.organizers__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 64px;
+
+  @include viewport--md {
+    align-items: center;
+  }
+}
+
+.organizers__image-container {
+  img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.organizers__name {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.organizers__item p {
+  margin: 0;
+  padding: 0;
+}

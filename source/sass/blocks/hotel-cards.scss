@@ -1,0 +1,19 @@
+.hotel-cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  width: calc(100% + 15px);
+  margin-bottom: -15px;
+  padding: 0;
+
+  @include viewport--lg {
+    width: auto;
+    max-width: 70%;
+  }
+
+  @include viewport--md {
+    width: auto;
+    max-width: none;
+    margin: 0 auto;
+  }
+}
