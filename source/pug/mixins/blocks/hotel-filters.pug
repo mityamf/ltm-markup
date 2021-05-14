@@ -1,0 +1,15 @@
+mixin renderFilter(title, mod, filterList)
+  li.hotel-filter(class="hotel-filter--" + mod)
+    if mod === "dropdown" || mod === "dropdown dropdown-mobile"
+      .hotel-filter__filter
+        h3.title--h3=title
+        select(id="hotel-select", class="input-dropdown", multiple)
+          each filter in filterList
+            option(value=filter, class="input-dropdown__option")=filter
+    else if mod === "list"
+      .hotel-filter__filter
+        h3.title--h3=title
+        ul.hotel-filter__list
+          each filter in filterList
+            li
+              a(href="#", class="hotel-filter__link")=filter

@@ -14,12 +14,27 @@
 @import "global/utils";
 @import "global/container";
 @import "global/text";
+@import "global/btn";
+@import "global/top-block";
 
 // Blocks
 //---------------------------------
 
+@import "vendor/choices";
 @import "blocks/header";
-@import "blocks/footer";
+@import "blocks/footer/footer";
+@import "blocks/footer/logotip";
+@import "blocks/footer/mailing";
+@import "blocks/footer/menu";
+@import "blocks/main/promo";
+@import "blocks/main/direction";
+@import "blocks/main/news-home";
+@import "blocks/main/interaction";
+@import "blocks/main/partners";
+@import "blocks/registration/registration";
+@import "blocks/registration/terms";
+@import "blocks/registration/exhibitor";
+@import "blocks/registration/form";
 @import "blocks/modal";
 @import "blocks/main-nav";
 @import "blocks/search";
@@ -31,6 +46,21 @@
 @import "blocks/info-bottom";
 @import "blocks/news";
 @import "blocks/toggle";
+@import "blocks/hotel-cards";
+@import "blocks/hotel-card";
+@import "blocks/exhibitions";
+@import "blocks/alphabet-hotel";
+@import "blocks/choose-event";
+@import "blocks/hotel-filter";
+@import "blocks/hotel-filters";
+@import "blocks/hotel-page";
+@import "blocks/edit";
+@import "blocks/edit-buttons";
+@import "blocks/support-contacts";
+@import "blocks/organizers";
+@import "blocks/partners-page";
+@import "blocks/privacy-policy";
+@import "blocks/contact-us";
 
 // используйте это для отключения ховеров на тач устройствах
 // ! но не используйте это для текстовых полей ( input, textarea )

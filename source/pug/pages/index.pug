@@ -63,6 +63,26 @@ block main
         src: "news.html"
       },
       {
+        name: "Новость — newpage.html",
+        src: "newpage.html"
+      },
+      {
+        name: "Организаторы — organizers.html",
+        src: "organizers.html"
+      },
+      {
+        name: "Партнеры — partners-page.html",
+        src: "partners-page.html"
+      },
+      {
+        name: "Контакты — contact-us.html",
+        src: "contact-us.html"
+      },
+      {
+        name: "Политика конфиденциальности — privacy-policy.html",
+        src: "privacy-policy.html"
+      },
+      {
         name: "Об ивенте - about.html",
         src: "about.html"
       },
@@ -74,6 +94,38 @@ block main
         name: "Галерея - gallery.html",
         src: "gallery.html"
       },
+      {
+        name: "События - exhibitors.html",
+        src: "exhibitors.html"
+      },
+      {
+        name: "Регистрация - registration.html",
+        src: "registration.html"
+      },
+      {
+        name: "Регистрация экспонента - exhibitor.html",
+        src: "exhibitor.html"
+      },
+      {
+        name: "Отель - hotel-page.html",
+        src: "hotel-page.html"
+      },
+      {
+        name: "Редактирование отеля - hotel-page-editing.html",
+        src: "hotel-page-editing.html"
+      },
+      {
+        name: "Аккаунт - account.html",
+        src: "account.html"
+      },
+      {
+        name: "Уведомления - notifications.html",
+        src: "notifications.html"
+      },
+      {
+        name: "Уведомления/отправить сообщение - notifications-message.html",
+        src: "notifications-message.html"
+      },
     ]
 
   main.container.main-index
@@ -83,6 +135,3 @@ block main
       each page in pages
         li
           a(href= page.src)= page.name
-
-
-

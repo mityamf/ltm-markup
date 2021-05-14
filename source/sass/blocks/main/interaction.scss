@@ -1,0 +1,122 @@
+.interaction {
+  display: flex;
+  border-top: 1px solid $color-blue;
+  padding-top: 30px;
+  padding-bottom: 50px;
+
+  &__reg {
+    width: 40%;
+    padding-right: 16px;
+    position: relative;
+
+    &-title {
+      margin: 0;
+      padding-bottom: 12px;
+      font-size: 38px;
+      color: $color-blue;
+      font-weight: 300;
+    }
+
+    &-text {
+      margin: 0;
+    }
+
+    @include viewport--sm {
+      width: 100%;
+    }
+  }
+
+  &__gallery {
+    width: 80%;
+    position: relative;
+
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $color-blue;
+    border-radius: 1px;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 600;
+    color: $color-blue;
+
+    &-open {
+      position: absolute;
+      right: 18px;
+      bottom: -23px;
+      padding: 4px 41px;
+    }
+
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  &__btn {
+    display: none;
+
+    @include viewport--sm {
+      display: block;
+      padding-top: 20px;
+      text-align: center;
+      font-weight: 600;
+    }
+  }
+
+  @include viewport--sm {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+}
+
+.gallery {
+  &__block {
+    display: grid;
+    grid-template-areas: ". . .";
+    gap: 16px;
+    padding-bottom: 16px;
+
+    img {
+      height: fit-content;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 38px;
+    color: $color-blue;
+    font-weight: 300;
+    padding-bottom: 16px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $color-blue;
+    border-radius: 1px;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 600;
+    color: $color-blue;
+
+    &-open {
+      position: absolute;
+      right: 0;
+      bottom: -23px;
+      padding: 4px 41px;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+}

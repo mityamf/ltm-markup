@@ -4,49 +4,41 @@ block variables
   - var title = "Об ивенте"
   - var hasHeader = true
   - var hasFooter = true
+  - var text = "THE LEADING LUXURY TRAVEL EXHIBITION IN EASTERN EUROPE, RUSSIA & CIS"
+  - var desktopImage = "img/bg/about-page-desktop.png"
+  - var tabletImage = "img/bg/about-page-tablet.png"
+  - var mobileImage = "img/bg/news-page-mobile.png"
+  - var currentPage = "About LTM"
 
 block main
-  style.
-    .container {
-      display: flex;
-      flex-wrap: nowrap;
-    }
+  include ../data/about
+  include ../data/benefits
 
-    @media (max-width: 1023px) {
-      .container {
-        flex-wrap: wrap;
-      }
-    }
-
+  +renderTopBlock(text, desktopImage, tabletImage, mobileImage)
   main.container
-    div.about
-      include ../data/about
-      h2.title--h2=aboutEvent.title
-      ul
-        each text in aboutEvent.textList
-          li
-            p=text
-      button.about__more-btn(type="button", aria-label="Показать больше", aria-pressed="false")="Read More"
-
-      h2.title--h2=eventBlock.title
+    .about
+      .about__content
+        h2.title--h2=aboutEvent.title
         ul
-          each event in eventBlock.eventList
+          each text in aboutEvent.textList
             li
-              h3.title--h3=event.subtitle
-              ul
-                each text in event.textList
-                  li
-                    p=text
+              p=text
+        button.btn.btn--white(type="button", aria-label="Показать больше", aria-pressed="false")="Read More"
 
-    aside.about-aside
-      include ../data/benefits
-      h2.title--h2 Overview
-      ol
-        each benefit in benefits
-          li
-            img(src=benefit.src)
-            span=benefit.text
+        h2.title--h2=eventBlock.title
+          ul
+            each event in eventBlock.eventList
+              li
+                h3.title--h3=event.subtitle
+                ul
+                  each text in event.textList
+                    li
+                      p=text
 
-
-
-
+      aside.about__aside
+        h2.title--h2 Overview
+        ol
+          each benefit in benefits
+            li
+              +icon(benefit.src, benefit.width, benefit.height)
+              span=benefit.text

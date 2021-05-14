@@ -7,6 +7,8 @@ import {initSearch} from './modules/search';
 import {initMenu} from './modules/init-menu';
 import {toggleGallery} from './modules/toggle-gallery';
 import {initGallerySwiper} from './modules/init-gallery-swiper';
+import {initSwiper} from './modules/init-swiper';
+import {initSmoothAnchors} from './modules/init-smooth-anchors';
 
 // Utils
 // ---------------------------------
@@ -23,3 +25,6 @@ initSearch();
 initMenu();
 toggleGallery();
 initGallerySwiper();
+initSwiper();
+initSmoothAnchors();
+
