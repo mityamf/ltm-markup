@@ -9,7 +9,7 @@ import {toggleGallery} from './modules/toggle-gallery';
 import {initGallerySwiper} from './modules/init-gallery-swiper';
 import {initSwiper} from './modules/init-swiper';
 import {initSmoothAnchors} from './modules/init-smooth-anchors';
-
+import {dropdown} from './modules/dropdown';
 // Utils
 // ---------------------------------
 
@@ -26,5 +26,5 @@ initMenu();
 toggleGallery();
 initGallerySwiper();
 initSwiper();
+dropdown();
 initSmoothAnchors();
-

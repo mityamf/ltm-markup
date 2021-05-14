@@ -11,93 +11,15 @@ block variables
 
 block main
   main
-    +promo("The leading luxury travel exhibition in eastern europe, russia & cis", "", "./img/bg/reg-bg.png", "./img/bg/reg-bg@2x.png", "1920", "534", "./img/bg/regBg-mobile.png 1x, ./img/bg/regBg-mobile@2x.png 2x", ".promo__none", "promo__info-reg")
-    section.exhibitor-reg.container
-      h2.exhibitor-reg__title Exhibitor Registration
-      a.exhibitor-reg__btn(href="registration.html")
-        img(src="img/svg/icon-back.svg", width="12", height="20")
-        span Back
-      form(action="#").exhibitor-reg__form.form-reg
-        div.form-reg__
-          h3.form-reg__title Please select the event you would like to register for:
-          .swiper-container.mySwiper
-            ul.direction__list.swiper-wrapper
-              input.mailing__check(type="checkbox" id="check" name="check" value="yes")
-              label(for="check")
-              +direction("Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan", "27 September 2019", "Available", "27.09.2019", "direction__status--available")
-              +direction("Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan", "27 September 2019", "Available", "27.09.2019", "direction__status--available")
-              +direction("Luxury Travel Mart Moscow 2019 at The Ritz-Carlton, Moscow, Russia", "1 October 2019", "Available", "01.10.2019", "direction__status--available")
-              +direction("Luxury Travel Mart Moscow 2020 at Hyatt Regency Moscow, Russia", "27–28 February 2020", "Available", "27.02.2020", "direction__status--available")
-              +direction("Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan", "3 March 2020", "Waiting list", "03.03.2020", "direction__status--waiting")
-              +direction("Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia", "20 June 2020", "Waiting list", "20.06.2020", "direction__status--waiting")
-            .direction__arrow.swiper-button-next.direction__arrow--right
-              +icon("arrow-right", "11", "19")
-            .direction__arrow.swiper-button-prev.direction__arrow--left
-              +icon("arrow-left", "11", "19")
-        div.form-reg__info
-          h3.form-reg__title Information about company:
-          div.form-reg__block
-            label(for="nameCompany") Company or hotel name
-            input(type="nameCompany" name="nameCompany"  id="nameCompany" placeholder="Company (brand) name" required="required")
-          div.form-reg__block
-            label(for="nameOfficial") Official name for invoice, if different
-            input(type="nameOfficial" name="nameOfficial"  id="nameOfficial" placeholder="Official name" required="required")
-          div.form-reg__block
-            label(for="login") Please, create your login
-            input(type="login" name="login"  id="login" placeholder="Create your login" required="required")
-          div.form-reg__block
-            label(for="address") Official address
-            input(type="address" name="address"  id="address" placeholder="Address" required="required")
-          div.form-reg__block
-            h3 City
-            select
-              option Aachen
-              option(value="1") 1
-              option(value="2") 2
-              option(value="3") 3
-              option(value="4") 4
-              option(value="5") 5
-          div.form-reg__block
-            h3 Country
-            select
-              option Aphhanistan
-              option(value="Aphhanistan") Aphhanistan
-              option(value="Aphhanistan") Aphhanistan
-              option(value="Aphhanistan") Aphhanistan
-              option(value="Aphhanistan") Aphhanistan
-              option(value="Aphhanistan") Aphhanistan
-              option(value="Aphhanistan") Aphhanistan
-          div.form-reg__block
-            h3 Area of the business
-            select
-              option Chois area of the business
-              option(value="22") 22
-              option(value="23") 23
-              option(value="35") 35
-              option(value="43") 43
-              option(value="34") 34
-              option(value="35") 35
-          div.form-reg__block
-            label(for="Web-site") Web-site
-            input(type="Web-site" name="Web-site"  id="Web-site" placeholder="https://" required="required")
+    +promo("The leading luxury travel exhibition in eastern europe, russia & cis", "", "./img/bg/reg-bg.png", "./img/bg/reg-bg@2x.png", "1920", "534", "./img/bg/regBg-mobile.png 1x, ./img/bg/regBg-mobile@2x.png 2x", "promo__none", "promo__info-reg")
+    section.exhibitor-reg
+      .exhibitor-reg__block.container
+        h2.exhibitor-reg__title Exhibitor Registration
+        a.exhibitor-reg__btn(href="registration.html")
+          img(src="img/svg/icon-back.svg", width="12", height="20" alt="back")
+          span Back
+      +form-reg
 
-
-
-        div
-          h3.form-reg__title Location of your business:
-        div
-          h3.form-reg__title Information about you:
-        div
-          h3.form-reg__title Upload photos and logo
-        div
-          h3.form-reg__title Terms &#38; Conditions
-          .terms__block
-            p.terms__text Rates for participation at each event supplied on request only.
-            p.terms__text Confirmation and participation at the event is subject to the approval of the organizers only. Please note that completing the registration form does not guarantee your automatic confirmation for the event. All registrations will be reviewed and potential exhibitors should meet the criteria for exhibition participants.
-            p.terms__text Booking must be carried out three months prior to the event, at the latest. Payment should be completed within 30 days after the confirmation, however prior the event. The payment terms are strict, and not negotiable.
-            p.terms__text All cancelation of participation must be received in writing by fax or email. A full refund of the participation fee will be made if canceled up to six months prior to the event. If canceled six to four months prior to the event - 50% of the participation fee will be charged for the cancelation. No refund of the participation fee will be made if canceled later then four months prior to the event.
-            p.terms__text Included in the fee: participation in all events of the Luxury Travel Mart. No hidden charges.
-            p.terms__text A block of rooms will be reserved at each of the venue hotels. Rates will be provided upon request.
-      input.mailing__check(type="checkbox" id="check" name="check" value="yes")
-      label(for="check") I have read and agree to the terms &#38; conditions of participations
-      button Send
+block modals
+  +modal("modal--submission")
+    +modal-submission()
