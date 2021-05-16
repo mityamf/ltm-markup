@@ -4,9 +4,18 @@
     padding: 0;
   }
 
-  h3 {
+  &__block-title {
     padding: 0;
     margin: 0;
+
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 29px;
+    color: $color-blue;
+
+    @include viewport--md {
+      margin-bottom: 10px;
+    }
   }
 
   a {

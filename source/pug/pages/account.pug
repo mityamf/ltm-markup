@@ -1,12 +1,38 @@
 extends ../base/layout
 
 block variables
-  - var title = "LK-Exhibitor Account"
+  - var title = "LK-Exhibitor Notifications"
   - var hasHeader = true
   - var hasFooter = true
 
 block main
+  include ../data/hotel-page-editing
   include ../data/support-contacts
+  include ../data/notifications
+  include ../data/account
+  include ../data/account-events
+  include ../data/hotel-photos
 
-  main.container
+  main.container.container--no-padding
+    .hotel-headline.hotel-headline--account-page
+      a.account-hotel-info__link-hotel(href=accountHotelInfo.link)=accountHotelInfo.link
+      .hotel-headline__wrapper
+        h2.title--h2=hotelHeadline.title
+        span=hotelHeadline.note
+      +icon(hotelHeadline.logo, hotelHeadline.logoWidth, hotelHeadline.logoHeight)
+    +renderHotelPhotos(hotelPhotos.photoList)
+    +renderAccountHotelInfo(accountHotelInfo.text, accountHotelInfo.link, accountHotelInfo.buttonText)
+    +renderEventsList(eventList.title, eventList.subtitle, eventList.hotelList)
+
+    .account__contact-us
+      .account__admin
+        +renderAccountAdmin(administrator.title, administrator.src, administrator.name, administrator.lastName, administrator.position, administrator.text)
+      .account__notifications
+        +renderHeadline3(administrator.title)
+        +renderNotifications(notifications)
+        button(class="btn btn--white btn--more btn--desktop" type="button") All Notifications
+        button(class="btn btn--white btn--more btn--mobile" type="button") More
+        a(href="#top", class="notifications__up-link", aria-label="Вернуться в начало")
+          +icon("icon-arrow-up", 54, 54)
+
     +renderSupportContacts(contactsList)

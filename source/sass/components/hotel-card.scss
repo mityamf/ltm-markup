@@ -4,7 +4,7 @@
   margin-bottom: 5px;
   background-color: white;
   border-radius: 3px;
-  width: calc((100%/3) - 15px);
+  width: calc(100% / 3);
   max-width: 341px;
 
   @include viewport--lg {
@@ -92,6 +92,8 @@
       margin-right: 10px;
       width: auto;
       height: auto;
+      max-width: 71px;
+      max-height: 71px;
     }
   }
 }

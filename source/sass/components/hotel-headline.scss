@@ -1,0 +1,78 @@
+.hotel-headline {
+  display: flex;
+  justify-content: space-between;
+  padding: 27px 0;
+
+  border-bottom: 1px solid $color-blue;
+
+  @include viewport--sm {
+    padding: 20px 0;
+  }
+
+  .title--h2 {
+    margin: 0 0 10px 0;
+
+    @include viewport--sm {
+      margin: 0;
+
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  span {
+    display: block;
+    width: 100%;
+    margin: 0;
+
+    color: $color-gray-dark;
+
+    @include viewport--sm {
+      line-height: 20px;
+    }
+  }
+
+  svg {
+    margin: auto 0;
+  }
+}
+
+.container--no-padding > .hotel-headline {
+  padding-left: 17px;
+  padding-right: 17px;
+}
+
+.hotel-headline--account-page {
+  .account-hotel-info__link-hotel {
+    display: none;
+  }
+
+  @include viewport--sm {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 30px 17px 10px 17px;
+    border: none;
+
+    .account-hotel-info__link-hotel {
+      display: block;
+      margin: 15px 0 0 0;
+
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    svg {
+      margin: 0 auto 20px auto;
+      width: 103px;
+      height: 80px;
+    }
+
+    .title--h2 {
+      margin-bottom: 10px;
+
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+}

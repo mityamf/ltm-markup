@@ -1,0 +1,15 @@
+mixin renderEventsList(title, subtitle, hotelList)
+  .account__event-block
+    h2.title--h2=title
+    h3.title--h3=subtitle
+    ul.account__event-list
+      each hotel in hotelList
+        li.account__event(class='account__event--' + hotel.status)
+          h4.title--h4=hotel.title
+          span.account__event-text=hotel.text
+          span.account__event-date=hotel.date
+          span.account__event-status=hotel.statusText
+            +icon("icon-event-" + hotel.status, 22, 22)
+          span.account__event-description=hotel.statusDescription
+          button.btn.btn--white(type="button")=hotel.buttonText
+
