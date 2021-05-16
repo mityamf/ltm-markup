@@ -1,7 +1,14 @@
+.privacy-policy {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 33px;
+}
+
 .privacy-policy__title-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 21px;
 }
 
 .privacy-policy__title {
@@ -11,6 +18,8 @@
 .privacy-policy__nav-button {
   display: flex;
   align-items: center;
+  margin-top: 12px;
+  margin-right: 25px;
 
   img {
     margin-right: 5px;
@@ -23,6 +32,8 @@
 }
 
 .privacy-policy__date {
+  display: block;
+
   font-size: 12px;
   line-height: 14px;
   font-weight: 400;
@@ -38,12 +49,31 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  margin-bottom: 36px;
 }
 
 .privacy-policy__item {
   margin-bottom: 24px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .privacy-policy__question {
   margin: 0;
+}
+
+.privacy-policy__button-up {
+  display: block;
+  margin-left: auto;
+  margin-right: -65px;
+
+  @include viewport--xl {
+    margin-right: 0;
+  }
+
+  @include viewport--sm {
+    margin: 0 auto;
+  }
 }

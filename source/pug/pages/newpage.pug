@@ -2,18 +2,26 @@ extends ../base/layout
 
 block data
   include ../data/news
+  include ../mixins/blocks/top-block
 
 block variables
   - var title = "Новости"
   - var hasHeader = true
   - var hasFooter = true
+  - var currentPage = ""
+  - var text = ""
+  - var desktopImage = "img/bg/bg-002-desktop.jpg"
+  - var tabletImage = "img/bg/bg-002-tablet.jpg"
+  - var mobileImage = "img/bg/bg-002-mobile.jpg"
 
 block main
+
+  +renderTopBlock(text, desktopImage, tabletImage, mobileImage)
   main
     .container
       .news
         .news__title-container.news__title-container--newpage
-          h2.news__title #{newsList[0].title}
+          h2.news__title.title.title--h2 #{newsList[0].title}
           a.news__nav-button(href="news.html")
             img(src="img/svg/icon-back.svg", width="12", height="20")
             span Back

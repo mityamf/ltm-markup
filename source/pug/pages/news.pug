@@ -2,19 +2,26 @@ extends ../base/layout
 
 block data
   include ../data/news
+  include ../mixins/blocks/top-block
 
 block variables
   - var title = "Новости"
   - var hasHeader = true
   - var hasFooter = true
+  - var currentPage = ""
+  - var text = "THE LEADING LUXURY TRAVEL EXHIBITION IN EASTERN EUROPE, RUSSIA & CIS"
+  - var desktopImage = "img/bg/bg-005-desktop.jpg"
+  - var tabletImage = "img/bg/bg-001-tablet.jpg"
+  - var mobileImage = "img/bg/bg-005-mobile.jpg"
 
 block main
 
+  +renderTopBlock(text, desktopImage, tabletImage, mobileImage)
   main
     .container
       .news
         .news__title-container
-          h2.news__title LTM News
+          h2.news__title.title.title--h2 LTM News
           a.news__nav-button(href="#")
             img(src="img/svg/icon-back.svg", width="12", height="20")
             span Back

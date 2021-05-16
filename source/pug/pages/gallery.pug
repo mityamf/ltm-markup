@@ -1,5 +1,8 @@
 extends ../base/layout
 
+block data
+  include ../data/photos
+
 block variables
   - var title = "Галерея"
   - var wrapperMod = ""
@@ -12,4 +15,22 @@ block variables
 block main
 
   main
-    .container
+    +promo("The leading luxury travel exhibition in eastern europe, russia AND cis", "registration", "./img/bg/bg-gallery-desktop.png", "./img/bg/bg-gallery-desktop@2x.png", "1920", "534", "./img/bg/bg-gallery-mobile.png 1x, ./img/bg/bg-gallery-mobile@2x.png 2x", "promo__none", "promo__info")
+    section.gallery.container.container--no-padding
+      .toggle.toggle__container
+        span.toggle__photo Photo
+        input(type="checkbox" id="toggle-button" class="toggle__button")
+        label(for="toggle-button" class="visually-hidden") Toggle Button
+        span.toggle__video Video
+      .gallery__section.gallery__section--photo.photo
+        h2.title.title--h2  Photo
+        +photo-block
+      .gallery__section.gallery__section--video.video
+        h2.title.title--h2 Video
+        ul.video__block-list
+          each item in videoList
+            li
+              h3.title.title--h3 #{item.title}
+              video.video__container
+
+

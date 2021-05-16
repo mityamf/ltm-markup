@@ -1,8 +1,12 @@
+.contact-us {
+  margin-bottom: 70px;
+}
+
 .contact-us__wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
-  max-width: 1310px;
+  max-width: 1365px;
   margin: 0 auto;
 }
 
@@ -11,11 +15,17 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
+  margin-top: 60px;
+  margin-left: 35px;
   padding: 0;
   list-style: none;
 
   @include viewport--md {
     align-items: center;
+  }
+
+  @include viewport--sm {
+    margin-left: 0;
   }
 }
 
@@ -67,8 +77,13 @@
 }
 
 .contact-us__name {
-  margin-top: 25px;
-  margin-bottom: 5px;
+  padding-right: 45px;
+  margin-top: 28px;
+  margin-bottom: 3px;
+
+  @include viewport--md {
+    padding-right: 0;
+  }
 }
 
 .contact-us__item-container p {
@@ -76,7 +91,19 @@
   padding: 0;
 
   &:last-of-type {
-    margin-bottom: 15px;
+    margin-bottom: 11px;
+  }
+}
+
+.contact-us__tel {
+  display: block;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.06em;
+  margin-bottom: 3px;
+
+  &:last-of-type {
+    margin-bottom: 0;
   }
 }
 
@@ -90,8 +117,8 @@
   align-self: flex-end;
   display: flex;
   align-items: center;
-  width: 47.5%;
-  margin-top: 30px;
+  width: 46.3%;
+  margin-top: 27px;
 
   @include viewport--md {
     width: 500px;
@@ -108,20 +135,22 @@
 }
 
 .contact-us__office-name {
-  margin-top: 0;
-  margin-bottom: 7px;
+  margin-top: 3px;
+  margin-bottom: 1px;
 }
 
 .contact-us__office-info p {
   margin: 0;
   padding: 0;
+  font-size: 17px;
+  line-height: 22px;
 }
 
 .contact-us__logo-container {
   flex-shrink: 0;
   margin-right: 57px;
 
-  @include viewport--md {
+  @include viewport--sm {
     margin-right: 0;
     margin-bottom: 56px;
   }
