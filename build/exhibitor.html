@@ -2490,72 +2490,83 @@
             <h2 class="exhibitor-reg__title">Exhibitor Registration</h2><a class="exhibitor-reg__btn" href="registration.html"><img src="img/svg/icon-back.svg" width="12" height="20" alt="back"><span>Back</span></a>
           </div>
           <form class="exhibitor-reg__form form-reg" action="#" method="POST">
-            <div class="form-reg__direction container">
+            <div class="container">
               <h3 class="form-reg__title form-reg__title-one">Please select the event you would like to register for:</h3>
             </div>
-            <div class="direction__swiper">
-              <div class="swiper-container mySwiper">
+            <div class="form-reg__direction direction__swiper">
+              <div class="swiper-container direction__swiper-block">
                 <div class="swiper-wrapper">
-                  <div class="form-reg__slider">
+                  <div class="form-reg__slider swiper-slide">
                     <input class="form-reg__check" type="checkbox" id="choices" name="check" value="choices" checked="checked"/>
                     <label for="choices"></label>
-                    <li class="direction__item swiper-slide">
+                    <li class="direction__item">
                       <h2 class="direction__title">Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan</h2>
                       <time class="direction__data" datatime="27.09.2019">27 September 2019</time><span class="direction__status direction__status--available">Available</span>
                     </li>
                   </div>
-                  <div class="form-reg__slider">
+                  <div class="form-reg__slider swiper-slide">
                     <input class="form-reg__check" type="checkbox" id="choices1" name="check" value="choices" checked="checked"/>
                     <label for="choices1"></label>
-                    <li class="direction__item swiper-slide">
+                    <li class="direction__item">
                       <h2 class="direction__title">Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan</h2>
                       <time class="direction__data" datatime="27.09.2019">27 September 2019</time><span class="direction__status direction__status--available">Available</span>
                     </li>
                   </div>
-                  <div class="form-reg__slider">
+                  <div class="form-reg__slider swiper-slide">
                     <input class="form-reg__check" type="checkbox" id="choices2" name="check" value="choices"/>
                     <label for="choices2"></label>
-                    <li class="direction__item swiper-slide">
+                    <li class="direction__item">
                       <h2 class="direction__title">Luxury Travel Mart Moscow 2019 at The Ritz-Carlton, Moscow, Russia</h2>
                       <time class="direction__data" datatime="01.10.2019">1 October 2019</time><span class="direction__status direction__status--available">Available</span>
                     </li>
                   </div>
-                  <div class="form-reg__slider">
+                  <div class="form-reg__slider swiper-slide">
                     <input class="form-reg__check" type="checkbox" id="choices3" name="check" value="choices"/>
                     <label for="choices3"></label>
-                    <li class="direction__item swiper-slide">
+                    <li class="direction__item">
                       <h2 class="direction__title">Luxury Travel Mart Moscow 2020 at Hyatt Regency Moscow, Russia</h2>
                       <time class="direction__data" datatime="27.02.2020">27–28 February 2020</time><span class="direction__status direction__status--available">Available</span>
                     </li>
                   </div>
-                  <div class="form-reg__slider">
+                  <div class="form-reg__slider swiper-slide">
                     <input class="form-reg__check" type="checkbox" id="choices4" name="check" value="choices"/>
                     <label for="choices4"></label>
-                    <li class="direction__item swiper-slide">
+                    <li class="direction__item">
                       <h2 class="direction__title">Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan</h2>
                       <time class="direction__data" datatime="03.03.2020">3 March 2020</time><span class="direction__status direction__status--waiting">Waiting list</span>
                     </li>
                   </div>
-                  <div class="form-reg__slider">
+                  <div class="form-reg__slider swiper-slide">
                     <input class="form-reg__check" type="checkbox" id="choices5" name="check" value="choices"/>
                     <label for="choices5"></label>
-                    <li class="direction__item swiper-slide">
+                    <li class="direction__item">
                       <h2 class="direction__title">Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia</h2>
                       <time class="direction__data" datatime="20.06.2020">20 June 2020</time><span class="direction__status direction__status--waiting">Waiting list</span>
                     </li>
                   </div>
                 </div>
-                <div class="direction__arrow swiper-button-next direction__arrow--right">
+                <div class="direction__arrow direction__arrow--right">
                   <svg width="11" height="19" aria-hidden="true">
                     <use xlink:href="#arrow-right"></use>
                   </svg>
                 </div>
-                <div class="direction__arrow swiper-button-prev direction__arrow--left">
+                <div class="direction__arrow direction__arrow--left">
                   <svg width="11" height="19" aria-hidden="true">
                     <use xlink:href="#arrow-left"></use>
                   </svg>
                 </div>
               </div>
+            </div>
+            <div class="form-reg__pop-up pop-up container">
+              <div class="pop-up__choices">
+                <input class="pop-up__check" type="checkbox" id="choices-1" name="check" value="choices" checked="checked"/>
+                <label for="choices-1"></label>
+                <li class="direction__item">
+                  <h2 class="direction__title">Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan</h2>
+                  <time class="direction__data" datatime="27.09.2019">27 September 2019</time><span class="direction__status direction__status--available">Available</span>
+                </li>
+              </div>
+              <button class="pop-up__btn" data-modal="choices" type="button">View All Events</button>
             </div>
             <div class="form-reg__adoption adoption container">
               <h3 class="adoption__title">You have selected the following events:</h3>
@@ -2846,15 +2857,71 @@
       </footer>
     </div>
     <div class="modal modal--preload modal--submission">
-      <div class="modal__wrapper submission__wrapper">
-        <div class="modal__overlay submission__overlay"></div>
-        <div class="modal__content submission__content"><a class="submission__logo">
+      <div class="modal__wrapper">
+        <div class="modal__overlay"></div>
+        <div class="modal__content"><a class="submission__logo">
             <svg width="324" height="122" aria-hidden="true">
               <use xlink:href="#logo-desktop"></use>
             </svg></a>
           <p class="submission__description">Thank you! Your information has been sent</p>
           <button class="submission__close-button modal__close-button" type="button">ok</button>
-          <button class="modal__close-btn btn-reset submission__close-btn" type="button" aria-label="Закрыть попап">
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+            <svg width="33" height="33" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--choices">
+      <div class="modal__wrapper">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <div class="modal--filter select-event">
+            <h2 class="select-event__title">Select the event:</h2>
+            <div class="select-event__block">
+              <input class="form-reg__check" type="checkbox" id="choices-01" name="check" value="choices" checked="checked"/>
+              <label for="choices-01"></label>
+              <li class="direction__item">
+                <h2 class="direction__title">Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan</h2>
+                <time class="direction__data" datatime="27.09.2019">27 September 2019</time><span class="direction__status direction__status--available">Available</span>
+              </li>
+            </div>
+            <div class="select-event__block">
+              <input class="form-reg__check" type="checkbox" id="choices-02" name="check" value="choices"/>
+              <label for="choices-02"></label>
+              <li class="direction__item">
+                <h2 class="direction__title">Luxury Travel Mart Moscow 2019 at The Ritz-Carlton, Moscow, Russia</h2>
+                <time class="direction__data" datatime="01.10.2019">1 October 2019</time><span class="direction__status direction__status--available">Available</span>
+              </li>
+            </div>
+            <div class="select-event__block">
+              <input class="form-reg__check" type="checkbox" id="choices-03" name="check" value="choices"/>
+              <label for="choices-03"></label>
+              <li class="direction__item">
+                <h2 class="direction__title">Luxury Travel Mart Moscow 2020 at Hyatt Regency Moscow, Russia</h2>
+                <time class="direction__data" datatime="27.02.2020">27–28 February 2020</time><span class="direction__status direction__status--available">Available</span>
+              </li>
+            </div>
+            <div class="select-event__block">
+              <input class="form-reg__check" type="checkbox" id="choices-04" name="check" value="choices"/>
+              <label for="choices-04"></label>
+              <li class="direction__item">
+                <h2 class="direction__title">Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan</h2>
+                <time class="direction__data" datatime="03.03.2020">3 March 2020</time><span class="direction__status direction__status--waiting">Waiting list</span>
+              </li>
+            </div>
+            <div class="select-event__block">
+              <input class="form-reg__check" type="checkbox" id="choices-05" name="check" value="choices"/>
+              <label for="choices-05"></label>
+              <li class="direction__item">
+                <h2 class="direction__title">Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia</h2>
+                <time class="direction__data" datatime="20.06.2020">20 June 2020</time><span class="direction__status direction__status--waiting">Waiting list</span>
+              </li>
+            </div>
+            <button class="modal__select-close" type="button">Apply</button>
+          </div>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
             <svg width="33" height="33" aria-hidden="true">
               <use xlink:href="#icon-close"></use>
             </svg>
