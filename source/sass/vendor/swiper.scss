@@ -34,6 +34,9 @@
   padding: 0;
   /* Fix of Webkit flickering */
   z-index: 1;
+  [hidden] {
+    display: none;
+  }
 }
 
 .swiper-container-vertical>.swiper-wrapper {

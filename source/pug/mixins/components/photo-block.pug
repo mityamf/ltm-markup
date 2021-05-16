@@ -3,7 +3,7 @@ mixin photo-block()
     each item in photoList
       li.photo__item
         h3.title.title--h3 #{item.title}
-        .swiper-container.mySwiper.photo__slider
+        .swiper-container.photo__slider
           ul.photo__sublist.swiper-wrapper
             each photo in item.photos
                 if photo.isUp
@@ -38,5 +38,8 @@ mixin photo-block()
                           picture
                             +webp("content", `${photo.src}`)
                             +img("content", `${photo.src}`, "png", 222, 154, "Фотография с мероприятия")
-          .swiper-button-next
-          .swiper-button-prev
+          .photo__button-next
+            +icon("icon-arrow_right_white", 19, 30)
+          .photo__button-prev
+            +icon("icon-arrow_right_white", 19, 30)
+

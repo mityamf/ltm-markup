@@ -1,0 +1,20 @@
+extends ../base/layout
+
+block variables
+  - var title = "LK-Exhibitor Notifications Message"
+  - var hasHeader = true
+  - var hasFooter = true
+
+block main
+  include ../data/notification-message
+  include ../data/support-contacts
+
+  main.container
+    +renderHotelHeadline(hotelHeadline.title, hotelHeadline.logo, hotelHeadline.note, hotelHeadline.logoWidth, hotelHeadline.logoHeight)
+    +renderHeadlineWithBackButton("Notification", "#")
+    .notification-message
+      .notification-message__info-block
+        span="Luxury Travel Mart Organizer"
+        span="Appointment"
+      +renderEditBlock(editingBlockList, buttons)
+    +renderSupportContacts(contactsList)

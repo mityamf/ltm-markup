@@ -1,0 +1,7 @@
+mixin renderHotelHeadline(title, logo, note, logoWidth, logoHeight)
+  .hotel-headline
+    .hotel-headline__wrapper
+      h2.title--h2=title
+      span=note
+    +icon(logo, logoWidth, logoHeight)
+    

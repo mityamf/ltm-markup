@@ -11,8 +11,8 @@ const initGallerySwiper = () => {
       gallerySliders.forEach(function (gallerySlider) {
         gallerySwiper = new Swiper(gallerySlider, {
           navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.photo__button-next',
+            prevEl: '.photo__button-prev',
           },
         });
       });

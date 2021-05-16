@@ -4,41 +4,28 @@ block variables
   - var title = "Об ивенте"
   - var hasHeader = true
   - var hasFooter = true
-  - var text = "THE LEADING LUXURY TRAVEL EXHIBITION IN EASTERN EUROPE, RUSSIA & CIS"
-  - var desktopImage = "img/bg/about-page-desktop.png"
-  - var tabletImage = "img/bg/about-page-tablet.png"
-  - var mobileImage = "img/bg/news-page-mobile.png"
   - var currentPage = "About LTM"
 
 block main
   include ../data/about
-  include ../data/benefits
 
-  +renderTopBlock(text, desktopImage, tabletImage, mobileImage)
+  +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
   main.container
     .about
       .about__content
-        h2.title--h2=aboutEvent.title
-        ul
-          each text in aboutEvent.textList
-            li
-              p=text
-        button.btn.btn--white(type="button", aria-label="Показать больше", aria-pressed="false")="Read More"
+        +renderHeadline2(aboutEvent.title)
+        +renderTextContentBlock(aboutEvent.textList)
+        button.btn.btn--white(type="button", aria-label="Показать больше")=buttonText
 
-        h2.title--h2=eventBlock.title
-          ul
-            each event in eventBlock.eventList
-              li
-                h3.title--h3=event.subtitle
-                ul
-                  each text in event.textList
-                    li
-                      p=text
+        +renderHeadline2(eventBlock.title)
+        each event in eventBlock.eventList
+          +renderHeadline3(event.subtitle)
+          +renderTextContentBlock(event.textList)
 
       aside.about__aside
-        h2.title--h2 Overview
-        ol
+        +renderHeadline2(benefitsTitle)
+        ul
           each benefit in benefits
             li
               +icon(benefit.src, benefit.width, benefit.height)
-              span=benefit.text
+              p=benefit.text

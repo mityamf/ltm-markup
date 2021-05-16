@@ -12,6 +12,8 @@ const toggleGallery = () => {
 
       if (breakpointWidth.matches) {
         toggleBtn.checked = false;
+        videoSection.style.display = 'none';
+
         toggleBtn.addEventListener('change', (evt) => {
           if (evt.currentTarget.checked) {
             photoSection.style.display = 'none';
