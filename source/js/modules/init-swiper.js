@@ -1,23 +1,20 @@
 const initSwiper = () => {
   /* eslint-disable */
-  let swiper = new Swiper('.mySwiper', {
+  let swiper = new Swiper('.direction__swiper-block', {
     spaceBetween: 0,
     slidesPerGroup: 3,
+    slidesPerView: 4,
     loop: false,
     loopFillGroupWithBlank: true,
-    pagination: {
-      el: '.swiper-',
-      clickable: true,
-    },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.direction__arrow--right',
+      prevEl: '.direction__arrow--left',
     },
     breakpoints: {
-      768: {
+      1280: {
         slidesPerView: 4,
       },
-      1280: {
+      1440: {
         slidesPerView: 6,
       },
     },
