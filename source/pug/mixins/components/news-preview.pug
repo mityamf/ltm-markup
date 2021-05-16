@@ -1,0 +1,11 @@
+mixin renderNewsPreview(newsImage, newsTitle, newsDate, newsDatetime, newsPreview)
+  .news-preview
+    .news-preview__image-container
+      +img("content", newsImage, "jpg", "222", "222", newsTitle)
+    .news-preview__content
+      time.news-preview__date(datetime= newsDatetime)= newsDate
+      h3= newsTitle
+      p= newsPreview
+    a.news-preview__button.btn.btn--read-more(href="newpage.html")
+      +icon("icon-arrow", 20, 14)
+      span.visually-hidden read more

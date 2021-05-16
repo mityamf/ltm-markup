@@ -1,0 +1,36 @@
+.newpage {
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.newpage h2 {
+  @include viewport--sm {
+    text-align: center;
+  }
+}
+
+.newpage__date {
+  display: block;
+  margin-top: -10px;
+  padding: 0;
+
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  color: $color-gray;
+
+  @include viewport--sm {
+    position: absolute;
+    top: 15px;
+    left: 0;
+  }
+}
+
+.newpage__content {
+  max-width: 936px;
+  margin: 0 auto;
+
+  @include viewport--lg {
+    margin-top: 17px;
+  }
+}

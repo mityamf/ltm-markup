@@ -1,6 +1,7 @@
 .title--h2 {
   margin-bottom: 15px;
   margin-top: 27px;
+  padding-right: 15px;
 
   font-size: 38px;
   font-weight: lighter;
@@ -14,6 +15,7 @@
 
   @include viewport--md {
     margin-bottom: 10px;
+    padding-right: 0;
 
     font-size: 32px;
     line-height: 38px;
