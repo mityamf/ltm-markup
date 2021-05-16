@@ -1,0 +1,214 @@
+.account {
+  &__event-block {
+    padding: 20px 0;
+    border-top: 1px solid $color-blue;
+  }
+
+  &__event-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    list-style-type: none;
+  }
+
+  &__event {
+    margin-right: 30px;
+    width: 341px;
+  }
+
+  &__event button {
+    display: block;
+    width: 222px;
+    margin: 15px auto 0 auto;
+  }
+
+  &__event-block > .title--h3 {
+    margin: 0 0 20px 0;
+  }
+
+  &__event-block .title--h4 {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-blue;
+  }
+
+  &__event--paid .account__event-status {
+    color: $color-green;
+  }
+
+  &__event--unpaid .account__event-status {
+    color: $color-gray;
+  }
+
+  &__event--not-registered .account__event-status {
+    color: $color-red;
+  }
+
+  &__event-status {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    margin-top: 15px;
+
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  &__event-status svg {
+    margin-right: 15px;
+  }
+
+  &__event-description {
+    display: block;
+
+    font-size: 12px;
+    line-height: 15px;
+    color: $color-nobel;
+  }
+
+  &__event-date {
+    display: block;
+
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-blue;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  &__contact-us {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    border-top: 1px solid $color-blue;
+
+    @include viewport--sm {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__admin {
+    width: 340px;
+
+    @include viewport--sm {
+      width: 100%;
+    }
+  }
+
+  &__admin img {
+    margin-right: 15px;
+
+    border-radius: 100%;
+
+    @include viewport--sm {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__admin span {
+    display: block;
+  }
+
+  &__admin-info {
+    padding-top: 20px;
+  }
+
+  &__admin-name {
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-gray-dark;
+  }
+
+  &__admin-position {
+    font-size: 12px;
+    line-height: 20px;
+    color: $color-nobel;
+  }
+
+  &__admin-text {
+    font-size: 12px;
+    line-height: 20px;
+    color: $color-nobel;
+    text-align: center;
+  }
+
+  &__contact-button {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    display: block;
+
+    border: none;
+    background-color: transparent;
+  }
+
+  &__admin-wrapper {
+    display: flex;
+    padding: 40px 0;
+    position: relative;
+
+    @include viewport--sm {
+      flex-wrap: wrap;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  &__notifications {
+    @include viewport--sm {
+      width: 100%;
+    }
+  }
+
+  &__notifications .title--h3 {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  &__notifications .notifications--time {
+    width: 60px;
+  }
+
+  &__notifications .btn--mobile {
+    display: none;
+
+    @include viewport--sm {
+      display: block;
+    }
+  }
+
+  &__notifications .btn--desktop {
+    display: block;
+    padding: 15px;
+    width: 222px;
+
+    @include viewport--lg {
+      width: 182px;
+    }
+
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  &__notifications tr:nth-child(even) {
+    background-color: $color-gray-light;
+  }
+}
+
+.container--no-padding .account__admin,
+.container--no-padding .account__event-block {
+  padding-left: 17px;
+  padding-right: 17px;
+}
+

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="103" height="22" viewBox="0 0 103 22">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="103" height="22" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="ReadMore_Button" data-name="ReadMore Button" clip-path="url(#clip-path)">
+    <g id="Прямоугольник_18" data-name="Прямоугольник 18" fill="none" stroke="#0098c1" stroke-width="1">
+      <rect width="103" height="22" rx="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="102" height="21" rx="0.5" fill="none"/>
+    </g>
+    <g id="Сгруппировать_23" data-name="Сгруппировать 23" transform="translate(41 -72.5)">
+      <g id="keyboard-backspace" transform="translate(0 76.5)">
+        <path id="Контур_78" data-name="Контур 78" d="M0,84.441H16.108l-4.084,4.084,1.588,1.588,6.806-6.806L13.613,76.5l-1.588,1.588,4.084,4.084H0Z" transform="translate(0 -76.5)" fill="#0098c1"/>
+      </g>
+    </g>
+  </g>
+</svg>

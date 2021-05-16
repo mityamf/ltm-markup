@@ -1,0 +1,29 @@
+mixin renderNotifications(notifications)
+  - var mod = ["notifications__row--opened", "notifications__row--new"]
+
+    table.notifications__table
+      tr.notifications__row
+        th
+        th="Status"
+        th="Theme"
+        th="Message"
+        th="Date"
+        th="Time"
+        th
+      each notification in notifications
+        - var mod = "notifications__row--opened"
+        if notification.status === "new"
+          - var mod = "notifications__row--new"
+
+        tr.notifications__row(class=mod)
+          th
+          th.notifications--icon
+            if notification.status === "new"
+              +icon("icon-mail-new", 22, 22)
+            if notification.status === "opened"
+              +icon("icon-mail-opened", 22, 22)
+          th.notifications--theme=notification.theme
+          th.notifications--message=notification.message
+          th.notifications--date=notification.date
+          th.notifications--time=notification.time
+          th

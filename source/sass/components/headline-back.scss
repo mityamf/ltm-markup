@@ -1,0 +1,40 @@
+.headline-back {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include viewport--sm {
+    flex-direction: row-reverse;
+    align-items: baseline;
+  }
+
+  .back-link {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+
+  .title--h2 {
+    @include viewport--sm {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.container--no-padding .headline-back {
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-bottom: 5px;
+
+  @include viewport--lg {
+    padding-bottom: 0;
+  }
+
+  @include viewport--sm {
+    padding-bottom: 14px;
+  }
+}

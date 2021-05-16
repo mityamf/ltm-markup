@@ -59,6 +59,12 @@
   }
 }
 
+.promo__text-wrapper {
+  @include viewport--sm {
+    top: 0;
+  }
+}
+
 .promo__title {
   margin: 0;
   color: $color-default-white;
@@ -66,6 +72,7 @@
   font-weight: 300;
   font-family: "Proxima Nova", "Arial", sans-serif;
   text-transform: uppercase;
+  line-height: 30px;
 
   @include viewport--sm {
     font-size: 22px;
