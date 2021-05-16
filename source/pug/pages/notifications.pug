@@ -12,7 +12,7 @@ block main
   main.container.container--no-padding
     +renderHotelHeadline(hotelHeadline.title, hotelHeadline.logo, hotelHeadline.note, hotelHeadline.logoWidth, hotelHeadline.logoHeight)
     .notifications()
-      +renderHeadlineWithBackButton("Notifications")
+      +renderHeadlineWithBackButton("Notifications", "#")
       +renderNotifications(notifications)
       button(class="btn btn--white btn--more btn--desktop" type="button") All Notifications
       button(class="btn btn--white btn--more btn--mobile" type="button") More

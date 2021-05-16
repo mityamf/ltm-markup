@@ -1,6 +1,9 @@
-mixin renderHeadlineWithBackButton(title)
+mixin renderBackButton(link)
+  a.back-link(href=link)
+    +icon("arrow-left", 12, 20)
+    span Back
+
+mixin renderHeadlineWithBackButton(title, link)
   .headline-back
     h2.title--h2=title
-    a.headline-back__button(href="#")
-      +icon("arrow-left", 12, 20)
-      span Back
+    +renderBackButton(link)

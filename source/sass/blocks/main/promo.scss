@@ -59,6 +59,12 @@
   }
 }
 
+.promo__text-wrapper {
+  @include viewport--sm {
+    top: 0;
+  }
+}
+
 .promo__title {
   margin: 0;
   color: $color-default-white;

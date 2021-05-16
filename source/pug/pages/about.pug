@@ -4,19 +4,13 @@ block variables
   - var title = "Об ивенте"
   - var hasHeader = true
   - var hasFooter = true
-  - var text = "THE LEADING LUXURY TRAVEL EXHIBITION IN EASTERN EUROPE, RUSSIA & CIS"
-  - var desktopImage = "img/bg/about-page-desktop.png"
-  - var tabletImage = "img/bg/about-page-tablet.png"
-  - var mobileImage = "img/bg/news-page-mobile.png"
   - var currentPage = "About LTM"
 
 block main
   include ../data/about
 
-  +renderTopBlock(text, desktopImage, tabletImage, mobileImage)
-
+  +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
   main.container
-
     .about
       .about__content
         +renderHeadline2(aboutEvent.title)

@@ -1,6 +1,12 @@
 .hotel-page {
   padding-top: 15px;
 
+  @include viewport--sm {
+    .hotel-photos {
+      display: none;
+    }
+  }
+
   &__info-block {
     display: flex;
     padding: 20px 0;
@@ -68,7 +74,7 @@
 
   &__title {
     display: flex;
-    align-items: baseline;
+    align-items: flex-end;
     justify-content: space-between;
 
     @include viewport--md {
@@ -79,6 +85,27 @@
       .title--h2 {
         display: none;
       }
+    }
+  }
+
+  &__title > h2 {
+    margin-bottom: 0;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .back-link {
+    display: block;
+    text-align: right;
+    clear: both;
+    margin-bottom: 20px;
+
+    @include viewport--sm {
+      display: none;
     }
   }
 
