@@ -1,0 +1,13 @@
+mixin renderPartnerCard(logoSrc, logoWidth, logoHeight, name, rank, link, text)
+  .partner-card
+    .partner-card__image-container
+      img(src= logoSrc, width= logoWidth, height= logoHeight)
+    .partner-card__item-container
+      .partner-card__top-line
+        h3.partner-card__name.title.title--h3= name
+        span.partner-card__rank= rank
+      a.partner-card__link(href= link)= link
+      p= text
+      a.partner-card__button.btn.btn--read-more(href="#")
+        +icon("icon-arrow", 20, 14)
+        span.visually-hidden read more

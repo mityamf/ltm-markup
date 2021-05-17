@@ -1,0 +1,20 @@
+mixin renderContactCard(avatar, name, position, work, telephones)
+  .contact-card
+    .contact-card__image-container
+      +img("content", avatar, "jpg", width="103", height="103", name)
+    .contact-card__item-container
+      p.contact-card__name.title.title--h3= name
+      p #{position} <br>#{work}
+      if telephones
+        each tel in telephones
+          a.contact-card__tel(href=tel.link)= tel.telephone
+      a.contact-card__mail(href="#")
+        +icon("ico_sendingmessage", 42, 18)
+
+mixin renderOfficeCard(logo, logoWidth, logoHeight, name, address)
+  .contact-card.contact-card--office
+    .contact-card__logo-container
+      img(src= logo, width= logoWidth height= logoHeight)
+    .contact-card__office-info
+      p.contact-card__office-name.title.title--h3= name
+      p= address

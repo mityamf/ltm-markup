@@ -4,6 +4,8 @@
   align-items: center;
   width: 100%;
 
+  background-color: inherit;
+
   @include viewport--sm {
     flex-direction: row-reverse;
     align-items: baseline;
