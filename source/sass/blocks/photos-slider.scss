@@ -1,0 +1,34 @@
+.photos-slider {
+  clear: both;
+  display: none;
+
+  @include viewport--sm {
+    display: block;
+  }
+
+  &__photo-list {
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+
+    list-style-type: none;
+
+    @include viewport--sm {
+      margin: 0;
+    }
+  }
+
+  &__photo-item {
+    width: auto;
+    height: 375px;
+    object-fit: cover;
+  }
+
+  &__photo-item img {
+    width: auto;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    margin: auto;
+  }
+}

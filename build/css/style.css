@@ -4174,7 +4174,7 @@ span {
   list-style-type: none;
   width: calc(100% + 15px);
   padding: 0;
-  margin: 0 0 -15px 0; }
+  margin: 0 0 auto; }
   @media (max-width: 1439px) {
     .hotel-cards {
       width: auto;
@@ -4312,9 +4312,6 @@ span {
 
 .hotel-page {
   padding-top: 15px; }
-  @media (max-width: 767px) {
-    .hotel-page .hotel-photos {
-      display: none; } }
   .hotel-page__info-block {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4419,6 +4416,10 @@ span {
       .hotel-page__link {
         font-size: 20px;
         line-height: 24px; } }
+
+@media (max-width: 767px) {
+  .container--hotel-page .promo {
+    display: none; } }
 
 .edit {
   padding: 10px 0 50px 0;
@@ -5461,10 +5462,18 @@ span {
       display: -ms-flexbox;
       display: flex; } }
 
+@media (max-width: 767px) {
+  .hotel-page-edit .hotel-photos,
+  .hotel-page-edit .top-block {
+    display: none; } }
+
 .hotel-photos {
   margin-right: -15px;
   margin-bottom: -15px;
   padding: 0; }
+  @media (max-width: 767px) {
+    .hotel-photos {
+      display: none; } }
   .hotel-photos__more-button {
     display: none; }
   .hotel-photos--view-mode > .hotel-photos__item:last-child {
@@ -5570,6 +5579,37 @@ span {
     position: relative;
     background-color: grey; }
 
+.photos-slider {
+  clear: both;
+  display: none; }
+  @media (max-width: 767px) {
+    .photos-slider {
+      display: block; } }
+  .photos-slider__photo-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    list-style-type: none; }
+    @media (max-width: 767px) {
+      .photos-slider__photo-list {
+        margin: 0; } }
+  .photos-slider__photo-item {
+    width: auto;
+    height: 375px;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .photos-slider__photo-item img {
+    width: auto;
+    height: 100%;
+    max-width: none;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: auto; }
+
 .headline-back {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5631,7 +5671,7 @@ span {
   margin-bottom: 5px;
   background-color: white;
   border-radius: 3px;
-  width: calc(100% / 3);
+  width: calc(98%/3);
   max-width: 341px; }
   @media (max-width: 1439px) {
     .hotel-card {
@@ -5680,7 +5720,7 @@ span {
       .hotel-card__photo--big {
         width: 65%; } }
   .hotel-card__photo--small {
-    width: 108px;
+    width: 86px;
     height: 147px;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
