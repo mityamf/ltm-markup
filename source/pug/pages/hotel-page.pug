@@ -32,7 +32,7 @@ block main
           img(src=hotel.logo)
           .hotel-page__description
             .hotel-page__title
-              h2.title--h2=hotel.title
+              +renderHeadline2(hotel.title)
               .hotel-page__links
                 +renderBackButton("#")
                 a.hotel-page__link(href=hotel.link)=hotel.link

@@ -17,7 +17,7 @@ block main
     .hotel-headline.hotel-headline--account-page
       a.account-hotel-info__link-hotel(href=accountHotelInfo.link)=accountHotelInfo.link
       .hotel-headline__wrapper
-        h2.title--h2=hotelHeadline.title
+        +renderHeadline2(hotelHeadline.title)
         span=hotelHeadline.note
       +icon(hotelHeadline.logo, hotelHeadline.logoWidth, hotelHeadline.logoHeight)
     +renderHotelPhotos(hotelPhotos.photoList)

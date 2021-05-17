@@ -30,8 +30,8 @@ const initSwiper = () => {
       clickable: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.direction__arrow--right',
+      prevEl: '.direction__arrow--left',
     },
     breakpoints: {
       0: {
@@ -72,8 +72,8 @@ const initSwiper = () => {
       clickable: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.direction__arrow--right',
+      prevEl: '.direction__arrow--left',
     },
     breakpoints: {
       0: {

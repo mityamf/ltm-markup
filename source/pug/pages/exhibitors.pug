@@ -29,15 +29,16 @@ block main
     .container
 
       section.direction.direction__swiper
-        .swiper-container.mySwiper
-          h2.title--h2=chooseEvent.title
+        .swiper-container.direction__swiper-block
+          +renderHeadline2(chooseEvent.title)
           ul.direction__list.swiper-wrapper
             each event in chooseEventCard
-              +direction(event.titleItem, event.dataItem, event.statusItem, event.timeItem, event.classStatus)
-          .direction__arrow.swiper-button-next.direction__arrow--right
-            +icon("arrow-right", 11, 19)
-          .direction__arrow.swiper-button-prev.direction__arrow--left
-            +icon("arrow-left", 11, 19)
+              .swiper-slide
+                +direction(event.titleItem, event.dataItem, event.statusItem, event.timeItem, event.classStatus)
+          .direction__arrow.direction__arrow--right
+            +icon("arrow-right", "11", "19")
+          .direction__arrow.direction__arrow--left
+            +icon("arrow-left", "11", "19")
 
       ul.hotel-filters
         each filter in filters

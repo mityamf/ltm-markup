@@ -4088,24 +4088,32 @@ p {
         width: 100%;
         max-width: 222px; } }
 
-.schedule ul {
-  list-style-type: none; }
-
-.schedule__program {
+.schedule {
   padding: 15px 0;
   margin: 0; }
-
-.schedule__days {
-  padding-left: 238px; }
-  @media (max-width: 1439px) {
-    .schedule__days {
-      padding-left: 90px; } }
-  @media (max-width: 1023px) {
-    .schedule__days {
-      padding-left: 0; } }
-
-.schedule__day {
-  padding-left: 0; }
+  .schedule ul {
+    list-style-type: none; }
+  .schedule__days {
+    padding-left: 238px; }
+    @media (max-width: 1439px) {
+      .schedule__days {
+        padding-left: 90px; } }
+    @media (max-width: 1023px) {
+      .schedule__days {
+        padding-left: 0; } }
+  .schedule__day {
+    padding-left: 0; }
+  .schedule__subtitle {
+    margin-bottom: 15px;
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 29px;
+    letter-spacing: 0.045em;
+    color: #0098c1; }
+    @media (max-width: 1023px) {
+      .schedule__subtitle {
+        margin-bottom: 10px; } }
 
 .news {
   display: -webkit-box;
