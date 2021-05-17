@@ -24,15 +24,11 @@
     }
 
     @include viewport--sm {
+      display: none;
+
       li:not(:last-child) {
         margin-right: 0;
       }
-    }
-  }
-
-  &__wrapper {
-    @include viewport--sm {
-      display: none;
     }
   }
 

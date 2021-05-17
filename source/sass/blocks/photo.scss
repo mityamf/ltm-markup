@@ -15,6 +15,7 @@
     width: calc((100% - 30px) / 3);
     margin-right: 15px;
     height: 154px;
+    margin-top: auto;
 
     img {
       width: 100%;
@@ -58,6 +59,8 @@
     width: calc((100% - 30px) / 3);
     height: 222px;
     margin-right: 0;
+    margin-top: 0;
+    margin-bottom: auto;
 
     @include viewport--lg {
       width: calc((100% - 20px) / 3);
@@ -133,13 +136,17 @@
     margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
     z-index: 50;
     cursor: pointer;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     background-color: transparent;
     width: 19px;
     height: 30px;
     color: $color-default-white;
+
+    @include viewport--sm {
+      display: flex;
+    }
   }
 
   &__button-next {
@@ -155,5 +162,20 @@
       transform: rotate(-180deg);
     }
   }
-}
 
+  &__pagination {
+    display: none;
+
+    @include viewport--sm {
+      display: inline-block;
+      bottom: -35px;
+      text-align: center;
+    }
+  }
+
+  &__title-wrap {
+    @include viewport--sm {
+      padding: 0 16.5px;
+    }
+  }
+}
