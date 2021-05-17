@@ -2,28 +2,29 @@ mixin photo-block()
   ul.photo__block-list
     each item in photoList
       li.photo__item
-        h3.title.title--h3 #{item.title}
+        .photo__title-wrap
+          h3.title.title--h3 #{item.title}
         .swiper-container.photo__slider
           ul.photo__sublist.swiper-wrapper
             each photo in item.photos
-                if photo.isUp
-                  if photo.isBig
-                    li.photo__sublist-item.photo__sublist-item--big.photo__sublist-item--up.swiper-slide
-                      a.photo__link(href="#")
-                        .photo__image-wrapper
-                          picture
-                            +webp("content", `${photo.src}`)
-                            +img("content", `${photo.src}`, "png", 460, 222, "Фотография с мероприятия")
-                  else
-                    li.photo__sublist-item.photo__sublist-item--up.swiper-slide
-                          a.photo__link(href="#")
-                            .photo__image-wrapper
-                              picture
-                                +webp("content", `${photo.src}`)
-                                +img("content", `${photo.src}`, "png", 222, 222, "Фотография с мероприятия")
+              if photo.isUp
+                if photo.isBig
+                  li.photo__sublist-item.photo__sublist-item--big.photo__sublist-item--up.swiper-slide
+                    a.photo__link(href="#")
+                      .photo__image-wrapper
+                        picture
+                          +webp("content", `${photo.src}`)
+                          +img("content", `${photo.src}`, "png", 460, 222, "Фотография с мероприятия")
                 else
-                  if photo.text
-                   li.photo__sublist-item.swiper-slide
+                  li.photo__sublist-item.photo__sublist-item--up.swiper-slide
+                        a.photo__link(href="#")
+                          .photo__image-wrapper
+                            picture
+                              +webp("content", `${photo.src}`)
+                              +img("content", `${photo.src}`, "png", 222, 222, "Фотография с мероприятия")
+              else
+                if photo.text
+                  li.photo__sublist-item.swiper-slide
                     a.photo__link(href="#")
                       .photo__image-wrapper.photo__image-wrapper--add-link
                         picture
@@ -31,15 +32,15 @@ mixin photo-block()
                           +img("content", `${photo.src}`, "png", 222, 154, "Фотография с мероприятия")
                         .photo__desc
                           span #{photo.text}
-                  else
-                    li.photo__sublist-item.swiper-slide
-                      a.photo__link(href="#")
-                        .photo__image-wrapper
-                          picture
-                            +webp("content", `${photo.src}`)
-                            +img("content", `${photo.src}`, "png", 222, 154, "Фотография с мероприятия")
+                else
+                  li.photo__sublist-item.swiper-slide
+                    a.photo__link(href="#")
+                      .photo__image-wrapper
+                        picture
+                          +webp("content", `${photo.src}`)
+                          +img("content", `${photo.src}`, "png", 222, 154, "Фотография с мероприятия")
           .photo__button-next
             +icon("icon-arrow_right_white", 19, 30)
           .photo__button-prev
             +icon("icon-arrow_right_white", 19, 30)
-
+          .photo__pagination
