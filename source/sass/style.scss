@@ -56,9 +56,12 @@
 @import "blocks/hotel-page";
 @import "blocks/edit";
 @import "blocks/organizers";
+@import "blocks/organizer-card";
 @import "blocks/partners-page";
+@import "blocks/partner-card";
 @import "blocks/privacy-policy";
 @import "blocks/contact-us";
+@import "blocks/contact-card";
 @import "blocks/notifications";
 @import "blocks/notification-message";
 @import "blocks/account/account-hotel-info";
@@ -73,6 +76,7 @@
 @import "components/support-contacts";
 @import "components/top-block";
 @import "components/hotel-headline";
+@import "components/up-button"
 
 // используйте это для отключения ховеров на тач устройствах
 // ! но не используйте это для текстовых полей ( input, textarea )

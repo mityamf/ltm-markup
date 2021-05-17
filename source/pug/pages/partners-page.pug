@@ -15,21 +15,10 @@ block main
   main#top
     .container
       .partners-page
-        h2.partners-page__title.title.title--h2 Partners
-        ul.partners-page__list
-          each partner in partners
-            li.partners-page__item
-              .partners-page__flex-container
-                .partners-page__image-container
-                  img(src=partner.logo)
-                .partners-page__item-container
-                  .partners-page__top-line
-                    h3.partners-page__name.title.title--h3 #{partner.name}
-                    span.partners-page__rank #{partner.rank}
-                  a.partners-page__link(href=partner.link) #{partner.link}
-                  p #{partner.text}
-                  a.partners-page__button.partners-page__button--read-more(href="#")
-                    img(src="img/svg/icon-arrow.svg", width="20", height="14")
-                    span.visually-hidden read more
-        a.partners-page__button-up(href="#top", aria-label="Вернуться в начало")
-          +icon("icon-arrow-up", 54, 54)
+        +renderHeadline(partners.title)
+        .partners-page__wrapper
+          ul.partners-page__list
+            each partner in partners.partnersList
+              li.partners-page__item
+                +renderPartnerCard(partner.logo.src, partner.logo.width, partner.logo.height, partner.name, partner.rank, partner.link, partner.text)
+        +renderUpButton
