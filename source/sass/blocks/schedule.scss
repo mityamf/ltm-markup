@@ -1,11 +1,9 @@
 .schedule {
+  padding: 15px 0;
+  margin: 0;
+
   ul {
     list-style-type: none;
-  }
-
-  &__program {
-    padding: 15px 0;
-    margin: 0;
   }
 
   &__days {
@@ -22,5 +20,20 @@
 
   &__day {
     padding-left: 0;
+  }
+
+  &__subtitle {
+    margin-bottom: 15px;
+    margin-top: 30px;
+
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 29px;
+    letter-spacing: 0.045em;
+    color: $color-blue;
+
+    @include viewport--md {
+      margin-bottom: 10px;
+    }
   }
 }

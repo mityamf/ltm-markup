@@ -8,18 +8,14 @@
   }
 }
 
-.partners-page__title {
+.partners-page__wrapper {
   position: relative;
-  z-index: 2;
-  background-color: $color-white;
-  margin-bottom: 0;
-  padding-bottom: 2px;
+  overflow: hidden;
 }
 
 .partners-page__list {
   position: relative;
-  z-index: 1;
-  top: -2px;
+  top: -1px;
 
   column-count: 2;
   column-gap: 6px;
@@ -40,153 +36,4 @@
   display: inline-block;
   width: 100%;
   border-top: 1px solid $color-gray-light;
-}
-
-.partners-page__flex-container {
-  position: relative;
-  display: flex;
-  width: 100%;
-
-  @include viewport--sm {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-.partners-page__image-container {
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 222px;
-  height: 222px;
-  margin-right: 16px;
-
-  img {
-    vertical-align: middle;
-  }
-
-  @include viewport--sm {
-    width: 166px;
-    height: 166px;
-    margin-top: 31px;
-    margin-right: 0;
-  }
-}
-
-.partners-page__item-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.partners-page__top-line {
-  align-self: flex-end;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  margin-top: 34px;
-  margin-bottom: 2px;
-
-  @include viewport--sm {
-    align-self: center;
-    margin-top: 0;
-  }
-}
-
-.partners-page__link {
-  align-self: flex-end;
-  margin-bottom: 21px;
-
-  @include viewport--sm {
-    align-self: center;
-    width: 250px;
-    margin-bottom: 9px;
-    overflow: hidden;
-
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    text-align: center;
-  }
-}
-
-.partners-page__name {
-  margin: 0;
-  padding: 0;
-
-  text-align: right;
-
-  @include viewport--sm {
-    align-self: center;
-    text-align: center;
-  }
-}
-
-.partners-page__rank {
-  position: relative;
-  z-index: 1;
-  display: block;
-  margin-left: 10px;
-  padding: 1px 11px 2px 11px;
-
-  font-size: 16px;
-  line-height: 20px;
-  color: $color-default-white;
-  background-color: $color-blue;
-  white-space: nowrap;
-
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    right: -1px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 11px 7px 11px 0;
-    border-color: $color-transparent $color-white $color-transparent $color-transparent;
-  }
-
-  @include viewport--sm {
-    position: absolute;
-    top: 9px;
-    right: 0;
-  }
-}
-
-.partners-page__item-container p {
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
-.partners-page__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid $color-blue;
-  border-radius: 1px;
-
-  font-size: 16px;
-  line-height: 19px;
-  font-weight: 600;
-  color: $color-blue;
-
-  &--read-more {
-    padding: 4px 41px;
-    margin: auto 0 30px auto;
-  }
-}
-
-.partners-page__button-up {
-  display: block;
-  margin-left: auto;
-  margin-right: -65px;
-
-  @include viewport--xl {
-    margin-right: 0;
-  }
-
-  @include viewport--sm {
-    margin: 0 auto;
-  }
 }

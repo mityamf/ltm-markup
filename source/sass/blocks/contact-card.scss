@@ -1,0 +1,107 @@
+.contact-card {
+  position: relative;
+  display: flex;
+
+  @include viewport--sm {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &--office {
+    align-items: center;
+
+    @include viewport--sm {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}
+
+.contact-card__image-container {
+  flex-shrink: 0;
+  width: 103px;
+  height: 103px;
+  margin-right: 76px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+    object-position: center;
+    vertical-align: middle;
+  }
+
+  @include viewport--md {
+    margin-right: 30px;
+  }
+
+  @include viewport--sm {
+    margin-right: 0;
+  }
+}
+
+.contact-card__item-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-card__item-container .contact-card__name {
+  padding-right: 45px;
+  margin-top: 28px;
+  margin-bottom: 3px;
+
+  @include viewport--md {
+    padding-right: 0;
+  }
+}
+
+.contact-card__item-container p {
+  margin: 0;
+  padding: 0;
+
+  &:last-of-type {
+    margin-bottom: 11px;
+  }
+}
+
+.contact-card__tel {
+  display: block;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.06em;
+  margin-bottom: 3px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.contact-card__mail {
+  position: absolute;
+  top: 35px;
+  right: 0;
+}
+
+.contact-card__office-info .contact-card__office-name {
+  margin-top: 3px;
+  margin-bottom: 1px;
+}
+
+.contact-card__office-info p {
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  line-height: 22px;
+}
+
+.contact-card__logo-container {
+  flex-shrink: 0;
+  margin-right: 57px;
+
+  @include viewport--sm {
+    margin-right: 0;
+    margin-bottom: 56px;
+  }
+}

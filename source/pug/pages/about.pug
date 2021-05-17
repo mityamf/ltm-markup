@@ -9,23 +9,24 @@ block variables
 block main
   include ../data/about
 
-  +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
-  main.container
-    .about
-      .about__content
-        +renderHeadline2(aboutEvent.title)
-        +renderTextContentBlock(aboutEvent.textList)
-        button.btn.btn--white(type="button", aria-label="Показать больше")=buttonText
+  main
+    +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
+    .container
+      .about
+        .about__content
+          +renderHeadline2(aboutEvent.title)
+          +renderTextContentBlock(aboutEvent.textList)
+          button.btn.btn--white(type="button", aria-label="Показать больше")=buttonText
 
-        +renderHeadline2(eventBlock.title)
-        each event in eventBlock.eventList
-          +renderHeadline3(event.subtitle)
-          +renderTextContentBlock(event.textList)
+          +renderHeadline2(eventBlock.title)
+          each event in eventBlock.eventList
+            +renderHeadline3(event.subtitle)
+            +renderTextContentBlock(event.textList)
 
-      aside.about__aside
-        +renderHeadline2(benefitsTitle)
-        ul
-          each benefit in benefits
-            li
-              +icon(benefit.src, benefit.width, benefit.height)
-              p=benefit.text
+        aside.about__aside
+          +renderHeadline2(benefitsTitle)
+          ul
+            each benefit in benefits
+              li
+                +icon(benefit.src, benefit.width, benefit.height)
+                p=benefit.text

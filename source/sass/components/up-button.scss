@@ -1,0 +1,13 @@
+.up-button {
+  display: flex;
+  margin-left: auto;
+  margin-right: -65px;
+
+  @include viewport--xl {
+    margin-right: 0;
+  }
+
+  @include viewport--sm {
+    margin: 0 auto;
+  }
+}

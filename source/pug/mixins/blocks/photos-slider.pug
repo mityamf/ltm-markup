@@ -1,0 +1,24 @@
+mixin renderImageSlider(photoList)
+  .photos-slider
+    .direction.swiper-container.photos-swiper
+      ul.photos-slider__photo-list.direction__list.swiper-wrapper
+        each photo in photoList
+          li.photos-slider__photo-item.swiper-slide
+            img(src=photo.src)
+      .direction__arrow.swiper-button-next.direction__arrow--right
+        +icon("arrow-right", 11, 19)
+      .direction__arrow.swiper-button-prev.direction__arrow--left
+        +icon("arrow-left", 11, 19)
+
+mixin renderEditImageSlider(photoList)
+  .photos-slider
+    .direction.swiper-container.photos-swiper
+      ul.photos-slider__photo-list.direction__list.swiper-wrapper
+        each photo in photoList
+          li.photos-slider__photo-item.swiper-slide
+            img(src=photo.src)
+          +renderEditComponent(photo)
+      .direction__arrow.swiper-button-next.direction__arrow--right
+        +icon("arrow-right", 11, 19)
+      .direction__arrow.swiper-button-prev.direction__arrow--left
+        +icon("arrow-left", 11, 19)

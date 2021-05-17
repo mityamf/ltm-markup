@@ -2,41 +2,24 @@ extends ../base/layout
 
 block data
   include ../data/contact-us
-  include ../mixins/blocks/top-block
 
 block variables
   - var title = "Контакты"
   - var hasHeader = true
   - var hasFooter = true
   - var currentPage = "Contacts"
-  - var text = "THE LEADING LUXURY TRAVEL EXHIBITION IN EASTERN EUROPE, RUSSIA & CIS"
-  - var desktopImage = "img/bg/bg-003-desktop.jpg"
-  - var tabletImage = "img/bg/bg-003-tablet.jpg"
-  - var mobileImage = "img/bg/bg-006-mobile.jpg"
 
 block main
 
+  +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
   main
     .container
       .contact-us
-        h2.contact-us__title.title.title--h2 Contact Us
+        +renderHeadline(contacts.title)
         .contact-us__wrapper
           ul.contact-us__list
-            each contact in contacts
+            each contact in contacts.contactsList
               li.contact-us__item
-                .contact-us__image-container
-                  +img("content", contact.avatar, "jpg", width="103", height="103", contact.name)
-                .contact-us__item-container
-                  h3.contact-us__name.title.title--h3= contact.name
-                  p= contact.position
-                  p= contact.work
-                  each tel in contact.telephones
-                    a.contact-us__tel(href=tel.link)= tel.telephone
-                a.contact-us__mail(href="#")
-                  img(src="img/svg/ico_sendingmessage.svg", width="42", height="18")
+                +renderContactCard(contact.avatar, contact.name, contact.position, contact.work, contact.telephones)
           .contact-us__office
-            .contact-us__logo-container
-              img(src= office.logo.src, width= office.logo.width height= office.logo.height)
-            .contact-us__office-info
-              h3.contact-us__office-name.title.title--h3= office.name
-              p= office.address
+            +renderOfficeCard(office.logo.src, office.logo.width, office.logo.height, office.name, office.address)

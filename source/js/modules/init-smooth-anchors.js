@@ -9,7 +9,7 @@ const initSmoothAnchors = () => {
 
         document.getElementById(blockID).scrollIntoView({
           behavior: 'smooth',
-          block: 'end',
+          block: 'start',
         });
       });
     }
