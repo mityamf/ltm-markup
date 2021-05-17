@@ -11,8 +11,8 @@
 
     &-title {
       margin: 0;
-      padding-bottom: 12px;
-      font-size: 38px;
+      padding-bottom: 30px;
+      font-size: 35px;
       color: $color-blue;
       font-weight: 300;
     }
@@ -35,27 +35,9 @@
     }
   }
 
-  &__button {
+  &__btn-block {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid $color-blue;
-    border-radius: 1px;
-    font-size: 16px;
-    line-height: 19px;
-    font-weight: 600;
-    color: $color-blue;
-
-    &-open {
-      position: absolute;
-      right: 18px;
-      bottom: -23px;
-      padding: 4px 41px;
-    }
-
-    @include viewport--sm {
-      display: none;
-    }
+    justify-content: flex-end;
   }
 
   &__btn {
@@ -73,50 +55,10 @@
     flex-direction: column;
     padding-bottom: 20px;
   }
-}
 
-.gallery {
-  &__block {
-    display: grid;
-    grid-template-areas: ". . .";
-    gap: 16px;
-    padding-bottom: 16px;
-
-    img {
-      height: fit-content;
-      object-fit: cover;
-    }
-  }
-
-  &__title {
+  &__list {
+    padding: 0;
+    list-style: none;
     margin: 0;
-    font-size: 38px;
-    color: $color-blue;
-    font-weight: 300;
-    padding-bottom: 16px;
-  }
-
-  &__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid $color-blue;
-    border-radius: 1px;
-    font-size: 16px;
-    line-height: 19px;
-    font-weight: 600;
-    color: $color-blue;
-
-    &-open {
-      position: absolute;
-      right: 0;
-      bottom: -23px;
-      padding: 4px 41px;
-    }
-
-    &:hover,
-    &:focus {
-      opacity: 0.8;
-    }
   }
 }

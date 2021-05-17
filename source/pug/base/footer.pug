@@ -4,17 +4,18 @@ mixin footer
       ul.footer__logotip.logotip
         li.logotip__list
           a.logotip__item(href="#")
-            img(src="./img/svg/g10.svg" alt="company logo" width="80" height="84")
+            img(src="./img/svg/g10.svg" alt="company logo" width="67" height="73")
         li.logotip__list
           a.logotip__item(href="#")
-            img(src="./img/svg/TM-logo.svg" alt="company logo" width="130" height="57")
+            img.logotip__company(src="./img/svg/TM-logo.svg" alt="company logo" width="110" height="57")
       .footer__mailing.mailing
         form.mailing__form(action="#" method="POST")
           input.mailing__email(type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters")
-          label(for="mailing")
-          button.mailing__btn Ok
-          input.mailing__check(type="checkbox" id="check" name="check" value="yes")
-          label(for="check") I agree
+          label.mailing__email-label(for="mailing")
+          button(type="button").button.button--footer-btn  Ok
+          .mailing__checkbox
+            input.mailing__check(type="checkbox" id="check" name="check" value="yes")
+            label.mailing__check-label(for="check") I agree
       .footer__menu.menu
         ul.menu__list
           li

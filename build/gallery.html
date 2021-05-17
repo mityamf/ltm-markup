@@ -2704,7 +2704,7 @@
             <source media="(max-width: 767px)" srcset="./img/bg/bg-gallery-mobile.png 1x, ./img/bg/bg-gallery-mobile@2x.png 2x"/><img class="promo__img" src="./img/bg/bg-gallery-desktop.png" srcset="./img/bg/bg-gallery-desktop@2x.png" width="1920" height="534" alt="promo image"/>
           </picture>
           <div class="container promo__info">
-            <h2 class="promo__title">The leading luxury travel exhibition in eastern europe, russia AND cis</h2><a class="promo__none" href="registration.html">registration</a>
+            <h2 class="promo__title">The leading luxury travel exhibition in eastern europe, russia AND cis</h2><a class="button button--blue promo__none" href="registration.html">registration</a>
           </div>
         </section>
         <section class="gallery container container--no-padding">
@@ -2983,16 +2983,18 @@
       <footer class="container">
         <div class="footer">
           <ul class="footer__logotip logotip">
-            <li class="logotip__list"><a class="logotip__item" href="#"><img src="./img/svg/g10.svg" alt="company logo" width="80" height="84"/></a></li>
-            <li class="logotip__list"><a class="logotip__item" href="#"><img src="./img/svg/TM-logo.svg" alt="company logo" width="130" height="57"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="#"><img src="./img/svg/g10.svg" alt="company logo" width="67" height="73"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company" src="./img/svg/TM-logo.svg" alt="company logo" width="110" height="57"/></a></li>
           </ul>
           <div class="footer__mailing mailing">
             <form class="mailing__form" action="#" method="POST">
               <input class="mailing__email" type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
-              <label for="mailing"></label>
-              <button class="mailing__btn">Ok</button>
-              <input class="mailing__check" type="checkbox" id="check" name="check" value="yes"/>
-              <label for="check">I agree</label>
+              <label class="mailing__email-label" for="mailing"></label>
+              <button class="button button--footer-btn" type="button"> Ok</button>
+              <div class="mailing__checkbox">
+                <input class="mailing__check" type="checkbox" id="check" name="check" value="yes"/>
+                <label class="mailing__check-label" for="check">I agree</label>
+              </div>
             </form>
           </div>
           <div class="footer__menu menu">
