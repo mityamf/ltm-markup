@@ -1,0 +1,27 @@
+.organizer-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 64px;
+
+  @include viewport--md {
+    align-items: center;
+  }
+}
+
+.organizer-card__image-container {
+  img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.organizer-card .organizer-card__name {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.organizer-card p {
+  margin: 0;
+  padding: 0;
+}

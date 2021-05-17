@@ -1,0 +1,17 @@
+.hotel-page-edit {
+  .hotel-headline,
+  .headline-back {
+    display: none;
+
+    @include viewport--sm {
+      display: flex;
+    }
+  }
+
+  @include viewport--sm {
+    .hotel-photos,
+    .top-block {
+      display: none;
+    }
+  }
+}

@@ -4,19 +4,23 @@ block variables
   - var title = "Расписание"
   - var hasHeader = true
   - var hasFooter = true
-  - var text = "THE LEADING LUXURY TRAVEL EXHIBITION IN EASTERN EUROPE, RUSSIA & CIS"
-  - var desktopImage = "img/bg/schedule-page-desktop.png"
-  - var tabletImage = "img/bg/schedule-page-tablet.png"
-  - var mobileImage = "img/bg/schedule-page-mobile.png"
   - var currentPage = "Detailed Schedule"
 
 block main
   include ../data/schedule
 
-  +renderTopBlock(text, desktopImage, tabletImage, mobileImage)
-  main.container
-    .schedule
-      ul.schedule__program
+  main
+    +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
+    .container
+      .schedule
         each program in programs
-          +renderProgram(program.title, program.schedule)
-      include ../data/info-bottom
+          +renderHeadline2(program.title)
+          .schedule__days
+            each schedule in program.schedules
+              p.schedule__subtitle=schedule.subtitle
+              .schedule__day
+                +renderTextContentBlock(schedule.textList)
+
+        .info-bottom
+          +renderTextContentBlock(scheduleInfoList)
+

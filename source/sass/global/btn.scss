@@ -61,4 +61,28 @@
       color: $color-default-white;
     }
   }
+
+  &--more {
+    display: block;
+    margin: 0 auto;
+    padding: 20px 30px;
+  }
+
+  &--more-news {
+    padding: 18px 69px;
+  }
+
+  &--read-more {
+    padding: 2px 41px;
+    border: 1px solid $color-blue;
+    background-color: transparent;
+
+    svg {
+      vertical-align: middle;
+    }
+
+    @include viewport--lg {
+      padding: 2px 32px;
+    }
+  }
 }

@@ -4,31 +4,39 @@ block variables
   - var title = "Отель"
   - var hasHeader = true
   - var hasFooter = true
-  - var text = "THE LEADING LUXURY TRAVEL EXHIBITION IN EASTERN EUROPE, RUSSIA & CIS"
-  - var desktopImage = "img/bg/about-page-desktop.png"
-  - var tabletImage = "img/bg/about-page-tablet.png"
-  - var mobileImage = "img/bg/about-page-mobile.png"
+  -
+    var promoBg = {
+      titleItem: "The leading luxury travel exhibition in eastern europe, russia & cis",
+      imgItem: "img/bg/schedule-page-desktop.png",
+      img2xItem: "img/bg/bg-home@2x.png",
+      widthItem: "1920",
+      heightItem: "534",
+      imgSource: "img/bg/LTM_28_02_1942.png 1x, img/bg/LTM_28_02_1942@2x.png 2x",
+      classItem: "promo__reg",
+      promoItem: "promo__info promo__text-wrapper"
+    }
 
 block main
   include ../data/hotel-page
+  include ../data/hotel-photos
 
-  +renderTopBlock(text, desktopImage, tabletImage, mobileImage)
-  main.container
+  main.container--hotel-page
+    +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
+    .container
+
       .hotel-page
-        .hotel-page__photo-list
-          each photo in hotel.photoList
-            img(src=photo)
-        a.news__nav-button(href="#")
-          img(src="img/svg/icon-back.svg", width="12", height="20")
-          span Back
+        +renderHotelPhotos(hotelPhotos.photoList)
+        +renderImageSlider(hotelPhotos.photoList)
+
         .hotel-page__info-block
           img(src=hotel.logo)
           .hotel-page__description
             .hotel-page__title
-              h2.title--h2=hotel.title
-              a.hotel-page__link(href=hotel.link)=hotel.link
-            ul.hotel-page__text-list
-              li
-                each text in hotel.textList
-                  p=text
+              +renderHeadline2(hotel.title)
+              .hotel-page__links
+                +renderBackButton("#")
+                a.hotel-page__link(href=hotel.link)=hotel.link
+            .hotel-page__text-list
+              +renderTextContentBlock(hotel.textList)
+
 

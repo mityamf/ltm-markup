@@ -4,41 +4,29 @@ block variables
   - var title = "Об ивенте"
   - var hasHeader = true
   - var hasFooter = true
-  - var text = "THE LEADING LUXURY TRAVEL EXHIBITION IN EASTERN EUROPE, RUSSIA & CIS"
-  - var desktopImage = "img/bg/about-page-desktop.png"
-  - var tabletImage = "img/bg/about-page-tablet.png"
-  - var mobileImage = "img/bg/news-page-mobile.png"
   - var currentPage = "About LTM"
 
 block main
   include ../data/about
-  include ../data/benefits
 
-  +renderTopBlock(text, desktopImage, tabletImage, mobileImage)
-  main.container
-    .about
-      .about__content
-        h2.title--h2=aboutEvent.title
-        ul
-          each text in aboutEvent.textList
-            li
-              p=text
-        button.btn.btn--white(type="button", aria-label="Показать больше", aria-pressed="false")="Read More"
+  main
+    +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
+    .container
+      .about
+        .about__content
+          +renderHeadline2(aboutEvent.title)
+          +renderTextContentBlock(aboutEvent.textList)
+          button.btn.btn--white(type="button", aria-label="Показать больше")=buttonText
 
-        h2.title--h2=eventBlock.title
+          +renderHeadline2(eventBlock.title)
+          each event in eventBlock.eventList
+            +renderHeadline3(event.subtitle)
+            +renderTextContentBlock(event.textList)
+
+        aside.about__aside
+          +renderHeadline2(benefitsTitle)
           ul
-            each event in eventBlock.eventList
+            each benefit in benefits
               li
-                h3.title--h3=event.subtitle
-                ul
-                  each text in event.textList
-                    li
-                      p=text
-
-      aside.about__aside
-        h2.title--h2 Overview
-        ol
-          each benefit in benefits
-            li
-              +icon(benefit.src, benefit.width, benefit.height)
-              span=benefit.text
+                +icon(benefit.src, benefit.width, benefit.height)
+                p=benefit.text

@@ -4,11 +4,18 @@ block variables
   - var title = "События"
   - var hasHeader = true
   - var hasFooter = true
-  - var text = "THE LEADING LUXURY TRAVEL EXHIBITION IN EASTERN EUROPE, RUSSIA & CIS"
-  - var desktopImage = "img/bg/news-page-desktop.png"
-  - var tabletImage = "img/bg/news-page-tablet.png"
-  - var mobileImage = "img/bg/news-page-mobile.png"
   - var currentPage = "Exhibitors"
+  -
+    var promoBg = {
+      titleItem: "The leading luxury travel exhibition in eastern europe, russia & cis",
+      imgItem: "img/bg/schedule-page-desktop.png",
+      img2xItem: "img/bg/bg-home@2x.png",
+      widthItem: "1920",
+      heightItem: "534",
+      imgSource: "img/bg/LTM_28_02_1942.png 1x, img/bg/LTM_28_02_1942@2x.png 2x",
+      classItem: "promo__reg",
+      promoItem: "promo__info promo__text-wrapper"
+    }
 
 block main
   include ../data/hotel-cards
@@ -17,13 +24,22 @@ block main
   include ../data/choose-event
   include ../data/hotel-filters
 
-  +renderTopBlock(text, desktopImage, tabletImage, mobileImage)
-  main.container
-    .choose-event
-      h2.title--h2=chooseEvent.title
-      ul.choose-event__cards
-        each event in chooseEventCard
-          +renderEvent(event.title, event.date, event.status, event.textStatus)
+  main
+    +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
+    .container
+
+      section.direction.direction__swiper
+        .swiper-container.direction__swiper-block
+          +renderHeadline2(chooseEvent.title)
+          ul.direction__list.swiper-wrapper
+            each event in chooseEventCard
+              .swiper-slidee
+                +direction(event.titleItem, event.dataItem, event.statusItem, event.timeItem, event.classStatus)
+          .direction__arrow.direction__arrow--right
+            +icon("arrow-right", "11", "19")
+          .direction__arrow.direction__arrow--left
+            +icon("arrow-left", "11", "19")
+
       ul.hotel-filters
         each filter in filters
           +renderFilter(filter.title, filter.mod, filter.filterList)
@@ -34,12 +50,12 @@ block main
           button.btn.btn--white.hotel-filter--clear(type="reset")="Clear all"
           button.btn.btn--white.hotel-filter--btn-clear(type="reset")="Clear all filters"
 
-    .exhibitors
-      ul.hotel-cards
-        each hotel in hotelCards
-          +renderHotelCard(hotel.title, hotel.photoList, hotel.logo, hotel.link)
+      .exhibitors
+        ul.hotel-cards
+          each hotel in hotelCards
+            +renderHotelCard(hotel.title, hotel.photoList, hotel.logo, hotel.link)
 
-      .alphabet-hotel
-        ul.alphabet-hotel__block-list
-          each hotel in alphabetHotel
-            +renderAlphabetHotel(hotel.title, hotel.hotelList)
+        .alphabet-hotel
+          ul.alphabet-hotel__block-list
+            each hotel in alphabetHotel
+              +renderAlphabetHotel(hotel.title, hotel.hotelList)

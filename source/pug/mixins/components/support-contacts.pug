@@ -1,13 +1,19 @@
 mixin renderSupportContacts(contactsList)
   .support-contacts
     h3.title--h3=contactsList.title
-    ul.support-contacts__list
-      each contact in contactsList.contacts
-        li.support-contacts__item
-          img(src=contact.src)
-          .support-contacts__info
-            span=contact.name
-            span=contact.position
-            a(class="support-contacts__link", href='mailto:' + contact.email)
-              +icon("icon-support-email", 42, 18)
-            a(class="support-contacts__link", href='tel:' + contact.phone)=contact.phoneText
+    div.direction.container.swiper-container.card-swiper
+      ul.support-contacts__list.direction-list.swiper-wrapper
+        each contact in contactsList.contacts
+          li.support-contacts__item.swiper-slide
+            img(src=contact.src)
+            .support-contacts__info
+              span.support-contacts__text=contact.name
+              span.support-contacts__text=contact.position
+              a(class="support-contacts__link", href='mailto:' + contact.email)
+                +icon("icon-support-email", 42, 18)
+              a(class="support-contacts__link", href='tel:' + contact.phone)=contact.phoneText
+      .swiper-pagination
+      .direction__arrow.direction__arrow--right
+        +icon("arrow-right", 11, 19)
+      .direction__arrow.direction__arrow--left
+        +icon("arrow-left", 11, 19)

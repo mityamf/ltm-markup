@@ -59,6 +59,12 @@
   }
 }
 
+.promo__text-wrapper {
+  @include viewport--sm {
+    top: 0;
+  }
+}
+
 .promo__title {
   margin: 0;
   color: $color-default-white;
@@ -74,13 +80,13 @@
 }
 
 .promo__reg {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
   background-color: $color-blue;
   color: $color-default-white;
   width: 222px;
   height: 50px;
-  margin-top: 32px;
+  margin-top: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
