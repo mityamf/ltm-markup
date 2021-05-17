@@ -2,17 +2,20 @@
   display: flex;
   padding: 0;
   margin: 0;
-  padding-top: 25px;
   list-style: none;
 
   &__list {
     padding: 0;
     margin: 0;
-    margin-right: 39px;
+    margin-right: 25px;
 
     @include viewport--sm {
       align-self: center;
     }
+  }
+
+  &__company {
+    padding-top: 11px;
   }
 }
 

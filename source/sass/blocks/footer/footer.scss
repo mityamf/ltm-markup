@@ -1,63 +1,69 @@
 .footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  min-height: 227px;
+  display: grid;
+  grid-template-areas:
+    "logotip mailing menu"
+    "info info info ";
+  grid-column-gap: 10px;
   border-top: 1.5px solid $color-blue;
+  padding-top: 25px;
+  margin-top: 57px;
 
   @include viewport--sm {
     display: grid;
     grid-template-areas:
-      "post-1"
-      "post-2"
-      "post-3 ";
+      "menu"
+      "mailing"
+      "logotip"
+      "info";
     justify-content: normal;
     margin-top: 20px;
   }
 }
 
 .footer__logotip {
+  grid-area: logotip;
+
   @include viewport--sm {
     justify-content: space-around;
-    grid-area: post-3;
   }
 }
 
 .footer__mailing {
-  //width: 37%;
-  padding-top: 39px;
+  grid-area: mailing;
+  margin-right: 0;
 
   @include viewport--sm {
     width: 100%;
-    padding-top: 22px;
+    padding-bottom: 40px;
   }
 }
 
 .footer__menu {
-  //width: 22%;
+  grid-area: menu;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-top: 39px;
-  justify-content: flex-end;
+  justify-content: space-between;
 
   @include viewport--sm {
-    grid-area: post-1;
     width: 100%;
     justify-content: space-between;
-    padding-top: 20px;
+    padding-bottom: 22px;
   }
 }
 
 .footer__info {
+  grid-area: info;
   width: 100%;
   display: flex;
   justify-content: center;
-  color: #9f9f9f;
+  color: $color-nobel;
   font-size: 12px;
+  margin-top: 30px;
+  margin-bottom: 45px;
 
   @include viewport--sm {
-    padding-top: 30px;
-    padding-bottom: 20px;
+    margin-top: 29px;
+    margin-bottom: 31px;
   }
 }
