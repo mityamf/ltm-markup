@@ -2,7 +2,6 @@ extends ../base/layout
 
 block data
   include ../data/organizers
-  include ../mixins/blocks/top-block
 
 block variables
   - var title = "Организаторы"
@@ -16,12 +15,9 @@ block main
   main
     .container
       .organizers
-        h2.organizers__title.title.title--h2 Organizers
+        +renderHeadline(organizers.title)
         .organizers__wrapper
           ul.organizers__list
-            each organizer in organizersList
+            each item in organizers.organizersList
               li.organizers__item
-                .organizers__image-container
-                  img(src= organizer.logo.src, width= organizer.logo.width, height= organizer.logo.height)
-                h3.organizers__name.title.title--h3 #{organizer.title}
-                p #{organizer.text}
+                +renderOrganizerCard(item.logo.src, item.logo.width, item.logo.height, item.title, item.text)

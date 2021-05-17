@@ -3,6 +3,10 @@ mixin renderBackButton(link)
     +icon("arrow-left", 12, 20)
     span Back
 
+mixin renderHeadline(title)
+  .headline-back
+    h2.title--h2=title
+
 mixin renderHeadlineWithBackButton(title, link)
   .headline-back
     h2.title--h2=title
