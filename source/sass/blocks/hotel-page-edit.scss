@@ -7,4 +7,11 @@
       display: flex;
     }
   }
+
+  @include viewport--sm {
+    .hotel-photos,
+    .top-block {
+      display: none;
+    }
+  }
 }

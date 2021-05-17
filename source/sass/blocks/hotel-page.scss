@@ -1,12 +1,6 @@
 .hotel-page {
   padding-top: 15px;
 
-  @include viewport--sm {
-    .hotel-photos {
-      display: none;
-    }
-  }
-
   &__info-block {
     display: flex;
     padding: 20px 0;
@@ -117,6 +111,14 @@
     @include viewport--sm {
       font-size: 20px;
       line-height: 24px;
+    }
+  }
+}
+
+.container--hotel-page {
+  @include viewport--sm {
+    .promo {
+      display: none;
     }
   }
 }

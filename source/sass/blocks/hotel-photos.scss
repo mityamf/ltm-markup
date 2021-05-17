@@ -3,6 +3,10 @@
   margin-bottom: -15px;
   padding: 0;
 
+  @include viewport--sm {
+    display: none;
+  }
+
   &__more-button {
     display: none;
   }
@@ -145,3 +149,4 @@
     background-color: grey;
   }
 }
+

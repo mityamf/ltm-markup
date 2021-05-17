@@ -20,16 +20,19 @@ block main
   include ../data/hotel-page
   include ../data/hotel-photos
 
-  main.container
+  main.container--hotel-page
+    +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
+    .container
 
       .hotel-page
         +renderHotelPhotos(hotelPhotos.photoList)
+        +renderImageSlider(hotelPhotos.photoList)
 
         .hotel-page__info-block
           img(src=hotel.logo)
           .hotel-page__description
             .hotel-page__title
-              h2.title--h2=hotel.title
+              +renderHeadline2(hotel.title)
               .hotel-page__links
                 +renderBackButton("#")
                 a.hotel-page__link(href=hotel.link)=hotel.link
