@@ -1,6 +1,6 @@
 const initSwiper = () => {
   /* eslint-disable */
-  let swiper = new Swiper('.direction__swiper-block', {
+  new Swiper('.direction__swiper-block', {
     spaceBetween: 0,
     slidesPerGroup: 3,
     slidesPerView: 4,

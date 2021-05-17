@@ -1,0 +1,28 @@
+.gallery-block {
+  &__block {
+    display: grid;
+    grid-template-areas: ". . .";
+    gap: 16px;
+    padding-bottom: 16px;
+
+    img {
+      height: fit-content;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 38px;
+    color: $color-blue;
+    font-weight: 300;
+    padding-bottom: 16px;
+  }
+
+  &__btn-block {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+  }
+}
