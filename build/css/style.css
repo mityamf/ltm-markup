@@ -4177,23 +4177,33 @@ p {
       margin-top: 0; }
 
 .schedule {
-  padding: 15px 0;
+  padding: 28px 0 0 0;
   margin: 0; }
-  .schedule ul {
-    list-style-type: none; }
+  @media (max-width: 767px) {
+    .schedule {
+      padding: 17px 0 0 0; } }
+  .schedule .title--h2 {
+    margin-bottom: 0; }
   .schedule__days {
-    padding-left: 238px; }
+    padding: 30px 238px 10px; }
     @media (max-width: 1439px) {
       .schedule__days {
-        padding-left: 90px; } }
+        padding-left: 90px;
+        padding-right: 90px; } }
     @media (max-width: 1023px) {
       .schedule__days {
-        padding-left: 0; } }
+        padding-left: 0;
+        padding-right: 0; } }
+    @media (max-width: 767px) {
+      .schedule__days {
+        padding-bottom: 7px; } }
   .schedule__day {
     padding-left: 0; }
+    @media (max-width: 767px) {
+      .schedule__day {
+        padding-bottom: 10px; } }
   .schedule__subtitle {
-    margin-bottom: 15px;
-    margin-top: 30px;
+    margin: 0 0 6px 0;
     font-size: 24px;
     font-weight: lighter;
     line-height: 29px;
@@ -4202,6 +4212,8 @@ p {
     @media (max-width: 1023px) {
       .schedule__subtitle {
         margin-bottom: 10px; } }
+  .schedule p {
+    margin-top: 0; }
 
 .news {
   display: -webkit-box;
@@ -5953,15 +5965,20 @@ span {
       padding-bottom: 14px; } }
 
 .info-bottom {
-  margin: 10px 0;
-  padding: 30px 0 30px 238px;
+  margin: 0 0;
+  padding: 30px 238px 0 238px;
   border-top: 1px solid #0098c1; }
   @media (max-width: 1439px) {
     .info-bottom {
-      padding: 30px 0 30px 90px; } }
+      padding: 30px 90px 30px 90px; } }
   @media (max-width: 1023px) {
     .info-bottom {
       padding: 30px 0 30px 0; } }
+  @media (max-width: 767px) {
+    .info-bottom {
+      padding: 23px 0; } }
+  .info-bottom p:last-child {
+    margin-bottom: 0; }
 
 .hotel-card {
   padding: 5px;
