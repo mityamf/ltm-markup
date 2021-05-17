@@ -3,28 +3,51 @@ mixin interaction()
 
     .interaction__reg
       h2.interaction__reg-title Registrations
-      p.interaction__reg-text Crystal Cruises; <br> Luxe voyage DMC Mauritius; <br> JA Resorts & Hotels; <br> The Bicester Village Shopping Collection®; <br> Four Seasons Maldives;<br> Corinthia Hotel London;<br> VIP Tour London;<br> SAYAMA Travel Group;<br> Vinpearl;<br> Excelsior Hotel Gallia, a Luxury Collection Hotel, Milan;<br> Iberostar Hotels & Resorts;<br> InterContinental Marseille, Bordeaux, Lyon;<br> Jumeirah Hotels & Resorts / Jumeirah Zabeel Saray;<br> Kempinski Hotels / Hotel Adlon Kempinski Berlin;<br> La Réserve Hotels;<br> MONTE-CARLO Societe des Bains de Mer;<br> Mandarin Oriental Hotel Group;<br> Marriott International Luxury Brands;<br> ROBINSON Club GmbH;<br> Shangri-La Hotel, Paris & Shangri-La’s Indian Ocean Resorts;<br> Sirene Luxury Hotel Bodrum;
-      a.interaction__button.interaction__button-open(href="#")
+      ul.interaction__list
+        li.interaction__item Crystal Cruises;
+        li.interaction__item Luxe voyage DMC Mauritius;
+        li.interaction__item JA Resorts &#38; Hotels;
+        li.interaction__item The Bicester Village Shopping Collection®;
+        li.interaction__item Four Seasons Maldives;
+        li.interaction__item Corinthia Hotel London;
+        li.interaction__item VIP Tour London;
+        li.interaction__item SAYAMA Travel Group;
+        li.interaction__item Vinpearl;
+        li.interaction__item Excelsior Hotel Gallia, a Luxury Collection Hotel, Milan;
+        li.interaction__item Iberostar Hotels &#38; Resorts;
+        li.interaction__item InterContinental Marseille, Bordeaux, Lyon;
+        li.interaction__item Jumeirah Hotels &#38; Resorts / Jumeirah Zabeel Saray;
+        li.interaction__item Kempinski Hotels / Hotel Adlon Kempinski Berlin;
+        li.interaction__item La Réserve Hotels;
+        li.interaction__item MONTE-CARLO Societe des Bains de Mer;
+        li.interaction__item Mandarin Oriental Hotel Group;
+        li.interaction__item Marriott International Luxury Brands;
+        li.interaction__item ROBINSON Club GmbH;
+        li.interaction__item Shangri-La Hotel, Paris &#38; Shangri-La’s Indian Ocean Resorts;
+        li.interaction__item Sirene Luxury Hotel Bodrum;
+      .interaction__btn-block
+        a.button.button--open(href="#")
           img(src="img/svg/icon-arrow.svg", width="20", height="14", alt="arrow")
           span.visually-hidden read more
-    .interaction__gallery
-      h2.gallery__title Gallery
-      .gallery
-        .gallery__block
+    .interaction__gallery.gallery-block
+      h2.gallery-block__title Gallery
+      .gallery-block
+        .gallery-block__block
           picture
             +img("content", "gallery-1", "png", "341", "222","img gallery")
           picture
             +img("content", "gallery-2", "png", "341", "222","img gallery")
           picture
             +img("content", "gallery-3", "png", "222", "222","img gallery")
-        .gallery__block
+        .gallery-block__block
           picture
             +img("content", "gallery-4", "png", "222", "222","img gallery")
           picture
             +img("content", "gallery-5", "png", "341", "222","img gallery")
           picture
             +img("content", "gallery-6", "png", "341", "222","img gallery")
-      a.gallery__button.gallery__button-open(href="#")
+      .gallery-block__btn-block
+        a.button.button--open(href="#")
           img(src="img/svg/icon-arrow.svg", width="20", height="14", alt="arrow")
           span.visually-hidden read more
     a(href="#").interaction__btn View All Exhibitors
