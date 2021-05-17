@@ -38,12 +38,12 @@ mixin header(headerMod, currentPage)
   header(class=(headerMod) ? "header header--" + headerMod : "header")
     ul.header__top.container
       li.header__item.header__item--search
-        a(href="#").header__search-button
+        a(href="#").header__top-link.header__search-button
           +icon("icon-search", 17, 17)
       li.header__item.header__item--terms
-        a(href="#").header__link Terms & Conditions
+        a(href="#").header__top-link Terms & Conditions
       li.header__item
-        a(href="page-rus.html").header__link Рус
+        a(href="page-rus.html").header__top-link.header__top-link--rus Рус
     .header__main
       .header__main-wrapper.container
         if(currentPage === "main")
@@ -58,15 +58,14 @@ mixin header(headerMod, currentPage)
             +icon("logo-mobile", 53, 47)
         nav.main-nav
           button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          .main-nav__wrapper
-            ul.main-nav__list
-              each link in headerLinks
-                if(link.text === currentPage)
-                  li
-                    a.main-nav__link.main-nav__link--active= link.text
-                else
-                  li
-                    a.main-nav__link(href=link.href)= link.text
+          ul.main-nav__list
+            each link in headerLinks
+              if(link.text === currentPage)
+                li
+                  a.main-nav__link.main-nav__link--active= link.text
+              else
+                li
+                  a.main-nav__link(href=link.href)= link.text
         a(href="#").header__link.header__link--sigh-in.header__main-right
           span Sign in
           +icon("icon-sign-in", 26, 30)

@@ -14,6 +14,9 @@ const initGallerySwiper = () => {
             nextEl: '.photo__button-next',
             prevEl: '.photo__button-prev',
           },
+          pagination: {
+            el: '.photo__pagination',
+          },
         });
       });
     } else if (screenWidth > breakpointWidth - 1 && gallerySwiper !== null) {
