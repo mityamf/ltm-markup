@@ -1,21 +1,26 @@
 .about {
   display: flex;
   flex-wrap: nowrap;
+  padding-top: 25px;
 
-  @include viewport--xl {
+  @include viewport--md {
     flex-wrap: wrap;
   }
 
   &__content {
-    width: 60%;
+    max-width: 800px;
+    padding-right: 30px;
+    box-sizing: content-box;
 
-    @include viewport--xl {
-      width: 65%;
+    @include viewport--lg {
+      max-width: 720px;
     }
 
     @include viewport--md {
       width: 100%;
+      max-width: none;
       padding-bottom: 10px;
+      padding-right: 0;
 
       border-bottom: 1px solid $color-blue;
     }
@@ -33,25 +38,23 @@
   }
 
   &__aside {
-    width: 40%;
-    padding-left: 30px;
-
-    @include viewport--xl {
-      width: 35%;
-    }
+    width: auto;
 
     @include viewport--md {
       width: 100%;
       padding-bottom: 0;
       padding-left: 0;
-
-      border-bottom: 1px solid $color-blue;
+      padding-top: 30px;
     }
 
-    ol {
+    ul {
       padding: 0;
       margin: 0;
       list-style-type: none;
+
+      @include viewport--sm {
+        padding-top: 15px;
+      }
     }
 
     li {
@@ -73,7 +76,6 @@
     }
   }
 
-
   .btn {
     display: none;
 
@@ -83,6 +85,50 @@
       padding: 15px;
       width: 100%;
       max-width: 222px;
+    }
+  }
+
+  &__text-wrapper--mobile {
+    @include viewport--sm {
+      max-height: 136px;
+      overflow: hidden;
+    }
+  }
+
+  &__text-wrapper--small {
+    @include viewport--md {
+      max-height: 136px;
+      overflow: hidden;
+    }
+  }
+
+  &__text-wrapper--dates {
+    padding: 16px 0 0 0;
+
+    @include viewport--sm {
+      padding: 0;
+    }
+
+    .title--h2 {
+      margin-bottom: 20px;
+    }
+
+    time {
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    span {
+      display: block;
+
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 22px;
+      color: $color-gray-dark;
+    }
+
+    p {
+      margin-top: 0;
     }
   }
 }

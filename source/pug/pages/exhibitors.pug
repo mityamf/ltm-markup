@@ -33,7 +33,7 @@ block main
           +renderHeadline2(chooseEvent.title)
           ul.direction__list.swiper-wrapper
             each event in chooseEventCard
-              .swiper-slidee
+              .swiper-slide
                 +direction(event.titleItem, event.dataItem, event.statusItem, event.timeItem, event.classStatus)
           .direction__arrow.direction__arrow--right
             +icon("arrow-right", "11", "19")
