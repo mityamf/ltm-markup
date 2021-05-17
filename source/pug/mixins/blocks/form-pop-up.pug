@@ -1,0 +1,8 @@
+mixin form-reg__pop-up()
+  .form-reg__pop-up.pop-up.container
+    .pop-up__choices
+      input.pop-up__check(type="checkbox" id="choices-1" name="check" value="choices" checked)
+      label(for="choices-1")
+      +direction("Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan", "27 September 2019", "Available", "27.09.2019", "direction__status--available")
+
+    button(data-modal="choices", type="button").pop-up__btn View All Events

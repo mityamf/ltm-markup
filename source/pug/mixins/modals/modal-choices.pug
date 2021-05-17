@@ -1,0 +1,25 @@
+mixin modal-choices
+  .modal--filter.select-event
+    h2.select-event__title Select the event:
+    .select-event__block
+      input.form-reg__check(type="checkbox" id="choices-01" name="check" value="choices" checked)
+      label(for="choices-01")
+      +direction("Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan", "27 September 2019", "Available", "27.09.2019", "direction__status--available")
+    .select-event__block
+      input.form-reg__check(type="checkbox" id="choices-02" name="check" value="choices")
+      label(for="choices-02")
+      +direction("Luxury Travel Mart Moscow 2019 at The Ritz-Carlton, Moscow, Russia", "1 October 2019", "Available", "01.10.2019", "direction__status--available")
+    .select-event__block
+      input.form-reg__check(type="checkbox" id="choices-03" name="check" value="choices")
+      label(for="choices-03")
+      +direction("Luxury Travel Mart Moscow 2020 at Hyatt Regency Moscow, Russia", "27–28 February 2020", "Available", "27.02.2020", "direction__status--available")
+    .select-event__block
+      input.form-reg__check(type="checkbox" id="choices-04" name="check" value="choices")
+      label(for="choices-04")
+      +direction("Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan", "3 March 2020", "Waiting list", "03.03.2020", "direction__status--waiting")
+    .select-event__block
+      input.form-reg__check(type="checkbox" id="choices-05" name="check" value="choices")
+      label(for="choices-05")
+      +direction("Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia", "20 June 2020", "Waiting list", "20.06.2020", "direction__status--waiting")
+
+    button.modal__select-close(type="button") Apply

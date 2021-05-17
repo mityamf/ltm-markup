@@ -26,7 +26,9 @@
     @include viewport--sm {
       display: flex;
       flex-direction: column;
-      padding-bottom: 10px;
+      padding-bottom: 0;
+      padding-left: 0;
+      text-align: center;
     }
   }
 
@@ -396,6 +398,7 @@
 .form-reg__slider {
   display: flex;
   flex-direction: column;
+  height: auto;
 
   label {
     place-content: center;
@@ -407,7 +410,7 @@
   }
 
   .form-reg__check + label {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     user-select: none;
     color: $color-blue;
@@ -440,4 +443,3 @@
     background-position: center;
   }
 }
-

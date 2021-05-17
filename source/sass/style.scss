@@ -35,6 +35,8 @@
 @import "blocks/registration/exhibitor";
 @import "blocks/registration/form";
 @import "blocks/registration/adoption";
+@import "blocks/registration/submission";
+@import "blocks/registration/pop-up";
 @import "blocks/modal";
 @import "blocks/main-nav";
 @import "blocks/search";
@@ -44,6 +46,8 @@
 @import "blocks/about";
 @import "blocks/schedule";
 @import "blocks/news";
+@import "blocks/news-preview.scss";
+@import "blocks/newpage";
 @import "blocks/toggle";
 @import "blocks/hotel-cards";
 @import "blocks/exhibitions";

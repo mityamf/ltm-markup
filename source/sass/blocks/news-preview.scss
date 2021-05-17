@@ -1,0 +1,139 @@
+.news-preview {
+  position: relative;
+  display: flex;
+  height: 222px;
+  overflow: hidden;
+
+  @include viewport--lg {
+    height: 178px;
+  }
+
+  @include viewport--md {
+    flex-direction: column;
+    height: 400px;
+  }
+}
+
+.news-preview__image-container {
+  position: relative;
+  flex-shrink: 0;
+  width: 222px;
+  height: 222px;
+  overflow: hidden;
+
+  @include viewport--lg {
+    width: 178px;
+    height: 178px;
+  }
+
+  @include viewport--md {
+    width: 100%;
+    height: 169px;
+    margin-bottom: 10px;
+  }
+
+  img {
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+
+    @include viewport--md {
+      width: 100%;
+      height: 169px;
+    }
+  }
+}
+
+.news-preview__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 76%;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 25px;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, $color-white 100%);
+  }
+
+  @include viewport--md {
+    height: 45%;
+  }
+}
+
+.news-preview__date {
+  display: block;
+  margin-top: -2px;
+  padding: 0 16px;
+
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  color: $color-gray;
+
+  @include viewport--lg {
+    padding: 0 10px;
+  }
+
+  @include viewport--md {
+    padding: 0;
+  }
+}
+
+.news-preview__content h3 {
+  margin: 0;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  padding: 0 16px;
+
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.04em;
+  font-weight: 300;
+  color: $color-blue;
+
+  @include viewport--lg {
+    padding: 0 10px;
+  }
+
+  @include viewport--md {
+    padding: 0;
+  }
+}
+
+.news-preview__content p {
+  max-height: 115px;
+  margin: 0;
+  padding: 0 16px;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: $color-gray-dark;
+
+  @include viewport--lg {
+    padding: 0 10px;
+  }
+
+  @include viewport--md {
+    padding: 0;
+  }
+}
+
+.news-preview__button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  & > svg {
+    vertical-align: middle;
+  }
+}

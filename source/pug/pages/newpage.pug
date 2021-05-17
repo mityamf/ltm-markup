@@ -1,29 +1,22 @@
 extends ../base/layout
 
 block data
-  include ../data/news
+  include ../data/newpage
 
 block variables
   - var title = "Новости"
   - var hasHeader = true
   - var hasFooter = true
   - var currentPage = ""
-  - var text = ""
-  - var desktopImage = "img/bg/bg-002-desktop.jpg"
-  - var tabletImage = "img/bg/bg-002-tablet.jpg"
-  - var mobileImage = "img/bg/bg-002-mobile.jpg"
 
 block main
 
+  +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
   main
     .container
-      .news
-        .news__title-container.news__title-container--newpage
-          h2.news__title.title.title--h2 #{newsList[0].title}
-          a.news__nav-button(href="news.html")
-            img(src="img/svg/icon-back.svg", width="12", height="20")
-            span Back
-        time.news__date.news__date--newpage(datetime=newsList[0].datetime) #{newsList[0].date}
-        .news__full-content
-          each text in newsList[0].content
-            p=text
+      .newpage
+        +renderHeadlineWithBackButton(newPage.title, "news.html")
+        time.newpage__date(datetime=newPage.datetime) #{newPage.date}
+        .newpage__content
+          each text in newPage.content
+            p= text

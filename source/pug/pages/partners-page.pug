@@ -8,30 +8,28 @@ block variables
   - var hasHeader = true
   - var hasFooter = true
   - var currentPage = "Partners"
-  - var text = "THE LEADING LUXURY TRAVEL EXHIBITION IN EASTERN EUROPE, RUSSIA & CIS"
-  - var desktopImage = "img/bg/bg-004-desktop.jpg"
-  - var tabletImage = "img/bg/bg-004-tablet.jpg"
-  - var mobileImage = "img/bg/bg-006-mobile.jpg"
 
 block main
 
-  main
+  +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
+  main#top
     .container
       .partners-page
         h2.partners-page__title.title.title--h2 Partners
         ul.partners-page__list
           each partner in partners
             li.partners-page__item
-              .partners-page__image-container
-                img(src=partner.logo)
-              .partners-page__item-container
-                .partners-page__top-line
-                  h3.partners-page__name.title.title--h3 #{partner.name}
-                  span.partners-page__rank #{partner.rank}
-                a.partners-page__link(href=partner.link) #{partner.link}
-                p #{partner.text}
-                a.partners-page__button.partners-page__button--read-more(href="#")
-                  img(src="img/svg/icon-arrow.svg", width="20", height="14")
-                  span.visually-hidden read more
-        a.partners-page__button-up(href="#top-block")
-          img(src="img/svg/icon-button-up.svg", width="54", height="54")
+              .partners-page__flex-container
+                .partners-page__image-container
+                  img(src=partner.logo)
+                .partners-page__item-container
+                  .partners-page__top-line
+                    h3.partners-page__name.title.title--h3 #{partner.name}
+                    span.partners-page__rank #{partner.rank}
+                  a.partners-page__link(href=partner.link) #{partner.link}
+                  p #{partner.text}
+                  a.partners-page__button.partners-page__button--read-more(href="#")
+                    img(src="img/svg/icon-arrow.svg", width="20", height="14")
+                    span.visually-hidden read more
+        a.partners-page__button-up(href="#top", aria-label="Вернуться в начало")
+          +icon("icon-arrow-up", 54, 54)

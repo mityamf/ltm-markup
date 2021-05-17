@@ -1,38 +1,40 @@
 mixin form-reg()
   form(action="#" method="POST").exhibitor-reg__form.form-reg
-    .form-reg__direction.container
+    .container
       h3.form-reg__title.form-reg__title-one Please select the event you would like to register for:
-    .direction__swiper
-      .swiper-container.mySwiper
+    .form-reg__direction.direction__swiper
+      .swiper-container.direction__swiper-block
         .swiper-wrapper
-          .form-reg__slider
+          .form-reg__slider.swiper-slide
             input.form-reg__check(type="checkbox" id="choices" name="check" value="choices" checked)
             label(for="choices")
             +direction("Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan", "27 September 2019", "Available", "27.09.2019", "direction__status--available")
-          .form-reg__slider
+          .form-reg__slider.swiper-slide
             input.form-reg__check(type="checkbox" id="choices1" name="check" value="choices" checked)
             label(for="choices1")
             +direction("Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan", "27 September 2019", "Available", "27.09.2019", "direction__status--available")
-          .form-reg__slider
+          .form-reg__slider.swiper-slide
             input.form-reg__check(type="checkbox" id="choices2" name="check" value="choices")
             label(for="choices2")
             +direction("Luxury Travel Mart Moscow 2019 at The Ritz-Carlton, Moscow, Russia", "1 October 2019", "Available", "01.10.2019", "direction__status--available")
-          .form-reg__slider
+          .form-reg__slider.swiper-slide
             input.form-reg__check(type="checkbox" id="choices3" name="check" value="choices")
             label(for="choices3")
             +direction("Luxury Travel Mart Moscow 2020 at Hyatt Regency Moscow, Russia", "27–28 February 2020", "Available", "27.02.2020", "direction__status--available")
-          .form-reg__slider
+          .form-reg__slider.swiper-slide
             input.form-reg__check(type="checkbox" id="choices4" name="check" value="choices")
             label(for="choices4")
             +direction("Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan", "3 March 2020", "Waiting list", "03.03.2020", "direction__status--waiting")
-          .form-reg__slider
+          .form-reg__slider.swiper-slide
             input.form-reg__check(type="checkbox" id="choices5" name="check" value="choices")
             label(for="choices5")
             +direction("Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia", "20 June 2020", "Waiting list", "20.06.2020", "direction__status--waiting")
-        .direction__arrow.swiper-button-next.direction__arrow--right
+        .direction__arrow.direction__arrow--right
           +icon("arrow-right", "11", "19")
-        .direction__arrow.swiper-button-prev.direction__arrow--left
+        .direction__arrow.direction__arrow--left
           +icon("arrow-left", "11", "19")
+    +form-reg__pop-up
+
     .form-reg__adoption.adoption.container
       h3.adoption__title You have selected the following events:
       ul.adoption__list
