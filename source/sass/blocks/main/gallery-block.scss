@@ -1,28 +1,136 @@
-.gallery-block {
-  &__block {
-    display: grid;
-    grid-template-areas: ". . .";
-    gap: 16px;
-    padding-bottom: 16px;
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__block-1 {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
 
     img {
-      height: fit-content;
       object-fit: cover;
+      width: 272px;
+      height: 177px;
+      margin-right: 10px;
+
+      @media (min-width: 1440px) {
+        width: 341px;
+        height: 222px;
+      }
+    }
+
+    .gallery__img {
+      img {
+        width: 366px;
+        height: 177px;
+        margin-right: 0;
+
+        @media (min-width: 1440px) {
+          width: 341px;
+          height: 222px;
+        }
+      }
+    }
+
+    @media (min-width: 1440px) {
+      width: fit-content;
+      margin-right: 10px;
     }
   }
 
-  &__title {
-    margin: 0;
-    font-size: 38px;
-    color: $color-blue;
-    font-weight: 300;
-    padding-bottom: 16px;
+  &__block-2 {
+    width: 40%;
+    height: 272px;
+    margin-right: 10px;
+    display: flex;
+
+    img {
+      object-fit: cover;
+      width: 272px;
+      height: 272px;
+
+      @media (min-width: 1440px) {
+        width: 222px;
+        height: 222px;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      width: 222px;
+      height: 222px;
+    }
   }
 
-  &__btn-block {
+  &__block-3 {
+    width: 55%;
+    height: 272px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    margin-right: 10px;
+
+    img {
+      object-fit: cover;
+      width: 366px;
+      height: 272px;
+
+      @media (min-width: 1440px) {
+        max-width: 222px;
+        max-height: 222px;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      width: 222px;
+      height: 222px;
+    }
+  }
+
+  &__block-4 {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
-    align-self: flex-end;
+    margin-bottom: 20px;
+
+    img {
+      object-fit: cover;
+      width: 272px;
+      height: 177px;
+
+      @media (min-width: 1440px) {
+        width: 341px;
+        height: 222px;
+      }
+    }
+
+    .gallery__img {
+      img {
+        width: 366px;
+        height: 177px;
+        margin-right: 10px;
+
+        @media (min-width: 1440px) {
+          width: 341px;
+          height: 222px;
+        }
+      }
+    }
+
+    @media (min-width: 1440px) {
+      width: fit-content;
+    }
   }
+}
+
+.gallery-block__title {
+  margin: 0;
+  font-size: 38px;
+  color: $color-blue;
+  font-weight: 300;
+  padding-bottom: 16px;
+}
+
+.gallery-block__btn-block {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
 }

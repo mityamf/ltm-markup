@@ -36,8 +36,8 @@ const onEscPress = (evt, modal, callback) => {
 const setModalListeners = (modal, closeCallback, preventScrollLock) => {
   const overlay = modal.querySelector('.modal__overlay');
   const closeBtn = modal.querySelector('.modal__close-btn');
-  const closeBtn1 = modal.querySelector('.modal__close-button');
-  // const closeSelect = modal.querySelector('.modal__select-close');
+  const closeBtn1 = modal.querySelector('.submission__close-button');
+  //const closeSelect = modal.querySelector('.modal__select-close');
 
   closeBtn.addEventListener('click', () => {
     closeModal(modal, closeCallback, preventScrollLock);
@@ -47,9 +47,9 @@ const setModalListeners = (modal, closeCallback, preventScrollLock) => {
     closeModal(modal, closeCallback, preventScrollLock);
   });
 
-  // closeSelect.addEventListener('click', () => {
+  //closeSelect.addEventListener('click', () => {
   //  closeModal(modal, closeCallback, preventScrollLock);
-  // });
+  //});
 
   overlay.addEventListener('click', () => {
     closeModal(modal, closeCallback, preventScrollLock);
