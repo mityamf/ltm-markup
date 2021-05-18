@@ -22,8 +22,8 @@ block main
           p= privacyPolicy.text
           ul.privacy-policy__list
             each item in privacyPolicy.content
-              li.privacy-policy__item
-                h3.privacy-policy__question.title.title--h3= item.question
+              li
+                h3= item.question
                 each paragraph in item.answer
                   p= paragraph
         +renderUpButton

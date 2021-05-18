@@ -10,6 +10,7 @@ import {initGallerySwiper} from './modules/init-gallery-swiper';
 import {initSwiper} from './modules/init-swiper';
 import {initSmoothAnchors} from './modules/init-smooth-anchors';
 import {dropdown} from './modules/dropdown';
+import {initModalGallerySwiper} from './modules/init-modal-gallery-swiper';
 
 // Utils
 // ---------------------------------
@@ -29,3 +30,4 @@ initGallerySwiper();
 initSwiper();
 dropdown();
 initSmoothAnchors();
+initModalGallerySwiper();
