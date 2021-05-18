@@ -1,5 +1,10 @@
-mixin promo(titleItem, btnItem, imgItem, img2xItem, widthItem, heightItem, imgSource, classItem, promoItem)
-  section.promo
+mixin promo(titleItem, btnItem, imgItem, img2xItem, widthItem, heightItem, imgSource, classItem, promoItem, noButtonMod)
+  if noButtonMod
+    - var noButtonMod = "promo--no-button"
+  else
+    - var noButtonMod = ""
+
+  section.promo(class=noButtonMod)
     picture
       source(media="(max-width: 767px)" srcset=imgSource)
       img.promo__img(src=imgItem srcset=img2xItem width=widthItem height=heightItem alt="promo image")
