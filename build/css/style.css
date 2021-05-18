@@ -2206,24 +2206,36 @@ p {
     .promo__title {
       font-size: 22px; } }
 
-.promo--no-button .promo__title {
-  margin: 0;
-  color: #ffffff;
-  font-size: 36px;
-  font-weight: 300;
-  font-family: "Proxima Nova", "Arial", sans-serif;
-  text-transform: uppercase;
-  line-height: 43px;
-  letter-spacing: 2px; }
-  @media (max-width: 1023px) {
-    .promo--no-button .promo__title {
-      font-size: 30px;
-      line-height: 36px;
-      letter-spacing: 0; } }
+.promo--no-button {
+  min-height: 534px;
+  padding-top: 458px; }
+  @media (max-width: 1439px) {
+    .promo--no-button {
+      min-height: 521px;
+      padding-top: 433px; } }
   @media (max-width: 767px) {
-    .promo--no-button .promo__title {
-      font-size: 22px;
-      line-height: 26px; } }
+    .promo--no-button {
+      min-height: 375px;
+      padding-top: 280px;
+      padding-bottom: 10px; } }
+  .promo--no-button .promo__title {
+    margin: 0;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 300;
+    font-family: "Proxima Nova", "Arial", sans-serif;
+    text-transform: uppercase;
+    line-height: 43px;
+    letter-spacing: 2px; }
+    @media (max-width: 1439px) {
+      .promo--no-button .promo__title {
+        font-size: 30px;
+        line-height: 36px;
+        letter-spacing: 0; } }
+    @media (max-width: 767px) {
+      .promo--no-button .promo__title {
+        font-size: 22px;
+        line-height: 26px; } }
 
 .direction {
   padding-top: 30px; }
@@ -4140,7 +4152,11 @@ p {
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  padding-top: 25px; }
+  padding-top: 25px;
+  padding-bottom: 33px; }
+  @media (max-width: 1439px) {
+    .about {
+      padding-bottom: 0; } }
   @media (max-width: 1023px) {
     .about {
       -ms-flex-wrap: wrap;
@@ -4167,6 +4183,9 @@ p {
   .about li > svg {
     display: block;
     margin: 0 auto 17px auto; }
+    @media (max-width: 1439px) {
+      .about li > svg {
+        margin: 0 auto 13px auto; } }
   .about__aside {
     width: auto; }
     @media (max-width: 1023px) {
@@ -4179,13 +4198,13 @@ p {
       padding: 0;
       margin: 0;
       list-style-type: none; }
-      @media (max-width: 1023px) {
+      @media (max-width: 1439px) {
         .about__aside ul {
           padding-top: 15px; } }
     .about__aside li {
       margin-bottom: 40px;
       text-align: center; }
-      @media (max-width: 1023px) {
+      @media (max-width: 1439px) {
         .about__aside li {
           margin-bottom: 31px; } }
     .about__aside img {
@@ -4200,7 +4219,7 @@ p {
     @media (max-width: 1023px) {
       .about .btn {
         display: block;
-        margin: 39px auto 30px auto;
+        margin: 30px auto 24px;
         padding: 15px;
         width: 100%;
         max-width: 222px; } }
@@ -4210,6 +4229,7 @@ p {
       overflow: hidden; } }
   @media (max-width: 1023px) {
     .about__text-wrapper--small {
+      padding-top: 10px;
       max-height: 136px;
       overflow: hidden; } }
   .about__text-wrapper--dates {
@@ -4218,10 +4238,16 @@ p {
       .about__text-wrapper--dates {
         padding: 0; } }
     .about__text-wrapper--dates .title--h2 {
-      margin-bottom: 20px; }
+      margin-bottom: 25px; }
+      @media (max-width: 767px) {
+        .about__text-wrapper--dates .title--h2 {
+          margin-bottom: 32px; } }
     .about__text-wrapper--dates time {
       display: block;
-      margin-bottom: 15px; }
+      margin-bottom: 10px; }
+      @media (max-width: 767px) {
+        .about__text-wrapper--dates time {
+          margin-bottom: 5px; } }
     .about__text-wrapper--dates span {
       display: block;
       font-size: 16px;
@@ -4229,7 +4255,11 @@ p {
       line-height: 22px;
       color: #505050; }
     .about__text-wrapper--dates p {
-      margin-top: 0; }
+      margin-top: 0;
+      margin-bottom: 30px; }
+      @media (max-width: 767px) {
+        .about__text-wrapper--dates p {
+          margin-bottom: 20px; } }
 
 .schedule {
   padding: 28px 0 0 0;

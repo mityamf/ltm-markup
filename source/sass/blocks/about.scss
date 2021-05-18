@@ -2,6 +2,11 @@
   display: flex;
   flex-wrap: nowrap;
   padding-top: 25px;
+  padding-bottom: 33px;
+
+  @include viewport--lg {
+    padding-bottom: 0;
+  }
 
   @include viewport--md {
     flex-wrap: wrap;
@@ -35,6 +40,10 @@
   li > svg {
     display: block;
     margin: 0 auto 17px auto;
+
+    @include viewport--lg {
+      margin: 0 auto 13px auto;
+    }
   }
 
   &__aside {
@@ -52,7 +61,7 @@
       margin: 0;
       list-style-type: none;
 
-      @include viewport--md {
+      @include viewport--lg {
         padding-top: 15px;
       }
     }
@@ -62,7 +71,7 @@
 
       text-align: center;
 
-      @include viewport--md {
+      @include viewport--lg {
         margin-bottom: 31px;
       }
     }
@@ -85,7 +94,7 @@
 
     @include viewport--md {
       display: block;
-      margin: 39px auto 30px auto;
+      margin: 30px auto 24px;
       padding: 15px;
       width: 100%;
       max-width: 222px;
@@ -101,6 +110,7 @@
 
   &__text-wrapper--small {
     @include viewport--md {
+      padding-top: 10px;
       max-height: 136px;
       overflow: hidden;
     }
@@ -114,12 +124,20 @@
     }
 
     .title--h2 {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+
+      @include viewport--sm {
+        margin-bottom: 32px;
+      }
     }
 
     time {
       display: block;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
+
+      @include viewport--sm {
+        margin-bottom: 5px;
+      }
     }
 
     span {
@@ -133,6 +151,11 @@
 
     p {
       margin-top: 0;
+      margin-bottom: 30px;
+
+      @include viewport--sm {
+        margin-bottom: 20px;
+      }
     }
   }
 }
