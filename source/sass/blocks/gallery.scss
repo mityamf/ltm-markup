@@ -1,6 +1,7 @@
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 30px;
 
   &__section {
     width: calc((100% - 15px) / 2);
