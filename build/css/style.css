@@ -3878,7 +3878,8 @@ p {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  margin-top: 30px; }
   .gallery__section {
     width: calc((100% - 15px) / 2);
     margin-right: 15px; }
@@ -3911,6 +3912,9 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+
+.photo__item {
+  margin-bottom: 30px; }
 
 .photo__sublist-item {
   width: calc((100% - 30px) / 3);
@@ -4107,6 +4111,9 @@ p {
 @media (max-width: 767px) {
   .video {
     display: none; } }
+
+.video__block-item {
+  margin-bottom: 30px; }
 
 .about {
   display: -webkit-box;

@@ -28,5 +28,9 @@
   @include viewport--sm {
     display: none;
   }
+
+  &__block-item {
+    margin-bottom: 30px;
+  }
 }
 
