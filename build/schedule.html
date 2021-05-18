@@ -2683,12 +2683,12 @@
     <div class="wrapper">
       <header class="header">
         <ul class="header__top container">
-          <li class="header__item header__item--search"><a class="header__search-button" href="#">
+          <li class="header__item header__item--search"><a class="header__top-link header__search-button" href="#">
               <svg width="17" height="17" aria-hidden="true">
                 <use xlink:href="#icon-search"></use>
               </svg></a></li>
-          <li class="header__item header__item--terms"><a class="header__link" href="#">Terms & Conditions</a></li>
-          <li class="header__item"><a class="header__link" href="page-rus.html">Рус</a></li>
+          <li class="header__item header__item--terms"><a class="header__top-link" href="#">Terms & Conditions</a></li>
+          <li class="header__item"><a class="header__top-link header__top-link--rus" href="page-rus.html">Рус</a></li>
         </ul>
         <div class="header__main">
           <div class="header__main-wrapper container"><a class="header__logo header__logo--desktop" href="main.html" aria-label="Переход на главную">
@@ -2700,18 +2700,16 @@
               </svg></a>
             <nav class="main-nav">
               <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false"></button>
-              <div class="main-nav__wrapper">
-                <ul class="main-nav__list">
-                  <li><a class="main-nav__link" href="about.html">About LTM</a></li>
-                  <li><a class="main-nav__link" href="#">Registration</a></li>
-                  <li><a class="main-nav__link main-nav__link--active">Detailed Schedule</a></li>
-                  <li><a class="main-nav__link" href="exhibitors.html">Exhibitors</a></li>
-                  <li><a class="main-nav__link" href="gallery.html">Gallery</a></li>
-                  <li><a class="main-nav__link" href="organizers.html">Organizers</a></li>
-                  <li><a class="main-nav__link" href="partners-page.html">Partners</a></li>
-                  <li><a class="main-nav__link" href="contact-us.html">Contacts</a></li>
-                </ul>
-              </div>
+              <ul class="main-nav__list">
+                <li><a class="main-nav__link" href="about.html">About LTM</a></li>
+                <li><a class="main-nav__link" href="#">Registration</a></li>
+                <li><a class="main-nav__link main-nav__link--active">Detailed Schedule</a></li>
+                <li><a class="main-nav__link" href="exhibitors.html">Exhibitors</a></li>
+                <li><a class="main-nav__link" href="gallery.html">Gallery</a></li>
+                <li><a class="main-nav__link" href="organizers.html">Organizers</a></li>
+                <li><a class="main-nav__link" href="partners-page.html">Partners</a></li>
+                <li><a class="main-nav__link" href="contact-us.html">Contacts</a></li>
+              </ul>
             </nav><a class="header__link header__link--sigh-in header__main-right" href="#"><span>Sign in</span>
               <svg width="26" height="30" aria-hidden="true">
                 <use xlink:href="#icon-sign-in"></use>
@@ -2731,24 +2729,24 @@
           </div>
         </div>
       </header>
-      <section class="promo">
-        <picture>
-          <source media="(max-width: 767px)" srcset="img/bg/LTM_28_02_1942.png 1x, img/bg/LTM_28_02_1942@2x.png 2x"/><img class="promo__img" src="img/bg/schedule-page-desktop.png" srcset="img/bg/bg-home@2x.png" width="1920" height="534" alt="promo image"/>
-        </picture>
-        <div class="container promo__info promo__text-wrapper">
-          <h2 class="promo__title">The leading luxury travel exhibition in eastern europe, russia &amp; cis</h2>
-        </div>
-      </section>
-      <main class="container">
-        <div class="schedule">
-          <div class="schedule__program">
+      <main>
+        <section class="promo promo--no-button">
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/bg/schedule-promo-mobile.png 1x, img/bg/schedule-promo-mobile@2x.png 2x"/><img class="promo__img" src="img/bg/schedule-promo-desktop.png" srcset="img/bg/schedule-promo-desktop@2x.png" width="1920" height="534" alt="promo image"/>
+          </picture>
+          <div class="container promo__info promo__text-wrapper">
+            <h2 class="promo__title">The leading luxury travel exhibition in eastern europe, russia &amp; cis</h2>
+          </div>
+        </section>
+        <div class="container">
+          <div class="schedule">
             <h2 class="title--h2">Program of LTM Moscow Spring:</h2>
             <div class="schedule__days">
-              <h2 class="title--h2">Day 1</h2>
+              <p class="schedule__subtitle">Day 1</p>
               <div class="schedule__day">
                 <p>10:00 – 18:00 — First day is dedicated to hosted buyers only, with a huge group of hosted buyers from the Russian regions, CIS countries and Baltic States. All appointments are pre-scheduled, with 10 minutes per appointment, 2 coffee-breaks and lunch during the day.</p>
               </div>
-              <h2 class="title--h2">Day 2</h2>
+              <p class="schedule__subtitle">Day 2</p>
               <div class="schedule__day">
                 <p>10:00 – 15:50 — Individual pre-scheduled appointments with top-buyers. Each appointment will last 10 minutes</p>
                 <p>15:50 – 16:30 — After-session networking and lunch with guests of the morning session.</p>
@@ -2757,35 +2755,37 @@
             </div>
             <h2 class="title--h2">Program of LTM Kyiv, Almaty &amp; LTM Moscow Autumn:</h2>
             <div class="schedule__days">
-              <h2 class="title--h2"></h2>
+              <p class="schedule__subtitle"></p>
               <div class="schedule__day">
-                <p>10:00 – 16:55 — Individual pre - scheduled appointments with top - buyers.Each appointment will last 10 minutes.All appointments are scheduled through LTM web - site and / or LTM mobile apps.</p>
+                <p>10:00 – 16:55 — Individual pre - scheduled appointments with top - buyers.Each appointment will last 10 minutes.</p>
                 <p>All appointments are scheduled through LTM web-site and/or LTM mobile apps.</p>
                 <p>12:55 – 14:00 — Mid - session networking and lunch for guests and exhibitors.</p>
                 <p>19:30 – 22:00 — Cocktail reception for travel agents, corporate clients and journalists in relaxed atmosphere.</p>
               </div>
             </div>
+            <div class="info-bottom">
+              <p>Access to all events will only be available to pre - registered visitors.</p>
+              <p>Non - participating hoteliers, DMC companies and other hospitality providers will not be permitted to attend the Luxury Travel Mart Moscow as visitors.</p>
+              <p>This schedule is for review only, changes in the program are possible.</p>
+            </div>
           </div>
-        </div>
-        <div class="info-bottom">
-          <p>Access to all events will only be available to pre - registered visitors.Non - participating hoteliers, DMC companies and other hospitality providers will not be permitted to attend the Luxury Travel</p>
-          <p>Non-participating hoteliers, DMC companies and other hospitality providers will not be permitted to attend the Luxury Travel Mart Moscow as visitors.</p>
-          <p>This schedule is for review only, changes in the program are possible.</p>
         </div>
       </main>
       <footer class="container">
         <div class="footer">
           <ul class="footer__logotip logotip">
-            <li class="logotip__list"><a class="logotip__item" href="#"><img src="./img/svg/g10.svg" alt="company logo" width="80" height="84"/></a></li>
-            <li class="logotip__list"><a class="logotip__item" href="#"><img src="./img/svg/TM-logo.svg" alt="company logo" width="130" height="57"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="#"><img src="./img/svg/g10.svg" alt="company logo" width="67" height="73"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company" src="./img/svg/TM-logo.svg" alt="company logo" width="110" height="57"/></a></li>
           </ul>
           <div class="footer__mailing mailing">
             <form class="mailing__form" action="#" method="POST">
               <input class="mailing__email" type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
-              <label for="mailing"></label>
-              <button class="mailing__btn">Ok</button>
-              <input class="mailing__check" type="checkbox" id="check" name="check" value="yes"/>
-              <label for="check">I agree</label>
+              <label class="mailing__email-label" for="mailing"></label>
+              <button class="button button--footer-btn" type="button"> Ok</button>
+              <div class="mailing__checkbox">
+                <input class="mailing__check" type="checkbox" id="check" name="check" value="yes"/>
+                <label class="mailing__check-label" for="check">I agree</label>
+              </div>
             </form>
           </div>
           <div class="footer__menu menu">

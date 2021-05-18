@@ -2683,12 +2683,12 @@
     <div class="wrapper">
       <header class="header">
         <ul class="header__top container">
-          <li class="header__item header__item--search"><a class="header__search-button" href="#">
+          <li class="header__item header__item--search"><a class="header__top-link header__search-button" href="#">
               <svg width="17" height="17" aria-hidden="true">
                 <use xlink:href="#icon-search"></use>
               </svg></a></li>
-          <li class="header__item header__item--terms"><a class="header__link" href="#">Terms & Conditions</a></li>
-          <li class="header__item"><a class="header__link" href="page-rus.html">Рус</a></li>
+          <li class="header__item header__item--terms"><a class="header__top-link" href="#">Terms & Conditions</a></li>
+          <li class="header__item"><a class="header__top-link header__top-link--rus" href="page-rus.html">Рус</a></li>
         </ul>
         <div class="header__main">
           <div class="header__main-wrapper container"><a class="header__logo header__logo--desktop" href="main.html" aria-label="Переход на главную">
@@ -2700,18 +2700,16 @@
               </svg></a>
             <nav class="main-nav">
               <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false"></button>
-              <div class="main-nav__wrapper">
-                <ul class="main-nav__list">
-                  <li><a class="main-nav__link" href="about.html">About LTM</a></li>
-                  <li><a class="main-nav__link" href="#">Registration</a></li>
-                  <li><a class="main-nav__link" href="schedule.html">Detailed Schedule</a></li>
-                  <li><a class="main-nav__link" href="exhibitors.html">Exhibitors</a></li>
-                  <li><a class="main-nav__link" href="gallery.html">Gallery</a></li>
-                  <li><a class="main-nav__link" href="organizers.html">Organizers</a></li>
-                  <li><a class="main-nav__link" href="partners-page.html">Partners</a></li>
-                  <li><a class="main-nav__link" href="contact-us.html">Contacts</a></li>
-                </ul>
-              </div>
+              <ul class="main-nav__list">
+                <li><a class="main-nav__link" href="about.html">About LTM</a></li>
+                <li><a class="main-nav__link" href="#">Registration</a></li>
+                <li><a class="main-nav__link" href="schedule.html">Detailed Schedule</a></li>
+                <li><a class="main-nav__link" href="exhibitors.html">Exhibitors</a></li>
+                <li><a class="main-nav__link" href="gallery.html">Gallery</a></li>
+                <li><a class="main-nav__link" href="organizers.html">Organizers</a></li>
+                <li><a class="main-nav__link" href="partners-page.html">Partners</a></li>
+                <li><a class="main-nav__link" href="contact-us.html">Contacts</a></li>
+              </ul>
             </nav><a class="header__link header__link--sigh-in header__main-right" href="#"><span>Sign in</span>
               <svg width="26" height="30" aria-hidden="true">
                 <use xlink:href="#icon-sign-in"></use>
@@ -2784,7 +2782,7 @@
                   <source media="(max-width: 767px)" srcset="./img/bg/LTM_28_02_1942.png 1x, ./img/bg/LTM_28_02_1942@2x.png 2x"/><img class="promo__img" src="./img/bg/bg-home.png" srcset="./img/bg/bg-home@2x.png" width="1920" height="534" alt="promo image"/>
                 </picture>
                 <div class="container">
-                  <h2 class="promo__title">The leading luxury travel exhibition in eastern europe, russia AND cis</h2><a class="promo__reg" href="registration.html">Registration</a>
+                  <h2 class="promo__title">The leading luxury travel exhibition in eastern europe, russia AND cis</h2><a class="button button--blue promo__reg" href="registration.html">Registration</a>
                 </div>
               </section>
             </div>
@@ -2796,28 +2794,34 @@
             <div class="direction container swiper-container mySwiper">
               <ul class="direction__list swiper-wrapper">
                 <li class="direction__item">
-                  <h2 class="direction__title">Luxury Travel Mart Kyiv 2019 at the Intercontinental Kyiv, Ukraine</h2>
-                  <time class="direction__data" datatime="24.09.2019">24 September 2019</time><span class="direction__status direction__status--ending">Registration ending soon</span>
+                  <p class="direction__title">Luxury Travel Mart Kyiv 2019 at the Intercontinental Kyiv, Ukraine</p>
+                  <time class="direction__data" datatime="24.09.2019">24 September 2019</time>
+                  <p class="direction__status direction__status--ending">Registration ending soon</p>
                 </li>
                 <li class="direction__item">
-                  <h2 class="direction__title">Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan</h2>
-                  <time class="direction__data" datatime="27.09.2019">27 September 2019</time><span class="direction__status direction__status--available">Available</span>
+                  <p class="direction__title">Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan</p>
+                  <time class="direction__data" datatime="27.09.2019">27 September 2019</time>
+                  <p class="direction__status direction__status--available">Available</p>
                 </li>
                 <li class="direction__item">
-                  <h2 class="direction__title">Luxury Travel Mart Moscow 2019 at The Ritz-Carlton, Moscow, Russia</h2>
-                  <time class="direction__data" datatime="01.10.2019">1 October 2019</time><span class="direction__status direction__status--available">Available</span>
+                  <p class="direction__title">Luxury Travel Mart Moscow 2019 at The Ritz-Carlton, Moscow, Russia</p>
+                  <time class="direction__data" datatime="01.10.2019">1 October 2019</time>
+                  <p class="direction__status direction__status--available">Available</p>
                 </li>
                 <li class="direction__item">
-                  <h2 class="direction__title">Luxury Travel Mart Moscow 2020 at Hyatt Regency Moscow, Russia</h2>
-                  <time class="direction__data" datatime="27.02.2020">27–28 February 2020</time><span class="direction__status direction__status--available">Available</span>
+                  <p class="direction__title">Luxury Travel Mart Moscow 2020 at Hyatt Regency Moscow, Russia</p>
+                  <time class="direction__data" datatime="27.02.2020">27–28 February 2020</time>
+                  <p class="direction__status direction__status--available">Available</p>
                 </li>
                 <li class="direction__item">
-                  <h2 class="direction__title">Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan</h2>
-                  <time class="direction__data" datatime="03.03.2020">3 March 2020</time><span class="direction__status direction__status--waiting">Waiting list</span>
+                  <p class="direction__title">Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan</p>
+                  <time class="direction__data" datatime="03.03.2020">3 March 2020</time>
+                  <p class="direction__status direction__status--waiting">Waiting list</p>
                 </li>
                 <li class="direction__item">
-                  <h2 class="direction__title">Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia</h2>
-                  <time class="direction__data" datatime="20.06.2020">20 June 2020</time><span class="direction__status direction__status--waiting">Waiting list</span>
+                  <p class="direction__title">Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia</p>
+                  <time class="direction__data" datatime="20.06.2020">20 June 2020</time>
+                  <p class="direction__status direction__status--waiting">Waiting list</p>
                 </li>
               </ul>
               <div class="direction__arrow swiper-button-next direction__arrow--right">
@@ -2843,16 +2847,18 @@
       <footer class="container">
         <div class="footer">
           <ul class="footer__logotip logotip">
-            <li class="logotip__list"><a class="logotip__item" href="#"><img src="./img/svg/g10.svg" alt="company logo" width="80" height="84"/></a></li>
-            <li class="logotip__list"><a class="logotip__item" href="#"><img src="./img/svg/TM-logo.svg" alt="company logo" width="130" height="57"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="#"><img src="./img/svg/g10.svg" alt="company logo" width="67" height="73"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company" src="./img/svg/TM-logo.svg" alt="company logo" width="110" height="57"/></a></li>
           </ul>
           <div class="footer__mailing mailing">
             <form class="mailing__form" action="#" method="POST">
               <input class="mailing__email" type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
-              <label for="mailing"></label>
-              <button class="mailing__btn">Ok</button>
-              <input class="mailing__check" type="checkbox" id="check" name="check" value="yes"/>
-              <label for="check">I agree</label>
+              <label class="mailing__email-label" for="mailing"></label>
+              <button class="button button--footer-btn" type="button"> Ok</button>
+              <div class="mailing__checkbox">
+                <input class="mailing__check" type="checkbox" id="check" name="check" value="yes"/>
+                <label class="mailing__check-label" for="check">I agree</label>
+              </div>
             </form>
           </div>
           <div class="footer__menu menu">

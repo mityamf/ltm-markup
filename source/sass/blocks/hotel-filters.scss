@@ -1,15 +1,21 @@
 .hotel-filters {
   display: flex;
-  padding: 30px 0;
+  padding: 20px 0;
   margin: 0;
   justify-content: flex-start;
   list-style-type: none;
 
-  h3 {
-    margin-bottom: 30px;
+  border-bottom: 1px solid $color-blue;
+
+  .title--h3 {
+    margin-bottom: 20px;
   }
 
   @include viewport--md {
     flex-wrap: wrap;
+  }
+
+  @include viewport--sm {
+    padding: 0;
   }
 }

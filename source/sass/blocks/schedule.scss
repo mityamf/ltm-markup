@@ -1,26 +1,56 @@
 .schedule {
-  ul {
-    list-style-type: none;
+  padding: 28px 0 0 0;
+  margin: 0;
+
+  @include viewport--sm {
+    padding: 17px 0 0 0;
   }
 
-  &__program {
-    padding: 15px 0;
-    margin: 0;
+  .title--h2 {
+    margin-bottom: 0;
   }
 
   &__days {
-    padding-left: 238px;
+    padding: 30px 238px 10px;
 
     @include viewport--lg {
       padding-left: 90px;
+      padding-right: 90px;
     }
 
     @include viewport--md {
       padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include viewport--sm {
+      padding-bottom: 7px;
     }
   }
 
   &__day {
     padding-left: 0;
+
+    @include viewport--sm {
+      padding-bottom: 10px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 0 6px 0;
+
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 29px;
+    letter-spacing: 0.045em;
+    color: $color-blue;
+
+    @include viewport--md {
+      margin-bottom: 10px;
+    }
+  }
+
+  p {
+    margin-top: 0;
   }
 }

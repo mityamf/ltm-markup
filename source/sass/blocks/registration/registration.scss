@@ -1,6 +1,7 @@
 .registration {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 29px;
 
   @include viewport--sm {
     flex-direction: column;
@@ -12,7 +13,6 @@
   font-size: 38px;
   color: $color-blue;
   font-weight: 300;
-  padding-top: 29px;
   padding-bottom: 25px;
   width: 100%;
   line-height: 30px;
@@ -28,6 +28,7 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 37px;
+  padding-right: 10px;
 
   @include viewport--sm {
     width: 100%;

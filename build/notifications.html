@@ -2683,12 +2683,12 @@
     <div class="wrapper">
       <header class="header">
         <ul class="header__top container">
-          <li class="header__item header__item--search"><a class="header__search-button" href="#">
+          <li class="header__item header__item--search"><a class="header__top-link header__search-button" href="#">
               <svg width="17" height="17" aria-hidden="true">
                 <use xlink:href="#icon-search"></use>
               </svg></a></li>
-          <li class="header__item header__item--terms"><a class="header__link" href="#">Terms & Conditions</a></li>
-          <li class="header__item"><a class="header__link" href="page-rus.html">Рус</a></li>
+          <li class="header__item header__item--terms"><a class="header__top-link" href="#">Terms & Conditions</a></li>
+          <li class="header__item"><a class="header__top-link header__top-link--rus" href="page-rus.html">Рус</a></li>
         </ul>
         <div class="header__main">
           <div class="header__main-wrapper container"><a class="header__logo header__logo--desktop" href="main.html" aria-label="Переход на главную">
@@ -2700,18 +2700,16 @@
               </svg></a>
             <nav class="main-nav">
               <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false"></button>
-              <div class="main-nav__wrapper">
-                <ul class="main-nav__list">
-                  <li><a class="main-nav__link" href="about.html">About LTM</a></li>
-                  <li><a class="main-nav__link" href="#">Registration</a></li>
-                  <li><a class="main-nav__link" href="schedule.html">Detailed Schedule</a></li>
-                  <li><a class="main-nav__link" href="exhibitors.html">Exhibitors</a></li>
-                  <li><a class="main-nav__link" href="gallery.html">Gallery</a></li>
-                  <li><a class="main-nav__link" href="organizers.html">Organizers</a></li>
-                  <li><a class="main-nav__link" href="partners-page.html">Partners</a></li>
-                  <li><a class="main-nav__link" href="contact-us.html">Contacts</a></li>
-                </ul>
-              </div>
+              <ul class="main-nav__list">
+                <li><a class="main-nav__link" href="about.html">About LTM</a></li>
+                <li><a class="main-nav__link" href="#">Registration</a></li>
+                <li><a class="main-nav__link" href="schedule.html">Detailed Schedule</a></li>
+                <li><a class="main-nav__link" href="exhibitors.html">Exhibitors</a></li>
+                <li><a class="main-nav__link" href="gallery.html">Gallery</a></li>
+                <li><a class="main-nav__link" href="organizers.html">Organizers</a></li>
+                <li><a class="main-nav__link" href="partners-page.html">Partners</a></li>
+                <li><a class="main-nav__link" href="contact-us.html">Contacts</a></li>
+              </ul>
             </nav><a class="header__link header__link--sigh-in header__main-right" href="#"><span>Sign in</span>
               <svg width="26" height="30" aria-hidden="true">
                 <use xlink:href="#icon-sign-in"></use>
@@ -2859,12 +2857,12 @@
               </li>
             </ul>
             <div class="swiper-pagination"></div>
-            <div class="direction__arrow swiper-button-next direction__arrow--right">
+            <div class="direction__arrow direction__arrow--right">
               <svg width="11" height="19" aria-hidden="true">
                 <use xlink:href="#arrow-right"></use>
               </svg>
             </div>
-            <div class="direction__arrow swiper-button-prev direction__arrow--left">
+            <div class="direction__arrow direction__arrow--left">
               <svg width="11" height="19" aria-hidden="true">
                 <use xlink:href="#arrow-left"></use>
               </svg>
@@ -2875,16 +2873,18 @@
       <footer class="container">
         <div class="footer">
           <ul class="footer__logotip logotip">
-            <li class="logotip__list"><a class="logotip__item" href="#"><img src="./img/svg/g10.svg" alt="company logo" width="80" height="84"/></a></li>
-            <li class="logotip__list"><a class="logotip__item" href="#"><img src="./img/svg/TM-logo.svg" alt="company logo" width="130" height="57"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="#"><img src="./img/svg/g10.svg" alt="company logo" width="67" height="73"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company" src="./img/svg/TM-logo.svg" alt="company logo" width="110" height="57"/></a></li>
           </ul>
           <div class="footer__mailing mailing">
             <form class="mailing__form" action="#" method="POST">
               <input class="mailing__email" type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
-              <label for="mailing"></label>
-              <button class="mailing__btn">Ok</button>
-              <input class="mailing__check" type="checkbox" id="check" name="check" value="yes"/>
-              <label for="check">I agree</label>
+              <label class="mailing__email-label" for="mailing"></label>
+              <button class="button button--footer-btn" type="button"> Ok</button>
+              <div class="mailing__checkbox">
+                <input class="mailing__check" type="checkbox" id="check" name="check" value="yes"/>
+                <label class="mailing__check-label" for="check">I agree</label>
+              </div>
             </form>
           </div>
           <div class="footer__menu menu">

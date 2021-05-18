@@ -8,4 +8,8 @@ mixin renderTextContentBlock(textList)
   each text in textList
     p=text
 
+mixin renderAboutText(textList)
+  time=textList.date
+  span=textList.venue
+  p=textList.text
 

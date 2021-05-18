@@ -86,3 +86,57 @@
     }
   }
 }
+
+.button {
+  font-weight: 700;
+  outline: 0;
+  display: flex;
+  border: 1px solid #0098c1;
+  border-radius: 1px;
+  color: #0098c1;
+  align-items: center;
+  justify-content: center;
+  line-height: 19px;
+
+  &--footer-btn {
+    width: 22%;
+    max-width: 103px;
+    height: 42px;
+
+    @include viewport--sm {
+      max-width: 78px;
+      margin-left: 10px;
+    }
+  }
+
+  &--open {
+    width: 104px;
+    height: 23px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &--blue {
+    font-size: 18px;
+    font-weight: 300;
+    background-color: #0098c1;
+    color: #ffffff;
+    width: 222px;
+    height: 50px;
+    margin-top: 36px;
+    align-self: center;
+  }
+
+  &--btn-reg {
+    font-size: 20px;
+    font-weight: 300;
+    width: 222px;
+    height: 50px;
+    align-self: center;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}

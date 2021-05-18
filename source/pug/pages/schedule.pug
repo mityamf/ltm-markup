@@ -9,17 +9,18 @@ block variables
 block main
   include ../data/schedule
 
-  +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
-  main.container
-    .schedule
-      .schedule__program
+  main
+    +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem, promoBg.noButtonMod)
+    .container
+      .schedule
         each program in programs
           +renderHeadline2(program.title)
           .schedule__days
             each schedule in program.schedules
-              +renderHeadline2(schedule.subtitle)
+              p.schedule__subtitle=schedule.subtitle
               .schedule__day
                 +renderTextContentBlock(schedule.textList)
 
-    .info-bottom
-      +renderTextContentBlock(scheduleInfoList)
+        .info-bottom
+          +renderTextContentBlock(scheduleInfoList)
+

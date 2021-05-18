@@ -2683,12 +2683,12 @@
     <div class="wrapper">
       <header class="header">
         <ul class="header__top container">
-          <li class="header__item header__item--search"><a class="header__search-button" href="#">
+          <li class="header__item header__item--search"><a class="header__top-link header__search-button" href="#">
               <svg width="17" height="17" aria-hidden="true">
                 <use xlink:href="#icon-search"></use>
               </svg></a></li>
-          <li class="header__item header__item--terms"><a class="header__link" href="#">Terms & Conditions</a></li>
-          <li class="header__item"><a class="header__link" href="page-rus.html">Рус</a></li>
+          <li class="header__item header__item--terms"><a class="header__top-link" href="#">Terms & Conditions</a></li>
+          <li class="header__item"><a class="header__top-link header__top-link--rus" href="page-rus.html">Рус</a></li>
         </ul>
         <div class="header__main">
           <div class="header__main-wrapper container"><a class="header__logo header__logo--desktop" href="main.html" aria-label="Переход на главную">
@@ -2700,18 +2700,16 @@
               </svg></a>
             <nav class="main-nav">
               <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false"></button>
-              <div class="main-nav__wrapper">
-                <ul class="main-nav__list">
-                  <li><a class="main-nav__link main-nav__link--active">About LTM</a></li>
-                  <li><a class="main-nav__link" href="#">Registration</a></li>
-                  <li><a class="main-nav__link" href="schedule.html">Detailed Schedule</a></li>
-                  <li><a class="main-nav__link" href="exhibitors.html">Exhibitors</a></li>
-                  <li><a class="main-nav__link" href="gallery.html">Gallery</a></li>
-                  <li><a class="main-nav__link" href="organizers.html">Organizers</a></li>
-                  <li><a class="main-nav__link" href="partners-page.html">Partners</a></li>
-                  <li><a class="main-nav__link" href="contact-us.html">Contacts</a></li>
-                </ul>
-              </div>
+              <ul class="main-nav__list">
+                <li><a class="main-nav__link main-nav__link--active">About LTM</a></li>
+                <li><a class="main-nav__link" href="#">Registration</a></li>
+                <li><a class="main-nav__link" href="schedule.html">Detailed Schedule</a></li>
+                <li><a class="main-nav__link" href="exhibitors.html">Exhibitors</a></li>
+                <li><a class="main-nav__link" href="gallery.html">Gallery</a></li>
+                <li><a class="main-nav__link" href="organizers.html">Organizers</a></li>
+                <li><a class="main-nav__link" href="partners-page.html">Partners</a></li>
+                <li><a class="main-nav__link" href="contact-us.html">Contacts</a></li>
+              </ul>
             </nav><a class="header__link header__link--sigh-in header__main-right" href="#"><span>Sign in</span>
               <svg width="26" height="30" aria-hidden="true">
                 <use xlink:href="#icon-sign-in"></use>
@@ -2731,44 +2729,43 @@
           </div>
         </div>
       </header>
-      <section class="promo">
-        <picture>
-          <source media="(max-width: 767px)" srcset="img/bg/LTM_28_02_1942.png 1x, img/bg/LTM_28_02_1942@2x.png 2x"/><img class="promo__img" src="img/bg/about-page-desktop.png" srcset="img/bg/bg-home@2x.png" width="1920" height="534" alt="promo image"/>
-        </picture>
-        <div class="container promo__info promo__text-wrapper">
-          <h2 class="promo__title">The leading luxury travel exhibition in eastern europe, russia &amp; cis</h2>
-        </div>
-      </section>
-      <main class="container">
-        <div class="about">
+      <main>
+        <section class="promo promo--no-button">
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/bg/about-promo-mobile.png 1x, img/bg/about-promo-mobile@2x.png 2x"/><img class="promo__img" src="img/bg/about-promo-desktop.png" srcset="img/bg/about-promo-desktop@2x.png" width="1920" height="534" alt="promo image"/>
+          </picture>
+          <div class="container promo__info promo__text-wrapper">
+            <h2 class="promo__title">The leading luxury travel exhibition in eastern europe, russia &amp; cis</h2>
+          </div>
+        </section>
+        <div class="container about">
           <div class="about__content">
             <h2 class="title--h2">About the Event</h2>
-            <p>Since its very first year, Luxury Travel Mart has become the most successful event in the luxury travel segment in Russia. This is a B2B event for companies that offer luxury products, who wish to establish new contacts and strengthen old ties on the Russian and CIS markets.</p>
-            <p>Companies that participate in the Luxury Travel Mart include five-star hotels and resorts, elite car companies, cruise and yacht charter companies, private jet charters, DMC and luxury operators. Most of the best-known brands in the luxury travel industry have participated and continue to participate in LTM each year.</p>
-            <p>This B2B event has been carefully thought out and planned in such a way that sellers and potential buyers of services – companies working with VIP clients, have the opportunity to establish partnerships within the space of a single day. The main aim of the of the organizers of the Luxury Travel Mart is to expand the geography of sales of the exhibition’s participants and also to introduce layers to new areas and services to which they previously did not have access.</p>
-            <p>Luxury Travel Mart does not aim to set records in terms of quantity (although with every year the numbers increase for all exhibitors and visitors), but prefers instead to set the highest standards of quality.</p>
+            <div class="about__text-wrapper about__text-wrapper--small">
+              <p>Since its very first year, Luxury Travel Mart has become the most successful event in the luxury travel segment in Russia. This is a B2B event for companies that offer luxury products, who wish to establish new contacts and strengthen old ties on the Russian and CIS markets.</p>
+              <p>Companies that participate in the Luxury Travel Mart include five-star hotels and resorts, elite car companies, cruise and yacht charter companies, private jet charters, DMC and luxury operators. Most of the best-known brands in the luxury travel industry have participated and continue to participate in LTM each year.</p>
+              <p>This B2B event has been carefully thought out and planned in such a way that sellers and potential buyers of services – companies working with VIP clients, have the opportunity to establish partnerships within the space of a single day. The main aim of the of the organizers of the Luxury Travel Mart is to expand the geography of sales of the exhibition’s participants and also to introduce layers to new areas and services to which they previously did not have access.</p>
+              <p>Luxury Travel Mart does not aim to set records in terms of quantity (although with every year the numbers increase for all exhibitors and visitors), but prefers instead to set the highest standards of quality.</p>
+            </div>
             <button class="btn btn--white" type="button" aria-label="Показать больше">Read More</button>
-            <h2 class="title--h2">Luxury Travel Mart currently organises 5 events a year:</h2>
-            <h3 class="title--h3">Luxury Travel Mart Moscow, Russia, Spring Edition</h3>
-            <p>Dates for 2019: February 28 – March 1 (two-days event)</p>
-            <p>Venue: Hyatt Regency Moscow Petrovsky Park</p>
-            <p>Approximate number of guests: 360 hosted buyers at the first day, 400 at the morning session of the second day, over 1000 guests at the evening reception.</p>
-            <h3 class="title--h3">Luxury Travel Mart Almaty, Kazakhstan, Spring Edition</h3>
-            <p>Date for 2019: March 5</p>
-            <p>Venue: The Ritz-Carlton, Almaty</p>
-            <p>Approximate number of guests: 110-125 at the morning session, 50 hosted buyers, 200-230 guests at the evening session.</p>
-            <h3 class="title--h3">Luxury Travel Mart Kyiv, Ukraine</h3>
-            <p>Date for 2019: September 24</p>
-            <p>Venue: InterContinental Kiev</p>
-            <p>Approximate number of guests: 200-220 at the morning session, 50 hosted buyers, 300-350 guests at the evening session.</p>
-            <h3 class="title--h3">Luxury Travel Mart Almaty, Kazakhstan, Autumn Edition</h3>
-            <p>Date for 2019: September 27</p>
-            <p>Venue: The Ritz-Carlton, Almaty</p>
-            <p>Approximate number of guests: 110-125 at the morning session, 50 hosted buyers, 200-230 guests at the evening session.</p>
-            <h3 class="title--h3">Luxury Travel Mart Moscow, Russia, Autumn Edition</h3>
-            <p>Date for 2019: October 1</p>
-            <p>Venue: The Ritz-Carlton, Moscow</p>
-            <p>Approximate number of guests: 300-350 at the morning session, 145 hosted buyers, 800-850 guests at the evening session.</p>
+            <div class="about__text-wrapper about__text-wrapper--dates">
+              <h2 class="title--h2">Luxury Travel Mart currently organises 5 events a year:</h2>
+              <h3 class="title--h3">Luxury Travel Mart Moscow, Russia, Spring Edition</h3>
+              <time>Dates for 2019: February 28 – March 1 (two-days event)</time><span>Venue: Hyatt Regency Moscow Petrovsky Park</span>
+              <p>Approximate number of guests: 360 hosted buyers at the first day, 400 at the morning session of the second day, over 1000 guests at the evening reception.</p>
+              <h3 class="title--h3">Luxury Travel Mart Almaty, Kazakhstan, Spring Edition</h3>
+              <time>Date for 2019: March 5</time><span>Venue: The Ritz-Carlton, Almaty</span>
+              <p>Approximate number of guests: 110-125 at the morning session, 50 hosted buyers, 200-230 guests at the evening session.</p>
+              <h3 class="title--h3">Luxury Travel Mart Kyiv, Ukraine</h3>
+              <time>Date for 2019: September 24</time><span>Venue: InterContinental Kiev</span>
+              <p>Approximate number of guests: 200-220 at the morning session, 50 hosted buyers, 300-350 guests at the evening session.</p>
+              <h3 class="title--h3">Luxury Travel Mart Almaty, Kazakhstan, Autumn Edition</h3>
+              <time>Date for 2019: September 27</time><span>Venue: The Ritz-Carlton, Almaty</span>
+              <p>Approximate number of guests: 110-125 at the morning session, 50 hosted buyers, 200-230 guests at the evening session.</p>
+              <h3 class="title--h3">Luxury Travel Mart Moscow, Russia, Autumn Edition</h3>
+              <time>Date for 2019: October 1</time><span>Venue: The Ritz-Carlton, Moscow</span>
+              <p>Approximate number of guests: 300-350 at the morning session, 145 hosted buyers, 800-850 guests at the evening session.</p>
+            </div>
           </div>
           <aside class="about__aside">
             <h2 class="title--h2">Overview</h2>
@@ -2835,16 +2832,18 @@
       <footer class="container">
         <div class="footer">
           <ul class="footer__logotip logotip">
-            <li class="logotip__list"><a class="logotip__item" href="#"><img src="./img/svg/g10.svg" alt="company logo" width="80" height="84"/></a></li>
-            <li class="logotip__list"><a class="logotip__item" href="#"><img src="./img/svg/TM-logo.svg" alt="company logo" width="130" height="57"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="#"><img src="./img/svg/g10.svg" alt="company logo" width="67" height="73"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company" src="./img/svg/TM-logo.svg" alt="company logo" width="110" height="57"/></a></li>
           </ul>
           <div class="footer__mailing mailing">
             <form class="mailing__form" action="#" method="POST">
               <input class="mailing__email" type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
-              <label for="mailing"></label>
-              <button class="mailing__btn">Ok</button>
-              <input class="mailing__check" type="checkbox" id="check" name="check" value="yes"/>
-              <label for="check">I agree</label>
+              <label class="mailing__email-label" for="mailing"></label>
+              <button class="button button--footer-btn" type="button"> Ok</button>
+              <div class="mailing__checkbox">
+                <input class="mailing__check" type="checkbox" id="check" name="check" value="yes"/>
+                <label class="mailing__check-label" for="check">I agree</label>
+              </div>
             </form>
           </div>
           <div class="footer__menu menu">

@@ -1,9 +1,13 @@
+.direction {
+  padding-top: 30px;
+}
+
 .direction__list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  padding-top: 30px;
+  //padding-top: 30px;
   flex-direction: row;
   justify-content: space-between;
 
@@ -48,6 +52,7 @@
   text-align: center;
   font-size: 14px;
   font-weight: 600;
+  margin: 0;
 
   &--ending {
     color: $color-red;
@@ -66,6 +71,7 @@
   position: relative;
   margin: 0 auto;
   padding: 0 50px;
+  padding-top: 30px;
   max-width: 1510px;
 
   .swiper-container {
@@ -74,10 +80,12 @@
 
   @media (max-width: 1439px) {
     padding: 0 80px;
+    padding-top: 30px;
   }
 
   @media (max-width: 1023px) {
     padding: 0 24px;
+    padding-top: 30px;
   }
 
   @include viewport--sm {

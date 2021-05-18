@@ -79,21 +79,28 @@
   }
 }
 
-.promo__reg {
-  font-size: 18px;
-  font-weight: 300;
-  background-color: $color-blue;
-  color: $color-default-white;
-  width: 222px;
-  height: 50px;
-  margin-top: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
+.promo--no-button {
 
-  &:hover,
-  &:focus {
-    opacity: 0.8;
+
+  .promo__title {
+    margin: 0;
+    color: $color-default-white;
+    font-size: 36px;
+    font-weight: 300;
+    font-family: "Proxima Nova", "Arial", sans-serif;
+    text-transform: uppercase;
+    line-height: 43px;
+    letter-spacing: 2px;
+
+    @include viewport--md {
+      font-size: 30px;
+      line-height: 36px;
+      letter-spacing: 0;
+    }
+
+    @include viewport--sm {
+      font-size: 22px;
+      line-height: 26px;
+    }
   }
 }
