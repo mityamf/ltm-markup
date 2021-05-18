@@ -2206,6 +2206,25 @@ p {
     .promo__title {
       font-size: 22px; } }
 
+.promo--no-button .promo__title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 300;
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  text-transform: uppercase;
+  line-height: 43px;
+  letter-spacing: 2px; }
+  @media (max-width: 1023px) {
+    .promo--no-button .promo__title {
+      font-size: 30px;
+      line-height: 36px;
+      letter-spacing: 0; } }
+  @media (max-width: 767px) {
+    .promo--no-button .promo__title {
+      font-size: 22px;
+      line-height: 26px; } }
+
 .direction {
   padding-top: 30px; }
 
@@ -4160,12 +4179,15 @@ p {
       padding: 0;
       margin: 0;
       list-style-type: none; }
-      @media (max-width: 767px) {
+      @media (max-width: 1023px) {
         .about__aside ul {
           padding-top: 15px; } }
     .about__aside li {
       margin-bottom: 40px;
       text-align: center; }
+      @media (max-width: 1023px) {
+        .about__aside li {
+          margin-bottom: 31px; } }
     .about__aside img {
       margin: 0 auto 10px auto;
       text-align: center; }
@@ -4178,7 +4200,7 @@ p {
     @media (max-width: 1023px) {
       .about .btn {
         display: block;
-        margin: 30px auto;
+        margin: 39px auto 30px auto;
         padding: 15px;
         width: 100%;
         max-width: 222px; } }

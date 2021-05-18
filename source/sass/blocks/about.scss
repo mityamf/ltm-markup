@@ -52,7 +52,7 @@
       margin: 0;
       list-style-type: none;
 
-      @include viewport--sm {
+      @include viewport--md {
         padding-top: 15px;
       }
     }
@@ -61,6 +61,10 @@
       margin-bottom: 40px;
 
       text-align: center;
+
+      @include viewport--md {
+        margin-bottom: 31px;
+      }
     }
 
     img {
@@ -81,7 +85,7 @@
 
     @include viewport--md {
       display: block;
-      margin: 30px auto;
+      margin: 39px auto 30px auto;
       padding: 15px;
       width: 100%;
       max-width: 222px;
