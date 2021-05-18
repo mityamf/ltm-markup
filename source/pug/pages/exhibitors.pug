@@ -8,11 +8,11 @@ block variables
   -
     var promoBg = {
       titleItem: "The leading luxury travel exhibition in eastern europe, russia & cis",
-      imgItem: "img/bg/schedule-page-desktop.png",
-      img2xItem: "img/bg/bg-home@2x.png",
+      imgItem: "img/bg/exhibitors-promo-desktop.png",
+      img2xItem: "img/bg/exhibitors-promo-desktop@2x.png",
       widthItem: "1920",
       heightItem: "534",
-      imgSource: "img/bg/LTM_28_02_1942.png 1x, img/bg/LTM_28_02_1942@2x.png 2x",
+      imgSource: "img/bg/exhibitors-promo-mobile.png 1x, img/bg/exhibitors-promo-mobile@2x.png 2x",
       classItem: "promo__reg",
       promoItem: "promo__info promo__text-wrapper"
     }
@@ -45,19 +45,10 @@ block main
           button.btn.btn--white.hotel-filter__buttons--filters(type="button")="filters"
         button.btn.btn--white.hotel-filter__buttons--clear(type="reset")="Clear all filters"
 
-
-
       ul.hotel-filters
         each filter in filters
           +renderFilter(filter.title, filter.mod, filter.filterList)
         button.btn.btn--white.hotel-filter--reset(type="reset")="Clear all"
-
-        //li.hotel-filter--btns
-        //  .hotel-filter--btns-wrapper
-        //    +icon("icon-filters", 17, 17)
-        //    button.btn.btn--white.hotel-filter--btn-filters(type="button")="filters"
-        //  button.btn.btn--white.hotel-filter--clear(type="reset")="Clear all"
-        //  button.btn.btn--white.hotel-filter--btn-clear(type="reset")="Clear all filters"
 
       .exhibitors
         ul.hotel-cards
