@@ -52,7 +52,7 @@
   margin-bottom: 36px;
 }
 
-.privacy-policy__item {
+.privacy-policy__list li {
   margin-bottom: 24px;
 
   &:last-of-type {
@@ -60,6 +60,17 @@
   }
 }
 
-.privacy-policy__question {
-  margin: 0;
+.privacy-policy__list h3  {
+  margin-bottom: 15px;
+  margin-top: 11px;
+
+  font-size: 24px;
+  font-weight: lighter;
+  line-height: 29px;
+  letter-spacing: 0.045em;
+  color: $color-blue;
+
+  @include viewport--md {
+    margin-bottom: 10px;
+  }
 }
