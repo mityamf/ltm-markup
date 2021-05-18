@@ -4201,6 +4201,9 @@ p {
       @media (max-width: 1439px) {
         .about__aside ul {
           padding-top: 15px; } }
+      @media (max-width: 767px) {
+        .about__aside ul {
+          padding-top: 22px; } }
     .about__aside li {
       margin-bottom: 40px;
       text-align: center; }
@@ -4229,9 +4232,11 @@ p {
       overflow: hidden; } }
   @media (max-width: 1023px) {
     .about__text-wrapper--small {
-      padding-top: 10px;
       max-height: 136px;
       overflow: hidden; } }
+  @media (max-width: 1023px) {
+    .about__text-wrapper--small p:first-child {
+      margin-top: 0; } }
   .about__text-wrapper--dates {
     padding: 16px 0 0 0; }
     @media (max-width: 767px) {
