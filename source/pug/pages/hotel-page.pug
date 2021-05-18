@@ -28,6 +28,7 @@ block main
       .hotel-page
         +renderHotelPhotos(hotelPhotos.photoList)
         +renderImageSlider(hotelPhotos.photoList)
+        a(href="#", data-modal="gallery") Показать все фото
 
         .hotel-page__info-block
           img(src=hotel.logo)
@@ -40,4 +41,6 @@ block main
             .hotel-page__text-list
               +renderTextContentBlock(hotel.textList)
 
-
+block modals
+  +modal("modal-gallery")
+    +modal-gallery()
