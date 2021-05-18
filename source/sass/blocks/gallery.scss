@@ -1,6 +1,7 @@
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 30px;
 
   &__section {
     width: calc((100% - 15px) / 2);
@@ -22,7 +23,7 @@
     }
   }
 
-  @include viewport--sm {
+  @include viewport--md {
     &__section {
       width: 100%;
       margin-right: 0;
