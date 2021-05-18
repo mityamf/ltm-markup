@@ -11,6 +11,7 @@ import {homeSwiper} from './modules/home-swiper';
 import {initSwiper} from './modules/init-swiper';
 import {initSmoothAnchors} from './modules/init-smooth-anchors';
 import {dropdown} from './modules/dropdown';
+import {initModalGallerySwiper} from './modules/init-modal-gallery-swiper';
 
 // Utils
 // ---------------------------------
@@ -31,3 +32,4 @@ initSwiper();
 dropdown();
 initSmoothAnchors();
 homeSwiper();
+initModalGallerySwiper();
