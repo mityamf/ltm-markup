@@ -28,6 +28,10 @@
       margin-right: 10px;
     }
 
+    @include viewport--md {
+      height: 220px;
+    }
+
     @include viewport--sm {
       width: 100%;
       margin-right: 0;
@@ -45,6 +49,10 @@
 
     li:last-child {
       margin-right: 0;
+    }
+
+    @include viewport--md {
+      min-height: 500px;
     }
 
     @include viewport--sm {
@@ -66,6 +74,10 @@
       width: calc((100% - 20px) / 3);
     }
 
+    @include viewport--md {
+      height: 270px;
+    }
+
     @include viewport--sm {
       width: 100%;
       height: 375px;
@@ -80,6 +92,10 @@
     @include viewport--lg {
       width: calc((((100% - 20px) / 3) * 2) + 10px);
       margin-right: 10px;
+    }
+
+    @include viewport--md {
+      height: 270px;
     }
 
     @include viewport--sm {
@@ -177,5 +193,11 @@
     @include viewport--sm {
       padding: 0 16.5px;
     }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
