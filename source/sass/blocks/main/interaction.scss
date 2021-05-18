@@ -3,9 +3,10 @@
   border-top: 1px solid $color-blue;
   padding-top: 30px;
   padding-bottom: 50px;
+  justify-content: space-between;
 
   &__reg {
-    width: 40%;
+    width: 52%;
     padding-right: 16px;
     position: relative;
 
@@ -24,11 +25,14 @@
     @include viewport--sm {
       width: 100%;
     }
+
+    @media (min-width: 1440px) {
+      width: 40%;
+    }
   }
 
   &__gallery {
     width: 80%;
-    position: relative;
 
     @include viewport--sm {
       display: none;
