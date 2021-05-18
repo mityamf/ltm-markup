@@ -80,7 +80,19 @@
 }
 
 .promo--no-button {
+  min-height: 534px;
+  padding-top: 458px;
 
+  @include viewport--lg {
+    min-height: 521px;
+    padding-top: 433px;
+  }
+
+  @include viewport--sm {
+    min-height: 375px;
+    padding-top: 280px;
+    padding-bottom: 10px;
+  }
 
   .promo__title {
     margin: 0;
@@ -92,7 +104,7 @@
     line-height: 43px;
     letter-spacing: 2px;
 
-    @include viewport--md {
+    @include viewport--lg {
       font-size: 30px;
       line-height: 36px;
       letter-spacing: 0;
