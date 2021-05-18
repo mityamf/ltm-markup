@@ -3,7 +3,8 @@
   flex-wrap: wrap;
   list-style-type: none;
   width: calc(100% + 15px);
-  padding: 0;
+  padding: 69px 0 0 0;
+  max-width: 1062px;
   margin: 0 0 auto;
 
   @include viewport--lg {

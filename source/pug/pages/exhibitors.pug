@@ -27,7 +27,6 @@ block main
   main
     +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
     .container
-
       section.direction.direction__swiper
         .swiper-container.direction__swiper-block
           +renderHeadline2(chooseEvent.title)
@@ -40,15 +39,25 @@ block main
           .direction__arrow.direction__arrow--left
             +icon("arrow-left", "11", "19")
 
+      .hotel-filter__buttons
+        .hotel-filter--buttons-wrapper
+          +icon("icon-filters", 17, 17)
+          button.btn.btn--white.hotel-filter__buttons--filters(type="button")="filters"
+        button.btn.btn--white.hotel-filter__buttons--clear(type="reset")="Clear all filters"
+
+
+
       ul.hotel-filters
         each filter in filters
           +renderFilter(filter.title, filter.mod, filter.filterList)
-        li.hotel-filter--btns
-          .hotel-filter--btns-wrapper
-            +icon("icon-filters", 17, 17)
-            button.btn.btn--white.hotel-filter--btn-filters(type="button")="filters"
-          button.btn.btn--white.hotel-filter--clear(type="reset")="Clear all"
-          button.btn.btn--white.hotel-filter--btn-clear(type="reset")="Clear all filters"
+        button.btn.btn--white.hotel-filter--reset(type="reset")="Clear all"
+
+        //li.hotel-filter--btns
+        //  .hotel-filter--btns-wrapper
+        //    +icon("icon-filters", 17, 17)
+        //    button.btn.btn--white.hotel-filter--btn-filters(type="button")="filters"
+        //  button.btn.btn--white.hotel-filter--clear(type="reset")="Clear all"
+        //  button.btn.btn--white.hotel-filter--btn-clear(type="reset")="Clear all filters"
 
       .exhibitors
         ul.hotel-cards

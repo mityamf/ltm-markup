@@ -2802,6 +2802,15 @@
               </div>
             </div>
           </section>
+          <div class="hotel-filter__buttons">
+            <div class="hotel-filter--buttons-wrapper">
+              <svg width="17" height="17" aria-hidden="true">
+                <use xlink:href="#icon-filters"></use>
+              </svg>
+              <button class="btn btn--white hotel-filter__buttons--filters" type="button">filters</button>
+            </div>
+            <button class="btn btn--white hotel-filter__buttons--clear" type="reset">Clear all filters</button>
+          </div>
           <ul class="hotel-filters">
             <li class="hotel-filter hotel-filter--list">
               <h3 class="title--h3">Alphabetically:</h3>
@@ -2872,19 +2881,88 @@
                 <option class="input-dropdown__option" value="Awesome hotel Ritz">Awesome hotel Ritz</option>
               </select>
             </li>
-            <li class="hotel-filter--btns">
-              <div class="hotel-filter--btns-wrapper">
-                <svg width="17" height="17" aria-hidden="true">
-                  <use xlink:href="#icon-filters"></use>
-                </svg>
-                <button class="btn btn--white hotel-filter--btn-filters" type="button">filters</button>
-              </div>
-              <button class="btn btn--white hotel-filter--clear" type="reset">Clear all</button>
-              <button class="btn btn--white hotel-filter--btn-clear" type="reset">Clear all filters</button>
-            </li>
+            <button class="btn btn--white hotel-filter--reset" type="reset">Clear all</button>
+            <!--li.hotel-filter--btns-->
+            <!--  .hotel-filter--btns-wrapper-->
+            <!--    +icon("icon-filters", 17, 17)-->
+            <!--    button.btn.btn--white.hotel-filter--btn-filters(type="button")="filters"-->
+            <!--  button.btn.btn--white.hotel-filter--clear(type="reset")="Clear all"-->
+            <!--  button.btn.btn--white.hotel-filter--btn-clear(type="reset")="Clear all filters"-->
           </ul>
           <div class="exhibitors">
             <ul class="hotel-cards">
+              <li class="hotel-card"><a class="hotel-card__link" href="#">
+                  <ul class="hotel-card__photos"><img class="hotel-card__photo--big" src="../img/content/exhibition-mandarin-1.jpg"/><img class="hotel-card__photo--small" src="../img/content/exhibition-mandarin-2.jpg"/>
+                  </ul>
+                  <div class="hotel-card__info"><img src="../img/svg/mandarin-logo.svg"/>
+                    <h2 class="hotel-card__title">Mandarin Oriental Hotel Group</h2>
+                  </div></a></li>
+              <li class="hotel-card"><a class="hotel-card__link" href="#">
+                  <ul class="hotel-card__photos"><img class="hotel-card__photo--big" src="../img/content/exhibition-ritz-1.jpg"/><img class="hotel-card__photo--small" src="../img/content/exhibition-ritz-2.jpg"/>
+                  </ul>
+                  <div class="hotel-card__info"><img src="../img/svg/ritz-logo.svg"/>
+                    <h2 class="hotel-card__title">The Ritz-Carlton, Moscow and Very long name for best usability at this site. Name participant have to be loong</h2>
+                  </div></a></li>
+              <li class="hotel-card"><a class="hotel-card__link" href="#">
+                  <ul class="hotel-card__photos"><img class="hotel-card__photo--big" src="../img/content/exhibition-hyatt-1.jpg"/><img class="hotel-card__photo--small" src="../img/content/exhibition-hyatt-2.jpg"/>
+                  </ul>
+                  <div class="hotel-card__info"><img src="../img/svg/hyatt-logo.svg"/>
+                    <h2 class="hotel-card__title">Hyatt Regency Moscow Petrovsky Park</h2>
+                  </div></a></li>
+              <li class="hotel-card"><a class="hotel-card__link" href="#">
+                  <ul class="hotel-card__photos"><img class="hotel-card__photo--big" src="../img/content/exhibition-hyatt-1.jpg"/><img class="hotel-card__photo--small" src="../img/content/exhibition-hyatt-2.jpg"/>
+                  </ul>
+                  <div class="hotel-card__info"><img src="../img/svg/hyatt-logo.svg"/>
+                    <h2 class="hotel-card__title">Hyatt Regency Moscow Petrovsky Park</h2>
+                  </div></a></li>
+              <li class="hotel-card"><a class="hotel-card__link" href="#">
+                  <ul class="hotel-card__photos"><img class="hotel-card__photo--big" src="../img/content/exhibition-mandarin-1.jpg"/><img class="hotel-card__photo--small" src="../img/content/exhibition-mandarin-2.jpg"/>
+                  </ul>
+                  <div class="hotel-card__info"><img src="../img/svg/mandarin-logo.svg"/>
+                    <h2 class="hotel-card__title">Mandarin Oriental Hotel Group</h2>
+                  </div></a></li>
+              <li class="hotel-card"><a class="hotel-card__link" href="#">
+                  <ul class="hotel-card__photos"><img class="hotel-card__photo--big" src="../img/content/exhibition-ritz-1.jpg"/><img class="hotel-card__photo--small" src="../img/content/exhibition-ritz-2.jpg"/>
+                  </ul>
+                  <div class="hotel-card__info"><img src="../img/svg/ritz-logo.svg"/>
+                    <h2 class="hotel-card__title">The Ritz-Carlton, Moscow and Very long name for best usability at this site. Name participant have to be loong</h2>
+                  </div></a></li>
+              <li class="hotel-card"><a class="hotel-card__link" href="#">
+                  <ul class="hotel-card__photos"><img class="hotel-card__photo--big" src="../img/content/exhibition-hyatt-1.jpg"/><img class="hotel-card__photo--small" src="../img/content/exhibition-hyatt-2.jpg"/>
+                  </ul>
+                  <div class="hotel-card__info"><img src="../img/svg/hyatt-logo.svg"/>
+                    <h2 class="hotel-card__title">Hyatt Regency Moscow Petrovsky Park</h2>
+                  </div></a></li>
+              <li class="hotel-card"><a class="hotel-card__link" href="#">
+                  <ul class="hotel-card__photos"><img class="hotel-card__photo--big" src="../img/content/exhibition-hyatt-1.jpg"/><img class="hotel-card__photo--small" src="../img/content/exhibition-hyatt-2.jpg"/>
+                  </ul>
+                  <div class="hotel-card__info"><img src="../img/svg/hyatt-logo.svg"/>
+                    <h2 class="hotel-card__title">Hyatt Regency Moscow Petrovsky Park</h2>
+                  </div></a></li>
+              <li class="hotel-card"><a class="hotel-card__link" href="#">
+                  <ul class="hotel-card__photos"><img class="hotel-card__photo--big" src="../img/content/exhibition-mandarin-1.jpg"/><img class="hotel-card__photo--small" src="../img/content/exhibition-mandarin-2.jpg"/>
+                  </ul>
+                  <div class="hotel-card__info"><img src="../img/svg/mandarin-logo.svg"/>
+                    <h2 class="hotel-card__title">Mandarin Oriental Hotel Group</h2>
+                  </div></a></li>
+              <li class="hotel-card"><a class="hotel-card__link" href="#">
+                  <ul class="hotel-card__photos"><img class="hotel-card__photo--big" src="../img/content/exhibition-ritz-1.jpg"/><img class="hotel-card__photo--small" src="../img/content/exhibition-ritz-2.jpg"/>
+                  </ul>
+                  <div class="hotel-card__info"><img src="../img/svg/ritz-logo.svg"/>
+                    <h2 class="hotel-card__title">The Ritz-Carlton, Moscow and Very long name for best usability at this site. Name participant have to be loong</h2>
+                  </div></a></li>
+              <li class="hotel-card"><a class="hotel-card__link" href="#">
+                  <ul class="hotel-card__photos"><img class="hotel-card__photo--big" src="../img/content/exhibition-hyatt-1.jpg"/><img class="hotel-card__photo--small" src="../img/content/exhibition-hyatt-2.jpg"/>
+                  </ul>
+                  <div class="hotel-card__info"><img src="../img/svg/hyatt-logo.svg"/>
+                    <h2 class="hotel-card__title">Hyatt Regency Moscow Petrovsky Park</h2>
+                  </div></a></li>
+              <li class="hotel-card"><a class="hotel-card__link" href="#">
+                  <ul class="hotel-card__photos"><img class="hotel-card__photo--big" src="../img/content/exhibition-hyatt-1.jpg"/><img class="hotel-card__photo--small" src="../img/content/exhibition-hyatt-2.jpg"/>
+                  </ul>
+                  <div class="hotel-card__info"><img src="../img/svg/hyatt-logo.svg"/>
+                    <h2 class="hotel-card__title">Hyatt Regency Moscow Petrovsky Park</h2>
+                  </div></a></li>
               <li class="hotel-card"><a class="hotel-card__link" href="#">
                   <ul class="hotel-card__photos"><img class="hotel-card__photo--big" src="../img/content/exhibition-mandarin-1.jpg"/><img class="hotel-card__photo--small" src="../img/content/exhibition-mandarin-2.jpg"/>
                   </ul>
