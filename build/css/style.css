@@ -4228,7 +4228,7 @@ p {
         max-width: 222px; } }
   @media (max-width: 767px) {
     .about__text-wrapper--mobile {
-      max-height: 136px;
+      max-height: 135px;
       overflow: hidden; } }
   @media (max-width: 1023px) {
     .about__text-wrapper--small {

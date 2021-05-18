@@ -107,7 +107,7 @@
 
   &__text-wrapper--mobile {
     @include viewport--sm {
-      max-height: 136px;
+      max-height: 135px;
       overflow: hidden;
     }
   }
