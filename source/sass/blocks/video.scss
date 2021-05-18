@@ -7,6 +7,10 @@
 
   &__container {
     height: 392px;
+
+    @include viewport--md {
+      height: 500px;
+    }
   }
 
   &__player {
