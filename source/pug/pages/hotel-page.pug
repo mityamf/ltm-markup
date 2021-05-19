@@ -6,7 +6,7 @@ block variables
   - var hasFooter = true
   -
     var promoBg = {
-      titleItem: "The leading luxury travel exhibition in eastern europe, russia & cis",
+      titleItem: "MANDARIN ORIENTAL HOTEL GROUP",
       imgItem: "img/bg/hotel-promo-desktop.png",
       img2xItem: "img/bg/hotel-promo-desktop@2x.png",
       widthItem: "1920",
@@ -23,11 +23,11 @@ block main
 
   main.container--hotel-page
     +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem, promoBg.noButtonMod)
+    +renderImageSlider(hotelPhotos.photoList)
     .container
 
       .hotel-page
         +renderHotelPhotos(hotelPhotos.photoList)
-        +renderImageSlider(hotelPhotos.photoList)
 
         .hotel-page__info-block
           img(src=hotel.logo)

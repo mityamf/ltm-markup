@@ -1,25 +1,52 @@
 .hotel-page {
-  padding-top: 15px;
+  padding-top: 1px;
+  padding-bottom: 35px;
+
+  @include viewport--lg {
+    padding-bottom: 0;
+  }
+
+  @include viewport--sm {
+    padding-bottom: 31px;
+  }
 
   &__info-block {
     display: flex;
-    padding: 20px 0;
+    padding: 0;
     clear: both;
 
     @include viewport--sm {
       flex-direction: column;
+      padding-top: 8px;
     }
 
     img {
-      margin: 0 0 auto 0;
-      padding: 20px;
+      margin: 0 0 auto;
+      padding: 15px 0 0 50px;
       display: flex;
       flex: 1;
       min-width: 120px;
       min-height: 120px;
-      max-width: 120px;
-      max-height: 150px;
+      max-width: 173px;
+      max-height: 180px;
       object-fit: contain;
+
+      @include viewport--lg {
+        margin: 0 0 auto;
+        padding: 0 0 0 34px;
+        display: flex;
+        flex: 1;
+        min-width: 120px;
+        min-height: 123px;
+        max-width: 150px;
+        max-height: 183px;
+        object-fit: contain;
+      }
+
+      @include viewport--md {
+        padding: 0;
+        max-width: 120px;
+      }
 
       @include viewport--sm {
         margin: 0 auto;
@@ -30,21 +57,40 @@
 
   &__description {
     flex: 1;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 65px;
+
+    @include viewport--lg {
+      padding: 0 0 0 40px;
+    }
 
     @include viewport--sm {
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
+      padding: 0 0 0 0;
     }
   }
 
   &__text-list {
     margin: 0;
-    padding: 0;
+    padding: 35px 0 0 0;
     list-style-type: none;
+
+    @include viewport--lg {
+      padding: 26px 0 0;
+    }
+
+    @include viewport--sm {
+      padding: 0;
+    }
 
     p {
       width: 935px;
+    }
+
+    p:first-of-type {
+      @include viewport--sm {
+        margin-top: 0;
+      }
     }
 
     @include viewport--lg {
@@ -77,7 +123,7 @@
     justify-content: space-between;
 
     @include viewport--md {
-      order: 2;
+      flex-wrap: wrap;
     }
 
     @include viewport--sm {
@@ -89,22 +135,35 @@
 
   &__title > h2 {
     margin-bottom: 0;
+
+    @include viewport--lg {
+      padding-right: 0;
+    }
   }
 
   &__links {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include viewport--sm {
+      padding-top: 10px;
+    }
   }
 
   .back-link {
-    display: block;
+    display: flex;
     text-align: right;
     clear: both;
-    margin-bottom: 20px;
+    margin: 5px 23px 30px auto;
+    align-items: center;
 
-    @include viewport--sm {
+    @include viewport--md {
       display: none;
+    }
+
+    svg {
+      margin-right: 5px;
     }
   }
 
@@ -112,6 +171,7 @@
     font-size: 24px;
     line-height: 29px;
     font-weight: lighter;
+    letter-spacing: 1px;
 
     @include viewport--sm {
       font-size: 20px;

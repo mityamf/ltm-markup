@@ -9,7 +9,7 @@
 
   @include viewport--lg {
     width: calc((100% / 2) - 15px);
-    max-width: 366px;
+    max-width: 363px;
   }
 
   @include viewport--sm {
@@ -17,6 +17,7 @@
     text-align: center;
     width: 100%;
     max-width: none;
+    margin-right: 0;
   }
 
   ul {
@@ -85,10 +86,22 @@
     color: $color-gray-dark;
   }
 
+  .hotel-card__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
   &__info {
     display: flex;
     padding: 7px 11px 5px;
     align-items: center;
+    margin: auto 0;
+
+    @include viewport--sm {
+      padding: 23px 15px 19px;
+      margin: auto auto auto 0;
+    }
 
     img {
       flex-grow: 1;
