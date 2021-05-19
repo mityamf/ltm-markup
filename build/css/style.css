@@ -6132,7 +6132,8 @@ span {
       right: 0;
       border: none;
       background-color: rgba(0, 0, 0, 0.5);
-      overflow: hidden; }
+      overflow: hidden;
+      cursor: pointer; }
       @media (max-width: 767px) {
         .hotel-photos--view-mode > .hotel-photos__item:last-child .hotel-photos__more-button {
           display: none; } }
