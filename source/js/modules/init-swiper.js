@@ -11,7 +11,10 @@ const initSwiper = () => {
       prevEl: '.direction__arrow--left',
     },
     breakpoints: {
-      1280: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
         slidesPerView: 4,
       },
       1440: {
@@ -110,9 +113,13 @@ const initSwiper = () => {
   new Swiper('.photos-swiper', {
     slidesPerView: 1,
     slidesPerGroup: 1,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.direction__arrow--right',
+      prevEl: '.direction__arrow--left',
     }
   });
 };

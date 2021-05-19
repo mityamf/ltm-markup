@@ -4,17 +4,22 @@
   list-style-type: none;
   width: calc(100% + 15px);
   padding: 69px 0 0 0;
-  max-width: 1062px;
+  max-width: 1070px;
   margin: 0 0 auto;
 
   @include viewport--lg {
     width: auto;
-    max-width: 70%;
+    padding: 36px 0 0;
+    max-width: 67%;
   }
 
   @include viewport--md {
     width: auto;
     max-width: none;
     margin: 0 auto;
+  }
+
+  @include viewport--sm {
+    padding: 6px 0 0 15px;
   }
 }
