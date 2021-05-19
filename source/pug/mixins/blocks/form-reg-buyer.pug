@@ -1,7 +1,7 @@
-mixin form-reg()
+mixin form-reg-buyer()
   form(action="#" method="POST").exhibitor-reg__form.form-reg
     .container
-      h3.form-reg__title.form-reg__title-one Please select the event you would like to register for:
+      h3.form-reg__title.form-reg__title-one Пожалуйста, выберите мероприятие, на которое Вы хотели бы зарегистрироваться. Возможно выбрать только одно мероприятие. Пожалуйста, заполняйте форму на английском языке.
     .form-reg__direction.direction__swiper
       .swiper-container.direction__swiper-block
         .swiper-wrapper
@@ -35,44 +35,42 @@ mixin form-reg()
           +icon("arrow-left", "11", "19")
     +form-reg__pop-up
 
-    .form-reg__adoption.adoption.container.swiper-container.adoption__slider
-      h3.adoption__title You have selected the following events:
-      ul.adoption__list.swiper-wrapper
-        li.adoption__item.swiper-slide
-          h4 Luxury Travel Mart Kyiv 2019 at the Intercontinental Kyiv, Ukraine
-          time.adoption__data 24 September 2019
-        li.adoption__item.swiper-slide
-          h4 Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan
-          time.adoption__data 27 September 2019
-      .adoption__pagination
+    .form-reg__info.container.status
+      h3.form-reg__title.form-reg__title-two Выберете статус участника
+      ul.status__list
+        li.status__item
+          input.form-reg__check(type="checkbox" id="Buyer" name="check" value="Buyer")
+          label(for="Buyer") Buyer
+        li.status__item
+          input.form-reg__check(type="checkbox" id="Participation" name="check" value="Participation")
+          label(for="Participation") Участие в рабочей сессии
+        li.status__item
+          input.form-reg__check(type="checkbox" id="visit" name="check" value="visit")
+          label(for="visit") Посещение вечернего коктейля
+      ul.status__list
+        li.status__item
+          input.form-reg__check(type="checkbox" id="Hosted" name="check" value="Hosted")
+          label(for="Hosted") Hosted Buyer
+          p Заявка на участие в программе для приглашенных профессиональных покупателей
 
     .form-reg__info.container
-      h3.form-reg__title.form-reg__title-two  Information about company:
+      h3.form-reg__title.form-reg__title-three  Информация о компании:
       .form-reg__block
-        label(for="nameCompany") Company or hotel name
-        input(type="text" name="nameCompany"  id="nameCompany" placeholder="Company (brand) name" required="required")
+        label(for="nameCompany") Название компании
+        input(type="text" name="nameCompany"  id="nameCompany" placeholder="Company name" required="required")
       .form-reg__block
-        label(for="nameOfficial") Official name for invoice, if different
-        input(type="text" name="nameOfficial"  id="nameOfficial" placeholder="Official name" required="required")
-      .form-reg__block
-        label(for="login") Please, create your login
-        input(type="text" name="login"  id="login" placeholder="Create your login" required="required")
-      .form-reg__block
-        label(for="address") Official address
-        input(type="text" name="address"  id="address" placeholder="Address" required="required")
-      .form-reg__block
-        h3.form-reg__block-title City
+        h3.form-reg__block-title Вид деятельности
         select
-          option Aachen
+          option Tour operator
           option(value="London") London
           option(value="Japan") Japan
           option(value="Almaty") Almaty
           option(value="Moscow") Moscow
           option(value="Petersburg") Petersburg
       .form-reg__block
-        h3.form-reg__block-title Country
+        h3.form-reg__block-title Направление деятельности
         select
-          option Aphhanistan
+          option Car Rental
           option(value="Aphhanistan") Aphhanistan
           option(value="Aphhanistan") Aphhanistan1
           option(value="Aphhanistan") Aphhanistan2
@@ -80,9 +78,25 @@ mixin form-reg()
           option(value="Aphhanistan") Aphhanistan4
           option(value="Aphhanistan") Aphhanistan5
       .form-reg__block
-        h3.form-reg__block-title Area of the business
+        h3.form-reg__block-title Страна
         select
-          option Chois area of the business
+          option Russia
+          option(value="Aphhanistan") Aphhanistan
+          option(value="Aphhanistan") Aphhanistan1
+          option(value="Aphhanistan") Aphhanistan2
+          option(value="Aphhanistan") Aphhanistan3
+          option(value="Aphhanistan") Aphhanistan4
+          option(value="Aphhanistan") Aphhanistan5
+      .form-reg__block
+        label(for="address") Фактический адрес компании
+        input(type="text" name="address"  id="address" placeholder="Address" required="required")
+      .form-reg__block
+        label(for="login") Индекс
+        input(type="text" name="login"  id="login" placeholder="000000" required="required")
+      .form-reg__block
+        h3.form-reg__block-title Город
+        select
+          option Aachen
           option(value="business") business
           option(value="trade") trade
           option(value="sale") sale
@@ -90,17 +104,17 @@ mixin form-reg()
           option(value="journeys") journeys
           option(value="sale") sale
       .form-reg__block
-        label(for="Web-site") Web-site
+        label(for="Web-site") Адрес веб-страницы
         input(type="text" name="Web-site"  id="Web-site" placeholder="https://" required="required")
       .form-reg__block.form-reg__textarea
-        h3.form-reg__block-title Company (brand) description
+        h3.form-reg__block-title Краткое описание компании
         textarea(name="Company description", cols="30", rows="10") Company description
 
     .form-reg__location.container
-      h3.form-reg__title.form-reg__title-three Location of your business:
+      h3.form-reg__title.form-reg__title-four Выберите приоритетные направления:
       .form-reg__dropdown
-        h4 North America
-        button.form-reg__btn(type='button') All selected
+        h4 Северная Америка
+        button.form-reg__btn(type='button') Выбрать всё
         .form-reg__content
           .form-reg__list
             input.form-reg__check#choices-0(type='checkbox' name='complex' value='complex-0')
@@ -111,8 +125,8 @@ mixin form-reg()
             label(for='choices-2') choices-3
         .form-reg__overlay
       .form-reg__dropdown
-        h4 Europe
-        button.form-reg__btn(type='button') All selected
+        h4 Европа
+        button.form-reg__btn(type='button') Выбрать всё
         .form-reg__content
           .form-reg__list
             input.form-reg__check#choices-3(type='checkbox' name='complex' value='complex-0')
@@ -123,8 +137,8 @@ mixin form-reg()
             label(for='choices-4') choices-3
         .form-reg__overlay
       .form-reg__dropdown
-        h4 South America
-        button.form-reg__btn(type='button') All selected
+        h4 Южная Америка
+        button.form-reg__btn(type='button') Выбрать всё
         .form-reg__content
           .form-reg__list
             input.form-reg__check#choices-5(type='checkbox' name='complex' value='complex-0')
@@ -135,8 +149,8 @@ mixin form-reg()
             label(for='choices-7') choices-3
         .form-reg__overlay
       .form-reg__dropdown
-        h4 Africa
-        button.form-reg__btn(type='button') All selected
+        h4 Африка
+        button.form-reg__btn(type='button') Выбрать всё
         .form-reg__content
           .form-reg__list
             input.form-reg__check#choices-8(type='checkbox' name='complex' value='complex-0')
@@ -147,8 +161,8 @@ mixin form-reg()
             label(for='choices-10') choices-6
         .form-reg__overlay
       .form-reg__dropdown
-        h4 Asia
-        button.form-reg__btn(type='button') All selected
+        h4 Азия
+        button.form-reg__btn(type='button') Выбрать всё
         .form-reg__content
           .form-reg__list
             input.form-reg__check#choices-11(type='checkbox' name='complex' value='complex-0')
@@ -159,8 +173,8 @@ mixin form-reg()
             label(for='choices-13') choices-9
         .form-reg__overlay
       .form-reg__dropdown
-        h4 Oceania
-        button.form-reg__btn(type='button') All selected
+        h4 Океания
+        button.form-reg__btn(type='button') Выбрать всё
         .form-reg__content
           .form-reg__list
             input.form-reg__check#choices-14(type='checkbox' name='complex' value='complex-0')
@@ -174,15 +188,15 @@ mixin form-reg()
       label(for="Global") Global/Worldwide
 
     .form-reg__info.container
-      h3.form-reg__title.form-reg__title-four Information about you:
+      h3.form-reg__title.form-reg__title-five Информация о вас:
       .form-reg__block
-        label(for="First_name") Participant first name
+        label(for="First_name") Имя
         input(type="text" name="First_name"  id="First_name" placeholder="First name" required="required")
       .form-reg__block
-        label(for="Last_name") Participant last name
+        label(for="Last_name") Фамилия
         input(type="text" name="Last_name"  id="Last_name" placeholder="Last name" required="required")
       .form-reg__block
-        h3.form-reg__block-title Title
+        h3.form-reg__block-title Обращение
         select
           option Aachen
           option(value="Mr") Mr.
@@ -190,11 +204,14 @@ mixin form-reg()
           option(value="Ms") Ms.
           option(value="Dr") Dr.
       .form-reg__block
-        label(for="title") Job title:
+        label(for="title") Должность
         input(type="text" name="title"  id="title" placeholder="Job title" required="required")
       .form-reg__block
-        label(for="tel") Telephone
+        label(for="tel") Телефон
         input(type="text" name="tel"  id="tel" placeholder="+1 (111) 111 11 11" required="required")
+      .form-reg__block
+        label(for="tel2") Мобильный телефон
+        input(type="text" name="tel2"  id="tel2" placeholder="+1 (111) 111 11 11" required="required")
       .form-reg__block
         label(for="skype") Skype
         input(type="text" name=""  id="skype" placeholder="E-mail" required="required")
@@ -202,40 +219,60 @@ mixin form-reg()
         label(for="E-mail") E-mail
         input(type="text" name="E-mail"  id="E-mail" placeholder="E-mail" required="required")
       .form-reg__block
-        label(for="con_e-mail") Please, confirm your e-mail
+        label(for="con_e-mail") Введите e-mail ещё раз
         input(type="text" name="con_e-mail"  id="con_e-mail" placeholder="Confirm e-mail" required="required")
+
+    .form-reg__info.container
+      h3.form-reg__title.form-reg__title-six Информация о коллеге:
       .form-reg__block
-        label(for="alt_e-mail") Alternative e-mail
-        input(type="text" name="alt_e-mail"  id="alt_e-mail" placeholder="Alternative e-mail" required="required")
+        label(for="First_name") Имя
+        input(type="text" name="First_name"  id="First_name" placeholder="First name" required="required")
+      .form-reg__block
+        label(for="Last_name") Фамилия
+        input(type="text" name="Last_name"  id="Last_name" placeholder="Last name" required="required")
+      .form-reg__block
+        h3.form-reg__block-title Обращение
+        select
+          option Aachen
+          option(value="Mr") Mr.
+          option(value="Mrs") Mrs.
+          option(value="Ms") Ms.
+          option(value="Dr") Dr.
+      .form-reg__block
+        label(for="title") Должность
+        input(type="text" name="title"  id="title" placeholder="Job title" required="required")
+      .form-reg__block
+        label(for="E-mail") E-mail
+        input(type="text" name="E-mail"  id="E-mail" placeholder="E-mail" required="required")
+      .form-reg__block
+        label(for="tel2") Мобильный телефон
+        input(type="text" name="tel2"  id="tel2" placeholder="+1 (111) 111 11 11" required="required")
 
-    .form-reg__upload.container
-      h3.form-reg__title.form-reg__title-five Upload photos and logo
-      p.form-reg__text This photos will be representative your company at the Luxury Travel Mart Exhibitors catalogue. Please choose the best photos for your page.<br>You might change any images in your profile after registration.
-      .form-reg__wrapper
-        .form-reg__up
-          h4.form-reg__title-up Upload photo
-          label(for="upload_photo") Choose files
-          input(type="file" name="upload_photo" id="upload_photo" required="required")
-        span Upload up to 14 photos. JPG, PNG. Min. 8, Max. 14 images.
-      .form-reg__wrapper
-        .form-reg__up
-          h4.form-reg__title-up Upload logo
-          label(for="upload_logo") Choose file
-          input(type="file" name="upload_logo" id="upload_logo" required="required")
-        span SVG, JPG or PNG, Max. 3 mb.
+    .form-reg__info.container
+      h3.form-reg__title.form-reg__title-seven Как ваша компания осуществляет бронирования?
+      .form-reg__block
+        h3.form-reg__block-title Через:
+        select
+          option DMCs
+          option(value="dMCs") dMCs
+          option(value="DmCS") DmCS
+          option(value="DMsC") DMsC
+          option(value="DMCS") DMCS
 
-    .form-reg__terms.terms.container
-      h3.form-reg__title.form-reg__title-six Terms &#38; Conditions
-      .terms__block
-        p.terms__text Rates for participation at each event supplied on request only.
-        p.terms__text Confirmation and participation at the event is subject to the approval of the organizers only. Please note that completing the registration form does not guarantee your automatic confirmation for the event. All registrations will be reviewed and potential exhibitors should meet the criteria for exhibition participants.
-        p.terms__text Booking must be carried out three months prior to the event, at the latest. Payment should be completed within 30 days after the confirmation, however prior the event. The payment terms are strict, and not negotiable.
-        p.terms__text All cancelation of participation must be received in writing by fax or email. A full refund of the participation fee will be made if canceled up to six months prior to the event. If canceled six to four months prior to the event - 50% of the participation fee will be charged for the cancelation. No refund of the participation fee will be made if canceled later then four months prior to the event.
-        p.terms__text Included in the fee: participation in all events of the Luxury Travel Mart. No hidden charges.
-        p.terms__text A block of rooms will be reserved at each of the venue hotels. Rates will be provided upon request.
+    .form-reg__info.container
+      h3.form-reg__title.form-reg__title-eight Логин и пароль
+      .form-reg__block
+        label(for="Login") Придумайте логин
+        input(type="text" name="Login"  id="Login" placeholder="Login" required="required")
+      .form-reg__block
+        label(for="Password") Придумайте пароль
+        input(type="text" name="Password"  id="Password" placeholder="Password" required="required")
+      .form-reg__block
+        label(for="Password2") Введите пароль ещё раз
+        input(type="text" name="Password2"  id="Password2" placeholder="Password" required="required")
 
     .form-reg__submit.container
       input.form-reg__check(type="checkbox" id="yes" name="check" value="yes")
-      label(for="yes") I have read and agree to the terms &#38; conditions of participations
+      label(for="yes") Я подтверждаю свое согласие на сбор, хранение и обработку вышеуказанных данных организаторами Luxury Travel Mart в соответствии с ФЗ РФ «О персональных данных» от 27.07.2006 № 152-ФЗ.
 
       a(href="#", data-modal="submission") Send

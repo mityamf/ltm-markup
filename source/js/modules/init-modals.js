@@ -10,7 +10,7 @@ const modalSubmissionBtns = document.querySelectorAll('[data-modal="submission"]
 const modalChoices = document.querySelector('.modal--choices');
 const modalChoicesBtns = document.querySelectorAll('[data-modal="choices"]');
 const modalGallery = document.querySelector('.modal-gallery');
-const modalGalleryBtns = document.querySelectorAll('[data-modal="gallery"]')
+const modalGalleryBtns = document.querySelectorAll('[data-modal="gallery"]');
 
 // аргументы setupModal(modal, closeCallback, modalBtns, openCallback, noPrevDefault, preventScrollLock)
 // возможна инициализация только с первыми аргументом,

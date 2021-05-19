@@ -2017,6 +2017,7 @@ p {
 
 .mailing__email {
   max-width: 358px;
+  max-height: 42px;
   width: 78%;
   border: 1px solid #0098c1;
   border-radius: 1px;
