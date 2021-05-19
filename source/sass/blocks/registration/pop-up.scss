@@ -100,6 +100,8 @@
     padding: 0;
     border-radius: 15px 15px 0 0;
     padding-top: 30px;
+    display: flex;
+    flex-direction: column;
   }
 
   .modal__close-btn {
@@ -188,9 +190,9 @@
   color: $color-default-white;
   font-size: 18px;
   font-weight: 400;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  //display: flex;
+  //align-items: center;
+  //justify-content: center;
   cursor: pointer;
   outline: 0;
   border: none;
