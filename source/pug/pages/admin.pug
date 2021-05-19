@@ -1,0 +1,21 @@
+extends ../base/layout
+
+block variables
+  - var title = "Админка"
+  - var hasHeader = true
+  - var hasFooter = true
+
+
+block main
+  include ../data/admin
+
+  main.container
+    p="Здесь пока будут отображаться отдельные куски из разных страниц админки, потом разнесу по разным страницам, сейчас надо сделать шаблоны"
+    p="Табы"
+
+    ul.admin__tabs-list
+      button.admin__menu-button(type="button")
+        +icon("icon-mobile-menu", 32, 32)
+      each tab in adminTabs
+        li.admin__tabs-item
+          a.admin__tabs-link(href=tab.link)=tab.text

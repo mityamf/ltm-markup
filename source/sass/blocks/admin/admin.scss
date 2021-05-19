@@ -1,0 +1,117 @@
+.admin {
+  &__tabs-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 -15px -15px 0;
+    padding: 0;
+
+    list-style-type: none;
+
+    @include viewport--lg {
+      margin: 0 -10px -10px 0;
+    }
+
+    @include viewport--sm {
+      justify-content: flex-start;
+      width: 50%;
+      margin: 0;
+
+      align-items: center;
+    }
+  }
+
+  &__tabs-item {
+    margin: 0 15px 15px 0;
+    width: 222px;
+    padding: 15px;
+
+    border: 1px solid $color-blue;
+    background-color: transparent;
+
+    text-align: center;
+
+    transition: border background-color $default-transition-settings;
+
+    @include viewport--lg {
+      margin: 0 10px 10px 0;
+      max-width: 178px;
+      width: calc(100% / 6);
+    }
+
+    @include viewport--sm {
+      margin: 0;
+      padding: 0;
+      width: auto;
+
+      border: none;
+      background-color: transparent;
+
+      &:not(:first-of-type) {
+        display: none;
+      }
+    }
+
+    &:active {
+      border-color: transparent;
+      background-color: $color-gray;
+
+      @include viewport--sm {
+        border-color: transparent;
+        background-color: transparent;
+      }
+
+      .admin__tabs-link {
+        color: $color-default-white;
+
+        @include viewport--sm {
+          color: $color-gray-dark;
+        }
+      }
+    }
+
+    &:hover {
+      border-color: $color-blue;
+      background-color: $color-blue;
+
+      @include viewport--sm {
+        border-color: transparent;
+        background-color: transparent;
+      }
+
+      .admin__tabs-link {
+        color: $color-default-white;
+
+        @include viewport--sm {
+          color: $color-gray-dark;
+        }
+      }
+    }
+  }
+
+  &__tabs-link {
+    color: $color-blue;
+    font-size: 16px;
+    line-height: 19px;
+
+    transition: color $default-transition-settings;
+
+    @include viewport--sm {
+      color: $color-gray-dark;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__menu-button {
+    display: none;
+
+    @include viewport--sm {
+      display: inline-flex;
+      margin-right: 10px;
+
+      border: none;
+      background-color: transparent;
+    }
+  }
+}

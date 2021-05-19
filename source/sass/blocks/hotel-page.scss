@@ -13,8 +13,13 @@
     img {
       margin: 0 0 auto 0;
       padding: 20px;
-      width: 120px;
-      height: auto;
+      display: flex;
+      flex: 1;
+      min-width: 120px;
+      min-height: 120px;
+      max-width: 120px;
+      max-height: 150px;
+      object-fit: contain;
 
       @include viewport--sm {
         margin: 0 auto;
