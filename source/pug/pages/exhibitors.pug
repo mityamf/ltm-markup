@@ -25,20 +25,22 @@ block main
   include ../data/choose-event
   include ../data/hotel-filters
 
-  main
+  main.container--exhibitors
     +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem, promoBg.noButtonMod)
+
+    section.direction.direction__swiper
+      .swiper-container.direction__swiper-block
+        +renderHeadline2(chooseEvent.title)
+        ul.direction__list.swiper-wrapper
+          each event in chooseEventCard
+            .swiper-slide
+              +direction(event.titleItem, event.dataItem, event.statusItem, event.timeItem, event.classStatus)
+        .direction__arrow.direction__arrow--right
+          +icon("arrow-right", "11", "19")
+        .direction__arrow.direction__arrow--left
+          +icon("arrow-left", "11", "19")
+
     .container
-      section.direction.direction__swiper
-        .swiper-container.direction__swiper-block
-          +renderHeadline2(chooseEvent.title)
-          ul.direction__list.swiper-wrapper
-            each event in chooseEventCard
-              .swiper-slide
-                +direction(event.titleItem, event.dataItem, event.statusItem, event.timeItem, event.classStatus)
-          .direction__arrow.direction__arrow--right
-            +icon("arrow-right", "11", "19")
-          .direction__arrow.direction__arrow--left
-            +icon("arrow-left", "11", "19")
 
       .hotel-filter__buttons
         .hotel-filter--buttons-wrapper
@@ -52,15 +54,15 @@ block main
         button.btn.btn--white.hotel-filter--reset(type="reset")="Clear all"
 
       .exhibitors
-        .exhibitors__wrapper
-          ul.hotel-cards
-            each hotel in hotelCards
-              +renderHotelCard(hotel.title, hotel.photoList, hotel.logo, hotel.link)
+        ul.hotel-cards
+          each hotel in hotelCards
+            +renderHotelCard(hotel.title, hotel.photoList, hotel.logo, hotel.link)
 
-          .alphabet-hotel
-            ul.alphabet-hotel__block-list
-              each hotel in alphabetHotel
-                +renderAlphabetHotel(hotel.title, hotel.hotelList)
+        .alphabet-hotel
+          ul.alphabet-hotel__block-list
+            each hotel in alphabetHotel
+              +renderAlphabetHotel(hotel.title, hotel.hotelList)
 
-          button.btn.btn--white.btn--more(type="button")="More"
-          +renderUpButton()
+      button.btn.btn--white.btn--more(type="button")="More"
+      +renderUpButton()
+

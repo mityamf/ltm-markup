@@ -1,14 +1,54 @@
 .exhibitors {
   position: relative;
+  display: flex;
 
-  &__wrapper {
-    display: flex;
+  background-color: $color-white;
 
-    background-color: $color-white;
-
-    @include viewport--lg {
-      justify-content: center;
-    }
+  @include viewport--lg {
+    justify-content: center;
   }
 }
 
+.container--exhibitors {
+  .btn--more {
+    display: none;
+
+    @include viewport--sm {
+      display: block;
+    }
+  }
+
+  .title--h2 {
+    margin-bottom: 30px;
+  }
+
+  .direction__title {
+    line-height: 23px;
+    letter-spacing: 0.4px;
+
+    @include viewport--lg {
+      line-height: 23px;
+      letter-spacing: 0.4px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .direction__swiper {
+    @include viewport--sm {
+      display: block;
+    }
+  }
+
+  .direction__list {
+    @include viewport--sm {
+      display: flex;
+    }
+  }
+
+  .direction__item {
+    @include viewport--sm {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

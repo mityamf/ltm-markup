@@ -2,6 +2,11 @@
   width: 341px;
   padding: 32px 2px 0 0;
 
+  @include viewport--lg {
+    width: 368px;
+    padding: 32px 15px 0 0;
+  }
+
   &__block-list {
     margin: 0;
     padding: 0;

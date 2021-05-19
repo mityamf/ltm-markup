@@ -11,7 +11,10 @@ const initSwiper = () => {
       prevEl: '.direction__arrow--left',
     },
     breakpoints: {
-      1280: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
         slidesPerView: 4,
       },
       1440: {

@@ -29,7 +29,7 @@
 
     @include viewport--lg {
       max-width: 460px;
-      width: 40%;
+      width: 53%;
     }
 
     @include viewport--md {
@@ -78,6 +78,7 @@
   &--buttons-wrapper {
     display: flex;
     align-items: center;
+    padding-left: 10px;
   }
 
   &__buttons--filters,
@@ -98,6 +99,10 @@
     height: 48px;
     margin-top: 49px;
 
+    @include viewport--lg {
+      padding: 10px 13px;
+    }
+
     @include viewport--md {
       padding: 10px 17px;
     }
@@ -113,6 +118,10 @@
 
   &__list li {
     margin-right: 6px;
+
+    @include viewport--lg {
+      margin-right: 2px;
+    }
   }
 
   &__link {
