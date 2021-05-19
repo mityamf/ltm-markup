@@ -1,0 +1,14 @@
+.exhibitors {
+  position: relative;
+
+  &__wrapper {
+    display: flex;
+
+    background-color: $color-white;
+
+    @include viewport--lg {
+      justify-content: center;
+    }
+  }
+}
+

@@ -14,45 +14,28 @@
       width: 222px;
     }
   }
-
-  &__up-link {
-    display: none;
-
-    @include viewport--lg {
-      display: block;
-      position: absolute;
-      width: 54px;
-      height: 54px;
-      right: 0;
-      bottom: 22px;
-    }
-
-    @include viewport--sm {
-      display: none;
-    }
-  }
-
-  .btn--mobile {
-    display: none;
-
-    @include viewport--sm {
-      display: block;
-    }
-  }
-
-  .btn--desktop {
-    display: block;
-    padding: 15px;
-    width: 222px;
-
-    @include viewport--lg {
-      width: 182px;
-    }
-
-    @include viewport--sm {
-      display: none;
-    }
-  }
+  //
+  //.open-more__btn--mobile {
+  //  display: none;
+  //
+  //  @include viewport--sm {
+  //    display: block;
+  //  }
+  //}
+  //
+  //.open-more__btn--desktop {
+  //  display: block;
+  //  padding: 15px;
+  //  width: 222px;
+  //
+  //  @include viewport--lg {
+  //    width: 182px;
+  //  }
+  //
+  //  @include viewport--sm {
+  //    display: none;
+  //  }
+  //}
 
   &__table {
     width: 100%;

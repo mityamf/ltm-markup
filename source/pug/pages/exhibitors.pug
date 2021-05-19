@@ -52,11 +52,15 @@ block main
         button.btn.btn--white.hotel-filter--reset(type="reset")="Clear all"
 
       .exhibitors
-        ul.hotel-cards
-          each hotel in hotelCards
-            +renderHotelCard(hotel.title, hotel.photoList, hotel.logo, hotel.link)
+        .exhibitors__wrapper
+          ul.hotel-cards
+            each hotel in hotelCards
+              +renderHotelCard(hotel.title, hotel.photoList, hotel.logo, hotel.link)
 
-        .alphabet-hotel
-          ul.alphabet-hotel__block-list
-            each hotel in alphabetHotel
-              +renderAlphabetHotel(hotel.title, hotel.hotelList)
+          .alphabet-hotel
+            ul.alphabet-hotel__block-list
+              each hotel in alphabetHotel
+                +renderAlphabetHotel(hotel.title, hotel.hotelList)
+
+          button.btn.btn--white.btn--more(type="button")="More"
+          +renderUpButton()
