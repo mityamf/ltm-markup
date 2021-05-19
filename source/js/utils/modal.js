@@ -39,13 +39,17 @@ const setModalListeners = (modal, closeCallback, preventScrollLock) => {
   const closeBtn1 = modal.querySelector('.submission__close-button');
   //const closeSelect = modal.querySelector('.modal__select-close');
 
-  closeBtn.addEventListener('click', () => {
-    closeModal(modal, closeCallback, preventScrollLock);
-  });
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      closeModal(modal, closeCallback, preventScrollLock);
+    });
+  }
 
-  closeBtn1.addEventListener('click', () => {
-    closeModal(modal, closeCallback, preventScrollLock);
-  });
+  if (closeBtn1) {
+    closeBtn1.addEventListener('click', () => {
+      closeModal(modal, closeCallback, preventScrollLock);
+    });
+  }
 
   //closeSelect.addEventListener('click', () => {
   //  closeModal(modal, closeCallback, preventScrollLock);
