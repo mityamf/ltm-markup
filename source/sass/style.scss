@@ -38,6 +38,7 @@
 @import "blocks/registration/adoption";
 @import "blocks/registration/submission";
 @import "blocks/registration/pop-up";
+@import "blocks/admin/admin";
 @import "blocks/modal";
 @import "blocks/main-nav";
 @import "blocks/search";
@@ -78,7 +79,7 @@
 @import "components/support-contacts";
 @import "components/top-block";
 @import "components/hotel-headline";
-@import "components/up-button"
+@import "components/up-button";
 
 // используйте это для отключения ховеров на тач устройствах
 // ! но не используйте это для текстовых полей ( input, textarea )

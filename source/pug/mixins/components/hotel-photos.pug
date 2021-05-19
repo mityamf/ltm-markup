@@ -32,5 +32,5 @@ mixin renderHotelPhotos(photoList)
       li.hotel-photos__item
         picture
           img(src=photo.src, srcset=photo.srcset)
-        button.hotel-photos__more-button(type="button", aria-pressed="Показать больше фото")
+        button.hotel-photos__more-button(type="button", data-modal="gallery", aria-pressed="Показать больше фото")
           +icon("icon-plus5", 48, 38)
