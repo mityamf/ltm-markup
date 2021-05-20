@@ -8,6 +8,10 @@
   font-weight: 300;
   color: $color-blue;
   margin: 0;
+
+  @include viewport--sm {
+    font-size: 33px;
+  }
 }
 
 .partners__list {
@@ -19,6 +23,10 @@
   justify-content: space-around;
   align-items: center;
   padding-top: 45px;
+
+  @include viewport--sm {
+    padding-top: 20px;
+  }
 }
 
 .partners__item {
