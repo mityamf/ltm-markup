@@ -5,6 +5,10 @@
 
   border-bottom: 1px solid $color-blue;
 
+  @include viewport--lg {
+    padding: 25px 0;
+  }
+
   @include viewport--sm {
     padding: 20px 0;
   }
@@ -38,8 +42,10 @@
 }
 
 .container--no-padding > .hotel-headline {
-  padding-left: 17px;
-  padding-right: 17px;
+  @include viewport--md {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
 }
 
 .hotel-headline--account-page {
