@@ -63,6 +63,10 @@
     }
   }
 
+  & &__item--small .hotel-photos__text {
+    display: none;
+  }
+
   &__item:first-child img {
     height: 459px;
     width: auto;
@@ -171,5 +175,10 @@
     align-items: center;
     position: relative;
     background-color: grey;
+
+    @include viewport--lg {
+      width: 178px;
+      height: 119px;
+    }
   }
 }

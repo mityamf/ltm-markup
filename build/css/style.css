@@ -6297,6 +6297,9 @@ span {
 
 .hotel-page-edit .edit__buttons {
   padding-top: 0; }
+  @media (max-width: 767px) {
+    .hotel-page-edit .edit__buttons {
+      padding-top: 25px; } }
 
 .hotel-page-edit .edit__buttons > .btn {
   padding: 17px 90px; }
@@ -6348,6 +6351,8 @@ span {
     @media (max-width: 1023px) {
       .hotel-photos .hotel-photos__item--small img {
         height: 120px; } }
+  .hotel-photos .hotel-photos__item--small .hotel-photos__text {
+    display: none; }
   .hotel-photos__item:first-child img {
     height: 459px;
     width: auto;
@@ -6430,6 +6435,10 @@ span {
             align-items: center;
     position: relative;
     background-color: grey; }
+    @media (max-width: 1439px) {
+      .hotel-photos__item--upload {
+        width: 178px;
+        height: 119px; } }
 
 .modal-gallery {
   position: fixed;

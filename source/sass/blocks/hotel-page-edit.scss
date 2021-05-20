@@ -21,6 +21,10 @@
 
   .edit__buttons {
     padding-top: 0;
+
+    @include viewport--sm {
+      padding-top: 25px;
+    }
   }
 
   .edit__buttons > .btn {
