@@ -1282,7 +1282,8 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  line-height: 19px; }
+  line-height: 19px;
+  cursor: pointer; }
   .button--footer-btn {
     width: 22%;
     max-width: 103px;
@@ -1315,6 +1316,11 @@ p {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center; }
+  .button--cookies {
+    width: 103px;
+    height: 42px;
+    margin-bottom: 42px;
+    background-color: white; }
   .button:hover, .button:focus {
     opacity: 0.8; }
 
@@ -2148,6 +2154,75 @@ p {
   @media (max-width: 767px) {
     .menu__account {
       padding-top: 12px; } }
+
+.cookies {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative; }
+  @media (max-width: 767px) {
+    .cookies {
+      padding-left: 16px;
+      padding-right: 16px; } }
+
+.cookies__title {
+  font-size: 24px;
+  font-weight: 300;
+  color: #0098c1;
+  margin: 0;
+  padding-top: 24px; }
+  @media (max-width: 767px) {
+    .cookies__title {
+      padding-top: 40px; } }
+
+.cookies__description {
+  width: 100%;
+  max-width: 900px;
+  font-size: 12px;
+  color: #9f9f9f;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  font-weight: 400;
+  margin: 0; }
+
+.cookies__info {
+  font-size: 12px;
+  font-weight: 600;
+  color: #9f9f9f;
+  padding-bottom: 16px; }
+  .cookies__info:focus, .cookies__info:hover {
+    opacity: 0.8; }
+
+.cookies__btn-close {
+  position: absolute;
+  top: 30px;
+  right: 1px;
+  left: auto;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  outline: none; }
+  .cookies__btn-close svg {
+    fill: #0098c1; }
+    @media (max-width: 767px) {
+      .cookies__btn-close svg {
+        width: 24px;
+        height: 24px; } }
+  @media (max-width: 767px) {
+    .cookies__btn-close {
+      top: 12px;
+      right: 12px; } }
+  .cookies__btn-close:focus, .cookies__btn-close:hover {
+    opacity: 0.8; }
 
 .promo__none {
   display: none; }
