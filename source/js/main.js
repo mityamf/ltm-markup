@@ -34,5 +34,4 @@ dropdown();
 initSmoothAnchors();
 homeSwiper();
 initModalGallerySwiper();
-
 regSwiper();
