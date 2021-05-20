@@ -37,7 +37,6 @@ const setModalListeners = (modal, closeCallback, preventScrollLock) => {
   const overlay = modal.querySelector('.modal__overlay');
   const closeBtn = modal.querySelector('.modal__close-btn');
   const closeBtn1 = modal.querySelector('.submission__close-button');
-  //const closeSelect = modal.querySelector('.modal__select-close');
 
   if (closeBtn) {
     closeBtn.addEventListener('click', () => {
@@ -50,10 +49,6 @@ const setModalListeners = (modal, closeCallback, preventScrollLock) => {
       closeModal(modal, closeCallback, preventScrollLock);
     });
   }
-
-  //closeSelect.addEventListener('click', () => {
-  //  closeModal(modal, closeCallback, preventScrollLock);
-  //});
 
   overlay.addEventListener('click', () => {
     closeModal(modal, closeCallback, preventScrollLock);

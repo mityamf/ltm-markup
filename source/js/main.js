@@ -7,6 +7,7 @@ import {initSearch} from './modules/search';
 import {initMenu} from './modules/init-menu';
 import {toggleGallery} from './modules/toggle-gallery';
 import {initGallerySwiper} from './modules/init-gallery-swiper';
+import {regSwiper} from './modules/reg-swiper';
 import {homeSwiper} from './modules/home-swiper';
 import {initSwiper} from './modules/init-swiper';
 import {initSmoothAnchors} from './modules/init-smooth-anchors';
@@ -33,3 +34,5 @@ dropdown();
 initSmoothAnchors();
 homeSwiper();
 initModalGallerySwiper();
+
+regSwiper();

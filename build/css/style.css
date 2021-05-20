@@ -1901,7 +1901,8 @@ p {
       -webkit-box-pack: normal;
           -ms-flex-pack: normal;
               justify-content: normal;
-      margin-top: 20px; } }
+      margin-top: 20px;
+      padding-top: 15px; } }
 
 .footer__logotip {
   -ms-grid-row: 1;
@@ -1920,7 +1921,7 @@ p {
   @media (max-width: 767px) {
     .footer__mailing {
       width: 100%;
-      padding-bottom: 40px; } }
+      padding-bottom: 36px; } }
 
 .footer__menu {
   -ms-grid-row: 1;
@@ -1944,7 +1945,7 @@ p {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      padding-bottom: 22px; } }
+      padding-bottom: 28px; } }
 
 .footer__info {
   -ms-grid-row: 2;
@@ -1979,7 +1980,7 @@ p {
     -ms-grid-column-span: 1; } }
   @media (max-width: 767px) {
     .footer__info {
-      margin-top: 29px;
+      margin-top: 28px;
       margin-bottom: 31px; } }
 
 .logotip {
@@ -1997,9 +1998,18 @@ p {
       .logotip__list {
         -ms-flex-item-align: center;
             -ms-grid-row-align: center;
-            align-self: center; } }
-  .logotip__company {
+            align-self: center;
+        margin: 0;
+        padding-left: 19px; } }
+  .logotip__company-tm {
     padding-top: 11px; }
+    @media (max-width: 767px) {
+      .logotip__company-tm {
+        padding-top: 0;
+        width: 124px; } }
+  @media (max-width: 767px) {
+    .logotip__company-ap {
+      width: 78px; } }
 
 .logotip__item img:focus, .logotip__item img:hover {
   opacity: 0.8; }
@@ -2017,6 +2027,7 @@ p {
 
 .mailing__email {
   max-width: 358px;
+  max-height: 42px;
   width: 78%;
   border: 1px solid #0098c1;
   border-radius: 1px;
@@ -2127,6 +2138,16 @@ p {
     padding: 13px; }
     .menu__account-social:focus, .menu__account-social:hover {
       opacity: 0.8; }
+  @media (max-width: 767px) {
+    .menu__account-social-fb {
+      padding: 8px; } }
+  @media (max-width: 767px) {
+    .menu__account-social-inst {
+      padding-right: 0;
+      padding-left: 36px; } }
+  @media (max-width: 767px) {
+    .menu__account {
+      padding-top: 12px; } }
 
 .promo__none {
   display: none; }
@@ -2638,6 +2659,9 @@ p {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
+    @media (max-width: 767px) {
+      .interaction__btn-block {
+        display: none; } }
   .interaction__btn {
     display: none; }
     @media (max-width: 767px) {
@@ -2667,6 +2691,9 @@ p {
   font-weight: 300;
   color: #0098c1;
   margin: 0; }
+  @media (max-width: 767px) {
+    .partners__title {
+      font-size: 33px; } }
 
 .partners__list {
   margin: 0;
@@ -2683,6 +2710,9 @@ p {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 45px; }
+  @media (max-width: 767px) {
+    .partners__list {
+      padding-top: 20px; } }
 
 .partners__item {
   padding-right: 50px;
