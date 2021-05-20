@@ -6183,9 +6183,17 @@ span {
 .account__event-block {
   padding: 25px 0 27px;
   border-top: 1px solid #0098c1; }
+  @media (max-width: 767px) {
+    .account__event-block {
+      padding-top: 32px;
+      padding-bottom: 61px; } }
 
 .account__event-block > .title--h2 {
   margin-bottom: 1px; }
+  @media (max-width: 767px) {
+    .account__event-block > .title--h2 {
+      font-size: 38px;
+      line-height: 46px; } }
 
 .account__event-list {
   display: -webkit-box;
@@ -6198,6 +6206,9 @@ span {
 .account__event {
   margin-right: 30px;
   width: 341px; }
+  @media (max-width: 767px) {
+    .account__event {
+      margin-right: 0; } }
 
 .account__event button {
   display: block;
@@ -6241,6 +6252,9 @@ span {
   margin-top: 15px;
   font-size: 12px;
   line-height: 20px; }
+  @media (max-width: 767px) {
+    .account__event-status {
+      margin-top: 11px; } }
 
 .account__event-status svg {
   margin-right: 15px; }
@@ -6269,6 +6283,9 @@ span {
           justify-content: flex-start;
   padding: 25px 0;
   border-top: 1px solid #0098c1; }
+  @media (max-width: 1439px) {
+    .account__contact-us {
+      padding: 25px 0 32px 0; } }
   @media (max-width: 767px) {
     .account__contact-us {
       -ms-flex-wrap: wrap;
@@ -6277,9 +6294,14 @@ span {
 .account__admin {
   width: 340px;
   margin-right: 16px; }
+  @media (max-width: 1439px) {
+    .account__admin {
+      margin-right: 35px; } }
   @media (max-width: 767px) {
     .account__admin {
-      width: 100%; } }
+      width: 100%;
+      margin: 0;
+      padding: 0 0 33px 0; } }
 
 .account__admin img {
   margin-right: 15px;
@@ -6294,6 +6316,9 @@ span {
 
 .account__admin-info {
   padding-top: 20px; }
+  @media (max-width: 767px) {
+    .account__admin-info {
+      padding-top: 15px; } }
 
 .account__admin-name {
   font-size: 16px;
@@ -6331,16 +6356,22 @@ span {
           flex-wrap: wrap;
       display: block;
       margin: 0 auto;
-      text-align: center; } }
+      text-align: center;
+      padding-bottom: 11px; } }
 
 @media (max-width: 767px) {
   .account__notifications {
-    width: 100%; } }
+    width: 100%;
+    padding-top: 28px; } }
 
 .account__notifications .title--h3 {
   padding-left: 0;
   padding-right: 17px;
   margin-bottom: 0; }
+  @media (max-width: 767px) {
+    .account__notifications .title--h3 {
+      padding-left: 17px;
+      padding-right: 17px; } }
 
 .account__notifications .notifications--time {
   width: 60px; }
@@ -6357,22 +6388,62 @@ span {
   width: 222px; }
   @media (max-width: 1439px) {
     .account__notifications .btn--desktop {
-      width: 182px; } }
+      width: 222px; } }
   @media (max-width: 767px) {
     .account__notifications .btn--desktop {
       display: none; } }
 
+@media (max-width: 767px) {
+  .account__notifications .notifications__row:first-child {
+    display: block;
+    padding: 0; } }
+
+@media (max-width: 767px) {
+  .account__notifications .notifications__table {
+    margin-bottom: 20px; } }
+
+@media (max-width: 767px) {
+  .account__notifications .btn--more {
+    padding: 14px 30px; } }
+
 .account__notifications th {
   padding: 5px 0 5px 0; }
+  @media (max-width: 1439px) {
+    .account__notifications th {
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 269px;
+      padding: 5px 8px; } }
 
 .account__notifications th:first-child {
   width: 32px; }
+  @media (max-width: 1439px) {
+    .account__notifications th:first-child {
+      display: block; } }
 
 .account__notifications tr:nth-child(even) {
   background-color: #d6d6d6; }
 
+@media (max-width: 767px) {
+  .account__notifications .notifications--time,
+  .account__notifications .notifications--message,
+  .account__notifications .notifications--icon {
+    display: none; } }
+
+@media (max-width: 767px) {
+  .account__notifications .notifications--theme {
+    padding-left: 20px; } }
+
+@media (max-width: 767px) {
+  .account__notifications .notifications__row {
+    padding: 0 17px 0 17px; } }
+
 .account__event-block .direction {
   padding: 0; }
+
+@media (max-width: 767px) {
+  .account__event-block .direction__arrow {
+    display: none; } }
 
 @media (max-width: 767px) {
   .container--no-padding .account__admin,

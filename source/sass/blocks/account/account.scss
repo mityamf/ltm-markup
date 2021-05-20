@@ -2,10 +2,20 @@
   &__event-block {
     padding: 25px 0 27px;
     border-top: 1px solid $color-blue;
+
+    @include viewport--sm {
+      padding-top: 32px;
+      padding-bottom: 61px;
+    }
   }
 
   &__event-block > .title--h2 {
     margin-bottom: 1px;
+
+    @include viewport--sm {
+      font-size: 38px;
+      line-height: 46px;
+    }
   }
 
   &__event-list {
@@ -19,6 +29,10 @@
   &__event {
     margin-right: 30px;
     width: 341px;
+
+    @include viewport--sm {
+      margin-right: 0;
+    }
   }
 
   &__event button {
@@ -62,6 +76,10 @@
 
     font-size: 12px;
     line-height: 20px;
+
+    @include viewport--sm {
+      margin-top: 11px;
+    }
   }
 
   &__event-status svg {
@@ -95,6 +113,10 @@
 
     border-top: 1px solid $color-blue;
 
+    @include viewport--lg {
+      padding: 25px 0 32px 0;
+    }
+
     @include viewport--sm {
       flex-wrap: wrap;
     }
@@ -104,8 +126,14 @@
     width: 340px;
     margin-right: 16px;
 
+    @include viewport--lg {
+      margin-right: 35px;
+    }
+
     @include viewport--sm {
       width: 100%;
+      margin: 0;
+      padding: 0 0 33px 0;
     }
   }
 
@@ -126,6 +154,10 @@
 
   &__admin-info {
     padding-top: 20px;
+
+    @include viewport--sm {
+      padding-top: 15px;
+    }
   }
 
   &__admin-name {
@@ -167,12 +199,14 @@
       display: block;
       margin: 0 auto;
       text-align: center;
+      padding-bottom: 11px;
     }
   }
 
   &__notifications {
     @include viewport--sm {
       width: 100%;
+      padding-top: 28px;
     }
   }
 
@@ -180,6 +214,11 @@
     padding-left: 0;
     padding-right: 17px;
     margin-bottom: 0;
+
+    @include viewport--sm {
+      padding-left: 17px;
+      padding-right: 17px;
+    }
   }
 
   &__notifications .notifications--time {
@@ -200,7 +239,7 @@
     width: 222px;
 
     @include viewport--lg {
-      width: 182px;
+      width: 222px;
     }
 
     @include viewport--sm {
@@ -208,20 +247,76 @@
     }
   }
 
+  &__notifications .notifications__row:first-child {
+    @include viewport--sm {
+      display: block;
+      padding: 0;
+    }
+  }
+
+  &__notifications .notifications__table {
+    @include viewport--sm {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__notifications .btn--more {
+    @include viewport--sm {
+      padding: 14px 30px;
+    }
+  }
+
   &__notifications th {
     padding: 5px 0 5px 0;
+
+    @include viewport--lg {
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 269px;
+      padding: 5px 8px;
+    }
   }
 
   &__notifications th:first-child {
     width: 32px;
+
+    @include viewport--lg {
+      display: block;
+    }
   }
 
   &__notifications tr:nth-child(even) {
     background-color: $color-gray-light;
   }
 
+  &__notifications .notifications--time,
+  &__notifications .notifications--message,
+  &__notifications .notifications--icon {
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  &__notifications .notifications--theme {
+    @include viewport--sm {
+      padding-left: 20px;
+    }
+  }
+
+  &__notifications .notifications__row {
+    @include viewport--sm {
+      padding: 0 17px 0 17px;
+    }
+  }
+
   &__event-block .direction {
     padding: 0;
+  }
+
+  &__event-block .direction__arrow {
+    @include viewport--sm {
+      display: none;
+    }
   }
 }
 
