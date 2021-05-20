@@ -36,5 +36,4 @@ initSmoothAnchors();
 homeSwiper();
 initModalGallerySwiper();
 initResizePhotos();
-
 regSwiper();
