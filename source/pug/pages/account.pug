@@ -8,7 +8,6 @@ block variables
 block main
   include ../data/hotel-page-editing
   include ../data/support-contacts
-  include ../data/notifications
   include ../data/account
   include ../data/account-events
   include ../data/hotel-photos
@@ -29,11 +28,11 @@ block main
       .account__admin
         +renderAccountAdmin(administrator.title, administrator.src, administrator.name, administrator.lastName, administrator.position, administrator.text)
       .account__notifications
-        +renderHeadline3(administrator.title)
+        +renderHeadline3("Notifications")
         +renderNotifications(notifications)
         button(class="btn btn--white btn--more btn--desktop" type="button") All Notifications
         button(class="btn btn--white btn--more btn--mobile" type="button") More
-        a(href="#top", class="notifications__up-link", aria-label="Вернуться в начало")
-          +icon("icon-arrow-up", 54, 54)
+        //a(href="#top", class="notifications__up-link", aria-label="Вернуться в начало")
+        //  +icon("icon-arrow-up", 54, 54)
 
     +renderSupportContacts(contactsList)

@@ -6119,12 +6119,18 @@ span {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 17px 0 30px 0;
+  padding: 0 0 30px 0;
   clear: both; }
   @media (max-width: 767px) {
     .account-hotel-info {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; } }
+  .account-hotel-info p {
+    letter-spacing: 0.1px; }
+  .account-hotel-info p:first-of-type {
+    margin-top: 0; }
+  .account-hotel-info p:last-of-type {
+    margin-bottom: 9px; }
   .account-hotel-info__description {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6157,20 +6163,29 @@ span {
         display: block;
         margin: 20px auto 0  auto; } }
   .account-hotel-info__link-hotel {
-    margin-bottom: 20px;
+    margin-bottom: 7px;
     font-size: 24px;
-    line-height: 29px; }
+    line-height: 29px;
+    letter-spacing: 0.8px; }
     @media (max-width: 767px) {
       .account-hotel-info__link-hotel {
         display: none; } }
+  .account-hotel-info .btn--more {
+    margin: 0 0 0 auto;
+    padding: 13px 28px;
+    letter-spacing: 0.5px; }
 
-.container--no-padding > .account-hotel-info {
-  padding-left: 17px;
-  padding-right: 17px; }
+@media (max-width: 767px) {
+  .container--no-padding > .account-hotel-info {
+    padding-left: 17px;
+    padding-right: 17px; } }
 
 .account__event-block {
-  padding: 20px 0;
+  padding: 25px 0 27px;
   border-top: 1px solid #0098c1; }
+
+.account__event-block > .title--h2 {
+  margin-bottom: 1px; }
 
 .account__event-list {
   display: -webkit-box;
@@ -6187,10 +6202,11 @@ span {
 .account__event button {
   display: block;
   width: 222px;
-  margin: 15px auto 0 auto; }
+  margin: 21px auto 0;
+  padding: 14px 30px; }
 
 .account__event-block > .title--h3 {
-  margin: 0 0 20px 0; }
+  margin: 0 0 17px; }
 
 .account__event-block .title--h4 {
   margin: 0;
@@ -6221,7 +6237,7 @@ span {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   margin-top: 15px;
   font-size: 12px;
   line-height: 20px; }
@@ -6248,10 +6264,10 @@ span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 20px 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 25px 0;
   border-top: 1px solid #0098c1; }
   @media (max-width: 767px) {
     .account__contact-us {
@@ -6259,7 +6275,8 @@ span {
           flex-wrap: wrap; } }
 
 .account__admin {
-  width: 340px; }
+  width: 340px;
+  margin-right: 16px; }
   @media (max-width: 767px) {
     .account__admin {
       width: 100%; } }
@@ -6292,11 +6309,11 @@ span {
   font-size: 12px;
   line-height: 20px;
   color: #9f9f9f;
-  text-align: center; }
+  text-align: left; }
 
 .account__contact-button {
   position: absolute;
-  top: 40px;
+  top: 24px;
   right: 0;
   display: block;
   border: none;
@@ -6306,7 +6323,7 @@ span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 40px 0;
+  padding: 27px 0 32px 0;
   position: relative; }
   @media (max-width: 767px) {
     .account__admin-wrapper {
@@ -6321,8 +6338,9 @@ span {
     width: 100%; } }
 
 .account__notifications .title--h3 {
-  padding-left: 17px;
-  padding-right: 17px; }
+  padding-left: 0;
+  padding-right: 17px;
+  margin-bottom: 0; }
 
 .account__notifications .notifications--time {
   width: 60px; }
@@ -6344,13 +6362,23 @@ span {
     .account__notifications .btn--desktop {
       display: none; } }
 
+.account__notifications th {
+  padding: 5px 0 5px 0; }
+
+.account__notifications th:first-child {
+  width: 32px; }
+
 .account__notifications tr:nth-child(even) {
   background-color: #d6d6d6; }
 
-.container--no-padding .account__admin,
-.container--no-padding .account__event-block {
-  padding-left: 17px;
-  padding-right: 17px; }
+.account__event-block .direction {
+  padding: 0; }
+
+@media (max-width: 767px) {
+  .container--no-padding .account__admin,
+  .container--no-padding .account__event-block {
+    padding-left: 17px;
+    padding-right: 17px; } }
 
 .hotel-page-edit .hotel-headline,
 .hotel-page-edit .headline-back {
@@ -7044,34 +7072,36 @@ span {
     padding-left: 17px;
     padding-right: 17px; } }
 
-.hotel-headline--account-page .account-hotel-info__link-hotel {
-  display: none; }
-
-@media (max-width: 767px) {
-  .hotel-headline--account-page {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    text-align: center;
-    padding: 30px 17px 10px 17px;
-    border: none; }
-    .hotel-headline--account-page .account-hotel-info__link-hotel {
-      display: block;
-      margin: 15px 0 0 0;
-      font-size: 20px;
-      line-height: 24px; }
-    .hotel-headline--account-page svg {
-      margin: 0 auto 20px auto;
-      width: 103px;
-      height: 80px; }
-    .hotel-headline--account-page .title--h2 {
-      margin-bottom: 10px;
-      font-size: 32px;
-      line-height: 38px; } }
+.hotel-headline--account-page {
+  padding-bottom: 10px;
+  border-bottom: none; }
+  .hotel-headline--account-page .account-hotel-info__link-hotel {
+    display: none; }
+  @media (max-width: 767px) {
+    .hotel-headline--account-page {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse;
+      text-align: center;
+      padding: 30px 17px 10px 17px;
+      border: none; }
+      .hotel-headline--account-page .account-hotel-info__link-hotel {
+        display: block;
+        margin: 15px 0 0 0;
+        font-size: 20px;
+        line-height: 24px; }
+      .hotel-headline--account-page svg {
+        margin: 0 auto 20px auto;
+        width: 103px;
+        height: 80px; }
+      .hotel-headline--account-page .title--h2 {
+        margin-bottom: 10px;
+        font-size: 32px;
+        line-height: 38px; } }
 
 .up-button {
   display: -webkit-box;
