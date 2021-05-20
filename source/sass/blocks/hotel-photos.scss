@@ -51,6 +51,18 @@
     }
   }
 
+  & &__item--small img {
+    height: 148px;
+
+    @include viewport--lg {
+      height: 119px;
+    }
+
+    @include viewport--md {
+      height: 120px;
+    }
+  }
+
   &__item:first-child img {
     height: 459px;
     width: auto;

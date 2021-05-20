@@ -6338,6 +6338,14 @@ span {
       .hotel-photos__item {
         margin-right: 10px;
         margin-bottom: 10px; } }
+  .hotel-photos .hotel-photos__item--small img {
+    height: 148px; }
+    @media (max-width: 1439px) {
+      .hotel-photos .hotel-photos__item--small img {
+        height: 119px; } }
+    @media (max-width: 1023px) {
+      .hotel-photos .hotel-photos__item--small img {
+        height: 120px; } }
   .hotel-photos__item:first-child img {
     height: 459px;
     width: auto;
