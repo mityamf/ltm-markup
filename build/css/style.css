@@ -6002,38 +6002,40 @@ span {
         right: 15px;
         text-align: right; } }
 
-@media (max-width: 1439px) {
-  .notification-message .edit__buttons--save {
-    padding: 17px 79px; } }
-
-.notification-message__info-block {
-  display: none; }
-  @media (max-width: 767px) {
-    .notification-message__info-block {
+.notification-message {
+  padding-bottom: 38px; }
+  @media (max-width: 1439px) {
+    .notification-message {
+      padding-top: 11px; }
+      .notification-message .edit__buttons--save {
+        padding: 17px 79px; } }
+  .notification-message__info-block {
+    display: none; }
+    @media (max-width: 767px) {
+      .notification-message__info-block {
+        display: block;
+        padding-bottom: 20px;
+        text-align: left; } }
+    .notification-message__info-block span {
       display: block;
-      padding-bottom: 20px;
-      text-align: left; } }
-  .notification-message__info-block span {
-    display: block;
-    width: 100%;
-    font-size: 16px;
-    line-height: 20px; }
-  .notification-message__info-block span:last-child {
-    margin-top: 10px;
-    color: #a7a7a7; }
-
-@media (max-width: 767px) {
-  .notification-message {
-    padding-bottom: 30px; }
-    .notification-message .title--h3 {
-      display: none; }
-    .notification-message .edit__label {
-      display: none; }
-    .notification-message .edit__text-block {
-      border-color: #d6d6d6;
-      padding: 10px 0; }
-    .notification-message .edit {
-      padding: 0; } }
+      width: 100%;
+      font-size: 16px;
+      line-height: 20px; }
+    .notification-message__info-block span:last-child {
+      margin-top: 10px;
+      color: #a7a7a7; }
+  @media (max-width: 767px) {
+    .notification-message {
+      padding-bottom: 30px; }
+      .notification-message .title--h3 {
+        display: none; }
+      .notification-message .edit__label {
+        display: none; }
+      .notification-message .edit__text-block {
+        border-color: #d6d6d6;
+        padding: 10px 0; }
+      .notification-message .edit {
+        padding: 0; } }
 
 .account-hotel-info {
   display: -webkit-box;
