@@ -1,0 +1,9 @@
+mixin renderDownloadFiles(downloadHeadline, downloadList)
+  .download
+    +renderHeadline2(downloadHeadline)
+    ul.download__list
+      each file in downloadList
+        li.download__item
+          a.download__link(href=file.link aria-label="Скачать файл" download)
+            +icon("icon-download", 26, 35)
+            span=file.text

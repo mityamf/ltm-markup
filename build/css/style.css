@@ -7287,6 +7287,51 @@ span {
   padding: 0;
   margin: 0; }
 
+.download .title--h2 {
+  letter-spacing: 1.2px; }
+  @media (max-width: 767px) {
+    .download .title--h2 {
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: 0.7px; } }
+
+.download__list {
+  padding: 42px 0 0 75px;
+  margin: 0 0 -30px 0;
+  list-style-type: none; }
+  @media (max-width: 1439px) {
+    .download__list {
+      padding: 16px 0 0 55px; } }
+  @media (max-width: 767px) {
+    .download__list {
+      padding: 10px 0 0 0; } }
+
+.download__item {
+  margin-bottom: 30px; }
+
+.download__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end; }
+
+.download__link svg {
+  margin-right: 17px; }
+  @media (max-width: 1439px) {
+    .download__link svg {
+      margin-right: 12px; } }
+  @media (max-width: 767px) {
+    .download__link svg {
+      margin-right: 17px; } }
+
+.download span {
+  font-size: 16px;
+  line-height: 22px;
+  color: #505050;
+  font-weight: normal; }
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {

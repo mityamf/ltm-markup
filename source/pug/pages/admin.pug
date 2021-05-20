@@ -9,6 +9,7 @@ block variables
 block main
   include ../data/admin/admin-tabs
   include ../data/admin/sponsorship
+  include ../data/admin/download-list
 
   main.container
     p="Здесь пока будут отображаться отдельные куски из разных страниц админки, потом разнесу по разным страницам, сейчас надо сделать шаблоны"
@@ -19,5 +20,9 @@ block main
     p="Sponsorship Opportunities"
 
     +renderSponsorshipList(sponsorshipHeadline, sponsorshipList)
+
+    p="ПДФ для скачивания"
+
+    +renderDownloadFiles(downloadHeadline, downloadList)
 
 
