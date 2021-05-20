@@ -23,7 +23,10 @@ mixin renderNotifications(notifications)
             if notification.status === "opened"
               +icon("icon-mail-opened", 22, 22)
           th.notifications--theme=notification.theme
+            a.notifications__open-link(href=notification.link, aria-label="Открыть письмо")
           th.notifications--message=notification.message
+            a.notifications__open-link(href=notification.link, aria-label="Открыть письмо")
+              +icon("icon-mail-arrow", 11, 19)
           th.notifications--date=notification.date
           th.notifications--time=notification.time
           th

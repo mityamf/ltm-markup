@@ -8,7 +8,6 @@ block variables
 block main
   include ../data/hotel-page-editing
   include ../data/support-contacts
-  include ../data/hotel-photos
 
   main.container.hotel-page-edit
     +renderHotelHeadline(hotelHeadline.title, hotelHeadline.logo, hotelHeadline.note, hotelHeadline.logoWidth, hotelHeadline.logoHeight)
@@ -16,5 +15,4 @@ block main
     +renderEditPhotos(hotelPhotos.photoList, hotelPhotos.cover)
     +renderEditImageSlider(hotelPhotos.photoList)
     +renderEditBlock(editingBlockList, buttons)
-    +renderSupportContacts(contactsList)
 

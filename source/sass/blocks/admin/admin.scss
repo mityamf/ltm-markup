@@ -89,6 +89,10 @@
     }
   }
 
+  &__tabs-item--active {
+    border: 1px solid red;
+  }
+
   &__tabs-link {
     color: $color-blue;
     font-size: 16px;

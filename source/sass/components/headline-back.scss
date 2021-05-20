@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding-top: 22px;
 
   background-color: inherit;
 
@@ -14,10 +15,6 @@
   .back-link {
     display: flex;
     align-items: center;
-
-    @include viewport--sm {
-      display: none; // Временно
-    }
   }
 
   svg {
@@ -27,21 +24,21 @@
 
   .title--h2 {
     @include viewport--sm {
-      margin-bottom: 15px;
+      margin-bottom: 0;
     }
   }
 }
 
 .container--no-padding .headline-back {
-  padding-left: 17px;
-  padding-right: 17px;
-  padding-bottom: 5px;
+  padding-bottom: 0;
 
-  @include viewport--lg {
-    padding-bottom: 0;
+  @include viewport--md {
+    padding-left: 17px;
+    padding-right: 17px;
   }
 
   @include viewport--sm {
-    padding-bottom: 14px;
+    padding-bottom: 25px;
+    padding-top: 29px;
   }
 }
