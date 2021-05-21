@@ -12,10 +12,12 @@ block main
   include ../data/admin/download-list
   include ../data/admin/participants
   include ../data/admin/deadlines-info
+  include ../data/admin/admin-headline
 
   main.container
-    p="Здесь пока будут отображаться отдельные куски из разных страниц админки, потом разнесу по разным страницам, сейчас надо сделать шаблоны"
+    +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
 
+    p="Здесь пока будут отображаться отдельные куски из разных страниц админки, потом разнесу по разным страницам, сейчас надо сделать шаблоны"
     p="Табы"
     +renderAdminTabs(adminTabs)
 
