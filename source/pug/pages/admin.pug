@@ -13,10 +13,11 @@ block main
   include ../data/admin/participants
   include ../data/admin/deadlines-info
   include ../data/admin/admin-headline
+  include ../data/admin/admin-mail-control
 
   main.container
     +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
-
+    +renderMailControl(adminMailControl.title, adminMailControl.linkList, adminMailControl.isSearchInput)
     p="Здесь пока будут отображаться отдельные куски из разных страниц админки, потом разнесу по разным страницам, сейчас надо сделать шаблоны"
     p="Табы"
     +renderAdminTabs(adminTabs)
