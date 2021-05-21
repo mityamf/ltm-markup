@@ -35,23 +35,29 @@ mixin form-reg-buyer()
           +icon("arrow-left", "11", "19")
     +form-reg__pop-up
 
-    .form-reg__info.container.status
+    .form-reg__info.container.status.swiper-container.status__slider
       h3.form-reg__title.form-reg__title-two Выберете статус участника
-      ul.status__list
-        li.status__item
-          input.form-reg__check(type="checkbox" id="Buyer" name="check" value="Buyer")
-          label(for="Buyer") Buyer
-        li.status__item
-          input.form-reg__check(type="checkbox" id="Participation" name="check" value="Participation")
-          label(for="Participation") Участие в рабочей сессии
-        li.status__item
-          input.form-reg__check(type="checkbox" id="visit" name="check" value="visit")
-          label(for="visit") Посещение вечернего коктейля
-      ul.status__list
-        li.status__item
-          input.form-reg__check(type="checkbox" id="Hosted" name="check" value="Hosted")
-          label(for="Hosted") Hosted Buyer
-          p Заявка на участие в программе для приглашенных профессиональных покупателей
+      .swiper-wrapper
+        ul.status__list.swiper-slide
+          li.status__item
+            input.status__main(type="checkbox" id="Buyer" name="check" value="Buyer")
+            label.status__label(for="Buyer") Buyer
+          li.status__item
+            input.status__check(type="checkbox" id="Participation" name="check" value="Participation")
+            label.status__label(for="Participation") Участие в рабочей сессии
+          li.status__item
+            input.status__check(type="checkbox" id="visit" name="check" value="visit")
+            label.status__label(for="visit") Посещение вечернего коктейля
+        ul.status__list.swiper-slide
+          li.status__item
+            input.status__main(type="checkbox" id="Hosted" name="check" value="Hosted")
+            label.status__label(for="Hosted") Hosted Buyer
+            p Заявка на участие в программе для приглашенных профессиональных покупателей
+      .status__button-next
+        +icon("arrow-right", "11", "19")
+      .status__button-prev
+        +icon("arrow-left", "11", "19")
+      .status__pagination
 
     .form-reg__info.container
       h3.form-reg__title.form-reg__title-three  Информация о компании:
@@ -208,10 +214,10 @@ mixin form-reg-buyer()
         input(type="text" name="title"  id="title" placeholder="Job title" required="required")
       .form-reg__block
         label(for="tel") Телефон
-        input(type="text" name="tel"  id="tel" placeholder="+1 (111) 111 11 11" required="required")
+        input(type="text" name="tel"  id="tel" placeholder="+0 (000) 000 00 00" required="required")
       .form-reg__block
         label(for="tel2") Мобильный телефон
-        input(type="text" name="tel2"  id="tel2" placeholder="+1 (111) 111 11 11" required="required")
+        input(type="text" name="tel2"  id="tel2" placeholder="+0 (000) 000 00 00" required="required")
       .form-reg__block
         label(for="skype") Skype
         input(type="text" name=""  id="skype" placeholder="E-mail" required="required")
@@ -246,7 +252,7 @@ mixin form-reg-buyer()
         input(type="text" name="E-mail"  id="E-mail" placeholder="E-mail" required="required")
       .form-reg__block
         label(for="tel2") Мобильный телефон
-        input(type="text" name="tel2"  id="tel2" placeholder="+1 (111) 111 11 11" required="required")
+        input(type="text" name="tel2"  id="tel2" placeholder="+0 (000) 000 00 00" required="required")
 
     .form-reg__info.container
       h3.form-reg__title.form-reg__title-seven Как ваша компания осуществляет бронирования?
