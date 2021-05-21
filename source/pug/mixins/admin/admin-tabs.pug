@@ -1,0 +1,8 @@
+mixin renderAdminTabs(adminTabs)
+  ul.admin__tabs-list
+    button.admin__menu-button(type="button")
+      +icon("icon-mobile-menu", 32, 32)
+    each tab in adminTabs
+      - var activeMod = tab.text === title ? "admin__tabs-item--active" : ""
+      li.admin__tabs-item(class=activeMod)
+        a.admin__tabs-link(href=tab.link)=tab.text

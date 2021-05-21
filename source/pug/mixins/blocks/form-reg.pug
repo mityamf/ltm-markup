@@ -35,15 +35,16 @@ mixin form-reg()
           +icon("arrow-left", "11", "19")
     +form-reg__pop-up
 
-    .form-reg__adoption.adoption.container
+    .form-reg__adoption.adoption.container.swiper-container.adoption__slider
       h3.adoption__title You have selected the following events:
-      ul.adoption__list
-        li.adoption__item
+      ul.adoption__list.swiper-wrapper
+        li.adoption__item.swiper-slide
           h4 Luxury Travel Mart Kyiv 2019 at the Intercontinental Kyiv, Ukraine
           time.adoption__data 24 September 2019
-        li.adoption__item
+        li.adoption__item.swiper-slide
           h4 Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan
           time.adoption__data 27 September 2019
+      .adoption__pagination
 
     .form-reg__info.container
       h3.form-reg__title.form-reg__title-two  Information about company:

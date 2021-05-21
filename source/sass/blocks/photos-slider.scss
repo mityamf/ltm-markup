@@ -15,13 +15,19 @@
 
     @include viewport--sm {
       margin: 0;
+      padding-bottom: 35px;
     }
   }
 
-  &__photo-item {
-    width: auto;
+  .swiper-container-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 0;
+  }
+
+  .direction__list .swiper-slide {
+    width: 100%;
     height: 375px;
-    object-fit: cover;
   }
 
   &__photo-item img {
@@ -30,5 +36,18 @@
     max-width: none;
     object-fit: cover;
     margin: auto;
+  }
+
+  .direction {
+    padding-top: 0;
+  }
+
+  .direction__arrow::after {
+    display: none;
+  }
+
+  .direction__arrow--right,
+  .direction__arrow--left {
+    top: 46%;
   }
 }

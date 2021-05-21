@@ -11,11 +11,24 @@
 
     @include viewport--sm {
       align-self: center;
+      margin: 0;
+      padding-left: 19px;
     }
   }
 
-  &__company {
+  &__company-tm {
     padding-top: 11px;
+
+    @include viewport--sm {
+      padding-top: 0;
+      width: 124px;
+    }
+  }
+
+  &__company-ap {
+    @include viewport--sm {
+      width: 78px;
+    }
   }
 }
 

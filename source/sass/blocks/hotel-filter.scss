@@ -1,11 +1,16 @@
 .hotel-filter {
   display: inline-flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 222px;
   margin-right: 15px;
   padding-bottom: 15px;
   box-sizing: content-box;
+
+  @include viewport--sm {
+    width: 100%;
+    margin-right: 0;
+    padding-bottom: 0;
+  }
 
   &:last-child {
     margin-right: 0;
@@ -14,7 +19,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    padding: 0;
+    padding: 5px 0 0 0;
     list-style-type: none;
   }
 
@@ -22,7 +27,18 @@
     width: 579px;
     padding: 0;
 
+    @include viewport--lg {
+      max-width: 460px;
+      width: 53%;
+    }
+
     @include viewport--md {
+      max-width: none;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    @include viewport--sm {
       display: none;
     }
   }
@@ -32,6 +48,10 @@
     padding: 0;
 
     @include viewport--md {
+      width: 40%;
+    }
+
+    @include viewport--sm {
       display: none;
     }
   }
@@ -39,69 +59,69 @@
   &--dropdown + .dropdown-mobile {
     display: none;
 
-    @include viewport--md {
+    @include viewport--sm {
       display: block;
-    }
-  }
-
-  &--btns {
-    flex-grow: 1;
-    margin: auto 0 0 0;
-
-    @include viewport--md {
       width: 100%;
-      justify-content: space-between;
     }
   }
 
-  &--btns-wrapper {
+  &__buttons {
     display: none;
 
-    @include viewport--md {
-      display: inline-flex;
-      width: calc(100% / 2);
+    @include viewport--sm {
+      display: flex;
+      justify-content: space-between;
       align-items: center;
     }
   }
 
-  &--btns-wrapper > svg {
-    margin-right: 5px;
+  &--buttons-wrapper {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
   }
 
-  &--btns .btn {
-    @include viewport--md {
-      background-color: transparent;
-      border: none;
+  &__buttons--filters,
+  &__buttons--clear {
+    border: none;
+    background-color: transparent;
 
-      font-size: 16px;
-      line-height: 20px;
+    &:hover {
+      border: none;
+      background-color: transparent;
       color: $color-blue;
     }
   }
 
-  &--btns .hotel-filter--clear {
-    width: 100%;
-    height: 49px;
-    padding: 0;
+  &--reset {
+    white-space: nowrap;
+    padding: 10px 23px;
+    height: 48px;
+    margin-top: 49px;
 
-    font-weight: bold;
+    @include viewport--lg {
+      padding: 10px 13px;
+    }
 
     @include viewport--md {
+      padding: 10px 17px;
+    }
+
+    @include viewport--sm {
       display: none;
     }
   }
 
-  &--btns .hotel-filter--btn-clear {
-    display: none;
-
-    @include viewport--md {
-      display: inline-flex;
-      width: calc((100%/2) - 20px);
-    }
+  &__buttons--filters {
+    margin-left: 5px;
   }
 
   &__list li {
-    margin-right: 5px;
+    margin-right: 6px;
+
+    @include viewport--lg {
+      margin-right: 2px;
+    }
   }
 
   &__link {

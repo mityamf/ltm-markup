@@ -8,13 +8,13 @@ block variables
 block main
   include ../data/hotel-page-editing
   include ../data/support-contacts
-  include ../data/hotel-photos
 
-  main.container.hotel-page-edit
-    +renderHotelHeadline(hotelHeadline.title, hotelHeadline.logo, hotelHeadline.note, hotelHeadline.logoWidth, hotelHeadline.logoHeight)
-    +renderHeadlineWithBackButton(pageTitle, "#")
-    +renderEditPhotos(hotelPhotos.photoList, hotelPhotos.cover)
+  main.hotel-page-edit
     +renderEditImageSlider(hotelPhotos.photoList)
-    +renderEditBlock(editingBlockList, buttons)
-    +renderSupportContacts(contactsList)
+
+    .container
+      +renderHotelHeadline(hotelHeadline.title, hotelHeadline.logo, hotelHeadline.note, hotelHeadline.logoWidth, hotelHeadline.logoHeight)
+      +renderHeadlineWithBackButton(pageTitle, "#")
+      +renderEditPhotos(hotelPhotos.photoList, hotelPhotos.cover)
+      +renderEditBlock(editingBlockList, buttons)
 
