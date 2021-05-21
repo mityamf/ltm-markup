@@ -2,18 +2,24 @@
   border-top: 1px solid $color-blue;
 
   @include viewport--sm {
-    padding: 0 0 50px 0;
+    padding: 0 0 32px;
   }
 
   .title--h3 {
     margin-top: 19px;
     margin-bottom: 30px;
+
+    @include viewport--lg {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
   }
 
   &__list {
     display: flex;
     padding: 0;
     justify-content: space-between;
+    margin: 0 -20px -20px 0;
 
     list-style-type: none;
 
@@ -59,9 +65,24 @@
 
     text-align: center;
   }
+
+  .direction {
+    padding: 0;
+  }
+
+  .swiper-pagination {
+    bottom: -4px;
+  }
+
+  .direction__arrow--left,
+  .direction__arrow--right {
+    top: 19%;
+  }
 }
 
 .container--no-padding > .support-contacts {
-  padding-left: 17px;
-  padding-right: 17px;
+  @include viewport--md {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
 }

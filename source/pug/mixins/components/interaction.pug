@@ -27,27 +27,30 @@ mixin interaction()
         li.interaction__item Sirene Luxury Hotel Bodrum;
       .interaction__btn-block
         a.button.button--open(href="#")
-          img(src="img/svg/icon-arrow.svg", width="20", height="14", alt="arrow")
+          img(src="img/sprite/icon-arrow.svg", width="20", height="14", alt="arrow")
           span.visually-hidden read more
-    .interaction__gallery.gallery-block
+    .interaction__gallery
       h2.gallery-block__title Gallery
-      .gallery-block
-        .gallery-block__block
+      .gallery
+        .gallery__block-1
           picture
             +img("content", "gallery-1", "png", "341", "222","img gallery")
-          picture
+          picture.gallery__img
             +img("content", "gallery-2", "png", "341", "222","img gallery")
+        .gallery__block-2
           picture
-            +img("content", "gallery-3", "png", "222", "222","img gallery")
-        .gallery-block__block
+            +img("content", "gallery-3", "png", "272", "222","img gallery")
+        .gallery__block-3
           picture
-            +img("content", "gallery-4", "png", "222", "222","img gallery")
-          picture
+            +img("content", "gallery-4", "png", "272", "222","img gallery")
+        .gallery__block-4
+          picture.gallery__img
             +img("content", "gallery-5", "png", "341", "222","img gallery")
           picture
             +img("content", "gallery-6", "png", "341", "222","img gallery")
+
       .gallery-block__btn-block
         a.button.button--open(href="#")
-          img(src="img/svg/icon-arrow.svg", width="20", height="14", alt="arrow")
+          img(src="img/sprite/icon-arrow.svg", width="20", height="14", alt="arrow")
           span.visually-hidden read more
     a(href="#").interaction__btn View All Exhibitors

@@ -6,14 +6,15 @@ block variables
   - var hasFooter = true
   -
     var promoBg = {
-      titleItem: "The leading luxury travel exhibition in eastern europe, russia & cis",
-      imgItem: "img/bg/schedule-page-desktop.png",
-      img2xItem: "img/bg/bg-home@2x.png",
+      titleItem: "MANDARIN ORIENTAL HOTEL GROUP",
+      imgItem: "img/bg/hotel-promo-desktop.png",
+      img2xItem: "img/bg/hotel-promo-desktop@2x.png",
       widthItem: "1920",
       heightItem: "534",
-      imgSource: "img/bg/LTM_28_02_1942.png 1x, img/bg/LTM_28_02_1942@2x.png 2x",
+      imgSource: "img/bg/hotel-promo-mobile.png 1x, img/bg/hotel-promo-mobile@2x.png 2x",
       classItem: "promo__reg",
-      promoItem: "promo__info promo__text-wrapper"
+      promoItem: "promo__info promo__text-wrapper",
+      noButtonMod: true
     }
 
 block main
@@ -21,12 +22,12 @@ block main
   include ../data/hotel-photos
 
   main.container--hotel-page
-    +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
+    +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem, promoBg.noButtonMod)
+    +renderImageSlider(hotelPhotos.photoList)
     .container
 
       .hotel-page
         +renderHotelPhotos(hotelPhotos.photoList)
-        +renderImageSlider(hotelPhotos.photoList)
 
         .hotel-page__info-block
           img(src=hotel.logo)
@@ -39,4 +40,6 @@ block main
             .hotel-page__text-list
               +renderTextContentBlock(hotel.textList)
 
-
+block modals
+  +modal("modal-gallery")
+    +modal-gallery()

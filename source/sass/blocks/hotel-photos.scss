@@ -3,6 +3,11 @@
   margin-bottom: -15px;
   padding: 0;
 
+  @include viewport--lg {
+    margin-right: -10px;
+    margin-bottom: -10px;
+  }
+
   @include viewport--sm {
     display: none;
   }
@@ -25,6 +30,7 @@
       border: none;
       background-color: rgba(0, 0, 0, 0.5);
       overflow: hidden;
+      cursor: pointer;
 
       @include viewport--sm {
         display: none;
@@ -38,6 +44,27 @@
     float: left;
     margin-right: 15px;
     margin-bottom: 15px;
+
+    @include viewport--lg {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  & &__item--small img {
+    height: 148px;
+
+    @include viewport--lg {
+      height: 119px;
+    }
+
+    @include viewport--md {
+      height: 120px;
+    }
+  }
+
+  & &__item--small .hotel-photos__text {
+    display: none;
   }
 
   &__item:first-child img {
@@ -47,7 +74,7 @@
     object-fit: cover;
 
     @include viewport--lg {
-      height: 371px;
+      height: 454px;
       max-width: 458px;
     }
 
@@ -64,7 +91,8 @@
     object-fit: cover;
 
     @include viewport--lg {
-      height: 178px;
+      height: 222px;
+      max-width: 247px;
     }
 
     @include viewport--sm {
@@ -147,6 +175,10 @@
     align-items: center;
     position: relative;
     background-color: grey;
+
+    @include viewport--lg {
+      width: 178px;
+      height: 119px;
+    }
   }
 }
-

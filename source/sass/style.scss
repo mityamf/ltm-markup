@@ -25,6 +25,7 @@
 @import "blocks/footer/logotip";
 @import "blocks/footer/mailing";
 @import "blocks/footer/menu";
+@import "blocks/footer/cookies";
 @import "blocks/main/promo";
 @import "blocks/main/direction";
 @import "blocks/main/news-home";
@@ -51,7 +52,7 @@
 @import "blocks/newpage";
 @import "blocks/toggle";
 @import "blocks/hotel-cards";
-@import "blocks/exhibitions";
+@import "source/sass/blocks/exhibitors";
 @import "blocks/hotel-filter";
 @import "blocks/hotel-filters";
 @import "blocks/hotel-page";
@@ -69,6 +70,7 @@
 @import "blocks/account/account";
 @import "blocks/hotel-page-edit";
 @import "blocks/hotel-photos";
+@import "blocks/modal-gallery";
 @import "blocks/photos-slider";
 @import "components/headline-back";
 @import "components/info-bottom";
@@ -77,7 +79,11 @@
 @import "components/support-contacts";
 @import "components/top-block";
 @import "components/hotel-headline";
-@import "components/up-button"
+@import "components/up-button";
+@import "blocks/admin/admin-tabs";
+@import "blocks/admin/sponsorship";
+@import "blocks/admin/download";
+@import "blocks/admin/participants";
 
 // используйте это для отключения ховеров на тач устройствах
 // ! но не используйте это для текстовых полей ( input, textarea )

@@ -1,6 +1,9 @@
 .notification-message {
+  padding-bottom: 38px;
 
   @include viewport--lg {
+    padding-top: 11px;
+
     .edit__buttons--save {
       padding: 17px 79px;
     }

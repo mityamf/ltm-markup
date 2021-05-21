@@ -31,6 +31,7 @@ mixin photo-block()
                           +webp("content", `${photo.src}`)
                           +img("content", `${photo.src}`, "png", 222, 154, "Фотография с мероприятия")
                         .photo__desc
+                          +icon("fb-icon", 11, 22)
                           span #{photo.text}
                 else
                   li.photo__sublist-item.swiper-slide

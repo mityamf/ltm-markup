@@ -7,9 +7,13 @@ import {initSearch} from './modules/search';
 import {initMenu} from './modules/init-menu';
 import {toggleGallery} from './modules/toggle-gallery';
 import {initGallerySwiper} from './modules/init-gallery-swiper';
+import {regSwiper} from './modules/reg-swiper';
+import {homeSwiper} from './modules/home-swiper';
 import {initSwiper} from './modules/init-swiper';
 import {initSmoothAnchors} from './modules/init-smooth-anchors';
 import {dropdown} from './modules/dropdown';
+import {initModalGallerySwiper} from './modules/init-modal-gallery-swiper';
+import {initResizePhotos} from './modules/admin-gallery';
 
 // Utils
 // ---------------------------------
@@ -29,3 +33,7 @@ initGallerySwiper();
 initSwiper();
 dropdown();
 initSmoothAnchors();
+homeSwiper();
+initModalGallerySwiper();
+initResizePhotos();
+regSwiper();

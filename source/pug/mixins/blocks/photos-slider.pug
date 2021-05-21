@@ -4,11 +4,13 @@ mixin renderImageSlider(photoList)
       ul.photos-slider__photo-list.direction__list.swiper-wrapper
         each photo in photoList
           li.photos-slider__photo-item.swiper-slide
-            img(src=photo.src)
+            picture
+              img(src=photo.src, srcset=photo.srcset)
       .direction__arrow.swiper-button-next.direction__arrow--right
-        +icon("arrow-right", 11, 19)
+        +icon("arrow-white-right", 18, 30)
       .direction__arrow.swiper-button-prev.direction__arrow--left
-        +icon("arrow-left", 11, 19)
+        +icon("arrow-white-left", 18, 30)
+      .swiper-pagination
 
 mixin renderEditImageSlider(photoList)
   .photos-slider
@@ -16,8 +18,10 @@ mixin renderEditImageSlider(photoList)
       ul.photos-slider__photo-list.direction__list.swiper-wrapper
         each photo in photoList
           li.photos-slider__photo-item.swiper-slide
-            img(src=photo.src)
+            picture
+              img(src=photo.src, srcset=photo.srcset)
           +renderEditComponent(photo)
+      .swiper-pagination
       .direction__arrow.swiper-button-next.direction__arrow--right
         +icon("arrow-right", 11, 19)
       .direction__arrow.swiper-button-prev.direction__arrow--left

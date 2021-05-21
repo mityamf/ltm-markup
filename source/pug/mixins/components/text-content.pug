@@ -1,15 +1,14 @@
 mixin renderHeadline2(title)
-  h2.title--h2=title
+  h2.title.title--h2=title
 
 mixin renderHeadline3(subtitle)
-  h3.title--h3=subtitle
+  h3.title.title--h3=subtitle
 
 mixin renderTextContentBlock(textList)
   each text in textList
     p=text
 
 mixin renderAboutText(textList)
-  time=textList.date
+  time(datetime=textList.date)=textList.date
   span=textList.venue
   p=textList.text
-
