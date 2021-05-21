@@ -1,4 +1,4 @@
-mixin form-reg-buyer()
+mixin form-reg-hosted()
   form(action="#" method="POST").exhibitor-reg__form.form-reg
     .container
       h3.form-reg__title.form-reg__title-one Пожалуйста, выберите мероприятие, на которое Вы хотели бы зарегистрироваться. Возможно выбрать только одно мероприятие. Пожалуйста, заполняйте форму на английском языке.
@@ -266,7 +266,52 @@ mixin form-reg-buyer()
           option(value="DMCS") DMCS
 
     .form-reg__info.container
-      h3.form-reg__title.form-reg__title-eight Логин и пароль
+      h3.form-reg__title.form-reg__title-eight Укажите ваши 3 бронирования отелей класса люкс за последние 6 месяцев
+      .form-reg__block
+        h3.form-reg__block-title Канал через который осуществлялось бронирование
+        select
+          option DMCs
+          option(value="dMCs") dMCs
+          option(value="DmCS") DmCS
+          option(value="DMsC") DMsC
+          option(value="DMCS") DMCS
+      .form-reg__block
+        label(for="Hotel") Название отеля
+        input(type="text" name="Hotel"  id="Hotel" placeholder="Hotel" required="required")
+      .form-reg__block
+        label(for="Tel_or_email") Контакт сотрудника, через которого осуществлялось бронирование
+        input(type="text" name="Tel_or_email"  id="Tel_or_email" placeholder="Telephone or E-mail" required="required")
+      .form-reg__block
+        h3.form-reg__block-title Канал через который осуществлялось бронирование
+        select
+          option DMCs
+          option(value="dMCs") dMCs
+          option(value="DmCS") DmCS
+          option(value="DMsC") DMsC
+          option(value="DMCS") DMCS
+      .form-reg__block
+        label(for="Hotel2") Название отеля
+        input(type="text" name="Hotel2"  id="Hotel2" placeholder="Hotel" required="required")
+      .form-reg__block
+        label(for="Tel_or_email2") Контакт сотрудника, через которого осуществлялось бронирование
+        input(type="text" name="Tel_or_email2"  id="Tel_or_email2" placeholder="Telephone or E-mail" required="required")
+      .form-reg__block
+        h3.form-reg__block-title Канал через который осуществлялось бронирование
+        select
+          option DMCs
+          option(value="dMCs") dMCs
+          option(value="DmCS") DmCS
+          option(value="DMsC") DMsC
+          option(value="DMCS") DMCS
+      .form-reg__block
+        label(for="Hotel3") Название отеля
+        input(type="text" name="Hotel3"  id="Hotel3" placeholder="Hotel" required="required")
+      .form-reg__block
+        label(for="Tel_or_email3") Контакт сотрудника, через которого осуществлялось бронирование
+        input(type="text" name="Tel_or_email3"  id="Tel_or_email3" placeholder="Telephone or E-mail" required="required")
+
+    .form-reg__info.container
+      h3.form-reg__title.form-reg__title-nine Логин и пароль
       .form-reg__block
         label(for="Login") Придумайте логин
         input(type="text" name="Login"  id="Login" placeholder="Login" required="required")
