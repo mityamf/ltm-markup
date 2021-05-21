@@ -1,7 +1,8 @@
 .toggle {
   display: none;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 
   @include viewport--sm {
     display: flex;
