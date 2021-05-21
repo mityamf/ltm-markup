@@ -1,0 +1,94 @@
+mixin renderSchedule(titleList, rowList)
+  table.admin__table
+    tr.admin__table-row.admin__table-row--headline
+      each title in titleList
+        th=title
+    each row in rowList
+      tr.admin__table-row
+        th=row.time
+        th
+          select
+            each option in row.company
+              option=option
+        th=row.request
+        th=row.status
+
+mixin renderSentMessages(titleList, rowList)
+  table.admin__table
+    tr.admin__table-row.admin__table-row--headline
+      each title in titleList
+        th=title
+    each row in rowList
+      tr.admin__table-row
+        th
+          if row.status === "sent"
+            +icon("icon-mail-sent", 34, 15)
+        th=row.to
+        th=row.subject
+        th=row.date
+        th=row.time
+        th=row.event
+        th=row.message
+
+mixin renderInboxMessages(titleList, rowList)
+  table.admin__table
+    tr.admin__table-row.admin__table-row--headline
+      each title in titleList
+        th=title
+    each row in rowList
+      tr.admin__table-row
+        th
+          if row.status === "new"
+            +icon("icon-mail-new", 22, 14)
+          if row.status === "opened"
+            +icon("icon-mail-opened", 22, 21)
+        th=row.from
+        th=row.subject
+        th=row.date
+        th=row.time
+        th=row.event
+        th=row.message
+
+mixin renderGuestsList(titleList, rowList)
+  table.admin__table
+    tr.admin__table-row.admin__table-row--headline
+      each title in titleList
+        th=title
+    each row in rowList
+      tr.admin__table-row
+        th=row.company
+          span=row.place
+        th=row.name
+          span=row.position
+        th=row.colleagueName
+          span=row.colleaguePosition
+        th
+          select
+            each option in row.freeSlots
+              option=option
+        th
+          a(href=row.requestLink, aria-label="Отправить запрос")=row.request
+        th
+          a(href=row.contactLink, aria-label="Отправить письмо")=row.contact
+
+mixin renderHostedGuestsList(titleList, rowList)
+  table.admin__table
+    tr.admin__table-row.admin__table-row--headline
+      each title in titleList
+        th=title
+    each row in rowList
+      tr.admin__table-row
+        th=row.company
+          span=row.place
+        th=row.name
+          span=row.position
+        th=row.colleagueName
+          span=row.colleaguePosition
+        th
+          select
+            each option in row.freeSlots
+              option=option
+        th
+          a(href=row.requestLink, aria-label="Отправить запрос")=row.request
+        th
+          a(href=row.contactLink, aria-label="Отправить письмо")=row.contact
