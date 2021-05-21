@@ -2818,38 +2818,49 @@
             </svg>
           </label>
         </div>
-        <table class="admin__table">
-          <tr class="admin__table-row admin__table-row--headline">
+        <table class="admin-table">
+          <tr class="admin-table__row admin-table__row--headline">
+            <th></th>
             <th>Time</th>
             <th>Company</th>
             <th>Request</th>
             <th>Status</th>
+            <th></th>
           </tr>
-          <tr class="admin__table-row">
+          <tr class="admin-table__row">
+            <th></th>
             <th>10:00 – 10:10</th>
             <th>
-              <select>
-                <option>Cats</option>
-                <option>Dogs</option>
+              <select class="input-dropdown" id="company-select">
+                <option class="input-dropdown__option" value="Choose a company">Choose a company</option>
+                <option class="input-dropdown__option" value="Choose a company">Mandarin International Hotel Group</option>
               </select>
             </th>
-            <th>Send a request</th>
-            <th>Free</th>
+            <th>
+              <button class="btn btn--white btn--request" type="submit">Send a request</button>
+            </th>
+            <th><span>Free</span></th>
+            <th></th>
           </tr>
-          <tr class="admin__table-row">
+          <tr class="admin-table__row">
+            <th></th>
             <th>10:00 – 10:10</th>
             <th>
-              <select>
-                <option>Cats</option>
-                <option>Dogs</option>
+              <select class="input-dropdown" id="company-select">
+                <option class="input-dropdown__option" value="Choose a company">Choose a company</option>
+                <option class="input-dropdown__option" value="Choose a company">Mandarin International Hotel Group</option>
               </select>
             </th>
-            <th>Send a request</th>
-            <th>Free</th>
+            <th>
+              <button class="btn btn--white btn--request" type="submit">Send a request</button>
+            </th>
+            <th><span>Free</span></th>
+            <th></th>
           </tr>
         </table>
-        <table class="admin__table">
-          <tr class="admin__table-row admin__table-row--headline">
+        <p>Новая таблица</p>
+        <table class="admin-table">
+          <tr class="admin-table__row admin-table__row--headline">
             <th>Status</th>
             <th>To</th>
             <th>Subject</th>
@@ -2858,7 +2869,7 @@
             <th>Event</th>
             <th>Message</th>
           </tr>
-          <tr class="admin__table-row">
+          <tr class="admin-table__row">
             <th>
               <svg width="34" height="15" aria-hidden="true">
                 <use xlink:href="#icon-mail-sent"></use>
@@ -2871,7 +2882,7 @@
             <th>Luxury Travel Mart Kiev’ 2020</th>
             <th>Dear Stanislav, we invite your company in mee… </th>
           </tr>
-          <tr class="admin__table-row">
+          <tr class="admin-table__row">
             <th>
               <svg width="34" height="15" aria-hidden="true">
                 <use xlink:href="#icon-mail-sent"></use>
@@ -2884,7 +2895,7 @@
             <th>Luxury Travel Mart Moscow’ 2020</th>
             <th>Dear Stanislav, we invite your company in mee… </th>
           </tr>
-          <tr class="admin__table-row">
+          <tr class="admin-table__row">
             <th>
               <svg width="34" height="15" aria-hidden="true">
                 <use xlink:href="#icon-mail-sent"></use>
@@ -2898,8 +2909,9 @@
             <th>Dear Stanislav, we invite your company in mee… </th>
           </tr>
         </table>
-        <table class="admin__table">
-          <tr class="admin__table-row admin__table-row--headline">
+        <p>Новая таблица</p>
+        <table class="admin-table">
+          <tr class="admin-table__row admin-table__row--headline">
             <th>Status</th>
             <th>From</th>
             <th>Subject</th>
@@ -2908,7 +2920,7 @@
             <th>Event</th>
             <th>Message</th>
           </tr>
-          <tr class="admin__table-row">
+          <tr class="admin-table__row">
             <th>
               <svg width="22" height="14" aria-hidden="true">
                 <use xlink:href="#icon-mail-new"></use>
@@ -2921,7 +2933,7 @@
             <th>Luxury Travel Mart Kiev’ 2020</th>
             <th>Dear Stanislav, we invite your company in mee… </th>
           </tr>
-          <tr class="admin__table-row">
+          <tr class="admin-table__row">
             <th>
               <svg width="22" height="21" aria-hidden="true">
                 <use xlink:href="#icon-mail-opened"></use>
@@ -2934,7 +2946,7 @@
             <th>Luxury Travel Mart Moscow’ 2020</th>
             <th>Dear Stanislav, we invite your company in mee… </th>
           </tr>
-          <tr class="admin__table-row">
+          <tr class="admin-table__row">
             <th>
               <svg width="22" height="21" aria-hidden="true">
                 <use xlink:href="#icon-mail-opened"></use>
@@ -2948,8 +2960,9 @@
             <th>Dear Stanislav, we invite your company in mee… </th>
           </tr>
         </table>
-        <table class="admin__table">
-          <tr class="admin__table-row admin__table-row--headline">
+        <p>Новая таблица</p>
+        <table class="admin-table">
+          <tr class="admin-table__row admin-table__row--headline">
             <th>Company</th>
             <th>Representative</th>
             <th>Representative (Colleague)</th>
@@ -2957,92 +2970,105 @@
             <th>Request</th>
             <th>Contact</th>
           </tr>
-          <tr class="admin__table-row">
+          <tr class="admin-table__row">
             <th>Travel Luxury Agency<span>Worldwide</span></th>
             <th>Ivan Skorodubov<span>Director</span></th>
             <th>Svetlana Yakovleva<span>PR-director</span></th>
             <th>
-              <select>
-                <option>10:00 – 10:10</option>
-                <option>12:00 – 12:20</option>
+              <select class="input-dropdown" id="free-slot-select">
+                <option class="input-dropdown__option" value="10:00 – 10:10">10:00 – 10:10</option>
+                <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
               </select>
             </th>
-            <th><a href="#" aria-label="Отправить запрос">Send a request</a></th>
-            <th><a href="#" aria-label="Отправить письмо">Send a message</a></th>
+            <th>
+              <button class="btn btn--white btn--request" type="submit">Send a request</button>
+            </th>
+            <th><a class="admin-table__link" href="#" aria-label="Отправить письмо">Send a message</a></th>
           </tr>
-          <tr class="admin__table-row">
+          <tr class="admin-table__row">
             <th>Prime Luxury Travel<span>Worldwide</span></th>
             <th>Eugenia Stuslova<span>Senior Sales Manager</span></th>
             <th>Aleksandr Senkov<span>Sales Manager</span></th>
             <th>
-              <select>
-                <option>10:00 – 10:10</option>
-                <option>12:00 – 12:20</option>
+              <select class="input-dropdown" id="free-slot-select">
+                <option class="input-dropdown__option" value="10:00 – 10:10">10:00 – 10:10</option>
+                <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
               </select>
             </th>
-            <th><a href="#" aria-label="Отправить запрос">Send a request</a></th>
-            <th><a href="#" aria-label="Отправить письмо">Send a message</a></th>
+            <th>
+              <button class="btn btn--white btn--request" type="submit">Send a request</button>
+            </th>
+            <th><a class="admin-table__link" href="#" aria-label="Отправить письмо">Send a message</a></th>
           </tr>
-          <tr class="admin__table-row">
+          <tr class="admin-table__row">
             <th>Anastasia Tours<span>UAE, Turkey</span></th>
             <th>Anna Petrenko<span>Manager</span></th>
             <th>Valentina Petrenko<span>Sales Manager</span></th>
             <th>
-              <select>
-                <option>13:00 – 17:10</option>
-                <option>12:00 – 12:20</option>
+              <select class="input-dropdown" id="free-slot-select">
+                <option class="input-dropdown__option" value="13:00 – 17:10">13:00 – 17:10</option>
+                <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
               </select>
             </th>
-            <th><a href="#" aria-label="Отправить запрос">Send a request</a></th>
-            <th><a href="#" aria-label="Отправить письмо">Send a message</a></th>
+            <th>
+              <button class="btn btn--white btn--request" type="submit">Send a request</button>
+            </th>
+            <th><a class="admin-table__link" href="#" aria-label="Отправить письмо">Send a message</a></th>
           </tr>
         </table>
-        <table class="admin__table">
-          <tr class="admin__table-row admin__table-row--headline">
+        <p>Новая таблица</p>
+        <table class="admin-table">
+          <tr class="admin-table__row admin-table__row--headline">
             <th>Company</th>
             <th>Representative</th>
             <th>Free Slots</th>
             <th>Request</th>
             <th>Contact</th>
           </tr>
-          <tr class="admin__table-row">
+          <tr class="admin-table__row">
             <th>Travel Luxury Agency<span>Worldwide</span></th>
-            <th>Ivan Skorodubov<span></span></th>
-            <th><span></span></th>
+            <th>Ivan Skorodubov<span>Director</span>
+            </th>
             <th>
-              <select>
-                <option>10:00 – 10:10</option>
-                <option>12:00 – 12:20</option>
+              <select class="input-dropdown" id="free-slot-select-2">
+                <option class="input-dropdown__option" value="10:00 – 10:10">10:00 – 10:10</option>
+                <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
               </select>
             </th>
-            <th><a href="#" aria-label="Отправить запрос">Send a request</a></th>
-            <th><a href="#" aria-label="Отправить письмо">Send a message</a></th>
+            <th>
+              <button class="btn btn--white btn--request" type="submit">Send a request</button>
+            </th>
+            <th><a class="admin-table__link" href="#" aria-label="Отправить письмо">Send a message</a></th>
           </tr>
-          <tr class="admin__table-row">
+          <tr class="admin-table__row">
             <th>Prime Luxury Travel<span>Worldwide</span></th>
-            <th>Eugenia Stuslova<span></span></th>
-            <th><span></span></th>
+            <th>Eugenia Stuslova
+            </th>
             <th>
-              <select>
-                <option>10:00 – 10:10</option>
-                <option>12:00 – 12:20</option>
+              <select class="input-dropdown" id="free-slot-select-2">
+                <option class="input-dropdown__option" value="10:00 – 10:10">10:00 – 10:10</option>
+                <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
               </select>
             </th>
-            <th><a href="#" aria-label="Отправить запрос">Send a request</a></th>
-            <th><a href="#" aria-label="Отправить письмо">Send a message</a></th>
+            <th>
+              <button class="btn btn--white btn--request" type="submit">Send a request</button>
+            </th>
+            <th><a class="admin-table__link" href="#" aria-label="Отправить письмо">Send a message</a></th>
           </tr>
-          <tr class="admin__table-row">
+          <tr class="admin-table__row">
             <th>Anastasia Tours<span>UAE, Turkey</span></th>
-            <th>Anna Petrenko<span></span></th>
-            <th><span></span></th>
+            <th>Anna Petrenko
+            </th>
             <th>
-              <select>
-                <option>13:00 – 17:10</option>
-                <option>12:00 – 12:20</option>
+              <select class="input-dropdown" id="free-slot-select-2">
+                <option class="input-dropdown__option" value="13:00 – 17:10">13:00 – 17:10</option>
+                <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
               </select>
             </th>
-            <th><a href="#" aria-label="Отправить запрос">Send a request</a></th>
-            <th><a href="#" aria-label="Отправить письмо">Send a message</a></th>
+            <th>
+              <button class="btn btn--white btn--request" type="submit">Send a request</button>
+            </th>
+            <th><a class="admin-table__link" href="#" aria-label="Отправить письмо">Send a message</a></th>
           </tr>
         </table>
         <div class="participants">

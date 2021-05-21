@@ -7833,6 +7833,61 @@ span {
       .mail-control__find-input {
         padding: 12px 14px 12px 41px; } }
 
+.admin-table {
+  width: 100%;
+  border-collapse: collapse; }
+  .admin-table__row th {
+    padding: 6px;
+    max-width: 100px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left; }
+  .admin-table__row:nth-child(even) {
+    background-color: #d6d6d6; }
+  .admin-table__row--headline th {
+    padding: 0 6px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #9f9f9f; }
+  .admin-table__row:not(:first-child) th {
+    font-size: 12px;
+    line-height: 20px;
+    color: #606060; }
+  .admin-table th span {
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+    color: #9f9f9f; }
+  .admin-table .admin-table__status span {
+    color: #78b17c;
+    font-size: 12px;
+    line-height: 20px; }
+  .admin-table .btn--request {
+    padding: 5px 7px;
+    font-size: 12px;
+    line-height: 18px; }
+  .admin-table__link {
+    padding: 5px 7px;
+    border: 1px solid #0098c1;
+    background-color: transparent;
+    color: #0098c1;
+    font-size: 12px;
+    line-height: 18px;
+    -webkit-transition: color background-color 0.3s ease;
+    transition: color background-color 0.3s ease; }
+    .admin-table__link:hover, .admin-table__link:focus {
+      border-color: transparent;
+      background-color: #0098c1;
+      color: #ffffff; }
+    .admin-table__link:active {
+      border-color: transparent;
+      background-color: #a7a7a7;
+      color: #ffffff; }
+  .admin-table .choices__inner,
+  .admin-table .choices__item {
+    background-color: transparent;
+    color: #0098c1; }
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {

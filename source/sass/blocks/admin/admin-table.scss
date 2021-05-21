@@ -1,0 +1,86 @@
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  &__row th {
+    padding: 6px;
+    max-width: 100px;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+  }
+
+  &__row:nth-child(even) {
+    background-color: $color-gray-light;
+  }
+
+  &__row--headline th {
+    padding: 0 6px;
+
+    font-size: 12px;
+    line-height: 20px;
+    color: $color-nobel;
+  }
+
+  &__row:not(:first-child) th {
+    font-size: 12px;
+    line-height: 20px;
+    color: $color-zambezi;
+  }
+
+  th span {
+    display: block;
+
+    font-size: 12px;
+    line-height: 20px;
+    color: $color-nobel;
+  }
+
+  & &__status span {
+    color: $color-green;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .btn--request {
+    padding: 5px 7px;
+
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__link {
+    padding: 5px 7px;
+
+    border: 1px solid $color-blue;
+    background-color: transparent;
+
+    color: $color-blue;
+    font-size: 12px;
+    line-height: 18px;
+
+    transition: color background-color $default-transition-settings;
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      background-color: $color-blue;
+
+      color: $color-default-white;
+    }
+
+    &:active {
+      border-color: transparent;
+      background-color: $color-gray;
+
+      color: $color-default-white;
+    }
+  }
+
+  .choices__inner,
+  .choices__item {
+    background-color: transparent;
+    color: $color-blue;
+  }
+}

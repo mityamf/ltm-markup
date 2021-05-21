@@ -1,25 +1,31 @@
 mixin renderSchedule(titleList, rowList)
-  table.admin__table
-    tr.admin__table-row.admin__table-row--headline
+  table.admin-table
+    tr.admin-table__row.admin-table__row--headline
+      th
       each title in titleList
         th=title
+      th
     each row in rowList
-      tr.admin__table-row
+      tr.admin-table__row
+        th
         th=row.time
         th
-          select
+          select(id="company-select", class="input-dropdown")
             each option in row.company
-              option=option
-        th=row.request
-        th=row.status
+              option(value="Choose a company", class="input-dropdown__option")=option
+        th
+          button.btn.btn--white.btn--request(type="submit")=row.request
+        th
+          span=row.status
+        th
 
 mixin renderSentMessages(titleList, rowList)
-  table.admin__table
-    tr.admin__table-row.admin__table-row--headline
+  table.admin-table
+    tr.admin-table__row.admin-table__row--headline
       each title in titleList
         th=title
     each row in rowList
-      tr.admin__table-row
+      tr.admin-table__row
         th
           if row.status === "sent"
             +icon("icon-mail-sent", 34, 15)
@@ -31,12 +37,12 @@ mixin renderSentMessages(titleList, rowList)
         th=row.message
 
 mixin renderInboxMessages(titleList, rowList)
-  table.admin__table
-    tr.admin__table-row.admin__table-row--headline
+  table.admin-table
+    tr.admin-table__row.admin-table__row--headline
       each title in titleList
         th=title
     each row in rowList
-      tr.admin__table-row
+      tr.admin-table__row
         th
           if row.status === "new"
             +icon("icon-mail-new", 22, 14)
@@ -50,12 +56,12 @@ mixin renderInboxMessages(titleList, rowList)
         th=row.message
 
 mixin renderGuestsList(titleList, rowList)
-  table.admin__table
-    tr.admin__table-row.admin__table-row--headline
+  table.admin-table
+    tr.admin-table__row.admin-table__row--headline
       each title in titleList
         th=title
     each row in rowList
-      tr.admin__table-row
+      tr.admin-table__row
         th=row.company
           span=row.place
         th=row.name
@@ -63,32 +69,31 @@ mixin renderGuestsList(titleList, rowList)
         th=row.colleagueName
           span=row.colleaguePosition
         th
-          select
+          select(id="free-slot-select", class="input-dropdown")
             each option in row.freeSlots
-              option=option
+              option(value=option, class="input-dropdown__option")=option
         th
-          a(href=row.requestLink, aria-label="Отправить запрос")=row.request
+          button.btn.btn--white.btn--request(type="submit")=row.request
         th
-          a(href=row.contactLink, aria-label="Отправить письмо")=row.contact
+          a.admin-table__link(href=row.contactLink, aria-label="Отправить письмо")=row.contact
 
 mixin renderHostedGuestsList(titleList, rowList)
-  table.admin__table
-    tr.admin__table-row.admin__table-row--headline
+  table.admin-table
+    tr.admin-table__row.admin-table__row--headline
       each title in titleList
         th=title
     each row in rowList
-      tr.admin__table-row
+      tr.admin-table__row
         th=row.company
           span=row.place
         th=row.name
-          span=row.position
-        th=row.colleagueName
-          span=row.colleaguePosition
+          if row.position
+            span=row.position
         th
-          select
+          select(id="free-slot-select-2", class="input-dropdown")
             each option in row.freeSlots
-              option=option
+              option(value=option, class="input-dropdown__option")=option
         th
-          a(href=row.requestLink, aria-label="Отправить запрос")=row.request
+          button.btn.btn--white.btn--request(type="submit")=row.request
         th
-          a(href=row.contactLink, aria-label="Отправить письмо")=row.contact
+          a.admin-table__link(href=row.contactLink, aria-label="Отправить письмо")=row.contact
