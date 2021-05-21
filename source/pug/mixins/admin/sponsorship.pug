@@ -1,0 +1,14 @@
+mixin renderSponsorshipList(sponsorshipHeadline, sponsorshipList)
+  .sponsorship
+    +renderHeadline2(sponsorshipHeadline)
+    ul.sponsorship__list
+      each sponsorship in sponsorshipList
+        li.sponsorship__item(class='sponsorship__item--' + sponsorship.status)
+          h4.title.title--h4=sponsorship.title
+          picture
+            source(media="(max-width: 767px)" srcset=sponsorship.src)
+            img(src=sponsorship.src srcset=sponsorship.src alt="Sponsorship image")
+            .sponsorship__text-wrapper
+              each text in sponsorship.textList
+                p=text
+          button.btn.btn--white(type="button")=sponsorship.buttonText

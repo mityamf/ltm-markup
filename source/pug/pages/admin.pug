@@ -1,21 +1,34 @@
 extends ../base/layout
 
 block variables
-  - var title = "Админка"
+  - var title = "Deadline Info"
   - var hasHeader = true
   - var hasFooter = true
 
 
 block main
-  include ../data/admin
+  include ../data/admin/admin-tabs
+  include ../data/admin/sponsorship
+  include ../data/admin/download-list
+  include ../data/admin/participants
 
   main.container
     p="Здесь пока будут отображаться отдельные куски из разных страниц админки, потом разнесу по разным страницам, сейчас надо сделать шаблоны"
     p="Табы"
 
-    ul.admin__tabs-list
-      button.admin__menu-button(type="button")
-        +icon("icon-mobile-menu", 32, 32)
-      each tab in adminTabs
-        li.admin__tabs-item
-          a.admin__tabs-link(href=tab.link)=tab.text
+    +renderAdminTabs(adminTabs)
+
+    p="Сотрудники на выставку"
+      +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
+
+    p="Sponsorship Opportunities"
+
+    +renderSponsorshipList(sponsorshipHeadline, sponsorshipList)
+
+    p="ПДФ для скачивания"
+
+    +renderDownloadFiles(downloadHeadline, downloadList)
+
+
+
+

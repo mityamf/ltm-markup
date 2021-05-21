@@ -1,11 +1,23 @@
 .account-hotel-info {
   display: flex;
   justify-content: space-between;
-  padding: 17px 0 30px 0;
+  padding: 0 0 30px 0;
   clear: both;
 
   @include viewport--sm {
     flex-wrap: wrap;
+  }
+
+  p {
+    letter-spacing: 0.1px;
+  }
+
+  p:first-of-type {
+    margin-top: 0;
+  }
+
+  p:last-of-type {
+    margin-bottom: 9px;
   }
 
   &__description {
@@ -35,18 +47,28 @@
   }
 
   &__link-hotel {
-    margin-bottom: 20px;
+    margin-bottom: 7px;
 
     font-size: 24px;
     line-height: 29px;
+    letter-spacing: 0.8px;
 
     @include viewport--sm {
       display: none;
     }
   }
+
+  .btn--more {
+    margin: 0 0 0 auto;
+    padding: 13px 28px;
+
+    letter-spacing: 0.5px;
+  }
 }
 
 .container--no-padding > .account-hotel-info {
-  padding-left: 17px;
-  padding-right: 17px;
+  @include viewport--sm {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
 }

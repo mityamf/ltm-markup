@@ -3,7 +3,7 @@ mixin photo-block()
     each item in photoList
       li.photo__item
         .photo__title-wrap
-          h3.title.title--h3 #{item.title}
+          h3.title.title--h3 #{item.title} #[span #{item.titleOnlyDesktop}]
         .swiper-container.photo__slider
           ul.photo__sublist.swiper-wrapper
             each photo in item.photos
