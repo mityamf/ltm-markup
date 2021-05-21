@@ -10,12 +10,16 @@ block main
   include ../data/admin/admin-tabs
   include ../data/admin/sponsorship
   include ../data/admin/download-list
+  include ../data/admin/participants
 
   main.container
     p="Здесь пока будут отображаться отдельные куски из разных страниц админки, потом разнесу по разным страницам, сейчас надо сделать шаблоны"
     p="Табы"
 
     +renderAdminTabs(adminTabs)
+
+    p="Сотрудники на выставку"
+      +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
 
     p="Sponsorship Opportunities"
 
@@ -24,5 +28,7 @@ block main
     p="ПДФ для скачивания"
 
     +renderDownloadFiles(downloadHeadline, downloadList)
+
+
 
 
