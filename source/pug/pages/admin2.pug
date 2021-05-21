@@ -1,21 +1,21 @@
-extends ../base/layout
-
-block variables
-  - var title = "Messages"
-  - var hasHeader = true
-  - var hasFooter = true
-
-block main
-  include ../data/admin
-
-  main.container
-    p="Здесь пока будут отображаться отдельные куски из разных страниц админки, потом разнесу по разным страницам, сейчас надо сделать шаблоны"
-    p="Табы"
-
-    ul.admin__tabs-list
-      button.admin__menu-button(type="button")
-        +icon("icon-mobile-menu", 32, 32)
-      each tab in adminTabs
-        - var activeMod = tab.text === title ? "admin__tabs-item--active" : ""
-        li.admin__tabs-item(class=activeMod)
-          a.admin__tabs-link(href=tab.link)=tab.text
+//extends ../base/layout
+//
+//block variables
+//  - var title = "Messages"
+//  - var hasHeader = true
+//  - var hasFooter = true
+//
+//block main
+//  include source/pug/data/admin/admin-tabs
+//
+//  main.container
+//    p="Здесь пока будут отображаться отдельные куски из разных страниц админки, потом разнесу по разным страницам, сейчас надо сделать шаблоны"
+//    p="Табы"
+//
+//    ul.admin__tabs-list
+//      button.admin__menu-button(type="button")
+//        +icon("icon-mobile-menu", 32, 32)
+//      each tab in adminTabs
+//        - var activeMod = tab.text === title ? "admin__tabs-item--active" : ""
+//        li.admin__tabs-item(class=activeMod)
+//          a.admin__tabs-link(href=tab.link)=tab.text
