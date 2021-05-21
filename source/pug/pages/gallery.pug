@@ -33,6 +33,6 @@ block main
           each videoItem in videoList
             li.video__block-item
               .video__title-wrap
-                h3.title.title--h3 #{videoItem.title}
+                h3.title.title--h3 #{videoItem.title} #[span #{videoItem.titleOnlyDesktop}]
               .video__container
                 video.video__player(controls preload="metadata" poster= `${videoItem.img}` src= `${videoItem.src}`)

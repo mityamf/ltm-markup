@@ -33,6 +33,7 @@ const initSearch = () => {
     };
 
     searchButton.addEventListener('click', toggleSearch);
+    window.addEventListener('resize', closeSearch);
   }
 };
 
