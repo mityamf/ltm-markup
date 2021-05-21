@@ -11,24 +11,25 @@ block main
   include ../data/admin/sponsorship
   include ../data/admin/download-list
   include ../data/admin/participants
+  include ../data/admin/deadlines-info
 
   main.container
     p="Здесь пока будут отображаться отдельные куски из разных страниц админки, потом разнесу по разным страницам, сейчас надо сделать шаблоны"
-    p="Табы"
 
+    p="Табы"
     +renderAdminTabs(adminTabs)
 
     p="Сотрудники на выставку"
-      +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
+    +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
 
     p="Sponsorship Opportunities"
-
     +renderSponsorshipList(sponsorshipHeadline, sponsorshipList)
 
-    p="ПДФ для скачивания"
-
-    +renderDownloadFiles(downloadHeadline, downloadList)
-
-
-
-
+    p="Текст первой страницы"
+    .deadlines-info
+      .deadlines-info__content
+        each textBlock in deadlinesInfoContent
+          +renderHeadline2(textBlock.title)
+          .deadlines-info__text
+            +renderTextContentBlock(textBlock.textList)
+      +renderDownloadFiles(downloadHeadline, downloadList)
