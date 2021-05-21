@@ -13,7 +13,7 @@ import {initSwiper} from './modules/init-swiper';
 import {initSmoothAnchors} from './modules/init-smooth-anchors';
 import {dropdown} from './modules/dropdown';
 import {initModalGallerySwiper} from './modules/init-modal-gallery-swiper';
-
+import {buyerSwiper} from './modules/buyer-swiper';
 // Utils
 // ---------------------------------
 
@@ -35,3 +35,4 @@ initSmoothAnchors();
 homeSwiper();
 initModalGallerySwiper();
 regSwiper();
+buyerSwiper();

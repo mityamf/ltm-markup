@@ -170,8 +170,9 @@ mixin form-reg()
             input.form-reg__check#choices-16(type='checkbox' name='complex' value='complex-2')
             label(for='choices-16') choices-12
         .form-reg__overlay
-      input.form-reg__check(type="checkbox" id="Global" name="Global" value="Global")
-      label(for="Global") Global/Worldwide
+      .form-reg__dropdown-check
+        input.form-reg__check(type="checkbox" id="Global" name="Global" value="Global")
+        label(for="Global") Global/Worldwide
 
     .form-reg__info.container
       h3.form-reg__title.form-reg__title-four Information about you:
