@@ -37,6 +37,11 @@
     margin-left: 25px;
   }
 
+  @media (max-width: 1220px) {
+    margin-left: 10px;
+    margin-right: 5px;
+  }
+
   @include viewport--sm {
     position: relative;
     margin-left: 0;
