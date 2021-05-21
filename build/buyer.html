@@ -2710,7 +2710,7 @@
                 <use xlink:href="#icon-search"></use>
               </svg></a></li>
           <li class="header__item header__item--terms"><a class="header__top-link" href="#">Terms & Conditions</a></li>
-          <li class="header__item"><a class="header__top-link header__top-link--rus" href="page-rus.html">Рус</a></li>
+          <li class="header__item"><a class="header__top-link header__top-link--rus" href="#">Рус</a></li>
         </ul>
         <div class="header__main">
           <div class="header__main-wrapper container"><a class="header__logo header__logo--desktop" href="main.html" aria-label="Переход на главную">
@@ -2850,29 +2850,42 @@
               </div>
               <button class="pop-up__btn" data-modal="choices" type="button">View All Events</button>
             </div>
-            <div class="form-reg__info container status">
+            <div class="form-reg__info container status swiper-container status__slider">
               <h3 class="form-reg__title form-reg__title-two">Выберете статус участника</h3>
-              <ul class="status__list">
-                <li class="status__item">
-                  <input class="form-reg__check" type="checkbox" id="Buyer" name="check" value="Buyer"/>
-                  <label for="Buyer">Buyer</label>
-                </li>
-                <li class="status__item">
-                  <input class="form-reg__check" type="checkbox" id="Participation" name="check" value="Participation"/>
-                  <label for="Participation">Участие в рабочей сессии</label>
-                </li>
-                <li class="status__item">
-                  <input class="form-reg__check" type="checkbox" id="visit" name="check" value="visit"/>
-                  <label for="visit">Посещение вечернего коктейля</label>
-                </li>
-              </ul>
-              <ul class="status__list">
-                <li class="status__item">
-                  <input class="form-reg__check" type="checkbox" id="Hosted" name="check" value="Hosted"/>
-                  <label for="Hosted">Hosted Buyer</label>
-                  <p>Заявка на участие в программе для приглашенных профессиональных покупателей</p>
-                </li>
-              </ul>
+              <div class="swiper-wrapper">
+                <ul class="status__list swiper-slide">
+                  <li class="status__item">
+                    <input class="status__main" type="checkbox" id="Buyer" name="check" value="Buyer"/>
+                    <label class="status__label" for="Buyer">Buyer</label>
+                  </li>
+                  <li class="status__item">
+                    <input class="status__check" type="checkbox" id="Participation" name="check" value="Participation"/>
+                    <label class="status__label" for="Participation">Участие в рабочей сессии</label>
+                  </li>
+                  <li class="status__item">
+                    <input class="status__check" type="checkbox" id="visit" name="check" value="visit"/>
+                    <label class="status__label" for="visit">Посещение вечернего коктейля</label>
+                  </li>
+                </ul>
+                <ul class="status__list swiper-slide">
+                  <li class="status__item">
+                    <input class="status__main" type="checkbox" id="Hosted" name="check" value="Hosted"/>
+                    <label class="status__label" for="Hosted">Hosted Buyer</label>
+                    <p>Заявка на участие в программе для приглашенных профессиональных покупателей</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="status__button-next">
+                <svg width="11" height="19" aria-hidden="true">
+                  <use xlink:href="#arrow-right"></use>
+                </svg>
+              </div>
+              <div class="status__button-prev">
+                <svg width="11" height="19" aria-hidden="true">
+                  <use xlink:href="#arrow-left"></use>
+                </svg>
+              </div>
+              <div class="status__pagination"></div>
             </div>
             <div class="form-reg__info container">
               <h3 class="form-reg__title form-reg__title-three"> Информация о компании:</h3>
@@ -3065,11 +3078,11 @@
               </div>
               <div class="form-reg__block">
                 <label for="tel">Телефон</label>
-                <input type="text" name="tel" id="tel" placeholder="+1 (111) 111 11 11" required="required"/>
+                <input type="text" name="tel" id="tel" placeholder="+0 (000) 000 00 00" required="required"/>
               </div>
               <div class="form-reg__block">
                 <label for="tel2">Мобильный телефон</label>
-                <input type="text" name="tel2" id="tel2" placeholder="+1 (111) 111 11 11" required="required"/>
+                <input type="text" name="tel2" id="tel2" placeholder="+0 (000) 000 00 00" required="required"/>
               </div>
               <div class="form-reg__block">
                 <label for="skype">Skype</label>
@@ -3114,7 +3127,7 @@
               </div>
               <div class="form-reg__block">
                 <label for="tel2">Мобильный телефон</label>
-                <input type="text" name="tel2" id="tel2" placeholder="+1 (111) 111 11 11" required="required"/>
+                <input type="text" name="tel2" id="tel2" placeholder="+0 (000) 000 00 00" required="required"/>
               </div>
             </div>
             <div class="form-reg__info container">

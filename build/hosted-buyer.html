@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Отель</title>
+    <title>Luxury Travel Mart — Registration Hosted Buyer</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -2724,7 +2724,7 @@
               <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false"></button>
               <ul class="main-nav__list">
                 <li><a class="main-nav__link" href="about.html">About LTM</a></li>
-                <li><a class="main-nav__link" href="#">Registration</a></li>
+                <li><a class="main-nav__link main-nav__link--active">Registration</a></li>
                 <li><a class="main-nav__link" href="schedule.html">Detailed Schedule</a></li>
                 <li><a class="main-nav__link" href="exhibitors.html">Exhibitors</a></li>
                 <li><a class="main-nav__link" href="gallery.html">Gallery</a></li>
@@ -2751,134 +2751,476 @@
           </div>
         </div>
       </header>
-      <main class="container--hotel-page">
-        <section class="promo promo--no-button">
+      <main>
+        <section class="promo">
           <picture>
-            <source media="(max-width: 767px)" srcset="img/bg/hotel-promo-mobile.png 1x, img/bg/hotel-promo-mobile@2x.png 2x"/><img class="promo__img" src="img/bg/hotel-promo-desktop.png" srcset="img/bg/hotel-promo-desktop@2x.png" width="1920" height="534" alt="promo image"/>
+            <source media="(max-width: 767px)" srcset="./img/bg/regBg-mobile.png 1x, ./img/bg/regBg-mobile@2x.png 2x"/><img class="promo__img" src="./img/bg/reg-bg.png" srcset="./img/bg/reg-bg@2x.png" width="1920" height="534" alt="promo image"/>
           </picture>
-          <div class="container promo__info promo__text-wrapper">
-            <h2 class="promo__title">MANDARIN ORIENTAL HOTEL GROUP</h2>
+          <div class="container promo__info-reg">
+            <h2 class="promo__title">The leading luxury travel exhibition in eastern europe, russia &amp; cis</h2>
           </div>
         </section>
-        <div class="photos-slider">
-          <div class="direction swiper-container photos-swiper">
-            <ul class="photos-slider__photo-list direction__list swiper-wrapper">
-              <li class="photos-slider__photo-item swiper-slide">
-                <picture><img src="img/content/hotel-mandarin-desktop-1.jpg" srcset="img/content/hotel-mandarin-desktop-1@2x.jpg 2x"/></picture>
-              </li>
-              <li class="photos-slider__photo-item swiper-slide">
-                <picture><img src="img/content/hotel-mandarin-desktop-2.jpg" srcset="img/content/hotel-mandarin-desktop-2@2x.jpg 2x"/></picture>
-              </li>
-              <li class="photos-slider__photo-item swiper-slide">
-                <picture><img src="img/content/hotel-mandarin-desktop-3.jpg" srcset="img/content/hotel-mandarin-desktop-3@2x.jpg 2x"/></picture>
-              </li>
-              <li class="photos-slider__photo-item swiper-slide">
-                <picture><img src="img/content/hotel-mandarin-desktop-4.jpg" srcset="img/content/hotel-mandarin-desktop-4@2x.jpg 2x"/></picture>
-              </li>
-              <li class="photos-slider__photo-item swiper-slide">
-                <picture><img src="img/content/hotel-mandarin-desktop-5.jpg" srcset="img/content/hotel-mandarin-desktop-5@2x.jpg 2x"/></picture>
-              </li>
-              <li class="photos-slider__photo-item swiper-slide">
-                <picture><img src="img/content/hotel-mandarin-desktop-6.jpg" srcset="img/content/hotel-mandarin-desktop-6@2x.jpg 2x"/></picture>
-              </li>
-              <li class="photos-slider__photo-item swiper-slide">
-                <picture><img src="img/content/hotel-mandarin-desktop-7.jpg" srcset="img/content/hotel-mandarin-desktop-7@2x.jpg 2x"/></picture>
-              </li>
-            </ul>
-            <div class="direction__arrow swiper-button-next direction__arrow--right">
-              <svg width="18" height="30" aria-hidden="true">
-                <use xlink:href="#arrow-white-right"></use>
-              </svg>
-            </div>
-            <div class="direction__arrow swiper-button-prev direction__arrow--left">
-              <svg width="18" height="30" aria-hidden="true">
-                <use xlink:href="#arrow-white-left"></use>
-              </svg>
-            </div>
-            <div class="swiper-pagination"></div>
+        <section class="exhibitor-reg">
+          <div class="exhibitor-reg__block container">
+            <h2 class="exhibitor-reg__title">Регистрация гостя (Buyer, VIP Buyer, Hosted Buyer)</h2><a class="exhibitor-reg__btn" href="registration.html"><img src="img/svg/icon-back.svg" width="12" height="20" alt="back"><span>Back</span></a>
           </div>
-        </div>
-        <div class="container">
-          <div class="hotel-page">
-            <ul class="hotel-photos hotel-photos--view-mode">
-              <li class="hotel-photos__item">
-                <picture><img src="img/content/hotel-mandarin-desktop-1.jpg" srcset="img/content/hotel-mandarin-desktop-1@2x.jpg 2x"/></picture>
-                <button class="hotel-photos__more-button" type="button" data-modal="gallery" aria-pressed="Показать больше фото">
-                  <svg width="48" height="38" aria-hidden="true">
-                    <use xlink:href="#icon-plus5"></use>
-                  </svg>
-                </button>
-              </li>
-              <li class="hotel-photos__item">
-                <picture><img src="img/content/hotel-mandarin-desktop-2.jpg" srcset="img/content/hotel-mandarin-desktop-2@2x.jpg 2x"/></picture>
-                <button class="hotel-photos__more-button" type="button" data-modal="gallery" aria-pressed="Показать больше фото">
-                  <svg width="48" height="38" aria-hidden="true">
-                    <use xlink:href="#icon-plus5"></use>
-                  </svg>
-                </button>
-              </li>
-              <li class="hotel-photos__item">
-                <picture><img src="img/content/hotel-mandarin-desktop-3.jpg" srcset="img/content/hotel-mandarin-desktop-3@2x.jpg 2x"/></picture>
-                <button class="hotel-photos__more-button" type="button" data-modal="gallery" aria-pressed="Показать больше фото">
-                  <svg width="48" height="38" aria-hidden="true">
-                    <use xlink:href="#icon-plus5"></use>
-                  </svg>
-                </button>
-              </li>
-              <li class="hotel-photos__item">
-                <picture><img src="img/content/hotel-mandarin-desktop-4.jpg" srcset="img/content/hotel-mandarin-desktop-4@2x.jpg 2x"/></picture>
-                <button class="hotel-photos__more-button" type="button" data-modal="gallery" aria-pressed="Показать больше фото">
-                  <svg width="48" height="38" aria-hidden="true">
-                    <use xlink:href="#icon-plus5"></use>
-                  </svg>
-                </button>
-              </li>
-              <li class="hotel-photos__item">
-                <picture><img src="img/content/hotel-mandarin-desktop-5.jpg" srcset="img/content/hotel-mandarin-desktop-5@2x.jpg 2x"/></picture>
-                <button class="hotel-photos__more-button" type="button" data-modal="gallery" aria-pressed="Показать больше фото">
-                  <svg width="48" height="38" aria-hidden="true">
-                    <use xlink:href="#icon-plus5"></use>
-                  </svg>
-                </button>
-              </li>
-              <li class="hotel-photos__item">
-                <picture><img src="img/content/hotel-mandarin-desktop-6.jpg" srcset="img/content/hotel-mandarin-desktop-6@2x.jpg 2x"/></picture>
-                <button class="hotel-photos__more-button" type="button" data-modal="gallery" aria-pressed="Показать больше фото">
-                  <svg width="48" height="38" aria-hidden="true">
-                    <use xlink:href="#icon-plus5"></use>
-                  </svg>
-                </button>
-              </li>
-              <li class="hotel-photos__item">
-                <picture><img src="img/content/hotel-mandarin-desktop-7.jpg" srcset="img/content/hotel-mandarin-desktop-7@2x.jpg 2x"/></picture>
-                <button class="hotel-photos__more-button" type="button" data-modal="gallery" aria-pressed="Показать больше фото">
-                  <svg width="48" height="38" aria-hidden="true">
-                    <use xlink:href="#icon-plus5"></use>
-                  </svg>
-                </button>
-              </li>
-            </ul>
-            <div class="hotel-page__info-block"><img src="../img/svg/mandarin-logo.svg">
-              <div class="hotel-page__description">
-                <div class="hotel-page__title">
-                  <h2 class="title title--h2">Mandarin Oriental Hotel Group</h2>
-                  <div class="hotel-page__links"><a class="back-link" href="#">
-                      <svg width="12" height="20" aria-hidden="true">
-                        <use xlink:href="#arrow-left"></use>
-                      </svg><span>Back</span></a><a class="hotel-page__link" href="https://www.mandarinoriental.com">https://www.mandarinoriental.com</a>
+          <form class="exhibitor-reg__form form-reg" action="#" method="POST">
+            <div class="container">
+              <h3 class="form-reg__title form-reg__title-one">Пожалуйста, выберите мероприятие, на которое Вы хотели бы зарегистрироваться. Возможно выбрать только одно мероприятие. Пожалуйста, заполняйте форму на английском языке.</h3>
+            </div>
+            <div class="form-reg__direction direction__swiper">
+              <div class="swiper-container direction__swiper-block">
+                <div class="swiper-wrapper">
+                  <div class="form-reg__slider swiper-slide">
+                    <input class="form-reg__check" type="checkbox" id="choices" name="check" value="choices" checked="checked"/>
+                    <label for="choices"></label>
+                    <li class="direction__item">
+                      <p class="direction__title">Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan</p>
+                      <time class="direction__data" datatime="27.09.2019">27 September 2019</time>
+                      <p class="direction__status direction__status--available">Available</p>
+                    </li>
+                  </div>
+                  <div class="form-reg__slider swiper-slide">
+                    <input class="form-reg__check" type="checkbox" id="choices1" name="check" value="choices" checked="checked"/>
+                    <label for="choices1"></label>
+                    <li class="direction__item">
+                      <p class="direction__title">Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan</p>
+                      <time class="direction__data" datatime="27.09.2019">27 September 2019</time>
+                      <p class="direction__status direction__status--available">Available</p>
+                    </li>
+                  </div>
+                  <div class="form-reg__slider swiper-slide">
+                    <input class="form-reg__check" type="checkbox" id="choices2" name="check" value="choices"/>
+                    <label for="choices2"></label>
+                    <li class="direction__item">
+                      <p class="direction__title">Luxury Travel Mart Moscow 2019 at The Ritz-Carlton, Moscow, Russia</p>
+                      <time class="direction__data" datatime="01.10.2019">1 October 2019</time>
+                      <p class="direction__status direction__status--available">Available</p>
+                    </li>
+                  </div>
+                  <div class="form-reg__slider swiper-slide">
+                    <input class="form-reg__check" type="checkbox" id="choices3" name="check" value="choices"/>
+                    <label for="choices3"></label>
+                    <li class="direction__item">
+                      <p class="direction__title">Luxury Travel Mart Moscow 2020 at Hyatt Regency Moscow, Russia</p>
+                      <time class="direction__data" datatime="27.02.2020">27–28 February 2020</time>
+                      <p class="direction__status direction__status--available">Available</p>
+                    </li>
+                  </div>
+                  <div class="form-reg__slider swiper-slide">
+                    <input class="form-reg__check" type="checkbox" id="choices4" name="check" value="choices"/>
+                    <label for="choices4"></label>
+                    <li class="direction__item">
+                      <p class="direction__title">Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan</p>
+                      <time class="direction__data" datatime="03.03.2020">3 March 2020</time>
+                      <p class="direction__status direction__status--waiting">Waiting list</p>
+                    </li>
+                  </div>
+                  <div class="form-reg__slider swiper-slide">
+                    <input class="form-reg__check" type="checkbox" id="choices5" name="check" value="choices"/>
+                    <label for="choices5"></label>
+                    <li class="direction__item">
+                      <p class="direction__title">Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia</p>
+                      <time class="direction__data" datatime="20.06.2020">20 June 2020</time>
+                      <p class="direction__status direction__status--waiting">Waiting list</p>
+                    </li>
                   </div>
                 </div>
-                <div class="hotel-page__text-list">
-                  <p>Mandarin Oriental Hotel Group is the award-winning owner and operator of some of the world’s most prestigious hotels, resorts and residences. Over the past fifty years, the Group has grown its business from its original flagship properties in Asia – the acclaimed Mandarin Oriental, Hong Kong and Mandarin Oriental, Bangkok – to successfully operate in major business centres and key leisure destinations around the world.</p>
-                  <p>Mandarin Oriental’s aim is to be recognized widely as the best global luxury hotel group, providing 21st century luxury with oriental charm in each of its hotels. Mandarin Oriental now operates 31 hotels and eight residences in 21 countries and territories, with each property reflecting the Group’s oriental heritage and unique sense of place.</p>
-                  <p>The multi-award winning Spas at Mandarin Oriental are havens for contemplation and discovery. The Spa at Mandarin Oriental, Bangkok was one of the very first hotel spas to open in 1993.</p>
-                  <p>A leader in the spa field, the Group was the first to launch its signature “Time Ritual” which encourages guests to book time rather than specific treatments, so that services can be tailor-made to meet specific needs.</p>
-                  <p>Mandarin Oriental offers some of the most exciting hotel dining in the world today. The Group’s passion for creating memorable dining experiences has been recognized in the Michelin Guide, with a total of 21 Michelin stars being awarded to 14 diverse restaurants from around the world in the 2018 list. This is more than any other hotel brand in the world.</p>
+                <div class="direction__arrow direction__arrow--right">
+                  <svg width="11" height="19" aria-hidden="true">
+                    <use xlink:href="#arrow-right"></use>
+                  </svg>
+                </div>
+                <div class="direction__arrow direction__arrow--left">
+                  <svg width="11" height="19" aria-hidden="true">
+                    <use xlink:href="#arrow-left"></use>
+                  </svg>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+            <div class="form-reg__pop-up pop-up container">
+              <div class="pop-up__choices">
+                <input class="pop-up__check" type="checkbox" id="choices-1" name="check" value="choices" checked="checked"/>
+                <label for="choices-1"></label>
+                <li class="direction__item">
+                  <p class="direction__title">Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan</p>
+                  <time class="direction__data" datatime="27.09.2019">27 September 2019</time>
+                  <p class="direction__status direction__status--available">Available</p>
+                </li>
+              </div>
+              <button class="pop-up__btn" data-modal="choices" type="button">View All Events</button>
+            </div>
+            <div class="form-reg__info container status swiper-container status__slider">
+              <h3 class="form-reg__title form-reg__title-two">Выберете статус участника</h3>
+              <div class="swiper-wrapper">
+                <ul class="status__list swiper-slide">
+                  <li class="status__item">
+                    <input class="status__main" type="checkbox" id="Buyer" name="check" value="Buyer"/>
+                    <label class="status__label" for="Buyer">Buyer</label>
+                  </li>
+                  <li class="status__item">
+                    <input class="status__check" type="checkbox" id="Participation" name="check" value="Participation"/>
+                    <label class="status__label" for="Participation">Участие в рабочей сессии</label>
+                  </li>
+                  <li class="status__item">
+                    <input class="status__check" type="checkbox" id="visit" name="check" value="visit"/>
+                    <label class="status__label" for="visit">Посещение вечернего коктейля</label>
+                  </li>
+                </ul>
+                <ul class="status__list swiper-slide">
+                  <li class="status__item">
+                    <input class="status__main" type="checkbox" id="Hosted" name="check" value="Hosted"/>
+                    <label class="status__label" for="Hosted">Hosted Buyer</label>
+                    <p>Заявка на участие в программе для приглашенных профессиональных покупателей</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="status__button-next">
+                <svg width="11" height="19" aria-hidden="true">
+                  <use xlink:href="#arrow-right"></use>
+                </svg>
+              </div>
+              <div class="status__button-prev">
+                <svg width="11" height="19" aria-hidden="true">
+                  <use xlink:href="#arrow-left"></use>
+                </svg>
+              </div>
+              <div class="status__pagination"></div>
+            </div>
+            <div class="form-reg__info container">
+              <h3 class="form-reg__title form-reg__title-three"> Информация о компании:</h3>
+              <div class="form-reg__block">
+                <label for="nameCompany">Название компании</label>
+                <input type="text" name="nameCompany" id="nameCompany" placeholder="Company name" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <h3 class="form-reg__block-title">Вид деятельности</h3>
+                <select>
+                  <option>Tour operator</option>
+                  <option value="London">London</option>
+                  <option value="Japan">Japan</option>
+                  <option value="Almaty">Almaty</option>
+                  <option value="Moscow">Moscow</option>
+                  <option value="Petersburg">Petersburg</option>
+                </select>
+              </div>
+              <div class="form-reg__block">
+                <h3 class="form-reg__block-title">Направление деятельности</h3>
+                <select>
+                  <option>Car Rental</option>
+                  <option value="Aphhanistan">Aphhanistan</option>
+                  <option value="Aphhanistan">Aphhanistan1</option>
+                  <option value="Aphhanistan">Aphhanistan2</option>
+                  <option value="Aphhanistan">Aphhanistan3</option>
+                  <option value="Aphhanistan">Aphhanistan4</option>
+                  <option value="Aphhanistan">Aphhanistan5</option>
+                </select>
+              </div>
+              <div class="form-reg__block">
+                <h3 class="form-reg__block-title">Страна</h3>
+                <select>
+                  <option>Russia</option>
+                  <option value="Aphhanistan">Aphhanistan</option>
+                  <option value="Aphhanistan">Aphhanistan1</option>
+                  <option value="Aphhanistan">Aphhanistan2</option>
+                  <option value="Aphhanistan">Aphhanistan3</option>
+                  <option value="Aphhanistan">Aphhanistan4</option>
+                  <option value="Aphhanistan">Aphhanistan5</option>
+                </select>
+              </div>
+              <div class="form-reg__block">
+                <label for="address">Фактический адрес компании</label>
+                <input type="text" name="address" id="address" placeholder="Address" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <label for="login">Индекс</label>
+                <input type="text" name="login" id="login" placeholder="000000" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <h3 class="form-reg__block-title">Город</h3>
+                <select>
+                  <option>Aachen</option>
+                  <option value="business">business</option>
+                  <option value="trade">trade</option>
+                  <option value="sale">sale</option>
+                  <option value="entertainment">entertainment</option>
+                  <option value="journeys">journeys</option>
+                  <option value="sale">sale</option>
+                </select>
+              </div>
+              <div class="form-reg__block">
+                <label for="Web-site">Адрес веб-страницы</label>
+                <input type="text" name="Web-site" id="Web-site" placeholder="https://" required="required"/>
+              </div>
+              <div class="form-reg__block form-reg__textarea">
+                <h3 class="form-reg__block-title">Краткое описание компании</h3>
+                <textarea name="Company description" cols="30" rows="10">Company description</textarea>
+              </div>
+            </div>
+            <div class="form-reg__location container">
+              <h3 class="form-reg__title form-reg__title-four">Выберите приоритетные направления:</h3>
+              <div class="form-reg__dropdown">
+                <h4>Северная Америка</h4>
+                <button class="form-reg__btn" type="button">Выбрать всё</button>
+                <div class="form-reg__content">
+                  <div class="form-reg__list">
+                    <input class="form-reg__check" id="choices-0" type="checkbox" name="complex" value="complex-0"/>
+                    <label for="choices-0">choices-3</label>
+                    <input class="form-reg__check" id="choices-1" type="checkbox" name="complex" value="complex-1"/>
+                    <label for="choices-1">choices-3</label>
+                    <input class="form-reg__check" id="choices-2" type="checkbox" name="complex" value="complex-2"/>
+                    <label for="choices-2">choices-3</label>
+                  </div>
+                </div>
+                <div class="form-reg__overlay"></div>
+              </div>
+              <div class="form-reg__dropdown">
+                <h4>Европа</h4>
+                <button class="form-reg__btn" type="button">Выбрать всё</button>
+                <div class="form-reg__content">
+                  <div class="form-reg__list">
+                    <input class="form-reg__check" id="choices-3" type="checkbox" name="complex" value="complex-0"/>
+                    <label for="choices-3">choices-3</label>
+                    <input class="form-reg__check" id="choices-3" type="checkbox" name="complex" value="complex-1"/>
+                    <label for="choices-3">choices-3</label>
+                    <input class="form-reg__check" id="choices-4" type="checkbox" name="complex" value="complex-2"/>
+                    <label for="choices-4">choices-3</label>
+                  </div>
+                </div>
+                <div class="form-reg__overlay"></div>
+              </div>
+              <div class="form-reg__dropdown">
+                <h4>Южная Америка</h4>
+                <button class="form-reg__btn" type="button">Выбрать всё</button>
+                <div class="form-reg__content">
+                  <div class="form-reg__list">
+                    <input class="form-reg__check" id="choices-5" type="checkbox" name="complex" value="complex-0"/>
+                    <label for="choices-5">choices-1</label>
+                    <input class="form-reg__check" id="choices-6" type="checkbox" name="complex" value="complex-1"/>
+                    <label for="choices-6">choices-2</label>
+                    <input class="form-reg__check" id="choices-7" type="checkbox" name="complex" value="complex-2"/>
+                    <label for="choices-7">choices-3</label>
+                  </div>
+                </div>
+                <div class="form-reg__overlay"></div>
+              </div>
+              <div class="form-reg__dropdown">
+                <h4>Африка</h4>
+                <button class="form-reg__btn" type="button">Выбрать всё</button>
+                <div class="form-reg__content">
+                  <div class="form-reg__list">
+                    <input class="form-reg__check" id="choices-8" type="checkbox" name="complex" value="complex-0"/>
+                    <label for="choices-8">choices-4</label>
+                    <input class="form-reg__check" id="choices-9" type="checkbox" name="complex" value="complex-1"/>
+                    <label for="choices-9">choices-5</label>
+                    <input class="form-reg__check" id="choices-10" type="checkbox" name="complex" value="complex-2"/>
+                    <label for="choices-10">choices-6</label>
+                  </div>
+                </div>
+                <div class="form-reg__overlay"></div>
+              </div>
+              <div class="form-reg__dropdown">
+                <h4>Азия</h4>
+                <button class="form-reg__btn" type="button">Выбрать всё</button>
+                <div class="form-reg__content">
+                  <div class="form-reg__list">
+                    <input class="form-reg__check" id="choices-11" type="checkbox" name="complex" value="complex-0"/>
+                    <label for="choices-11">choices-7</label>
+                    <input class="form-reg__check" id="choices-12" type="checkbox" name="complex" value="complex-1"/>
+                    <label for="choices-12">choices-8</label>
+                    <input class="form-reg__check" id="choices-13" type="checkbox" name="complex" value="complex-2"/>
+                    <label for="choices-13">choices-9</label>
+                  </div>
+                </div>
+                <div class="form-reg__overlay"></div>
+              </div>
+              <div class="form-reg__dropdown">
+                <h4>Океания</h4>
+                <button class="form-reg__btn" type="button">Выбрать всё</button>
+                <div class="form-reg__content">
+                  <div class="form-reg__list">
+                    <input class="form-reg__check" id="choices-14" type="checkbox" name="complex" value="complex-0"/>
+                    <label for="choices-14">choices-10</label>
+                    <input class="form-reg__check" id="choices-15" type="checkbox" name="complex" value="complex-1"/>
+                    <label for="choices-15">choices-11</label>
+                    <input class="form-reg__check" id="choices-16" type="checkbox" name="complex" value="complex-2"/>
+                    <label for="choices-16">choices-12</label>
+                  </div>
+                </div>
+                <div class="form-reg__overlay"></div>
+              </div>
+              <input class="form-reg__check" type="checkbox" id="Global" name="Global" value="Global"/>
+              <label for="Global">Global/Worldwide</label>
+            </div>
+            <div class="form-reg__info container">
+              <h3 class="form-reg__title form-reg__title-five">Информация о вас:</h3>
+              <div class="form-reg__block">
+                <label for="First_name">Имя</label>
+                <input type="text" name="First_name" id="First_name" placeholder="First name" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <label for="Last_name">Фамилия</label>
+                <input type="text" name="Last_name" id="Last_name" placeholder="Last name" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <h3 class="form-reg__block-title">Обращение</h3>
+                <select>
+                  <option>Aachen</option>
+                  <option value="Mr">Mr.</option>
+                  <option value="Mrs">Mrs.</option>
+                  <option value="Ms">Ms.</option>
+                  <option value="Dr">Dr.</option>
+                </select>
+              </div>
+              <div class="form-reg__block">
+                <label for="title">Должность</label>
+                <input type="text" name="title" id="title" placeholder="Job title" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <label for="tel">Телефон</label>
+                <input type="text" name="tel" id="tel" placeholder="+0 (000) 000 00 00" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <label for="tel2">Мобильный телефон</label>
+                <input type="text" name="tel2" id="tel2" placeholder="+0 (000) 000 00 00" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <label for="skype">Skype</label>
+                <input type="text" name="" id="skype" placeholder="E-mail" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <label for="E-mail">E-mail</label>
+                <input type="text" name="E-mail" id="E-mail" placeholder="E-mail" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <label for="con_e-mail">Введите e-mail ещё раз</label>
+                <input type="text" name="con_e-mail" id="con_e-mail" placeholder="Confirm e-mail" required="required"/>
+              </div>
+            </div>
+            <div class="form-reg__info container">
+              <h3 class="form-reg__title form-reg__title-six">Информация о коллеге:</h3>
+              <div class="form-reg__block">
+                <label for="First_name">Имя</label>
+                <input type="text" name="First_name" id="First_name" placeholder="First name" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <label for="Last_name">Фамилия</label>
+                <input type="text" name="Last_name" id="Last_name" placeholder="Last name" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <h3 class="form-reg__block-title">Обращение</h3>
+                <select>
+                  <option>Aachen</option>
+                  <option value="Mr">Mr.</option>
+                  <option value="Mrs">Mrs.</option>
+                  <option value="Ms">Ms.</option>
+                  <option value="Dr">Dr.</option>
+                </select>
+              </div>
+              <div class="form-reg__block">
+                <label for="title">Должность</label>
+                <input type="text" name="title" id="title" placeholder="Job title" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <label for="E-mail">E-mail</label>
+                <input type="text" name="E-mail" id="E-mail" placeholder="E-mail" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <label for="tel2">Мобильный телефон</label>
+                <input type="text" name="tel2" id="tel2" placeholder="+0 (000) 000 00 00" required="required"/>
+              </div>
+            </div>
+            <div class="form-reg__info container">
+              <h3 class="form-reg__title form-reg__title-seven">Как ваша компания осуществляет бронирования?</h3>
+              <div class="form-reg__block">
+                <h3 class="form-reg__block-title">Через:</h3>
+                <select>
+                  <option>DMCs</option>
+                  <option value="dMCs">dMCs</option>
+                  <option value="DmCS">DmCS</option>
+                  <option value="DMsC">DMsC</option>
+                  <option value="DMCS">DMCS</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-reg__info container">
+              <h3 class="form-reg__title form-reg__title-eight">Укажите ваши 3 бронирования отелей класса люкс за последние 6 месяцев</h3>
+              <div class="form-reg__block">
+                <h3 class="form-reg__block-title">Канал через который осуществлялось бронирование</h3>
+                <select>
+                  <option>DMCs</option>
+                  <option value="dMCs">dMCs</option>
+                  <option value="DmCS">DmCS</option>
+                  <option value="DMsC">DMsC</option>
+                  <option value="DMCS">DMCS</option>
+                </select>
+              </div>
+              <div class="form-reg__block">
+                <label for="Hotel">Название отеля</label>
+                <input type="text" name="Hotel" id="Hotel" placeholder="Hotel" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <label for="Tel_or_email">Контакт сотрудника, через которого осуществлялось бронирование</label>
+                <input type="text" name="Tel_or_email" id="Tel_or_email" placeholder="Telephone or E-mail" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <h3 class="form-reg__block-title">Канал через который осуществлялось бронирование</h3>
+                <select>
+                  <option>DMCs</option>
+                  <option value="dMCs">dMCs</option>
+                  <option value="DmCS">DmCS</option>
+                  <option value="DMsC">DMsC</option>
+                  <option value="DMCS">DMCS</option>
+                </select>
+              </div>
+              <div class="form-reg__block">
+                <label for="Hotel2">Название отеля</label>
+                <input type="text" name="Hotel2" id="Hotel2" placeholder="Hotel" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <label for="Tel_or_email2">Контакт сотрудника, через которого осуществлялось бронирование</label>
+                <input type="text" name="Tel_or_email2" id="Tel_or_email2" placeholder="Telephone or E-mail" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <h3 class="form-reg__block-title">Канал через который осуществлялось бронирование</h3>
+                <select>
+                  <option>DMCs</option>
+                  <option value="dMCs">dMCs</option>
+                  <option value="DmCS">DmCS</option>
+                  <option value="DMsC">DMsC</option>
+                  <option value="DMCS">DMCS</option>
+                </select>
+              </div>
+              <div class="form-reg__block">
+                <label for="Hotel3">Название отеля</label>
+                <input type="text" name="Hotel3" id="Hotel3" placeholder="Hotel" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <label for="Tel_or_email3">Контакт сотрудника, через которого осуществлялось бронирование</label>
+                <input type="text" name="Tel_or_email3" id="Tel_or_email3" placeholder="Telephone or E-mail" required="required"/>
+              </div>
+            </div>
+            <div class="form-reg__info container">
+              <h3 class="form-reg__title form-reg__title-nine">Логин и пароль</h3>
+              <div class="form-reg__block">
+                <label for="Login">Придумайте логин</label>
+                <input type="text" name="Login" id="Login" placeholder="Login" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <label for="Password">Придумайте пароль</label>
+                <input type="text" name="Password" id="Password" placeholder="Password" required="required"/>
+              </div>
+              <div class="form-reg__block">
+                <label for="Password2">Введите пароль ещё раз</label>
+                <input type="text" name="Password2" id="Password2" placeholder="Password" required="required"/>
+              </div>
+            </div>
+            <div class="form-reg__submit container">
+              <input class="form-reg__check" type="checkbox" id="yes" name="check" value="yes"/>
+              <label for="yes">Я подтверждаю свое согласие на сбор, хранение и обработку вышеуказанных данных организаторами Luxury Travel Mart в соответствии с ФЗ РФ «О персональных данных» от 27.07.2006 № 152-ФЗ.</label><a href="#" data-modal="submission">Send</a>
+            </div>
+          </form>
+        </section>
       </main>
       <footer>
         <div class="footer container">
@@ -2929,129 +3271,76 @@
         </div>
       </footer>
     </div>
-    <div class="modal modal--preload modal-gallery">
+    <div class="modal modal--preload modal--submission">
+      <div class="modal__wrapper">
+        <div class="modal__overlay"></div>
+        <div class="modal__content"><a class="submission__logo">
+            <svg width="324" height="122" aria-hidden="true">
+              <use xlink:href="#logo-desktop"></use>
+            </svg></a>
+          <p class="submission__description">Thank you! Your information has been sent</p>
+          <button class="submission__close-button modal__close-button" type="button">ok</button>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+            <svg width="33" height="33" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--choices">
       <div class="modal__wrapper">
         <div class="modal__overlay"></div>
         <div class="modal__content">
-          <div class="modal-gallery">
-            <div class="modal-gallery__wrapper">
-              <div class="modal-gallery__slider swiper-container">
-                <ul class="modal-gallery__slider-wrapper swiper-wrapper">
-                  <li class="modal-gallery__slide swiper-slide">
-                    <div class="modal-gallery__image-container"><img src="img/slides/Mandarin_Oriental_Geneva_002.jpg" srcset="img/slides/Mandarin_Oriental_Geneva_002@2x.jpg 2x" width="1412" height="941" alt="slide item no. 1"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__slide swiper-slide">
-                    <div class="modal-gallery__image-container"><img src="img/slides/Mandarin_Oriental_Hotel_Group_005.jpg" srcset="img/slides/Mandarin_Oriental_Hotel_Group_005@2x.jpg 2x" width="1412" height="941" alt="slide item no. 2"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__slide swiper-slide">
-                    <div class="modal-gallery__image-container"><img src="img/slides/Mandarin_Oriental_Hotel_Group_11.jpg" srcset="img/slides/Mandarin_Oriental_Hotel_Group_11@2x.jpg 2x" width="1412" height="941" alt="slide item no. 3"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__slide swiper-slide">
-                    <div class="modal-gallery__image-container"><img src="img/slides/Mandarin_Oriental_Hyde_Park_London_001.jpg" srcset="img/slides/Mandarin_Oriental_Hyde_Park_London_001@2x.jpg 2x" width="1412" height="941" alt="slide item no. 4"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__slide swiper-slide">
-                    <div class="modal-gallery__image-container"><img src="img/slides/Mandarin_Oriental_Hyde_Park_London_002.jpg" srcset="img/slides/Mandarin_Oriental_Hyde_Park_London_002@2x.jpg 2x" width="1412" height="941" alt="slide item no. 5"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__slide swiper-slide">
-                    <div class="modal-gallery__image-container"><img src="img/slides/Mandarin_Oriental_Paris_002.jpg" srcset="img/slides/Mandarin_Oriental_Paris_002@2x.jpg 2x" width="1412" height="941" alt="slide item no. 6"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__slide swiper-slide">
-                    <div class="modal-gallery__image-container"><img src="img/slides/Mandarin_Oriental_Sanya_01.jpg" srcset="img/slides/Mandarin_Oriental_Sanya_01@2x.jpg 2x" width="1412" height="941" alt="slide item no. 7"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__slide swiper-slide">
-                    <div class="modal-gallery__image-container"><img src="img/slides/Mandarin_Oriental_Sanya_03.jpg" srcset="img/slides/Mandarin_Oriental_Sanya_03@2x.jpg 2x" width="1412" height="941" alt="slide item no. 8"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__slide swiper-slide">
-                    <div class="modal-gallery__image-container"><img src="img/slides/Mandarin_Oriental_Geneva_002.jpg" srcset="img/slides/Mandarin_Oriental_Geneva_002@2x.jpg 2x" width="1412" height="941" alt="slide item no. 9"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__slide swiper-slide">
-                    <div class="modal-gallery__image-container"><img src="img/slides/Mandarin_Oriental_Geneva_001.jpg" srcset="img/slides/Mandarin_Oriental_Geneva_001@2x.jpg 2x" width="1412" height="941" alt="slide item no. 10"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__slide swiper-slide">
-                    <div class="modal-gallery__image-container"><img src="img/slides/Mandarin_Oriental_Hotel_Group_11.jpg" srcset="img/slides/Mandarin_Oriental_Hotel_Group_11@2x.jpg 2x" width="1412" height="941" alt="slide item no. 11"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__slide swiper-slide">
-                    <div class="modal-gallery__image-container"><img src="img/slides/Mandarin_Oriental_Hyde_Park_London_001.jpg" srcset="img/slides/Mandarin_Oriental_Hyde_Park_London_001@2x.jpg 2x" width="1412" height="941" alt="slide item no. 12"/>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="modal-gallery__mini-slider swiper-container" thumbsSlider="">
-                <ul class="modal-gallery__mini-slider-wrapper swiper-wrapper">
-                  <li class="modal-gallery__mini-slide swiper-slide">
-                    <div class="modal-gallery__mini-image-container"><img src="img/slides/Mandarin_Oriental_Geneva_002.jpg" srcset="img/slides/Mandarin_Oriental_Geneva_002@2x.jpg 2x" width="103" height="69" alt="slide item no. 1"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__mini-slide swiper-slide">
-                    <div class="modal-gallery__mini-image-container"><img src="img/slides/Mandarin_Oriental_Hotel_Group_005.jpg" srcset="img/slides/Mandarin_Oriental_Hotel_Group_005@2x.jpg 2x" width="103" height="69" alt="slide item no. 2"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__mini-slide swiper-slide">
-                    <div class="modal-gallery__mini-image-container"><img src="img/slides/Mandarin_Oriental_Hotel_Group_11.jpg" srcset="img/slides/Mandarin_Oriental_Hotel_Group_11@2x.jpg 2x" width="103" height="69" alt="slide item no. 3"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__mini-slide swiper-slide">
-                    <div class="modal-gallery__mini-image-container"><img src="img/slides/Mandarin_Oriental_Hyde_Park_London_001.jpg" srcset="img/slides/Mandarin_Oriental_Hyde_Park_London_001@2x.jpg 2x" width="103" height="69" alt="slide item no. 4"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__mini-slide swiper-slide">
-                    <div class="modal-gallery__mini-image-container"><img src="img/slides/Mandarin_Oriental_Hyde_Park_London_002.jpg" srcset="img/slides/Mandarin_Oriental_Hyde_Park_London_002@2x.jpg 2x" width="103" height="69" alt="slide item no. 5"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__mini-slide swiper-slide">
-                    <div class="modal-gallery__mini-image-container"><img src="img/slides/Mandarin_Oriental_Paris_002.jpg" srcset="img/slides/Mandarin_Oriental_Paris_002@2x.jpg 2x" width="103" height="69" alt="slide item no. 6"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__mini-slide swiper-slide">
-                    <div class="modal-gallery__mini-image-container"><img src="img/slides/Mandarin_Oriental_Sanya_01.jpg" srcset="img/slides/Mandarin_Oriental_Sanya_01@2x.jpg 2x" width="103" height="69" alt="slide item no. 7"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__mini-slide swiper-slide">
-                    <div class="modal-gallery__mini-image-container"><img src="img/slides/Mandarin_Oriental_Sanya_03.jpg" srcset="img/slides/Mandarin_Oriental_Sanya_03@2x.jpg 2x" width="103" height="69" alt="slide item no. 8"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__mini-slide swiper-slide">
-                    <div class="modal-gallery__mini-image-container"><img src="img/slides/Mandarin_Oriental_Geneva_002.jpg" srcset="img/slides/Mandarin_Oriental_Geneva_002@2x.jpg 2x" width="103" height="69" alt="slide item no. 9"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__mini-slide swiper-slide">
-                    <div class="modal-gallery__mini-image-container"><img src="img/slides/Mandarin_Oriental_Geneva_001.jpg" srcset="img/slides/Mandarin_Oriental_Geneva_001@2x.jpg 2x" width="103" height="69" alt="slide item no. 10"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__mini-slide swiper-slide">
-                    <div class="modal-gallery__mini-image-container"><img src="img/slides/Mandarin_Oriental_Hotel_Group_11.jpg" srcset="img/slides/Mandarin_Oriental_Hotel_Group_11@2x.jpg 2x" width="103" height="69" alt="slide item no. 11"/>
-                    </div>
-                  </li>
-                  <li class="modal-gallery__mini-slide swiper-slide">
-                    <div class="modal-gallery__mini-image-container"><img src="img/slides/Mandarin_Oriental_Hyde_Park_London_001.jpg" srcset="img/slides/Mandarin_Oriental_Hyde_Park_London_001@2x.jpg 2x" width="103" height="69" alt="slide item no. 12"/>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="modal-gallery__btn-next">
-                <svg width="19" height="30" aria-hidden="true">
-                  <use xlink:href="#arrow-right-white"></use>
-                </svg>
-              </div>
-              <div class="modal-gallery__btn-prev">
-                <svg width="19" height="30" aria-hidden="true">
-                  <use xlink:href="#arrow-left-white"></use>
-                </svg>
-              </div>
-              <button class="modal-gallery__close-button modal__close-btn" type="button" aria-label="Закрыть окно"><span class="visually-hidden">Закрыть окно</span></button>
+          <div class="modal--filter select-event">
+            <h2 class="select-event__title">Select the event:</h2>
+            <div class="select-event__block">
+              <input class="form-reg__check" type="checkbox" id="choices-01" name="check" value="choices" checked="checked"/>
+              <label for="choices-01"></label>
+              <li class="direction__item">
+                <p class="direction__title">Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan</p>
+                <time class="direction__data" datatime="27.09.2019">27 September 2019</time>
+                <p class="direction__status direction__status--available">Available</p>
+              </li>
+            </div>
+            <div class="select-event__block">
+              <input class="form-reg__check" type="checkbox" id="choices-02" name="check" value="choices"/>
+              <label for="choices-02"></label>
+              <li class="direction__item">
+                <p class="direction__title">Luxury Travel Mart Moscow 2019 at The Ritz-Carlton, Moscow, Russia</p>
+                <time class="direction__data" datatime="01.10.2019">1 October 2019</time>
+                <p class="direction__status direction__status--available">Available</p>
+              </li>
+            </div>
+            <div class="select-event__block">
+              <input class="form-reg__check" type="checkbox" id="choices-03" name="check" value="choices"/>
+              <label for="choices-03"></label>
+              <li class="direction__item">
+                <p class="direction__title">Luxury Travel Mart Moscow 2020 at Hyatt Regency Moscow, Russia</p>
+                <time class="direction__data" datatime="27.02.2020">27–28 February 2020</time>
+                <p class="direction__status direction__status--available">Available</p>
+              </li>
+            </div>
+            <div class="select-event__block">
+              <input class="form-reg__check" type="checkbox" id="choices-04" name="check" value="choices"/>
+              <label for="choices-04"></label>
+              <li class="direction__item">
+                <p class="direction__title">Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan</p>
+                <time class="direction__data" datatime="03.03.2020">3 March 2020</time>
+                <p class="direction__status direction__status--waiting">Waiting list</p>
+              </li>
+            </div>
+            <div class="select-event__block">
+              <input class="form-reg__check" type="checkbox" id="choices-05" name="check" value="choices"/>
+              <label for="choices-05"></label>
+              <li class="direction__item">
+                <p class="direction__title">Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia</p>
+                <time class="direction__data" datatime="20.06.2020">20 June 2020</time>
+                <p class="direction__status direction__status--waiting">Waiting list</p>
+              </li>
             </div>
           </div>
+          <button class="modal__select-close modal__close-button submission__close-button" type="button">Apply</button>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
             <svg width="33" height="33" aria-hidden="true">
               <use xlink:href="#icon-close"></use>

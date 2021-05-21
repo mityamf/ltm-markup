@@ -29,3 +29,11 @@
     color: $color-blue;
   }
 }
+
+.adoption__pagination {
+  display: none;
+
+  @include viewport--sm {
+    display: block;
+  }
+}

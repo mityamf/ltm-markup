@@ -20,8 +20,16 @@
   }
 
   &__title-wrap {
+    span {
+      font-weight: 300;
+    }
+    
     @include viewport--sm {
       padding: 0 16.5px;
+
+      span {
+        display: none;
+      }
     }
   }
 
