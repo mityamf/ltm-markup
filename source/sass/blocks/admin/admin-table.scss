@@ -37,12 +37,6 @@
     color: $color-nobel;
   }
 
-  & &__status span {
-    color: $color-green;
-    font-size: 12px;
-    line-height: 20px;
-  }
-
   .btn--request {
     padding: 5px 7px;
 
@@ -82,5 +76,40 @@
   .choices__item {
     background-color: transparent;
     color: $color-blue;
+  }
+
+  &__cell--theme {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__cell--message {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__cell--button {
+    width: 100px;
+  }
+
+  &__cell--select-company {
+    width: 60%;
+  }
+
+  &__cell--select-time {
+    width: 20%;
+  }
+
+  &__cell--time,
+  &__cell--date {
+    width: 10%;
+  }
+
+  & &__cell--free span {
+    color: $color-green;
+  }
+
+  &__cell--empty {
+    width: 100px;
   }
 }

@@ -28,15 +28,28 @@ block main
     +renderAdminTabs(adminTabs)
     +renderMailControl(adminMailControl.title, adminMailControl.linkList, adminMailControl.isSearchInput)
 
-    +renderSchedule(adminScheduleTitles, adminSchedule)
+    p="ТАБЛИЦЫ"
+    +renderInboxMessages(adminInboxMessagesTitles, adminInboxMessages)
     p Новая таблица
     +renderSentMessages(adminSentMessagesTitles, adminSentMessages)
     p Новая таблица
-    +renderInboxMessages(adminInboxMessagesTitles, adminInboxMessages)
+    +renderSchedule(adminScheduleTitles, adminSchedule)
     p Новая таблица
     +renderGuestsList(adminGuestsListTitles, adminGuestsList)
     p Новая таблица
     +renderHostedGuestsList(adminHostedGuestsListTitles, adminHostedGuestsList)
+    p Новая таблица
+    +renderInboxMessages(adminInboxMessagesRusTitles, adminInboxRusMessages)
+    p Новая таблица
+    +renderSentMessages(adminSentMessagesRusTitles, adminSentRusMessages)
+    p Новая таблица
+    +renderHostedGuestsList(adminHostedGuestsListRusTitles, adminHostedGuestsRusList)
+    p Новая таблица
+    +renderSchedule(adminScheduleRusTitles, adminRusSchedule)
+
+
+
+
 
     +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
     +renderSponsorshipList(sponsorshipHeadline, sponsorshipList)

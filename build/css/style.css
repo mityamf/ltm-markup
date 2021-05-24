@@ -7858,10 +7858,6 @@ span {
     font-size: 12px;
     line-height: 20px;
     color: #9f9f9f; }
-  .admin-table .admin-table__status span {
-    color: #78b17c;
-    font-size: 12px;
-    line-height: 20px; }
   .admin-table .btn--request {
     padding: 5px 7px;
     font-size: 12px;
@@ -7887,6 +7883,24 @@ span {
   .admin-table .choices__item {
     background-color: transparent;
     color: #0098c1; }
+  .admin-table__cell--theme {
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .admin-table__cell--message {
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .admin-table__cell--button {
+    width: 100px; }
+  .admin-table__cell--select-company {
+    width: 60%; }
+  .admin-table__cell--select-time {
+    width: 20%; }
+  .admin-table__cell--time, .admin-table__cell--date {
+    width: 10%; }
+  .admin-table .admin-table__cell--free span {
+    color: #78b17c; }
+  .admin-table__cell--empty {
+    width: 100px; }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,

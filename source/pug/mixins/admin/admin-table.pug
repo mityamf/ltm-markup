@@ -7,17 +7,20 @@ mixin renderSchedule(titleList, rowList)
       th
     each row in rowList
       tr.admin-table__row
-        th
+        th.admin-table__cell.admin-table__cell--empty
         th=row.time
-        th
+        th.admin-table__cell.admin-table__cell--select-company
           select(id="company-select", class="input-dropdown")
             each option in row.company
               option(value="Choose a company", class="input-dropdown__option")=option
-        th
+        th.admin-table__cell.admin-table__cell--button
           button.btn.btn--white.btn--request(type="submit")=row.request
-        th
+        th.admin-table__cell(class='admin-table__cell--' + row.status.toLowerCase())
           span=row.status
-        th
+        if row.timeLimit
+          th=row.timeLimit
+        else
+          th.admin-table__cell.admin-table__cell--empty
 
 mixin renderSentMessages(titleList, rowList)
   table.admin-table
@@ -30,11 +33,11 @@ mixin renderSentMessages(titleList, rowList)
           if row.status === "sent"
             +icon("icon-mail-sent", 34, 15)
         th=row.to
-        th=row.subject
-        th=row.date
-        th=row.time
+        th.admin-table__cell.admin-table__cell--theme=row.subject
+        th.admin-table__cell.admin-table__cell--date=row.date
+        th.admin-table__cell.admin-table__cell--time=row.time
         th=row.event
-        th=row.message
+        th.admin-table__cell.admin-table__cell--message=row.message
 
 mixin renderInboxMessages(titleList, rowList)
   table.admin-table
@@ -49,11 +52,12 @@ mixin renderInboxMessages(titleList, rowList)
           if row.status === "opened"
             +icon("icon-mail-opened", 22, 21)
         th=row.from
-        th=row.subject
-        th=row.date
-        th=row.time
-        th=row.event
-        th=row.message
+        th.admin-table__cell.admin-table__cell--theme=row.subject
+        th.admin-table__cell.admin-table__cell--date=row.date
+        th.admin-table__cell.admin-table__cell--time=row.time
+        if row.event
+          th=row.event
+        th.admin-table__cell.admin-table__cell--message=row.message
 
 mixin renderGuestsList(titleList, rowList)
   table.admin-table
@@ -68,13 +72,13 @@ mixin renderGuestsList(titleList, rowList)
           span=row.position
         th=row.colleagueName
           span=row.colleaguePosition
-        th
+        th.admin-table__cell.admin-table__cell--select-time
           select(id="free-slot-select", class="input-dropdown")
             each option in row.freeSlots
               option(value=option, class="input-dropdown__option")=option
-        th
+        th.admin-table__cell.admin-table__cell--button
           button.btn.btn--white.btn--request(type="submit")=row.request
-        th
+        th.admin-table__cell.admin-table__cell--button
           a.admin-table__link(href=row.contactLink, aria-label="Отправить письмо")=row.contact
 
 mixin renderHostedGuestsList(titleList, rowList)
@@ -89,11 +93,11 @@ mixin renderHostedGuestsList(titleList, rowList)
         th=row.name
           if row.position
             span=row.position
-        th
+        th.admin-table__cell.admin-table__cell--select-time
           select(id="free-slot-select-2", class="input-dropdown")
             each option in row.freeSlots
               option(value=option, class="input-dropdown__option")=option
-        th
+        th.admin-table__cell.admin-table__cell--button
           button.btn.btn--white.btn--request(type="submit")=row.request
-        th
+        th.admin-table__cell.admin-table__cell--button
           a.admin-table__link(href=row.contactLink, aria-label="Отправить письмо")=row.contact
