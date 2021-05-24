@@ -1,0 +1,55 @@
+.admin {
+  padding-bottom: 29px;
+
+  @include viewport--lg {
+    padding-bottom: 49px;
+  }
+
+  @include viewport--sm {
+    padding-bottom: 31px;
+  }
+
+  &__control-wrapper {
+    @include viewport--sm {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 11px 0 0 0;
+    }
+  }
+
+  .title--h2 {
+    display: none;
+
+    @include viewport--sm {
+      display: block;
+      margin-top: 5px;
+      padding-left: 17px;
+      padding-right: 17px;
+
+      font-size: 38px;
+      line-height: 46px;
+    }
+  }
+}
+
+.container--admin {
+  .btn--more {
+    padding: 14px 30px;
+
+    @include viewport--lg {
+      width: 178px;
+    }
+
+    @include viewport--sm {
+      width: 222px;
+    }
+  }
+}
+
+.container--no-padding .admin__control-wrapper {
+  @include viewport--sm {
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+}
