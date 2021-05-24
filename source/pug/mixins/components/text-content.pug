@@ -6,7 +6,7 @@ mixin renderHeadline3(subtitle)
 
 mixin renderTextContentBlock(textList)
   each text in textList
-    p=text
+    p !{text}
 
 mixin renderAboutText(textList)
   time(datetime=textList.date)=textList.date

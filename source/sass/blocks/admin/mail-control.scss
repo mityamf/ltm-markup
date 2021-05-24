@@ -1,0 +1,85 @@
+.mail-control {
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 0 0 0;
+
+  @include viewport--lg {
+    padding: 27px 0 0;
+  }
+
+  .title--h3 {
+    margin: 0;
+    width: 15%;
+
+    font-size: 38px;
+    line-height: 46px;
+
+    @include viewport--lg {
+      width: 18%;
+    }
+
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  &__links {
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+    padding-top: 6px;
+    align-items: center;
+
+    list-style-type: none;
+  }
+
+  &__link-item:not(:last-of-type) {
+    margin-right: 78px;
+
+    @include viewport--md {
+      margin-right: 20px;
+    }
+  }
+
+  &__link-item--inbox,
+  &__link-item--contacts {
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-gray-dark;
+  }
+
+  &__link--active {
+    color: $color-gray;
+  }
+
+  &__find-label {
+    position: relative;
+
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  &__find-label svg {
+    position: absolute;
+    top: 14px;
+    left: 11px;
+  }
+
+  &__find-input {
+    padding: 12px 14px 12px 30px;
+
+    border: 1px solid $color-gray-light;
+    background-color: transparent;
+
+    @include viewport--lg {
+      padding: 12px 14px 12px 41px;
+    }
+  }
+}
