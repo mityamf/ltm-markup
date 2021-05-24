@@ -1,0 +1,28 @@
+extends ../base/layout
+
+block variables
+  - var title = "Deadline Info"
+  - var hasHeader = true
+  - var hasFooter = true
+
+block main
+  include ../data/admin/admin-headline
+  include ../data/admin/participants
+  include ../data/admin/admin-tabs
+  include ../data/admin/download-list
+  include ../data/admin/deadlines-info
+  include ../data/support-contacts
+
+  main.container.container--admin-deadlines
+    +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
+    +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
+    +renderAdminTabs(adminTabs)
+    .deadlines-info
+      .deadlines-info__content
+        each textBlock in deadlinesInfoContent
+          +renderHeadline2(textBlock.title)
+          .deadlines-info__text
+            +renderTextContentBlock(textBlock.textList)
+      +renderDownloadFiles(downloadHeadline, downloadList)
+    +renderSupportContacts(contactsList)
+

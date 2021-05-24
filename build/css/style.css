@@ -7376,7 +7376,7 @@ span {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin: 0 -15px -15px 0;
-  padding: 0;
+  padding: 22px 0 0 0;
   list-style-type: none; }
   @media (max-width: 1439px) {
     .admin__tabs-list {
@@ -7388,6 +7388,7 @@ span {
               justify-content: flex-start;
       width: 50%;
       margin: 0;
+      padding: 11px 0 0 0;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; } }
@@ -7460,7 +7461,8 @@ span {
     .admin__tabs-link {
       color: #505050;
       font-size: 16px;
-      line-height: 20px; } }
+      line-height: 20px;
+      letter-spacing: 0.3px; } }
 
 .admin__menu-button {
   display: none; }
@@ -7470,6 +7472,7 @@ span {
       display: -ms-inline-flexbox;
       display: inline-flex;
       margin-right: 10px;
+      padding: 0;
       border: none;
       background-color: transparent; } }
 
@@ -7616,11 +7619,11 @@ span {
   font-weight: normal; }
 
 .participants {
-  padding: 0 0 27px 0;
+  padding: 26px 0 27px;
   border-bottom: 1px solid #0098c1; }
   @media (max-width: 1439px) {
     .participants {
-      padding: 0 0 34px 0; } }
+      padding: 27px 0 34px; } }
   @media (max-width: 767px) {
     .participants {
       padding: 0 0 30px; } }
@@ -7732,14 +7735,23 @@ span {
       top: 0;
       right: 0; } }
 
+@media (max-width: 767px) {
+  .container--admin-deadlines .participants {
+    display: none; } }
+
 .deadlines-info {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  padding: 34px 0 50px 0; }
+  @media (max-width: 1439px) {
+    .deadlines-info {
+      padding: 27px 0 21px 0; } }
   @media (max-width: 767px) {
     .deadlines-info {
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; } }
+          flex-wrap: wrap;
+      padding: 6px 0 21px; } }
   .deadlines-info__content {
     width: 936px;
     margin-right: 18px; }
