@@ -7931,10 +7931,13 @@ span {
         max-width: none;
         padding: 0; } }
   @media (max-width: 767px) {
-    .admin-table__row .admin-table__cell--time {
+    .admin-table__row .admin-table__cell--time:not(.admin-table__cell--mobile-time) {
       display: none; } }
   @media (max-width: 767px) {
     .admin-table__row .admin-table__cell--event {
+      display: none; } }
+  @media (max-width: 1023px) {
+    .admin-table__row .admin-table__cell--empty {
       display: none; } }
   .admin-table__row .admin-table__cell--mobile-event {
     display: none; }
@@ -7993,6 +7996,8 @@ span {
     top: 0; }
   .admin-table__cell--opened svg {
     top: -5px; }
+  .admin-table__cell--sent svg {
+    top: 0; }
   .admin-table__cell--theme {
     width: 27%;
     max-width: 381px;
@@ -8040,6 +8045,36 @@ span {
       width: 100%; } }
   .admin-table__cell--empty {
     width: 100px; }
+  .admin-table .admin-table__cell--schedule-time {
+    margin-right: 20px;
+    width: 9%; }
+    @media (max-width: 1023px) {
+      .admin-table .admin-table__cell--schedule-time {
+        width: 12%; } }
+    @media (max-width: 1023px) {
+      .admin-table .admin-table__cell--schedule-time {
+        display: block;
+        margin-right: 0; } }
+  .admin-table__cell--select-company {
+    margin-right: 20px;
+    width: 50%; }
+    @media (max-width: 767px) {
+      .admin-table__cell--select-company {
+        width: 40%; } }
+  .admin-table__cell--button {
+    margin-right: 20px;
+    width: 9%; }
+    @media (max-width: 1023px) {
+      .admin-table__cell--button {
+        width: 12%; } }
+  @media (max-width: 767px) {
+    .admin-table__row--schedule {
+      position: relative;
+      width: 100%; }
+      .admin-table__row--schedule .admin-table__cell--status {
+        position: absolute;
+        top: 0;
+        right: 0; } }
   @media (max-width: 767px) {
     .admin-table__row--messages {
       position: relative;
@@ -8059,6 +8094,8 @@ span {
         background-color: #0098c1; }
       .admin-table__row--messages .admin-table__cell--opened {
         background-color: #a7a7a7; }
+      .admin-table__row--messages .admin-table__cell--sent {
+        display: none; }
       .admin-table__row--messages .admin-table__cell--destination,
       .admin-table__row--messages .admin-table__cell--theme {
         display: block;
@@ -8068,6 +8105,8 @@ span {
       .admin-table__row--messages .admin-table__cell--destination {
         padding-left: 19px;
         letter-spacing: 0.1px; }
+      .admin-table__row--messages .admin-table__cell--sent-destination {
+        padding-left: 0; }
       .admin-table__row--messages .admin-table__cell--date {
         display: block;
         position: absolute;

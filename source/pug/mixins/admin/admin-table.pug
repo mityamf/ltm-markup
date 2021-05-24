@@ -4,24 +4,32 @@
 mixin renderSchedule(titleList, rowList)
   table.admin-table
     tr.admin-table__row.admin-table__row--headline
-      each title in titleList
-        th=title
+      th(class=cellClass + 'empty')
+      th(class=cellClass + 'schedule-time')=titleList.time
+      th(class=cellClass + 'select-company')=titleList.company
+      th(class=cellClass + 'button')=titleList.request
+      th(class=cellClass + 'status')=titleList.status
+      if titleList.timeLimit
+        th(class=cellClass + 'time-limit')=titleList.timeLimit
+      else
+        th(class=cellClass + 'empty')
+
     each row in rowList
       tr.admin-table__row.admin-table__row--schedule
-        th.admin-table__cell.admin-table__cell--empty
-        th.admin-table__cell.admin-table__cell--time=row.time
-        th.admin-table__cell.admin-table__cell--select-company
+        th(class=cellClass + 'empty')
+        th(class=cellClass + 'schedule-time')=row.time
+        th(class=cellClass + 'select-company')
           select(id="company-select", class="input-dropdown")
             each option in row.company
               option(value="Choose a company", class="input-dropdown__option")=option
-        th.admin-table__cell.admin-table__cell--button
+        th(class=cellClass + 'button')
           button.btn.btn--white.btn--request(type="submit")=row.request
-        th.admin-table__cell.admin-table__cell--status(class='admin-table__cell--' + row.status.toLowerCase())
+        th(class=cellClass + 'status' + ' admin-table__cell--' + row.status.toLowerCase())
           span=row.status
         if row.timeLimit
-          th=row.timeLimit
+          th(class=cellClass + 'time-limit')=row.timeLimit
         else
-          th.admin-table__cell.admin-table__cell--empty
+          th(class=cellClass + 'empty')
 
 //Таблица с отправленными сообщениями
 
@@ -29,23 +37,24 @@ mixin renderSentMessages(titleList, rowList)
   table.admin-table
     tr.admin-table__row.admin-table__row--headline
       th(class=cellClass + 'icon')=titleList.status
-        th(class=cellClass + 'destination')=titleList.to
-        th(class=cellClass + 'theme')=titleList.subject
-        th(class=cellClass + 'date')=titleList.date
-        th(class=cellClass + 'time')=titleList.time
-        th(class=cellClass + 'event')=titleList.event
-        th(class=cellClass + 'message')=titleList.message
+      th(class=cellClass + 'destination')=titleList.to
+      th(class=cellClass + 'theme')=titleList.subject
+      th(class=cellClass + 'date')=titleList.date
+      th(class=cellClass + 'time')=titleList.time
+      th(class=cellClass + 'event')=titleList.event
+      th(class=cellClass + 'message')=titleList.message
     each row in rowList
       tr.admin-table__row.admin-table__row--messages
-        th.admin-table__cell.admin-table__cell--icon
+        th(class=cellClass + 'icon' + ' admin-table__cell--' + row.status)
           if row.status === "sent"
             +icon("icon-mail-sent", 34, 15)
-        th(class=cellClass + 'destination')=row.to
+        th(class=cellClass + 'destination admin-table__cell--sent-destination')=row.to
         th(class=cellClass + 'theme')=row.subject
         th(class=cellClass + 'date')=row.date
         th(class=cellClass + 'time')=row.time
         th(class=cellClass + 'event')=row.event
         th(class=cellClass + 'message')=row.message
+        th(class=cellClass + 'mobile-event')=row.event
 
 //Таблица с входящими сообщениями
 
