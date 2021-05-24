@@ -7936,6 +7936,11 @@ span {
   @media (max-width: 767px) {
     .admin-table__row .admin-table__cell--event {
       display: none; } }
+  .admin-table__row .admin-table__cell--time-limit {
+    margin-left: 20px; }
+    @media (max-width: 767px) {
+      .admin-table__row .admin-table__cell--time-limit {
+        display: none; } }
   @media (max-width: 1023px) {
     .admin-table__row .admin-table__cell--empty {
       display: none; } }
@@ -7959,6 +7964,8 @@ span {
     font-size: 12px;
     line-height: 20px;
     color: #9f9f9f; }
+  .admin-table__cell--status {
+    width: 5%; }
   .admin-table__cell--message {
     max-width: 337px;
     width: 20%;
@@ -8039,8 +8046,18 @@ span {
       .admin-table__cell--event {
         width: 18%;
         overflow: hidden; } }
+  .admin-table__cell--person {
+    width: 18%;
+    margin-right: 10px; }
+    @media (max-width: 1439px) {
+      .admin-table__cell--person {
+        width: 16%; } }
+    @media (max-width: 767px) {
+      .admin-table__cell--person {
+        display: inline-block;
+        width: 45%; } }
   @media (max-width: 767px) {
-    .admin-table__cell--person {
+    .admin-table__cell--mobile-person {
       display: block;
       width: 100%; } }
   .admin-table__cell--empty {
@@ -8051,7 +8068,7 @@ span {
     @media (max-width: 1023px) {
       .admin-table .admin-table__cell--schedule-time {
         width: 12%; } }
-    @media (max-width: 1023px) {
+    @media (max-width: 767px) {
       .admin-table .admin-table__cell--schedule-time {
         display: block;
         margin-right: 0; } }
@@ -8067,6 +8084,26 @@ span {
     @media (max-width: 1023px) {
       .admin-table__cell--button {
         width: 12%; } }
+    @media (max-width: 767px) {
+      .admin-table__cell--button {
+        width: 20%; } }
+  .admin-table__cell--company {
+    width: 10%;
+    margin-right: 10px; }
+    @media (max-width: 1439px) {
+      .admin-table__cell--company {
+        width: 14%; } }
+    @media (max-width: 767px) {
+      .admin-table__cell--company {
+        display: block;
+        width: 100%;
+        margin: 0; } }
+  .admin-table__cell--select-time {
+    width: 18%;
+    margin-right: 10px; }
+    @media (max-width: 767px) {
+      .admin-table__cell--select-time {
+        width: 27%; } }
   @media (max-width: 767px) {
     .admin-table__row--schedule {
       position: relative;
@@ -8112,13 +8149,6 @@ span {
         position: absolute;
         top: 0;
         right: 0; } }
-  @media (max-width: 767px) {
-    .admin-table__row--guests {
-      position: relative;
-      width: 100%; }
-      .admin-table__row--guests .admin-table__cell--person {
-        display: inline-block;
-        width: 45%; } }
   .admin-table .choices {
     height: 38px; }
   .admin-table .choices__inner {
@@ -8133,6 +8163,9 @@ span {
     padding: 5px 7px;
     font-size: 12px;
     line-height: 18px; }
+    @media (max-width: 767px) {
+      .admin-table .btn--request {
+        white-space: break-spaces; } }
   .admin-table__link {
     padding: 5px 7px;
     border: 1px solid #0098c1;
@@ -8140,8 +8173,14 @@ span {
     color: #0098c1;
     font-size: 12px;
     line-height: 18px;
+    font-weight: normal;
     -webkit-transition: color background-color 0.3s ease;
     transition: color background-color 0.3s ease; }
+    @media (max-width: 767px) {
+      .admin-table__link {
+        display: inline-block;
+        white-space: break-spaces;
+        text-align: center; } }
     .admin-table__link:hover, .admin-table__link:focus {
       border-color: transparent;
       background-color: #0098c1;

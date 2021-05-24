@@ -95,19 +95,19 @@ mixin renderGuestsList(titleList, rowList)
         th=title
     each row in rowList
       tr.admin-table__row.admin-table__row--guests
-        th.admin-table__cell.admin-table__cell--company=row.company
+        th(class=cellClass + 'company')=row.company
           span=row.place
-        th.admin-table__cell.admin-table__cell--person=row.name
+        th(class=cellClass + 'person')=row.name
           span=row.position
-        th.admin-table__cell.admin-table__cell--person=row.colleagueName
+        th(class=cellClass + 'person')=row.colleagueName
           span=row.colleaguePosition
-        th.admin-table__cell.admin-table__cell--select-time
+        th(class=cellClass + 'select-time')
           select(id="free-slot-select", class="input-dropdown")
             each option in row.freeSlots
               option(value=option, class="input-dropdown__option")=option
-        th.admin-table__cell.admin-table__cell--button
+        th(class=cellClass + 'button')
           button.btn.btn--white.btn--request(type="submit")=row.request
-        th.admin-table__cell.admin-table__cell--button
+        th(class=cellClass + 'button')
           a.admin-table__link(href=row.contactLink, aria-label="Отправить письмо")=row.contact
 
 mixin renderHostedGuestsList(titleList, rowList)
@@ -117,16 +117,16 @@ mixin renderHostedGuestsList(titleList, rowList)
         th=title
     each row in rowList
       tr.admin-table__row.admin-table__row--guests
-        th=row.company
+        th(class=cellClass + 'company')=row.company
           span=row.place
-        th.admin-table__cell.admin-table__cell--person=row.name
+        th(class=cellClass + 'person admin-table__cell--mobile-person')=row.name
           if row.position
             span=row.position
-        th.admin-table__cell.admin-table__cell--select-time
+        th(class=cellClass + 'select-time')
           select(id="free-slot-select-2", class="input-dropdown")
             each option in row.freeSlots
               option(value=option, class="input-dropdown__option")=option
-        th.admin-table__cell.admin-table__cell--button
+        th(class=cellClass + 'button')
           button.btn.btn--white.btn--request(type="submit")=row.request
-        th.admin-table__cell.admin-table__cell--button
+        th(class=cellClass + 'button')
           a.admin-table__link(href=row.contactLink, aria-label="Отправить письмо")=row.contact
