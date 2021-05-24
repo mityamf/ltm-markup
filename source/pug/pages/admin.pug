@@ -20,7 +20,7 @@ block main
   include ../data/admin/admin-guests-list
   include ../data/admin/admin-hosted-guests-list
 
-  main.container
+  main.container.container--no-padding
     +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
 
     p="Здесь пока будут отображаться отдельные куски из разных страниц админки, потом разнесу по разным страницам, сейчас надо сделать шаблоны"
@@ -28,35 +28,30 @@ block main
     +renderAdminTabs(adminTabs)
     +renderMailControl(adminMailControl.title, adminMailControl.linkList, adminMailControl.isSearchInput)
 
-    p="ТАБЛИЦЫ"
     +renderInboxMessages(adminInboxMessagesTitles, adminInboxMessages)
-    p Новая таблица
-    +renderSentMessages(adminSentMessagesTitles, adminSentMessages)
-    p Новая таблица
-    +renderSchedule(adminScheduleTitles, adminSchedule)
-    p Новая таблица
-    +renderGuestsList(adminGuestsListTitles, adminGuestsList)
-    p Новая таблица
-    +renderHostedGuestsList(adminHostedGuestsListTitles, adminHostedGuestsList)
-    p Новая таблица
-    +renderInboxMessages(adminInboxMessagesRusTitles, adminInboxRusMessages)
-    p Новая таблица
-    +renderSentMessages(adminSentMessagesRusTitles, adminSentRusMessages)
-    p Новая таблица
-    +renderHostedGuestsList(adminHostedGuestsListRusTitles, adminHostedGuestsRusList)
-    p Новая таблица
-    +renderSchedule(adminScheduleRusTitles, adminRusSchedule)
+    //p Новая таблица
+    //+renderSentMessages(adminSentMessagesTitles, adminSentMessages)
+    //p Новая таблица
+    //+renderSchedule(adminScheduleTitles, adminSchedule)
+    //p Новая таблица
+    //+renderGuestsList(adminGuestsListTitles, adminGuestsList)
+    //p Новая таблица
+    //+renderHostedGuestsList(adminHostedGuestsListTitles, adminHostedGuestsList)
+    //p Новая таблица
+    //+renderInboxMessages(adminInboxMessagesRusTitles, adminInboxRusMessages)
+    //p Новая таблица
+    //+renderSentMessages(adminSentMessagesRusTitles, adminSentRusMessages)
+    //p Новая таблица
+    //+renderHostedGuestsList(adminHostedGuestsListRusTitles, adminHostedGuestsRusList)
+    //p Новая таблица
+    //+renderSchedule(adminScheduleRusTitles, adminRusSchedule)
 
-
-
-
-
-    +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
-    +renderSponsorshipList(sponsorshipHeadline, sponsorshipList)
-    .deadlines-info
-      .deadlines-info__content
-        each textBlock in deadlinesInfoContent
-          +renderHeadline2(textBlock.title)
-          .deadlines-info__text
-            +renderTextContentBlock(textBlock.textList)
-      +renderDownloadFiles(downloadHeadline, downloadList)
+    //+renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
+    //+renderSponsorshipList(sponsorshipHeadline, sponsorshipList)
+    //.deadlines-info
+    //  .deadlines-info__content
+    //    each textBlock in deadlinesInfoContent
+    //      +renderHeadline2(textBlock.title)
+    //      .deadlines-info__text
+    //        +renderTextContentBlock(textBlock.textList)
+    //  +renderDownloadFiles(downloadHeadline, downloadList)
