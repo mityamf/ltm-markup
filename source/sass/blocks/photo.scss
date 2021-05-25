@@ -14,6 +14,12 @@
     &:active {
       opacity: 0.3;
     }
+
+    @include viewport--sm {
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
   &__list {
@@ -29,10 +35,6 @@
 
   &__item {
     margin-bottom: 27px;
-
-    @include viewport--sm {
-      margin-bottom: 33px;
-    }
   }
 
   &__sublist-item {
@@ -209,6 +211,22 @@
     @include viewport--sm {
       display: inline-block;
       text-align: center;
+      margin-top: 5px;
+
+      span {
+        width: 10px;
+        height: 10px;
+      }
+
+      .swiper-pagination-bullet {
+        background: transparent;
+        border: 1px solid $color-blue;
+        opacity: 1;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: $color-blue;
+      }
     }
   }
 
