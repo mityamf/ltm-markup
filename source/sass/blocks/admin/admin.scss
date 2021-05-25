@@ -22,6 +22,18 @@
     padding-right: 0;
     padding-left: 0;
   }
+
+  .edit {
+    @include viewport--sm {
+      padding: 0;
+    }
+  }
+
+  .edit .title--h3 {
+    @include viewport--sm {
+      margin-top: 20px;
+    }
+  }
 }
 
 .container--admin {

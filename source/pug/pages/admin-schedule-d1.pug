@@ -1,7 +1,7 @@
 extends ../base/layout
 
 block variables
-  - var title = "Messages"
+  - var title = "Schedule"
   - var hasHeader = true
   - var hasFooter = true
 
@@ -9,20 +9,18 @@ block main
   include ../data/admin/admin-headline
   include ../data/admin/participants
   include ../data/admin/admin-tabs
-  include ../data/admin/admin-mail-control
-  include ../data/admin/admin-inbox-messages
+  include ../data/admin/schedule-tabs
+  include ../data/admin/admin-schedule
+  include ../data/admin/wish-list
   include ../data/support-contacts
 
   main.container.container--no-padding.container--admin
     .admin
       +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
       +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
-      .admin__control-wrapper
-        +renderAdminTabs(adminTabs)
-        +renderMailControl(adminMailControl.title, adminMailControl.linkList, adminMailControl.isSearchInput)
-      h2.admin-table__headline("Inbox")
-      +renderInboxMessages(adminInboxMessagesTitles, adminInboxMessages)
-
-      button.btn.btn--white.btn--more(type="button")="More"
-
+      +renderAdminTabs(adminTabs)
+      +renderHeadline2("My Schedule")
+      +renderScheduleTabs(scheduleTabs, generatePDF)
+      +renderSchedule(adminScheduleTitles, adminSchedule)
+      +renderWishList(wishList)
     +renderSupportContacts(contactsList)
