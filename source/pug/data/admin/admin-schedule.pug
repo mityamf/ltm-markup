@@ -1,5 +1,33 @@
-- var adminScheduleTitles = ["Time", "Company", "Request", "Status"]
-- var adminScheduleRusTitles = ["Время", "Участник", "Запрос", "Статус", "Времени осталось"]
+-
+  var scheduleTabs = [
+    {
+      text: "Day 1",
+      separator: "–",
+      date: "27 Feb. 2020",
+      link: "admin-schedule-d1.html"
+    },
+    {
+      text: "Day 2",
+      separator: "–",
+      date: "28 Feb. 2020",
+      link: "admin-schedule-d2.html"
+    },
+  ]
+
+-
+  var generatePDF = {
+    text: "Generate PDF with schedule",
+    link: "#"
+  }
+
+
+-
+  var adminScheduleTitles = {
+    time: "Time",
+    company: "Company",
+    request: "Request",
+    status: "Status"
+  }
 
 -
   var adminSchedule = [
@@ -11,7 +39,7 @@
       ],
       request: "Send a request",
       requestLink: "#",
-      status: "Free",
+      status: "Free"
     },
     {
       time: "10:00 – 10:10",
@@ -21,31 +49,6 @@
       ],
       request: "Send a request",
       requestLink: "#",
-      status: "Free",
-    },
-  ]
-
--
-  var adminRusSchedule = [
-    {
-      time: "10:00 – 10:10",
-      company: [
-        "Choose a company",
-        "Mandarin International Hotel Group"
-      ],
-      request: "Send a request",
-      requestLink: "#",
-      status: "Free",
-      timeLimit: "12 days"
-    },
-    {
-      time: "10:00 – 10:10",
-      company: [
-        "Choose a company",
-        "Mandarin International Hotel Group"
-      ],
-      request: "Send a request",
-      requestLink: "#",
-      status: "Free",
-    },
+      status: "Free"
+    }
   ]
