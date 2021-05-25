@@ -70,7 +70,22 @@
   }
 
   &--more-news {
-    padding: 18px 69px;
+    padding: 13px 69px;
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      background-color: $color-blue;
+
+      color: $color-default-white;
+    }
+
+    &:active {
+      border-color: transparent;
+      background-color: $color-gray;
+
+      color: $color-default-white;
+    }
   }
 
   &--read-more {
@@ -82,9 +97,28 @@
       vertical-align: middle;
     }
 
-    @include viewport--lg {
-      padding: 2px 32px;
+    &:hover,
+    &:focus {
+      opacity: 0.6;
     }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &--reduced {
+    @include viewport--lg {
+      padding: 1px 32px;
+    }
+
+    @include viewport--md {
+      padding: 1px 41px;
+    }
+  }
+
+  &--more-low {
+    padding: 15px 30px;
   }
 }
 

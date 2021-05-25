@@ -40,7 +40,6 @@
 @import "blocks/registration/submission";
 @import "blocks/registration/pop-up";
 @import "blocks/registration/status";
-@import "blocks/admin/admin";
 @import "blocks/modal";
 @import "blocks/main-nav";
 @import "blocks/search";
@@ -86,6 +85,10 @@
 @import "blocks/admin/sponsorship";
 @import "blocks/admin/download";
 @import "blocks/admin/participants";
+@import "blocks/admin/deadlines-info";
+@import "blocks/admin/admin-headline";
+@import "blocks/admin/mail-control";
+@import "blocks/admin/admin-table";
 
 // используйте это для отключения ховеров на тач устройствах
 // ! но не используйте это для текстовых полей ( input, textarea )
