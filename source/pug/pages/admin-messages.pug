@@ -20,7 +20,7 @@ block main
       .admin__control-wrapper
         +renderAdminTabs(adminTabs)
         +renderMailControl(adminMailControl.title, adminMailControl.linkList, adminMailControl.isSearchInput)
-      +renderHeadline2("Inbox")
+      h2.admin-table__headline("Inbox")
       +renderInboxMessages(adminInboxMessagesTitles, adminInboxMessages)
 
       button.btn.btn--white.btn--more(type="button")="More"

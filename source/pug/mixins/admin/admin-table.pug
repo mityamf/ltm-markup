@@ -69,6 +69,7 @@ mixin renderInboxMessages(titleList, rowList)
       if titleList.event
         th(class=cellClass + 'event')=titleList.event
       th(class=cellClass + 'message')=titleList.message
+
     each row in rowList
       tr.admin-table__row.admin-table__row--messages
         th(class=cellClass + 'icon' + ' admin-table__cell--' + row.status)
@@ -83,6 +84,8 @@ mixin renderInboxMessages(titleList, rowList)
         if row.event
           th(class=cellClass + 'event')=row.event
         th(class=cellClass + 'message')=row.message
+          //a.admin-table__message-link(href="#")
+          //  +icon("icon-mail-arrow", 11, 19)
         if row.event
           th(class=cellClass + 'mobile-event')=row.event
 

@@ -7386,16 +7386,9 @@ span {
           -ms-flex-align: center;
               align-items: center;
       padding: 11px 0 0 0; } }
-  .admin .title--h2 {
-    display: none; }
-    @media (max-width: 767px) {
-      .admin .title--h2 {
-        display: block;
-        margin-top: 5px;
-        padding-left: 17px;
-        padding-right: 17px;
-        font-size: 38px;
-        line-height: 46px; } }
+  .admin .headline-back {
+    padding-right: 0;
+    padding-left: 0; }
 
 .container--admin .btn--more {
   padding: 14px 30px; }
@@ -7991,9 +7984,26 @@ span {
       display: block; } }
   @media (max-width: 767px) {
     .admin-table__row {
+      position: relative;
       display: inline-block; } }
   .admin-table__row:nth-child(even) {
     background-color: #d6d6d6; }
+  .admin-table__message-link {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden; }
+  .admin-table__message-link svg {
+    display: none; }
+    @media (max-width: 767px) {
+      .admin-table__message-link svg {
+        display: block;
+        position: absolute;
+        top: 44px;
+        right: 16px; } }
   @media (max-width: 767px) {
     .admin-table__row--headline {
       display: none; } }
@@ -8061,9 +8071,12 @@ span {
     @media (max-width: 1439px) {
       .admin-table__cell--message {
         width: 15%; } }
+    @media (max-width: 1023px) {
+      .admin-table__cell--message {
+        width: 27%; } }
     @media (max-width: 767px) {
       .admin-table__cell--message {
-        width: 67%;
+        width: 90%;
         max-width: none; } }
   .admin-table__cell--destination {
     width: 8%;
@@ -8279,6 +8292,16 @@ span {
       border-color: transparent;
       background-color: #a7a7a7;
       color: #ffffff; }
+  .admin-table__headline {
+    display: none; }
+    @media (max-width: 767px) {
+      .admin-table__headline {
+        display: block;
+        margin-top: 5px;
+        padding-left: 17px;
+        padding-right: 17px;
+        font-size: 38px;
+        line-height: 46px; } }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,

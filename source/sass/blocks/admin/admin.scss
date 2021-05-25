@@ -18,18 +18,9 @@
     }
   }
 
-  .title--h2 {
-    display: none;
-
-    @include viewport--sm {
-      display: block;
-      margin-top: 5px;
-      padding-left: 17px;
-      padding-right: 17px;
-
-      font-size: 38px;
-      line-height: 46px;
-    }
+  .headline-back {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 

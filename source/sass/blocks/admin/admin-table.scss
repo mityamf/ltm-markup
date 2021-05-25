@@ -18,11 +18,33 @@
 
   &__row {
     @include viewport--sm {
+      position: relative;
       display: inline-block;
     }
 
     &:nth-child(even) {
       background-color: $color-gray-light;
+    }
+  }
+
+  &__message-link {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+  }
+
+  &__message-link svg {
+    display: none;
+
+    @include viewport--sm {
+      display: block;
+      position: absolute;
+      top: 44px;
+      right: 16px;
     }
   }
 
@@ -137,8 +159,12 @@
       width: 15%;
     }
 
+    @include viewport--md {
+      width: 27%;
+    }
+
     @include viewport--sm {
-      width: 67%;
+      width: 90%;
       max-width: none;
     }
   }
@@ -470,6 +496,20 @@
       background-color: $color-gray;
 
       color: $color-default-white;
+    }
+  }
+
+  &__headline {
+    display: none;
+
+    @include viewport--sm {
+      display: block;
+      margin-top: 5px;
+      padding-left: 17px;
+      padding-right: 17px;
+
+      font-size: 38px;
+      line-height: 46px;
     }
   }
 }
