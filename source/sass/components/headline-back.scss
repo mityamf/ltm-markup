@@ -20,6 +20,7 @@
   svg {
     margin-right: 5px;
     vertical-align: middle;
+    fill: $color-blue;
   }
 
   .title--h2 {
@@ -40,5 +41,53 @@
   @include viewport--sm {
     padding-bottom: 25px;
     padding-top: 29px;
+  }
+}
+
+.headline-back--title {
+  position: relative;
+  padding-top: 28px;
+  flex-direction: row;
+
+  @include viewport--lg {
+    padding-top: 32px;
+  }
+
+  @include viewport--sm {
+    padding-top: 20px;
+  }
+
+  > * {
+    margin-bottom: 0;
+  }
+
+  .back-link {
+    margin-right: 20px;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    @include viewport--lg {
+      margin-top: -4px;
+      font-size: 14px;
+    }
+
+    @include viewport--sm {
+      position: absolute;
+      z-index: 2;
+      top: -352px;
+      left: 0;
+      color: $color-default-white;
+
+      svg {
+        fill: $color-default-white;
+      }
+    }
   }
 }

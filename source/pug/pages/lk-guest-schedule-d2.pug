@@ -12,6 +12,7 @@ block main
   include ../data/lk/lk-info-block
   include ../data/lk/lk-guests-filters
   include ../data/lk/lk-filter-tabs
+  include ../data/lk/lk-schedule
   include ../data/admin/admin-hosted-guests-list
   include ../data/support-contacts
 
@@ -28,6 +29,6 @@ block main
         each filter in filters
           +renderFilter(filter.title, filter.mod, filter.filterList)
       +renderFilterTabs(filterTabs)
-      +renderGuestsList(adminHostedGuestsListTitles, adminHostedGuestsList)
+      +renderSchedule(adminScheduleTitles, adminSchedule)
       button.btn.btn--white.btn--more(type="button")="Показать больше"
     +renderSupportContacts(contactsList)

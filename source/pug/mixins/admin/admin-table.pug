@@ -13,7 +13,6 @@ mixin renderSchedule(titleList, rowList)
         th(class=cellClass + 'time-limit')=titleList.timeLimit
       else
         th(class=cellClass + 'empty')
-
     each row in rowList
       tr.admin-table__row.admin-table__row--schedule
         th(class=cellClass + 'empty')
@@ -69,7 +68,6 @@ mixin renderInboxMessages(titleList, rowList)
       if titleList.event
         th(class=cellClass + 'event')=titleList.event
       th(class=cellClass + 'message')=titleList.message
-
     each row in rowList
       tr.admin-table__row.admin-table__row--messages
         th(class=cellClass + 'icon' + ' admin-table__cell--' + row.status)
@@ -94,8 +92,12 @@ mixin renderInboxMessages(titleList, rowList)
 mixin renderGuestsList(titleList, rowList)
   table.admin-table
     tr.admin-table__row.admin-table__row--headline
-      each title in titleList
-        th=title
+      th(class=cellClass + 'company')=titleList.company
+      th(class=cellClass + 'name')=titleList.name
+      th(class=cellClass + 'name')=titleList.colleagueName
+      th(class=cellClass + 'time')=titleList.freeSlots
+      th(class=cellClass + 'button')=titleList.request
+      th(class=cellClass + 'button')=titleList.contact
     each row in rowList
       tr.admin-table__row.admin-table__row--guests
         th(class=cellClass + 'company')=row.company
@@ -116,8 +118,11 @@ mixin renderGuestsList(titleList, rowList)
 mixin renderHostedGuestsList(titleList, rowList)
   table.admin-table
     tr.admin-table__row.admin-table__row--headline
-      each title in titleList
-        th=title
+      th(class=cellClass + 'company')=titleList.company
+      th(class=cellClass + 'name')=titleList.name
+      th(class=cellClass + 'time')=titleList.freeSlots
+      th(class=cellClass + 'button')=titleList.request
+      th(class=cellClass + 'button')=titleList.contact
     each row in rowList
       tr.admin-table__row.admin-table__row--guests
         th(class=cellClass + 'company')=row.company

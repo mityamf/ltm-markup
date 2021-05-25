@@ -1,6 +1,13 @@
 .contact-us {
-  padding-top: 25px;
-  margin-bottom: 70px;
+  margin-bottom: 77px;
+
+  @include viewport--lg {
+    margin-bottom: 18px;
+  }
+
+  @include viewport--sm {
+    margin-bottom: 31px;
+  }
 }
 
 .contact-us__wrapper {
@@ -16,23 +23,29 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
-  margin-top: 60px;
+  margin-top: 70px;
   margin-left: 35px;
   padding: 0;
   list-style: none;
 
-  @include viewport--md {
-    align-items: center;
+  @include viewport--lg {
+    margin-left: 0;
   }
 
-  @include viewport--sm {
-    margin-left: 0;
+  @include viewport--md {
+    margin-top: 33px;
+    align-items: center;
   }
 }
 
 .contact-us__item {
   width: 46%;
   margin-bottom: 97px;
+
+  @include viewport--lg {
+    width: 50%;
+    margin-bottom: 87px;
+  }
 
   @include viewport--md {
     width: 500px;
@@ -43,6 +56,7 @@
   @include viewport--sm {
     width: 100%;
     max-width: 320px;
+    margin-bottom: 47px;
   }
 }
 
@@ -50,6 +64,11 @@
   align-self: flex-end;
   width: 46.3%;
   margin-top: 27px;
+
+  @include viewport--lg {
+    width: 50%;
+    margin-top: 22px;
+  }
 
   @include viewport--md {
     width: 500px;

@@ -1,26 +1,43 @@
 .organizers {
-  padding-top: 25px;
-}
-
-.organizers__title {
-  margin-bottom: 25px;
+  margin-bottom: 82px;
 
   @include viewport--lg {
-    margin-bottom: 31px;
+    margin-bottom: 5px;
+  }
+
+  @include viewport--md {
+    margin-bottom: 30px;
   }
 }
 
 .organizers__wrapper {
   max-width: 936px;
   margin: 0 auto;
+  margin-top: 24px;
+
+  @include viewport--lg {
+    margin-top: 30px;
+  }
 }
 
 .organizers__list {
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @include viewport--lg {
+    margin-left: 5px;
+  }
+
+  @include viewport--sm {
+    margin-left: 0;
+  }
 }
 
 .organizers__item {
   margin-bottom: 64px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }

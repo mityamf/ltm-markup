@@ -20,11 +20,11 @@ block main
       +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
       +renderAdminTabs(adminTabs)
       +renderHeadline2("Hosted Buyers Guest List")
-      +renderScheduleTabs(scheduleTabs, generatePDF)
+      +renderScheduleTabs(scheduleTabs)
       ul.hotel-filters
         each filter in filters
           +renderFilter(filter.title, filter.mod, filter.filterList)
       +renderFilterTabs(filterTabs)
-      +renderGuestsList(adminHostedGuestsListTitles, adminHostedGuestsList)
+      +renderHostedGuestsList(adminHostedGuestsListTitles, adminHostedGuestsList)
       button.btn.btn--white.btn--more(type="button")="More"
     +renderSupportContacts(contactsList)
