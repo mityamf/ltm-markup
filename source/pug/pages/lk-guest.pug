@@ -1,0 +1,31 @@
+extends ../base/layout
+
+block variables
+  - var title = "LK-Guest"
+  - var hasHeader = true
+  - var hasFooter = true
+
+block main
+  include ../data/admin/admin-headline
+  include ../data/lk/lk-participants
+  include ../data/lk/lk-info-block
+  include ../data/lk/lk-admin-tabs
+  include ../data/lk/lk-download-list
+  include ../data/lk/lk-deadlines-info
+  include ../data/support-contacts
+
+  main.container.container--admin-deadlines.lk
+    +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
+    .lk__participants-wrapper
+      +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
+      +renderInfoBlock(infoBlock)
+    +renderAdminTabs(adminTabs)
+    .deadlines-info
+      .deadlines-info__content
+        each textBlock in deadlinesInfoContent
+          +renderHeadline2(textBlock.title)
+          .deadlines-info__text
+            +renderTextContentBlock(textBlock.textList)
+      +renderDownloadFiles(downloadHeadline, downloadList)
+    +renderSupportContacts(contactsList)
+

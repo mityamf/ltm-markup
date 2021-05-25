@@ -1,0 +1,26 @@
+.lk {
+  &__participants-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid $color-blue;
+
+    @include viewport--md {
+      flex-wrap: wrap;
+    }
+
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  .participants {
+    width: 50%;
+    border: none;
+
+    @include viewport--md {
+      width: 100%;
+    }
+  }
+}
+

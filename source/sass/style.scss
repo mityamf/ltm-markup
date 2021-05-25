@@ -83,7 +83,9 @@
 @import "components/top-block";
 @import "components/hotel-headline";
 @import "components/up-button";
+@import "blocks/admin/admin";
 @import "blocks/admin/admin-tabs";
+@import "blocks/admin/schedule-tabs";
 @import "blocks/admin/sponsorship";
 @import "blocks/admin/download";
 @import "blocks/admin/participants";
@@ -91,6 +93,10 @@
 @import "blocks/admin/admin-headline";
 @import "blocks/admin/mail-control";
 @import "blocks/admin/admin-table";
+@import "blocks/admin/wish-list";
+@import "blocks/admin/filter-tabs";
+@import "blocks/admin/lk";
+@import "blocks/admin/info-block";
 
 // используйте это для отключения ховеров на тач устройствах
 // ! но не используйте это для текстовых полей ( input, textarea )

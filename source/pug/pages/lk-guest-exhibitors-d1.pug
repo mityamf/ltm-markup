@@ -1,0 +1,33 @@
+extends ../base/layout
+
+block variables
+  - var title = "Hosted Buyers Guest List"
+  - var hasHeader = true
+  - var hasFooter = true
+
+block main
+  include ../data/admin/admin-headline
+  include ../data/lk/lk-participants
+  include ../data/lk/lk-admin-tabs
+  include ../data/lk/lk-info-block
+  include ../data/lk/lk-guests-filters
+  include ../data/lk/lk-filter-tabs
+  include ../data/lk/lk-hosted-guests-list
+  include ../data/support-contacts
+
+  main.container.container--no-padding.lk
+    .admin
+      +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
+      .lk__participants-wrapper
+        +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
+        +renderInfoBlock(infoBlock)
+      +renderAdminTabs(adminTabs)
+      +renderHeadline2("Список участников")
+      +renderScheduleTabs(scheduleTabs)
+      ul.hotel-filters
+        each filter in filters
+          +renderFilter(filter.title, filter.mod, filter.filterList)
+      +renderFilterTabs(filterTabs)
+      +renderHostedGuestsList(adminHostedGuestsListTitles, adminHostedGuestsList)
+      button.btn.btn--white.btn--more(type="button")="Показать больше"
+    +renderSupportContacts(contactsList)
