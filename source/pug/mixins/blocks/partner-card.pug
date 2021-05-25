@@ -1,7 +1,7 @@
 mixin renderPartnerCard(logoSrc, logoWidth, logoHeight, name, rank, link, text)
   .partner-card
     .partner-card__image-container
-      img(src= logoSrc, width= logoWidth, height= logoHeight)
+      img(src= logoSrc, width= logoWidth, height= logoHeight, alt="logo " + name)
     .partner-card__item-container
       .partner-card__top-line
         h3.partner-card__name.title.title--h3= name

@@ -1,4 +1,8 @@
 .download {
+  @include viewport--sm {
+    padding-bottom: 8px;
+  }
+
   .title--h2 {
     letter-spacing: 1.2px;
 
@@ -19,7 +23,7 @@
     }
 
     @include viewport--sm {
-      padding: 10px 0 0 0;
+      padding: 18px 0 0;
     }
   }
 

@@ -48,6 +48,10 @@
   margin-top: 34px;
   margin-bottom: 2px;
 
+  @include viewport--lg {
+    align-items: center;
+  }
+
   @include viewport--sm {
     align-self: center;
     margin-top: 0;
@@ -57,11 +61,20 @@
 .partner-card__link {
   align-self: flex-end;
   margin-bottom: 21px;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+
+  @include viewport--lg {
+    margin-top: 8px;
+    margin-bottom: 14px;
+  }
 
   @include viewport--sm {
     align-self: center;
     width: 250px;
-    margin-bottom: 9px;
+    margin-top: 10px;
+    margin-bottom: 4px;
     overflow: hidden;
 
     text-overflow: ellipsis;
@@ -97,16 +110,20 @@
   background-color: $color-blue;
   white-space: nowrap;
 
+  @include viewport--lg {
+    padding-left: 8px;
+  }
+
   &::after {
     content: "";
     position: absolute;
     z-index: 2;
-    top: 0;
-    right: -1px;
+    top: -3px;
+    right: -2px;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 11px 7px 11px 0;
+    border-width: 15px 8px 15px 0;
     border-color: $color-transparent $color-white $color-transparent $color-transparent;
   }
 
@@ -120,8 +137,16 @@
 .partner-card__item-container p {
   margin-top: 0;
   margin-bottom: 20px;
+
+  @include viewport--sm {
+    margin-bottom: 10px;
+  }
 }
 
 .partner-card__button {
   margin: auto 0 30px auto;
+
+  @include viewport--sm {
+    margin-bottom: 8px;
+  }
 }

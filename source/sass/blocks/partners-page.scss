@@ -1,17 +1,20 @@
 .partners-page {
-  padding-top: 25px;
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-
-  @include viewport--lg {
-    margin-bottom: 10px;
-  }
 }
 
 .partners-page__wrapper {
   position: relative;
   overflow: hidden;
+  margin-top: -10px;
+
+  @include viewport--lg {
+    margin-top: -13px;
+  }
+
+  @include viewport--sm {
+    margin-top: 17px;
+  }
 }
 
 .partners-page__list {
@@ -19,9 +22,8 @@
   top: -1px;
 
   column-count: 2;
-  column-gap: 6px;
+  column-gap: 10px;
   margin: 0;
-  margin-bottom: 20px;
   padding: 0;
   list-style: none;
 

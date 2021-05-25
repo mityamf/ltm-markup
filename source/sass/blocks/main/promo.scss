@@ -60,6 +60,10 @@
 }
 
 .promo__text-wrapper {
+  @include viewport--lg {
+    max-width: 1200px;
+    padding: 0 10px;
+  }
   @include viewport--sm {
     top: 0;
   }
@@ -81,11 +85,11 @@
 
 .promo--no-button {
   min-height: 534px;
-  padding-top: 458px;
+  padding-top: 446px;
 
   @include viewport--lg {
     min-height: 521px;
-    padding-top: 433px;
+    padding-top: 437px;
   }
 
   @include viewport--sm {
@@ -107,7 +111,7 @@
     @include viewport--lg {
       font-size: 30px;
       line-height: 36px;
-      letter-spacing: 0;
+      letter-spacing: 0.056em;
     }
 
     @include viewport--sm {

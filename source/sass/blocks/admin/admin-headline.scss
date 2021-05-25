@@ -1,0 +1,70 @@
+.admin-headline {
+  padding-bottom: 40px;
+
+  border-bottom: 1px solid $color-blue;
+
+  @include viewport--lg {
+    padding-bottom: 27px;
+  }
+
+  @include viewport--sm {
+    padding-top: 14px;
+    padding-bottom: 22px;
+  }
+
+  .headline-back {
+    padding-top: 28px;
+
+    @include viewport--sm {
+      display: inline;
+    }
+  }
+
+  .title--h2 {
+    margin-bottom: 3px;
+
+    letter-spacing: 1.7px;
+
+    @include viewport--sm {
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: 1px;
+    }
+  }
+
+  .back-link {
+    padding-right: 18px;
+
+    @include viewport--lg {
+      padding-right: 0;
+    }
+
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  &__place {
+    font-size: 24px;
+    line-height: 29px;
+    color: $color-blue;
+    font-weight: lighter;
+    letter-spacing: 1.2px;
+
+    @include viewport--sm {
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.7px;
+    }
+  }
+
+  time {
+    display: block;
+    letter-spacing: 0.3px;
+    margin-top: 4px;
+
+    @include viewport--lg {
+      margin-top: 0;
+    }
+  }
+}
