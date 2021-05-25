@@ -1233,7 +1233,8 @@ p {
     border: none;
     color: #ffffff;
     -webkit-transition: color background-color 0.3s ease;
-    transition: color background-color 0.3s ease; }
+    transition: color background-color 0.3s ease;
+    cursor: pointer; }
   .btn--white:hover, .btn--white:focus {
     border-color: transparent;
     background-color: #0098c1;
@@ -7217,10 +7218,10 @@ span {
       -ms-user-select: none;
           user-select: none;
   overflow: hidden;
-  background: url("../../img/svg/ico_showpassword.svg") no-repeat center; }
+  background: url("../../img/svg/ico_nonshowpassword.svg") no-repeat center; }
 
 .login__show-password.login__show-password--active {
-  background: url("../../img/svg/ico_nonshowpassword.svg") no-repeat center; }
+  background: url("../../img/svg/ico_showpassword.svg") no-repeat center; }
 
 .login__btn {
   width: 100%;

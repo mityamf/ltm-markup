@@ -28,6 +28,7 @@
     color: $color-default-white;
 
     transition: color background-color $default-transition-settings;
+    cursor: pointer;
   }
 
   &--white:hover,
