@@ -36,6 +36,6 @@ dropdown();
 initSmoothAnchors();
 homeSwiper();
 initModalGallerySwiper();
-initResizePhotos();
+//initResizePhotos();
 regSwiper();
 buyerSwiper();

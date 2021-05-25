@@ -1,5 +1,5 @@
 mixin direction(titleItem, dataItem, statusItem, timeItem, classStatus)
-  li.direction__item
+  .direction__item
     p.direction__title= titleItem
-    time(datatime=timeItem).direction__data= dataItem
+    time(datetime=timeItem).direction__data= dataItem
     p.direction__status(class=classStatus)= statusItem
