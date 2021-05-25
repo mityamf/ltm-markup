@@ -2763,6 +2763,24 @@
               <svg width="26" height="30" aria-hidden="true">
                 <use xlink:href="#icon-sign-in"></use>
               </svg></a>
+            <div class="login">
+              <form class="login__form" action="#" method="POST">
+                <div class="login__form-wrapper">
+                  <h3>Authorization for Exhibitors and Buyers</h3>
+                  <div class="login__form-input">
+                    <label class="visually-hidden" for="login-email">Enter your login</label>
+                    <input type="email" name="login-email" id="login-email" placeholder="Your login" required="required"/>
+                    <p>Enter for Guest</p>
+                  </div>
+                  <div class="login__form-input">
+                    <label class="visually-hidden" for="login-password">Inter your password</label>
+                    <input class="login__input-password" type="password" name="login-password" id="login-password" placeholder="Password" required="required"/>
+                    <button class="login__show-password" type="button" title="Показать/Скрыть пароль"><span class="visually-hidden">Показать/скрыть пароль</span></button>
+                  </div>
+                  <button class="login__btn btn btn--transparent" type="submit">Enter</button><a class="login__forgot" href="#" data-modal="forgot">Contact organizers in case of difficulties</a>
+                </div>
+              </form>
+            </div>
           </div>
           <div class="header__search header__search--hidden container">
             <form class="search-input" action="/" autocomplete="off">
@@ -2868,6 +2886,28 @@
           <button class="button button--cookies" type="button">ok</button>
         </div>
       </footer>
+    </div>
+    <div class="modal modal--preload modal--forgot">
+      <div class="modal__wrapper">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <div class="forgot"><a class="forgot__logo" href="main.html">
+              <svg width="324" height="122" aria-hidden="true">
+                <use xlink:href="#logo-desktop"></use>
+              </svg></a>
+            <form class="forgot__form" action="#" method="POST">
+              <label class="visually-hidden" for="forgot-email">Inter your E-mail</label>
+              <input type="email" name="forgot-email" id="forgot-email" placeholder="Enter your E-mail" requared="requared"/><a class="forgot__link" href="buyer.html">Or send message to Organizers</a>
+              <button class="forgot__submit btn btn--blue" type="submit">Send</button>
+            </form>
+          </div>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+            <svg width="33" height="33" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

@@ -15,6 +15,7 @@ import {dropdown} from './modules/dropdown';
 import {initModalGallerySwiper} from './modules/init-modal-gallery-swiper';
 import {buyerSwiper} from './modules/buyer-swiper';
 import {initResizePhotos} from './modules/admin-gallery';
+import {initLogin} from './modules/init-login';
 
 // Utils
 // ---------------------------------
@@ -39,3 +40,4 @@ initModalGallerySwiper();
 initResizePhotos();
 regSwiper();
 buyerSwiper();
+initLogin();
