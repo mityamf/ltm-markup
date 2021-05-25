@@ -11,11 +11,11 @@ block variables
 
 block main
 
-  +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
+  +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem, true)
   main
     .container
       .news
-        +renderHeadlineWithBackButton(news.title, "main.html")
+        +renderTitleHeadlineWithBackButton(news.title, "main.html")
         ul.news__list
           each item in news.newsList
             li.news__item
