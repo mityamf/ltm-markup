@@ -1,0 +1,27 @@
+extends ../base/layout
+
+block data
+  include ../data/news
+
+block variables
+  - var title = "Luxury Travel Mart — Registration Hosted Buyer"
+  - var hasHeader = true
+  - var hasFooter = true
+  - var currentPage = "Registration"
+
+block main
+  main
+    +promo("The leading luxury travel exhibition in eastern europe, russia & cis", "", "./img/bg/reg-bg.png", "./img/bg/reg-bg@2x.png", "1920", "534", "./img/bg/regBg-mobile.png 1x, ./img/bg/regBg-mobile@2x.png 2x", "promo__none", "promo__info-reg")
+    section.exhibitor-reg
+      .exhibitor-reg__block.container
+        h2.exhibitor-reg__title Регистрация гостя (Buyer, VIP Buyer, Hosted Buyer)
+        a.exhibitor-reg__btn(href="registration.html")
+          img(src="img/svg/icon-back.svg", width="12", height="20" alt="back")
+          span Back
+      +form-reg-hosted
+
+block modals
+  +modal("modal--submission")
+    +modal-submission()
+  +modal("modal--choices")
+    +modal-choices()

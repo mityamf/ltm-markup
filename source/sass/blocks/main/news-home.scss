@@ -70,6 +70,15 @@
       text-align: center;
       padding-bottom: 10px;
     }
+
+    .swiper-pagination-bullet {
+      background: initial;
+      border: 1px solid $color-blue;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: $color-blue;
+    }
   }
 }
 

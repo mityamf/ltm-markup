@@ -26,6 +26,12 @@
       letter-spacing: 0.045em;
     }
 
+    @media (max-width: 1220px) {
+      a {
+        font-size: 12px;
+      }
+    }
+
     @include viewport--sm {
       order: 1;
       margin-top: 15px;

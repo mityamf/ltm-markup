@@ -1,0 +1,5 @@
+mixin renderAdminHeadline(eventName, eventPlace, dates, backLink)
+  .admin-headline
+    +renderHeadlineWithBackButton(eventName, backLink)
+    span.admin-headline__place=eventPlace
+    time(datetime="dates")=dates

@@ -11,6 +11,10 @@
     @include viewport--md {
       height: 500px;
     }
+
+    @include viewport--sm {
+      height: 210px;
+    }
   }
 
   &__player {
@@ -20,8 +24,21 @@
   }
 
   &__title-wrap {
+    span {
+      font-weight: 300;
+    }
+
     @include viewport--sm {
       padding: 0 16.5px;
+      margin-bottom: 20px;
+
+      .title--h3 {
+        letter-spacing: 0.3px;
+      }
+
+      span {
+        display: none;
+      }
     }
   }
 
@@ -30,6 +47,10 @@
   }
 
   &__block-item {
-    margin-bottom: 30px;
+    margin-bottom: 27px;
+
+    @include viewport--sm {
+      margin-bottom: 33px;
+    }
   }
 }
