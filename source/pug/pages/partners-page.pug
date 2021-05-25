@@ -11,14 +11,14 @@ block variables
 
 block main
 
-  +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
+  +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem, true)
   main#top
     .container
       .partners-page
-        +renderHeadline(partners.title)
+        +renderTitleHeadline(partners.title)
         .partners-page__wrapper
           ul.partners-page__list
             each partner in partners.partnersList
               li.partners-page__item
                 +renderPartnerCard(partner.logo.src, partner.logo.width, partner.logo.height, partner.name, partner.rank, partner.link, partner.text)
-        +renderUpButton
+        //- +renderUpButton

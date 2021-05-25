@@ -11,11 +11,11 @@ block variables
 
 block main
 
-  +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
+  +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem, true)
   main#top
     .container
       .privacy-policy
-        +renderHeadlineWithBackButton(privacyPolicy.title, "main.html")
+        +renderTitleHeadlineWithBackButton(privacyPolicy.title, "main.html")
         time.privacy-policy__date(datetime=privacyPolicy.datetime)= privacyPolicy.date
         .privacy-policy__wrapper
           p= privacyPolicy.text
@@ -25,4 +25,3 @@ block main
                 h3= item.question
                 each paragraph in item.answer
                   p= paragraph
-        +renderUpButton
