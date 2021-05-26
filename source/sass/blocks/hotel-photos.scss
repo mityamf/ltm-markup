@@ -35,6 +35,17 @@
       @include viewport--sm {
         display: none;
       }
+
+      transition: opacity $default-transition-settings;
+
+      &:hover,
+      &:focus {
+        opacity: 0.7;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
     }
   }
 
@@ -153,6 +164,17 @@
   &__item--upload label {
     display: block;
     margin: auto;
+
+    transition: opacity $default-transition-settings;
+
+    &:hover svg,
+    &:focus svg {
+      opacity: 0.7;
+    }
+
+    &:active svg {
+      opacity: 0.5;
+    }
   }
 
   &__buttons input,
@@ -161,11 +183,33 @@
     width: 100%;
     height: 100%;
     visibility: hidden;
+
+    transition: opacity $default-transition-settings;
+
+    &:hover svg,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active svg {
+      opacity: 0.5;
+    }
   }
 
   &__buttons > button {
     border: none;
     background: transparent;
+
+    transition: opacity $default-transition-settings;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 
   &__item--upload {

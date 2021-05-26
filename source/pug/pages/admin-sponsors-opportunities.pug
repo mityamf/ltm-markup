@@ -4,6 +4,7 @@ block variables
   - var title = "Sponsorship Opportunities"
   - var hasHeader = true
   - var hasFooter = true
+  - var currentPage = "Sponsorship Opportunities"
 
 block main
   include ../data/admin/admin-headline
@@ -16,6 +17,7 @@ block main
     .admin
       +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
       +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
-      +renderAdminTabs(adminTabs)
+      .admin__control-wrapper
+        +renderAdminTabs(adminTabs)
       +renderSponsorshipList(sponsorshipHeadline, sponsorshipList)
     +renderSupportContacts(contactsList)

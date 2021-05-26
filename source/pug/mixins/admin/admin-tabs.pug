@@ -3,6 +3,6 @@ mixin renderAdminTabs(adminTabs)
     button.admin-tabs__menu-button(type="button")
       +icon("icon-mobile-menu", 32, 32)
     each tab in adminTabs
-      - var activeMod = tab.text === title ? "admin-tabs__item--active" : ""
+      - var activeMod = tab.currentPage === currentPage ? "admin-tabs__item--active" : ""
       li.admin-tabs__item(class=activeMod)
         a.admin-tabs__link(href=tab.link)=tab.text

@@ -4,6 +4,7 @@ block variables
   - var title = "Hosted Buyers Guest List"
   - var hasHeader = true
   - var hasFooter = true
+  - var currentPage = "Hosted Buyers Guest List"
 
 block main
   include ../data/admin/admin-headline
@@ -18,7 +19,8 @@ block main
     .admin
       +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
       +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
-      +renderAdminTabs(adminTabs)
+      .admin__control-wrapper
+        +renderAdminTabs(adminTabs)
       +renderHeadline2("Hosted Buyers Guest List")
       +renderScheduleTabs(scheduleTabs)
       ul.hotel-filters

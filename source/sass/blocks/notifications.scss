@@ -103,6 +103,17 @@
         border-radius: 100%;
       }
     }
+
+    transition: opacity $default-transition-settings;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 
   &__row--new {

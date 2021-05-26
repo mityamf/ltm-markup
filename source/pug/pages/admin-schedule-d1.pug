@@ -4,6 +4,7 @@ block variables
   - var title = "My Schedule"
   - var hasHeader = true
   - var hasFooter = true
+  - var currentPage = "Schedule"
 
 block main
   include ../data/admin/admin-headline
@@ -17,7 +18,8 @@ block main
     .admin
       +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
       +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
-      +renderAdminTabs(adminTabs)
+      .admin__control-wrapper
+        +renderAdminTabs(adminTabs)
       +renderHeadline2("My Schedule")
       +renderScheduleTabs(scheduleTabs, generatePDF)
       +renderSchedule(adminScheduleTitles, adminSchedule)

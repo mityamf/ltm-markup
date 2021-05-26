@@ -5,6 +5,8 @@
   font-size: 16px;
   line-height: 19px;
 
+  cursor: pointer;
+
   &--white {
     border: 1px solid $color-blue;
     background-color: transparent;
@@ -15,10 +17,18 @@
   }
 
   &--white:disabled {
-    border-color: transparent;
-    background-color: $color-white;
+    border-color: $color-gray;
+    background-color: transparent;
 
     color: $color-gray;
+
+    &:hover,
+    &:focus {
+      border-color: $color-gray;
+      background-color: transparent;
+
+      color: $color-gray;
+    }
   }
 
   &--blue {
@@ -27,8 +37,17 @@
 
     color: $color-default-white;
 
-    transition: color background-color $default-transition-settings;
     cursor: pointer;
+    transition: opacity $default-transition-settings;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 
   &--white:hover,

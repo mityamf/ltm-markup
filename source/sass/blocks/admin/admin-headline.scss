@@ -1,10 +1,11 @@
 .admin-headline {
   padding-bottom: 40px;
+  padding-top: 23px;
 
   border-bottom: 1px solid $color-blue;
 
   @include viewport--lg {
-    padding-bottom: 27px;
+    padding-bottom: 34px;
   }
 
   @include viewport--sm {
@@ -13,7 +14,7 @@
   }
 
   .headline-back {
-    padding-top: 28px;
+    padding-top: 0;
 
     @include viewport--sm {
       display: inline;

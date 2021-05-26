@@ -4,6 +4,7 @@ block variables
   - var title = "Messages"
   - var hasHeader = true
   - var hasFooter = true
+  - var currentPage = "MessagesRead"
 
 block main
   include ../data/admin/admin-headline
@@ -21,6 +22,6 @@ block main
         +renderAdminTabs(adminTabs)
         +renderMailControl("Message", adminMailControl.linkList, adminMailControl.isSearchInput)
       h2.admin-table__headline="Message"
-      +renderEditBlock(editingBlockList, buttons)
+      +renderEditBlock(editingBlockList, buttons, editingBlockStatus)
 
     +renderSupportContacts(contactsList)

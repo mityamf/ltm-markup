@@ -3313,9 +3313,9 @@
               </label>
             </li>
           </ul>
-          <div class="edit">
+          <div class="edit edit--active">
             <div class="edit__wrapper">
-              <h3 class="title title--h3">Description of Company:</h3>
+              <h3 class="title title--h3 title--big">Description of Company:</h3>
               <div class="edit__text-block">
                 <p>Mandarin Oriental Hotel Group is the award-winning owner and operator of some of the world’s most prestigious hotels, resorts and residences. Over the past fifty years, the Group has grown its business from its original flagship properties in Asia – the acclaimed Mandarin Oriental, Hong Kong and Mandarin Oriental, Bangkok – to successfully operate in major business centres and key leisure destinations around the world.</p>
                 <p>Mandarin Oriental’s aim is to be recognized widely as the best global luxury hotel group, providing 21st century luxury with oriental charm in each of its hotels. Mandarin Oriental now operates 31 hotels and eight residences in 21 countries and territories, with each property reflecting the Group’s oriental heritage and unique sense of place.</p>
@@ -3323,20 +3323,24 @@
                 <p>A leader in the spa field, the Group was the first to launch its signature “Time Ritual” which encourages guests to book time rather than specific treatments, so that services can be tailor-made to meet specific needs.</p>
                 <p>Mandarin Oriental offers some of the most exciting hotel dining in the world today. The Group’s passion for creating memorable dining experiences has been recognized in the Michelin Guide, with a total of 21 Michelin stars being awarded to 14 diverse restaurants from around the world in the 2018 list. This is more than any other hotel brand in the world.</p>
               </div>
-              <h3 class="title--h3 title--small">Official web-site:</h3>
+              <h3 class="title title--h3 title--small">Official web-site:</h3>
               <label class="edit__label">
-                <input class="edit__input" type="text" value="https://www.mandarinoriental.com"/>
+                <input class="edit__input" type="text" placeholder="https://www.mandarinoriental.com"/>
               </label>
-              <h3 class="title--h3 title--small">Area of business:</h3>
-              <select class="input-dropdown" id="hotel-editor-select" multiple="multiple">
-                <option class="input-dropdown__option" value="Hotel group">Hotel group</option>
-                <option class="input-dropdown__option" value="Hello, hello">Hello, hello</option>
-              </select>
-              <h3 class="title--h3 title--small">Country of business:</h3>
-              <select class="input-dropdown" id="hotel-editor-select" multiple="multiple">
-                <option class="input-dropdown__option" value="Worldwide">Worldwide</option>
-                <option class="input-dropdown__option" value="Hello, hello">Hello, hello</option>
-              </select>
+              <h3 class="title title--h3 title--small">Area of business:</h3>
+              <div class="edit__select-wrapper">
+                <select class="input-dropdown" id="hotel-editor-select">
+                  <option class="input-dropdown__option" value="Hotel group">Hotel group</option>
+                  <option class="input-dropdown__option" value="Hello, hello">Hello, hello</option>
+                </select>
+              </div>
+              <h3 class="title title--h3 title--small">Country of business:</h3>
+              <div class="edit__select-wrapper">
+                <select class="input-dropdown" id="hotel-editor-select">
+                  <option class="input-dropdown__option" value="Worldwide">Worldwide</option>
+                  <option class="input-dropdown__option" value="Hello, hello">Hello, hello</option>
+                </select>
+              </div>
             </div>
             <div class="edit__buttons edit__buttons--left">
               <button class="btn--white btn edit-buttons__cancel" type="reset">Cancel</button>

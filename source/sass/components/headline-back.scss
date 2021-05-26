@@ -10,11 +10,21 @@
   @include viewport--sm {
     flex-direction: row-reverse;
     align-items: baseline;
+    padding-top: 32px;
   }
 
   .back-link {
     display: flex;
     align-items: center;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 
   svg {

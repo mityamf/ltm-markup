@@ -24,14 +24,59 @@
   }
 
   .edit {
+    padding: 0;
+  }
+
+  .edit__label {
+    margin-top: 5px;
+
+    &:last-of-type {
+      @include viewport--sm {
+        margin-bottom: 29px;
+      }
+    }
+  }
+
+  .edit__text-block {
+    padding: 0 15px;
+
     @include viewport--sm {
-      padding: 0;
+      padding: 3px 0 0 0;
+    }
+  }
+
+  .edit__input {
+    padding: 5px 18px;
+  }
+
+  .input-dropdown {
+    width: 100%;
+  }
+
+  .edit .btn {
+    @include viewport--lg {
+      width: 178px;
+      padding: 17px;
+    }
+
+    @include viewport--sm {
+      width: 222px;
     }
   }
 
   .edit .title--h3 {
     @include viewport--sm {
       margin-top: 20px;
+    }
+  }
+
+  .title--small {
+    margin: 0;
+  }
+
+  .title--big {
+    @include viewport--sm {
+      display: none;
     }
   }
 
