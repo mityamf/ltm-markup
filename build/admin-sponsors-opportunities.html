@@ -2763,6 +2763,24 @@
               <svg width="26" height="30" aria-hidden="true">
                 <use xlink:href="#icon-sign-in"></use>
               </svg></a>
+            <div class="login">
+              <form class="login__form" action="#" method="POST">
+                <div class="login__form-wrapper">
+                  <h3>Authorization for Exhibitors and Buyers</h3>
+                  <div class="login__form-input">
+                    <label class="visually-hidden" for="login-email">Enter your login</label>
+                    <input type="email" name="login-email" id="login-email" placeholder="Your login" required="required"/>
+                    <p>Enter for Guest</p>
+                  </div>
+                  <div class="login__form-input">
+                    <label class="visually-hidden" for="login-password">Inter your password</label>
+                    <input class="login__input-password" type="password" name="login-password" id="login-password" placeholder="Password" required="required"/>
+                    <button class="login__show-password" type="button" title="Показать/Скрыть пароль"><span class="visually-hidden">Показать/скрыть пароль</span></button>
+                  </div>
+                  <button class="login__btn btn btn--transparent" type="submit">Enter</button><a class="login__forgot" href="#" data-modal="forgot">Contact organizers in case of difficulties</a>
+                </div>
+              </form>
+            </div>
           </div>
           <div class="header__search header__search--hidden container">
             <form class="search-input" action="/" autocomplete="off">
@@ -2808,21 +2826,19 @@
             </ul>
             <p class="participants__text">If you want register more participants for this event, please send information to administrator. </p>
           </div>
-          <div class="admin__control-wrapper">
-            <ul class="admin-tabs__list">
-              <button class="admin-tabs__menu-button" type="button">
-                <svg width="32" height="32" aria-hidden="true">
-                  <use xlink:href="#icon-mobile-menu"></use>
-                </svg>
-              </button>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-deadlines.html">Deadlines &amp; Info</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-messages-inbox.html">Messages</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-schedule-d1.html">My Schedule</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-guests-d1.html">Buyers Guest List</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-hosted-guests-d1.html">Hosted Buyers Guest List</a></li>
-              <li class="admin-tabs__item admin-tabs__item--active"><a class="admin-tabs__link" href="admin-sponsors-opportunities.html">Sponsorship Opportunities</a></li>
-            </ul>
-          </div>
+          <ul class="admin-tabs__list">
+            <button class="admin-tabs__menu-button" type="button">
+              <svg width="32" height="32" aria-hidden="true">
+                <use xlink:href="#icon-mobile-menu"></use>
+              </svg>
+            </button>
+            <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-deadlines.html">Deadlines &amp; Info</a></li>
+            <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-messages-inbox.html">Messages</a></li>
+            <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-schedule-d1.html">My Schedule</a></li>
+            <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-guests-d1.html">Buyers Guest List</a></li>
+            <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-hosted-guests-d1.html">Hosted Buyers Guest List</a></li>
+            <li class="admin-tabs__item admin-tabs__item--active"><a class="admin-tabs__link" href="admin-sponsors-opportunities.html">Sponsorship Opportunities</a></li>
+          </ul>
           <div class="sponsorship">
             <h2 class="title title--h2">Sponsorship Opportunities</h2>
             <ul class="sponsorship__list">
@@ -2852,7 +2868,7 @@
                     <p>– branding on the website luxurytravelmart.ru;</p>
                   </div>
                 </picture>
-                <button class="btn btn--white" type="button" disabled="disabled">Request has been sent</button>
+                <button class="btn btn--white" type="button">Request has been sent</button>
               </li>
               <li class="sponsorship__item sponsorship__item--disabled">
                 <h4 class="title title--h4">Company Hall</h4>
@@ -2867,7 +2883,7 @@
                     <p>Company have to buy 16 working places</p>
                   </div>
                 </picture>
-                <button class="btn btn--white" type="button" disabled="disabled">Request an Offer</button>
+                <button class="btn btn--white" type="button">Request an Offer</button>
               </li>
               <li class="sponsorship__item sponsorship__item--disabled">
                 <h4 class="title title--h4">Bar in Pre-function Area</h4>
@@ -2882,7 +2898,7 @@
                     <p>– 2 LED-panels 65–70’’</p>
                   </div>
                 </picture>
-                <button class="btn btn--white" type="button" disabled="disabled">Request an Offer</button>
+                <button class="btn btn--white" type="button">Request an Offer</button>
               </li>
               <li class="sponsorship__item sponsorship__item--disabled">
                 <h4 class="title title--h4">Bar in Lobby</h4>
@@ -2897,7 +2913,7 @@
                     <p>– 2 LED-panels 65–70’’</p>
                   </div>
                 </picture>
-                <button class="btn btn--white" type="button" disabled="disabled">Request an Offer</button>
+                <button class="btn btn--white" type="button">Request an Offer</button>
               </li>
               <li class="sponsorship__item sponsorship__item--disabled">
                 <h4 class="title title--h4">Exclusive Stands</h4>
@@ -2907,7 +2923,7 @@
                     <p>In this case your company representative from exclusive exhibition items</p>
                   </div>
                 </picture>
-                <button class="btn btn--white" type="button" disabled="disabled">Request an Offer</button>
+                <button class="btn btn--white" type="button">Request an Offer</button>
               </li>
             </ul>
           </div>
@@ -3003,6 +3019,28 @@
           <button class="button button--cookies" type="button">ok</button>
         </div>
       </footer>
+    </div>
+    <div class="modal modal--preload modal--forgot">
+      <div class="modal__wrapper">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <div class="forgot"><a class="forgot__logo" href="main.html">
+              <svg width="324" height="122" aria-hidden="true">
+                <use xlink:href="#logo-desktop"></use>
+              </svg></a>
+            <form class="forgot__form" action="#" method="POST">
+              <label class="visually-hidden" for="forgot-email">Inter your E-mail</label>
+              <input type="email" name="forgot-email" id="forgot-email" placeholder="Enter your E-mail" requared="requared"/><a class="forgot__link" href="buyer.html">Or send message to Organizers</a>
+              <button class="forgot__submit btn btn--blue" type="submit">Send</button>
+            </form>
+          </div>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+            <svg width="33" height="33" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

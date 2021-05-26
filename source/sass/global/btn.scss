@@ -37,6 +37,7 @@
 
     color: $color-default-white;
 
+    cursor: pointer;
     transition: opacity $default-transition-settings;
 
     &:hover,
@@ -74,6 +75,29 @@
     }
 
     &--white:active {
+      border-color: transparent;
+      background-color: $color-gray;
+
+      color: $color-default-white;
+    }
+  }
+
+  &--transparent {
+    background-color: transparent;
+    border: 1px solid $color-default-white;
+    border-radius: 2px;
+    color: $color-default-white;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      background-color: $color-default-white;
+
+      color: $color-blue;
+    }
+
+    &:active {
       border-color: transparent;
       background-color: $color-gray;
 
