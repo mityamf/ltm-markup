@@ -53,6 +53,8 @@ mixin renderSentMessages(titleList, rowList)
         th(class=cellClass + 'time')=row.time
         th(class=cellClass + 'event')=row.event
         th(class=cellClass + 'message')=row.message
+          a.admin-table__message-link(href=row.openMessageLink)
+            +icon("icon-mail-arrow", 11, 19)
         th(class=cellClass + 'mobile-event')=row.event
 
 //Таблица с входящими сообщениями
@@ -82,8 +84,8 @@ mixin renderInboxMessages(titleList, rowList)
         if row.event
           th(class=cellClass + 'event')=row.event
         th(class=cellClass + 'message')=row.message
-          //a.admin-table__message-link(href="#")
-          //  +icon("icon-mail-arrow", 11, 19)
+          a.admin-table__message-link(href=row.openMessageLink)
+            +icon("icon-mail-arrow", 11, 19)
         if row.event
           th(class=cellClass + 'mobile-event')=row.event
 

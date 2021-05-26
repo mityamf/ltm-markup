@@ -142,10 +142,21 @@
   }
 
   &__contact-link {
+    transition: opacity 0.3s ease;
+
     @include viewport--sm {
       position: absolute;
       top: 0;
       right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
     }
   }
 }

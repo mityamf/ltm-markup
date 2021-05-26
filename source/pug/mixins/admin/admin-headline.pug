@@ -3,3 +3,9 @@ mixin renderAdminHeadline(eventName, eventPlace, dates, backLink)
     +renderHeadlineWithBackButton(eventName, backLink)
     span.admin-headline__place=eventPlace
     time(datetime="dates")=dates
+
+mixin renderLKAdminHeadline(eventName, eventPlace, dates)
+  .admin-headline
+    h2.title--h2=eventName
+    span.admin-headline__place=eventPlace
+    time(datetime="dates")=dates

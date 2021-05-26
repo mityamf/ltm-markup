@@ -17,8 +17,12 @@
   }
 
   &__row {
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+
     @include viewport--sm {
-      position: relative;
       display: inline-block;
     }
 
@@ -81,9 +85,13 @@
   }
 
   &__row .admin-table__cell--time:not(.admin-table__cell--mobile-time) {
-    @include viewport--sm {
+    @media (max-width: 950px) {
       display: none;
     }
+
+    //@include viewport--sm {
+    //  display: none;
+    //}
   }
 
   &__row .admin-table__cell--event {
@@ -148,19 +156,16 @@
   }
 
   &__cell--message {
-    max-width: 337px;
-    width: 20%;
+    max-width: 300px;
+    width: auto;
     overflow: hidden;
+    text-overflow: ellipsis;
 
     font-size: 16px;
     line-height: 22px;
 
     @include viewport--lg {
-      width: 15%;
-    }
-
-    @include viewport--md {
-      width: 27%;
+      max-width: 181px;
     }
 
     @include viewport--sm {
@@ -173,20 +178,15 @@
     width: 8%;
 
     overflow: hidden;
-
-    @include viewport--lg {
-      width: 9%;
-    }
   }
 
   &__cell--icon {
     position: relative;
     padding: 0 0 0 31px;
-    width: 9%;
+    width: 8%;
 
     @include viewport--lg {
       padding: 0 0 0 26px;
-      width: 8%;
     }
   }
 
@@ -227,6 +227,10 @@
       width: 18%;
     }
 
+    @media (max-width: 950px) {
+      width: 12%;
+    }
+
     @include viewport--sm {
       width: 67%;
       max-width: none;
@@ -244,6 +248,7 @@
     @include viewport--md {
       width: 15%;
       padding-right: 10px;
+      padding-left: 10px;
     }
 
     @include viewport--md {
@@ -260,11 +265,11 @@
     width: 17%;
 
     @include viewport--lg {
-      width: 25%;
+      width: 22%;
     }
 
     @include viewport--md {
-      width: 18%;
+      width: 13%;
       overflow: hidden;
     }
   }
@@ -431,6 +436,17 @@
         color: $color-zambezi;
       }
     }
+
+    transition: opacity $default-transition-settings;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 
   //Стили для выпадающего списка
@@ -505,8 +521,7 @@
     @include viewport--sm {
       display: block;
       margin-top: 5px;
-      padding-left: 17px;
-      padding-right: 17px;
+      margin-bottom: 15px;
 
       font-size: 38px;
       font-weight: lighter;
@@ -514,5 +529,12 @@
       letter-spacing: 0.05em;
       color: $color-blue;
     }
+  }
+}
+
+.container--no-padding .admin-table__headline {
+  @include viewport--sm {
+    padding-left: 17px;
+    padding-right: 17px;
   }
 }

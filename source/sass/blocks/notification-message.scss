@@ -1,12 +1,17 @@
 .notification-message {
   padding-bottom: 38px;
+  padding-top: 20px;
 
   @include viewport--lg {
-    padding-top: 11px;
+    padding-top: 32px;
 
     .edit__buttons--save {
       padding: 17px 79px;
     }
+  }
+
+  @include viewport--sm {
+    padding-top: 6px;
   }
 
   &__info-block {
@@ -14,7 +19,7 @@
 
     @include viewport--sm {
       display: block;
-      padding-bottom: 20px;
+      padding-bottom: 24px;
 
       text-align: left;
     }
@@ -47,7 +52,7 @@
 
     .edit__text-block {
       border-color: $color-gray-light;
-      padding: 10px 0;
+      padding: 10px 0 0;
     }
 
     .edit {

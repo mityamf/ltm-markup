@@ -11,4 +11,5 @@ mixin renderSponsorshipList(sponsorshipHeadline, sponsorshipList)
             .sponsorship__text-wrapper
               each text in sponsorship.textList
                 p=text
-          button.btn.btn--white(type="button")=sponsorship.buttonText
+          - var disabled = sponsorship.status === "disabled"
+          button.btn.btn--white(type="button" disabled=disabled)=sponsorship.buttonText

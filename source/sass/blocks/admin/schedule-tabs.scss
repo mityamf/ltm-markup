@@ -18,7 +18,6 @@
     display: flex;
     align-items: center;
     margin: 0 15px 15px 0;
-    width: 222px;
     padding: 15px;
 
     border: 1px solid $color-blue;
@@ -48,13 +47,19 @@
     }
   }
 
-  &__text--hidden {
+  &__item {
+    width: 222px;
+  }
+
+  &__item--generate-pdf {
+    width: max-content;
+
     @include viewport--sm {
       display: none;
     }
   }
 
-  &__item--generate-pdf {
+  &__text--hidden {
     @include viewport--sm {
       display: none;
     }

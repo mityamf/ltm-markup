@@ -2816,7 +2816,7 @@
                 </svg>
               </button>
               <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-deadlines.html">Deadlines &amp; Info</a></li>
-              <li class="admin-tabs__item admin-tabs__item--active"><a class="admin-tabs__link" href="admin-messages-inbox.html">Messages</a></li>
+              <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-messages-inbox.html">Messages</a></li>
               <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-schedule-d1.html">My Schedule</a></li>
               <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-guests-d1.html">Buyers Guest List</a></li>
               <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-hosted-guests-d1.html">Hosted Buyers Guest List</a></li>
@@ -2825,13 +2825,13 @@
             <div class="mail-control">
               <h3 class="title title--h3">New Message</h3>
               <ul class="mail-control__links">
-                <li class="mail-control__link-item mail-control__link-item--new"><a class="mail-control__link" href="admin-messages-new.html">
+                <li class="mail-control__link-item mail-control__link-item--new mail-control__link-item--active"><a class="mail-control__link" href="admin-messages-new.html">
                     <svg width="24" height="24" aria-hidden="true">
                       <use xlink:href="#icon-write-message"></use>
                     </svg></a></li>
-                <li class="mail-control__link-item mail-control__link-item--inbox"><a class="mail-control__link" href="admin-messages-inbox.html">Inbox</a></li>
-                <li class="mail-control__link-item mail-control__link-item--sent"><a class="mail-control__link" href="admin-messages-sent.html">Sent</a></li>
-                <li class="mail-control__link-item mail-control__link-item--contacts"><a class="mail-control__link" href="#">Contact Organizers</a></li>
+                <li class="mail-control__link-item mail-control__link-item--inbox "><a class="mail-control__link" href="admin-messages-inbox.html">Inbox</a></li>
+                <li class="mail-control__link-item mail-control__link-item--sent "><a class="mail-control__link" href="admin-messages-sent.html">Sent</a></li>
+                <li class="mail-control__link-item mail-control__link-item--contacts "><a class="mail-control__link" href="admin-messages-new.html">Contact Organizers</a></li>
               </ul>
               <label class="mail-control__find-label">
                 <input class="mail-control__find-input"/>
@@ -2842,17 +2842,20 @@
             </div>
           </div>
           <h2 class="admin-table__headline">New Message</h2>
-          <div class="edit">
+          <div class="edit edit--active">
             <div class="edit__wrapper">
-              <h3 class="title--h3 title--small">From:</h3>
+              <h3 class="title title--h3 title--small">To:</h3>
+              <div class="edit__select-wrapper edit__select-wrapper--full">
+                <select class="input-dropdown" id="hotel-editor-select">
+                  <option class="input-dropdown__option" value="Travel Luxury Agency">Travel Luxury Agency</option>
+                  <option class="input-dropdown__option" value="Mandarin Oriental Hotel Group">Mandarin Oriental Hotel Group</option>
+                </select>
+              </div>
+              <h3 class="title title--h3 title--small">Subject:</h3>
               <label class="edit__label">
-                <input class="edit__input" type="text" value="Travel Luxury Agency"/>
+                <input class="edit__input" type="text" placeholder="Appointment"/>
               </label>
-              <h3 class="title--h3 title--small">Subject:</h3>
-              <label class="edit__label">
-                <input class="edit__input" type="text" value="Appointment"/>
-              </label>
-              <h3 class="title title--h3">Message:</h3>
+              <h3 class="title title--h3 title--big">Message:</h3>
               <div class="edit__text-block">
                 <p>Mandarin Oriental Hotel Group is the award-winning owner and operator of some of the world’s most prestigious hotels, resorts and residences. Over the past fifty years, the Group has grown its business from its original flagship properties in Asia – the acclaimed Mandarin Oriental, Hong Kong and Mandarin Oriental, Bangkok – to successfully operate in major business centres and key leisure destinations around the world.</p>
                 <p>Mandarin Oriental’s aim is to be recognized widely as the best global luxury hotel group, providing 21st century luxury with oriental charm in each of its hotels. Mandarin Oriental now operates 31 hotels and eight residences in 21 countries and territories, with each property reflecting the Group’s oriental heritage and unique sense of place.</p>
