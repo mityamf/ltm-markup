@@ -40,6 +40,7 @@
 .title--sm-pd {
   @include viewport--sm {
     padding: 0 16.5px;
+    margin-bottom: 10px;
   }
 }
 

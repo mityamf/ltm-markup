@@ -11,13 +11,13 @@ block variables
 
 block main
 
-  +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
+  +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem, true)
   main
     .container
       .organizers
-        +renderHeadline(organizers.title)
+        +renderTitleHeadline(organizers.title)
         .organizers__wrapper
           ul.organizers__list
             each item in organizers.organizersList
               li.organizers__item
-                +renderOrganizerCard(item.logo.src, item.logo.width, item.logo.height, item.title, item.text)
+                +renderOrganizerCard(item.logo.src, item.logo.width, item.logo.height, item.logo.alt, item.title, item.text)

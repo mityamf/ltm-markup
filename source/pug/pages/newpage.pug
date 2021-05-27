@@ -4,18 +4,18 @@ block data
   include ../data/newpage
 
 block variables
-  - var title = "Новости"
+  - var title = "Новость"
   - var hasHeader = true
   - var hasFooter = true
   - var currentPage = ""
 
 block main
 
-  +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
+  +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem, true)
   main
     .container
       .newpage
-        +renderHeadlineWithBackButton(newPage.title, "news.html")
+        +renderTitleHeadlineWithBackButton(newPage.title, "news.html")
         time.newpage__date(datetime=newPage.datetime) #{newPage.date}
         .newpage__content
           each text in newPage.content

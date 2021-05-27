@@ -9,8 +9,10 @@ const modalSubmission = document.querySelector('.modal--submission');
 const modalSubmissionBtns = document.querySelectorAll('[data-modal="submission"]');
 const modalChoices = document.querySelector('.modal--choices');
 const modalChoicesBtns = document.querySelectorAll('[data-modal="choices"]');
-const modalGallery = document.querySelector('.modal-gallery');
+const modalGallery = document.querySelector('.modal--gallery');
 const modalGalleryBtns = document.querySelectorAll('[data-modal="gallery"]');
+const modalForgot = document.querySelector('.modal--forgot');
+const modalForgotBtns = document.querySelectorAll('[data-modal="forgot"]');
 
 // аргументы setupModal(modal, closeCallback, modalBtns, openCallback, noPrevDefault, preventScrollLock)
 // возможна инициализация только с первыми аргументом,
@@ -41,6 +43,9 @@ const initModals = () => {
   }
   if (modalGallery && modalGalleryBtns.length) {
     setupModal(modalGallery, false, modalGalleryBtns);
+  }
+  if (modalForgot && modalForgotBtns.length) {
+    setupModal(modalForgot, false, modalForgotBtns);
   }
 };
 

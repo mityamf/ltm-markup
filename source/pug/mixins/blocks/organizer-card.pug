@@ -1,6 +1,6 @@
-mixin renderOrganizerCard(logo, logoWidth, logoHeight, title, text)
+mixin renderOrganizerCard(logo, logoWidth, logoHeight, logoAlt, title, text)
   .organizer-card
     .organizer-card__image-container
-      img(src= logo, width= logoWidth, height= logoHeight)
+      img(src= logo, width= logoWidth, height= logoHeight, alt= logoAlt)
     p.organizer-card__name.title.title--h3= title
     p= text

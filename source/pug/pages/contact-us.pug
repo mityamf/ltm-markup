@@ -11,15 +11,15 @@ block variables
 
 block main
 
-  +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
+  +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem, true)
   main
     .container
       .contact-us
-        +renderHeadline(contacts.title)
+        +renderTitleHeadline(contacts.title)
         .contact-us__wrapper
           ul.contact-us__list
             each contact in contacts.contactsList
               li.contact-us__item
                 +renderContactCard(contact.avatar, contact.name, contact.position, contact.work, contact.telephones)
           .contact-us__office
-            +renderOfficeCard(office.logo.src, office.logo.width, office.logo.height, office.name, office.address)
+            +renderOfficeCard(office.logo.src, office.logo.width, office.logo.height, office.logo.alt, office.name, office.address)

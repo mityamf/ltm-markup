@@ -1,0 +1,26 @@
+extends ../base/layout
+
+block variables
+  - var title = "Messages"
+  - var hasHeader = true
+  - var hasFooter = true
+  - var currentPage = "MessagesNew"
+
+block main
+  include ../data/lk/lk-admin-headline
+  include ../data/lk/lk-participants
+  include ../data/lk/lk-admin-tabs
+  include ../data/lk/lk-mail-control
+  include ../data/lk/lk-messages-new
+  include ../data/lk/lk-support-contacts
+
+  main.container.container--admin-deadlines.lk
+    .admin
+      +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates)
+      +renderLKParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, infoBlock)
+      .admin__control-wrapper
+        +renderAdminTabs(adminTabs)
+        +renderMailControl("Новое сообщение", adminMailControl.linkList, adminMailControl.isSearchInput)
+      h2.admin-table__headline="Новое сообщение"
+      +renderEditBlock(editingBlockList, buttons, editingBlockStatus)
+    +renderSupportContacts(contactsList)

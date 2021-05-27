@@ -5,6 +5,8 @@
   font-size: 16px;
   line-height: 19px;
 
+  cursor: pointer;
+
   &--white {
     border: 1px solid $color-blue;
     background-color: transparent;
@@ -15,10 +17,18 @@
   }
 
   &--white:disabled {
-    border-color: transparent;
-    background-color: $color-white;
+    border-color: $color-gray;
+    background-color: transparent;
 
     color: $color-gray;
+
+    &:hover,
+    &:focus {
+      border-color: $color-gray;
+      background-color: transparent;
+
+      color: $color-gray;
+    }
   }
 
   &--blue {
@@ -27,7 +37,17 @@
 
     color: $color-default-white;
 
-    transition: color background-color $default-transition-settings;
+    cursor: pointer;
+    transition: opacity $default-transition-settings;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 
   &--white:hover,
@@ -62,6 +82,29 @@
     }
   }
 
+  &--transparent {
+    background-color: transparent;
+    border: 1px solid $color-default-white;
+    border-radius: 2px;
+    color: $color-default-white;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      background-color: $color-default-white;
+
+      color: $color-blue;
+    }
+
+    &:active {
+      border-color: transparent;
+      background-color: $color-gray;
+
+      color: $color-default-white;
+    }
+  }
+
   &--more {
     display: block;
     margin: 0 auto;
@@ -70,7 +113,22 @@
   }
 
   &--more-news {
-    padding: 18px 69px;
+    padding: 13px 69px;
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      background-color: $color-blue;
+
+      color: $color-default-white;
+    }
+
+    &:active {
+      border-color: transparent;
+      background-color: $color-gray;
+
+      color: $color-default-white;
+    }
   }
 
   &--read-more {
@@ -82,9 +140,28 @@
       vertical-align: middle;
     }
 
-    @include viewport--lg {
-      padding: 2px 32px;
+    &:hover,
+    &:focus {
+      opacity: 0.6;
     }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &--reduced {
+    @include viewport--lg {
+      padding: 1px 32px;
+    }
+
+    @include viewport--md {
+      padding: 1px 41px;
+    }
+  }
+
+  &--more-low {
+    padding: 15px 30px;
   }
 }
 

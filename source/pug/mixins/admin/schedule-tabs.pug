@@ -1,0 +1,15 @@
+mixin renderScheduleTabs(scheduleTabs, generatePDF)
+  .schedule-tabs
+    ul.schedule-tabs__list
+      each tab in scheduleTabs
+        - var activeMod = tab.currentPage === currentPage ? "schedule-tabs__item--active" : ""
+        li.schedule-tabs__item(class=activeMod)
+          a.schedule-tabs__link(href=tab.link)
+            span.schedule-tabs__text=tab.text
+            span.schedule-tabs__text.schedule-tabs__text--hidden=tab.separator
+            time=tab.date
+      if generatePDF
+        li.schedule-tabs__item.schedule-tabs__item--generate-pdf
+          +renderGeneratePDFButton(generatePDF.link, generatePDF.text)
+
+

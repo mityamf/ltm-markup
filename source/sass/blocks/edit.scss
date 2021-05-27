@@ -1,11 +1,27 @@
 .edit {
-  padding: 14px 0 0;
+  padding: 0;
   clear: both;
+
+  &--active {
+    .edit__text-block,
+    .edit__info-block,
+    .edit__input {
+      border-color: $color-blue;
+    }
+  }
+
+  &--disabled {
+    .edit__text-block,
+    .edit__info-block,
+    .edit__input {
+      border-color: $color-gray;
+    }
+  }
 
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr auto;
-    grid-row-gap: 15px;
+    grid-row-gap: 19px;
 
     @include viewport--sm {
       display: flex;
@@ -19,7 +35,7 @@
     margin: 0 15px 0 0;
 
     @include viewport--lg {
-      width: 178px;
+      width: 174px;
     }
 
     @include viewport--sm {
@@ -43,8 +59,9 @@
   &__text-block {
     min-height: 428px;
     padding: 0 15px;
+    letter-spacing: 0.1px;
 
-    border: 1px solid $color-blue;
+    border: 1px solid;
 
     @include viewport--sm {
       padding: 0;
@@ -56,6 +73,30 @@
     }
   }
 
+  &__text-block p {
+    @include viewport--lg {
+      margin: 5px 0 22px;
+    }
+  }
+
+  &__info-block {
+    padding: 5px 15px;
+
+    border: 1px solid;
+
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  &__info-block span {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: lighter;
+    color: $color-blue;
+    letter-spacing: 1px;
+  }
+
   &__label {
     width: 100%;
   }
@@ -64,27 +105,36 @@
     padding: 8px 18px;
     width: 100%;
 
-    border: 1px solid $color-blue;
+    border: 1px solid;
     background-color: transparent;
 
     font-size: 24px;
     line-height: 29px;
     font-weight: lighter;
     color: $color-blue;
+    letter-spacing: 1px;
 
     @include viewport--sm {
       width: 100%;
     }
   }
 
-  .choices {
-    height: auto;
-    margin-bottom: 0;
+  &__select-wrapper {
     width: 460px;
+    margin-bottom: 0;
 
     @include viewport--lg {
       width: 100%;
     }
+  }
+
+  &__select-wrapper--full {
+    width: 100%;
+  }
+
+  .choices {
+    height: auto;
+    width: 100%;
   }
 
   &__buttons {

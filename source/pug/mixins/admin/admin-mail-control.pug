@@ -1,0 +1,14 @@
+mixin renderMailControl(title, linkList, isSearchInput)
+  .mail-control
+    +renderHeadline3(title)
+    ul.mail-control__links
+      each link in linkList
+        - var activeMod = link.currentPage === currentPage ? "mail-control__link-item--active" : ""
+        li.mail-control__link-item(class='mail-control__link-item--' + link.mod + ' ' + activeMod)
+          a.mail-control__link(href=link.link)=link.text
+            if link.icon
+              +icon(link.icon, link.iconWidth, link.iconHeight)
+    if isSearchInput
+    label.mail-control__find-label
+      input.mail-control__find-input
+      +icon("icon-search", 14, 15)

@@ -1,0 +1,112 @@
+.schedule-tabs {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 -15px -15px 0;
+    padding: 22px 0 0 0;
+
+    list-style-type: none;
+
+    @include viewport--lg {
+      margin: 0 -10px -10px 0;
+    }
+  }
+
+  &__item,
+  &__item--generate-pdf {
+    display: flex;
+    align-items: center;
+    margin: 0 15px 15px 0;
+    padding: 15px;
+
+    border: 1px solid $color-blue;
+    background-color: transparent;
+
+    text-align: center;
+
+    transition: border background-color $default-transition-settings;
+
+    &:hover {
+      border-color: $color-blue;
+      background-color: $color-blue;
+
+      @include viewport--sm {
+        border-color: $color-blue;
+        background-color: transparent;
+      }
+
+      .schedule-tabs__link,
+      .generate-file__link {
+        color: $color-default-white;
+
+        @include viewport--sm {
+          color: $color-gray-dark;
+        }
+      }
+    }
+  }
+
+  &__item {
+    width: 222px;
+  }
+
+  &__item--generate-pdf {
+    width: max-content;
+
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  &__text--hidden {
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  time {
+    @include viewport--sm {
+      display: block;
+    }
+  }
+
+  &__item--active {
+    border-color: transparent;
+    background-color: $color-gray;
+
+    .schedule-tabs__link {
+      color: $color-default-white;
+    }
+
+    @include viewport--sm {
+      border-color: transparent;
+      background-color: transparent;
+
+      .schedule-tabs__link,
+      .generate-file__link {
+        color: $color-gray-dark;
+      }
+    }
+  }
+
+  &__link,
+  .generate-file__link {
+    margin: 0 auto;
+
+    color: $color-blue;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    transition: color $default-transition-settings;
+
+    @include viewport--sm {
+      color: $color-gray-dark;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.3px;
+    }
+  }
+}
+

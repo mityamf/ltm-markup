@@ -1,0 +1,132 @@
+.mail-control {
+  display: flex;
+  justify-content: flex-start;
+  align-items: end;
+  padding: 0 0 23px 0;
+
+  @include viewport--sm {
+    padding-bottom: 0;
+    width: 42%;
+  }
+
+  .title--h3 {
+    margin: 0 20px 0 0;
+    width: 32%;
+
+    font-size: 38px;
+    line-height: 46px;
+
+    @include viewport--lg {
+      width: 27%;
+    }
+
+    @include viewport--md {
+      width: 40%;
+    }
+
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  &__links {
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+    padding-top: 6px;
+    align-items: center;
+
+    list-style-type: none;
+
+    @include viewport--sm {
+      padding: 0;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &__link-item:not(:last-of-type) {
+    margin-right: 78px;
+
+    @include viewport--md {
+      margin-right: 20px;
+    }
+
+    @include viewport--sm {
+      margin-right: 0;
+      padding: 0;
+    }
+  }
+
+  &__link-item--inbox,
+  &__link-item--contacts {
+    @include viewport--md {
+      display: none;
+    }
+  }
+
+  &__link-item--active {
+    opacity: 0.5;
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-gray-dark;
+    transition: opacity 0.3s ease;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &__link--active {
+    color: $color-gray;
+  }
+
+  &__find-label {
+    position: relative;
+    display: inline-block;
+    margin: 0 0 0 auto;
+
+    @include viewport--sm {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      .mail-control__find-input {
+        border-color: $color-gray-dark;
+      }
+
+      svg {
+        fill: $color-gray-dark;
+      }
+    }
+  }
+
+  &__find-label svg {
+    position: absolute;
+    top: 14px;
+    left: 11px;
+    fill: $color-gray;
+    transition: fill 0.3s ease;
+  }
+
+  &__find-input {
+    padding: 12px 14px 12px 30px;
+
+    border: 1px solid $color-gray-light;
+    background-color: transparent;
+    transition: border-color 0.3s ease;
+
+    @include viewport--lg {
+      padding: 12px 14px 12px 41px;
+    }
+  }
+}

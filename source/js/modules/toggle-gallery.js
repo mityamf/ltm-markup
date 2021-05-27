@@ -34,8 +34,13 @@ const toggleGallery = () => {
       };
 
       if (breakpointWidth.matches) {
-        toggleBtn.checked = false;
-        disableSection(videoSection);
+        if (toggleBtn.checked) {
+          disableSection(photoSection);
+          enableSection(videoSection);
+        } else {
+          disableSection(videoSection);
+          enableSection(photoSection);
+        }
         toggleBtn.addEventListener('change', onToggleBtnClick);
       } else {
         enableSection(photoSection);

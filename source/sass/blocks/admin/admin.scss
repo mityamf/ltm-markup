@@ -1,0 +1,113 @@
+.admin {
+  padding-bottom: 29px;
+
+  @include viewport--lg {
+    padding-bottom: 49px;
+  }
+
+  @include viewport--sm {
+    padding-bottom: 31px;
+  }
+
+  &__control-wrapper {
+    @include viewport--sm {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 11px 0 0 0;
+    }
+  }
+
+  .headline-back {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .edit {
+    padding: 0;
+  }
+
+  .edit__label {
+    margin-top: 5px;
+
+    &:last-of-type {
+      @include viewport--sm {
+        margin-bottom: 29px;
+      }
+    }
+  }
+
+  .edit__text-block {
+    padding: 0 15px;
+
+    @include viewport--sm {
+      padding: 3px 0 0 0;
+    }
+  }
+
+  .edit__input {
+    padding: 5px 18px;
+  }
+
+  .input-dropdown {
+    width: 100%;
+  }
+
+  .edit .btn {
+    @include viewport--lg {
+      width: 178px;
+      padding: 17px;
+    }
+
+    @include viewport--sm {
+      width: 222px;
+    }
+  }
+
+  .edit .title--h3 {
+    @include viewport--sm {
+      margin-top: 20px;
+    }
+  }
+
+  .title--small {
+    margin: 0;
+  }
+
+  .title--big {
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  .hotel-filters {
+    border: none;
+  }
+
+  .participants {
+    @include viewport--sm {
+      display: none;
+    }
+  }
+}
+
+.container--admin {
+  .btn--more {
+    padding: 14px 30px;
+
+    @include viewport--lg {
+      width: 178px;
+    }
+
+    @include viewport--sm {
+      width: 222px;
+    }
+  }
+}
+
+.container--no-padding .admin__control-wrapper {
+  @include viewport--sm {
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+}

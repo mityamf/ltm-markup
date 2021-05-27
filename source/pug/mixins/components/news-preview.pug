@@ -6,6 +6,6 @@ mixin renderNewsPreview(newsImage, newsTitle, newsDate, newsDatetime, newsPrevie
       time.news-preview__date(datetime= newsDatetime)= newsDate
       h3= newsTitle
       p= newsPreview
-    a.news-preview__button.btn.btn--read-more(href="newpage.html")
+    a.news-preview__button.btn.btn--read-more.btn--reduced(href="newpage.html")
       +icon("icon-arrow", 20, 14)
       span.visually-hidden read more

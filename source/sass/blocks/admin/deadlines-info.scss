@@ -1,0 +1,75 @@
+.deadlines-info {
+  display: flex;
+  padding: 0 0 50px 0;
+
+  @include viewport--lg {
+    padding: 0 0 21px 0;
+  }
+
+  @include viewport--sm {
+    flex-wrap: wrap;
+    padding: 6px 0 21px;
+  }
+
+  &__content {
+    width: 936px;
+    margin-right: 18px;
+
+    @include viewport--lg {
+      width: 734px;
+    }
+
+    @include viewport--md {
+      width: 70%;
+    }
+
+    @include viewport--sm {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 19px;
+    }
+  }
+
+  &__content > .title--h2 {
+    @include viewport--sm {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  &__content > .title--h2:first-child {
+    @include viewport--sm {
+      font-size: 38px;
+      line-height: 46px;
+    }
+  }
+
+  &__text {
+    padding: 2px 0 41px;
+
+    @include viewport--lg {
+      padding: 2px 0 33px;
+    }
+
+    @include viewport--sm {
+      padding: 13px 0 28px;
+    }
+  }
+
+  &__text p {
+    margin-bottom: 19px;
+
+    letter-spacing: 0.2px;
+    line-height: 20px;
+  }
+
+  &__text p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &__text p:first-of-type {
+    @include viewport--lg {
+      margin-top: 0;
+    }
+  }
+}

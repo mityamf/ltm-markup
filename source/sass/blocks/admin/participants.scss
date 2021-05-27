@@ -1,10 +1,10 @@
 .participants {
-  padding: 0 0 27px 0;
+  padding: 26px 0 27px;
 
   border-bottom: 1px solid $color-blue;
 
   @include viewport--lg {
-    padding: 0 0 34px 0;
+    padding: 27px 0 34px;
   }
 
   @include viewport--sm {
@@ -142,10 +142,29 @@
   }
 
   &__contact-link {
+    transition: opacity 0.3s ease;
+
     @include viewport--sm {
       position: absolute;
       top: 0;
       right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+.container--admin {
+  .participants {
+    @include viewport--sm {
+      display: none;
     }
   }
 }

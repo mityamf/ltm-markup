@@ -15,7 +15,8 @@ import {dropdown} from './modules/dropdown';
 import {initModalGallerySwiper} from './modules/init-modal-gallery-swiper';
 import {buyerSwiper} from './modules/sliders/buyer-swiper';
 import {directionSlider} from './modules/sliders/direction-swiper';
-//import {initResizePhotos} from './modules/admin-gallery';
+import {initResizePhotos} from './modules/admin-gallery';
+import {initLogin} from './modules/init-login';
 
 // Utils
 // ---------------------------------
@@ -37,7 +38,8 @@ dropdown();
 initSmoothAnchors();
 homeSwiper();
 initModalGallerySwiper();
-//initResizePhotos();
+initResizePhotos();
 regSwiper();
 buyerSwiper();
 directionSlider();
+initLogin();

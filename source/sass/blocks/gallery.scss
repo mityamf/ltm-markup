@@ -12,6 +12,14 @@
     margin-right: 0;
   }
 
+  .title--h2 {
+    margin-bottom: 5px;
+  }
+
+  .btn {
+    margin-top: 35px;
+  }
+
   @include viewport--lg {
     &__section {
       width: calc((100% - 10px) / 2);
@@ -27,6 +35,16 @@
     &__section {
       width: 100%;
       margin-right: 0;
+    }
+  }
+
+  @include viewport--sm {
+    .btn {
+      margin-top: 0;
+    }
+
+    .title--h2 {
+      margin-bottom: 15px;
     }
   }
 }
