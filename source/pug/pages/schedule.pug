@@ -14,7 +14,7 @@ block main
     .container
       .schedule
         each program in programs
-          +renderHeadline2(program.title)
+          +renderHeadlineBig(program.title)
           .schedule__days
             each schedule in program.schedules
               p.schedule__subtitle=schedule.subtitle

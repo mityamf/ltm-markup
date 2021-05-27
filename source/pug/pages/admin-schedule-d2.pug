@@ -15,7 +15,7 @@ block main
   include ../data/support-contacts
 
   main.container.container--no-padding.container--admin
-    .admin
+    .admin.admin--schedule
       +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
       +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
       .admin__control-wrapper

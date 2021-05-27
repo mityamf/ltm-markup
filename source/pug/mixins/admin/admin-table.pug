@@ -3,140 +3,160 @@
 
 mixin renderSchedule(titleList, rowList)
   table.admin-table
-    tr.admin-table__row.admin-table__row--headline
-      th(class=cellClass + 'empty')
-      th(class=cellClass + 'schedule-time')=titleList.time
-      th(class=cellClass + 'select-company')=titleList.company
-      th(class=cellClass + 'button')=titleList.request
-      th(class=cellClass + 'status')=titleList.status
-      if titleList.timeLimit
-        th(class=cellClass + 'time-limit')=titleList.timeLimit
-      else
+    thead
+      tr.admin-table__row.admin-table__row--headline
         th(class=cellClass + 'empty')
-    each row in rowList
-      tr.admin-table__row.admin-table__row--schedule
-        th(class=cellClass + 'empty')
-        th(class=cellClass + 'schedule-time')=row.time
-        th(class=cellClass + 'select-company')
-          select(id="company-select", class="input-dropdown")
-            each option in row.company
-              option(value="Choose a company", class="input-dropdown__option")=option
-        th(class=cellClass + 'button')
-          button.btn.btn--white.btn--request(type="submit")=row.request
-        th(class=cellClass + 'status' + ' admin-table__cell--' + row.status.toLowerCase())
-          span=row.status
-        if row.timeLimit
-          th(class=cellClass + 'time-limit')=row.timeLimit
+        th(class=cellClass + 'schedule-time')=titleList.time
+        th(class=cellClass + 'select-company')=titleList.company
+        th(class=cellClass + 'button')=titleList.request
+        th(class=cellClass + 'status')=titleList.status
+        if titleList.timeLimit
+          th(class=cellClass + 'time-limit')=titleList.timeLimit
         else
           th(class=cellClass + 'empty')
+    tbody
+      each row in rowList
+        tr.admin-table__row.admin-table__row--schedule
+          th(class=cellClass + 'empty')
+          th(class=cellClass + 'schedule-time')=row.time
+          th(class=cellClass + 'select-company')
+            select(id="company-select", class="input-dropdown")
+              each option in row.company
+                option(value="Choose a company", class="input-dropdown__option")=option
+          th(class=cellClass + 'button')
+            if row.requestStatus === "sent"
+              button.btn.btn--white.btn--request(type="submit" disabled)=row.requestSent
+            else
+              button.btn.btn--white.btn--request(type="submit")=row.request
+
+          th(class=cellClass + 'status' + ' admin-table__cell--' + row.status.toLowerCase())
+            span=row.status
+          if row.timeLimit
+            th(class=cellClass + 'time-limit')=row.timeLimit
+          else
+            th(class=cellClass + 'empty')
 
 //Таблица с отправленными сообщениями
 
 mixin renderSentMessages(titleList, rowList)
   table.admin-table
-    tr.admin-table__row.admin-table__row--headline
-      th(class=cellClass + 'icon')=titleList.status
-      th(class=cellClass + 'destination')=titleList.to
-      th(class=cellClass + 'theme')=titleList.subject
-      th(class=cellClass + 'date')=titleList.date
-      th(class=cellClass + 'time')=titleList.time
-      th(class=cellClass + 'event')=titleList.event
-      th(class=cellClass + 'message')=titleList.message
-    each row in rowList
-      tr.admin-table__row.admin-table__row--messages
-        th(class=cellClass + 'icon' + ' admin-table__cell--' + row.status)
-          if row.status === "sent"
-            +icon("icon-mail-sent", 34, 15)
-        th(class=cellClass + 'destination admin-table__cell--sent-destination')=row.to
-        th(class=cellClass + 'theme')=row.subject
-        th(class=cellClass + 'date')=row.date
-        th(class=cellClass + 'time')=row.time
-        th(class=cellClass + 'event')=row.event
-        th(class=cellClass + 'message')=row.message
-          a.admin-table__message-link(href=row.openMessageLink)
-            +icon("icon-mail-arrow", 11, 19)
-        th(class=cellClass + 'mobile-event')=row.event
+    thead
+      tr.admin-table__row.admin-table__row--headline
+        th(class=cellClass + 'icon')=titleList.status
+        th(class=cellClass + 'destination')=titleList.to
+        th(class=cellClass + 'theme')=titleList.subject
+        th(class=cellClass + 'date')=titleList.date
+        th(class=cellClass + 'time')=titleList.time
+        th(class=cellClass + 'event')=titleList.event
+        th(class=cellClass + 'message')=titleList.message
+    tbody
+      each row in rowList
+        tr.admin-table__row.admin-table__row--messages
+          th(class=cellClass + 'icon' + ' admin-table__cell--' + row.status)
+            if row.status === "sent"
+              +icon("icon-mail-sent", 34, 15)
+          th(class=cellClass + 'destination admin-table__cell--sent-destination')=row.to
+          th(class=cellClass + 'theme')=row.subject
+          th(class=cellClass + 'date')=row.date
+          th(class=cellClass + 'time')=row.time
+          th(class=cellClass + 'event')=row.event
+          th(class=cellClass + 'message')=row.message
+            a.admin-table__message-link(href=row.openMessageLink)
+              +icon("icon-mail-arrow", 11, 19)
+          th(class=cellClass + 'mobile-event')=row.event
 
 //Таблица с входящими сообщениями
 
 mixin renderInboxMessages(titleList, rowList)
   table.admin-table
-    tr.admin-table__row.admin-table__row--headline
-      th(class=cellClass + 'icon')=titleList.status
-      th(class=cellClass + 'destination')=titleList.from
-      th(class=cellClass + 'theme')=titleList.subject
-      th(class=cellClass + 'date')=titleList.date
-      th(class=cellClass + 'time')=titleList.time
-      if titleList.event
-        th(class=cellClass + 'event')=titleList.event
-      th(class=cellClass + 'message')=titleList.message
-    each row in rowList
-      tr.admin-table__row.admin-table__row--messages
-        th(class=cellClass + 'icon' + ' admin-table__cell--' + row.status)
-          if row.status === "new"
-            +icon("icon-mail-new", 22, 14)
-          if row.status === "opened"
-            +icon("icon-mail-opened", 22, 21)
-        th(class=cellClass + 'destination')=row.from
-        th(class=cellClass + 'theme')=row.subject
-        th(class=cellClass + 'date')=row.date
-        th(class=cellClass + 'time')=row.time
-        if row.event
-          th(class=cellClass + 'event')=row.event
-        th(class=cellClass + 'message')=row.message
-          a.admin-table__message-link(href=row.openMessageLink)
-            +icon("icon-mail-arrow", 11, 19)
-        if row.event
-          th(class=cellClass + 'mobile-event')=row.event
+    thead
+      tr.admin-table__row.admin-table__row--headline
+        th(class=cellClass + 'icon')=titleList.status
+        th(class=cellClass + 'destination')=titleList.from
+        th(class=cellClass + 'theme')=titleList.subject
+        th(class=cellClass + 'date')=titleList.date
+        th(class=cellClass + 'time')=titleList.time
+        if titleList.event
+          th(class=cellClass + 'event')=titleList.event
+        th(class=cellClass + 'message')=titleList.message
+    tbody
+      each row in rowList
+        tr.admin-table__row.admin-table__row--messages
+          th(class=cellClass + 'icon' + ' admin-table__cell--' + row.status)
+            if row.status === "new"
+              +icon("icon-mail-new", 22, 14)
+            if row.status === "opened"
+              +icon("icon-mail-opened", 22, 21)
+          th(class=cellClass + 'destination')=row.from
+          th(class=cellClass + 'theme')=row.subject
+          th(class=cellClass + 'date')=row.date
+          th(class=cellClass + 'time')=row.time
+          if row.event
+            th(class=cellClass + 'event')=row.event
+          th(class=cellClass + 'message')=row.message
+            a.admin-table__message-link(href=row.openMessageLink)
+              +icon("icon-mail-arrow", 11, 19)
+          if row.event
+            th(class=cellClass + 'mobile-event')=row.event
 
 //Таблица со списком гостей
 
 mixin renderGuestsList(titleList, rowList)
   table.admin-table
-    tr.admin-table__row.admin-table__row--headline
-      th(class=cellClass + 'company')=titleList.company
-      th(class=cellClass + 'name')=titleList.name
-      th(class=cellClass + 'name')=titleList.colleagueName
-      th(class=cellClass + 'time')=titleList.freeSlots
-      th(class=cellClass + 'button')=titleList.request
-      th(class=cellClass + 'button')=titleList.contact
-    each row in rowList
-      tr.admin-table__row.admin-table__row--guests
-        th(class=cellClass + 'company')=row.company
-          span=row.place
-        th(class=cellClass + 'person')=row.name
-          span=row.position
-        th(class=cellClass + 'person')=row.colleagueName
-          span=row.colleaguePosition
-        th(class=cellClass + 'select-time')
-          select(id="free-slot-select", class="input-dropdown")
-            each option in row.freeSlots
-              option(value=option, class="input-dropdown__option")=option
-        th(class=cellClass + 'button')
-          button.btn.btn--white.btn--request(type="submit")=row.request
-        th(class=cellClass + 'button')
-          a.admin-table__link(href=row.contactLink, aria-label="Отправить письмо")=row.contact
+    thead
+      tr.admin-table__row.admin-table__row--headline
+        th(class=cellClass + 'company')=titleList.company
+        th(class=cellClass + 'name')=titleList.name
+        th(class=cellClass + 'name')=titleList.colleagueName
+        th(class=cellClass + 'time')=titleList.freeSlots
+        th(class=cellClass + 'button')=titleList.request
+        th(class=cellClass + 'button')=titleList.contact
+    tbody
+      each row in rowList
+        tr.admin-table__row.admin-table__row--guests
+          th(class=cellClass + 'company')=row.company
+            span=row.place
+          th(class=cellClass + 'person')=row.name
+            span=row.position
+          th(class=cellClass + 'person')=row.colleagueName
+            span=row.colleaguePosition
+          th(class=cellClass + 'select-time')
+            select(id="free-slot-select", class="input-dropdown")
+              each option in row.freeSlots
+                option(value=option, class="input-dropdown__option")=option
+          th(class=cellClass + 'button')
+            if row.requestStatus === "sent"
+              button.btn.btn--white.btn--request(type="submit" disabled)=row.requestSent
+            else
+              button.btn.btn--white.btn--request(type="submit")=row.request
+          th(class=cellClass + 'button')
+            button.btn.btn--white.btn--request(type="submit")=row.contact
+
 
 mixin renderHostedGuestsList(titleList, rowList)
   table.admin-table
-    tr.admin-table__row.admin-table__row--headline
-      th(class=cellClass + 'company')=titleList.company
-      th(class=cellClass + 'name')=titleList.name
-      th(class=cellClass + 'time')=titleList.freeSlots
-      th(class=cellClass + 'button')=titleList.request
-      th(class=cellClass + 'button')=titleList.contact
-    each row in rowList
-      tr.admin-table__row.admin-table__row--guests
-        th(class=cellClass + 'company')=row.company
-          span=row.place
-        th(class=cellClass + 'person admin-table__cell--mobile-person')=row.name
-          if row.position
-            span=row.position
-        th(class=cellClass + 'select-time')
-          select(id="free-slot-select-2", class="input-dropdown")
-            each option in row.freeSlots
-              option(value=option, class="input-dropdown__option")=option
-        th(class=cellClass + 'button')
-          button.btn.btn--white.btn--request(type="submit")=row.request
-        th(class=cellClass + 'button')
-          a.admin-table__link(href=row.contactLink, aria-label="Отправить письмо")=row.contact
+    thead
+      tr.admin-table__row.admin-table__row--headline
+        th(class=cellClass + 'company')=titleList.company
+        th(class=cellClass + 'name')=titleList.name
+        th(class=cellClass + 'time')=titleList.freeSlots
+        th(class=cellClass + 'button')=titleList.request
+        th(class=cellClass + 'button')=titleList.contact
+    tbody
+      each row in rowList
+        tr.admin-table__row.admin-table__row--guests
+          th(class=cellClass + 'company')=row.company
+            span=row.place
+          th(class=cellClass + 'person admin-table__cell--mobile-person')=row.name
+            if row.position
+              span=row.position
+          th(class=cellClass + 'select-time')
+            select(id="free-slot-select-2", class="input-dropdown")
+              each option in row.freeSlots
+                option(value=option, class="input-dropdown__option")=option
+          if row.requestStatus === "sent"
+            button.btn.btn--white.btn--request(type="submit" disabled)=row.requestSent
+          else
+            button.btn.btn--white.btn--request(type="submit")=row.request
+          th(class=cellClass + 'button')
+            button.btn.btn--white.btn--request(type="submit")=row.contact

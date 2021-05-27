@@ -2797,7 +2797,7 @@
         </div>
       </header>
       <main class="container container--no-padding container--admin">
-        <div class="admin">
+        <div class="admin admin--schedule">
           <div class="admin-headline">
             <div class="headline-back">
               <h2 class="title--h2">Luxury Travel Mart Moscow Spring’ 2020</h2><a class="back-link" href="#">
@@ -2808,7 +2808,7 @@
             <time datetime="dates">27 – 28 February 2020</time>
           </div>
           <div class="participants">
-            <h2 class="title title--h2">Participants at this Event</h2>
+            <h2 class="title title--h2 title--big">Participants at this Event</h2>
             <p class="participants__info">Only 2 participants are allowed</p>
             <ul class="participants__list">
               <li class="participants__item"><img src="img/content/admin-photo.jpg"/>
@@ -2841,7 +2841,7 @@
               <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-sponsors-opportunities.html">Sponsorship Opportunities</a></li>
             </ul>
           </div>
-          <h2 class="title title--h2">My Schedule</h2>
+          <h2 class="title title--h2 title--big">My Schedule</h2>
           <div class="schedule-tabs">
             <ul class="schedule-tabs__list">
               <li class="schedule-tabs__item"><a class="schedule-tabs__link" href="admin-schedule-d1.html"><span class="schedule-tabs__text">Day 1</span><span class="schedule-tabs__text schedule-tabs__text--hidden">–</span>
@@ -2853,47 +2853,51 @@
             </ul>
           </div>
           <table class="admin-table">
-            <tr class="admin-table__row admin-table__row--headline">
-              <th class="admin-table__cell admin-table__cell--empty"></th>
-              <th class="admin-table__cell admin-table__cell--schedule-time">Time</th>
-              <th class="admin-table__cell admin-table__cell--select-company">Company</th>
-              <th class="admin-table__cell admin-table__cell--button">Request</th>
-              <th class="admin-table__cell admin-table__cell--status">Status</th>
-              <th class="admin-table__cell admin-table__cell--empty"></th>
-            </tr>
-            <tr class="admin-table__row admin-table__row--schedule">
-              <th class="admin-table__cell admin-table__cell--empty"></th>
-              <th class="admin-table__cell admin-table__cell--schedule-time">10:00 – 10:10</th>
-              <th class="admin-table__cell admin-table__cell--select-company">
-                <select class="input-dropdown" id="company-select">
-                  <option class="input-dropdown__option" value="Choose a company">Choose a company</option>
-                  <option class="input-dropdown__option" value="Choose a company">Mandarin International Hotel Group</option>
-                </select>
-              </th>
-              <th class="admin-table__cell admin-table__cell--button">
-                <button class="btn btn--white btn--request" type="submit">Send a request</button>
-              </th>
-              <th class="admin-table__cell admin-table__cell--status admin-table__cell--free"><span>Free</span></th>
-              <th class="admin-table__cell admin-table__cell--empty"></th>
-            </tr>
-            <tr class="admin-table__row admin-table__row--schedule">
-              <th class="admin-table__cell admin-table__cell--empty"></th>
-              <th class="admin-table__cell admin-table__cell--schedule-time">10:00 – 10:10</th>
-              <th class="admin-table__cell admin-table__cell--select-company">
-                <select class="input-dropdown" id="company-select">
-                  <option class="input-dropdown__option" value="Choose a company">Choose a company</option>
-                  <option class="input-dropdown__option" value="Choose a company">Mandarin International Hotel Group</option>
-                </select>
-              </th>
-              <th class="admin-table__cell admin-table__cell--button">
-                <button class="btn btn--white btn--request" type="submit">Send a request</button>
-              </th>
-              <th class="admin-table__cell admin-table__cell--status admin-table__cell--free"><span>Free</span></th>
-              <th class="admin-table__cell admin-table__cell--empty"></th>
-            </tr>
+            <thead>
+              <tr class="admin-table__row admin-table__row--headline">
+                <th class="admin-table__cell admin-table__cell--empty"></th>
+                <th class="admin-table__cell admin-table__cell--schedule-time">Time</th>
+                <th class="admin-table__cell admin-table__cell--select-company">Company</th>
+                <th class="admin-table__cell admin-table__cell--button">Request</th>
+                <th class="admin-table__cell admin-table__cell--status">Status</th>
+                <th class="admin-table__cell admin-table__cell--empty"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="admin-table__row admin-table__row--schedule">
+                <th class="admin-table__cell admin-table__cell--empty"></th>
+                <th class="admin-table__cell admin-table__cell--schedule-time">10:00 – 10:10</th>
+                <th class="admin-table__cell admin-table__cell--select-company">
+                  <select class="input-dropdown" id="company-select">
+                    <option class="input-dropdown__option" value="Choose a company">Choose a company</option>
+                    <option class="input-dropdown__option" value="Choose a company">Mandarin International Hotel Group</option>
+                  </select>
+                </th>
+                <th class="admin-table__cell admin-table__cell--button">
+                  <button class="btn btn--white btn--request" type="submit" disabled="disabled">Request sent</button>
+                </th>
+                <th class="admin-table__cell admin-table__cell--status admin-table__cell--free"><span>Free</span></th>
+                <th class="admin-table__cell admin-table__cell--empty"></th>
+              </tr>
+              <tr class="admin-table__row admin-table__row--schedule">
+                <th class="admin-table__cell admin-table__cell--empty"></th>
+                <th class="admin-table__cell admin-table__cell--schedule-time">10:00 – 10:10</th>
+                <th class="admin-table__cell admin-table__cell--select-company">
+                  <select class="input-dropdown" id="company-select">
+                    <option class="input-dropdown__option" value="Choose a company">Choose a company</option>
+                    <option class="input-dropdown__option" value="Choose a company">Mandarin International Hotel Group</option>
+                  </select>
+                </th>
+                <th class="admin-table__cell admin-table__cell--button">
+                  <button class="btn btn--white btn--request" type="submit">Send a request</button>
+                </th>
+                <th class="admin-table__cell admin-table__cell--status admin-table__cell--free"><span>Free</span></th>
+                <th class="admin-table__cell admin-table__cell--empty"></th>
+              </tr>
+            </tbody>
           </table>
           <div class="wish-list">
-            <h2 class="title title--h2">Wish list</h2>
+            <h2 class="title title--h2 title--big">Wish list</h2>
             <div class="wish-list__text-wrapper">
               <p>My wish list for appointments outside of the working session</p><a class="generate-file generate-file__link" href="#" aria-label="Скачать файл" download="download">Generate PDF with Wish-list</a>
             </div>

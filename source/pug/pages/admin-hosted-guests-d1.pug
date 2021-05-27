@@ -15,7 +15,7 @@ block main
   include ../data/admin/admin-hosted-guests-list
   include ../data/support-contacts
 
-  main.container.container--no-padding.lk
+  main.container.container--no-padding
     .admin
       +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
       +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)

@@ -1,0 +1,24 @@
+.open-more {
+  padding: 41px 0 0 0;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+
+  text-align: center;
+
+  &__button {
+    display: block;
+    margin: 0 auto;
+    padding: 14px 0;
+    width: 222px;
+
+    @include viewport--sm {
+      padding: 14px 0;
+      width: 222px;
+
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.5px;
+    }
+  }
+}

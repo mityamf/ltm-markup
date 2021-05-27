@@ -64,6 +64,10 @@
     }
   }
 
+  .title--h2 {
+    margin-bottom: 20px;
+  }
+
   .edit .title--h3 {
     @include viewport--sm {
       margin-top: 20px;
@@ -82,11 +86,68 @@
 
   .hotel-filters {
     border: none;
+    padding: 19px 0 0 0;
+  }
+
+  .hotel-filter--list {
+    width: 580px;
+  }
+
+  .hotel-filter__list li {
+    margin-right: 7px;
+  }
+
+  .hotel-filter--dropdown:first-of-type {
+    width: 340px;
+  }
+
+  .hotel-filter--dropdown:not(:first-of-type) {
+    width: 222px;
   }
 
   .participants {
     @include viewport--sm {
       display: none;
+    }
+  }
+
+  &--schedule {
+    padding-bottom: 116px;
+
+    @include viewport--lg {
+      padding-bottom: 49px;
+    }
+  }
+
+  &--schedule > .title--h2 {
+    @include viewport--sm {
+      padding-right: 17px;
+      padding-left: 17px;
+    }
+  }
+
+  &__mobile-block-wrapper {
+    display: none;
+
+    @include viewport--sm {
+      display: block;
+
+      .generate-file {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        border: 1px solid;
+        width: 238px;
+        padding: 13px 7px;
+        letter-spacing: 0.7px;
+      }
+    }
+
+    .up-button {
+      margin: 0 auto;
+      display: block;
+      text-align: center;
     }
   }
 }

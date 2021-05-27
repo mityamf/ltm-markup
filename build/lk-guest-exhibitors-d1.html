@@ -2804,7 +2804,7 @@
           </div>
           <div class="lk__participants-wrapper">
             <div class="lk__participants participants">
-              <h2 class="title title--h2">Сотрудники на выставку</h2>
+              <h2 class="title title--h2 title--big">Сотрудники на выставку</h2>
               <p class="participants__info">Только 2 гостя могут принять участие</p>
               <ul class="participants__list">
                 <li class="participants__item">
@@ -2827,7 +2827,7 @@
             <div class="lk__info-block info-block">
               <div class="info-block__top-wrapper">
                 <div class="info-block__headline">
-                  <h2 class="title title--h2">Adventa Agency</h2><a class="info-block__link" href="https://adventaagency.ru">https://adventaagency.ru</a>
+                  <h2 class="title title--h2 title--big">Adventa Agency</h2><a class="info-block__link" href="https://adventaagency.ru">https://adventaagency.ru</a>
                 </div>
                 <button class="btn btn--blue" type="button">Редактировать</button>
               </div>
@@ -2852,7 +2852,7 @@
               <li class="admin-tabs__item admin-tabs__item--active"><a class="admin-tabs__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
             </ul>
           </div>
-          <h2 class="title title--h2">Список участников</h2>
+          <h2 class="title title--h2 title--big">Список участников</h2>
           <div class="schedule-tabs">
             <ul class="schedule-tabs__list">
               <li class="schedule-tabs__item schedule-tabs__item--active"><a class="schedule-tabs__link" href="lk-guest-exhibitors-d1.html"><span class="schedule-tabs__text">День 1</span><span class="schedule-tabs__text schedule-tabs__text--hidden">–</span>
@@ -2929,58 +2929,62 @@
             </li>
           </ul>
           <table class="admin-table">
-            <tr class="admin-table__row admin-table__row--headline">
-              <th class="admin-table__cell admin-table__cell--company">Участник</th>
-              <th class="admin-table__cell admin-table__cell--name">Представитель</th>
-              <th class="admin-table__cell admin-table__cell--time">Свободные слоты</th>
-              <th class="admin-table__cell admin-table__cell--button">Запрос</th>
-              <th class="admin-table__cell admin-table__cell--button">Контакт</th>
-            </tr>
-            <tr class="admin-table__row admin-table__row--guests">
-              <th class="admin-table__cell admin-table__cell--company">Travel Luxury Agency<span>Worldwide</span></th>
-              <th class="admin-table__cell admin-table__cell--person admin-table__cell--mobile-person">Ivan Skorodubov<span>Director</span>
-              </th>
-              <th class="admin-table__cell admin-table__cell--select-time">
-                <select class="input-dropdown" id="free-slot-select-2">
-                  <option class="input-dropdown__option" value="10:00 – 10:10">10:00 – 10:10</option>
-                  <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
-                </select>
-              </th>
-              <th class="admin-table__cell admin-table__cell--button">
+            <thead>
+              <tr class="admin-table__row admin-table__row--headline">
+                <th class="admin-table__cell admin-table__cell--company">Участник</th>
+                <th class="admin-table__cell admin-table__cell--name">Представитель</th>
+                <th class="admin-table__cell admin-table__cell--time">Свободные слоты</th>
+                <th class="admin-table__cell admin-table__cell--button">Запрос</th>
+                <th class="admin-table__cell admin-table__cell--button">Контакт</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="admin-table__row admin-table__row--guests">
+                <th class="admin-table__cell admin-table__cell--company">Travel Luxury Agency<span>Worldwide</span></th>
+                <th class="admin-table__cell admin-table__cell--person admin-table__cell--mobile-person">Ivan Skorodubov<span>Director</span>
+                </th>
+                <th class="admin-table__cell admin-table__cell--select-time">
+                  <select class="input-dropdown" id="free-slot-select-2">
+                    <option class="input-dropdown__option" value="10:00 – 10:10">10:00 – 10:10</option>
+                    <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
+                  </select>
+                </th>
                 <button class="btn btn--white btn--request" type="submit">Send a request</button>
-              </th>
-              <th class="admin-table__cell admin-table__cell--button"><a class="admin-table__link" href="#" aria-label="Отправить письмо">Send a message</a></th>
-            </tr>
-            <tr class="admin-table__row admin-table__row--guests">
-              <th class="admin-table__cell admin-table__cell--company">Prime Luxury Travel<span>Worldwide</span></th>
-              <th class="admin-table__cell admin-table__cell--person admin-table__cell--mobile-person">Eugenia Stuslova
-              </th>
-              <th class="admin-table__cell admin-table__cell--select-time">
-                <select class="input-dropdown" id="free-slot-select-2">
-                  <option class="input-dropdown__option" value="10:00 – 10:10">10:00 – 10:10</option>
-                  <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
-                </select>
-              </th>
-              <th class="admin-table__cell admin-table__cell--button">
+                <th class="admin-table__cell admin-table__cell--button">
+                  <button class="btn btn--white btn--request" type="submit">Send a message</button>
+                </th>
+              </tr>
+              <tr class="admin-table__row admin-table__row--guests">
+                <th class="admin-table__cell admin-table__cell--company">Prime Luxury Travel<span>Worldwide</span></th>
+                <th class="admin-table__cell admin-table__cell--person admin-table__cell--mobile-person">Eugenia Stuslova
+                </th>
+                <th class="admin-table__cell admin-table__cell--select-time">
+                  <select class="input-dropdown" id="free-slot-select-2">
+                    <option class="input-dropdown__option" value="10:00 – 10:10">10:00 – 10:10</option>
+                    <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
+                  </select>
+                </th>
                 <button class="btn btn--white btn--request" type="submit">Send a request</button>
-              </th>
-              <th class="admin-table__cell admin-table__cell--button"><a class="admin-table__link" href="#" aria-label="Отправить письмо">Send a message</a></th>
-            </tr>
-            <tr class="admin-table__row admin-table__row--guests">
-              <th class="admin-table__cell admin-table__cell--company">Anastasia Tours<span>UAE, Turkey</span></th>
-              <th class="admin-table__cell admin-table__cell--person admin-table__cell--mobile-person">Anna Petrenko
-              </th>
-              <th class="admin-table__cell admin-table__cell--select-time">
-                <select class="input-dropdown" id="free-slot-select-2">
-                  <option class="input-dropdown__option" value="13:00 – 17:10">13:00 – 17:10</option>
-                  <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
-                </select>
-              </th>
-              <th class="admin-table__cell admin-table__cell--button">
+                <th class="admin-table__cell admin-table__cell--button">
+                  <button class="btn btn--white btn--request" type="submit">Send a message</button>
+                </th>
+              </tr>
+              <tr class="admin-table__row admin-table__row--guests">
+                <th class="admin-table__cell admin-table__cell--company">Anastasia Tours<span>UAE, Turkey</span></th>
+                <th class="admin-table__cell admin-table__cell--person admin-table__cell--mobile-person">Anna Petrenko
+                </th>
+                <th class="admin-table__cell admin-table__cell--select-time">
+                  <select class="input-dropdown" id="free-slot-select-2">
+                    <option class="input-dropdown__option" value="13:00 – 17:10">13:00 – 17:10</option>
+                    <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
+                  </select>
+                </th>
                 <button class="btn btn--white btn--request" type="submit">Send a request</button>
-              </th>
-              <th class="admin-table__cell admin-table__cell--button"><a class="admin-table__link" href="#" aria-label="Отправить письмо">Send a message</a></th>
-            </tr>
+                <th class="admin-table__cell admin-table__cell--button">
+                  <button class="btn btn--white btn--request" type="submit">Send a message</button>
+                </th>
+              </tr>
+            </tbody>
           </table>
           <button class="btn btn--white btn--more" type="button">Показать больше</button>
         </div>

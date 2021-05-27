@@ -11,24 +11,29 @@ block main
 
   main
     +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem, promoBg.noButtonMod)
-    .container.about
+    .container
+      .about
+
         .about__content
-
-            +renderHeadline2(aboutEvent.title)
-            .about__text-wrapper.about__text-wrapper--small
+          .about__text-wrapper.about__text-wrapper--mobile
+            +renderHeadlineBig(aboutEvent.title)
+            .text-wrapper
               +renderTextContentBlock(aboutEvent.textList)
-            button.btn.btn--white(type="button", aria-label="Показать больше")=buttonText
+            +renderOpenMoreButton(eventBlock.buttonText)
 
+          .about__text-wrapper
+            +renderHeadlineBig(eventBlock.title)
             .about__text-wrapper.about__text-wrapper--dates
-              +renderHeadline2(eventBlock.title)
               each event in eventBlock.eventList
-                +renderHeadline3(event.subtitle)
-                +renderAboutText(event.textList)
+                +renderHeadlineMiddle(event.subtitle)
+                .text-wrapper
+                  time=event.date
+                  +renderTextContentBlock(event.textList)
 
         aside.about__aside
-          +renderHeadline2(benefitsTitle)
-          ul
-            each benefit in benefits
-              li
+          +renderHeadlineBig(benefits.benefitsTitle)
+          ul.about__benefit-list
+            each benefit in benefits.benefitsList
+              li.about__benefit-item
                 +icon(benefit.src, benefit.width, benefit.height)
                 p=benefit.text
