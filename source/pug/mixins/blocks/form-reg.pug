@@ -8,27 +8,27 @@ mixin form-reg()
           .form-reg__slider.swiper-slide
             input.form-reg__check(type="checkbox" id="choices" name="check" value="choices" checked)
             label(for="choices")
-            +direction("Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan", "27 September 2019", "Available", "27.09.2019", "direction__status--available")
+            +direction("Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan", "27 September 2019", "Available", "2019-09-27", "direction__status--available")
           .form-reg__slider.swiper-slide
             input.form-reg__check(type="checkbox" id="choices1" name="check" value="choices" checked)
             label(for="choices1")
-            +direction("Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan", "27 September 2019", "Available", "27.09.2019", "direction__status--available")
+            +direction("Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan", "27 September 2019", "Available", "2019-09-27", "direction__status--available")
           .form-reg__slider.swiper-slide
             input.form-reg__check(type="checkbox" id="choices2" name="check" value="choices")
             label(for="choices2")
-            +direction("Luxury Travel Mart Moscow 2019 at The Ritz-Carlton, Moscow, Russia", "1 October 2019", "Available", "01.10.2019", "direction__status--available")
+            +direction("Luxury Travel Mart Moscow 2019 at The Ritz-Carlton, Moscow, Russia", "1 October 2019", "Available", "2019-01-19", "direction__status--available")
           .form-reg__slider.swiper-slide
             input.form-reg__check(type="checkbox" id="choices3" name="check" value="choices")
             label(for="choices3")
-            +direction("Luxury Travel Mart Moscow 2020 at Hyatt Regency Moscow, Russia", "27–28 February 2020", "Available", "27.02.2020", "direction__status--available")
+            +direction("Luxury Travel Mart Moscow 2020 at Hyatt Regency Moscow, Russia", "27–28 February 2020", "Available", "2020-02-27", "direction__status--available")
           .form-reg__slider.swiper-slide
             input.form-reg__check(type="checkbox" id="choices4" name="check" value="choices")
             label(for="choices4")
-            +direction("Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan", "3 March 2020", "Waiting list", "03.03.2020", "direction__status--waiting")
+            +direction("Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan", "3 March 2020", "Waiting list", "2020-03-03", "direction__status--waiting")
           .form-reg__slider.swiper-slide
             input.form-reg__check(type="checkbox" id="choices5" name="check" value="choices")
             label(for="choices5")
-            +direction("Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia", "20 June 2020", "Waiting list", "20.06.2020", "direction__status--waiting")
+            +direction("Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia", "20 June 2020", "Waiting list", "2020-06-20", "direction__status--waiting")
         .direction__arrow.direction__arrow--right
           +icon("arrow-right", "11", "19")
         .direction__arrow.direction__arrow--left
@@ -40,10 +40,10 @@ mixin form-reg()
       ul.adoption__list.swiper-wrapper
         li.adoption__item.swiper-slide
           h4 Luxury Travel Mart Kyiv 2019 at the Intercontinental Kyiv, Ukraine
-          time.adoption__data 24 September 2019
+          time.adoption__data(datetime="2020-09-24") 24 September 2019
         li.adoption__item.swiper-slide
           h4 Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan
-          time.adoption__data 27 September 2019
+          time.adoption__data(datetime="2020-09-27") 27 September 2019
       .adoption__pagination
 
     .form-reg__info.container
@@ -117,10 +117,10 @@ mixin form-reg()
           .form-reg__list
             input.form-reg__check#choices-3(type='checkbox' name='complex' value='complex-0')
             label(for='choices-3') choices-3
-            input.form-reg__check#choices-3(type='checkbox' name='complex' value='complex-1')
-            label(for='choices-3') choices-3
-            input.form-reg__check#choices-4(type='checkbox' name='complex' value='complex-2')
+            input.form-reg__check#choices-4(type='checkbox' name='complex' value='complex-1')
             label(for='choices-4') choices-3
+            input.form-reg__check#choices-55(type='checkbox' name='complex' value='complex-2')
+            label(for='choices-55') choices-3
         .form-reg__overlay
       .form-reg__dropdown
         h4 South America
@@ -198,7 +198,7 @@ mixin form-reg()
         input(type="text" name="tel"  id="tel" placeholder="+1 (111) 111 11 11" required="required")
       .form-reg__block
         label(for="skype") Skype
-        input(type="text" name=""  id="skype" placeholder="E-mail" required="required")
+        input(type="text" name="skype"  id="skype" placeholder="E-mail" required="required")
       .form-reg__block
         label(for="E-mail") E-mail
         input(type="text" name="E-mail"  id="E-mail" placeholder="E-mail" required="required")
