@@ -7,12 +7,12 @@ mixin footer
             img.logotip__company-ap(src="./img/svg/g10.svg" alt="company logo" width="67" height="73")
         li.logotip__list
           a.logotip__item(href="#")
-            img.logotip__company-tm(src="./img/svg/TM-logo.svg" alt="company logo" width="110" height="57")
+            img.logotip__company-tm(src="./img/svg/tm-logo.svg" alt="company logo" width="110" height="57")
       .footer__mailing.mailing
         form.mailing__form(action="#" method="POST")
           input.mailing__email(type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters")
-          label.mailing__email-label(for="mailing")
-          button(type="button").button.button--footer-btn  Ok
+          label.visually-hidden(for="mailing")
+          button(type="button").button.button--footer-btn Ok
           .mailing__checkbox
             input.mailing__check(type="checkbox" id="check" name="check" value="yes")
             label.mailing__check-label(for="check") I agree
@@ -35,10 +35,10 @@ mixin footer
               +icon("inst-icon", 22, 22)
       .footer__info
         span.footer__info-info &copy; All right reserved by Artyom Polanskiy and Travel Media LLC.
-    .footer__cookies.cookies
+    .cookies
       button.cookies__btn-close(type="button", aria-label="Закрыть")
         +icon("icon-close", 33, 33)
       h2.cookies__title LTM Website uses cookies
       p.cookies__description Website uses cookies and similar technologies. We use functional cookies to make sure our websites work well and secure and analytical cookies to offer you the best possible user experience. By clicking on ’Agree’, you consent to the placing of these cookies.
       a.cookies__info(href="#") For more information read Cookies policy
-      button.button.button--cookies(type="button") ok
+      button.button.button--transparent(type="button") ok

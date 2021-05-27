@@ -1,28 +1,4 @@
 const initSwiper = () => {
-  /* eslint-disable */
-  new Swiper('.direction__swiper-block', {
-    spaceBetween: 0,
-    slidesPerGroup: 3,
-    slidesPerView: 4,
-    loop: false,
-    loopFillGroupWithBlank: true,
-    navigation: {
-      nextEl: '.direction__arrow--right',
-      prevEl: '.direction__arrow--left',
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 4,
-      },
-      1440: {
-        slidesPerView: 6,
-      },
-    },
-  });
-
   new Swiper('.card-swiper', {
     spaceBetween: 0,
     slidesPerGroup: 1,

@@ -8,27 +8,27 @@ mixin form-reg-buyer()
           .form-reg__slider.swiper-slide
             input.form-reg__check(type="checkbox" id="choices" name="check" value="choices" checked)
             label(for="choices")
-            +direction("Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan", "27 September 2019", "Available", "27.09.2019", "direction__status--available")
+            +direction("Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan", "27 September 2019", "Available", "2019-09-27", "direction__status--available")
           .form-reg__slider.swiper-slide
             input.form-reg__check(type="checkbox" id="choices1" name="check" value="choices" checked)
             label(for="choices1")
-            +direction("Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan", "27 September 2019", "Available", "27.09.2019", "direction__status--available")
+            +direction("Luxury Travel Mart Almaty 2019 at The Ritz-Carlton, Almaty, Kazakhstan", "27 September 2019", "Available", "2019-09-27", "direction__status--available")
           .form-reg__slider.swiper-slide
             input.form-reg__check(type="checkbox" id="choices2" name="check" value="choices")
             label(for="choices2")
-            +direction("Luxury Travel Mart Moscow 2019 at The Ritz-Carlton, Moscow, Russia", "1 October 2019", "Available", "01.10.2019", "direction__status--available")
+            +direction("Luxury Travel Mart Moscow 2019 at The Ritz-Carlton, Moscow, Russia", "1 October 2019", "Available", "2019-10-01", "direction__status--available")
           .form-reg__slider.swiper-slide
             input.form-reg__check(type="checkbox" id="choices3" name="check" value="choices")
             label(for="choices3")
-            +direction("Luxury Travel Mart Moscow 2020 at Hyatt Regency Moscow, Russia", "27–28 February 2020", "Available", "27.02.2020", "direction__status--available")
+            +direction("Luxury Travel Mart Moscow 2020 at Hyatt Regency Moscow, Russia", "27–28 February 2020", "Available", "2020-02-27", "direction__status--available")
           .form-reg__slider.swiper-slide
             input.form-reg__check(type="checkbox" id="choices4" name="check" value="choices")
             label(for="choices4")
-            +direction("Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan", "3 March 2020", "Waiting list", "03.03.2020", "direction__status--waiting")
+            +direction("Luxury Travel Mart Almaty Spring 2020 at The Ritz-Carlton, Almaty, Kazakhstan", "3 March 2020", "Waiting list", "2020-03-03", "direction__status--waiting")
           .form-reg__slider.swiper-slide
             input.form-reg__check(type="checkbox" id="choices5" name="check" value="choices")
             label(for="choices5")
-            +direction("Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia", "20 June 2020", "Waiting list", "20.06.2020", "direction__status--waiting")
+            +direction("Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia", "20 June 2020", "Waiting list", "2020-06-20", "direction__status--waiting")
         .direction__arrow.direction__arrow--right
           +icon("arrow-right", "11", "19")
         .direction__arrow.direction__arrow--left
@@ -137,8 +137,8 @@ mixin form-reg-buyer()
           .form-reg__list
             input.form-reg__check#choices-3(type='checkbox' name='complex' value='complex-0')
             label(for='choices-3') choices-3
-            input.form-reg__check#choices-3(type='checkbox' name='complex' value='complex-1')
-            label(for='choices-3') choices-3
+            input.form-reg__check#choices-33(type='checkbox' name='complex' value='complex-1')
+            label(for='choices-33') choices-3
             input.form-reg__check#choices-4(type='checkbox' name='complex' value='complex-2')
             label(for='choices-4') choices-3
         .form-reg__overlay
@@ -220,7 +220,7 @@ mixin form-reg-buyer()
         input(type="text" name="tel2"  id="tel2" placeholder="+0 (000) 000 00 00" required="required")
       .form-reg__block
         label(for="skype") Skype
-        input(type="text" name=""  id="skype" placeholder="E-mail" required="required")
+        input(type="text" name="skype"  id="skype" placeholder="E-mail" required="required")
       .form-reg__block
         label(for="E-mail") E-mail
         input(type="text" name="E-mail"  id="E-mail" placeholder="E-mail" required="required")
@@ -231,11 +231,11 @@ mixin form-reg-buyer()
     .form-reg__info.container
       h3.form-reg__title.form-reg__title-six Информация о коллеге:
       .form-reg__block
-        label(for="First_name") Имя
-        input(type="text" name="First_name"  id="First_name" placeholder="First name" required="required")
+        label(for="First_name2") Имя
+        input(type="text" name="First_name2"  id="First_name2" placeholder="First name" required="required")
       .form-reg__block
-        label(for="Last_name") Фамилия
-        input(type="text" name="Last_name"  id="Last_name" placeholder="Last name" required="required")
+        label(for="Last_name2") Фамилия
+        input(type="text" name="Last_name2"  id="Last_name2" placeholder="Last name" required="required")
       .form-reg__block
         h3.form-reg__block-title Обращение
         select
@@ -245,14 +245,14 @@ mixin form-reg-buyer()
           option(value="Ms") Ms.
           option(value="Dr") Dr.
       .form-reg__block
-        label(for="title") Должность
-        input(type="text" name="title"  id="title" placeholder="Job title" required="required")
+        label(for="title2") Должность
+        input(type="text" name="title2"  id="title2" placeholder="Job title" required="required")
       .form-reg__block
-        label(for="E-mail") E-mail
-        input(type="text" name="E-mail"  id="E-mail" placeholder="E-mail" required="required")
+        label(for="E-mail2") E-mail
+        input(type="text" name="E-mail2"  id="E-mail2" placeholder="E-mail" required="required")
       .form-reg__block
-        label(for="tel2") Мобильный телефон
-        input(type="text" name="tel2"  id="tel2" placeholder="+0 (000) 000 00 00" required="required")
+        label(for="tel3") Мобильный телефон
+        input(type="text" name="tel3"  id="tel3" placeholder="+0 (000) 000 00 00" required="required")
 
     .form-reg__info.container
       h3.form-reg__title.form-reg__title-seven Как ваша компания осуществляет бронирования?
