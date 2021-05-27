@@ -6,6 +6,7 @@
   grid-column-gap: 10px;
   border-top: 1.5px solid $color-blue;
   padding-top: 25px;
+  padding-bottom: 45px;
   margin-top: 57px;
 
   @include viewport--sm {
@@ -32,10 +33,13 @@
 .footer__mailing {
   grid-area: mailing;
   margin-right: 0;
+  width: 100%;
+  max-width: 461px;
 
   @include viewport--sm {
     width: 100%;
     padding-bottom: 36px;
+    max-width: initial;
   }
 }
 
@@ -61,7 +65,7 @@
   color: $color-nobel;
   font-size: 12px;
   margin-top: 30px;
-  margin-bottom: 45px;
+  //margin-bottom: 45px;
 
   @include viewport--sm {
     margin-top: 28px;

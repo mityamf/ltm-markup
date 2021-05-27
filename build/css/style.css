@@ -1287,14 +1287,14 @@ p {
   .button--footer-btn {
     width: 22%;
     max-width: 103px;
-    height: 42px; }
+    height: 42px;
+    padding: 11px 42px; }
     @media (max-width: 767px) {
       .button--footer-btn {
         max-width: 78px;
         margin-left: 10px; } }
   .button--open {
-    width: 104px;
-    height: 23px;
+    padding: 4px 41px;
     font-size: 16px;
     font-weight: 600; }
   .button--blue {
@@ -1302,8 +1302,7 @@ p {
     font-weight: 300;
     background-color: #0098c1;
     color: #ffffff;
-    width: 222px;
-    height: 50px;
+    padding: 14px 64px;
     margin-top: 36px;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -1311,16 +1310,14 @@ p {
   .button--btn-reg {
     font-size: 20px;
     font-weight: 300;
-    width: 222px;
-    height: 50px;
+    padding: 14px 64px;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center; }
-  .button--cookies {
-    width: 103px;
-    height: 42px;
+  .button--transparent {
+    padding: 11px 42px;
     margin-bottom: 42px;
-    background-color: white; }
+    background-color: transparent; }
   .button:hover, .button:focus {
     opacity: 0.8; }
 
@@ -1901,6 +1898,7 @@ p {
   grid-column-gap: 10px;
   border-top: 1.5px solid #0098c1;
   padding-top: 25px;
+  padding-bottom: 45px;
   margin-top: 57px; }
   @media (max-width: 767px) {
     .footer {
@@ -1926,11 +1924,14 @@ p {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: mailing;
-  margin-right: 0; }
+  margin-right: 0;
+  width: 100%;
+  max-width: 461px; }
   @media (max-width: 767px) {
     .footer__mailing {
       width: 100%;
-      padding-bottom: 36px; } }
+      padding-bottom: 36px;
+      max-width: initial; } }
 
 .footer__menu {
   -ms-grid-row: 1;
@@ -1970,8 +1971,7 @@ p {
           justify-content: center;
   color: #9f9f9f;
   font-size: 12px;
-  margin-top: 30px;
-  margin-bottom: 45px; }
+  margin-top: 30px; }
 
 @media (max-width: 767px){
     .footer__logotip {
@@ -2146,19 +2146,6 @@ p {
     padding: 13px; }
     .menu__account-social:focus, .menu__account-social:hover {
       opacity: 0.8; }
-  .menu__account-social-fb {
-    padding-left: 28px; }
-    @media (max-width: 767px) {
-      .menu__account-social-fb {
-        padding: 8px;
-        padding-left: 8px; } }
-  .menu__account-social-inst {
-    padding-right: 0;
-    padding-left: 11px; }
-    @media (max-width: 767px) {
-      .menu__account-social-inst {
-        padding-right: 0;
-        padding-left: 36px; } }
   @media (max-width: 767px) {
     .menu__account {
       padding-top: 12px; } }
@@ -2568,6 +2555,16 @@ p {
       border: 1px solid #0098c1; }
     .news-home__pagination .swiper-pagination-bullet-active {
       background: #0098c1; }
+  .news-home__img-wrapper {
+    width: 100%;
+    max-width: 554px;
+    height: 100%;
+    max-height: 340px; }
+  .news-home__about-text {
+    max-height: 106px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 692px; }
 
 .news-home__about {
   width: 50%;
@@ -2583,16 +2580,7 @@ p {
         font-size: 32px; } }
   .news-home__about p {
     margin: 0;
-    width: 100%;
-    max-width: 692px;
-    padding-top: 17px;
-    max-height: 106px;
-    overflow: hidden; }
-  .news-home__about__img-wrapper {
-    width: 100%;
-    max-width: 554px;
-    height: 100%;
-    max-height: 340px; }
+    padding-top: 17px; }
   @media (max-width: 767px) {
     .news-home__about {
       width: 100%;
@@ -2666,13 +2654,14 @@ p {
     color: #9f9f9f; }
   .news-home__info-text {
     width: 100%;
-    margin: 0;
     font-size: 16px;
     line-height: 22px;
-    padding-left: 13px;
     color: #505050;
     max-height: 115px;
     overflow: hidden; }
+    .news-home__info-text p {
+      margin: 0;
+      padding-left: 13px; }
   .news-home__info a {
     text-align: center;
     font-weight: 600; }

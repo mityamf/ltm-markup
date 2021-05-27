@@ -7,14 +7,15 @@ import {initSearch} from './modules/search';
 import {initMenu} from './modules/init-menu';
 import {toggleGallery} from './modules/toggle-gallery';
 import {initGallerySwiper} from './modules/init-gallery-swiper';
-import {regSwiper} from './modules/reg-swiper';
-import {homeSwiper} from './modules/home-swiper';
+import {regSwiper} from './modules/sliders/reg-swiper';
+import {homeSwiper} from './modules/sliders/home-swiper';
 import {initSwiper} from './modules/init-swiper';
 import {initSmoothAnchors} from './modules/init-smooth-anchors';
 import {dropdown} from './modules/dropdown';
 import {initModalGallerySwiper} from './modules/init-modal-gallery-swiper';
-import {buyerSwiper} from './modules/buyer-swiper';
-import {initResizePhotos} from './modules/admin-gallery';
+import {buyerSwiper} from './modules/sliders/buyer-swiper';
+import {directionSlider} from './modules/sliders/direction-swiper';
+//import {initResizePhotos} from './modules/admin-gallery';
 
 // Utils
 // ---------------------------------
@@ -39,3 +40,4 @@ initModalGallerySwiper();
 //initResizePhotos();
 regSwiper();
 buyerSwiper();
+directionSlider();

@@ -41,21 +41,21 @@
   }
 
   &-social-fb {
-    padding-left: 28px;
+    //padding-left: 28px;
 
     @include viewport--sm {
-      padding: 8px;
-      padding-left: 8px;
+      //padding: 8px;
+      //padding-left: 8px;
     }
   }
 
   &-social-inst {
-    padding-right: 0;
-    padding-left: 11px;
+    //padding-right: 0;
+    //padding-left: 11px;
 
     @include viewport--sm {
-      padding-right: 0;
-      padding-left: 36px;
+      //padding-right: 0;
+      //padding-left: 36px;
     }
   }
 
