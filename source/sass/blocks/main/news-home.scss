@@ -80,6 +80,20 @@
       background: $color-blue;
     }
   }
+
+  &__img-wrapper {
+    width: 100%;
+    max-width: 554px;
+    height: 100%;
+    max-height: 340px;
+  }
+
+  &__about-text {
+    max-height: 106px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 692px;
+  }
 }
 
 .news-home__about {
@@ -100,18 +114,7 @@
 
   p {
     margin: 0;
-    width: 100%;
-    max-width: 692px;
     padding-top: 17px;
-    max-height: 106px;
-    overflow: hidden;
-  }
-
-  &__img-wrapper {
-    width: 100%;
-    max-width: 554px;
-    height: 100%;
-    max-height: 340px;
   }
 
   @include viewport--sm {
@@ -191,13 +194,16 @@
 
   &-text {
     width: 100%;
-    margin: 0;
     font-size: 16px;
     line-height: 22px;
-    padding-left: 13px;
     color: $color-gray-dark;
     max-height: 115px;
     overflow: hidden;
+
+    p {
+      margin: 0;
+      padding-left: 13px;
+    }
   }
 
   a {

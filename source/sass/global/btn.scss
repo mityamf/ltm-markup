@@ -5,6 +5,8 @@
   font-size: 16px;
   line-height: 19px;
 
+  cursor: pointer;
+
   &--white {
     border: 1px solid $color-blue;
     background-color: transparent;
@@ -15,10 +17,18 @@
   }
 
   &--white:disabled {
-    border-color: transparent;
-    background-color: $color-white;
+    border-color: $color-gray;
+    background-color: transparent;
 
     color: $color-gray;
+
+    &:hover,
+    &:focus {
+      border-color: $color-gray;
+      background-color: transparent;
+
+      color: $color-gray;
+    }
   }
 
   &--blue {
@@ -27,7 +37,17 @@
 
     color: $color-default-white;
 
-    transition: color background-color $default-transition-settings;
+    cursor: pointer;
+    transition: opacity $default-transition-settings;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 
   &--white:hover,
@@ -55,6 +75,29 @@
     }
 
     &--white:active {
+      border-color: transparent;
+      background-color: $color-gray;
+
+      color: $color-default-white;
+    }
+  }
+
+  &--transparent {
+    background-color: transparent;
+    border: 1px solid $color-default-white;
+    border-radius: 2px;
+    color: $color-default-white;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      background-color: $color-default-white;
+
+      color: $color-blue;
+    }
+
+    &:active {
       border-color: transparent;
       background-color: $color-gray;
 
@@ -138,6 +181,7 @@
     width: 22%;
     max-width: 103px;
     height: 42px;
+    padding: 11px 42px;
 
     @include viewport--sm {
       max-width: 78px;
@@ -146,8 +190,7 @@
   }
 
   &--open {
-    width: 104px;
-    height: 23px;
+    padding: 4px 41px;
     font-size: 16px;
     font-weight: 600;
   }
@@ -157,8 +200,7 @@
     font-weight: 300;
     background-color: #0098c1;
     color: #ffffff;
-    width: 222px;
-    height: 50px;
+    padding: 14px 64px;
     margin-top: 36px;
     align-self: center;
   }
@@ -166,16 +208,14 @@
   &--btn-reg {
     font-size: 20px;
     font-weight: 300;
-    width: 222px;
-    height: 50px;
+    padding: 14px 64px;
     align-self: center;
   }
 
-  &--cookies {
-    width: 103px;
-    height: 42px;
+  &--transparent {
+    padding: 11px 42px;
     margin-bottom: 42px;
-    background-color: white;
+    background-color: transparent;
   }
 
   &:hover,

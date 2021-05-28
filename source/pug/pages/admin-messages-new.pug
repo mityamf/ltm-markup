@@ -1,0 +1,27 @@
+extends ../base/layout
+
+block variables
+  - var title = "Messages"
+  - var hasHeader = true
+  - var hasFooter = true
+  - var currentPage = "MessagesNew"
+
+block main
+  include ../data/admin/admin-headline
+  include ../data/admin/participants
+  include ../data/admin/admin-tabs
+  include ../data/admin/admin-mail-control
+  include ../data/admin/admin-messages-new
+  include ../data/support-contacts
+
+  main.container.container--admin
+    .admin
+      +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
+      +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
+      .admin__control-wrapper
+        +renderAdminTabs(adminTabs)
+        +renderMailControl("New Message", adminMailControl.linkList, adminMailControl.isSearchInput)
+      h2.admin-table__headline="New Message"
+      +renderEditBlock(editingBlockList, buttons, editingBlockStatus)
+
+    +renderSupportContacts(contactsList)

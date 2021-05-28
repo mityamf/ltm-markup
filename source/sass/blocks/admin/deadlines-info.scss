@@ -1,8 +1,14 @@
 .deadlines-info {
   display: flex;
+  padding: 0 0 50px 0;
+
+  @include viewport--lg {
+    padding: 0 0 21px 0;
+  }
 
   @include viewport--sm {
     flex-wrap: wrap;
+    padding: 6px 0 21px;
   }
 
   &__content {
@@ -39,10 +45,10 @@
   }
 
   &__text {
-    padding: 2px 0 36px;
+    padding: 2px 0 41px;
 
     @include viewport--lg {
-      padding: 2px 0 28px;
+      padding: 2px 0 33px;
     }
 
     @include viewport--sm {
@@ -51,9 +57,10 @@
   }
 
   &__text p {
-    margin-bottom: 16px;
+    margin-bottom: 19px;
 
     letter-spacing: 0.2px;
+    line-height: 20px;
   }
 
   &__text p:last-of-type {

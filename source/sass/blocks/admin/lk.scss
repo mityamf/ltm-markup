@@ -1,0 +1,175 @@
+.lk {
+  .admin-headline {
+    padding-top: 22px;
+    padding-bottom: 41px;
+
+    @include viewport--lg {
+      padding-top: 22px;
+      padding-bottom: 34px;
+    }
+
+    @include viewport--sm {
+      padding-top: 15px;
+      padding-bottom: 22px;
+    }
+  }
+
+  &__participants-wrapper {
+    display: flex;
+    padding: 28px 0 24px;
+
+    border-bottom: 1px solid $color-blue;
+
+    @include viewport--md {
+      flex-wrap: wrap;
+    }
+
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  &__participants-wrapper .title--h2 {
+    margin-bottom: 2px;
+    letter-spacing: 1.2px;
+  }
+
+  .participants {
+    width: 51%;
+    padding: 0;
+
+    border: none;
+
+    @include viewport--md {
+      width: 100%;
+      padding-bottom: 40px;
+    }
+  }
+
+  .participants__list {
+    margin-right: -17px;
+    padding: 40px 0 12px 0;
+
+    @include viewport--lg {
+      img {
+        margin-right: 11px;
+      }
+    }
+  }
+
+  .participants__info-wrapper {
+    @include viewport--lg {
+      padding: 24px 0 0 0;
+    }
+  }
+
+  .participants__text {
+    letter-spacing: 0.3px;
+  }
+
+  .participants__item {
+    width: calc((98% / 2) - 17px);
+    min-width: 270px;
+
+    @include viewport--md {
+      min-width: auto;
+    }
+  }
+
+  .participants__note-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .participants__note {
+    margin-top: 8px;
+    margin-left: -11px;
+
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    color: $color-nobel;
+  }
+
+  .participants__contact-link {
+    display: inline-block;
+    margin: 0 0 0 auto;
+  }
+
+  .info-block {
+    width: 49%;
+    display: inline-block;
+
+    @include viewport--md {
+      width: 100%;
+    }
+
+    &__top-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__text-wrapper {
+      display: block;
+      width: 100%;
+    }
+
+    &__text-wrapper p {
+      letter-spacing: 0.1px;
+    }
+
+    &__link {
+      font-size: 24px;
+      line-height: 29px;
+      color: $color-blue;
+      letter-spacing: 0.7px;
+      transition: opacity 0.3s ease;
+
+      &:hover,
+      &:focus {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
+
+    &__more-link {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-top: 36px;
+      margin-bottom: 0;
+      transition: opacity 0.3s ease;
+
+      &:hover,
+      &:focus {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
+
+    .btn {
+      padding: 17px 30px;
+      width: 222px;
+      height: max-content;
+      transition: opacity 0.3s ease;
+
+      @include viewport--lg {
+        width: 178px;
+      }
+
+      &:hover,
+      &:focus {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
+    }
+  }
+}

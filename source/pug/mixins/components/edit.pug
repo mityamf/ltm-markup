@@ -1,21 +1,25 @@
-mixin renderEditBlock(editingBlockList, buttons)
-  .edit
+mixin renderEditBlock(editingBlockList, buttons, editingBlockStatus)
+  .edit(class='edit--' + editingBlockStatus)
     .edit__wrapper
       each block in editingBlockList
         if block.type === "text"
-          +renderHeadline3(block.title)
+          h3(class="title title--h3 title--big")=block.title
         else
-          h3(class="title--h3 title--small")=block.title
+          h3(class="title title--h3 title--small")=block.title
         if block.type === "text"
           .edit__text-block
             +renderTextContentBlock(block.content)
         if block.type === "input"
           label.edit__label
-            input.edit__input(type="text", value=block.content)
+            input.edit__input(type="text", placeholder=block.content)
+        if block.type === "info-input"
+          .edit__info-block
+            span=block.content
         if block.type === "select"
-          select(id="hotel-editor-select", class="input-dropdown", multiple)
-            each text in block.content
-              option(value=text, class="input-dropdown__option")=text
+          .edit__select-wrapper(class=block.selectMod)
+            select(id="hotel-editor-select", class="input-dropdown")
+              each text in block.content
+                option(value=text, class="input-dropdown__option")=text
 
     - var buttonModClass = "edit__buttons--right"
     if buttons.leftBorder

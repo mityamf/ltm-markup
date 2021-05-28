@@ -1,0 +1,48 @@
+.modal--choices {
+  .modal__wrapper {
+    padding: 0;
+    padding-top: 64px;
+    position: fixed;
+  }
+
+  .modal__content {
+    width: 100%;
+    padding: 0;
+    border-radius: 15px 15px 0 0;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal__close-btn {
+    width: 50px;
+    height: 6px;
+    background-color: $color-default-white;
+    border-radius: 20px;
+    top: -12px;
+    right: 40%;
+
+    svg {
+      display: none;
+    }
+  }
+
+  .modal__overlay {
+    backdrop-filter: none;
+  }
+}
+
+.modal__select-close {
+  width: 222px;
+  height: 49px;
+  background-color: $color-blue;
+  color: $color-default-white;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  align-self: center;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
