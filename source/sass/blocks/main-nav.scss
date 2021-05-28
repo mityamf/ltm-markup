@@ -23,7 +23,7 @@
       }
     }
 
-    @include viewport--sm {
+    @include viewport--md {
       display: none;
 
       li:not(:last-child) {
@@ -42,8 +42,11 @@
     margin-right: 5px;
   }
 
-  @include viewport--sm {
+  @include viewport--md {
     position: relative;
+  }
+
+  @include viewport--sm {
     margin-left: 0;
   }
 }
@@ -63,12 +66,11 @@
 .main-nav__toggle {
   display: none;
 
-  @include viewport--sm {
+  @include viewport--md {
     display: block;
     position: absolute;
-    top: 17px;
-    left: 0;
-    z-index: 2;
+    top: -10px;
+    right: 20px;
     width: 25px;
     height: 20px;
     cursor: pointer;
@@ -81,6 +83,13 @@
       opacity: 0.7;
       outline: none;
     }
+  }
+
+
+  @include viewport--sm {
+    top: 17px;
+    left: 0;
+    z-index: 2;
   }
 }
 
@@ -105,10 +114,10 @@
   box-shadow: 0 8px 0 0 $color-blue;
 }
 
-.header--mobile-opened .main-nav__toggle {
+.header--menu-opened .main-nav__toggle {
   width: 26px;
   height: 26px;
-  top: -95px;
+  top: 25px;
 
   &::before,
   &::after {
@@ -121,7 +130,7 @@
     width: 26px;
     height: 2px;
 
-    background-color: $color-default-white;
+    background-color: $color-blue;
 
     transition: transform 0.3s ease-in-out;
   }
@@ -133,5 +142,14 @@
   &::after {
     transform: rotate(-45deg);
     box-shadow: none;
+  }
+
+  @include viewport--sm {
+    top: -95px;
+
+    &::before,
+    &::after {
+      background-color: $color-default-white;
+    }
   }
 }
