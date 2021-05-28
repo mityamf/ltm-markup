@@ -2763,6 +2763,24 @@
               <svg width="26" height="30" aria-hidden="true">
                 <use xlink:href="#icon-sign-in"></use>
               </svg></a>
+            <div class="login">
+              <form class="login__form" action="#" method="POST">
+                <div class="login__form-wrapper">
+                  <h3>Authorization for Exhibitors and Buyers</h3>
+                  <div class="login__form-input">
+                    <label class="visually-hidden" for="login-email">Enter your login</label>
+                    <input type="email" name="login-email" id="login-email" placeholder="Your login" required="required"/>
+                    <p>Enter for Guest</p>
+                  </div>
+                  <div class="login__form-input">
+                    <label class="visually-hidden" for="login-password">Inter your password</label>
+                    <input class="login__input-password" type="password" name="login-password" id="login-password" placeholder="Password" required="required"/>
+                    <button class="login__show-password" type="button" title="Показать/Скрыть пароль"><span class="visually-hidden">Показать/скрыть пароль</span></button>
+                  </div>
+                  <button class="login__btn btn btn--transparent" type="submit">Enter</button><a class="login__forgot" href="#" data-modal="forgot">Contact organizers in case of difficulties</a>
+                </div>
+              </form>
+            </div>
           </div>
           <div class="header__search header__search--hidden container">
             <form class="search-input" action="/" autocomplete="off">
@@ -3295,9 +3313,9 @@
               </label>
             </li>
           </ul>
-          <div class="edit">
+          <div class="edit edit--active">
             <div class="edit__wrapper">
-              <h3 class="title title--h3">Description of Company:</h3>
+              <h3 class="title title--h3 title--big">Description of Company:</h3>
               <div class="edit__text-block">
                 <p>Mandarin Oriental Hotel Group is the award-winning owner and operator of some of the world’s most prestigious hotels, resorts and residences. Over the past fifty years, the Group has grown its business from its original flagship properties in Asia – the acclaimed Mandarin Oriental, Hong Kong and Mandarin Oriental, Bangkok – to successfully operate in major business centres and key leisure destinations around the world.</p>
                 <p>Mandarin Oriental’s aim is to be recognized widely as the best global luxury hotel group, providing 21st century luxury with oriental charm in each of its hotels. Mandarin Oriental now operates 31 hotels and eight residences in 21 countries and territories, with each property reflecting the Group’s oriental heritage and unique sense of place.</p>
@@ -3305,20 +3323,24 @@
                 <p>A leader in the spa field, the Group was the first to launch its signature “Time Ritual” which encourages guests to book time rather than specific treatments, so that services can be tailor-made to meet specific needs.</p>
                 <p>Mandarin Oriental offers some of the most exciting hotel dining in the world today. The Group’s passion for creating memorable dining experiences has been recognized in the Michelin Guide, with a total of 21 Michelin stars being awarded to 14 diverse restaurants from around the world in the 2018 list. This is more than any other hotel brand in the world.</p>
               </div>
-              <h3 class="title--h3 title--small">Official web-site:</h3>
+              <h3 class="title title--h3 title--small">Official web-site:</h3>
               <label class="edit__label">
-                <input class="edit__input" type="text" value="https://www.mandarinoriental.com"/>
+                <input class="edit__input" type="text" placeholder="https://www.mandarinoriental.com"/>
               </label>
-              <h3 class="title--h3 title--small">Area of business:</h3>
-              <select class="input-dropdown" id="hotel-editor-select" multiple="multiple">
-                <option class="input-dropdown__option" value="Hotel group">Hotel group</option>
-                <option class="input-dropdown__option" value="Hello, hello">Hello, hello</option>
-              </select>
-              <h3 class="title--h3 title--small">Country of business:</h3>
-              <select class="input-dropdown" id="hotel-editor-select" multiple="multiple">
-                <option class="input-dropdown__option" value="Worldwide">Worldwide</option>
-                <option class="input-dropdown__option" value="Hello, hello">Hello, hello</option>
-              </select>
+              <h3 class="title title--h3 title--small">Area of business:</h3>
+              <div class="edit__select-wrapper">
+                <select class="input-dropdown" id="hotel-editor-select">
+                  <option class="input-dropdown__option" value="Hotel group">Hotel group</option>
+                  <option class="input-dropdown__option" value="Hello, hello">Hello, hello</option>
+                </select>
+              </div>
+              <h3 class="title title--h3 title--small">Country of business:</h3>
+              <div class="edit__select-wrapper">
+                <select class="input-dropdown" id="hotel-editor-select">
+                  <option class="input-dropdown__option" value="Worldwide">Worldwide</option>
+                  <option class="input-dropdown__option" value="Hello, hello">Hello, hello</option>
+                </select>
+              </div>
             </div>
             <div class="edit__buttons edit__buttons--left">
               <button class="btn--white btn edit-buttons__cancel" type="reset">Cancel</button>
@@ -3331,13 +3353,13 @@
         <div class="footer container">
           <ul class="footer__logotip logotip">
             <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company-ap" src="./img/svg/g10.svg" alt="company logo" width="67" height="73"/></a></li>
-            <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company-tm" src="./img/svg/TM-logo.svg" alt="company logo" width="110" height="57"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company-tm" src="./img/svg/tm-logo.svg" alt="company logo" width="110" height="57"/></a></li>
           </ul>
           <div class="footer__mailing mailing">
             <form class="mailing__form" action="#" method="POST">
               <input class="mailing__email" type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
-              <label class="mailing__email-label" for="mailing"></label>
-              <button class="button button--footer-btn" type="button"> Ok</button>
+              <label class="visually-hidden" for="mailing"></label>
+              <button class="button button--footer-btn" type="button">Ok</button>
               <div class="mailing__checkbox">
                 <input class="mailing__check" type="checkbox" id="check" name="check" value="yes"/>
                 <label class="mailing__check-label" for="check">I agree</label>
@@ -3364,7 +3386,7 @@
           </div>
           <div class="footer__info"><span class="footer__info-info">&copy; All right reserved by Artyom Polanskiy and Travel Media LLC.</span></div>
         </div>
-        <div class="footer__cookies cookies">
+        <div class="cookies">
           <button class="cookies__btn-close" type="button" aria-label="Закрыть">
             <svg width="33" height="33" aria-hidden="true">
               <use xlink:href="#icon-close"></use>
@@ -3372,9 +3394,31 @@
           </button>
           <h2 class="cookies__title">LTM Website uses cookies</h2>
           <p class="cookies__description">Website uses cookies and similar technologies. We use functional cookies to make sure our websites work well and secure and analytical cookies to offer you the best possible user experience. By clicking on ’Agree’, you consent to the placing of these cookies.</p><a class="cookies__info" href="#">For more information read Cookies policy</a>
-          <button class="button button--cookies" type="button">ok</button>
+          <button class="button button--transparent" type="button">ok</button>
         </div>
       </footer>
+    </div>
+    <div class="modal modal--preload modal--forgot">
+      <div class="modal__wrapper">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <div class="forgot"><a class="forgot__logo" href="main.html">
+              <svg width="324" height="122" aria-hidden="true">
+                <use xlink:href="#logo-desktop"></use>
+              </svg></a>
+            <form class="forgot__form" action="#" method="POST">
+              <label class="visually-hidden" for="forgot-email">Inter your E-mail</label>
+              <input type="email" name="forgot-email" id="forgot-email" placeholder="Enter your E-mail" requared="requared"/><a class="forgot__link" href="buyer.html">Or send message to Organizers</a>
+              <button class="forgot__submit btn btn--blue" type="submit">Send</button>
+            </form>
+          </div>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+            <svg width="33" height="33" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

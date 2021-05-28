@@ -3,11 +3,19 @@ const initModalGallerySwiper = () => {
   const modalMiniSlider = document.querySelector(".modal-gallery__mini-slider");
 
   const miniSlider = new Swiper(modalMiniSlider, {
-    spaceBetween: 16,
-    slidesPerView: 12,
-    freeMode: true,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
+    // freeMode: true,
+    // watchSlidesVisibility: true,
+    // watchSlidesProgress: true,
+    breakpoints: {
+      0: {
+        spaceBetween: 10,
+        slidesPerView: 10,
+      },
+      1300: {
+        spaceBetween: 16,
+        slidesPerView: 12,
+      },
+    },
   });
 
   if (modalSlider) {

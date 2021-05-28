@@ -1,0 +1,131 @@
+.login {
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  right: 50px;
+  width: 100%;
+  max-width: 341px;
+  height: 0;
+  overflow: hidden;
+  border-radius: 2px;
+  background-color: $color-blue;
+  transition: 0.3s ease-out;
+
+  @include viewport--lg {
+    right: 80px;
+  }
+
+  @include viewport--md {
+    right: 24px;
+  }
+
+  &--show {
+    height: 261px;
+    transition: 0.3s ease-out;
+  }
+}
+
+.login__form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px 10px 19px;
+}
+
+.login__form-wrapper h3 {
+  margin: 0;
+  margin-bottom: 19px;
+  padding: 0;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 22px;
+  color: $color-default-white;
+}
+
+.login__form-input {
+  width: 100%;
+  position: relative;
+}
+
+.login__form-input input {
+  width: 100%;
+  padding: 6px 115px 7px 10px;
+  margin-bottom: 19px;
+  border: none;
+  border-radius: 2px;
+  box-sizing: border-box;
+
+  font-family: $font-family--p;
+  font-size: 24px;
+  line-height: 29px;
+  color: $color-blue;
+
+  &::placeholder {
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.04em;
+    color: $color-blue;
+  }
+}
+
+.login__form-input input[type="email"] + p {
+  position: absolute;
+  top: 13px;
+  right: 17px;
+
+  padding: 0;
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.025em;
+  color: $color-gray;
+
+  user-select: none;
+}
+
+.login__show-password {
+  position: absolute;
+  top: 11px;
+  right: 10px;
+  width: 30px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  background: url("../../img/svg/ico_nonshowpassword.svg") no-repeat center;
+}
+
+.login__show-password.login__show-password--active {
+  background: url("../../img/svg/ico_showpassword.svg") no-repeat center;
+}
+
+.login__btn {
+  width: 100%;
+  max-width: 222px;
+  padding: 14px 25px 15px 25px;
+  margin-bottom: 5px;
+
+  letter-spacing: 0.01em;
+}
+
+.login__form-wrapper .login__forgot {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: $color-default-white;
+  letter-spacing: 0.015em;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

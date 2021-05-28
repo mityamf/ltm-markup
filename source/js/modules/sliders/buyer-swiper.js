@@ -1,5 +1,4 @@
 const buyerSwiper = () => {
-
   let statusSwiper = null;
 
   let statusSliders = document.querySelectorAll('.status__slider');
