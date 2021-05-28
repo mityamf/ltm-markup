@@ -1959,6 +1959,8 @@ p {
         line-height: 21px; }
         .header--menu-opened .header__top a:hover, .header--menu-opened .header__top a:active {
           color: #ffffff; }
+    .header--menu-opened .main-nav__list {
+      margin-left: 0; }
     .header--menu-opened a {
       color: #ffffff; }
     .header--menu-opened svg {
@@ -4547,6 +4549,7 @@ p {
     margin-right: 0; }
   .gallery .title--h2 {
     margin-bottom: 5px; }
+  .gallery .title--h2,
   .gallery .title--h3 {
     letter-spacing: 0.01em; }
   .gallery .btn {
