@@ -23,9 +23,9 @@ block main
         +renderAdminTabs(adminTabs)
       +renderHeadline2("Buyers Guest List")
       +renderScheduleTabs(scheduleTabs, generatePDF)
-      ul.hotel-filters
-        each filter in filters
-          +renderFilter(filter.title, filter.mod, filter.filterList)
+      //ul.hotel-filters
+      //  each filter in filters
+      //    +renderFilter(filter.title, filter.mod, filter.filterList)
       +renderFilterTabs(filterTabs)
       +renderGuestsList(adminGuestsListTitles, adminGuestsList)
       button.btn.btn--white.btn--more(type="button")="More"

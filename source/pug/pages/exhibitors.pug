@@ -19,11 +19,10 @@ block variables
     }
 
 block main
-  include ../data/hotel-cards
-  include ../data/alphabet-hotel
+  include ../data/hotel/hotel-cards
+  include ../data/hotel/alphabet-hotel
   include ../data/choose-event-card
-  include ../data/choose-event
-  include ../data/hotel-filters
+  include ../data/hotel/hotel-filters
 
   main.container--exhibitors
     +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem, promoBg.noButtonMod)
@@ -48,10 +47,11 @@ block main
           button.btn.btn--white.hotel-filter__buttons--filters(type="button")="filters"
         button.btn.btn--white.hotel-filter__buttons--clear(type="reset")="Clear all filters"
 
-      ul.hotel-filters
-        each filter in filters
-          +renderFilter(filter.title, filter.mod, filter.filterList)
-        button.btn.btn--white.hotel-filter--reset(type="reset")="Clear all"
+      //ul.hotel-filters
+      //  each filter in filters
+      //    +renderFilter(filter.title, filter.mod, filter.filterList)
+      //  button.btn.btn--white.hotel-filter--reset(type="reset")="Clear all"
+      //TODO поменять фильтры на всех страницах на новый компонент
 
       .exhibitors
         ul.hotel-cards
@@ -64,4 +64,5 @@ block main
               +renderAlphabetHotel(hotel.title, hotel.hotelList)
 
       button.btn.btn--white.btn--more(type="button")="More"
-      +renderUpButton()
+      //+renderUpButton('up-button--fixed')
+      //TODO разобраться с кнопкой "вверх" на всех страницах

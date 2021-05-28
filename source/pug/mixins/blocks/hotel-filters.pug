@@ -1,14 +1,24 @@
-mixin renderFilter(title, mod, filterList)
-  li.hotel-filter(class="hotel-filter--" + mod)
-    if mod === "dropdown" || mod === "dropdown dropdown-mobile"
-      h3.title--h3=title
-      select(id="hotel-select", class="input-dropdown", multiple)
-        each filter in filterList
-          option(value=filter, class="input-dropdown__option")=filter
+mixin renderAlphabetFilter(alphabetFilter)
+  .filters__block.filters__block--alphabet
+    .filters__alphabet-filter
+      +renderHeadlineMiddle(alphabetFilter.title)
+      ul.filters__alphabet-list
+        each filter in alphabetFilter.filterList
+          li.filters__alphabet-item
+            a(href="#", class="filters__alphabet-link")=filter
 
-    else if mod === "list"
-      h3.title--h3=title
-      ul.hotel-filter__list
-        each filter in filterList
-          li
-            a(href="#", class="hotel-filter__link")=filter
+mixin renderDropdownFilter(dropdownFilters)
+  .filters__block.filters__block--dropdown
+    each filter in dropdownFilters
+      .filters__dropdown-filter
+        +renderHeadlineMiddle(filter.title)
+        select(id="hotel-select", class="input-dropdown", multiple)
+          each item in filter.filterList
+            option(value=item, class="input-dropdown__option")=item
+
+mixin renderFilterButton(text)
+  .filters__block.filters__block--button-wrapper
+    button.btn.btn--white.filters__button(type="button")=text
+
+
+

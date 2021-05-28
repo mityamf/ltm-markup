@@ -1,10 +1,12 @@
 -
-  var filters = [
-    {
+  var alphabetFilter = {
       title: "Alphabetically:",
-      mod: "list",
+      mod: "alphabet",
       filterList: "#ABCDEFGHIJKLMNOPQRSTUVWXY"
-    },
+    }
+
+-
+  var dropdownFilters = [
     {
       title: "By Country:",
       mod: "dropdown",
@@ -39,6 +41,15 @@
     {
       title: "Exhibitor’s name",
       mod: "dropdown dropdown-mobile",
+      filterList: [
+        "Hyatt",
+        "Mandarin Oriental Hotel",
+        "Awesome hotel Ritz",
+      ]
+    },
+    {
+      title: "Exhibitor’s name",
+      mod: "dropdown",
       filterList: [
         "Hyatt",
         "Mandarin Oriental Hotel",

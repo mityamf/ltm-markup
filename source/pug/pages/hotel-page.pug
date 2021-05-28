@@ -18,8 +18,8 @@ block variables
     }
 
 block main
-  include ../data/hotel-page
-  include ../data/hotel-photos
+  include ../data/hotel/hotel-page
+  include ../data/hotel/hotel-photos
 
   main.container--hotel-page
     +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem, promoBg.noButtonMod)
@@ -27,7 +27,7 @@ block main
     .container
 
       .hotel-page
-        +renderHotelPhotos(hotelPhotos.photoList)
+        +renderPhotos(hotelPhotos.photoList)
 
         .hotel-page__info-block
           img(src=hotel.logo)

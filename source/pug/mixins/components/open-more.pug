@@ -1,11 +1,3 @@
-mixin renderOpenMoreBlock(buttonTextDesktop, buttonTextMobile)
+mixin renderOpenMoreButton(text)
   .open-more
-    if buttonTextDesktop
-      button(class="btn btn--white open-more__btn open-more__btn--desktop" type="button")=buttonTextDesktop
-    button(class="btn btn--white open-more__btn open-more__btn--mobile" type="button")=buttonTextMobile
-    a(href="#top", class="open-more__up-link", aria-label="Вернуться в начало")
-      +icon("icon-arrow-up", 54, 54)
-
-mixin renderOpenMoreButton(buttonText)
-  .open-more
-    button.btn.btn--white.open-more__button(type="button", aria-label="Показать больше")=buttonText
+    button.btn.btn--white.open-more__button(type="button")=text
