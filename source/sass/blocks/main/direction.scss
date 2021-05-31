@@ -45,6 +45,10 @@
   color: $color-blue;
   padding-top: 8px;
   font-weight: 600;
+
+  @media (min-width: 1920px) {
+    padding-top: 0;
+  }
 }
 
 .direction__status {
@@ -66,7 +70,7 @@
   }
 }
 
-.direction__swiper {
+.direction-swiper {
   position: relative;
   margin: 0 auto;
   padding: 0 50px;
@@ -89,6 +93,10 @@
 
   @include viewport--sm {
     display: none;
+  }
+
+  @media (min-width: 1920px) {
+    padding: 0 50px 0;
   }
 }
 
@@ -118,6 +126,11 @@
   @media (max-width: 1020px) {
     right: 0;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 }
 
 .direction__arrow--left {
@@ -140,6 +153,11 @@
 
   @media (max-width: 1020px) {
     left: 0;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
   }
 }
 
