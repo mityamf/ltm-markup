@@ -18,6 +18,7 @@
     width: 100%;
     max-width: none;
     margin-right: 0;
+    margin-bottom: 22px;
   }
 
   ul {
@@ -84,6 +85,10 @@
     line-height: 20px;
     letter-spacing: 0.1px;
     color: $color-gray-dark;
+
+    @include viewport--sm {
+      text-align: left;
+    }
   }
 
   .hotel-card__link {

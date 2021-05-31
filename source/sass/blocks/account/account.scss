@@ -18,6 +18,18 @@
     }
   }
 
+  &__event-wrapper {
+    position: relative;
+  }
+
+  &__event-wrapper .direction__arrow--right {
+    right: -40px;
+  }
+
+  &__event-wrapper .direction__arrow--left {
+    left: -40px;
+  }
+
   &__event-list {
     display: flex;
     padding: 0;

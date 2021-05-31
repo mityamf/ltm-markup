@@ -1,5 +1,7 @@
-mixin renderEditComponent(photo)
-  .photo-edit
+mixin renderEditComponent(photo, visibility)
+  if visibility
+    - var visibilityClass = 'photo-edit__visible'
+  .photo-edit(class=visibilityClass)
     .photo-edit__buttons
       label
         input(type="file")

@@ -11,6 +11,10 @@
 
   background-color: rgba(0, 0, 0, 0.5);
 
+  &__visible {
+    display: flex;
+  }
+
   &__text {
     display: block;
     text-align: center;

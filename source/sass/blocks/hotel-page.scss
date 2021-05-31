@@ -158,18 +158,8 @@
 
   .back-link {
     display: flex;
-    text-align: right;
     clear: both;
-    margin: 5px 23px 26px auto;
     align-items: center;
-
-    @include viewport--lg {
-      margin: 5px 23px 17px auto;
-    }
-
-    @include viewport--md {
-      display: none;
-    }
 
     svg {
       margin-right: 5px;
