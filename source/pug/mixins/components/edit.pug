@@ -3,9 +3,9 @@ mixin renderEditBlock(editingBlockList, buttons, editingBlockStatus)
     .edit__wrapper
       each block in editingBlockList
         if block.type === "text"
-          h3(class="title title--h3 title--big")=block.title
+          h3(class="title title--h3 title--big") !{block.title}
         else
-          h3(class="title title--h3 title--small")=block.title
+          h3(class="title title--h3 title--small") !{block.title}
         if block.type === "text"
           .edit__text-block
             +renderTextContentBlock(block.content)

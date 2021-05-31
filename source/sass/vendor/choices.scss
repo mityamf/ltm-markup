@@ -2,7 +2,16 @@
 
 .choices {
   height: 49px;
+  cursor: pointer;
 
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 
   &.is-open .choices__list--dropdown {
     border-color: $color-default-white;
