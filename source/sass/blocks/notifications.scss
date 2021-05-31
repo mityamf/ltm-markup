@@ -2,6 +2,13 @@
   padding-bottom: 66px;
   position: relative;
 
+  .headline-back {
+    @include viewport--sm {
+      padding-left: 17px;
+      padding-right: 17px;
+    }
+  }
+
   @include viewport--lg {
     padding-bottom: 47px;
   }

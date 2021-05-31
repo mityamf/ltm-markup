@@ -12,8 +12,8 @@
 
   &__info-block {
     display: flex;
-    padding: 0;
     clear: both;
+    padding: 14px 0 0 0;
 
     @include viewport--sm {
       flex-direction: column;
@@ -173,6 +173,19 @@
 
     &:active {
       opacity: 0.5;
+    }
+  }
+
+
+  &__links > .back-link {
+    margin: 0 21px 33px auto;
+
+    @include viewport--lg {
+      margin: 0 16px 24px auto;
+    }
+
+    @include viewport--sm {
+      display: none;
     }
   }
 

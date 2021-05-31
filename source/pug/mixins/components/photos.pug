@@ -66,15 +66,14 @@ mixin renderPhotos(photoList)
               picture
                 img(src=photo.src, srcset=photo.srcset)
         .photos__block__wrapper
-          each photo in photoList.slice(4, 7)
+          each photo in photoList.slice(4, 6)
             .photos__item(class='photos__item--' + photo.mod)
               picture
                 img(src=photo.src, srcset=photo.srcset)
 
-    .photos__block.photos__block--last
-      each photo in photoList.slice(8)
-        .photos__item
-          picture
-            img(src=photo.src, srcset=photo.srcset)
-
-
+          if photoList[6]
+            .photos__item(class='photos__item--' + photoList[6].mod)
+              picture
+                img(src=photoList[6].src, srcset=photoList[6].srcset)
+              .photos__link-more-wrapper
+                a(href="#" data-modal="gallery")='+' + (photoList.length - 7)
