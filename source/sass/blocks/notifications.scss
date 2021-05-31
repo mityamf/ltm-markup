@@ -42,8 +42,17 @@
     }
   }
 
+  tr:first-of-type th {
+    height: 32px;
+  }
+
   th {
     height: 37px;
+
+    .notifications__data-wrapper {
+      height: 22px;
+      overflow: hidden;
+    }
 
     @include viewport--sm {
       height: 20px;
@@ -166,6 +175,7 @@
 
   &--theme {
     width: 235px;
+    padding-right: 10px;
     position: relative;
 
     font-size: 12px;
@@ -173,7 +183,7 @@
     text-align: left;
 
     @include viewport--lg {
-      width: 182px;
+      width: 183px;
     }
 
     @include viewport--sm {
@@ -205,6 +215,7 @@
 
   &--message {
     width: 500px;
+    padding-right: 10px;
     position: relative;
 
     font-size: 16px;
@@ -213,7 +224,7 @@
     text-align: left;
 
     @include viewport--lg {
-      width: 470px;
+      width: 468px;
     }
 
     @include viewport--sm {
@@ -241,6 +252,10 @@
 
   &--date {
     width: 130px;
+
+    @include viewport--lg {
+      padding-left: 10px;
+    }
 
     @include viewport--sm {
       width: auto;
