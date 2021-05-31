@@ -4833,6 +4833,8 @@ p {
   padding: 0; }
 
 .photo a[href] {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease; }
   .photo a[href]:hover {
@@ -5065,7 +5067,7 @@ p {
   margin: 0; }
 
 .video__container {
-  height: 392px; }
+  height: 391px; }
   @media (max-width: 1023px) {
     .video__container {
       height: 500px; } }

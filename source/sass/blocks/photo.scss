@@ -5,6 +5,7 @@
   }
 
   a[href] {
+    backface-visibility: hidden;
     transition: opacity $default-transition-settings;
 
     &:hover {
