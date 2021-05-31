@@ -6893,7 +6893,8 @@ span {
   padding-top: 20px; }
   @media (max-width: 1439px) {
     .notification-message {
-      padding-top: 32px; }
+      padding-top: 32px;
+      padding-bottom: 50px; }
       .notification-message .edit__buttons--save {
         padding: 17px 79px; } }
   @media (max-width: 767px) {
@@ -8139,6 +8140,10 @@ span {
   .support-contacts .direction__arrow--left,
   .support-contacts .direction__arrow--right {
     top: 19%; }
+  .support-contacts .direction__arrow--left {
+    left: -7px; }
+  .support-contacts .direction__arrow--right {
+    right: -7px; }
 
 @media (max-width: 1023px) {
   .container--no-padding > .support-contacts {
