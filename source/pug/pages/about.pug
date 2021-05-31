@@ -27,7 +27,7 @@ block main
               each event in eventBlock.eventList
                 +renderHeadlineMiddle(event.subtitle)
                 .text-wrapper
-                  time=event.date
+                  p !{event.date}
                   +renderTextContentBlock(event.textList)
 
         aside.about__aside
