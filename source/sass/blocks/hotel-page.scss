@@ -224,9 +224,20 @@
 
     .hotel-headline--edit {
       display: flex;
+      padding: 14px 0 4px;
 
       @include viewport--sm {
         display: none;
+      }
+
+      .back-link {
+        padding-top: 13px;
+        padding-left: 25px;
+
+        @include viewport--lg {
+          padding-top: 27px;
+          padding-left: 0;
+        }
       }
     }
   }
