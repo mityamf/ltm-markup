@@ -3,7 +3,7 @@
 <!--Таблица с отправленными сообщениями-->
 <!--Таблица с входящими сообщениями-->
 <!--Таблица со списком гостей--><!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <title>Luxury Travel Mart — Главная</title>
     <meta charset="utf-8">
@@ -2805,7 +2805,7 @@
             <h2 class="promo__title">The leading luxury travel exhibition in eastern europe, russia &amp; cis</h2><a class="button button--blue promo__reg" href="registration.html">Registration</a>
           </div>
         </section>
-        <section class="direction direction__swiper">
+        <section class="direction direction-swiper">
           <div class="swiper-container direction__swiper-block">
             <h2 class="visually-hidden">List of available destinations</h2>
             <ul class="direction__list swiper-wrapper">
@@ -2892,7 +2892,7 @@
             </div>
           </div>
         </section>
-        <section class="container news-home">
+        <section class="container container--no-padding news-home">
           <div class="news-home__about">
             <h2 class="news-home__about-title">About LTM</h2>
             <div class="news-home__img-wrapper">
@@ -2933,7 +2933,7 @@
                 </div>
                 <div class="news-home__info-content">
                   <time class="news-home__info-date" datetime="2019-04-18">18 April 2019</time>
-                  <h3p class="news-home__title-info">LTM Anniversary Exhibition</h3p>
+                  <h3 class="news-home__title-info">LTM Anniversary Exhibition</h3>
                   <div class="news-home__info-text">
                     <p>Next year Moscow will welcome spring with a certain flair. A spectacular celebration is set to take place on the first day of March – the 15th anniversary of the Luxury Travel Mart, which brings together the leading players from the luxury tourism industry from across the globe…</p>
                   </div>
@@ -3000,24 +3000,24 @@
             </ul>
             <div class="interaction__btn-block"><a class="button button--open" href="#"><img src="img/sprite/icon-arrow.svg" width="20" height="14" alt="arrow"/><span class="visually-hidden">read more</span></a></div>
           </div>
-          <div class="interaction__gallery">
+          <div class="interaction__gallery gallery-block">
             <h2 class="gallery-block__title">Gallery</h2>
-            <div class="gallery">
-              <div class="gallery__block-1">
+            <div class="gallery-block__wrapper">
+              <div class="gallery-block__block-1">
                 <picture><img src="img/content/gallery-1.png" srcset="img/content/gallery-1@2x.png 2x" width="341" height="222" alt="img gallery"/>
                 </picture>
                 <picture class="gallery__img"><img src="img/content/gallery-2.png" srcset="img/content/gallery-2@2x.png 2x" width="341" height="222" alt="img gallery"/>
                 </picture>
               </div>
-              <div class="gallery__block-2">
+              <div class="gallery-block__block-2">
                 <picture><img src="img/content/gallery-3.png" srcset="img/content/gallery-3@2x.png 2x" width="272" height="222" alt="img gallery"/>
                 </picture>
               </div>
-              <div class="gallery__block-3">
+              <div class="gallery-block__block-3">
                 <picture><img src="img/content/gallery-4.png" srcset="img/content/gallery-4@2x.png 2x" width="272" height="222" alt="img gallery"/>
                 </picture>
               </div>
-              <div class="gallery__block-4">
+              <div class="gallery-block__block-4">
                 <picture class="gallery__img"><img src="img/content/gallery-5.png" srcset="img/content/gallery-5@2x.png 2x" width="341" height="222" alt="img gallery"/>
                 </picture>
                 <picture><img src="img/content/gallery-6.png" srcset="img/content/gallery-6@2x.png 2x" width="341" height="222" alt="img gallery"/>
@@ -3027,8 +3027,8 @@
             <div class="gallery-block__btn-block"><a class="button button--open" href="#"><img src="img/sprite/icon-arrow.svg" width="20" height="14" alt="arrow"/><span class="visually-hidden">read more</span></a></div>
           </div><a class="interaction__btn" href="#">View All Exhibitors</a>
         </section>
-        <section class="partners container">
-          <div class="patners__block">
+        <section class="container partners">
+          <div class="partners__block">
             <h2 class="partners__title">Partners</h2>
             <ul class="partners__list">
               <li class="partners__item"><a href="#">
@@ -3119,8 +3119,8 @@
           </div>
         </section>
       </main>
-      <footer>
-        <div class="footer container">
+      <footer class="container">
+        <div class="footer">
           <ul class="footer__logotip logotip">
             <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company-ap" src="./img/svg/g10.svg" alt="company logo" width="67" height="73"/></a></li>
             <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company-tm" src="./img/svg/tm-logo.svg" alt="company logo" width="110" height="57"/></a></li>
@@ -3156,17 +3156,17 @@
           </div>
           <div class="footer__info"><span class="footer__info-info">&copy; All right reserved by Artyom Polanskiy and Travel Media LLC.</span></div>
         </div>
-        <div class="cookies">
-          <button class="cookies__btn-close" type="button" aria-label="Закрыть">
-            <svg width="33" height="33" aria-hidden="true">
-              <use xlink:href="#icon-close"></use>
-            </svg>
-          </button>
-          <h2 class="cookies__title">LTM Website uses cookies</h2>
-          <p class="cookies__description">Website uses cookies and similar technologies. We use functional cookies to make sure our websites work well and secure and analytical cookies to offer you the best possible user experience. By clicking on ’Agree’, you consent to the placing of these cookies.</p><a class="cookies__info" href="#">For more information read Cookies policy</a>
-          <button class="button button--transparent" type="button">ok</button>
-        </div>
       </footer>
+      <div class="cookies">
+        <button class="cookies__btn-close" type="button" aria-label="Закрыть">
+          <svg width="33" height="33" aria-hidden="true">
+            <use xlink:href="#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="cookies__title">LTM Website uses cookies</h2>
+        <p class="cookies__description">Website uses cookies and similar technologies. We use functional cookies to make sure our websites work well and secure and analytical cookies to offer you the best possible user experience. By clicking on ’Agree’, you consent to the placing of these cookies.</p><a class="cookies__info" href="#">For more information read Cookies policy</a>
+        <button class="button button--transparent" type="button">ok</button>
+      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

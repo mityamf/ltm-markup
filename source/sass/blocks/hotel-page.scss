@@ -76,7 +76,7 @@
     list-style-type: none;
 
     @include viewport--lg {
-      padding: 26px 0 0;
+      padding: 38px 0 0;
     }
 
     @include viewport--sm {
@@ -127,6 +127,8 @@
     }
 
     @include viewport--sm {
+      display: block;
+
       .title--h2 {
         display: none;
       }
@@ -135,9 +137,12 @@
 
   &__title > h2 {
     margin-bottom: 0;
+    line-height: 35px;
 
     @include viewport--lg {
       padding-right: 0;
+      letter-spacing: 1.5px;
+      line-height: 35px;
     }
   }
 
@@ -153,14 +158,8 @@
 
   .back-link {
     display: flex;
-    text-align: right;
     clear: both;
-    margin: 5px 23px 30px auto;
     align-items: center;
-
-    @include viewport--md {
-      display: none;
-    }
 
     svg {
       margin-right: 5px;
@@ -186,6 +185,7 @@
     @include viewport--sm {
       font-size: 20px;
       line-height: 24px;
+      text-align: center;
     }
 
     transition: opacity $default-transition-settings;
@@ -199,12 +199,22 @@
       opacity: 0.5;
     }
   }
-}
 
-.container--hotel-page {
-  @include viewport--sm {
-    .promo {
+  &--headline-wrapper {
+    .hotel-headline:not(.hotel-headline--edit) {
       display: none;
+
+      @include viewport--sm {
+        display: flex;
+      }
+    }
+
+    .hotel-headline--edit {
+      display: flex;
+
+      @include viewport--sm {
+        display: none;
+      }
     }
   }
 }

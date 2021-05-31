@@ -1,0 +1,80 @@
+mixin renderEditComponent(photo, visibility)
+  if visibility
+    - var visibilityClass = 'photo-edit__visible'
+  .photo-edit(class=visibilityClass)
+    .photo-edit__buttons
+      label
+        input(type="file")
+        +icon("icon-file-photo", 50, 50)
+      button(type="button")
+        +icon("icon-del-photo", 50, 50)
+    .photo-edit__text
+      if photo.text
+        span=photo.text
+      span=photo.min
+      span=photo.max
+
+mixin renderEditPhotos(photoList, cover)
+  .top-block.top-block--edit
+    img(src=cover.src, srcset=cover.srcset)
+    +renderEditComponent(cover)
+
+  .photos.photos--edit
+    .photos__wrapper
+      .photos__block.photos__block--first
+        picture
+          img(src=photoList[0].src, srcset=photoList[0].srcset)
+        +renderEditComponent(photoList[0])
+
+      .photos__block.photos__block--second
+        .photos__block__wrapper
+          each photo in photoList.slice(1, 4)
+            .photos__item(class='photos__item--' + photo.mod)
+              picture
+                img(src=photo.src, srcset=photo.srcset)
+              +renderEditComponent(photo)
+        .photos__block__wrapper
+          each photo in photoList.slice(4, 7)
+            .photos__item(class='photos__item--' + photo.mod)
+              picture
+                img(src=photo.src, srcset=photo.srcset)
+              +renderEditComponent(photo)
+
+    .photos__block.photos__block--last
+      each photo in photoList.slice(8)
+        .photos__item
+          picture
+            img(src=photo.src, srcset=photo.srcset)
+          +renderEditComponent(photo)
+
+      .photos__item.photos__item--upload
+        label
+          input(type="file")
+          +icon("icon-file-photo", 50, 50)
+
+mixin renderPhotos(photoList)
+  .photos
+    .photos__wrapper
+      .photos__block.photos__block--first
+        picture
+          img(src=photoList[0].src, srcset=photoList[0].srcset)
+
+      .photos__block.photos__block--second
+        .photos__block__wrapper
+          each photo in photoList.slice(1, 4)
+            .photos__item(class='photos__item--' + photo.mod)
+              picture
+                img(src=photo.src, srcset=photo.srcset)
+        .photos__block__wrapper
+          each photo in photoList.slice(4, 7)
+            .photos__item(class='photos__item--' + photo.mod)
+              picture
+                img(src=photo.src, srcset=photo.srcset)
+
+    .photos__block.photos__block--last
+      each photo in photoList.slice(8)
+        .photos__item
+          picture
+            img(src=photo.src, srcset=photo.srcset)
+
+

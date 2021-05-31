@@ -1,10 +1,15 @@
-.patners__block {
+.partners__block {
   border-top: 1px solid $color-blue;
-  padding-top: 30px;
+  padding-top: 43px;
+
+  @media (min-width: 1920px) {
+    padding-bottom: 26px;
+    padding-top: 27px;
+  }
 }
 
 .partners__title {
-  font-size: 38px;
+  font-size: 36px;
   font-weight: 300;
   color: $color-blue;
   margin: 0;
@@ -20,18 +25,22 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding-top: 45px;
 
   @include viewport--sm {
     padding-top: 20px;
   }
+
+  @media (min-width: 1920px) {
+    padding-bottom: 30px;
+  }
 }
 
 .partners__item {
   padding-right: 50px;
-  padding-bottom: 45px;
+  padding-bottom: 29px;
 
   @include viewport--sm {
     padding-right: 10px;
@@ -48,4 +57,10 @@
   justify-content: center;
   font-weight: 600;
   font-size: 15px;
+  letter-spacing: 1px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 }

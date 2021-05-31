@@ -133,8 +133,16 @@
   }
 
   .choices {
-    height: auto;
+    height: 42px;
     width: 100%;
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  .choices__inner {
+    height: 42px;
+    border-radius: 0;
+    background-color: transparent;
   }
 
   &__buttons {

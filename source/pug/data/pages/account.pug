@@ -1,0 +1,432 @@
+-
+  var accountHotelInfo = {
+    text: "Mandarin Oriental Hotel Group is the award-winning owner and operator of some of the world’s most prestigious hotels, resorts and residences. Over the past fifty years, the Group has grown its business from its original flagship properties in Asia – the acclaimed Mandarin Oriental, Hong Kong and Mandarin Oriental, Bangkok – to successfully operate in major business centres and key leisure destinations around the world.",
+    link: "https://www.mandarinoriental.com",
+    buttonText: "Edit Information"
+  }
+
+-
+  var administrator = {
+    title: "Company administrator",
+    src: "img/content/admin-photo.jpg",
+    name: "Stanislav",
+    lastName: "Ozeretsky",
+    position: "Sales Manager Russia and CIS",
+    text: "Administrator can add/edit information about company, himself information, add/edit colleagues in the event pages"
+  }
+
+-
+  var notifications = [
+    {
+      status: "new",
+      theme: "Information About You Account",
+      message: "Dear Exhibitor, you can edit photo in your company profile in LTM",
+      date: "22 Dec. 2019",
+      time: "18:57",
+      link: "#"
+    },
+    {
+      status: "new",
+      theme: "Information About You Account",
+      message: "Dear Exhibitor, you can edit photo in your company profile in LTM",
+      date: "22 Dec. 2019",
+      time: "18:57",
+      link: "#"
+    },
+    {
+      status: "opened",
+      theme: "Information About You Account",
+      message: "Dear Exhibitor, you can edit photo in your company profile in LTM",
+      date: "23 Dec. 2019",
+      time: "13:40",
+      link: "#"
+    },
+    {
+      status: "new",
+      theme: "Information About You Account",
+      message: "Dear Exhibitor, you can edit photo in your company profile in LTM",
+      date: "22 Dec. 2019",
+      time: "18:57",
+      link: "#"
+    },
+    {
+      status: "new",
+      theme: "Information About You Account",
+      message: "Dear Exhibitor, you can edit photo in your company profile in LTM",
+      date: "22 Dec. 2019",
+      time: "18:57",
+      link: "#"
+    },
+  ]
+
+-
+  var hotelHeadline = {
+    title: "Mandarin Oriental Hotel Group",
+    note: "Exhibitor",
+    logo: "mandarin-logo",
+    logoWidth: "103px",
+    logoHeight: "80px",
+    link: "#"
+  }
+
+- var pageTitle = "Edit Company Info"
+
+- var editingBlockStatus = "active"
+
+-
+  var editingBlockList = [
+    {
+      title: "Description of Company:",
+      type: "text",
+      content: [
+        "Mandarin Oriental Hotel Group is the award-winning owner and operator of some of the world’s most prestigious hotels, resorts and residences. Over the past fifty years, the Group has grown its business from its original flagship properties in Asia – the acclaimed Mandarin Oriental, Hong Kong and Mandarin Oriental, Bangkok – to successfully operate in major business centres and key leisure destinations around the world.",
+        "Mandarin Oriental’s aim is to be recognized widely as the best global luxury hotel group, providing 21st century luxury with oriental charm in each of its hotels. Mandarin Oriental now operates 31 hotels and eight residences in 21 countries and territories, with each property reflecting the Group’s oriental heritage and unique sense of place.",
+        "The multi-award winning Spas at Mandarin Oriental are havens for contemplation and discovery. The Spa at Mandarin Oriental, Bangkok was one of the very first hotel spas to open in 1993.",
+        "A leader in the spa field, the Group was the first to launch its signature “Time Ritual” which encourages guests to book time rather than specific treatments, so that services can be tailor-made to meet specific needs.",
+        "Mandarin Oriental offers some of the most exciting hotel dining in the world today. The Group’s passion for creating memorable dining experiences has been recognized in the Michelin Guide, with a total of 21 Michelin stars being awarded to 14 diverse restaurants from around the world in the 2018 list. This is more than any other hotel brand in the world."
+      ]
+    },
+    {
+      title: "Official web-site:",
+      type: "input",
+      content: "https://www.mandarinoriental.com",
+    },
+    {
+      title: "Area of business:",
+      type: "select",
+      content: [
+        "Hotel group",
+        "Hello, hello",
+      ]
+    },
+    {
+      title: "Country of business:",
+      type: "select",
+      content: [
+        "Worldwide",
+        "Hello, hello"
+      ]
+    }
+  ]
+
+-
+  var buttons = {
+    leftBorder: true,
+    buttonList: [
+      {
+        text: "Cancel",
+        type: "reset",
+        theme: "btn--white",
+        mod: "edit-buttons__cancel"
+      },
+      {
+        text: "Save",
+        type: "submit",
+        theme: "btn--blue",
+        mod: "edit-buttons__save"
+      }
+    ]
+  }
+
+-
+  var hotelPhotos = {
+    cover: {
+      src: "img/bg/hotel-promo-desktop.png",
+      srcset: "img/bg/hotel-promo-desktop@2x.png 2x",
+      text: "Cover image",
+      min: "Min. 1920x534 px.",
+      max: "Max. 3 mb."
+    },
+    photoList: [
+      {
+        src: "img/content/hotel-mandarin-desktop-1.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-1@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb."
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-2.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-2@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb."
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-3.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-3@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb."
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-4.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-4@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb."
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-5.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-5@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb."
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-6.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-6@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb."
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-7.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-7@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb."
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-8.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-8@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb."
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-9.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-9@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb."
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-10.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-10@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb."
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-11.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-11@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb."
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-12.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-12@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb."
+      },
+    ]
+  }
+
+-
+  var eventList = {
+    title: "Exhibitor’s",
+    subtitle: "My Events",
+    hotelList: [
+      {
+        title: "Luxury Travel Mart Moscow Spring’ 2020",
+        text: "at Hyatt Regency Moscow Petrovsky Park",
+        date: "27–28 February 2020",
+        status: "paid",
+        statusText: "Registered. Paid",
+        statusDescription: "You can send and receive requests, view basic information, register colleagues, etc.",
+        buttonText: "Select this event"
+      },
+      {
+        title: "Luxury Travel Mart Almaty Spring’ 2020",
+        text: "at The Ritz-Carlton, Almaty, Kazakhstan",
+        date: "3 March 2020",
+        status: "unpaid",
+        statusText: "Unpaid yet",
+        statusDescription: "You can’t send and receive requests, view basic information, register colleagues, etc. Please, pay the bill.",
+        buttonText: "Select this event"
+      },
+      {
+        title: "Luxury Travel Mart Kyiv Autumn’ 2020",
+        text: "at The Intercontinental, Kyiv, Ukraine",
+        date: "24 September 2020",
+        status: "not-registered",
+        statusText: "Not Registered",
+        statusDescription: "You can’t send and receive requests, view basic information, register colleagues, etc. Please register before sold-out.",
+        buttonText: "Registration"
+      },
+      {
+        title: "Luxury Travel Mart Almaty Autumn’ 2020",
+        text: "at The Ritz-Carlton, Almaty, Kazakhstan",
+        date: "24 September 2020",
+        status: "not-registered",
+        statusText: "Not Registered",
+        statusDescription: "You can’t send and receive requests, view basic information, register colleagues, etc. Please register before sold-out.",
+        buttonText: "Registration"
+      },
+      {
+        title: "Luxury Travel Mart Almaty Spring’ 2020",
+        text: "at The Ritz-Carlton, Almaty, Kazakhstan",
+        date: "3 March 2020",
+        status: "unpaid",
+        statusText: "Unpaid yet",
+        statusDescription: "You can’t send and receive requests, view basic information, register colleagues, etc. Please, pay the bill.",
+        buttonText: "Select this event"
+      },
+      {
+        title: "Luxury Travel Mart Kyiv Autumn’ 2020",
+        text: "at The Intercontinental, Kyiv, Ukraine",
+        date: "24 September 2020",
+        status: "not-registered",
+        statusText: "Not Registered",
+        statusDescription: "You can’t send and receive requests, view basic information, register colleagues, etc. Please register before sold-out.",
+        buttonText: "Registration"
+      },
+    ]
+  }
+
+-
+  var hotelPhotos = {
+    cover: {
+      src: "img/bg/hotel-promo-desktop.png",
+      srcset: "img/bg/hotel-promo-desktop@2x.png 2x",
+      text: "Cover image",
+      min: "Min. 1920x534 px.",
+      max: "Max. 3 mb."
+    },
+    photoList: [
+      {
+        src: "img/content/hotel-mandarin-desktop-1.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-1@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb."
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-2.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-2@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb.",
+        mod: "middle"
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-3.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-3@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb.",
+        mod: "big"
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-4.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-4@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb.",
+        mod: "small"
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-5.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-5@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb.",
+        mod: "middle"
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-6.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-6@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb.",
+        mod: "small"
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-7.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-7@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb.",
+        mod: "big"
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-5.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-5@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb.",
+        mod: "middle"
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-6.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-6@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb.",
+        mod: "small"
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-7.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-7@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb.",
+        mod: "big"
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-6.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-6@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb.",
+        mod: "small"
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-7.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-7@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb.",
+        mod: "big"
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-7.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-7@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb.",
+        mod: "big"
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-6.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-6@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb.",
+        mod: "small"
+      },
+      {
+        src: "img/content/hotel-mandarin-desktop-7.jpg",
+        srcset: "img/content/hotel-mandarin-desktop-7@2x.jpg 2x",
+        min: "Min. 1920x534 px.",
+        max: "Max. 3 mb.",
+        mod: "big"
+      },
+    ]
+  }
+
+-
+  var contactsList = {
+    title: "Contacts for support",
+    contacts: [
+      {
+        src: "img/content/support-photo-1.jpg",
+        name: "Maria Shankina",
+        position: "General Administration and Sponsorship",
+        email: "yahoo@yahoo.com",
+        phone: "79857765522",
+        phoneText: "+7 985 776 55 22"
+      },
+      {
+        src: "img/content/support-photo-2.jpg",
+        name: "Artyom Polanskiy",
+        position: "General Administration and Exhibitors",
+        email: "yahoo@yahoo.com",
+        phone: "79857765522",
+        phoneText: "+7 985 776 55 22"
+      },
+      {
+        src: "img/content/support-photo-3.jpg",
+        name: "Irina Bezpalaya",
+        position: "Buyers and Appointments",
+        email: "yahoo@yahoo.com",
+        phone: "79852467232",
+        phoneText: "+7 985 246 72 32"
+      },
+      {
+        src: "img/svg/icon-support-no-photo.svg",
+        name: "Support",
+        position: "Question about new web-functional",
+        email: "yahoo@yahoo.com",
+        phone: "74956450422",
+        phoneText: "+7 495 645 04 22"
+      }
+    ]
+  }

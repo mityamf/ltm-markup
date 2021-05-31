@@ -7,7 +7,7 @@ block data
 block variables
 
 doctype html
-html(lang="ru")
+html(lang="en")
   head
     title= title
     meta(charset="utf-8")
@@ -35,6 +35,8 @@ html(lang="ru")
     block modals
       +modal("modal--forgot")
         +modal-forgot()
-
+    if (hasUpButton)
+      .hidden-sm
+        +renderUpButton('up-button--fixed')
     script(src="js/vendor.min.js")
     script(src="js/main.min.js")

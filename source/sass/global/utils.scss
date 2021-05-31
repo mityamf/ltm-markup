@@ -53,6 +53,22 @@
   cursor: pointer;
 }
 
+.hidden-sm {
+  @include viewport--sm {
+    display: none;
+  }
+}
+
+.visible-sm {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.no-padding {
+  margin: 0 -17px;
+}
+
 @keyframes disableBreakpointAnimation {
   0% {
     visibility: hidden;

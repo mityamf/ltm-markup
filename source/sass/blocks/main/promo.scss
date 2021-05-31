@@ -9,10 +9,19 @@
   background-color: $color-gray-dark;
 
   @include viewport--sm {
-    padding-top: 190px;
+    padding-top: 172px;
+    padding-bottom: 32px;
+  }
+
+  @media (min-width: 1920px) {
+    padding-top: 343px;
+    padding-bottom: 45px;
   }
 }
 
+.promo__none .promo {
+  padding-top: 457px;
+}
 
 .promo::before {
   content: "";
@@ -64,6 +73,7 @@
     max-width: 1200px;
     padding: 0 10px;
   }
+
   @include viewport--sm {
     top: 0;
   }
@@ -77,9 +87,16 @@
   font-family: "Proxima Nova", "Arial", sans-serif;
   text-transform: uppercase;
   line-height: 30px;
+  margin-bottom: 36px;
 
   @include viewport--sm {
-    font-size: 22px;
+    font-size: 21px;
+    margin: 0 0 32px;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: 36px;
+    margin-bottom: 59px;
   }
 }
 

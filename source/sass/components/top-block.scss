@@ -42,71 +42,63 @@
     }
   }
 
-  &--edit {
-    position: relative;
-
-    &::before {
-      display: none;
-    }
-  }
-
-  &--edit > .hotel-photos__edit {
-    position: absolute;
-    display: none;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-
-  &--edit:hover {
-    .hotel-photos__edit {
-      display: block;
-    }
-  }
-
-  .hotel-photos__buttons {
-    margin: 15% auto 0 auto;
-    display: block;
-
-    text-align: center;
-  }
-
-  .hotel-photos__text {
-    display: block;
-    margin: 20px auto 0 auto;
-  }
-
-  .hotel-photos__text > span {
-    display: block;
-
-    text-align: center;
-    color: $color-default-white;
-    font-size: 16px;
-    line-height: 22px;
-  }
-
-  .hotel-photos__buttons > label {
-    position: relative;
-    overflow: hidden;
-    width: 50px;
-    height: 50px;
-    margin-right: 15px;
-  }
-
-  .hotel-photos__buttons input {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    visibility: hidden;
-  }
-
-  .hotel-photos__buttons > button {
-    border: none;
-    background: transparent;
-  }
+  //&--edit > .edit-photo {
+  //  position: absolute;
+  //  display: none;
+  //  width: 100%;
+  //  height: 100%;
+  //  top: 0;
+  //  bottom: 0;
+  //  right: 0;
+  //  left: 0;
+  //
+  //  background-color: rgba(0, 0, 0, 0.5);
+  //}
+  //
+  //&--edit:hover {
+  //  .edit-photo {
+  //    display: flex;
+  //  }
+  //}
+  //
+  //.hotel-photos__buttons {
+  //  margin: 15% auto 0 auto;
+  //  display: block;
+  //
+  //  text-align: center;
+  //}
+  //
+  //.hotel-photos__text {
+  //  display: block;
+  //  margin: 20px auto 0 auto;
+  //}
+  //
+  //.hotel-photos__text > span {
+  //  display: block;
+  //
+  //  text-align: center;
+  //  color: $color-default-white;
+  //  font-size: 16px;
+  //  line-height: 22px;
+  //}
+  //
+  //.hotel-photos__buttons > label {
+  //  position: relative;
+  //  overflow: hidden;
+  //  width: 50px;
+  //  height: 50px;
+  //  margin-right: 15px;
+  //}
+  //
+  //.hotel-photos__buttons input {
+  //  position: absolute;
+  //  width: 100%;
+  //  height: 100%;
+  //  visibility: hidden;
+  //}
+  //
+  //.hotel-photos__buttons > button {
+  //  border: none;
+  //  background: transparent;
+  //}
 }

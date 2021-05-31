@@ -1,0 +1,18 @@
+extends ../base/layout
+
+block variables
+  - var title = "Phone LK Guest Company"
+  - var hasHeader = true
+  - var hasFooter = true
+  - var currentPage = "Phone LK Guest Company"
+
+block main
+  include ../data/pages/lk-profile-mobile
+
+  main.container.lk
+    +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
+    +renderLKParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, infoBlock)
+    .admin__control-wrapper
+      +renderAdminTabs(adminTabs)
+    +renderSupportContacts(contactsList)
+

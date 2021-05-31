@@ -29,21 +29,21 @@ mixin interaction()
         a.button.button--open(href="#")
           img(src="img/sprite/icon-arrow.svg", width="20", height="14", alt="arrow")
           span.visually-hidden read more
-    .interaction__gallery
+    .interaction__gallery.gallery-block
       h2.gallery-block__title Gallery
-      .gallery
-        .gallery__block-1
+      .gallery-block__wrapper
+        .gallery-block__block-1
           picture
             +img("content", "gallery-1", "png", "341", "222","img gallery")
           picture.gallery__img
             +img("content", "gallery-2", "png", "341", "222","img gallery")
-        .gallery__block-2
+        .gallery-block__block-2
           picture
             +img("content", "gallery-3", "png", "272", "222","img gallery")
-        .gallery__block-3
+        .gallery-block__block-3
           picture
             +img("content", "gallery-4", "png", "272", "222","img gallery")
-        .gallery__block-4
+        .gallery-block__block-4
           picture.gallery__img
             +img("content", "gallery-5", "png", "341", "222","img gallery")
           picture

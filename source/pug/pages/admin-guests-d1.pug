@@ -6,14 +6,9 @@ block variables
   - var hasFooter = true
   - var currentPage = "lk-exhibitors-d1"
 
+
 block main
-  include ../data/admin/admin-headline
-  include ../data/admin/participants
-  include ../data/admin/admin-tabs
-  include ../data/admin/guests-filters
-  include ../data/admin/filter-tabs
-  include ../data/admin/admin-guests-list
-  include ../data/support-contacts
+  include ../data/pages/admin-guests-d1
 
   main.container.container--no-padding.container--admin
     .admin
@@ -23,9 +18,11 @@ block main
         +renderAdminTabs(adminTabs)
       +renderHeadline2("Buyers Guest List")
       +renderScheduleTabs(scheduleTabs, generatePDF)
-      ul.hotel-filters
-        each filter in filters
-          +renderFilter(filter.title, filter.mod, filter.filterList)
+
+      .filters
+        +renderAlphabetFilter(alphabetFilter)
+        +renderDropdownFilter(dropdownFilters)
+
       +renderFilterTabs(filterTabs)
       +renderGuestsList(adminGuestsListTitles, adminGuestsList)
       button.btn.btn--white.btn--more(type="button")="More"

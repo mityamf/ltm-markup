@@ -22,13 +22,12 @@ block variables
       imgSource: "img/bg/bg-gallery-mobile.png 1x, img/bg/bg-gallery-mobile@2x.png 2x",
       classItem: "promo__none",
       promoItem: "promo__info promo__text-wrapper",
-      noButtonMod: true
     }
 
 block main
 
   main
-    +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem, promoBg.noButtonMod)
+    +promo(promoBg.titleItem, promoBg.btnItem, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
     section.gallery.container.container--no-padding
       h1.visually-hidden Фото и видео
       .toggle

@@ -1,0 +1,18 @@
+extends ../base/layout
+
+block variables
+  - var title = "Phone LK Guest Participants"
+  - var hasHeader = true
+  - var hasFooter = true
+  - var currentPage = "Phone LK Guest Participants"
+
+block main
+  include ../data/pages/lk-participants-mobile
+
+  main.container.lk
+    +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
+    +renderLKParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, infoBlock)
+    .admin__control-wrapper
+      +renderAdminTabs(adminTabs)
+    +renderSupportContacts(contactsList)
+    //TODO сделать ПП три моб страницы админки

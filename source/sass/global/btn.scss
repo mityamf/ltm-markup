@@ -197,18 +197,19 @@
 
   &--blue {
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 600;
     background-color: #0098c1;
     color: #ffffff;
-    padding: 14px 64px;
-    margin-top: 36px;
+    //padding: 14px 64px;
+    padding: 14px 31px;
+    //margin-top: 36px;
     align-self: center;
   }
 
   &--btn-reg {
-    font-size: 20px;
-    font-weight: 300;
-    padding: 14px 64px;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 14px 31px;
     align-self: center;
   }
 

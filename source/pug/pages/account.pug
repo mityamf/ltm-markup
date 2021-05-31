@@ -6,11 +6,7 @@ block variables
   - var hasFooter = true
 
 block main
-  include ../data/hotel-page-editing
-  include ../data/support-contacts
-  include ../data/account
-  include ../data/account-events
-  include ../data/hotel-photos
+  include ../data/pages/account
 
   main.container.container--no-padding
     .hotel-headline.hotel-headline--account-page
@@ -19,7 +15,7 @@ block main
         +renderHeadline2(hotelHeadline.title)
         span=hotelHeadline.note
       +icon(hotelHeadline.logo, hotelHeadline.logoWidth, hotelHeadline.logoHeight)
-    +renderHotelPhotos(hotelPhotos.photoList)
+    +renderPhotos(hotelPhotos.photoList)
     +renderImageSlider(hotelPhotos.photoList)
     +renderAccountHotelInfo(accountHotelInfo.text, accountHotelInfo.link, accountHotelInfo.buttonText)
     +renderEventsList(eventList.title, eventList.subtitle, eventList.hotelList)

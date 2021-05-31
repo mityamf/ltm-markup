@@ -4,3 +4,17 @@ mixin renderHotelHeadline(title, logo, note, logoWidth, logoHeight)
       h2.title--h2=title
       span=note
     +icon(logo, logoWidth, logoHeight)
+
+mixin renderEditHeadline(title, logo, logoWidth, logoHeight, link)
+  .hotel-headline.hotel-headline--edit
+    .hotel-headline__wrapper
+      +renderBackButton(link)
+      h2.title--h2=title
+    .hotel-headline__icon-wrapper
+      +icon(logo, logoWidth, logoHeight)
+      .photo-edit
+        label.photo-edit__label
+          input(type="file")
+          +icon("icon-file-photo", 50, 50)
+          span="*.svg"
+
