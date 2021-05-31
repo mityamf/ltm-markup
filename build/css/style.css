@@ -7775,7 +7775,8 @@ span {
     .photos__block--first img {
       height: 459px;
       -o-object-fit: cover;
-         object-fit: cover; }
+         object-fit: cover;
+      width: 100%; }
     @media (max-width: 1439px) {
       .photos__block--first {
         margin: 0 10px 10px 0;
