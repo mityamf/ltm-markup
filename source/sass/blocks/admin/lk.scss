@@ -1,19 +1,4 @@
 .lk {
-  .admin-headline {
-    padding-top: 22px;
-    padding-bottom: 41px;
-
-    @include viewport--lg {
-      padding-top: 22px;
-      padding-bottom: 34px;
-    }
-
-    @include viewport--sm {
-      padding-top: 15px;
-      padding-bottom: 22px;
-    }
-  }
-
   &__participants-wrapper {
     display: flex;
     padding: 28px 0 24px;

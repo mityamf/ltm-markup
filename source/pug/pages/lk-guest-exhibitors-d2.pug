@@ -6,13 +6,7 @@ block variables
   - var hasFooter = true
 
 block main
-  include ../data/lk/lk-admin-headline
-  include ../data/lk/lk-participants
-  include ../data/lk/lk-admin-tabs
-  include ../data/lk/lk-guests-filters
-  include ../data/lk/lk-filter-tabs
-  include ../data/lk/lk-hosted-guests-list
-  include ../data/lk/lk-support-contacts
+  include ../data/pages/lk-guest-exhibitors-d2
 
   main.container.container--no-padding.lk
     .admin
@@ -22,9 +16,15 @@ block main
         +renderAdminTabs(adminTabs)
       +renderHeadline2("Список участников")
       +renderScheduleTabs(scheduleTabs)
-      ul.hotel-filters
-        each filter in filters
-          +renderFilter(filter.title, filter.mod, filter.filterList)
+
+      .filters.filters--exhibitions
+        +renderAlphabetFilter(alphabetFilter)
+        +renderDropdownFilter(dropdownFilters)
+        +renderFilterButton(buttonFilter)
+
+      .visible-sm
+        +renderMobileFilterButtons("Filters", "Clear all filters")
+
       +renderFilterTabs(filterTabs)
       +renderHostedGuestsList(adminHostedGuestsListTitles, adminHostedGuestsList)
       button.btn.btn--white.btn--more(type="button")="Показать больше"

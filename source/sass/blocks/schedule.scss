@@ -43,7 +43,7 @@
     font-size: 24px;
     font-weight: lighter;
     line-height: 29px;
-    letter-spacing: 0.045em;
+    letter-spacing: 1.2px;
     color: $color-blue;
 
     @include viewport--md {
@@ -55,7 +55,7 @@
     }
   }
 
-  p {
+  &__day p {
     margin-top: 0;
 
     letter-spacing: 0.1px;

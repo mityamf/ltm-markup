@@ -1,15 +1,21 @@
 .schedule-tabs {
+  padding-bottom: 20px;
+
   &__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     margin: 0 -15px -15px 0;
-    padding: 22px 0 0 0;
+    padding: 0;
 
     list-style-type: none;
 
     @include viewport--lg {
       margin: 0 -10px -10px 0;
+    }
+
+    @include viewport--sm {
+      width: 100%;
     }
   }
 
@@ -25,22 +31,37 @@
 
     text-align: center;
 
-    transition: border background-color $default-transition-settings;
+    transition: border background-color color $default-transition-settings;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-color: $color-blue;
       background-color: $color-blue;
 
-      @include viewport--sm {
+      span,
+      time,
+      a {
+        color: $color-default-white;
+      }
+    }
+
+    @include viewport--lg {
+      margin: 0 10px 10px 0;
+      padding: 15px 5px;
+    }
+
+    @include viewport--sm {
+      margin: 0 10px 10px 0;
+      padding: 5px;
+      border-color: $color-blue;
+
+      &:hover,
+      &:focus {
         border-color: $color-blue;
         background-color: transparent;
-      }
 
-      .schedule-tabs__link,
-      .generate-file__link {
-        color: $color-default-white;
-
-        @include viewport--sm {
+        span,
+        time {
           color: $color-gray-dark;
         }
       }
@@ -49,10 +70,29 @@
 
   &__item {
     width: 222px;
+
+    @include viewport--lg {
+      width: 178px;
+    }
+
+    @include viewport--sm {
+      width: calc((100% / 2) - 10px);
+    }
+  }
+
+  &__item span,
+  &__item time {
+    color: $color-blue;
+    font-size: 16px;
+    line-height: 19px;
   }
 
   &__item--generate-pdf {
-    width: max-content;
+    width: 238px;
+
+    @include viewport--lg {
+      width: 272px;
+    }
 
     @include viewport--sm {
       display: none;
@@ -60,6 +100,8 @@
   }
 
   &__text--hidden {
+    margin-left: 5px;
+
     @include viewport--sm {
       display: none;
     }
@@ -71,21 +113,25 @@
     }
   }
 
-  &__item--active {
+  &__item--active,
+  &__item:active {
     border-color: transparent;
     background-color: $color-gray;
 
-    .schedule-tabs__link {
+    span,
+    time {
       color: $color-default-white;
     }
 
     @include viewport--sm {
-      border-color: transparent;
-      background-color: transparent;
+      &:hover {
+        border-color: transparent;
+        background-color: $color-gray;
 
-      .schedule-tabs__link,
-      .generate-file__link {
-        color: $color-gray-dark;
+        span,
+        time {
+          color: $color-default-white;
+        }
       }
     }
   }
@@ -107,6 +153,13 @@
       line-height: 20px;
       letter-spacing: 0.3px;
     }
+  }
+}
+
+.container--no-padding .schedule-tabs {
+  @include viewport--sm {
+    padding-left: 17px;
+    padding-right: 17px;
   }
 }
 

@@ -1,16 +1,20 @@
 .admin-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 21px;
-  margin-bottom: 23px;
+  margin-top: 0;
+  margin-bottom: 31px;
 
   @include viewport--sm {
     display: block;
-    margin-top: 36px;
+    margin-top: 42px;
     margin-bottom: 31px;
   }
 
   tbody {
+    @include viewport--md {
+      display: grid;
+    }
+
     @include viewport--sm {
       display: block;
     }
@@ -19,8 +23,6 @@
   &__row {
     display: block;
     position: relative;
-    white-space: nowrap;
-    overflow: hidden;
 
     @include viewport--sm {
       display: inline-block;
@@ -88,10 +90,6 @@
     @media (max-width: 950px) {
       display: none;
     }
-
-    //@include viewport--sm {
-    //  display: none;
-    //}
   }
 
   &__row .admin-table__cell--event {
@@ -109,7 +107,7 @@
   }
 
   &__row .admin-table__cell--empty {
-    @include viewport--md {
+    @include viewport--sm {
       display: none;
     }
   }
@@ -132,7 +130,8 @@
   &__cell--status,
   &__cell--destination,
   &__cell--event,
-  &__cell--company {
+  &__cell--company,
+  &__cell--time-limit {
     font-size: 12px;
     line-height: 20px;
     color: $color-zambezi;
@@ -166,6 +165,11 @@
 
     @include viewport--lg {
       max-width: 181px;
+    }
+
+    @include viewport--md {
+      max-width: none;
+      width: fit-content;
     }
 
     @include viewport--sm {
@@ -246,12 +250,12 @@
     }
 
     @include viewport--md {
-      width: 15%;
+      width: 10%;
       padding-right: 10px;
       padding-left: 10px;
     }
 
-    @include viewport--md {
+    @include viewport--sm {
       width: auto;
       padding-right: 0;
     }
@@ -275,16 +279,24 @@
   }
 
   &__cell--person {
-    width: 18%;
-    margin-right: 10px;
+    width: 16%;
+    max-width: 220px;
+    margin-right: 18px;
 
     @include viewport--lg {
-      width: 16%;
+      max-width: 169px;
     }
 
     @include viewport--sm {
       display: inline-block;
-      width: 45%;
+      width: 44%;
+      margin-bottom: 7px;
+    }
+  }
+
+  &__cell--person:last-of-type {
+    @include viewport--sm {
+      margin-right: 0;
     }
   }
 
@@ -296,12 +308,30 @@
   }
 
   &__cell--empty {
-    width: 100px;
+    width: 17%;
+
+    @include viewport--lg {
+      width: 11%;
+    }
+
+    @include viewport--md {
+      width: 10px;
+    }
+  }
+
+  &__cell--empty:last-of-type {
+    @include viewport--lg {
+      width: 7%;
+    }
   }
 
   .admin-table__cell--schedule-time {
-    margin-right: 20px;
-    width: 9%;
+    margin-right: 10px;
+    width: 7%;
+
+    @include viewport--lg {
+      width: 9%;
+    }
 
     @include viewport--md {
       width: 12%;
@@ -309,38 +339,57 @@
 
     @include viewport--sm {
       display: block;
+      margin-bottom: 5px;
+      width: 100%;
       margin-right: 0;
     }
   }
 
   &__cell--select-company {
-    margin-right: 20px;
-    width: 50%;
+    margin-right: 12px;
+    width: 41%;
+
+    @include viewport--lg {
+      margin-right: 8px;
+      width: 52%;
+    }
 
     @include viewport--sm {
-      width: 40%;
+      width: 72%;
     }
   }
 
   &__cell--button {
     margin-right: 20px;
-    width: 9%;
+    padding: 0;
+    width: 7%;
+
+    @include viewport--lg {
+      margin-right: 20px;
+      width: 9%;
+    }
 
     @include viewport--md {
       width: 12%;
     }
 
     @include viewport--sm {
-      width: 20%;
+      width: 23%;
+      margin-right: 0;
     }
   }
 
   &__cell--company {
-    width: 10%;
-    margin-right: 10px;
+    margin-right: 25px;
+    padding-left: 15px;
+    width: 32%;
+    max-width: 450px;
+
+    font-size: 16px;
+    line-height: 20px;
 
     @include viewport--lg {
-      width: 14%;
+      max-width: 257px;
     }
 
     @include viewport--sm {
@@ -362,19 +411,100 @@
   //Уникальные стили для разных категорий таблиц
 
   &__row--schedule {
+    @include viewport--lg {
+      .admin-table__cell--status {
+        width: 2%;
+      }
+    }
+
     @include viewport--sm {
       position: relative;
       width: 100%;
+      display: block;
+      padding: 9px 7px 8px 15px;
 
       .admin-table__cell--status {
         position: absolute;
-        top: 0;
-        right: 0;
+        display: block;
+        top: 7px;
+        right: 45px;
+        width: 0;
+      }
+    }
+
+    th {
+      padding-top: 6px;
+      padding-bottom: 6px;
+
+      @include viewport--sm {
+        padding: 0;
+      }
+    }
+
+    .btn {
+      width: 100%;
+      white-space: normal;
+    }
+  }
+
+  &__row--guests {
+    display: table-row;
+
+    @include viewport--lg {
+      display: table-row;
+    }
+
+    @include viewport--sm {
+      display: block;
+      padding: 9px 16px 10px 16px;
+    }
+
+    .choices__item {
+      text-align: center;
+
+      @include viewport--sm {
+        text-align: left;
+      }
+    }
+
+    .admin-table__cell--select-time {
+      width: 17%;
+      max-width: 223px;
+
+      @include viewport--lg {
+        width: 20%;
+        max-width: 224px;
+        margin-right: 16px;
+      }
+
+      @include viewport--sm {
+        width: 48%;
+        margin-right: 7px;
+      }
+    }
+
+    .admin-table__cell--button {
+      padding: 0;
+    }
+
+    .admin-table__cell--button:last-of-type {
+      margin-right: 0;
+    }
+
+    th {
+      padding-top: 8px;
+      padding-bottom: 1px;
+
+      @include viewport--sm {
+        padding: 0;
       }
     }
   }
 
   &__row--messages {
+    white-space: nowrap;
+    overflow: hidden;
+
     @include viewport--sm {
       position: relative;
       width: 100%;
@@ -453,65 +583,81 @@
 
   .choices {
     height: 38px;
+
+    @include viewport--sm {
+      height: 42px;
+    }
   }
 
   .choices__inner {
     height: 38px;
     min-height: 38px;
-    padding: 4px 15px;
+    padding: 6px 6px;
+
+    @include viewport--sm {
+      height: 42px;
+    }
   }
 
   .choices__inner,
   .choices__item {
-    background-color: transparent;
+    font-size: 16px;
+    line-height: 22px;
     color: $color-blue;
+
+    background-color: transparent;
+  }
+
+  .choices__list--single {
+    padding: 0 16px 4px 4px;
+
+    @include viewport--sm {
+      padding: 3px 16px 4px 4px;
+    }
+  }
+
+  .choices[data-type*="select-one"] .choices__inner {
+    padding: 6px 6px;
+  }
+
+  .choices[data-type*="select-one"]::after {
+    height: 21px;
+    width: 11px;
+    right: 9px;
+    top: 8px;
+    margin-top: 0;
+
+    background-image: url("../img/svg/icon-open-select.svg");
+
+    @include viewport--sm {
+      height: 16px;
+      width: 34px;
+      right: 4px;
+      top: 14px;
+
+      background-image: url("../img/svg/icon-check.svg");
+    }
   }
 
   //Стили кнопок отправки запроса/сообщений
 
-  .btn--request {
-    padding: 5px 7px;
+  .btn--request,
+  .admin-table__link {
+    padding: 2px 7px;
 
     font-size: 12px;
     line-height: 18px;
 
-    @include viewport--sm {
-      white-space: break-spaces;
+    @include viewport--lg {
+      max-width: 95px;
     }
-  }
-
-  &__link {
-    padding: 5px 7px;
-
-    border: 1px solid $color-blue;
-    background-color: transparent;
-
-    color: $color-blue;
-    font-size: 12px;
-    line-height: 18px;
-    font-weight: normal;
-
-    transition: color background-color $default-transition-settings;
 
     @include viewport--sm {
-      display: inline-block;
+      padding: 6px 5px;
+
       white-space: break-spaces;
-      text-align: center;
-    }
-
-    &:hover,
-    &:focus {
-      border-color: transparent;
-      background-color: $color-blue;
-
-      color: $color-default-white;
-    }
-
-    &:active {
-      border-color: transparent;
-      background-color: $color-gray;
-
-      color: $color-default-white;
+      font-size: 14px;
+      line-height: 13px;
     }
   }
 
@@ -536,5 +682,12 @@
   @include viewport--sm {
     padding-left: 17px;
     padding-right: 17px;
+  }
+}
+
+.admin--schedule .admin-table {
+  @include viewport--sm {
+    margin-top: 0;
+    margin-bottom: 20px;
   }
 }

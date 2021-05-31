@@ -2,7 +2,7 @@ mixin renderEventsList(title, subtitle, hotelList)
   .account__event-block
     h2.title--h2=title
     h3.title--h3=subtitle
-    div.direction.container.swiper-container.event-swiper
+    div.direction.container.swiper-container.direction__slider--event
       ul.account__event-list.direction-list.swiper-wrapper
         each hotel in hotelList
           li.account__event(class='account__event--' + hotel.status).swiper-slide

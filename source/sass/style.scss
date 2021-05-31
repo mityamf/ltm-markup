@@ -14,7 +14,9 @@
 @import "global/utils";
 @import "global/container";
 @import "global/text";
+@import "global/text-wrapper";
 @import "global/btn";
+@import "global/open-more";
 
 // Blocks
 //---------------------------------
@@ -71,12 +73,11 @@
 @import "blocks/notification-message";
 @import "blocks/account/account-hotel-info";
 @import "blocks/account/account";
-@import "blocks/hotel-page-edit";
-@import "blocks/hotel-photos";
 @import "blocks/modal-gallery";
 @import "blocks/login";
 @import "blocks/forgot";
 @import "blocks/photos-slider";
+@import "blocks/photos";
 @import "components/headline-back";
 @import "components/info-bottom";
 @import "components/hotel-card";
@@ -85,6 +86,8 @@
 @import "components/top-block";
 @import "components/hotel-headline";
 @import "components/up-button";
+@import "components/filters";
+@import "components/photo-edit";
 @import "blocks/admin/admin";
 @import "blocks/admin/admin-tabs";
 @import "blocks/admin/schedule-tabs";

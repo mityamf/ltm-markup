@@ -6,10 +6,15 @@
 
   @include viewport--lg {
     padding-bottom: 0;
+    padding-top: 29px;
   }
 
   @include viewport--md {
     flex-wrap: wrap;
+  }
+
+  @include viewport--sm {
+    padding-top: 20px;
   }
 
   &__content {
@@ -24,22 +29,123 @@
     @include viewport--md {
       width: 100%;
       max-width: none;
-      padding-bottom: 10px;
+      padding-bottom: 0;
       padding-right: 0;
 
       border-bottom: 1px solid $color-blue;
     }
   }
 
-  ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
+  &__text-wrapper {
+    padding-bottom: 31px;
+
+    @include viewport--lg {
+      padding-bottom: 55px;
+    }
+
+    @include viewport--sm {
+      padding-bottom: 26px;
+    }
   }
 
-  li > svg {
+  &__text-wrapper:last-of-type {
+    @include viewport--sm {
+      padding-bottom: 0;
+    }
+  }
+
+  &__text-wrapper > .text-wrapper {
+    padding: 10px 0 0 0;
+  }
+
+  &__text-wrapper--mobile > .text-wrapper {
+    @include viewport--sm {
+      max-height: 139px;
+      overflow: hidden;
+    }
+  }
+
+  &__text-wrapper--dates {
+    padding: 25px 0 0 0;
+
+    @include viewport--lg {
+      padding: 22px 0 0;
+    }
+
+    @include viewport--sm {
+      padding: 32px 0 0;
+    }
+  }
+
+  &__text-wrapper--dates > .text-wrapper {
+    padding: 20px 0 36px;
+
+    @include viewport--lg {
+      padding: 20px 0 32px;
+    }
+
+    @include viewport--sm {
+      padding: 11px 0 32px;
+    }
+
+    p {
+      letter-spacing: 0.4px;
+      line-height: 20px;
+
+      @include viewport--sm {
+        letter-spacing: 0.3px;
+      }
+    }
+  }
+
+  time {
+    margin-bottom: 7px;
     display: block;
-    margin: 0 auto 17px auto;
+
+    letter-spacing: 0.4px;
+    font-size: 16px;
+    line-height: 22px;
+
+    @include viewport--sm {
+      margin-bottom: 10px;
+
+      line-height: 20px;
+    }
+  }
+
+  &__benefit-list {
+    padding: 18px 0 0 0;
+    margin: 0;
+    list-style-type: none;
+
+    @include viewport--lg {
+      padding-top: 32px;
+    }
+
+    @include viewport--sm {
+      padding-top: 35px;
+    }
+  }
+
+  &__benefit-item {
+    margin-bottom: 40px;
+
+    text-align: center;
+
+    @include viewport--lg {
+      margin-bottom: 31px;
+    }
+  }
+
+  &__benefit-item p {
+    margin: 0;
+
+    letter-spacing: 0.1px;
+  }
+
+  &__benefit-item > svg {
+    display: block;
+    margin: 0 auto 11px;
 
     @include viewport--lg {
       margin: 0 auto 13px auto;
@@ -56,115 +162,17 @@
       padding-top: 30px;
     }
 
-    ul {
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-
-      @include viewport--lg {
-        padding-top: 15px;
-      }
-
-      @include viewport--sm {
-        padding-top: 22px;
-      }
-    }
-
-    li {
-      margin-bottom: 40px;
-
-      text-align: center;
-
-      @include viewport--lg {
-        margin-bottom: 31px;
-      }
-    }
-
-    img {
-      margin: 0 auto 10px auto;
-
-      text-align: center;
-    }
-
-    span {
-      font-size: 16px;
-      line-height: 22px;
-      color: $color-gray-dark;
+    @include viewport--sm {
+      padding-top: 25px;
     }
   }
 
-  .btn {
+  .open-more,
+  .open-more__button {
     display: none;
 
-    @include viewport--md {
-      display: block;
-      margin: 30px auto 24px;
-      padding: 15px;
-      width: 100%;
-      max-width: 222px;
-    }
-  }
-
-  &__text-wrapper--mobile {
     @include viewport--sm {
-      max-height: 135px;
-      overflow: hidden;
-    }
-  }
-
-  &__text-wrapper--small {
-    @include viewport--md {
-      max-height: 136px;
-      overflow: hidden;
-    }
-
-    p:first-child {
-      @include viewport--md {
-        margin-top: 0;
-      }
-    }
-  }
-
-  &__text-wrapper--dates {
-    padding: 16px 0 0 0;
-
-    @include viewport--sm {
-      padding: 0;
-    }
-
-    .title--h2 {
-      margin-bottom: 25px;
-
-      @include viewport--sm {
-        margin-bottom: 32px;
-      }
-    }
-
-    time {
       display: block;
-      margin-bottom: 10px;
-
-      @include viewport--sm {
-        margin-bottom: 5px;
-      }
-    }
-
-    span {
-      display: block;
-
-      font-size: 16px;
-      font-weight: normal;
-      line-height: 22px;
-      color: $color-gray-dark;
-    }
-
-    p {
-      margin-top: 0;
-      margin-bottom: 30px;
-
-      @include viewport--sm {
-        margin-bottom: 20px;
-      }
     }
   }
 }

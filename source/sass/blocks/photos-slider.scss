@@ -50,4 +50,24 @@
   .direction__arrow--left {
     top: 46%;
   }
+
+  .direction__arrow--right {
+    right: 12px;
+  }
+
+  .direction__arrow--left {
+    left: 12px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+
+  picture,
+  img {
+    @include viewport--sm {
+      width: 100%;
+    }
+  }
 }

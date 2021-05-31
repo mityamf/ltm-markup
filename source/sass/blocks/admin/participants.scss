@@ -112,6 +112,7 @@
 
   &__item span {
     display: block;
+    word-break: break-all;
   }
 
   &__name {

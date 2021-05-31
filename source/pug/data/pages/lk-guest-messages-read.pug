@@ -1,0 +1,160 @@
+-
+  var adminHeadline = {
+    eventName: "Luxury Travel Mart Moscow Spring’ 2020",
+    eventPlace: "at Hyatt Regency Moscow Petrovsky Park",
+    dates: "27 – 28 February 2020",
+  }
+- var participantsHeadline = "Сотрудники на выставку"
+- var participantsInfo = "Только 2 гостя могут принять участие"
+- var participantsText = "Если вы хотите добавить больше коллег на выставку, свяжитесь с организаторами"
+
+-
+  var participantsList = [
+    {
+      photo: "img/content/admin-photo-2.jpg",
+      name: "Alexey",
+      lastName: "Stavsky",
+      position: "Director",
+      mail: "123@gmail.com",
+      note: "Администратор"
+    },
+    {
+      photo: "img/content/admin-photo-3.jpg",
+      name: "Alyona",
+      lastName: "Alexandrova-Fedorova",
+      position: "PR-Manager",
+      mail: "123@gmail.com",
+      note: "Коллега"
+    }
+  ]
+
+-
+  var infoBlock = {
+    title: "Adventa Agency",
+    link: "https://adventaagency.ru",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    buttonText: "Редактировать",
+    buttonType: "button"
+  }
+-
+  var adminTabs = [
+    {
+      text: "Программа и инфо",
+      link: "lk-guest.html",
+      currentPage: "Deadline"
+    },
+    {
+      text: "Сообщения",
+      link: "lk-guest-messages-inbox.html",
+      currentPage: "Messages"
+    },
+    {
+      text: "Моё расписание",
+      link: "lk-guest-schedule-d1.html",
+      currentPage: "Schedule"
+    },
+    {
+      text: "Список участников",
+      link: "lk-guest-exhibitors-d1.html",
+      currentPage: "Hosted Buyers Guest List"
+    },
+  ]
+-
+  var contactsList = {
+    title: "Помощь",
+    contacts: [
+      {
+        src: "img/content/support-photo-3.jpg",
+        name: "Ирина Безпалая",
+        position: "Buyers and Appointments",
+        email: "yahoo@yahoo.com",
+        phone: "79857765522",
+        phoneText: "+7 985 776 55 22"
+      },
+      {
+        src: "img/svg/icon-support-no-photo.svg",
+        name: "Поддержка",
+        position: "Вопросы о новом сайте",
+        email: "yahoo@yahoo.com",
+        phone: "74956450422",
+        phoneText: "+7 495 645 04 22"
+      },
+    ]
+  }
+-
+  var adminMailControl = {
+    linkList: [
+      {
+        link: "lk-guest-messages-new.html",
+        icon: "icon-write-message",
+        iconWidth: 24,
+        iconHeight: 24,
+        mod: "new",
+        currentPage: "MessagesNew"
+      },
+      {
+        link: "lk-guest-messages-inbox.html",
+        text: "Входящие",
+        mod: "inbox",
+        currentPage: "Messages"
+      },
+      {
+        link: "lk-guest-messages-sent.html",
+        text: "Отправленные",
+        mod: "sent",
+        currentPage: "MessagesSent"
+      },
+      {
+        link: "lk-guest-messages-new.html",
+        text: "Написать организаторам",
+        mod: "contacts",
+        currentPage: "MessagesNew"
+      }
+    ],
+    isSearchInput: true
+  }
+- var editingBlockStatus = "disabled"
+
+-
+  var editingBlockList = [
+    {
+      title: "От кого:",
+      type: "info-input",
+      content: "Travel Luxury Agency",
+    },
+    {
+      title: "Тема:",
+      type: "info-input",
+      content: "Meeting appointment",
+    },
+    {
+      title: "Сообщение:",
+      type: "text",
+      content: [
+        "Mandarin Oriental Hotel Group is the award-winning owner and operator of some of the world’s most prestigious hotels, resorts and residences. Over the past fifty years, the Group has grown its business from its original flagship properties in Asia – the acclaimed Mandarin Oriental, Hong Kong and Mandarin Oriental, Bangkok – to successfully operate in major business centres and key leisure destinations around the world.",
+        "Mandarin Oriental’s aim is to be recognized widely as the best global luxury hotel group, providing 21st century luxury with oriental charm in each of its hotels. Mandarin Oriental now operates 31 hotels and eight residences in 21 countries and territories, with each property reflecting the Group’s oriental heritage and unique sense of place.",
+        "The multi-award winning Spas at Mandarin Oriental are havens for contemplation and discovery. The Spa at Mandarin Oriental, Bangkok was one of the very first hotel spas to open in 1993.",
+        "A leader in the spa field, the Group was the first to launch its signature “Time Ritual” which encourages guests to book time rather than specific treatments, so that services can be tailor-made to meet specific needs.",
+        "Mandarin Oriental offers some of the most exciting hotel dining in the world today. The Group’s passion for creating memorable dining experiences has been recognized in the Michelin Guide, with a total of 21 Michelin stars being awarded to 14 diverse restaurants from around the world in the 2018 list. This is more than any other hotel brand in the world."
+      ],
+    },
+  ]
+
+-
+  var buttons = {
+    leftBorder: false,
+    buttonList: [
+      {
+        text: "Ответить",
+        type: "submit",
+        theme: "btn--blue",
+        mod: "edit__buttons--save"
+      },
+      {
+        text: "Назад",
+        type: "button",
+        theme: "btn--white",
+        mod: "edit__buttons--cancel"
+      }
+    ]
+  }
