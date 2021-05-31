@@ -5,7 +5,7 @@
     "info info info ";
   grid-column-gap: 10px;
   border-top: 1.5px solid $color-blue;
-  padding-top: 25px;
+  padding-top: 23px;
   padding-bottom: 45px;
   margin-top: 57px;
 
@@ -54,6 +54,10 @@
     width: 100%;
     justify-content: space-between;
     padding-bottom: 28px;
+  }
+
+  @media (min-width: 1920px) {
+    justify-content: flex-end;
   }
 }
 
