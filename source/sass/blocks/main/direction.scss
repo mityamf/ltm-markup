@@ -172,6 +172,14 @@
 }
 
 .direction--exhibitors {
+  .direction__arrow--right {
+    right: -40px;
+  }
+
+  .direction__arrow--left {
+    left: -40px;
+  }
+
   @include viewport--sm {
     display: flex;
     align-items: center;

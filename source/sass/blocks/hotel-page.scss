@@ -12,8 +12,8 @@
 
   &__info-block {
     display: flex;
-    padding: 0;
     clear: both;
+    padding: 14px 0 0 0;
 
     @include viewport--sm {
       flex-direction: column;
@@ -176,6 +176,19 @@
     }
   }
 
+
+  &__links > .back-link {
+    margin: 0 21px 33px auto;
+
+    @include viewport--lg {
+      margin: 0 16px 24px auto;
+    }
+
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
   &__link {
     font-size: 24px;
     line-height: 29px;
@@ -211,9 +224,20 @@
 
     .hotel-headline--edit {
       display: flex;
+      padding: 14px 0 4px;
 
       @include viewport--sm {
         display: none;
+      }
+
+      .back-link {
+        padding-top: 13px;
+        padding-left: 25px;
+
+        @include viewport--lg {
+          padding-top: 27px;
+          padding-left: 0;
+        }
       }
     }
   }

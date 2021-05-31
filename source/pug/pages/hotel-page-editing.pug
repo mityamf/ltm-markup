@@ -14,9 +14,9 @@ block main
       +renderHotelHeadline(hotelHeadline.title, hotelHeadline.logo, hotelHeadline.note, hotelHeadline.logoWidth, hotelHeadline.logoHeight)
       .visible-sm
         +renderHeadlineWithBackButton(pageTitle, "#")
-    .visible-sm.no-padding
-      +renderEditImageSlider(hotelPhotos.photoList)
-    .hidden-sm
-      +renderEditPhotos(hotelPhotos.photoList, hotelPhotos.cover)
-    +renderEditBlock(editingBlockList, buttons, editingBlockStatus)
+      .visible-sm.no-padding
+        +renderEditImageSlider(hotelPhotos.photoList)
+      .hidden-sm
+        +renderEditPhotos(hotelPhotos.photoList, hotelPhotos.cover)
+      +renderEditBlock(editingBlockList, buttons, editingBlockStatus)
 
