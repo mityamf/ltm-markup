@@ -1709,7 +1709,12 @@ p {
 
 /*=====  End of Choices  ======*/
 .choices {
-  height: 49px; }
+  height: 49px;
+  cursor: pointer; }
+  .choices:hover, .choices:focus {
+    opacity: 0.8; }
+  .choices:active {
+    opacity: 0.5; }
   .choices.is-open .choices__list--dropdown {
     border-color: #ffffff; }
   .choices.is-focused .choices__inner,
@@ -6037,7 +6042,12 @@ span {
     color: #0098c1;
     letter-spacing: 1px; }
   .edit__label {
-    width: 100%; }
+    width: 100%;
+    cursor: pointer; }
+    .edit__label:hover, .edit__label:focus {
+      opacity: 0.8; }
+    .edit__label:active {
+      opacity: 0.5; }
   .edit__input {
     padding: 8px 18px;
     width: 100%;
