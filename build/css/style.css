@@ -6083,9 +6083,12 @@ span {
       .edit .choices[data-type*="select-one"] .choices__inner {
         padding: 3px 4px; } }
   .edit__buttons {
-    padding-top: 5px;
+    padding-top: 17px;
     padding-left: 237px;
     margin-right: -15px; }
+    @media (max-width: 1439px) {
+      .edit__buttons {
+        padding-top: 23px; } }
     @media (max-width: 767px) {
       .edit__buttons {
         display: -webkit-box;
@@ -6741,8 +6744,13 @@ span {
         display: block;
         top: 0;
         right: 0; } }
+  .notifications tr:first-of-type th {
+    height: 32px; }
   .notifications th {
     height: 37px; }
+    .notifications th .notifications__data-wrapper {
+      height: 22px;
+      overflow: hidden; }
     @media (max-width: 767px) {
       .notifications th {
         height: 20px;
@@ -6829,13 +6837,14 @@ span {
         display: none; } }
   .notifications--theme {
     width: 235px;
+    padding-right: 10px;
     position: relative;
     font-size: 12px;
     line-height: 20px;
     text-align: left; }
     @media (max-width: 1439px) {
       .notifications--theme {
-        width: 182px; } }
+        width: 183px; } }
     @media (max-width: 767px) {
       .notifications--theme {
         width: 100%;
@@ -6856,6 +6865,7 @@ span {
         display: none; } }
   .notifications--message {
     width: 500px;
+    padding-right: 10px;
     position: relative;
     font-size: 16px;
     line-height: 22px;
@@ -6863,7 +6873,7 @@ span {
     text-align: left; }
     @media (max-width: 1439px) {
       .notifications--message {
-        width: 470px; } }
+        width: 468px; } }
     @media (max-width: 767px) {
       .notifications--message {
         width: 100%; } }
@@ -6880,6 +6890,9 @@ span {
       display: none; } }
   .notifications--date {
     width: 130px; }
+    @media (max-width: 1439px) {
+      .notifications--date {
+        padding-left: 10px; } }
     @media (max-width: 767px) {
       .notifications--date {
         width: auto;

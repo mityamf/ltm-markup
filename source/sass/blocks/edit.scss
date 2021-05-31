@@ -162,9 +162,13 @@
   }
 
   &__buttons {
-    padding-top: 5px;
+    padding-top: 17px;
     padding-left: 237px;
     margin-right: -15px;
+
+    @include viewport--lg {
+      padding-top: 23px;
+    }
 
     @include viewport--sm {
       display: flex;
