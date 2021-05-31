@@ -15,8 +15,8 @@ block main
         +renderHeadline2(hotelHeadline.title)
         span=hotelHeadline.note
       +icon(hotelHeadline.logo, hotelHeadline.logoWidth, hotelHeadline.logoHeight)
-    +renderPhotos(hotelPhotos.photoList)
-    +renderImageSlider(hotelPhotos.photoList)
+    +renderPhotos(hotelPhotos.photoList, 'photos--account')
+    +renderImageSlider(hotelPhotos.photoList, 'photos-slider--account')
     +renderAccountHotelInfo(accountHotelInfo.text, accountHotelInfo.link, accountHotelInfo.buttonText)
     +renderEventsList(eventList.title, eventList.subtitle, eventList.hotelList)
 

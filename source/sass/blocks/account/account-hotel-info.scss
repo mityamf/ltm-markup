@@ -1,11 +1,12 @@
 .account-hotel-info {
   display: flex;
   justify-content: space-between;
-  padding: 0 0 30px 0;
+  padding: 7px 0 30px;
   clear: both;
 
   @include viewport--sm {
     flex-wrap: wrap;
+    margin-top: -26px;
   }
 
   p {
@@ -29,6 +30,10 @@
     @include viewport--sm {
       width: 100%;
     }
+
+    @include viewport--lg {
+      padding-top: 10px;
+    }
   }
 
   &__link-more {
@@ -44,6 +49,16 @@
     &:active {
       opacity: 0.5;
     }
+
+    @include viewport--lg {
+      margin-right: 90px;
+      margin-top: 15px;
+    }
+
+    @include viewport--sm {
+      margin-top: 3px;
+      margin-right: 0;
+    }
   }
 
   &__interactive {
@@ -51,9 +66,15 @@
     flex-direction: column;
     justify-content: space-around;
 
+    @include viewport--lg {
+      justify-content: normal;
+      padding-top: 15px;
+    }
+
     @include viewport--sm {
       display: block;
-      margin: 20px auto 0  auto;
+      margin: 0 auto;
+      padding-top: 0;
     }
   }
 
@@ -95,6 +116,15 @@
 
     &:active {
       opacity: 0.5;
+    }
+
+    @include viewport--lg {
+      width: 180px;
+      margin-top: 20px;
+    }
+
+    @include viewport--sm {
+      width: 222px;
     }
   }
 }

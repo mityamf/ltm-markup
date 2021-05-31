@@ -149,6 +149,22 @@
     object-fit: cover;
   }
 
+  &--account {
+    @include viewport--lg {
+      .photos__item img {
+        height: 178px;
+      }
+
+      .photos__block--first img {
+        height: 366px;
+      }
+
+      .photos__block--second {
+        flex-basis: 58%;
+      }
+    }
+  }
+
   &--edit {
     .photos__item img {
       @include viewport--lg {

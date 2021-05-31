@@ -19,7 +19,7 @@ const eventSwiper = () => {
       768: {
         slidesPerView: 3,
       },
-      1024: {
+      1440: {
         slidesPerView: 4,
       },
     },
