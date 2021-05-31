@@ -2,7 +2,7 @@ mixin form-reg-buyer()
   form(action="#" method="POST").exhibitor-reg__form.form-reg
     .container
       h3.form-reg__title.form-reg__title-one Пожалуйста, выберите мероприятие, на которое Вы хотели бы зарегистрироваться. Возможно выбрать только одно мероприятие. Пожалуйста, заполняйте форму на английском языке.
-    .form-reg__direction.direction-swiper
+    .form-reg__direction.direction-swiper.direction
       .swiper-container.direction__swiper-block
         .swiper-wrapper
           .form-reg__slider.swiper-slide
@@ -114,7 +114,7 @@ mixin form-reg-buyer()
         input(type="text" name="Web-site"  id="Web-site" placeholder="https://" required="required")
       .form-reg__block.form-reg__textarea
         h3.form-reg__block-title Краткое описание компании
-        textarea(name="Company description", cols="30", rows="10") Company description
+        textarea(name="Company description", cols="30", rows="10" placeholder="Company description")
 
     .form-reg__location.container
       h3.form-reg__title.form-reg__title-four Выберите приоритетные направления:
@@ -230,6 +230,7 @@ mixin form-reg-buyer()
 
     .form-reg__info.container
       h3.form-reg__title.form-reg__title-six Информация о коллеге:
+      p Заполните регистрационные данные коллеги, который(-ая) будет присуствовать с вами  на мероприятие
       .form-reg__block
         label(for="First_name2") Имя
         input(type="text" name="First_name2"  id="First_name2" placeholder="First name" required="required")
@@ -277,7 +278,7 @@ mixin form-reg-buyer()
         label(for="Password2") Введите пароль ещё раз
         input(type="text" name="Password2"  id="Password2" placeholder="Password" required="required")
 
-    .form-reg__submit.container
+    .form-reg__submit.form-reg__submit-buyer.container
       input.form-reg__check(type="checkbox" id="yes" name="check" value="yes")
       label(for="yes") Я подтверждаю свое согласие на сбор, хранение и обработку вышеуказанных данных организаторами Luxury Travel Mart в соответствии с ФЗ РФ «О персональных данных» от 27.07.2006 № 152-ФЗ.
 

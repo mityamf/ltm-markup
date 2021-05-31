@@ -2813,7 +2813,7 @@
             <div class="container">
               <h3 class="form-reg__title form-reg__title-one">Пожалуйста, выберите мероприятие, на которое Вы хотели бы зарегистрироваться. Возможно выбрать только одно мероприятие. Пожалуйста, заполняйте форму на английском языке.</h3>
             </div>
-            <div class="form-reg__direction direction-swiper">
+            <div class="form-reg__direction direction-swiper direction">
               <div class="swiper-container direction__swiper-block">
                 <div class="swiper-wrapper">
                   <div class="form-reg__slider swiper-slide">
@@ -2883,7 +2883,7 @@
                 </div>
               </div>
             </div>
-            <div class="form-reg__pop-up pop-up container">
+            <div class="form-reg__pop-up pop-up container direction">
               <div class="pop-up__choices">
                 <input class="pop-up__check" type="checkbox" id="choices-00" name="check" value="choices" checked="checked"/>
                 <label for="choices-00"></label>
@@ -2999,7 +2999,7 @@
               </div>
               <div class="form-reg__block form-reg__textarea">
                 <h3 class="form-reg__block-title">Краткое описание компании</h3>
-                <textarea name="Company description" cols="30" rows="10">Company description</textarea>
+                <textarea name="Company description" cols="30" rows="10" placeholder="Company description"></textarea>
               </div>
             </div>
             <div class="form-reg__location container">
@@ -3144,6 +3144,7 @@
             </div>
             <div class="form-reg__info container">
               <h3 class="form-reg__title form-reg__title-six">Информация о коллеге:</h3>
+              <p>Заполните регистрационные данные коллеги, который(-ая) будет присуствовать с вами  на мероприятие</p>
               <div class="form-reg__block">
                 <label for="First_name2">Имя</label>
                 <input type="text" name="First_name2" id="First_name2" placeholder="First name" required="required"/>
@@ -3203,7 +3204,7 @@
                 <input type="text" name="Password2" id="Password2" placeholder="Password" required="required"/>
               </div>
             </div>
-            <div class="form-reg__submit container">
+            <div class="form-reg__submit form-reg__submit-buyer container">
               <input class="form-reg__check" type="checkbox" id="yes" name="check" value="yes"/>
               <label for="yes">Я подтверждаю свое согласие на сбор, хранение и обработку вышеуказанных данных организаторами Luxury Travel Mart в соответствии с ФЗ РФ «О персональных данных» от 27.07.2006 № 152-ФЗ.</label><a href="#" data-modal="submission">Send</a>
             </div>
@@ -3262,12 +3263,12 @@
     <div class="modal modal--preload modal--submission">
       <div class="modal__wrapper">
         <div class="modal__overlay"></div>
-        <div class="modal__content"><a class="submission__logo">
+        <div class="modal__content"><a class="submission-logo">
             <svg width="324" height="122" aria-hidden="true">
               <use xlink:href="#logo-desktop"></use>
             </svg></a>
-          <p class="submission__description">Thank you! Your information has been sent</p>
-          <button class="submission__close-button modal__close-button" type="button">ok</button>
+          <p class="submission-description">Thank you! Your information has been sent</p>
+          <button class="submission-close modal__close-button" type="button">ok</button>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
             <svg width="33" height="33" aria-hidden="true">
               <use xlink:href="#icon-close"></use>
@@ -3280,7 +3281,7 @@
       <div class="modal__wrapper">
         <div class="modal__overlay"></div>
         <div class="modal__content">
-          <div class="modal--filter select-event">
+          <div class="modal-filter select-event direction form-reg">
             <h2 class="select-event__title">Select the event:</h2>
             <div class="select-event__block">
               <input class="form-reg__check" type="checkbox" id="choices-01" name="check" value="choices" checked="checked"/>
@@ -3328,7 +3329,7 @@
               </div>
             </div>
           </div>
-          <button class="modal__select-close modal__close-button submission__close-button" type="button">Apply</button>
+          <button class="modal__select-close modal__close-button" type="button">Apply</button>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
             <svg width="33" height="33" aria-hidden="true">
               <use xlink:href="#icon-close"></use>

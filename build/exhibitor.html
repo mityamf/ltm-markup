@@ -2813,7 +2813,7 @@
             <div class="container">
               <h3 class="form-reg__title form-reg__title-one">Please select the event you would like to register for:</h3>
             </div>
-            <div class="form-reg__direction direction-swiper">
+            <div class="form-reg__direction direction-swiper direction">
               <div class="swiper-container direction__swiper-block">
                 <div class="swiper-wrapper">
                   <div class="form-reg__slider swiper-slide">
@@ -2883,7 +2883,7 @@
                 </div>
               </div>
             </div>
-            <div class="form-reg__pop-up pop-up container">
+            <div class="form-reg__pop-up pop-up container direction">
               <div class="pop-up__choices">
                 <input class="pop-up__check" type="checkbox" id="choices-00" name="check" value="choices" checked="checked"/>
                 <label for="choices-00"></label>
@@ -2895,7 +2895,7 @@
               </div>
               <button class="pop-up__btn" data-modal="choices" type="button">View All Events</button>
             </div>
-            <div class="form-reg__adoption adoption container swiper-container adoption__slider">
+            <div class="form-reg__adoption adoption container swiper-container adoption-slider">
               <h3 class="adoption__title">You have selected the following events:</h3>
               <ul class="adoption__list swiper-wrapper">
                 <li class="adoption__item swiper-slide">
@@ -2911,211 +2911,217 @@
             </div>
             <div class="form-reg__info container">
               <h3 class="form-reg__title form-reg__title-two"> Information about company:</h3>
-              <div class="form-reg__block">
-                <label for="nameCompany">Company or hotel name</label>
-                <input type="text" name="nameCompany" id="nameCompany" placeholder="Company (brand) name" required="required"/>
-              </div>
-              <div class="form-reg__block">
-                <label for="nameOfficial">Official name for invoice, if different</label>
-                <input type="text" name="nameOfficial" id="nameOfficial" placeholder="Official name" required="required"/>
-              </div>
-              <div class="form-reg__block">
-                <label for="login">Please, create your login</label>
-                <input type="text" name="login" id="login" placeholder="Create your login" required="required"/>
-              </div>
-              <div class="form-reg__block">
-                <label for="address">Official address</label>
-                <input type="text" name="address" id="address" placeholder="Address" required="required"/>
-              </div>
-              <div class="form-reg__block">
-                <h3 class="form-reg__block-title">City</h3>
-                <select>
-                  <option>Aachen</option>
-                  <option value="London">London</option>
-                  <option value="Japan">Japan</option>
-                  <option value="Almaty">Almaty</option>
-                  <option value="Moscow">Moscow</option>
-                  <option value="Petersburg">Petersburg</option>
-                </select>
-              </div>
-              <div class="form-reg__block">
-                <h3 class="form-reg__block-title">Country</h3>
-                <select>
-                  <option>Aphhanistan</option>
-                  <option value="Aphhanistan">Aphhanistan</option>
-                  <option value="Aphhanistan">Aphhanistan1</option>
-                  <option value="Aphhanistan">Aphhanistan2</option>
-                  <option value="Aphhanistan">Aphhanistan3</option>
-                  <option value="Aphhanistan">Aphhanistan4</option>
-                  <option value="Aphhanistan">Aphhanistan5</option>
-                </select>
-              </div>
-              <div class="form-reg__block">
-                <h3 class="form-reg__block-title">Area of the business</h3>
-                <select>
-                  <option>Chois area of the business</option>
-                  <option value="business">business</option>
-                  <option value="trade">trade</option>
-                  <option value="sale">sale</option>
-                  <option value="entertainment">entertainment</option>
-                  <option value="journeys">journeys</option>
-                  <option value="sale">sale</option>
-                </select>
-              </div>
-              <div class="form-reg__block">
-                <label for="Web-site">Web-site</label>
-                <input type="text" name="Web-site" id="Web-site" placeholder="https://" required="required"/>
+              <div class="form-reg__grid-wrap">
+                <div class="form-reg__block">
+                  <label for="nameCompany">Company or hotel name</label>
+                  <input type="text" name="nameCompany" id="nameCompany" placeholder="Company (brand) name" required="required"/>
+                </div>
+                <div class="form-reg__block">
+                  <label for="nameOfficial">Official name for invoice, if different</label>
+                  <input type="text" name="nameOfficial" id="nameOfficial" placeholder="Official name" required="required"/>
+                </div>
+                <div class="form-reg__block">
+                  <label for="login">Please, create your login</label>
+                  <input type="text" name="login" id="login" placeholder="Create your login" required="required"/>
+                </div>
+                <div class="form-reg__block">
+                  <label for="address">Official address</label>
+                  <input type="text" name="address" id="address" placeholder="Address" required="required"/>
+                </div>
+                <div class="form-reg__block">
+                  <h3 class="form-reg__block-title">City</h3>
+                  <select>
+                    <option>Aachen</option>
+                    <option value="London">London</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Almaty">Almaty</option>
+                    <option value="Moscow">Moscow</option>
+                    <option value="Petersburg">Petersburg</option>
+                  </select>
+                </div>
+                <div class="form-reg__block">
+                  <h3 class="form-reg__block-title">Country</h3>
+                  <select>
+                    <option>Aphhanistan</option>
+                    <option value="Aphhanistan">Aphhanistan</option>
+                    <option value="Aphhanistan">Aphhanistan1</option>
+                    <option value="Aphhanistan">Aphhanistan2</option>
+                    <option value="Aphhanistan">Aphhanistan3</option>
+                    <option value="Aphhanistan">Aphhanistan4</option>
+                    <option value="Aphhanistan">Aphhanistan5</option>
+                  </select>
+                </div>
+                <div class="form-reg__block">
+                  <h3 class="form-reg__block-title">Area of the business</h3>
+                  <select>
+                    <option>Chois area of the business</option>
+                    <option value="business">business</option>
+                    <option value="trade">trade</option>
+                    <option value="sale">sale</option>
+                    <option value="entertainment">entertainment</option>
+                    <option value="journeys">journeys</option>
+                    <option value="sale">sale</option>
+                  </select>
+                </div>
+                <div class="form-reg__block">
+                  <label for="Web-site">Web-site</label>
+                  <input type="text" name="Web-site" id="Web-site" placeholder="https://" required="required"/>
+                </div>
               </div>
               <div class="form-reg__block form-reg__textarea">
                 <h3 class="form-reg__block-title">Company (brand) description</h3>
-                <textarea name="Company description" cols="30" rows="10">Company description</textarea>
+                <textarea name="Company description" cols="30" rows="10" placeholder="Company description"></textarea>
               </div>
             </div>
             <div class="form-reg__location container">
               <h3 class="form-reg__title form-reg__title-three">Location of your business:</h3>
-              <div class="form-reg__dropdown">
-                <h4>North America</h4>
-                <button class="form-reg__btn" type="button">All selected</button>
-                <div class="form-reg__content">
-                  <div class="form-reg__list">
-                    <input class="form-reg__check" id="choices-0" type="checkbox" name="complex" value="complex-0"/>
-                    <label for="choices-0">choices-3</label>
-                    <input class="form-reg__check" id="choices-1" type="checkbox" name="complex" value="complex-1"/>
-                    <label for="choices-1">choices-3</label>
-                    <input class="form-reg__check" id="choices-2" type="checkbox" name="complex" value="complex-2"/>
-                    <label for="choices-2">choices-3</label>
+              <div class="form-reg__grid-wrap">
+                <div class="form-reg__dropdown">
+                  <h4>North America</h4>
+                  <button class="form-reg__btn" type="button">All selected</button>
+                  <div class="form-reg__content">
+                    <div class="form-reg__list">
+                      <input class="form-reg__check" id="choices-0" type="checkbox" name="complex" value="complex-0"/>
+                      <label for="choices-0">choices-3</label>
+                      <input class="form-reg__check" id="choices-1" type="checkbox" name="complex" value="complex-1"/>
+                      <label for="choices-1">choices-3</label>
+                      <input class="form-reg__check" id="choices-2" type="checkbox" name="complex" value="complex-2"/>
+                      <label for="choices-2">choices-3</label>
+                    </div>
                   </div>
+                  <div class="form-reg__overlay"></div>
                 </div>
-                <div class="form-reg__overlay"></div>
-              </div>
-              <div class="form-reg__dropdown">
-                <h4>Europe</h4>
-                <button class="form-reg__btn" type="button">All selected</button>
-                <div class="form-reg__content">
-                  <div class="form-reg__list">
-                    <input class="form-reg__check" id="choices-3" type="checkbox" name="complex" value="complex-0"/>
-                    <label for="choices-3">choices-3</label>
-                    <input class="form-reg__check" id="choices-4" type="checkbox" name="complex" value="complex-1"/>
-                    <label for="choices-4">choices-3</label>
-                    <input class="form-reg__check" id="choices-55" type="checkbox" name="complex" value="complex-2"/>
-                    <label for="choices-55">choices-3</label>
+                <div class="form-reg__dropdown">
+                  <h4>Europe</h4>
+                  <button class="form-reg__btn" type="button">All selected</button>
+                  <div class="form-reg__content">
+                    <div class="form-reg__list">
+                      <input class="form-reg__check" id="choices-3" type="checkbox" name="complex" value="complex-0"/>
+                      <label for="choices-3">choices-3</label>
+                      <input class="form-reg__check" id="choices-4" type="checkbox" name="complex" value="complex-1"/>
+                      <label for="choices-4">choices-3</label>
+                      <input class="form-reg__check" id="choices-55" type="checkbox" name="complex" value="complex-2"/>
+                      <label for="choices-55">choices-3</label>
+                    </div>
                   </div>
+                  <div class="form-reg__overlay"></div>
                 </div>
-                <div class="form-reg__overlay"></div>
-              </div>
-              <div class="form-reg__dropdown">
-                <h4>South America</h4>
-                <button class="form-reg__btn" type="button">All selected</button>
-                <div class="form-reg__content">
-                  <div class="form-reg__list">
-                    <input class="form-reg__check" id="choices-5" type="checkbox" name="complex" value="complex-0"/>
-                    <label for="choices-5">choices-1</label>
-                    <input class="form-reg__check" id="choices-6" type="checkbox" name="complex" value="complex-1"/>
-                    <label for="choices-6">choices-2</label>
-                    <input class="form-reg__check" id="choices-7" type="checkbox" name="complex" value="complex-2"/>
-                    <label for="choices-7">choices-3</label>
+                <div class="form-reg__dropdown">
+                  <h4>South America</h4>
+                  <button class="form-reg__btn" type="button">All selected</button>
+                  <div class="form-reg__content">
+                    <div class="form-reg__list">
+                      <input class="form-reg__check" id="choices-5" type="checkbox" name="complex" value="complex-0"/>
+                      <label for="choices-5">choices-1</label>
+                      <input class="form-reg__check" id="choices-6" type="checkbox" name="complex" value="complex-1"/>
+                      <label for="choices-6">choices-2</label>
+                      <input class="form-reg__check" id="choices-7" type="checkbox" name="complex" value="complex-2"/>
+                      <label for="choices-7">choices-3</label>
+                    </div>
                   </div>
+                  <div class="form-reg__overlay"></div>
                 </div>
-                <div class="form-reg__overlay"></div>
-              </div>
-              <div class="form-reg__dropdown">
-                <h4>Africa</h4>
-                <button class="form-reg__btn" type="button">All selected</button>
-                <div class="form-reg__content">
-                  <div class="form-reg__list">
-                    <input class="form-reg__check" id="choices-8" type="checkbox" name="complex" value="complex-0"/>
-                    <label for="choices-8">choices-4</label>
-                    <input class="form-reg__check" id="choices-9" type="checkbox" name="complex" value="complex-1"/>
-                    <label for="choices-9">choices-5</label>
-                    <input class="form-reg__check" id="choices-10" type="checkbox" name="complex" value="complex-2"/>
-                    <label for="choices-10">choices-6</label>
+                <div class="form-reg__dropdown">
+                  <h4>Africa</h4>
+                  <button class="form-reg__btn" type="button">All selected</button>
+                  <div class="form-reg__content">
+                    <div class="form-reg__list">
+                      <input class="form-reg__check" id="choices-8" type="checkbox" name="complex" value="complex-0"/>
+                      <label for="choices-8">choices-4</label>
+                      <input class="form-reg__check" id="choices-9" type="checkbox" name="complex" value="complex-1"/>
+                      <label for="choices-9">choices-5</label>
+                      <input class="form-reg__check" id="choices-10" type="checkbox" name="complex" value="complex-2"/>
+                      <label for="choices-10">choices-6</label>
+                    </div>
                   </div>
+                  <div class="form-reg__overlay"></div>
                 </div>
-                <div class="form-reg__overlay"></div>
-              </div>
-              <div class="form-reg__dropdown">
-                <h4>Asia</h4>
-                <button class="form-reg__btn" type="button">All selected</button>
-                <div class="form-reg__content">
-                  <div class="form-reg__list">
-                    <input class="form-reg__check" id="choices-11" type="checkbox" name="complex" value="complex-0"/>
-                    <label for="choices-11">choices-7</label>
-                    <input class="form-reg__check" id="choices-12" type="checkbox" name="complex" value="complex-1"/>
-                    <label for="choices-12">choices-8</label>
-                    <input class="form-reg__check" id="choices-13" type="checkbox" name="complex" value="complex-2"/>
-                    <label for="choices-13">choices-9</label>
+                <div class="form-reg__dropdown">
+                  <h4>Asia</h4>
+                  <button class="form-reg__btn" type="button">All selected</button>
+                  <div class="form-reg__content">
+                    <div class="form-reg__list">
+                      <input class="form-reg__check" id="choices-11" type="checkbox" name="complex" value="complex-0"/>
+                      <label for="choices-11">choices-7</label>
+                      <input class="form-reg__check" id="choices-12" type="checkbox" name="complex" value="complex-1"/>
+                      <label for="choices-12">choices-8</label>
+                      <input class="form-reg__check" id="choices-13" type="checkbox" name="complex" value="complex-2"/>
+                      <label for="choices-13">choices-9</label>
+                    </div>
                   </div>
+                  <div class="form-reg__overlay"></div>
                 </div>
-                <div class="form-reg__overlay"></div>
-              </div>
-              <div class="form-reg__dropdown">
-                <h4>Oceania</h4>
-                <button class="form-reg__btn" type="button">All selected</button>
-                <div class="form-reg__content">
-                  <div class="form-reg__list">
-                    <input class="form-reg__check" id="choices-14" type="checkbox" name="complex" value="complex-0"/>
-                    <label for="choices-14">choices-10</label>
-                    <input class="form-reg__check" id="choices-15" type="checkbox" name="complex" value="complex-1"/>
-                    <label for="choices-15">choices-11</label>
-                    <input class="form-reg__check" id="choices-16" type="checkbox" name="complex" value="complex-2"/>
-                    <label for="choices-16">choices-12</label>
+                <div class="form-reg__dropdown">
+                  <h4>Oceania</h4>
+                  <button class="form-reg__btn" type="button">All selected</button>
+                  <div class="form-reg__content">
+                    <div class="form-reg__list">
+                      <input class="form-reg__check" id="choices-14" type="checkbox" name="complex" value="complex-0"/>
+                      <label for="choices-14">choices-10</label>
+                      <input class="form-reg__check" id="choices-15" type="checkbox" name="complex" value="complex-1"/>
+                      <label for="choices-15">choices-11</label>
+                      <input class="form-reg__check" id="choices-16" type="checkbox" name="complex" value="complex-2"/>
+                      <label for="choices-16">choices-12</label>
+                    </div>
                   </div>
+                  <div class="form-reg__overlay"></div>
                 </div>
-                <div class="form-reg__overlay"></div>
-              </div>
-              <div class="form-reg__dropdown-check">
-                <input class="form-reg__check" type="checkbox" id="Global" name="Global" value="Global"/>
-                <label for="Global">Global/Worldwide</label>
+                <div class="form-reg__dropdown-check">
+                  <input class="form-reg__check" type="checkbox" id="Global" name="Global" value="Global"/>
+                  <label for="Global">Global/Worldwide</label>
+                </div>
               </div>
             </div>
             <div class="form-reg__info container">
               <h3 class="form-reg__title form-reg__title-four">Information about you:</h3>
-              <div class="form-reg__block">
-                <label for="First_name">Participant first name</label>
-                <input type="text" name="First_name" id="First_name" placeholder="First name" required="required"/>
-              </div>
-              <div class="form-reg__block">
-                <label for="Last_name">Participant last name</label>
-                <input type="text" name="Last_name" id="Last_name" placeholder="Last name" required="required"/>
-              </div>
-              <div class="form-reg__block">
-                <h3 class="form-reg__block-title">Title</h3>
-                <select>
-                  <option>Aachen</option>
-                  <option value="Mr">Mr.</option>
-                  <option value="Mrs">Mrs.</option>
-                  <option value="Ms">Ms.</option>
-                  <option value="Dr">Dr.</option>
-                </select>
-              </div>
-              <div class="form-reg__block">
-                <label for="title">Job title:</label>
-                <input type="text" name="title" id="title" placeholder="Job title" required="required"/>
-              </div>
-              <div class="form-reg__block">
-                <label for="tel">Telephone</label>
-                <input type="text" name="tel" id="tel" placeholder="+1 (111) 111 11 11" required="required"/>
-              </div>
-              <div class="form-reg__block">
-                <label for="skype">Skype</label>
-                <input type="text" name="skype" id="skype" placeholder="E-mail" required="required"/>
-              </div>
-              <div class="form-reg__block">
-                <label for="E-mail">E-mail</label>
-                <input type="text" name="E-mail" id="E-mail" placeholder="E-mail" required="required"/>
-              </div>
-              <div class="form-reg__block">
-                <label for="con_e-mail">Please, confirm your e-mail</label>
-                <input type="text" name="con_e-mail" id="con_e-mail" placeholder="Confirm e-mail" required="required"/>
-              </div>
-              <div class="form-reg__block">
-                <label for="alt_e-mail">Alternative e-mail</label>
-                <input type="text" name="alt_e-mail" id="alt_e-mail" placeholder="Alternative e-mail" required="required"/>
+              <div class="form-reg__grid-wrap">
+                <div class="form-reg__block">
+                  <label for="First_name">Participant first name</label>
+                  <input type="text" name="First_name" id="First_name" placeholder="First name" required="required"/>
+                </div>
+                <div class="form-reg__block">
+                  <label for="Last_name">Participant last name</label>
+                  <input type="text" name="Last_name" id="Last_name" placeholder="Last name" required="required"/>
+                </div>
+                <div class="form-reg__block">
+                  <h3 class="form-reg__block-title">Title</h3>
+                  <select>
+                    <option>Aachen</option>
+                    <option value="Mr">Mr.</option>
+                    <option value="Mrs">Mrs.</option>
+                    <option value="Ms">Ms.</option>
+                    <option value="Dr">Dr.</option>
+                  </select>
+                </div>
+                <div class="form-reg__block">
+                  <label for="title">Job title:</label>
+                  <input type="text" name="title" id="title" placeholder="Job title" required="required"/>
+                </div>
+                <div class="form-reg__block">
+                  <label for="tel">Telephone</label>
+                  <input type="text" name="tel" id="tel" placeholder="+1 (111) 111 11 11" required="required"/>
+                </div>
+                <div class="form-reg__block">
+                  <label for="skype">Skype</label>
+                  <input type="text" name="skype" id="skype" placeholder="E-mail" required="required"/>
+                </div>
+                <div class="form-reg__block">
+                  <label for="E-mail">E-mail</label>
+                  <input type="text" name="E-mail" id="E-mail" placeholder="E-mail" required="required"/>
+                </div>
+                <div class="form-reg__block">
+                  <label for="con_e-mail">Please, confirm your e-mail</label>
+                  <input type="text" name="con_e-mail" id="con_e-mail" placeholder="Confirm e-mail" required="required"/>
+                </div>
+                <div class="form-reg__block">
+                  <label for="alt_e-mail">Alternative e-mail</label>
+                  <input type="text" name="alt_e-mail" id="alt_e-mail" placeholder="Alternative e-mail" required="required"/>
+                </div>
               </div>
             </div>
             <div class="form-reg__upload container">
               <h3 class="form-reg__title form-reg__title-five">Upload photos and logo</h3>
-              <p class="form-reg__text">This photos will be representative your company at the Luxury Travel Mart Exhibitors catalogue. Please choose the best photos for your page.<br>You might change any images in your profile after registration.</p>
+              <p class="form-reg__text">This photos will be representative your company at the Luxury Travel Mart Exhibitors catalogue. Please choose the best photos for your page.</p>
               <div class="form-reg__wrapper">
                 <div class="form-reg__up">
                   <h4 class="form-reg__title-up">Upload photo</h4>
@@ -3201,12 +3207,12 @@
     <div class="modal modal--preload modal--submission">
       <div class="modal__wrapper">
         <div class="modal__overlay"></div>
-        <div class="modal__content"><a class="submission__logo">
+        <div class="modal__content"><a class="submission-logo">
             <svg width="324" height="122" aria-hidden="true">
               <use xlink:href="#logo-desktop"></use>
             </svg></a>
-          <p class="submission__description">Thank you! Your information has been sent</p>
-          <button class="submission__close-button modal__close-button" type="button">ok</button>
+          <p class="submission-description">Thank you! Your information has been sent</p>
+          <button class="submission-close modal__close-button" type="button">ok</button>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
             <svg width="33" height="33" aria-hidden="true">
               <use xlink:href="#icon-close"></use>
@@ -3219,7 +3225,7 @@
       <div class="modal__wrapper">
         <div class="modal__overlay"></div>
         <div class="modal__content">
-          <div class="modal--filter select-event">
+          <div class="modal-filter select-event direction form-reg">
             <h2 class="select-event__title">Select the event:</h2>
             <div class="select-event__block">
               <input class="form-reg__check" type="checkbox" id="choices-01" name="check" value="choices" checked="checked"/>
@@ -3267,7 +3273,7 @@
               </div>
             </div>
           </div>
-          <button class="modal__select-close modal__close-button submission__close-button" type="button">Apply</button>
+          <button class="modal__select-close modal__close-button" type="button">Apply</button>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
             <svg width="33" height="33" aria-hidden="true">
               <use xlink:href="#icon-close"></use>
