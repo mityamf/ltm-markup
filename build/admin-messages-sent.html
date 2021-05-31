@@ -2808,7 +2808,7 @@
             <time datetime="dates">27 – 28 February 2020</time>
           </div>
           <div class="participants">
-            <h2 class="title title--h2">Participants at this Event</h2>
+            <h2 class="title title--h2 title--big">Participants at this Event</h2>
             <p class="participants__info">Only 2 participants are allowed</p>
             <ul class="participants__list">
               <li class="participants__item"><img src="img/content/admin-photo.jpg"/>
@@ -2841,7 +2841,7 @@
               <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-sponsors-opportunities.html">Sponsorship Opportunities</a></li>
             </ul>
             <div class="mail-control">
-              <h3 class="title title--h3">Sent</h3>
+              <h3 class="title title--h3 title--middle">Sent</h3>
               <ul class="mail-control__links">
                 <li class="mail-control__link-item mail-control__link-item--new "><a class="mail-control__link" href="admin-messages-new.html">
                     <svg width="24" height="24" aria-hidden="true">
@@ -2861,72 +2861,76 @@
           </div>
           <h2 class="admin-table__headline">Sent</h2>
           <table class="admin-table">
-            <tr class="admin-table__row admin-table__row--headline">
-              <th class="admin-table__cell admin-table__cell--icon">Status</th>
-              <th class="admin-table__cell admin-table__cell--destination"></th>
-              <th class="admin-table__cell admin-table__cell--theme">Subject</th>
-              <th class="admin-table__cell admin-table__cell--date">Date</th>
-              <th class="admin-table__cell admin-table__cell--time">Time</th>
-              <th class="admin-table__cell admin-table__cell--event">Event</th>
-              <th class="admin-table__cell admin-table__cell--message">Message</th>
-            </tr>
-            <tr class="admin-table__row admin-table__row--messages">
-              <th class="admin-table__cell admin-table__cell--icon admin-table__cell--sent">
-                <svg width="34" height="15" aria-hidden="true">
-                  <use xlink:href="#icon-mail-sent"></use>
-                </svg>
-              </th>
-              <th class="admin-table__cell admin-table__cell--destination admin-table__cell--sent-destination">Pegas Touristic</th>
-              <th class="admin-table__cell admin-table__cell--theme">Request for Meeting at the Luxury Travel Mart Moscow’ 2020</th>
-              <th class="admin-table__cell admin-table__cell--date">22 Dec. 2019</th>
-              <th class="admin-table__cell admin-table__cell--time">18:57</th>
-              <th class="admin-table__cell admin-table__cell--event">Luxury Travel Mart Kiev’ 2020</th>
-              <th class="admin-table__cell admin-table__cell--message">Dear Stanislav, we invite your company in mee… <a class="admin-table__message-link" href="admin-messages-read.html">
-                  <svg width="11" height="19" aria-hidden="true">
-                    <use xlink:href="#icon-mail-arrow"></use>
-                  </svg></a></th>
-              <th class="admin-table__cell admin-table__cell--mobile-event">Luxury Travel Mart Kiev’ 2020</th>
-            </tr>
-            <tr class="admin-table__row admin-table__row--messages">
-              <th class="admin-table__cell admin-table__cell--icon admin-table__cell--sent">
-                <svg width="34" height="15" aria-hidden="true">
-                  <use xlink:href="#icon-mail-sent"></use>
-                </svg>
-              </th>
-              <th class="admin-table__cell admin-table__cell--destination admin-table__cell--sent-destination">Organizers</th>
-              <th class="admin-table__cell admin-table__cell--theme">Information About Your Exhibition Place</th>
-              <th class="admin-table__cell admin-table__cell--date">21 Dec. 2019</th>
-              <th class="admin-table__cell admin-table__cell--time">12:20</th>
-              <th class="admin-table__cell admin-table__cell--event">Luxury Travel Mart Moscow’ 2020</th>
-              <th class="admin-table__cell admin-table__cell--message">Dear Stanislav, we invite your company in mee… <a class="admin-table__message-link" href="admin-messages-read.html">
-                  <svg width="11" height="19" aria-hidden="true">
-                    <use xlink:href="#icon-mail-arrow"></use>
-                  </svg></a></th>
-              <th class="admin-table__cell admin-table__cell--mobile-event">Luxury Travel Mart Moscow’ 2020</th>
-            </tr>
-            <tr class="admin-table__row admin-table__row--messages">
-              <th class="admin-table__cell admin-table__cell--icon admin-table__cell--sent">
-                <svg width="34" height="15" aria-hidden="true">
-                  <use xlink:href="#icon-mail-sent"></use>
-                </svg>
-              </th>
-              <th class="admin-table__cell admin-table__cell--destination admin-table__cell--sent-destination">Sun Tour</th>
-              <th class="admin-table__cell admin-table__cell--theme">Request for Meeting at the Luxury Travel Mart Moscow’ 2020</th>
-              <th class="admin-table__cell admin-table__cell--date">21 Dec. 2019</th>
-              <th class="admin-table__cell admin-table__cell--time">13:40</th>
-              <th class="admin-table__cell admin-table__cell--event">Luxury Travel Mart Moscow’ 2020</th>
-              <th class="admin-table__cell admin-table__cell--message">Dear Stanislav, we invite your company in mee… <a class="admin-table__message-link" href="admin-messages-read.html">
-                  <svg width="11" height="19" aria-hidden="true">
-                    <use xlink:href="#icon-mail-arrow"></use>
-                  </svg></a></th>
-              <th class="admin-table__cell admin-table__cell--mobile-event">Luxury Travel Mart Moscow’ 2020</th>
-            </tr>
+            <thead>
+              <tr class="admin-table__row admin-table__row--headline">
+                <th class="admin-table__cell admin-table__cell--icon">Status</th>
+                <th class="admin-table__cell admin-table__cell--destination"></th>
+                <th class="admin-table__cell admin-table__cell--theme">Subject</th>
+                <th class="admin-table__cell admin-table__cell--date">Date</th>
+                <th class="admin-table__cell admin-table__cell--time">Time</th>
+                <th class="admin-table__cell admin-table__cell--event">Event</th>
+                <th class="admin-table__cell admin-table__cell--message">Message</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="admin-table__row admin-table__row--messages">
+                <th class="admin-table__cell admin-table__cell--icon admin-table__cell--sent">
+                  <svg width="34" height="15" aria-hidden="true">
+                    <use xlink:href="#icon-mail-sent"></use>
+                  </svg>
+                </th>
+                <th class="admin-table__cell admin-table__cell--destination admin-table__cell--sent-destination">Pegas Touristic</th>
+                <th class="admin-table__cell admin-table__cell--theme">Request for Meeting at the Luxury Travel Mart Moscow’ 2020</th>
+                <th class="admin-table__cell admin-table__cell--date">22 Dec. 2019</th>
+                <th class="admin-table__cell admin-table__cell--time">18:57</th>
+                <th class="admin-table__cell admin-table__cell--event">Luxury Travel Mart Kiev’ 2020</th>
+                <th class="admin-table__cell admin-table__cell--message">Dear Stanislav, we invite your company in mee… <a class="admin-table__message-link" href="admin-messages-read.html">
+                    <svg width="11" height="19" aria-hidden="true">
+                      <use xlink:href="#icon-mail-arrow"></use>
+                    </svg></a></th>
+                <th class="admin-table__cell admin-table__cell--mobile-event">Luxury Travel Mart Kiev’ 2020</th>
+              </tr>
+              <tr class="admin-table__row admin-table__row--messages">
+                <th class="admin-table__cell admin-table__cell--icon admin-table__cell--sent">
+                  <svg width="34" height="15" aria-hidden="true">
+                    <use xlink:href="#icon-mail-sent"></use>
+                  </svg>
+                </th>
+                <th class="admin-table__cell admin-table__cell--destination admin-table__cell--sent-destination">Organizers</th>
+                <th class="admin-table__cell admin-table__cell--theme">Information About Your Exhibition Place</th>
+                <th class="admin-table__cell admin-table__cell--date">21 Dec. 2019</th>
+                <th class="admin-table__cell admin-table__cell--time">12:20</th>
+                <th class="admin-table__cell admin-table__cell--event">Luxury Travel Mart Moscow’ 2020</th>
+                <th class="admin-table__cell admin-table__cell--message">Dear Stanislav, we invite your company in mee… <a class="admin-table__message-link" href="admin-messages-read.html">
+                    <svg width="11" height="19" aria-hidden="true">
+                      <use xlink:href="#icon-mail-arrow"></use>
+                    </svg></a></th>
+                <th class="admin-table__cell admin-table__cell--mobile-event">Luxury Travel Mart Moscow’ 2020</th>
+              </tr>
+              <tr class="admin-table__row admin-table__row--messages">
+                <th class="admin-table__cell admin-table__cell--icon admin-table__cell--sent">
+                  <svg width="34" height="15" aria-hidden="true">
+                    <use xlink:href="#icon-mail-sent"></use>
+                  </svg>
+                </th>
+                <th class="admin-table__cell admin-table__cell--destination admin-table__cell--sent-destination">Sun Tour</th>
+                <th class="admin-table__cell admin-table__cell--theme">Request for Meeting at the Luxury Travel Mart Moscow’ 2020</th>
+                <th class="admin-table__cell admin-table__cell--date">21 Dec. 2019</th>
+                <th class="admin-table__cell admin-table__cell--time">13:40</th>
+                <th class="admin-table__cell admin-table__cell--event">Luxury Travel Mart Moscow’ 2020</th>
+                <th class="admin-table__cell admin-table__cell--message">Dear Stanislav, we invite your company in mee… <a class="admin-table__message-link" href="admin-messages-read.html">
+                    <svg width="11" height="19" aria-hidden="true">
+                      <use xlink:href="#icon-mail-arrow"></use>
+                    </svg></a></th>
+                <th class="admin-table__cell admin-table__cell--mobile-event">Luxury Travel Mart Moscow’ 2020</th>
+              </tr>
+            </tbody>
           </table>
           <button class="btn btn--white btn--more" type="button">More</button>
         </div>
         <div class="support-contacts">
           <h3 class="title--h3">Contacts for support</h3>
-          <div class="direction container swiper-container card-swiper">
+          <div class="direction container swiper-container direction__slider--card">
             <ul class="support-contacts__list direction-list swiper-wrapper">
               <li class="support-contacts__item swiper-slide"><img src="img/content/support-photo-1.jpg"/>
                 <div class="support-contacts__info"><span class="support-contacts__text">Maria Shankina</span><span class="support-contacts__text">General Administration and Sponsorship</span><a class="support-contacts__link" href="mailto:yahoo@yahoo.com">
@@ -2946,14 +2950,14 @@
                       <use xlink:href="#icon-support-email"></use>
                     </svg></a><a class="support-contacts__link" href="tel:79852467232">+7 985 246 72 32</a></div>
               </li>
-              <li class="support-contacts__item swiper-slide"><img src="../img/svg/icon-support-no-photo.svg"/>
+              <li class="support-contacts__item swiper-slide"><img src="img/svg/icon-support-no-photo.svg"/>
                 <div class="support-contacts__info"><span class="support-contacts__text">Support</span><span class="support-contacts__text">Question about new web-functional</span><a class="support-contacts__link" href="mailto:yahoo@yahoo.com">
                     <svg width="42" height="18" aria-hidden="true">
                       <use xlink:href="#icon-support-email"></use>
                     </svg></a><a class="support-contacts__link" href="tel:74956450422">+7 495 645 04 22</a></div>
               </li>
             </ul>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination direction__pagination"></div>
             <div class="direction__arrow direction__arrow--right">
               <svg width="11" height="19" aria-hidden="true">
                 <use xlink:href="#arrow-right"></use>

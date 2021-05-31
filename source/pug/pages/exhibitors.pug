@@ -5,28 +5,13 @@ block variables
   - var hasHeader = true
   - var hasFooter = true
   - var currentPage = "Exhibitors"
-  -
-    var promoBg = {
-      titleItem: "The leading luxury travel exhibition in eastern europe, russia & cis",
-      imgItem: "img/bg/exhibitors-promo-desktop.png",
-      img2xItem: "img/bg/exhibitors-promo-desktop@2x.png",
-      widthItem: "1920",
-      heightItem: "534",
-      imgSource: "img/bg/exhibitors-promo-mobile.png 1x, img/bg/exhibitors-promo-mobile@2x.png 2x",
-      classItem: "promo__reg",
-      promoItem: "promo__info promo__text-wrapper",
-      noButtonMod: true
-    }
+  - var hasUpButton = true
 
 block main
-  include ../data/hotel-cards
-  include ../data/alphabet-hotel
-  include ../data/choose-event-card
-  include ../data/choose-event
-  include ../data/hotel-filters
+  include ../data/pages/exhibitors
 
-  main.container--exhibitors
-    +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem, promoBg.noButtonMod)
+  main
+    +promo(promoBg.titleItem, promoBg.btnItem, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
 
     section.direction.direction-swiper
       .swiper-container.direction__swiper-block
@@ -42,16 +27,16 @@ block main
 
     .container
 
-      .hotel-filter__buttons
-        .hotel-filter--buttons-wrapper
-          +icon("icon-filters", 17, 17)
-          button.btn.btn--white.hotel-filter__buttons--filters(type="button")="filters"
-        button.btn.btn--white.hotel-filter__buttons--clear(type="reset")="Clear all filters"
+      .filters.filters--exhibitions
+        +renderAlphabetFilter(alphabetFilter)
+        +renderDropdownFilter(dropdownFilters)
+        +renderFilterButton(buttonFilter)
 
-      ul.hotel-filters
-        each filter in filters
-          +renderFilter(filter.title, filter.mod, filter.filterList)
-        button.btn.btn--white.hotel-filter--reset(type="reset")="Clear all"
+      .visible-sm
+        +renderMobileFilterButtons("Filters", "Clear all filters")
+
+      .visible-sm
+        +renderMobileDropdownFilter(dropdownMobileFilter)
 
       .exhibitors
         ul.hotel-cards
@@ -64,4 +49,3 @@ block main
               +renderAlphabetHotel(hotel.title, hotel.hotelList)
 
       button.btn.btn--white.btn--more(type="button")="More"
-      +renderUpButton()

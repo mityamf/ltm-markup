@@ -1,14 +1,15 @@
 mixin renderHeadline2(title)
-  h2.title.title--h2=title
+  h2.title.title--h2.title--big !{title}
 
 mixin renderHeadline3(subtitle)
-  h3.title.title--h3=subtitle
+  h3.title.title--h3.title--middle !{subtitle}
 
 mixin renderTextContentBlock(textList)
   each text in textList
     p !{text}
 
-mixin renderAboutText(textList)
-  time(datetime=textList.date)=textList.date
-  span=textList.venue
-  p=textList.text
+mixin renderHeadlineBig(title)
+  h2.title.title--h2.title--without-margin !{title}
+
+mixin renderHeadlineMiddle(subtitle)
+  h3.title.title--h3.title--without-margin !{subtitle}

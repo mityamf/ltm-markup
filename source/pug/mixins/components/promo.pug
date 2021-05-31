@@ -1,15 +1,9 @@
-mixin promo(titleItem, btnItem, imgItem, img2xItem, widthItem, heightItem, imgSource, classItem, promoItem, noButtonMod)
-  if noButtonMod
-    - var noButtonMod = "promo--no-button"
-  else
-    - var noButtonMod = ""
-
-  section.promo(class=noButtonMod)
+mixin promo(titleItem, btnItem, imgItem, img2xItem, widthItem, heightItem, imgSource, classItem, promoItem)
+  section.promo
     picture
       source(media="(max-width: 767px)" srcset=imgSource)
       img.promo__img(src=imgItem srcset=img2xItem width=widthItem height=heightItem alt="promo image")
 
     .container(class=promoItem)
       h2.promo__title= titleItem
-      if btnItem
-        a.button.button--blue(href="registration.html" class=classItem)= btnItem
+      a.button.button--blue(href="registration.html" class=classItem)= btnItem

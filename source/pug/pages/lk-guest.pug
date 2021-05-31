@@ -7,12 +7,7 @@ block variables
   - var currentPage = "Deadline"
 
 block main
-  include ../data/lk/lk-admin-headline
-  include ../data/lk/lk-participants
-  include ../data/lk/lk-admin-tabs
-  include ../data/lk/lk-download-list
-  include ../data/lk/lk-deadlines-info
-  include ../data/lk/lk-support-contacts
+  include ../data/pages/lk-guest
 
   main.container.lk
     +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)

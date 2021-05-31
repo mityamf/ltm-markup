@@ -2797,7 +2797,7 @@
         </div>
       </header>
       <main class="container container--no-padding container--admin">
-        <div class="admin">
+        <div class="admin admin--schedule">
           <div class="admin-headline">
             <div class="headline-back">
               <h2 class="title--h2">Luxury Travel Mart Moscow Spring’ 2020</h2><a class="back-link" href="#">
@@ -2808,7 +2808,7 @@
             <time datetime="dates">27 – 28 February 2020</time>
           </div>
           <div class="participants">
-            <h2 class="title title--h2">Participants at this Event</h2>
+            <h2 class="title title--h2 title--big">Participants at this Event</h2>
             <p class="participants__info">Only 2 participants are allowed</p>
             <ul class="participants__list">
               <li class="participants__item"><img src="img/content/admin-photo.jpg"/>
@@ -2841,7 +2841,7 @@
               <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-sponsors-opportunities.html">Sponsorship Opportunities</a></li>
             </ul>
           </div>
-          <h2 class="title title--h2">My Schedule</h2>
+          <h2 class="title title--h2 title--big">My Schedule</h2>
           <div class="schedule-tabs">
             <ul class="schedule-tabs__list">
               <li class="schedule-tabs__item schedule-tabs__item--active"><a class="schedule-tabs__link" href="admin-schedule-d1.html"><span class="schedule-tabs__text">Day 1</span><span class="schedule-tabs__text schedule-tabs__text--hidden">–</span>
@@ -2853,47 +2853,53 @@
             </ul>
           </div>
           <table class="admin-table">
-            <tr class="admin-table__row admin-table__row--headline">
-              <th class="admin-table__cell admin-table__cell--empty"></th>
-              <th class="admin-table__cell admin-table__cell--schedule-time">Time</th>
-              <th class="admin-table__cell admin-table__cell--select-company">Company</th>
-              <th class="admin-table__cell admin-table__cell--button">Request</th>
-              <th class="admin-table__cell admin-table__cell--status">Status</th>
-              <th class="admin-table__cell admin-table__cell--empty"></th>
-            </tr>
-            <tr class="admin-table__row admin-table__row--schedule">
-              <th class="admin-table__cell admin-table__cell--empty"></th>
-              <th class="admin-table__cell admin-table__cell--schedule-time">10:00 – 10:10</th>
-              <th class="admin-table__cell admin-table__cell--select-company">
-                <select class="input-dropdown" id="company-select">
-                  <option class="input-dropdown__option" value="Choose a company">Choose a company</option>
-                  <option class="input-dropdown__option" value="Choose a company">Mandarin International Hotel Group</option>
-                </select>
-              </th>
-              <th class="admin-table__cell admin-table__cell--button">
-                <button class="btn btn--white btn--request" type="submit">Send a request</button>
-              </th>
-              <th class="admin-table__cell admin-table__cell--status admin-table__cell--free"><span>Free</span></th>
-              <th class="admin-table__cell admin-table__cell--empty"></th>
-            </tr>
-            <tr class="admin-table__row admin-table__row--schedule">
-              <th class="admin-table__cell admin-table__cell--empty"></th>
-              <th class="admin-table__cell admin-table__cell--schedule-time">10:00 – 10:10</th>
-              <th class="admin-table__cell admin-table__cell--select-company">
-                <select class="input-dropdown" id="company-select">
-                  <option class="input-dropdown__option" value="Choose a company">Choose a company</option>
-                  <option class="input-dropdown__option" value="Choose a company">Mandarin International Hotel Group</option>
-                </select>
-              </th>
-              <th class="admin-table__cell admin-table__cell--button">
-                <button class="btn btn--white btn--request" type="submit">Send a request</button>
-              </th>
-              <th class="admin-table__cell admin-table__cell--status admin-table__cell--free"><span>Free</span></th>
-              <th class="admin-table__cell admin-table__cell--empty"></th>
-            </tr>
+            <thead>
+              <tr class="admin-table__row admin-table__row--headline">
+                <th class="admin-table__cell admin-table__cell--empty"></th>
+                <th class="admin-table__cell admin-table__cell--schedule-time">Time</th>
+                <th class="admin-table__cell admin-table__cell--select-company">Company</th>
+                <th class="admin-table__cell admin-table__cell--button">Request</th>
+                <th class="admin-table__cell admin-table__cell--status">Status</th>
+                <th class="admin-table__cell admin-table__cell--empty"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="admin-table__row admin-table__row--schedule">
+                <th class="admin-table__cell admin-table__cell--empty"></th>
+                <th class="admin-table__cell admin-table__cell--schedule-time">10:00 – 10:10</th>
+                <th class="admin-table__cell admin-table__cell--select-company">
+                  <select class="input-dropdown" id="company-select">
+                    <option class="input-dropdown__option" value="Choose a company">Choose a company</option>
+                    <option class="input-dropdown__option" value="Choose a company">Mandarin International Hotel Group</option>
+                  </select>
+                </th>
+                <th class="admin-table__cell admin-table__cell--button">
+                  <button class="btn btn--white btn--request" type="submit" disabled="disabled">Request sent</button>
+                </th>
+                <th class="admin-table__cell admin-table__cell--status admin-table__cell--free"><span>Free</span></th>
+                <th class="admin-table__cell admin-table__cell--empty"></th>
+              </tr>
+              <tr class="admin-table__row admin-table__row--schedule">
+                <th class="admin-table__cell admin-table__cell--empty"></th>
+                <th class="admin-table__cell admin-table__cell--schedule-time">10:00 – 10:10</th>
+                <th class="admin-table__cell admin-table__cell--select-company">
+                  <select class="input-dropdown" id="company-select">
+                    <option class="input-dropdown__option" value="Choose a company">Choose a company</option>
+                    <option class="input-dropdown__option" value="Choose a company">Mandarin International Hotel Group</option>
+                  </select>
+                </th>
+                <th class="admin-table__cell admin-table__cell--button">
+                  <button class="btn btn--white btn--request" type="submit">Send a request</button>
+                </th>
+                <th class="admin-table__cell admin-table__cell--status admin-table__cell--free"><span>Free</span></th>
+                <th class="admin-table__cell admin-table__cell--empty"></th>
+              </tr>
+            </tbody>
           </table>
+          <div class="admin__mobile-block-wrapper"><a class="generate-file generate-file__link" href="#" aria-label="Скачать файл" download="download">Generate PDF with schedule</a>
+          </div>
           <div class="wish-list">
-            <h2 class="title title--h2">Wish list</h2>
+            <h2 class="title title--h2 title--big">Wish list</h2>
             <div class="wish-list__text-wrapper">
               <p>My wish list for appointments outside of the working session</p><a class="generate-file generate-file__link" href="#" aria-label="Скачать файл" download="download">Generate PDF with Wish-list</a>
             </div>
@@ -2936,10 +2942,15 @@
               </div>
             </div>
           </div>
+          <div class="admin__mobile-block-wrapper"><a class="up-button" href="#top" aria-label="Вернуться в начало">
+              <svg width="54" height="54" aria-hidden="true">
+                <use xlink:href="#icon-arrow-up"></use>
+              </svg></a>
+          </div>
         </div>
         <div class="support-contacts">
           <h3 class="title--h3">Contacts for support</h3>
-          <div class="direction container swiper-container card-swiper">
+          <div class="direction container swiper-container direction__slider--card">
             <ul class="support-contacts__list direction-list swiper-wrapper">
               <li class="support-contacts__item swiper-slide"><img src="img/content/support-photo-1.jpg"/>
                 <div class="support-contacts__info"><span class="support-contacts__text">Maria Shankina</span><span class="support-contacts__text">General Administration and Sponsorship</span><a class="support-contacts__link" href="mailto:yahoo@yahoo.com">
@@ -2959,14 +2970,14 @@
                       <use xlink:href="#icon-support-email"></use>
                     </svg></a><a class="support-contacts__link" href="tel:79852467232">+7 985 246 72 32</a></div>
               </li>
-              <li class="support-contacts__item swiper-slide"><img src="../img/svg/icon-support-no-photo.svg"/>
+              <li class="support-contacts__item swiper-slide"><img src="img/svg/icon-support-no-photo.svg"/>
                 <div class="support-contacts__info"><span class="support-contacts__text">Support</span><span class="support-contacts__text">Question about new web-functional</span><a class="support-contacts__link" href="mailto:yahoo@yahoo.com">
                     <svg width="42" height="18" aria-hidden="true">
                       <use xlink:href="#icon-support-email"></use>
                     </svg></a><a class="support-contacts__link" href="tel:74956450422">+7 495 645 04 22</a></div>
               </li>
             </ul>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination direction__pagination"></div>
             <div class="direction__arrow direction__arrow--right">
               <svg width="11" height="19" aria-hidden="true">
                 <use xlink:href="#arrow-right"></use>

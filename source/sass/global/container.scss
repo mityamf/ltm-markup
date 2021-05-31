@@ -21,4 +21,25 @@
       padding: 0;
     }
   }
+
+  &--no-padding .admin__control-wrapper {
+    @include viewport--sm {
+      padding-right: 17px;
+      padding-left: 17px;
+    }
+  }
+
+  &--admin {
+    .btn--more {
+      padding: 14px 30px;
+
+      @include viewport--lg {
+        width: 178px;
+      }
+
+      @include viewport--sm {
+        width: 222px;
+      }
+    }
+  }
 }
