@@ -86,6 +86,14 @@
   .direction__arrow--right {
     top: 19%;
   }
+
+  .direction__arrow--left {
+    left: -7px;
+  }
+
+  .direction__arrow--right {
+    right: -7px;
+  }
 }
 
 .container--no-padding > .support-contacts {

@@ -4,6 +4,7 @@
 
   @include viewport--sm {
     display: block;
+    padding: 24px 0 0 0;
   }
 
   &__photo-list {

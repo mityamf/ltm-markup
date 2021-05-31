@@ -3,6 +3,7 @@
   max-width: 1510px;
   margin: 0 auto;
   padding: 0 50px;
+  position: relative;
 
   @include viewport--lg {
     padding: 0 80px;
