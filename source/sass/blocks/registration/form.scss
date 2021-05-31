@@ -30,6 +30,12 @@
       padding-left: 0;
       text-align: center;
     }
+
+    @media (min-width: 1920px) {
+      padding-top: 37px;
+      padding-bottom: 31px;
+      padding-left: 31px;
+    }
   }
 
   &__title::before {
@@ -121,7 +127,7 @@
       border: 1px solid $color-blue;
       height: 42px;
       padding-left: 10px;
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 300;
       color: $color-blue;
       outline: none;
@@ -158,6 +164,7 @@
     }
 
     h3 {
+      font-size: 16px;
       margin: 0;
       font-weight: 600;
       padding-bottom: 5px;
@@ -454,6 +461,11 @@
     &:focus,
     &:hover {
       opacity: 0.8;
+    }
+
+    @media (min-width: 1920px) {
+      padding-top: 0;
+      padding-bottom: 20px;
     }
   }
 
