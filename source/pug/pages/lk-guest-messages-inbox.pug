@@ -7,14 +7,9 @@ block variables
   - var currentPage = "Messages"
 
 block main
-  include ../data/lk/lk-admin-headline
-  include ../data/lk/lk-participants
-  include ../data/lk/lk-admin-tabs
-  include ../data/lk/lk-mail-control
-  include ../data/admin/admin-inbox-messages
-  include ../data/lk/lk-support-contacts
+  include ../data/pages/lk-guest-messages-inbox
 
-  main.container.container--no-padding.container--admin-deadlines.lk
+  main.container.container--no-padding.lk
     .admin
       +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates)
       +renderLKParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, infoBlock)

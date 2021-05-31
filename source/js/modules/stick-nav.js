@@ -5,10 +5,7 @@ const stickNav = () => {
 
   let scrollPos = window.pageYOffset;
 
-  const getTopBarHeight = () => {
-    const topBarGap = topBar.offsetHeight;
-    return topBarGap;
-  };
+  const getTopBarHeight = () => topBar.offsetHeight;
 
   const scroll = () => {
 

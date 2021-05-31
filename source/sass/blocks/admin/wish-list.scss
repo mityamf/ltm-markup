@@ -1,18 +1,46 @@
 .wish-list {
   display: block;
 
+  @include viewport--sm {
+    position: relative;
+    padding-top: 53px;
+  }
+
+  .title--h2 {
+    margin-bottom: 28px;
+
+    @include viewport--sm {
+      margin-bottom: 7px;
+      max-width: 50%;
+      padding-right: 17px;
+      padding-left: 17px;
+    }
+  }
+
   &__text-wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include viewport--sm {
+      display: block;
+      padding-right: 17px;
+      padding-left: 17px;
+    }
   }
 
   &__text-wrapper p {
     margin: 0;
+    max-width: 582px;
 
     font-size: 24px;
     line-height: 29px;
     font-weight: lighter;
     color: $color-blue;
+    letter-spacing: 1px;
+
+    @include viewport--sm {
+      display: block;
+    }
   }
 
   &__control-wrapper {
@@ -22,9 +50,20 @@
 
   &__choose-company {
     display: flex;
+    padding-bottom: 33px;
     width: 100%;
     margin-right: 10px;
     align-items: center;
+
+    @include viewport--lg {
+      padding-bottom: 45px;
+    }
+
+    @include viewport--sm {
+      padding-right: 17px;
+      padding-left: 17px;
+      padding-bottom: 18px;
+    }
   }
 
   &__text-company {
@@ -33,35 +72,54 @@
 
   &__company-block > p {
     margin: 0;
+    max-width: 614px;
+    letter-spacing: 1px;
+    padding-bottom: 28px;
 
     font-size: 24px;
     line-height: 29px;
     font-weight: lighter;
     color: $color-blue;
+
+    @include viewport--lg {
+      padding-bottom: 9px;
+    }
+
+    @include viewport--sm {
+      padding: 26px 17px 24px 17px;
+    }
   }
 
   &__company-list-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 20px 0 0 0;
+    padding: 7px 0 0;
 
     @include viewport--sm {
       flex-wrap: wrap;
+      padding: 27px 0 0;
     }
   }
 
   &__company-block {
     display: inline-block;
-    width: 50%;
+    width: calc((100% / 2));
 
     @include viewport--sm {
       display: block;
       width: 100%;
+      padding: 0 0 24px 0;
     }
   }
 
   &__company-block:first-child {
-    margin-right: 10px;
+    margin-right: 15px;
+    padding: 13px 0 0 0;
+
+    @include viewport--sm {
+      padding-top: 0;
+      margin: 0;
+    }
   }
 
   &__company-block > span {
@@ -70,6 +128,11 @@
     font-size: 12px;
     line-height: 20px;
     color: $color-nobel;
+
+    @include viewport--sm {
+      padding-left: 17px;
+      padding-right: 17px;
+    }
   }
 
   &__company-list {
@@ -78,7 +141,7 @@
     list-style-type: none;
 
     @include viewport--sm {
-      padding: 0 0 20px 0;
+      padding: 0 0 31px;
     }
   }
 
@@ -87,31 +150,85 @@
   }
 
   &__company-item {
-    padding: 18px 14px;
+    padding: 15px 14px;
 
     font-size: 16px;
     line-height: 22px;
     font-weight: normal;
+    letter-spacing: 0.1px;
+
+    @include viewport--sm {
+      letter-spacing: 0.3px;
+    }
   }
 
   //Стили для выпадающего списка
 
   .choices {
     height: 38px;
-    width: 60%;
-    margin: 0 10px 0 0;
+    width: 83%;
+    margin: 0 17px 0 0;
+    background-color: transparent;
+
+    @include viewport--lg {
+      width: 66%;
+      margin: 0 12px 0 0;
+    }
+
+    @include viewport--sm {
+      width: 90%;
+      height: 42px;
+    }
   }
 
   .choices__inner {
     height: 38px;
     min-height: 38px;
     padding: 4px 15px;
+    background-color: transparent;
+
+    @include viewport--sm {
+      height: 42px;
+    }
   }
 
-  .choices__inner,
   .choices__item {
-    background-color: transparent;
+    font-size: 16px;
+    line-height: 22px;
     color: $color-blue;
+
+    background-color: transparent;
+  }
+
+  .choices__list--single {
+    padding: 0 16px 4px 4px;
+
+    @include viewport--sm {
+      padding: 3px 16px 4px 4px;
+    }
+  }
+
+  .choices[data-type*="select-one"] .choices__inner {
+    padding: 6px 6px;
+  }
+
+  .choices[data-type*="select-one"]::after {
+    height: 21px;
+    width: 11px;
+    right: 9px;
+    top: 8px;
+    margin-top: 0;
+
+    background-image: url("../img/svg/icon-open-select.svg");
+
+    @include viewport--sm {
+      height: 16px;
+      width: 34px;
+      right: 4px;
+      top: 14px;
+
+      background-image: url("../img/svg/icon-check.svg");
+    }
   }
 
   //Стили для кнопок
@@ -124,25 +241,43 @@
     line-height: 18px;
 
     @include viewport--sm {
+      padding: 6px 0;
+
       white-space: break-spaces;
+      font-size: 14px;
+      line-height: 13px;
     }
   }
 
   .generate-file__link {
-    padding: 5px 7px;
+    display: flex;
+    align-items: center;
+    padding: 13px 13px;
+    height: max-content;
+    letter-spacing: 0.7px;
 
     border: 1px solid $color-blue;
     background-color: transparent;
 
     color: $color-blue;
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 19px;
     font-weight: normal;
 
     transition: color background-color $default-transition-settings;
 
+    @include viewport--lg {
+      padding: 13px 30px;
+    }
+
     @include viewport--sm {
-      display: inline-block;
+      display: block;
+      position: absolute;
+      top: 54px;
+      right: 17px;
+      max-width: 163px;
+      padding: 1px 9px;
+      width: fit-content;
       white-space: break-spaces;
       text-align: center;
     }

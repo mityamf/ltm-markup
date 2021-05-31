@@ -1,0 +1,246 @@
+-
+  var adminHeadline = {
+    eventName: "Luxury Travel Mart Moscow Spring’ 2020",
+    eventPlace: "at Hyatt Regency Moscow Petrovsky Park",
+    dates: "27 – 28 February 2020",
+  }
+- var participantsHeadline = "Сотрудники на выставку"
+- var participantsInfo = "Только 2 гостя могут принять участие"
+- var participantsText = "Если вы хотите добавить больше коллег на выставку, свяжитесь с организаторами"
+
+-
+  var participantsList = [
+    {
+      photo: "img/content/admin-photo-2.jpg",
+      name: "Alexey",
+      lastName: "Stavsky",
+      position: "Director",
+      mail: "123@gmail.com",
+      note: "Администратор"
+    },
+    {
+      photo: "img/content/admin-photo-3.jpg",
+      name: "Alyona",
+      lastName: "Alexandrova-Fedorova",
+      position: "PR-Manager",
+      mail: "123@gmail.com",
+      note: "Коллега"
+    }
+  ]
+
+-
+  var infoBlock = {
+    title: "Adventa Agency",
+    link: "https://adventaagency.ru",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    buttonText: "Редактировать",
+    buttonType: "button"
+  }
+-
+  var adminTabs = [
+    {
+      text: "Программа и инфо",
+      link: "lk-guest.html",
+      currentPage: "Deadline"
+    },
+    {
+      text: "Сообщения",
+      link: "lk-guest-messages-inbox.html",
+      currentPage: "Messages"
+    },
+    {
+      text: "Моё расписание",
+      link: "lk-guest-schedule-d1.html",
+      currentPage: "Schedule"
+    },
+    {
+      text: "Список участников",
+      link: "lk-guest-exhibitors-d1.html",
+      currentPage: "Hosted Buyers Guest List"
+    },
+  ]
+-
+  var filters = [
+    {
+      title: "По алфавиту:",
+      mod: "list",
+      filterList: "#ABCDEFGHIJKLMNOPQRSTUVWXY"
+    },
+    {
+      title: "По стране:",
+      mod: "dropdown",
+      filterList: [
+        "Afghanistan",
+        "Russia",
+        "United States of America",
+        "China",
+        "Afghanistan",
+        "Russia",
+        "United States of America",
+        "China",
+        "Afghanistan",
+        "Russia",
+        "United States of America",
+        "China",
+        "Afghanistan",
+        "Russia",
+        "United States of America",
+        "China",
+      ]
+    },
+    {
+      title: "По категориям:",
+      mod: "dropdown",
+      filterList: [
+        "Apartments & villas rental",
+        "Hello, hello",
+        "Come with kittens",
+      ]
+    },
+  ]
+-
+  var filterTabs = [
+    {
+      text: "По свободным слотам",
+      id: "0",
+      type: "button"
+    },
+  ]
+-
+  var scheduleTabs = [
+    {
+      text: "День 1",
+      separator: "–",
+      date: "27.02.2020",
+      link: "lk-guest-exhibitors-d1.html",
+      currentPage: "Hosted Buyers Guest List"
+    },
+    {
+      text: "День 2",
+      separator: "–",
+      date: "27.02.2020",
+      link: "lk-guest-exhibitors-d2.html",
+      currentPage: "Hosted Buyers Guest List2"
+    }
+  ]
+
+-
+  var adminHostedGuestsListTitles = {
+    company: "Участник",
+    name: "Представитель",
+    freeSlots: "Свободные слоты",
+    request: "Запрос",
+    contact: "Контакт",
+  }
+
+-
+  var adminHostedGuestsList = [
+    {
+      company: "Travel Luxury Agency",
+      place: "Worldwide",
+      name: "Ivan Skorodubov",
+      position: "Director",
+      freeSlots: [
+        "10:00 – 10:10",
+        "12:00 – 12:20"
+      ],
+      request: "Send a request",
+      contact: "Send a message",
+      contactLink: "#",
+    },
+    {
+      company: "Prime Luxury Travel",
+      place: "Worldwide",
+      name: "Eugenia Stuslova",
+      freeSlots: [
+        "10:00 – 10:10",
+        "12:00 – 12:20"
+      ],
+      request: "Send a request",
+      contact: "Send a message",
+      contactLink: "#"
+    },
+    {
+      company: "Anastasia Tours",
+      place: "UAE, Turkey",
+      name: "Anna Petrenko",
+      freeSlots: [
+        "13:00 – 17:10",
+        "12:00 – 12:20"
+      ],
+      request: "Send a request",
+      contact: "Send a message",
+      contactLink: "#"
+    },
+  ]
+
+-
+  var contactsList = {
+    title: "Помощь",
+    contacts: [
+      {
+        src: "img/content/support-photo-3.jpg",
+        name: "Ирина Безпалая",
+        position: "Buyers and Appointments",
+        email: "yahoo@yahoo.com",
+        phone: "79857765522",
+        phoneText: "+7 985 776 55 22"
+      },
+      {
+        src: "img/svg/icon-support-no-photo.svg",
+        name: "Поддержка",
+        position: "Вопросы о новом сайте",
+        email: "yahoo@yahoo.com",
+        phone: "74956450422",
+        phoneText: "+7 495 645 04 22"
+      },
+    ]
+  }
+
+-
+  var alphabetFilter = {
+    title: "По алфавиту:",
+    mod: "alphabet",
+    filterList: "#ABCDEFGHIJKLMNOPQRSTUVWXY"
+  }
+-
+  var dropdownFilters = [
+    {
+      title: "По стране:",
+      mod: "dropdown",
+      className: "filters__dropdown-filter--wide",
+      filterList: [
+        "Afghanistan",
+        "Russia",
+        "United States of America",
+        "China",
+        "Afghanistan",
+        "Russia",
+        "United States of America",
+        "China",
+        "Afghanistan",
+        "Russia",
+        "United States of America",
+        "China",
+        "Afghanistan",
+        "Russia",
+        "United States of America",
+        "China",
+      ]
+    },
+    {
+      title: "По категории:",
+      mod: "dropdown",
+      className: "",
+      filterList: [
+        "Apartments & villas rental",
+        "Hello, hello",
+        "Come with kittens",
+      ]
+    },
+  ]
+-
+  var buttonFilter = {
+    text: "Очистить все фильтры",
+    type: "reset"
+  }

@@ -3,7 +3,7 @@
 <!--Таблица с отправленными сообщениями-->
 <!--Таблица с входящими сообщениями-->
 <!--Таблица со списком гостей--><!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <title>Deadline Info</title>
     <meta charset="utf-8">
@@ -2808,7 +2808,7 @@
             <time datetime="dates">27 – 28 February 2020</time>
           </div>
           <div class="participants">
-            <h2 class="title title--h2">Participants at this Event</h2>
+            <h2 class="title title--h2 title--big">Participants at this Event</h2>
             <p class="participants__info">Only 2 participants are allowed</p>
             <ul class="participants__list">
               <li class="participants__item"><img src="img/content/admin-photo.jpg"/>
@@ -2843,13 +2843,13 @@
           </div>
           <div class="deadlines-info">
             <div class="deadlines-info__content">
-              <h2 class="title title--h2">Deadlines</h2>
+              <h2 class="title title--h2 title--big">Deadlines</h2>
               <div class="deadlines-info__text">
                 <p>July 3, 2019: Opening of registration for the buyers.</p>
                 <p>September 3, 2019: Password, user name and detailed instructions on how to use the online system and to set up your <br>appointments  <br>will be sent for your attention.</p>
                 <p>September 4 – 20, 2019: Scheduling of appointments for the working session. September 20, 2019: </p>
               </div>
-              <h2 class="title title--h2">Program of the Event</h2>
+              <h2 class="title title--h2 title--big">Program of the Event</h2>
               <div class="deadlines-info__text">
                 <p>Registration desk will be located in the Foyer of the Ballroom Hall (2nd floor). Organizers – Almaty Hall (2nd floor).</p>
                 <p>10:00 – 12:55 Individual pre-scheduled appointments.<br>Each appointment will last 10 minutes according to the following scheme (5 minutes added for moving from one exhibitor to the next):</p>
@@ -2868,7 +2868,7 @@
               </div>
             </div>
             <div class="download">
-              <h2 class="title title--h2">Files to Download</h2>
+              <h2 class="title title--h2 title--big">Files to Download</h2>
               <ul class="download__list">
                 <li class="download__item"><a class="download__link" href="" aria-label="Скачать файл" download="download">
                     <svg width="26" height="35" aria-hidden="true">
@@ -2888,7 +2888,7 @@
         </div>
         <div class="support-contacts">
           <h3 class="title--h3">Contacts for support</h3>
-          <div class="direction container swiper-container card-swiper">
+          <div class="direction container swiper-container direction__slider--card">
             <ul class="support-contacts__list direction-list swiper-wrapper">
               <li class="support-contacts__item swiper-slide"><img src="img/content/support-photo-1.jpg"/>
                 <div class="support-contacts__info"><span class="support-contacts__text">Maria Shankina</span><span class="support-contacts__text">General Administration and Sponsorship</span><a class="support-contacts__link" href="mailto:yahoo@yahoo.com">
@@ -2908,14 +2908,26 @@
                       <use xlink:href="#icon-support-email"></use>
                     </svg></a><a class="support-contacts__link" href="tel:79852467232">+7 985 246 72 32</a></div>
               </li>
-              <li class="support-contacts__item swiper-slide"><img src="../img/svg/icon-support-no-photo.svg"/>
+              <li class="support-contacts__item swiper-slide"><img src="img/svg/icon-support-no-photo.svg"/>
+                <div class="support-contacts__info"><span class="support-contacts__text">Support</span><span class="support-contacts__text">Question about new web-functional</span><a class="support-contacts__link" href="mailto:yahoo@yahoo.com">
+                    <svg width="42" height="18" aria-hidden="true">
+                      <use xlink:href="#icon-support-email"></use>
+                    </svg></a><a class="support-contacts__link" href="tel:74956450422">+7 495 645 04 22</a></div>
+              </li>
+              <li class="support-contacts__item swiper-slide"><img src="img/content/support-photo-3.jpg"/>
+                <div class="support-contacts__info"><span class="support-contacts__text">Irina Bezpalaya</span><span class="support-contacts__text">Buyers and Appointments</span><a class="support-contacts__link" href="mailto:yahoo@yahoo.com">
+                    <svg width="42" height="18" aria-hidden="true">
+                      <use xlink:href="#icon-support-email"></use>
+                    </svg></a><a class="support-contacts__link" href="tel:79852467232">+7 985 246 72 32</a></div>
+              </li>
+              <li class="support-contacts__item swiper-slide"><img src="img/svg/icon-support-no-photo.svg"/>
                 <div class="support-contacts__info"><span class="support-contacts__text">Support</span><span class="support-contacts__text">Question about new web-functional</span><a class="support-contacts__link" href="mailto:yahoo@yahoo.com">
                     <svg width="42" height="18" aria-hidden="true">
                       <use xlink:href="#icon-support-email"></use>
                     </svg></a><a class="support-contacts__link" href="tel:74956450422">+7 495 645 04 22</a></div>
               </li>
             </ul>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination direction__pagination"></div>
             <div class="direction__arrow direction__arrow--right">
               <svg width="11" height="19" aria-hidden="true">
                 <use xlink:href="#arrow-right"></use>
@@ -2929,8 +2941,8 @@
           </div>
         </div>
       </main>
-      <footer>
-        <div class="footer container">
+      <footer class="container">
+        <div class="footer">
           <ul class="footer__logotip logotip">
             <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company-ap" src="./img/svg/g10.svg" alt="company logo" width="67" height="73"/></a></li>
             <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company-tm" src="./img/svg/tm-logo.svg" alt="company logo" width="110" height="57"/></a></li>
@@ -2966,17 +2978,17 @@
           </div>
           <div class="footer__info"><span class="footer__info-info">&copy; All right reserved by Artyom Polanskiy and Travel Media LLC.</span></div>
         </div>
-        <div class="cookies">
-          <button class="cookies__btn-close" type="button" aria-label="Закрыть">
-            <svg width="33" height="33" aria-hidden="true">
-              <use xlink:href="#icon-close"></use>
-            </svg>
-          </button>
-          <h2 class="cookies__title">LTM Website uses cookies</h2>
-          <p class="cookies__description">Website uses cookies and similar technologies. We use functional cookies to make sure our websites work well and secure and analytical cookies to offer you the best possible user experience. By clicking on ’Agree’, you consent to the placing of these cookies.</p><a class="cookies__info" href="#">For more information read Cookies policy</a>
-          <button class="button button--transparent" type="button">ok</button>
-        </div>
       </footer>
+      <div class="cookies">
+        <button class="cookies__btn-close" type="button" aria-label="Закрыть">
+          <svg width="33" height="33" aria-hidden="true">
+            <use xlink:href="#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="cookies__title">LTM Website uses cookies</h2>
+        <p class="cookies__description">Website uses cookies and similar technologies. We use functional cookies to make sure our websites work well and secure and analytical cookies to offer you the best possible user experience. By clicking on ’Agree’, you consent to the placing of these cookies.</p><a class="cookies__info" href="#">For more information read Cookies policy</a>
+        <button class="button button--transparent" type="button">ok</button>
+      </div>
     </div>
     <div class="modal modal--preload modal--forgot">
       <div class="modal__wrapper">

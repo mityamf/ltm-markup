@@ -7,15 +7,9 @@ block variables
   - var currentPage = "Hosted Buyers Guest List"
 
 block main
-  include ../data/admin/admin-headline
-  include ../data/admin/participants
-  include ../data/admin/admin-tabs
-  include ../data/admin/guests-filters
-  include ../data/admin/filter-tabs
-  include ../data/admin/admin-hosted-guests-list
-  include ../data/support-contacts
+  include ../data/pages/admin-hosted-guests-d1
 
-  main.container.container--no-padding.lk
+  main.container.container--no-padding
     .admin
       +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
       +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
@@ -23,9 +17,14 @@ block main
         +renderAdminTabs(adminTabs)
       +renderHeadline2("Hosted Buyers Guest List")
       +renderScheduleTabs(scheduleTabs)
-      ul.hotel-filters
-        each filter in filters
-          +renderFilter(filter.title, filter.mod, filter.filterList)
+
+      .filters.filters--exhibitions
+        +renderAlphabetFilter(alphabetFilter)
+        +renderDropdownFilter(dropdownFilters)
+
+      .visible-sm
+        +renderMobileFilterButtons("Filters", "Clear all filters")
+
       +renderFilterTabs(filterTabs)
       +renderHostedGuestsList(adminHostedGuestsListTitles, adminHostedGuestsList)
       button.btn.btn--white.btn--more(type="button")="More"

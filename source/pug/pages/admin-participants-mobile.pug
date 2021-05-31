@@ -1,0 +1,19 @@
+extends ../base/layout
+
+block variables
+  - var title = "Phone LK Exh Participants"
+  - var hasHeader = true
+  - var hasFooter = true
+  - var currentPage = "Phone LK Exh Participants"
+
+block main
+  include ../data/pages/admin-participants-mobile
+
+  main.container
+    .admin
+      +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
+      +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
+      .admin__control-wrapper
+        +renderAdminTabs(adminTabs)
+    +renderSupportContacts(contactsList)
+
