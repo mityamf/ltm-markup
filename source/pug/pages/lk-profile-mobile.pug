@@ -7,10 +7,7 @@ block variables
   - var currentPage = "Phone LK Guest Company"
 
 block main
-  include ../data/lk/lk-admin-headline
-  include ../data/lk/lk-participants
-  include ../data/lk/lk-admin-tabs
-  include ../data/lk/lk-support-contacts
+  include ../data/pages/lk-profile-mobile
 
   main.container.lk
     +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)

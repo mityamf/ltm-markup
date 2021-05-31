@@ -1,23 +1,19 @@
 .filters {
   display: flex;
+  padding-bottom: 22px;
 
-  @include viewport--sm {
-    flex-wrap: wrap;
+  h3 {
+    padding-bottom: 24px;
   }
 
-  &__block {
-    display: inline-flex;
-    align-items: flex-end;
+  @include viewport--sm {
+    display: none;
   }
 
   &__block--alphabet {
     max-width: 30%;
+    min-width: 471px;
     width: fit-content;
-
-    @include viewport--sm {
-      max-width: none;
-      width: 100%;
-    }
   }
 
   &__alphabet-list {
@@ -29,15 +25,11 @@
     list-style-type: none;
   }
 
-  &__alphabet-item {
-
-  }
-
   &__alphabet-link {
-    font-size: 24px;
+    font-size: 27px;
     line-height: 29px;
     color: $color-blue;
-    letter-spacing: 1.9px;
+    letter-spacing: 5px;
     font-weight: lighter;
 
     transition: opacity $default-transition-settings;
@@ -54,19 +46,33 @@
 
   &__block--dropdown {
     display: flex;
-
-    @include viewport--sm {
-      flex-wrap: wrap;
-    }
+    width: 100%;
   }
 
   &__dropdown-filter {
     display: flex;
     flex-direction: column;
+    width: 222px;
 
-    @include viewport--sm {
-      display: block;
-      width: 100%;
+    h3 {
+      margin-bottom: auto;
+    }
+
+    @include viewport--lg {
+      width: 178px;
+    }
+  }
+
+  &__dropdown-filter--mobile {
+    display: block;
+    width: 100%;
+  }
+
+  &__dropdown-filter--wide {
+    width: 341px;
+
+    @include viewport--lg {
+      width: 272px;
     }
   }
 
@@ -82,25 +88,50 @@
   &__alphabet-filter {
     display: flex;
     flex-direction: column;
+    width: 42%;
   }
 
   &__block--button-wrapper {
     align-items: flex-end;
-
-    @include viewport--sm {
-      display: block;
-      width: 100%;
-      margin: 0 auto;
-    }
+    display: inline-flex;
   }
 
   &__button {
     padding: 14px 10px;
+  }
 
-    @include viewport--sm {
-      display: block;
-      margin: 0 auto;
-      width: 222px;
+  &--exhibitions .filters__block--button-wrapper {
+    min-width: 103px;
+    max-width: 222px;
+  }
+
+  &--exhibitions .filters__button {
+    width: 100%;
+  }
+
+  &__mobile-block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__mobile-block button {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-blue;
+
+    border: none;
+    background-color: transparent;
+
+    &:active {
+      opacity: 0.5;
     }
+  }
+
+  &__mobile-block svg {
+    margin-right: 5px;
   }
 }

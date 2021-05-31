@@ -7,10 +7,10 @@ block variables
   - var currentPage = "Detailed Schedule"
 
 block main
-  include ../data/schedule
+  include ../data/pages/schedule
 
   main
-    +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem, promoBg.noButtonMod)
+    +promo(promoBg.titleItem, promoBg.btnItem, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
     .container
       .schedule
         each program in programs

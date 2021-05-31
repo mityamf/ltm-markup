@@ -2730,92 +2730,17 @@
 </symbol></svg>
     </div>
     <div class="wrapper">
+      <!--include source/pug/data/test/admin/admin-filters-->
+      <!--include ../data/hotel/hotel-photos-->
+      <!--include ../data/hotel/hotel-page-editing-->
       <main class="container">
-        <div class="filters">
-          <div class="filters__block filters__block--alphabet">
-            <div class="filters__alphabet-filter">
-              <h3 class="title title--h3 title--without-margin">Alphabetically:</h3>
-              <ul class="filters__alphabet-list">
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">#</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">A</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">B</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">C</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">D</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">E</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">F</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">G</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">H</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">I</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">J</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">K</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">L</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">M</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">N</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">O</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">P</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">Q</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">R</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">S</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">T</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">U</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">V</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">W</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">X</a></li>
-                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">Y</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="filters__block filters__block--dropdown">
-            <div class="filters__dropdown-filter">
-              <h3 class="title title--h3 title--without-margin">By Country:</h3>
-              <select class="input-dropdown" id="hotel-select" multiple="multiple">
-                <option class="input-dropdown__option" value="Afghanistan">Afghanistan</option>
-                <option class="input-dropdown__option" value="Russia">Russia</option>
-                <option class="input-dropdown__option" value="United States of America">United States of America</option>
-                <option class="input-dropdown__option" value="China">China</option>
-                <option class="input-dropdown__option" value="Afghanistan">Afghanistan</option>
-                <option class="input-dropdown__option" value="Russia">Russia</option>
-                <option class="input-dropdown__option" value="United States of America">United States of America</option>
-                <option class="input-dropdown__option" value="China">China</option>
-                <option class="input-dropdown__option" value="Afghanistan">Afghanistan</option>
-                <option class="input-dropdown__option" value="Russia">Russia</option>
-                <option class="input-dropdown__option" value="United States of America">United States of America</option>
-                <option class="input-dropdown__option" value="China">China</option>
-                <option class="input-dropdown__option" value="Afghanistan">Afghanistan</option>
-                <option class="input-dropdown__option" value="Russia">Russia</option>
-                <option class="input-dropdown__option" value="United States of America">United States of America</option>
-                <option class="input-dropdown__option" value="China">China</option>
-              </select>
-            </div>
-            <div class="filters__dropdown-filter">
-              <h3 class="title title--h3 title--without-margin">By type of business</h3>
-              <select class="input-dropdown" id="hotel-select" multiple="multiple">
-                <option class="input-dropdown__option" value="Apartments &amp; villas rental">Apartments &amp; villas rental</option>
-                <option class="input-dropdown__option" value="Hello, hello">Hello, hello</option>
-                <option class="input-dropdown__option" value="Come with kittens">Come with kittens</option>
-              </select>
-            </div>
-            <div class="filters__dropdown-filter">
-              <h3 class="title title--h3 title--without-margin">Exhibitor’s name</h3>
-              <select class="input-dropdown" id="hotel-select" multiple="multiple">
-                <option class="input-dropdown__option" value="Hyatt">Hyatt</option>
-                <option class="input-dropdown__option" value="Mandarin Oriental Hotel">Mandarin Oriental Hotel</option>
-                <option class="input-dropdown__option" value="Awesome hotel Ritz">Awesome hotel Ritz</option>
-              </select>
-            </div>
-            <div class="filters__dropdown-filter">
-              <h3 class="title title--h3 title--without-margin">Exhibitor’s name</h3>
-              <select class="input-dropdown" id="hotel-select" multiple="multiple">
-                <option class="input-dropdown__option" value="Hyatt">Hyatt</option>
-                <option class="input-dropdown__option" value="Mandarin Oriental Hotel">Mandarin Oriental Hotel</option>
-                <option class="input-dropdown__option" value="Awesome hotel Ritz">Awesome hotel Ritz</option>
-              </select>
-            </div>
-          </div>
-          <div class="filters__block filters__block--button-wrapper">
-            <button class="btn btn--white filters__button" type="button">Очистить</button>
-          </div>
-        </div>
+        <!--.filters-->
+        <!--  +renderAlphabetFilter(alphabetFilter)-->
+        <!--  +renderDropdownFilter(dropdownFilters)-->
+        <!--  +renderFilterButton("Очистить")-->
+        <!--.filters-->
+        <!--  +renderAlphabetFilter(alphabetFilter)-->
+        <!--  +renderDropdownFilter(dropdownFilters)-->
       </main>
     </div>
     <div class="modal modal--preload modal--forgot">

@@ -2861,9 +2861,81 @@
                   <time>27.02.2020</time></a></li>
             </ul>
           </div>
-          <!--ul.hotel-filters-->
-          <!--  each filter in filters-->
-          <!--    +renderFilter(filter.title, filter.mod, filter.filterList)-->
+          <div class="filters filters--exhibitions">
+            <div class="filters__alphabet-filter">
+              <h3 class="title title--h3 title--without-margin">По алфавиту:</h3>
+              <ul class="filters__alphabet-list">
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">#</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">A</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">B</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">C</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">D</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">E</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">F</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">G</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">H</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">I</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">J</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">K</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">L</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">M</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">N</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">O</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">P</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">Q</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">R</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">S</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">T</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">U</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">V</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">W</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">X</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">Y</a></li>
+              </ul>
+            </div>
+            <div class="filters__dropdown-filter filters__dropdown-filter--wide">
+              <h3 class="title title--h3 title--without-margin">По стране:</h3>
+              <select class="input-dropdown" id="hotel-select" multiple="multiple">
+                <option class="input-dropdown__option" value="Afghanistan">Afghanistan</option>
+                <option class="input-dropdown__option" value="Russia">Russia</option>
+                <option class="input-dropdown__option" value="United States of America">United States of America</option>
+                <option class="input-dropdown__option" value="China">China</option>
+                <option class="input-dropdown__option" value="Afghanistan">Afghanistan</option>
+                <option class="input-dropdown__option" value="Russia">Russia</option>
+                <option class="input-dropdown__option" value="United States of America">United States of America</option>
+                <option class="input-dropdown__option" value="China">China</option>
+                <option class="input-dropdown__option" value="Afghanistan">Afghanistan</option>
+                <option class="input-dropdown__option" value="Russia">Russia</option>
+                <option class="input-dropdown__option" value="United States of America">United States of America</option>
+                <option class="input-dropdown__option" value="China">China</option>
+                <option class="input-dropdown__option" value="Afghanistan">Afghanistan</option>
+                <option class="input-dropdown__option" value="Russia">Russia</option>
+                <option class="input-dropdown__option" value="United States of America">United States of America</option>
+                <option class="input-dropdown__option" value="China">China</option>
+              </select>
+            </div>
+            <div class="filters__dropdown-filter">
+              <h3 class="title title--h3 title--without-margin">По категории:</h3>
+              <select class="input-dropdown" id="hotel-select" multiple="multiple">
+                <option class="input-dropdown__option" value="Apartments &amp; villas rental">Apartments &amp; villas rental</option>
+                <option class="input-dropdown__option" value="Hello, hello">Hello, hello</option>
+                <option class="input-dropdown__option" value="Come with kittens">Come with kittens</option>
+              </select>
+            </div>
+            <div class="filters__block--button-wrapper">
+              <button class="btn btn--white filters__button" type="reset">Очистить все фильтры</button>
+            </div>
+          </div>
+          <div class="visible-sm">
+            <div class="filters__mobile-block">
+              <button type="button">Filters
+                <svg width="16" height="16" aria-hidden="true">
+                  <use xlink:href="#icon-filters"></use>
+                </svg>
+              </button>
+              <button type="reset">Clear all filters</button>
+            </div>
+          </div>
           <ul class="filter-tabs">
             <li class="filter-tabs__item" key="0">
               <button class="btn btn--white" type="button">По свободным слотам</button>
@@ -2890,7 +2962,9 @@
                     <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
                   </select>
                 </th>
-                <button class="btn btn--white btn--request" type="submit">Send a request</button>
+                <th class="admin-table__cell admin-table__cell--button">
+                  <button class="btn btn--white btn--request" type="submit">Send a request</button>
+                </th>
                 <th class="admin-table__cell admin-table__cell--button">
                   <button class="btn btn--white btn--request" type="submit">Send a message</button>
                 </th>
@@ -2905,7 +2979,9 @@
                     <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
                   </select>
                 </th>
-                <button class="btn btn--white btn--request" type="submit">Send a request</button>
+                <th class="admin-table__cell admin-table__cell--button">
+                  <button class="btn btn--white btn--request" type="submit">Send a request</button>
+                </th>
                 <th class="admin-table__cell admin-table__cell--button">
                   <button class="btn btn--white btn--request" type="submit">Send a message</button>
                 </th>
@@ -2920,7 +2996,9 @@
                     <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
                   </select>
                 </th>
-                <button class="btn btn--white btn--request" type="submit">Send a request</button>
+                <th class="admin-table__cell admin-table__cell--button">
+                  <button class="btn btn--white btn--request" type="submit">Send a request</button>
+                </th>
                 <th class="admin-table__cell admin-table__cell--button">
                   <button class="btn btn--white btn--request" type="submit">Send a message</button>
                 </th>
@@ -2931,7 +3009,7 @@
         </div>
         <div class="support-contacts">
           <h3 class="title--h3">Помощь</h3>
-          <div class="direction container swiper-container card-swiper">
+          <div class="direction container swiper-container direction__slider--card">
             <ul class="support-contacts__list direction-list swiper-wrapper">
               <li class="support-contacts__item swiper-slide"><img src="img/content/support-photo-3.jpg"/>
                 <div class="support-contacts__info"><span class="support-contacts__text">Ирина Безпалая</span><span class="support-contacts__text">Buyers and Appointments</span><a class="support-contacts__link" href="mailto:yahoo@yahoo.com">
@@ -2946,7 +3024,7 @@
                     </svg></a><a class="support-contacts__link" href="tel:74956450422">+7 495 645 04 22</a></div>
               </li>
             </ul>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination direction__pagination"></div>
             <div class="direction__arrow direction__arrow--right">
               <svg width="11" height="19" aria-hidden="true">
                 <use xlink:href="#arrow-right"></use>

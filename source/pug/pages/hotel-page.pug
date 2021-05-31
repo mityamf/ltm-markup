@@ -4,25 +4,13 @@ block variables
   - var title = "Отель"
   - var hasHeader = true
   - var hasFooter = true
-  -
-    var promoBg = {
-      titleItem: "MANDARIN ORIENTAL HOTEL GROUP",
-      imgItem: "img/bg/hotel-promo-desktop.png",
-      img2xItem: "img/bg/hotel-promo-desktop@2x.png",
-      widthItem: "1920",
-      heightItem: "534",
-      imgSource: "img/bg/hotel-promo-mobile.png 1x, img/bg/hotel-promo-mobile@2x.png 2x",
-      classItem: "promo__reg",
-      promoItem: "promo__info promo__text-wrapper",
-      noButtonMod: true
-    }
 
 block main
-  include ../data/hotel/hotel-page
-  include ../data/hotel/hotel-photos
+  include ../data/pages/hotel-page
 
-  main.container--hotel-page
-    +promo(promoBg.titleItem, null, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem, promoBg.noButtonMod)
+  main
+    .hidden-sm
+      +promo(promoBg.titleItem, promoBg.btnItem, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
     +renderImageSlider(hotelPhotos.photoList)
     .container
 

@@ -6,15 +6,15 @@ block variables
   - var hasFooter = true
 
 block main
-  include ../data/hotel/hotel-page-editing
-  include ../data/support-contacts
+  include ../data/pages/hotel-page-editing
 
   main.container
     +renderEditImageSlider(hotelPhotos.photoList)
-    .hotel-page.hotel-page__headline-wrapper
+    .hotel-page.hotel-page--headline-wrapper
       +renderEditHeadline(hotelHeadline.title, hotelHeadline.logo, hotelHeadline.logoWidth, hotelHeadline.logoHeight, "#")
       +renderHotelHeadline(hotelHeadline.title, hotelHeadline.logo, hotelHeadline.note, hotelHeadline.logoWidth, hotelHeadline.logoHeight)
-      +renderHeadlineWithBackButton(pageTitle, "#")
+      .visible-sm
+        +renderHeadlineWithBackButton(pageTitle, "#")
     +renderEditPhotos(hotelPhotos.photoList, hotelPhotos.cover)
     +renderEditBlock(editingBlockList, buttons, editingBlockStatus)
 

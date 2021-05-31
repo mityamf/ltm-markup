@@ -2798,7 +2798,7 @@
       </header>
       <main class="container">
         <div class="photos-slider">
-          <div class="direction swiper-container photos-swiper">
+          <div class="direction swiper-container direction__slider--photos">
             <ul class="photos-slider__photo-list direction__list swiper-wrapper">
               <li class="photos-slider__photo-item swiper-slide">
                 <picture><img src="img/content/hotel-mandarin-desktop-1.jpg" srcset="img/content/hotel-mandarin-desktop-1@2x.jpg 2x"/></picture>
@@ -3041,7 +3041,7 @@
                 </div>
               </div>
             </ul>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination direction__pagination"></div>
             <div class="direction__arrow swiper-button-next direction__arrow--right">
               <svg width="11" height="19" aria-hidden="true">
                 <use xlink:href="#arrow-right"></use>
@@ -3054,7 +3054,7 @@
             </div>
           </div>
         </div>
-        <div class="hotel-page hotel-page__headline-wrapper">
+        <div class="hotel-page hotel-page--headline-wrapper">
           <div class="hotel-headline hotel-headline--edit">
             <div class="hotel-headline__wrapper"><a class="back-link" href="#">
                 <svg width="12" height="20" aria-hidden="true">
@@ -3084,11 +3084,13 @@
               <use xlink:href="#mandarin-logo"></use>
             </svg>
           </div>
-          <div class="headline-back">
-            <h2 class="title--h2">Edit Company Info</h2><a class="back-link" href="#">
-              <svg width="12" height="20" aria-hidden="true">
-                <use xlink:href="#arrow-left-white"></use>
-              </svg><span>Back</span></a>
+          <div class="visible-sm">
+            <div class="headline-back">
+              <h2 class="title--h2">Edit Company Info</h2><a class="back-link" href="#">
+                <svg width="12" height="20" aria-hidden="true">
+                  <use xlink:href="#arrow-left-white"></use>
+                </svg><span>Back</span></a>
+            </div>
           </div>
         </div>
         <div class="top-block top-block--edit"><img src="img/bg/hotel-promo-desktop.png" srcset="img/bg/hotel-promo-desktop@2x.png 2x"/>

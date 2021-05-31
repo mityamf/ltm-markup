@@ -2796,13 +2796,13 @@
           </div>
         </div>
       </header>
-      <main class="container--exhibitors">
-        <section class="promo promo--no-button">
+      <main>
+        <section class="promo">
           <picture>
             <source media="(max-width: 767px)" srcset="img/bg/exhibitors-promo-mobile.png 1x, img/bg/exhibitors-promo-mobile@2x.png 2x"/><img class="promo__img" src="img/bg/exhibitors-promo-desktop.png" srcset="img/bg/exhibitors-promo-desktop@2x.png" width="1920" height="534" alt="promo image"/>
           </picture>
           <div class="container promo__info promo__text-wrapper">
-            <h2 class="promo__title">The leading luxury travel exhibition in eastern europe, russia &amp; cis</h2>
+            <h2 class="promo__title">The leading luxury travel exhibition in eastern europe, russia &amp; cis</h2><a class="button button--blue promo__none" href="registration.html"></a>
           </div>
         </section>
         <section class="direction direction__swiper">
@@ -2879,20 +2879,92 @@
           </div>
         </section>
         <div class="container">
-          <div class="hotel-filter__buttons">
-            <div class="hotel-filter--buttons-wrapper">
-              <svg width="17" height="17" aria-hidden="true">
-                <use xlink:href="#icon-filters"></use>
-              </svg>
-              <button class="btn btn--white hotel-filter__buttons--filters" type="button">filters</button>
+          <div class="filters filters--exhibitions">
+            <div class="filters__alphabet-filter">
+              <h3 class="title title--h3 title--without-margin">Alphabetically:</h3>
+              <ul class="filters__alphabet-list">
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">#</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">A</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">B</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">C</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">D</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">E</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">F</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">G</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">H</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">I</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">J</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">K</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">L</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">M</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">N</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">O</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">P</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">Q</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">R</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">S</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">T</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">U</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">V</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">W</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">X</a></li>
+                <li class="filters__alphabet-item"><a class="filters__alphabet-link" href="#">Y</a></li>
+              </ul>
             </div>
-            <button class="btn btn--white hotel-filter__buttons--clear" type="reset">Clear all filters</button>
+            <div class="filters__dropdown-filter filters__dropdown-filter--wide">
+              <h3 class="title title--h3 title--without-margin">By Country:</h3>
+              <select class="input-dropdown" id="hotel-select" multiple="multiple">
+                <option class="input-dropdown__option" value="Afghanistan">Afghanistan</option>
+                <option class="input-dropdown__option" value="Russia">Russia</option>
+                <option class="input-dropdown__option" value="United States of America">United States of America</option>
+                <option class="input-dropdown__option" value="China">China</option>
+                <option class="input-dropdown__option" value="Afghanistan">Afghanistan</option>
+                <option class="input-dropdown__option" value="Russia">Russia</option>
+                <option class="input-dropdown__option" value="United States of America">United States of America</option>
+                <option class="input-dropdown__option" value="China">China</option>
+                <option class="input-dropdown__option" value="Afghanistan">Afghanistan</option>
+                <option class="input-dropdown__option" value="Russia">Russia</option>
+                <option class="input-dropdown__option" value="United States of America">United States of America</option>
+                <option class="input-dropdown__option" value="China">China</option>
+                <option class="input-dropdown__option" value="Afghanistan">Afghanistan</option>
+                <option class="input-dropdown__option" value="Russia">Russia</option>
+                <option class="input-dropdown__option" value="United States of America">United States of America</option>
+                <option class="input-dropdown__option" value="China">China</option>
+              </select>
+            </div>
+            <div class="filters__dropdown-filter filters__dropdown-filter--wide">
+              <h3 class="title title--h3 title--without-margin">By type of business</h3>
+              <select class="input-dropdown" id="hotel-select" multiple="multiple">
+                <option class="input-dropdown__option" value="Apartments &amp; villas rental">Apartments &amp; villas rental</option>
+                <option class="input-dropdown__option" value="Hello, hello">Hello, hello</option>
+                <option class="input-dropdown__option" value="Come with kittens">Come with kittens</option>
+              </select>
+            </div>
+            <div class="filters__block--button-wrapper">
+              <button class="btn btn--white filters__button" type="reset">Clear all</button>
+            </div>
           </div>
-          <!--ul.hotel-filters-->
-          <!--  each filter in filters-->
-          <!--    +renderFilter(filter.title, filter.mod, filter.filterList)-->
-          <!--  button.btn.btn--white.hotel-filter--reset(type="reset")="Clear all"-->
-          <!--TODO поменять фильтры на всех страницах на новый компонент-->
+          <div class="visible-sm">
+            <div class="filters__mobile-block">
+              <button type="button">Filters
+                <svg width="16" height="16" aria-hidden="true">
+                  <use xlink:href="#icon-filters"></use>
+                </svg>
+              </button>
+              <button type="reset">Clear all filters</button>
+            </div>
+          </div>
+          <div class="visible-sm">
+            <div class="filters__dropdown-filter filters__dropdown-filter--mobile">
+              <h3 class="title title--h3 title--without-margin">Exhibitor’s name</h3>
+              <select class="input-dropdown" id="hotel-select" multiple="multiple">
+                <option class="input-dropdown__option" value="Mandarin Oriental Hotel">Mandarin Oriental Hotel</option>
+                <option class="input-dropdown__option" value="Apartments &amp; villas rental">Apartments &amp; villas rental</option>
+                <option class="input-dropdown__option" value="Hello, hello">Hello, hello</option>
+                <option class="input-dropdown__option" value="Come with kittens">Come with kittens</option>
+              </select>
+            </div>
+          </div>
           <div class="exhibitors">
             <ul class="hotel-cards">
               <li class="hotel-card"><a class="hotel-card__link" href="#">
@@ -3199,8 +3271,6 @@
             </div>
           </div>
           <button class="btn btn--white btn--more" type="button">More</button>
-          <!--+renderUpButton('up-button--fixed')-->
-          <!--TODO разобраться с кнопкой "вверх" на всех страницах-->
         </div>
       </main>
       <footer>
@@ -3273,7 +3343,10 @@
           </button>
         </div>
       </div>
-    </div>
+    </div><a class="up-button up-button--fixed" href="#top" aria-label="Вернуться в начало">
+      <svg width="54" height="54" aria-hidden="true">
+        <use xlink:href="#icon-arrow-up"></use>
+      </svg></a>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

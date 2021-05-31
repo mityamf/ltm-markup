@@ -209,12 +209,22 @@
       opacity: 0.5;
     }
   }
-}
 
-.container--hotel-page {
-  @include viewport--sm {
-    .promo {
+  &--headline-wrapper {
+    .hotel-headline:not(.hotel-headline--edit) {
       display: none;
+
+      @include viewport--sm {
+        display: flex;
+      }
+    }
+
+    .hotel-headline--edit {
+      display: flex;
+
+      @include viewport--sm {
+        display: none;
+      }
     }
   }
 }

@@ -155,9 +155,10 @@ mixin renderHostedGuestsList(titleList, rowList)
             select(id="free-slot-select-2", class="input-dropdown")
               each option in row.freeSlots
                 option(value=option, class="input-dropdown__option")=option
-          if row.requestStatus === "sent"
-            button.btn.btn--white.btn--request(type="submit" disabled)=row.requestSent
-          else
-            button.btn.btn--white.btn--request(type="submit")=row.request
+          th(class=cellClass + 'button')
+            if row.requestStatus === "sent"
+              button.btn.btn--white.btn--request(type="submit" disabled)=row.requestSent
+            else
+              button.btn.btn--white.btn--request(type="submit")=row.request
           th(class=cellClass + 'button')
             button.btn.btn--white.btn--request(type="submit")=row.contact
