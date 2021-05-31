@@ -7654,6 +7654,10 @@ span {
       font-size: 38px;
       color: #ffffff;
       text-align: center; }
+      .photos__link-more-wrapper a:hover, .photos__link-more-wrapper a:focus {
+        opacity: 0.8; }
+      .photos__link-more-wrapper a:active {
+        opacity: 0.5; }
   .photos__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -8098,7 +8102,8 @@ span {
   position: relative; }
   .top-block img {
     -o-object-fit: cover;
-       object-fit: cover; }
+       object-fit: cover;
+    width: 100%; }
   .top-block--tablet-img, .top-block--mobile-img {
     display: none;
     -o-object-fit: cover;

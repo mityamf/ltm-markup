@@ -35,6 +35,15 @@
       font-size: 38px;
       color: $color-default-white;
       text-align: center;
+
+      &:hover,
+      &:focus {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
     }
   }
 
