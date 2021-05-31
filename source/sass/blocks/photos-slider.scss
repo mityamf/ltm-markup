@@ -2,6 +2,13 @@
   clear: both;
   display: none;
 
+
+  .swiper-container-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 0;
+  }
+
   @include viewport--sm {
     display: block;
     padding: 24px 0 0 0;
@@ -20,11 +27,6 @@
     }
   }
 
-  .swiper-container-horizontal > .swiper-pagination-bullets,
-  .swiper-pagination-custom,
-  .swiper-pagination-fraction {
-    bottom: 0;
-  }
 
   .direction__list .swiper-slide {
     width: 100%;
@@ -69,6 +71,16 @@
   img {
     @include viewport--sm {
       width: 100%;
+    }
+  }
+}
+
+@include viewport--sm {
+  .photos-slider--account {
+    .swiper-container-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+      bottom: 10px;
     }
   }
 }

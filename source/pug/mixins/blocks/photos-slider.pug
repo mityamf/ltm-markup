@@ -1,5 +1,5 @@
-mixin renderImageSlider(photoList)
-  .photos-slider
+mixin renderImageSlider(photoList, mod)
+  .photos-slider(class=mod)
     .direction.swiper-container.direction__slider--photos
       ul.photos-slider__photo-list.direction__list.swiper-wrapper
         each photo in photoList

@@ -52,8 +52,8 @@ mixin renderEditPhotos(photoList, cover)
           input(type="file")
           +icon("icon-file-photo", 50, 50)
 
-mixin renderPhotos(photoList)
-  .photos
+mixin renderPhotos(photoList, mod)
+  .photos(class=mod)
     .photos__wrapper
       .photos__block.photos__block--first
         picture

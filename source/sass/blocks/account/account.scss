@@ -39,12 +39,17 @@
   }
 
   &__event {
-    margin-right: 30px;
+    margin-right: 4px;
     width: 341px;
 
     @include viewport--sm {
       margin-right: 0;
     }
+  }
+
+  &__event-block .direction__arrow--left,
+  &__event-block .direction__arrow--right {
+    top: 42%;
   }
 
   &__event button {
@@ -129,7 +134,7 @@
       padding: 25px 0 32px 0;
     }
 
-    @include viewport--sm {
+    @media (max-width: 1200px) {
       flex-wrap: wrap;
     }
   }
@@ -145,7 +150,7 @@
     @include viewport--sm {
       width: 100%;
       margin: 0;
-      padding: 0 0 33px 0;
+      padding: 0 0 6px 0;
     }
   }
 
@@ -228,7 +233,7 @@
   }
 
   &__notifications {
-    @include viewport--sm {
+    @media (max-width: 1200px) {
       width: 100%;
       padding-top: 28px;
     }
