@@ -9,12 +9,14 @@ block main
   include ../data/pages/hotel-page-editing
 
   main.container
-    +renderEditImageSlider(hotelPhotos.photoList)
     .hotel-page.hotel-page--headline-wrapper
       +renderEditHeadline(hotelHeadline.title, hotelHeadline.logo, hotelHeadline.logoWidth, hotelHeadline.logoHeight, "#")
       +renderHotelHeadline(hotelHeadline.title, hotelHeadline.logo, hotelHeadline.note, hotelHeadline.logoWidth, hotelHeadline.logoHeight)
       .visible-sm
         +renderHeadlineWithBackButton(pageTitle, "#")
-    +renderEditPhotos(hotelPhotos.photoList, hotelPhotos.cover)
+    .visible-sm.no-padding
+      +renderEditImageSlider(hotelPhotos.photoList)
+    .hidden-sm
+      +renderEditPhotos(hotelPhotos.photoList, hotelPhotos.cover)
     +renderEditBlock(editingBlockList, buttons, editingBlockStatus)
 
