@@ -1,6 +1,6 @@
 mixin renderImageSlider(photoList, mod)
   .photos-slider(class=mod)
-    .direction.swiper-container.direction__slider--photos
+    .direction.swiper-container.direction--photo-slider
       ul.photos-slider__photo-list.direction__list.swiper-wrapper
         each photo in photoList
           li.photos-slider__photo-item.swiper-slide
@@ -14,7 +14,7 @@ mixin renderImageSlider(photoList, mod)
 
 mixin renderEditImageSlider(photoList)
   .photos-slider
-    .direction.swiper-container.direction__slider--photos
+    .direction.swiper-container.direction--photo-slider
       ul.photos-slider__photo-list.direction__list.swiper-wrapper
         each photo in photoList
           li.photos-slider__photo-item.swiper-slide

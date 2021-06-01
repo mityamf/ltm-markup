@@ -1,5 +1,5 @@
 const photosSwiper = () => {
-  return new Swiper('.direction__slider--photos', {
+  return new Swiper('.direction--photo-slider', {
     slidesPerView: 1,
     slidesPerGroup: 1,
     pagination: {
