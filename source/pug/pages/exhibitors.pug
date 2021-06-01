@@ -21,6 +21,8 @@ block main
             each event in chooseEventCard
               .swiper-slide
                 +direction(event.titleItem, event.dataItem, event.statusItem, event.timeItem, event.classStatus)
+          .visible-sm
+            .swiper-pagination.direction__pagination
       .direction__arrow.direction__arrow--right
         +icon("arrow-right", "11", "19")
       .direction__arrow.direction__arrow--left
