@@ -10,10 +10,12 @@ block main
   include ../data/pages/admin-participants-mobile
 
   main.container
-    .admin
+    .admin.admin--mobile
       +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
-      +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
       .admin__control-wrapper
         +renderAdminTabs(adminTabs)
+      .visible-sm
+        +renderHeadlineBig("Participants at this Event")
+      +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
     +renderSupportContacts(contactsList)
 

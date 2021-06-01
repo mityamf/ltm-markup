@@ -12,7 +12,8 @@ block main
   main.container
     .admin
       +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
-      +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
+      .hidden-sm
+        +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
       .admin__control-wrapper
         +renderAdminTabs(adminTabs)
       .deadlines-info
