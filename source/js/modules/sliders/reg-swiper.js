@@ -2,7 +2,7 @@ const regSwiper = () => {
 
   let registrationSwiper = null;
 
-  let regSliders = document.querySelectorAll('.adoption__slider');
+  let regSliders = document.querySelectorAll('.adoption-slider');
   let breakpointWidth = 768;
 
   function initSwiper() {

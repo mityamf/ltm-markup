@@ -14,18 +14,17 @@
   color: #606060;
   font-weight: 600;
   padding-bottom: 13px;
-  //height: 30%;
   height: 100%;
 }
 
 .exhibitor__info,
 .buyer__info {
+
   margin: 0;
   font-size: 12px;
   color: $color-nobel;
   font-weight: 300;
   padding-bottom: 25px;
-  //height: 33%;
   height: 100%;
 
   @media (min-width: 1920px) {
@@ -66,7 +65,7 @@
 .exhibitor-reg__title {
   width: 80%;
   margin: 0;
-  padding-top: 29px;
+  padding-top: 38px;
   font-size: 38px;
   font-weight: 300;
   line-height: 30px;
@@ -74,6 +73,12 @@
 
   @media (min-width: 1920px) {
     padding-top: 38px;
+  }
+
+  @include viewport--sm {
+    font-size: 33px;
+    padding-top: 24px;
+    width: 100%;
   }
 }
 
@@ -86,5 +91,27 @@
 
   span {
     padding-left: 5px;
+  }
+
+  svg {
+    fill: $color-blue;
+  }
+
+  &:focus,
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @include viewport--sm {
+    width: auto;
+    position: absolute;
+    top: 110px;
+    color: white;
+    font-size: 13px;
+    z-index: 7;
+
+    svg {
+      fill: $color-default-white;
+    }
   }
 }

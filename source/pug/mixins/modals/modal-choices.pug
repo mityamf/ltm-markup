@@ -1,5 +1,5 @@
 mixin modal-choices
-  .modal--filter.select-event
+  .modal-filter.select-event.direction.form-reg
     h2.select-event__title Select the event:
     .select-event__block
       input.form-reg__check(type="checkbox" id="choices-01" name="check" value="choices" checked)
@@ -22,4 +22,4 @@ mixin modal-choices
       label(for="choices-05")
       +direction("Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia", "20 June 2020", "Waiting list", "2020-06-20", "direction__status--waiting")
 
-  button.modal__select-close.modal__close-button.submission__close-button(type="button") Apply
+  button.modal__select-close.modal__close-button(type="button") Apply
