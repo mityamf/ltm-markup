@@ -8474,7 +8474,8 @@ span {
         width: 178px; } }
   .filters__dropdown-filter--mobile {
     display: block;
-    width: 100%; }
+    width: 100%;
+    padding: 20px 0 0 0; }
   .filters__dropdown-filter--wide {
     width: 341px; }
     @media (max-width: 1439px) {
@@ -8522,7 +8523,8 @@ span {
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    padding: 18px 0 0 0; }
   .filters__mobile-block button {
     display: -webkit-box;
     display: -ms-flexbox;
