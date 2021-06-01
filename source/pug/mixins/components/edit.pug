@@ -1,7 +1,7 @@
 mixin renderEditBlock(editingBlockList, buttons, editingBlockStatus)
   .edit(class='edit--' + editingBlockStatus)
     .edit__wrapper
-      each block in editingBlockList
+      each block, i in editingBlockList
         if block.type === "text"
           h3(class="title title--h3 title--big") !{block.title}
         else
@@ -17,7 +17,7 @@ mixin renderEditBlock(editingBlockList, buttons, editingBlockStatus)
             span=block.content
         if block.type === "select"
           .edit__select-wrapper(class=block.selectMod)
-            select(id="hotel-editor-select", class="input-dropdown")
+            select(id='hotel-editor-select-' + i, class="input-dropdown")
               each text in block.content
                 option(value=text, class="input-dropdown__option")=text
 
