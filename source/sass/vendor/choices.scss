@@ -2,7 +2,7 @@
 
 .choices {
   height: 49px;
-
+  cursor: pointer;
 
   &.is-open .choices__list--dropdown {
     border-color: $color-default-white;
@@ -39,8 +39,18 @@
   &__inner {
     padding: 9px 15px;
     height: 49px;
+    cursor: pointer;
 
     border-color: $color-blue;
+
+    &:hover,
+    &:focus {
+      border-color: rgba(0, 152, 193, 0.7);
+    }
+
+    &:active {
+      border-color: $color-blue;
+    }
   }
 
   &__inner .choices__list--multiple .choices__item:not(:first-child) {

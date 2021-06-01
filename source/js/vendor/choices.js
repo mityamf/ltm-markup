@@ -2,6 +2,12 @@ import Choices from 'choices.js';
 
 
 const choiceHandler = (choiceElement) => {
+  choiceElement.containerInner.element.addEventListener('click', (evt) => {
+    if (evt.target.closest('.is-open')) {
+      choiceElement.hideDropdown();
+    }
+  });
+
   choiceElement.passedElement.element.addEventListener(
     'choice',
     (evt) => {

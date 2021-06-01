@@ -5,7 +5,7 @@ mixin renderSupportContacts(contactsList)
       ul.support-contacts__list.direction-list.swiper-wrapper
         each contact in contactsList.contacts
           li.support-contacts__item.swiper-slide
-            img(src=contact.src)
+            img(src=contact.src alt="Фото админа")
             .support-contacts__info
               span.support-contacts__text=contact.name
               span.support-contacts__text=contact.position

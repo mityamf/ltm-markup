@@ -13,17 +13,20 @@ block main
   main
     +promo(promoBg.titleItem, promoBg.btnItem, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
 
-    section.direction.direction-swiper
-      .swiper-container.direction__swiper-block
-        +renderHeadline2(chooseEvent.title)
-        ul.direction__list.swiper-wrapper
-          each event in chooseEventCard
-            .swiper-slide
-              +direction(event.titleItem, event.dataItem, event.statusItem, event.timeItem, event.classStatus)
-        .direction__arrow.direction__arrow--right
-          +icon("arrow-right", "11", "19")
-        .direction__arrow.direction__arrow--left
-          +icon("arrow-left", "11", "19")
+    .container
+      section.direction.direction__swiper.direction--exhibitors
+        .swiper-container.direction__swiper-block
+          +renderHeadline2(chooseEvent.title)
+          ul.direction__list.swiper-wrapper
+            each event in chooseEventCard
+              li.swiper-slide
+                +direction(event.titleItem, event.dataItem, event.statusItem, event.timeItem, event.classStatus)
+          .visible-sm
+            .swiper-pagination.direction__pagination
+      .direction__arrow.direction__arrow--right
+        +icon("arrow-right", "11", "19")
+      .direction__arrow.direction__arrow--left
+        +icon("arrow-left", "11", "19")
 
     .container
 
@@ -44,8 +47,10 @@ block main
             +renderHotelCard(hotel.title, hotel.photoList, hotel.logo, hotel.link)
 
         .alphabet-hotel
-          ul.alphabet-hotel__block-list
+          .alphabet-hotel__block-list
             each hotel in alphabetHotel
               +renderAlphabetHotel(hotel.title, hotel.hotelList)
 
-      button.btn.btn--white.btn--more(type="button")="More"
+      .visible-sm
+        button.btn.btn--white.btn--more(type="button")="More"
+        +renderUpButton('up-button--mobile')

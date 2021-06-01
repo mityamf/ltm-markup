@@ -42,6 +42,10 @@
 
   &__icon-wrapper {
     position: relative;
+
+    @include viewport--lg {
+      margin-top: 14px;
+    }
   }
 
   &__icon-wrapper > svg {
@@ -104,6 +108,7 @@
     text-align: center;
     padding: 30px 17px 10px 17px;
     border: none;
+    margin-bottom: -27px;
 
     .account-hotel-info__link-hotel {
       display: block;

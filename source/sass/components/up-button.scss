@@ -10,6 +10,15 @@
   @include viewport--sm {
     margin: 0 auto;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .up-button--right {
@@ -35,4 +44,11 @@
   position: fixed;
   right: 6%;
   bottom: 10%;
+  z-index: 100;
+}
+
+.up-button--mobile {
+  display: block;
+  margin: 25px auto 25px auto;
+  text-align: center;
 }

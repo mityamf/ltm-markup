@@ -65,6 +65,10 @@
   }
 }
 
+.no-padding {
+  margin: 0 -17px;
+}
+
 @keyframes disableBreakpointAnimation {
   0% {
     visibility: hidden;

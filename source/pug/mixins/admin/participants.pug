@@ -5,7 +5,7 @@ mixin renderParticipantList(participantsHeadline, participantsInfo, participants
     ul.participants__list
       each participant in participantsList
         li.participants__item
-          img(src=participant.photo)
+          img(src=participant.photo alt="Фото админа")
           .participants__info-wrapper
             span.participants__name=participant.name
             span.participants__name=participant.lastName
