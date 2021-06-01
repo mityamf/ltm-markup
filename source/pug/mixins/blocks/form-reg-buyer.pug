@@ -2,7 +2,7 @@ mixin form-reg-buyer()
   form(action="#" method="POST").exhibitor-reg__form.form-reg
     .container
       h3.form-reg__title.form-reg__title-one Пожалуйста, выберите мероприятие, на которое Вы хотели бы зарегистрироваться. Возможно выбрать только одно мероприятие. Пожалуйста, заполняйте форму на английском языке.
-    .form-reg__direction.direction-swiper
+    .form-reg__direction.direction-swiper.direction
       .swiper-container.direction__swiper-block
         .swiper-wrapper
           .form-reg__slider.swiper-slide
@@ -61,223 +61,230 @@ mixin form-reg-buyer()
 
     .form-reg__info.container
       h3.form-reg__title.form-reg__title-three  Информация о компании:
-      .form-reg__block
-        label(for="nameCompany") Название компании
-        input(type="text" name="nameCompany"  id="nameCompany" placeholder="Company name" required="required")
-      .form-reg__block
-        h3.form-reg__block-title Вид деятельности
-        select
-          option Tour operator
-          option(value="London") London
-          option(value="Japan") Japan
-          option(value="Almaty") Almaty
-          option(value="Moscow") Moscow
-          option(value="Petersburg") Petersburg
-      .form-reg__block
-        h3.form-reg__block-title Направление деятельности
-        select
-          option Car Rental
-          option(value="Aphhanistan") Aphhanistan
-          option(value="Aphhanistan") Aphhanistan1
-          option(value="Aphhanistan") Aphhanistan2
-          option(value="Aphhanistan") Aphhanistan3
-          option(value="Aphhanistan") Aphhanistan4
-          option(value="Aphhanistan") Aphhanistan5
-      .form-reg__block
-        h3.form-reg__block-title Страна
-        select
-          option Russia
-          option(value="Aphhanistan") Aphhanistan
-          option(value="Aphhanistan") Aphhanistan1
-          option(value="Aphhanistan") Aphhanistan2
-          option(value="Aphhanistan") Aphhanistan3
-          option(value="Aphhanistan") Aphhanistan4
-          option(value="Aphhanistan") Aphhanistan5
-      .form-reg__block
-        label(for="address") Фактический адрес компании
-        input(type="text" name="address"  id="address" placeholder="Address" required="required")
-      .form-reg__block
-        label(for="login") Индекс
-        input(type="text" name="login"  id="login" placeholder="000000" required="required")
-      .form-reg__block
-        h3.form-reg__block-title Город
-        select
-          option Aachen
-          option(value="business") business
-          option(value="trade") trade
-          option(value="sale") sale
-          option(value="entertainment") entertainment
-          option(value="journeys") journeys
-          option(value="sale") sale
-      .form-reg__block
-        label(for="Web-site") Адрес веб-страницы
-        input(type="text" name="Web-site"  id="Web-site" placeholder="https://" required="required")
+      .form-reg__grid-wrap
+        .form-reg__block
+          label(for="nameCompany") Название компании
+          input(type="text" name="nameCompany"  id="nameCompany" placeholder="Company name" required="required")
+        .form-reg__block
+          h3.form-reg__block-title Вид деятельности
+          select
+            option Tour operator
+            option(value="London") London
+            option(value="Japan") Japan
+            option(value="Almaty") Almaty
+            option(value="Moscow") Moscow
+            option(value="Petersburg") Petersburg
+        .form-reg__block
+          h3.form-reg__block-title Направление деятельности
+          select
+            option Car Rental
+            option(value="Aphhanistan") Aphhanistan
+            option(value="Aphhanistan") Aphhanistan1
+            option(value="Aphhanistan") Aphhanistan2
+            option(value="Aphhanistan") Aphhanistan3
+            option(value="Aphhanistan") Aphhanistan4
+            option(value="Aphhanistan") Aphhanistan5
+        .form-reg__block
+          h3.form-reg__block-title Страна
+          select
+            option Russia
+            option(value="Aphhanistan") Aphhanistan
+            option(value="Aphhanistan") Aphhanistan1
+            option(value="Aphhanistan") Aphhanistan2
+            option(value="Aphhanistan") Aphhanistan3
+            option(value="Aphhanistan") Aphhanistan4
+            option(value="Aphhanistan") Aphhanistan5
+        .form-reg__block
+          label(for="address") Фактический адрес компании
+          input(type="text" name="address"  id="address" placeholder="Address" required="required")
+        .form-reg__block
+          label(for="login") Индекс
+          input(type="text" name="login"  id="login" placeholder="000000" required="required")
+        .form-reg__block
+          h3.form-reg__block-title Город
+          select
+            option Aachen
+            option(value="business") business
+            option(value="trade") trade
+            option(value="sale") sale
+            option(value="entertainment") entertainment
+            option(value="journeys") journeys
+            option(value="sale") sale
+        .form-reg__block
+          label(for="Web-site") Адрес веб-страницы
+          input(type="text" name="Web-site"  id="Web-site" placeholder="https://" required="required")
       .form-reg__block.form-reg__textarea
         h3.form-reg__block-title Краткое описание компании
-        textarea(name="Company description", cols="30", rows="10") Company description
+        textarea(name="Company description", cols="30", rows="10" placeholder="Company description")
 
     .form-reg__location.container
       h3.form-reg__title.form-reg__title-four Выберите приоритетные направления:
-      .form-reg__dropdown
-        h4 Северная Америка
-        button.form-reg__btn(type='button') Выбрать всё
-        .form-reg__content
-          .form-reg__list
-            input.form-reg__check#choices-0(type='checkbox' name='complex' value='complex-0')
-            label(for='choices-0') choices-3
-            input.form-reg__check#choices-1(type='checkbox' name='complex' value='complex-1')
-            label(for='choices-1') choices-3
-            input.form-reg__check#choices-2(type='checkbox' name='complex' value='complex-2')
-            label(for='choices-2') choices-3
-        .form-reg__overlay
-      .form-reg__dropdown
-        h4 Европа
-        button.form-reg__btn(type='button') Выбрать всё
-        .form-reg__content
-          .form-reg__list
-            input.form-reg__check#choices-3(type='checkbox' name='complex' value='complex-0')
-            label(for='choices-3') choices-3
-            input.form-reg__check#choices-33(type='checkbox' name='complex' value='complex-1')
-            label(for='choices-33') choices-3
-            input.form-reg__check#choices-4(type='checkbox' name='complex' value='complex-2')
-            label(for='choices-4') choices-3
-        .form-reg__overlay
-      .form-reg__dropdown
-        h4 Южная Америка
-        button.form-reg__btn(type='button') Выбрать всё
-        .form-reg__content
-          .form-reg__list
-            input.form-reg__check#choices-5(type='checkbox' name='complex' value='complex-0')
-            label(for='choices-5') choices-1
-            input.form-reg__check#choices-6(type='checkbox' name='complex' value='complex-1')
-            label(for='choices-6') choices-2
-            input.form-reg__check#choices-7(type='checkbox' name='complex' value='complex-2')
-            label(for='choices-7') choices-3
-        .form-reg__overlay
-      .form-reg__dropdown
-        h4 Африка
-        button.form-reg__btn(type='button') Выбрать всё
-        .form-reg__content
-          .form-reg__list
-            input.form-reg__check#choices-8(type='checkbox' name='complex' value='complex-0')
-            label(for='choices-8') choices-4
-            input.form-reg__check#choices-9(type='checkbox' name='complex' value='complex-1')
-            label(for='choices-9') choices-5
-            input.form-reg__check#choices-10(type='checkbox' name='complex' value='complex-2')
-            label(for='choices-10') choices-6
-        .form-reg__overlay
-      .form-reg__dropdown
-        h4 Азия
-        button.form-reg__btn(type='button') Выбрать всё
-        .form-reg__content
-          .form-reg__list
-            input.form-reg__check#choices-11(type='checkbox' name='complex' value='complex-0')
-            label(for='choices-11') choices-7
-            input.form-reg__check#choices-12(type='checkbox' name='complex' value='complex-1')
-            label(for='choices-12') choices-8
-            input.form-reg__check#choices-13(type='checkbox' name='complex' value='complex-2')
-            label(for='choices-13') choices-9
-        .form-reg__overlay
-      .form-reg__dropdown
-        h4 Океания
-        button.form-reg__btn(type='button') Выбрать всё
-        .form-reg__content
-          .form-reg__list
-            input.form-reg__check#choices-14(type='checkbox' name='complex' value='complex-0')
-            label(for='choices-14') choices-10
-            input.form-reg__check#choices-15(type='checkbox' name='complex' value='complex-1')
-            label(for='choices-15') choices-11
-            input.form-reg__check#choices-16(type='checkbox' name='complex' value='complex-2')
-            label(for='choices-16') choices-12
-        .form-reg__overlay
+      .form-reg__grid-wrap
+        .form-reg__dropdown
+          h4 Северная Америка
+          button.form-reg__btn(type='button') Выбрать всё
+          .form-reg__content
+            .form-reg__list
+              input.form-reg__check#choices-0(type='checkbox' name='complex' value='complex-0')
+              label(for='choices-0') choices-3
+              input.form-reg__check#choices-1(type='checkbox' name='complex' value='complex-1')
+              label(for='choices-1') choices-3
+              input.form-reg__check#choices-2(type='checkbox' name='complex' value='complex-2')
+              label(for='choices-2') choices-3
+          .form-reg__overlay
+        .form-reg__dropdown
+          h4 Европа
+          button.form-reg__btn(type='button') Выбрать всё
+          .form-reg__content
+            .form-reg__list
+              input.form-reg__check#choices-3(type='checkbox' name='complex' value='complex-0')
+              label(for='choices-3') choices-3
+              input.form-reg__check#choices-33(type='checkbox' name='complex' value='complex-1')
+              label(for='choices-33') choices-3
+              input.form-reg__check#choices-4(type='checkbox' name='complex' value='complex-2')
+              label(for='choices-4') choices-3
+          .form-reg__overlay
+        .form-reg__dropdown
+          h4 Южная Америка
+          button.form-reg__btn(type='button') Выбрать всё
+          .form-reg__content
+            .form-reg__list
+              input.form-reg__check#choices-5(type='checkbox' name='complex' value='complex-0')
+              label(for='choices-5') choices-1
+              input.form-reg__check#choices-6(type='checkbox' name='complex' value='complex-1')
+              label(for='choices-6') choices-2
+              input.form-reg__check#choices-7(type='checkbox' name='complex' value='complex-2')
+              label(for='choices-7') choices-3
+          .form-reg__overlay
+        .form-reg__dropdown
+          h4 Африка
+          button.form-reg__btn(type='button') Выбрать всё
+          .form-reg__content
+            .form-reg__list
+              input.form-reg__check#choices-8(type='checkbox' name='complex' value='complex-0')
+              label(for='choices-8') choices-4
+              input.form-reg__check#choices-9(type='checkbox' name='complex' value='complex-1')
+              label(for='choices-9') choices-5
+              input.form-reg__check#choices-10(type='checkbox' name='complex' value='complex-2')
+              label(for='choices-10') choices-6
+          .form-reg__overlay
+        .form-reg__dropdown
+          h4 Азия
+          button.form-reg__btn(type='button') Выбрать всё
+          .form-reg__content
+            .form-reg__list
+              input.form-reg__check#choices-11(type='checkbox' name='complex' value='complex-0')
+              label(for='choices-11') choices-7
+              input.form-reg__check#choices-12(type='checkbox' name='complex' value='complex-1')
+              label(for='choices-12') choices-8
+              input.form-reg__check#choices-13(type='checkbox' name='complex' value='complex-2')
+              label(for='choices-13') choices-9
+          .form-reg__overlay
+        .form-reg__dropdown
+          h4 Океания
+          button.form-reg__btn(type='button') Выбрать всё
+          .form-reg__content
+            .form-reg__list
+              input.form-reg__check#choices-14(type='checkbox' name='complex' value='complex-0')
+              label(for='choices-14') choices-10
+              input.form-reg__check#choices-15(type='checkbox' name='complex' value='complex-1')
+              label(for='choices-15') choices-11
+              input.form-reg__check#choices-16(type='checkbox' name='complex' value='complex-2')
+              label(for='choices-16') choices-12
+          .form-reg__overlay
       input.form-reg__check(type="checkbox" id="Global" name="Global" value="Global")
       label(for="Global") Global/Worldwide
 
     .form-reg__info.container
       h3.form-reg__title.form-reg__title-five Информация о вас:
-      .form-reg__block
-        label(for="First_name") Имя
-        input(type="text" name="First_name"  id="First_name" placeholder="First name" required="required")
-      .form-reg__block
-        label(for="Last_name") Фамилия
-        input(type="text" name="Last_name"  id="Last_name" placeholder="Last name" required="required")
-      .form-reg__block
-        h3.form-reg__block-title Обращение
-        select
-          option Aachen
-          option(value="Mr") Mr.
-          option(value="Mrs") Mrs.
-          option(value="Ms") Ms.
-          option(value="Dr") Dr.
-      .form-reg__block
-        label(for="title") Должность
-        input(type="text" name="title"  id="title" placeholder="Job title" required="required")
-      .form-reg__block
-        label(for="tel") Телефон
-        input(type="text" name="tel"  id="tel" placeholder="+0 (000) 000 00 00" required="required")
-      .form-reg__block
-        label(for="tel2") Мобильный телефон
-        input(type="text" name="tel2"  id="tel2" placeholder="+0 (000) 000 00 00" required="required")
-      .form-reg__block
-        label(for="skype") Skype
-        input(type="text" name="skype"  id="skype" placeholder="E-mail" required="required")
-      .form-reg__block
-        label(for="E-mail") E-mail
-        input(type="text" name="E-mail"  id="E-mail" placeholder="E-mail" required="required")
-      .form-reg__block
-        label(for="con_e-mail") Введите e-mail ещё раз
-        input(type="text" name="con_e-mail"  id="con_e-mail" placeholder="Confirm e-mail" required="required")
+      .form-reg__grid-wrap
+        .form-reg__block
+          label(for="First_name") Имя
+          input(type="text" name="First_name"  id="First_name" placeholder="First name" required="required")
+        .form-reg__block
+          label(for="Last_name") Фамилия
+          input(type="text" name="Last_name"  id="Last_name" placeholder="Last name" required="required")
+        .form-reg__block
+          h3.form-reg__block-title Обращение
+          select
+            option Aachen
+            option(value="Mr") Mr.
+            option(value="Mrs") Mrs.
+            option(value="Ms") Ms.
+            option(value="Dr") Dr.
+        .form-reg__block
+          label(for="title") Должность
+          input(type="text" name="title"  id="title" placeholder="Job title" required="required")
+        .form-reg__block
+          label(for="tel") Телефон
+          input(type="text" name="tel"  id="tel" placeholder="+0 (000) 000 00 00" required="required")
+        .form-reg__block
+          label(for="tel2") Мобильный телефон
+          input(type="text" name="tel2"  id="tel2" placeholder="+0 (000) 000 00 00" required="required")
+        .form-reg__block
+          label(for="skype") Skype
+          input(type="text" name="skype"  id="skype" placeholder="E-mail" required="required")
+        .form-reg__block
+          label(for="E-mail") E-mail
+          input(type="text" name="E-mail"  id="E-mail" placeholder="E-mail" required="required")
+        .form-reg__block
+          label(for="con_e-mail") Введите e-mail ещё раз
+          input(type="text" name="con_e-mail"  id="con_e-mail" placeholder="Confirm e-mail" required="required")
 
     .form-reg__info.container
       h3.form-reg__title.form-reg__title-six Информация о коллеге:
-      .form-reg__block
-        label(for="First_name2") Имя
-        input(type="text" name="First_name2"  id="First_name2" placeholder="First name" required="required")
-      .form-reg__block
-        label(for="Last_name2") Фамилия
-        input(type="text" name="Last_name2"  id="Last_name2" placeholder="Last name" required="required")
-      .form-reg__block
-        h3.form-reg__block-title Обращение
-        select
-          option Aachen
-          option(value="Mr") Mr.
-          option(value="Mrs") Mrs.
-          option(value="Ms") Ms.
-          option(value="Dr") Dr.
-      .form-reg__block
-        label(for="title2") Должность
-        input(type="text" name="title2"  id="title2" placeholder="Job title" required="required")
-      .form-reg__block
-        label(for="E-mail2") E-mail
-        input(type="text" name="E-mail2"  id="E-mail2" placeholder="E-mail" required="required")
-      .form-reg__block
-        label(for="tel3") Мобильный телефон
-        input(type="text" name="tel3"  id="tel3" placeholder="+0 (000) 000 00 00" required="required")
+      p Заполните регистрационные данные коллеги, который(-ая) будет присуствовать с вами  на мероприятие
+      .form-reg__grid-wrap
+        .form-reg__block
+          label(for="First_name2") Имя
+          input(type="text" name="First_name2"  id="First_name2" placeholder="First name" required="required")
+        .form-reg__block
+          label(for="Last_name2") Фамилия
+          input(type="text" name="Last_name2"  id="Last_name2" placeholder="Last name" required="required")
+        .form-reg__block
+          h3.form-reg__block-title Обращение
+          select
+            option Aachen
+            option(value="Mr") Mr.
+            option(value="Mrs") Mrs.
+            option(value="Ms") Ms.
+            option(value="Dr") Dr.
+        .form-reg__block
+          label(for="title2") Должность
+          input(type="text" name="title2"  id="title2" placeholder="Job title" required="required")
+        .form-reg__block
+          label(for="E-mail2") E-mail
+          input(type="text" name="E-mail2"  id="E-mail2" placeholder="E-mail" required="required")
+        .form-reg__block
+          label(for="tel3") Мобильный телефон
+          input(type="text" name="tel3"  id="tel3" placeholder="+0 (000) 000 00 00" required="required")
 
     .form-reg__info.container
       h3.form-reg__title.form-reg__title-seven Как ваша компания осуществляет бронирования?
-      .form-reg__block
-        h3.form-reg__block-title Через:
-        select
-          option DMCs
-          option(value="dMCs") dMCs
-          option(value="DmCS") DmCS
-          option(value="DMsC") DMsC
-          option(value="DMCS") DMCS
+      .form-reg__grid-wrap
+        .form-reg__block
+          h3.form-reg__block-title Через:
+          select
+            option DMCs
+            option(value="dMCs") dMCs
+            option(value="DmCS") DmCS
+            option(value="DMsC") DMsC
+            option(value="DMCS") DMCS
 
     .form-reg__info.container
       h3.form-reg__title.form-reg__title-eight Логин и пароль
-      .form-reg__block
-        label(for="Login") Придумайте логин
-        input(type="text" name="Login"  id="Login" placeholder="Login" required="required")
-      .form-reg__block
-        label(for="Password") Придумайте пароль
-        input(type="text" name="Password"  id="Password" placeholder="Password" required="required")
-      .form-reg__block
-        label(for="Password2") Введите пароль ещё раз
-        input(type="text" name="Password2"  id="Password2" placeholder="Password" required="required")
+      .form-reg__grid-wrap
+        .form-reg__block
+          label(for="Login") Придумайте логин
+          input(type="text" name="Login"  id="Login" placeholder="Login" required="required")
+        .form-reg__block
+          label(for="Password") Придумайте пароль
+          input(type="text" name="Password"  id="Password" placeholder="Password" required="required")
+        .form-reg__block
+          label(for="Password2") Введите пароль ещё раз
+          input(type="text" name="Password2"  id="Password2" placeholder="Password" required="required")
 
-    .form-reg__submit.container
+    .form-reg__submit.form-reg__submit-buyer.container
       input.form-reg__check(type="checkbox" id="yes" name="check" value="yes")
       label(for="yes") Я подтверждаю свое согласие на сбор, хранение и обработку вышеуказанных данных организаторами Luxury Travel Mart в соответствии с ФЗ РФ «О персональных данных» от 27.07.2006 № 152-ФЗ.
 

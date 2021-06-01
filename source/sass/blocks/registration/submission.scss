@@ -31,10 +31,15 @@
       top: -38px;
       right: 0;
     }
+
+    &:focus,
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
 
-.submission__description {
+.submission-description {
   margin: 0;
   font-size: 38px;
   line-height: 46px;
@@ -49,7 +54,7 @@
   }
 }
 
-.submission__close-button {
+.submission-close {
   width: 222px;
   height: 49px;
   align-self: center;
@@ -59,9 +64,14 @@
   color: $color-default-white;
   font-size: 20px;
   font-weight: 300;
+
+  &:focus,
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
-.submission__logo {
+.submission-logo {
   display: flex;
   justify-content: center;
   padding-bottom: 64px;

@@ -28,8 +28,8 @@
   }
 
   @media (min-width: 1920px) {
-    padding-top: 40px;
-    padding-bottom: 38px;
+    padding-bottom: 46px;
+    letter-spacing: 0.7px;
   }
 }
 
@@ -44,6 +44,7 @@
   @include viewport--sm {
     width: 100%;
     padding-right: 0;
+    padding-bottom: 32px;
   }
 }
 
@@ -54,6 +55,7 @@
   @include viewport--sm {
     display: flex;
     flex-direction: column;
+    padding-top: 33px;
   }
 
   @media (min-width: 1920px) {
