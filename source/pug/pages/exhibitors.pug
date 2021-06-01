@@ -19,7 +19,7 @@ block main
           +renderHeadline2(chooseEvent.title)
           ul.direction__list.swiper-wrapper
             each event in chooseEventCard
-              .swiper-slide
+              li.swiper-slide
                 +direction(event.titleItem, event.dataItem, event.statusItem, event.timeItem, event.classStatus)
           .visible-sm
             .swiper-pagination.direction__pagination
@@ -47,7 +47,7 @@ block main
             +renderHotelCard(hotel.title, hotel.photoList, hotel.logo, hotel.link)
 
         .alphabet-hotel
-          ul.alphabet-hotel__block-list
+          .alphabet-hotel__block-list
             each hotel in alphabetHotel
               +renderAlphabetHotel(hotel.title, hotel.hotelList)
 
