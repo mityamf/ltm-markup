@@ -2692,12 +2692,6 @@ p {
 .direction-button-prev::after {
   content: none; }
 
-.direction--exhibitors .direction__arrow--right {
-  right: -40px; }
-
-.direction--exhibitors .direction__arrow--left {
-  left: -40px; }
-
 @media (max-width: 767px) {
   .direction--exhibitors {
     display: -webkit-box;
@@ -2706,6 +2700,25 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    .direction--exhibitors .swiper-pagination {
+      top: 203px;
+      width: 100%; }
+    .direction--exhibitors .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      background: initial;
+      border: 1px solid #0098c1; }
+    .direction--exhibitors .swiper-pagination-bullet-active {
+      background: #0098c1; }
+    .direction--exhibitors ~ .direction__arrow--right {
+      right: 8px;
+      top: 45%; }
+    .direction--exhibitors ~ .direction__arrow--left {
+      left: 8px;
+      top: 45%; }
+    .direction--exhibitors .swiper-slide {
+      width: 100%; }
     .direction--exhibitors .direction__list {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2713,22 +2726,27 @@ p {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      padding: 16px 0 0 0; }
+      padding: 20px 0 45px; }
     .direction--exhibitors .direction__item {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
       padding-right: 0; }
     .direction--exhibitors.direction__swiper {
-      padding: 20px 14px 20px;
+      padding: 20px 0;
       border-bottom: 1px solid #0098c1; }
     .direction--exhibitors .direction__data {
-      padding-top: 8px; }
+      padding-top: 5px;
+      letter-spacing: 0.4px;
+      font-size: 12px;
+      line-height: 14px; }
     .direction--exhibitors .direction__title {
+      padding-bottom: 16px;
       font-size: 16px;
       line-height: 19px;
+      font-weight: normal;
       max-width: 227px;
-      letter-spacing: 0.1px; } }
+      letter-spacing: 0.7px; } }
 
 .news-home {
   display: -webkit-box;
