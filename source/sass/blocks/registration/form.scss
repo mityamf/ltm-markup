@@ -23,9 +23,10 @@
     @include viewport--sm {
       display: flex;
       flex-direction: column;
-      padding-bottom: 0;
-      padding-left: 0;
+      padding-bottom: 2px;
+      padding-left: 15px;
       text-align: center;
+      padding-top: 25px;
     }
 
     @media (min-width: 1920px) {
@@ -36,6 +37,11 @@
 
     &-one {
       padding-bottom: 18px;
+
+      @include viewport--sm {
+        padding-bottom: 0;
+        padding-top: 25px;
+      }
     }
 
     &-six {
@@ -61,7 +67,7 @@
     margin-right: 23px;
 
     @include viewport--sm {
-      margin-bottom: 10px;
+      margin-bottom: 17px;
       margin-right: 0;
     }
   }
@@ -188,7 +194,15 @@
       width: 100%;
       max-width: 100%;
       padding-right: 0;
-      padding-bottom: 10px;
+      padding-bottom: 0;
+
+      input {
+        font-size: 24px;
+      }
+
+      select {
+        font-size: 24px;
+      }
     }
 
     @media (min-width: 1920px) {
@@ -219,6 +233,11 @@
       background-color: $color-white;
       color: $color-blue;
       padding: 9px;
+
+      @include viewport--sm {
+        font-size: 24px;
+        height: 122px;
+      }
 
       @media (min-width: 1920px) {
         font-size: 24px;
@@ -267,12 +286,18 @@
     align-items: center;
     flex-direction: column;
     padding-bottom: 24px;
+
+    @include viewport--sm {
+      padding-bottom: 14px;
+    }
   }
 
   &__up {
     padding-bottom: 10px;
 
     @include viewport--sm {
+      padding-left: 14px;
+
       span {
         text-align: center;
       }
@@ -284,6 +309,12 @@
     margin: 0;
     font-weight: 600;
     padding-bottom: 16px;
+
+    @include viewport--sm {
+      width: 100%;
+      padding-bottom: 49px;
+      padding-top: 8px;
+    }
   }
 
   &__title-up {
@@ -330,6 +361,7 @@
 
   @include viewport--sm {
     grid-template-columns: repeat(1, 1fr);
+    row-gap: 10px;
   }
 }
 
@@ -342,7 +374,7 @@
     width: 100%;
     max-width: 100%;
     margin-right: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
 }
 
@@ -379,6 +411,10 @@
   }
 
   @media (min-width: 1920px) {
+    font-size: 24px;
+  }
+
+  @include viewport--sm {
     font-size: 24px;
   }
 
@@ -423,8 +459,6 @@
   user-select: none;
   color: $color-blue;
   font-size: 21px;
-  //padding-top: 10px;
-  //padding-bottom: 10px;
 
   &:focus,
   &:hover {
@@ -435,6 +469,12 @@
     padding-left: 15px;
     padding-top: 18px;
     font-size: 24px;
+  }
+
+  @include viewport--sm {
+    padding-left: 24px;
+    font-size: 24px;
+    padding-top: 23px;
   }
 }
 
@@ -478,6 +518,7 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
+      padding-left: 0;
     }
   }
 
@@ -503,6 +544,10 @@
     &:hover {
       opacity: 0.8;
     }
+
+    @include viewport--sm {
+      margin-bottom: 29px;
+    }
   }
 }
 
@@ -513,6 +558,17 @@
 
   a {
     margin-bottom: -13px;
+  }
+
+  @include viewport--sm {
+    label {
+      width: 100%;
+      padding-bottom: 29px;
+    }
+
+    a {
+      margin-bottom: 49px;
+    }
   }
 }
 

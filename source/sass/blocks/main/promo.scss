@@ -9,22 +9,16 @@
 
 .promo {
   position: relative;
-  //padding-top: 367px;
-  //padding-top: 326px;
-  //padding-bottom: 37px;
   background-color: $color-gray-dark;
 
   height: 520px;
   display: flex;
 
   @include viewport--sm {
-    padding-top: 172px;
-    padding-bottom: 32px;
+    height: 375px;
   }
 
   @media (min-width: 1920px) {
-    //padding-top: 343px;
-    //padding-bottom: 45px;
     height: 529px;
   }
 }

@@ -74,6 +74,12 @@
   @media (min-width: 1920px) {
     padding-top: 38px;
   }
+
+  @include viewport--sm {
+    font-size: 33px;
+    padding-top: 24px;
+    width: 100%;
+  }
 }
 
 .exhibitor-reg__btn {
@@ -87,8 +93,25 @@
     padding-left: 5px;
   }
 
+  svg {
+    fill: $color-blue;
+  }
+
   &:focus,
   &:hover {
     opacity: 0.8;
+  }
+
+  @include viewport--sm {
+    width: auto;
+    position: absolute;
+    top: 110px;
+    color: white;
+    font-size: 13px;
+    z-index: 7;
+
+    svg {
+      fill: $color-default-white;
+    }
   }
 }

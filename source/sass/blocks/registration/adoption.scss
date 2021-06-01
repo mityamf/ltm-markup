@@ -28,11 +28,19 @@
   time {
     font-size: 14px;
     color: $color-blue;
+
+    @include viewport--sm {
+      font-size: 13px;
+    }
   }
 
   h4 {
     margin: 0;
     padding-bottom: 10px;
+
+    @include viewport--sm {
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -41,5 +49,18 @@
 
   @include viewport--sm {
     display: block;
+    text-align: center;
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background: initial;
+      border: 1px solid $color-blue;
+    }
+
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+      background: $color-blue;
+    }
   }
 }
