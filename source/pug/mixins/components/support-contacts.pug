@@ -1,7 +1,7 @@
 mixin renderSupportContacts(contactsList)
   .support-contacts
-    h3.title--h3=contactsList.title
-    div.direction.container.swiper-container.direction__slider--card
+    h3.title.title--h3=contactsList.title
+    div.direction.container.swiper-container.direction--slider-card
       ul.support-contacts__list.direction-list.swiper-wrapper
         each contact in contactsList.contacts
           li.support-contacts__item.swiper-slide

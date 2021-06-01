@@ -15,7 +15,7 @@ mixin renderDropdownFilter(dropdownFilters, i)
           option(value=item, class="input-dropdown__option")=item
 
 mixin renderFilterButton(buttonFilter)
-  .filters__block--button-wrapper
+  .filters__block.filters__block--button-wrapper
     button.btn.btn--white.filters__button(type=buttonFilter.type)=buttonFilter.text
 
 mixin renderMobileFilterButtons(buttonFilters, buttonReset)

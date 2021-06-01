@@ -6902,13 +6902,16 @@ span {
         right: 0; } }
   .notifications tr:first-of-type th {
     height: 32px; }
-  .notifications th {
+  .notifications th,
+  .notifications td {
     height: 37px; }
-    .notifications th .notifications__data-wrapper {
+    .notifications th .notifications__data-wrapper,
+    .notifications td .notifications__data-wrapper {
       height: 22px;
       overflow: hidden; }
     @media (max-width: 767px) {
-      .notifications th {
+      .notifications th,
+      .notifications td {
         height: 20px;
         overflow: hidden; } }
   .notifications .btn--mobile {
@@ -6980,18 +6983,24 @@ span {
   .notifications tr:nth-child(even) {
     background-color: #d6d6d6; }
   .notifications th:first-child,
-  .notifications th:last-child {
+  .notifications th:last-child,
+  .notifications td:first-child,
+  .notifications td:last-child {
     width: 215px; }
     @media (max-width: 1439px) {
       .notifications th:first-child,
-      .notifications th:last-child {
+      .notifications th:last-child,
+      .notifications td:first-child,
+      .notifications td:last-child {
         width: 11%;
         max-width: 124px; } }
     @media (max-width: 1023px) {
       .notifications th:first-child,
-      .notifications th:last-child {
+      .notifications th:last-child,
+      .notifications td:first-child,
+      .notifications td:last-child {
         display: none; } }
-  .notifications--theme {
+  .notifications__cell--theme {
     width: 235px;
     padding-right: 10px;
     position: relative;
@@ -6999,27 +7008,27 @@ span {
     line-height: 20px;
     text-align: left; }
     @media (max-width: 1439px) {
-      .notifications--theme {
+      .notifications__cell--theme {
         width: 183px; } }
     @media (max-width: 767px) {
-      .notifications--theme {
+      .notifications__cell--theme {
         width: 100%;
         overflow: hidden;
         font-size: 16px;
         font-weight: normal; } }
-  .notifications--icon {
+  .notifications__cell--icon {
     width: 90px;
     text-align: left; }
     @media (max-width: 1439px) {
-      .notifications--icon {
+      .notifications__cell--icon {
         width: 68px; } }
     @media (max-width: 1023px) {
-      .notifications--icon {
+      .notifications__cell--icon {
         padding-left: 10px; } }
     @media (max-width: 767px) {
-      .notifications--icon {
+      .notifications__cell--icon {
         display: none; } }
-  .notifications--message {
+  .notifications__cell--message {
     width: 500px;
     padding-right: 10px;
     position: relative;
@@ -7028,29 +7037,29 @@ span {
     font-weight: normal;
     text-align: left; }
     @media (max-width: 1439px) {
-      .notifications--message {
+      .notifications__cell--message {
         width: 468px; } }
     @media (max-width: 767px) {
-      .notifications--message {
+      .notifications__cell--message {
         width: 100%; } }
-  .notifications--date, .notifications--time {
+  .notifications__cell--date, .notifications__cell--time {
     font-size: 11px;
     line-height: 13px;
     font-weight: normal;
     text-align: left; }
   @media (max-width: 1023px) {
-    .notifications--time {
+    .notifications__cell--time {
       padding-right: 10px; } }
   @media (max-width: 767px) {
-    .notifications--time {
+    .notifications__cell--time {
       display: none; } }
-  .notifications--date {
+  .notifications__cell--date {
     width: 130px; }
     @media (max-width: 1439px) {
-      .notifications--date {
+      .notifications__cell--date {
         padding-left: 10px; } }
     @media (max-width: 767px) {
-      .notifications--date {
+      .notifications__cell--date {
         width: auto;
         position: absolute;
         top: 15px;
@@ -8732,7 +8741,7 @@ span {
   bottom: 0;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.5); }
-  .photo-edit__visible {
+  .photo-edit--visible {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
@@ -9746,7 +9755,7 @@ span {
     line-height: 20px;
     color: #9f9f9f;
     text-align: left; }
-  .admin-table__row th {
+  .admin-table__row td {
     display: inline-block;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -9754,7 +9763,7 @@ span {
     text-overflow: ellipsis;
     text-align: left; }
     @media (max-width: 767px) {
-      .admin-table__row th {
+      .admin-table__row td {
         max-width: none;
         padding: 0; } }
   @media (max-width: 950px) {
@@ -9986,11 +9995,13 @@ span {
         top: 7px;
         right: 45px;
         width: 0; } }
-  .admin-table__row--schedule th {
+  .admin-table__row--schedule th,
+  .admin-table__row--schedule td {
     padding-top: 6px;
     padding-bottom: 6px; }
     @media (max-width: 767px) {
-      .admin-table__row--schedule th {
+      .admin-table__row--schedule th,
+      .admin-table__row--schedule td {
         padding: 0; } }
   .admin-table__row--schedule .btn {
     width: 100%;
@@ -10025,11 +10036,13 @@ span {
       padding: 0; }
     .admin-table__row--guests .admin-table__cell--button:last-of-type {
       margin-right: 0; }
-    .admin-table__row--guests th {
+    .admin-table__row--guests th,
+    .admin-table__row--guests td {
       padding-top: 8px;
       padding-bottom: 1px; }
       @media (max-width: 767px) {
-        .admin-table__row--guests th {
+        .admin-table__row--guests th,
+        .admin-table__row--guests td {
           padding: 0; } }
   .admin-table__row--messages {
     white-space: nowrap;
