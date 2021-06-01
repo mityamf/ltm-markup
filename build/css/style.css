@@ -6022,7 +6022,8 @@ span {
         grid-row-gap: 0; } }
   .edit .title--h3 {
     width: 222px;
-    margin: 0 15px 0 0; }
+    margin: 0 15px 0 0;
+    word-break: break-word; }
     @media (max-width: 1439px) {
       .edit .title--h3 {
         width: 174px; } }
