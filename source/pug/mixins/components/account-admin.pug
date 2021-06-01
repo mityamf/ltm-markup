@@ -4,7 +4,7 @@ mixin renderAccountAdmin(title, src, name, lastName, position, text)
     .account__admin-wrapper
       button(class="account__contact-button" type="button")
         +icon("icon-write", 18, 24)
-      img(src=src, width="103", height="103")
+      img(src=src, width="103", height="103", alt="Фото админа")
       .account__admin-info
         span.account__admin-name=name
         span.account__admin-name=lastName

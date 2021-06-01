@@ -5,7 +5,7 @@ mixin renderImageSlider(photoList, mod)
         each photo in photoList
           li.photos-slider__photo-item.swiper-slide
             picture
-              img(src=photo.src, srcset=photo.srcset)
+              img(src=photo.src, srcset=photo.srcset, alt="Фото отеля")
       .direction__arrow.swiper-button-next.direction__arrow--right
         +icon("arrow-white-right", 18, 30)
       .direction__arrow.swiper-button-prev.direction__arrow--left
@@ -19,7 +19,7 @@ mixin renderEditImageSlider(photoList)
         each photo in photoList
           li.photos-slider__photo-item.swiper-slide
             picture
-              img(src=photo.src, srcset=photo.srcset)
+              img(src=photo.src, srcset=photo.srcset, alt="Фото отеля")
             +renderEditComponent(photo, true)
       .swiper-pagination.direction__pagination
       .direction__arrow.swiper-button-next.direction__arrow--right
