@@ -8,10 +8,6 @@
     @include viewport--md {
       flex-wrap: wrap;
     }
-
-    @include viewport--sm {
-      display: none;
-    }
   }
 
   &__participants-wrapper .title--h2 {

@@ -12,7 +12,8 @@ block main
   main.container.lk
     .admin
       +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates)
-      +renderLKParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, infoBlock)
+      .hidden-sm
+        +renderLKParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, infoBlock)
       .admin__control-wrapper
         +renderAdminTabs(adminTabs)
         +renderMailControl("Новое сообщение", adminMailControl.linkList, adminMailControl.isSearchInput)

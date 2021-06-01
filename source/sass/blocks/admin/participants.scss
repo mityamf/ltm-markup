@@ -161,11 +161,3 @@
     }
   }
 }
-
-.container--admin {
-  .participants {
-    @include viewport--sm {
-      display: none;
-    }
-  }
-}

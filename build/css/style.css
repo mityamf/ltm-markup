@@ -8922,9 +8922,6 @@ span {
     width: 340px; }
   .admin .hotel-filter--dropdown:not(:first-of-type) {
     width: 222px; }
-  @media (max-width: 767px) {
-    .admin .participants {
-      display: none; } }
   .admin--schedule {
     padding-bottom: 116px; }
     @media (max-width: 1439px) {
@@ -8956,6 +8953,17 @@ span {
       margin: 0 auto;
       display: block;
       text-align: center; }
+  @media (max-width: 767px) {
+    .admin--mobile .participants {
+      border: none; }
+    .admin--mobile .participants__item {
+      display: block;
+      text-align: center; }
+    .admin--mobile .info-block .btn {
+      margin: 0 auto;
+      display: block; }
+    .admin--mobile .info-block {
+      padding-bottom: 20px; } }
 
 .admin-tabs__list {
   display: -webkit-box;
@@ -9476,10 +9484,6 @@ span {
       opacity: 0.8; }
     .participants__contact-link:active {
       opacity: 0.5; }
-
-@media (max-width: 767px) {
-  .container--admin .participants {
-    display: none; } }
 
 .deadlines-info {
   display: -webkit-box;
@@ -10433,9 +10437,6 @@ span {
     .lk__participants-wrapper {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; } }
-  @media (max-width: 767px) {
-    .lk__participants-wrapper {
-      display: none; } }
 
 .lk__participants-wrapper .title--h2 {
   margin-bottom: 2px;
