@@ -1326,6 +1326,9 @@ p {
     margin: 0 auto;
     padding: 20px 30px;
     width: 222px; }
+    @media (max-width: 767px) {
+      .btn--more {
+        padding: 17px 30px; } }
   .btn--more-news {
     padding: 13px 69px; }
     .btn--more-news:hover, .btn--more-news:focus {
@@ -1711,10 +1714,6 @@ p {
 .choices {
   height: 49px;
   cursor: pointer; }
-  .choices:hover, .choices:focus {
-    opacity: 0.8; }
-  .choices:active {
-    opacity: 0.5; }
   .choices.is-open .choices__list--dropdown {
     border-color: #ffffff; }
   .choices.is-focused .choices__inner,
@@ -1738,7 +1737,12 @@ p {
   .choices__inner {
     padding: 9px 15px;
     height: 49px;
+    cursor: pointer;
     border-color: #0098c1; }
+    .choices__inner:hover, .choices__inner:focus {
+      border-color: rgba(0, 152, 193, 0.7); }
+    .choices__inner:active {
+      border-color: #0098c1; }
   .choices__inner .choices__list--multiple .choices__item:not(:first-child) {
     display: none; }
   .choices__item--choice.is-selected::before {
@@ -5624,7 +5628,7 @@ span {
       margin: 0 auto; } }
   @media (max-width: 767px) {
     .hotel-cards {
-      padding: 11px 0 0 0; } }
+      padding: 11px 0 6px; } }
 
 .exhibitors {
   position: relative;
@@ -8398,6 +8402,10 @@ span {
   @media (max-width: 767px) {
     .up-button {
       margin: 0 auto; } }
+  .up-button:hover, .up-button:focus {
+    opacity: 0.8; }
+  .up-button:active {
+    opacity: 0.5; }
 
 .up-button--right {
   display: -webkit-box;
@@ -8423,7 +8431,13 @@ span {
   display: block;
   position: fixed;
   right: 6%;
-  bottom: 10%; }
+  bottom: 10%;
+  z-index: 100; }
+
+.up-button--mobile {
+  display: block;
+  margin: 25px auto 25px auto;
+  text-align: center; }
 
 .filters {
   display: -webkit-box;
@@ -8484,6 +8498,9 @@ span {
     width: 222px; }
     .filters__dropdown-filter h3 {
       margin-bottom: auto; }
+      @media (max-width: 1439px) {
+        .filters__dropdown-filter h3 {
+          padding-bottom: 19px; } }
       @media (max-width: 767px) {
         .filters__dropdown-filter h3 {
           margin-bottom: 12px; } }
@@ -8515,7 +8532,7 @@ span {
     width: 42%; }
     @media (max-width: 1439px) {
       .filters__alphabet-filter {
-        width: 44%; } }
+        width: 42%; } }
   .filters__block--button-wrapper {
     -webkit-box-align: end;
         -ms-flex-align: end;
