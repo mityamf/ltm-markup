@@ -64,6 +64,10 @@
     h3 {
       margin-bottom: auto;
 
+      @include viewport--lg {
+        padding-bottom: 19px;
+      }
+
       @include viewport--sm {
         margin-bottom: 12px;
       }
@@ -103,7 +107,7 @@
     width: 42%;
 
     @include viewport--lg {
-      width: 44%;
+      width: 42%;
     }
   }
 

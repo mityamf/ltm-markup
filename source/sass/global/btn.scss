@@ -110,6 +110,10 @@
     margin: 0 auto;
     padding: 20px 30px;
     width: 222px;
+
+    @include viewport--sm {
+      padding: 17px 30px;
+    }
   }
 
   &--more-news {
