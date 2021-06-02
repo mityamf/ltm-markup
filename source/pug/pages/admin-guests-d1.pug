@@ -21,9 +21,10 @@ block main
       +renderHeadline2("Buyers Guest List")
       +renderScheduleTabs(scheduleTabs, generatePDF)
 
-      .filters
-        +renderAlphabetFilter(alphabetFilter)
-        +renderDropdownFilter(dropdownFilters)
+      .hidden-sm
+        .filters
+          +renderAlphabetFilter(alphabetFilter)
+          +renderDropdownFilter(dropdownFilters)
 
       +renderFilterTabs(filterTabs)
       +renderGuestsList(adminGuestsListTitles, adminGuestsList)

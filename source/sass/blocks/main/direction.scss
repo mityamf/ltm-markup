@@ -174,62 +174,32 @@
   @include viewport--sm {
     display: flex;
     align-items: center;
+    padding: 20px 15px 16px;
+  }
 
-    .swiper-pagination {
-      top: 203px;
-      width: 100%;
+  .title--h2 {
+    margin-bottom: 27px;
+    letter-spacing: 1.4px;
+
+    @include viewport--lg {
+      margin-bottom: 24px;
     }
 
-    .swiper-pagination-bullet {
-      width: 10px;
-      height: 10px;
-      margin: 0 5px;
-      background: initial;
-      border: 1px solid $color-blue;
+    @include viewport--sm {
+      margin-bottom: 0;
+    }
+  }
+
+  .direction__title {
+    padding-bottom: 14px;
+    letter-spacing: 0.3px;
+    line-height: 20px;
+
+    @include viewport--lg {
+      padding: 0 0 14px 0;
     }
 
-    .swiper-pagination-bullet-active {
-      background: $color-blue;
-    }
-
-    ~ .direction__arrow--right {
-      right: 8px;
-      top: 45%;
-    }
-
-    ~ .direction__arrow--left {
-      left: 8px;
-      top: 45%;
-    }
-
-    .swiper-slide {
-      width: 100%;
-    }
-
-    .direction__list {
-      display: flex;
-      align-items: center;
-      padding: 20px 0 45px;
-    }
-
-    .direction__item {
-      align-items: center;
-      padding-right: 0;
-    }
-
-    &.direction__swiper {
-      padding: 20px 0;
-      border-bottom: 1px solid $color-blue;
-    }
-
-    .direction__data {
-      padding-top: 5px;
-      letter-spacing: 0.4px;
-      font-size: 12px;
-      line-height: 14px;
-    }
-
-    .direction__title {
+    @include viewport--sm {
       padding-bottom: 16px;
       font-size: 16px;
       line-height: 19px;
@@ -238,5 +208,106 @@
       letter-spacing: 0.7px;
     }
   }
-}
 
+  .direction__data {
+    padding-top: 5px;
+    padding-bottom: 3px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.3px;
+  }
+
+  .direction__status {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .direction__item {
+    padding: 8px 0;
+
+    @include viewport--sm {
+      align-items: center;
+      padding-right: 0;
+    }
+  }
+
+  .swiper-slide {
+    width: 236px;
+    margin-right: 10px;
+    border: 1px solid transparent;
+
+    @include viewport--lg {
+      width: 274px;
+    }
+
+    @include viewport--sm {
+      border: none;
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  .swiper-slide-active {
+    border-color: $color-blue;
+  }
+
+  .direction__arrow--right {
+    top: 72%;
+
+    @include viewport--lg {
+      right: 41px;
+      top: 75%;
+    }
+
+    @include viewport--sm {
+      right: 8px;
+      top: 45%;
+    }
+  }
+
+  .direction__arrow--left {
+    top: 72%;
+
+    @include viewport--lg {
+      left: 41px;
+      top: 75%;
+    }
+
+    @include viewport--sm {
+      left: 8px;
+      top: 45%;
+    }
+  }
+
+  .direction__list {
+    @include viewport--sm {
+      display: flex;
+      align-items: center;
+      padding: 20px 0 45px;
+    }
+  }
+
+  .swiper-pagination {
+    @include viewport--sm {
+      top: 221px;
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    @include viewport--sm {
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      background: initial;
+      border: 1px solid $color-blue;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    @include viewport--sm {
+      background: $color-blue;
+    }
+  }
+}
