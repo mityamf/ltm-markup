@@ -4,15 +4,15 @@ mixin renderBackButton(link)
     span Back
 
 mixin renderHeadlineWithBackButton(title, link)
-  .headline-back
+  .top-wrapper
     h2.title.title--h2=title
     +renderBackButton(link)
 
 mixin renderTitleHeadline(title)
-  .headline-back.headline-back--title
+  .top-wrapper.top-wrapper--title
     h2.title.title--h2=title
 
 mixin renderTitleHeadlineWithBackButton(title, link)
-  .headline-back.headline-back--title
+  .top-wrapper.top-wrapper--title
     h2.title.title--h2=title
     +renderBackButton(link)

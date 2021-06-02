@@ -6605,7 +6605,11 @@ span {
       margin-bottom: 39px; } }
   @media (max-width: 767px) {
     .privacy-policy {
-      margin-bottom: 95px; } }
+      margin-bottom: 0; } }
+
+@media (max-width: 767px) {
+  .privacy-policy__button-wrapper {
+    margin-top: -13px; } }
 
 .privacy-policy__date {
   display: block;
@@ -6857,7 +6861,7 @@ span {
 .contact-card__office-info p {
   margin: 0;
   padding: 0;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 22px; }
 
 .contact-card__office-info .contact-card__office-name {
@@ -8043,7 +8047,7 @@ span {
     display: -ms-flexbox;
     display: flex; }
 
-.headline-back {
+.top-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8057,7 +8061,7 @@ span {
   padding-top: 22px;
   background-color: inherit; }
   @media (max-width: 767px) {
-    .headline-back {
+    .top-wrapper {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: reverse;
           -ms-flex-direction: row-reverse;
@@ -8066,7 +8070,14 @@ span {
           -ms-flex-align: baseline;
               align-items: baseline;
       padding-top: 32px; } }
-  .headline-back .back-link {
+  @media (max-width: 767px) {
+    .top-wrapper--mobile {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      text-align: left; } }
+  .top-wrapper .back-link {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -8075,64 +8086,52 @@ span {
             align-items: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
-    .headline-back .back-link:hover, .headline-back .back-link:focus {
+            justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 17px; }
+    .top-wrapper .back-link:hover, .top-wrapper .back-link:focus {
       opacity: 0.8; }
-    .headline-back .back-link:active {
+    .top-wrapper .back-link:active {
       opacity: 0.5; }
-  .headline-back svg {
+  .top-wrapper svg {
     margin-right: 5px;
     vertical-align: middle;
     fill: #0098c1; }
   @media (max-width: 767px) {
-    .headline-back .title--h2 {
+    .top-wrapper .title--h2 {
       margin-bottom: 0; } }
 
-.container--no-padding .headline-back {
+.container--no-padding .top-wrapper {
   padding-bottom: 0; }
-  @media (max-width: 1023px) {
-    .container--no-padding .headline-back {
-      padding-left: 17px;
-      padding-right: 17px; } }
   @media (max-width: 767px) {
-    .container--no-padding .headline-back {
-      padding-bottom: 25px;
-      padding-top: 29px; } }
+    .container--no-padding .top-wrapper {
+      padding: 29px 17px 25px 17px; } }
 
-.headline-back--title {
-  position: relative;
-  padding-top: 28px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row; }
-  @media (max-width: 1439px) {
-    .headline-back--title {
-      padding-top: 32px; } }
-  @media (max-width: 767px) {
-    .headline-back--title {
-      padding-top: 20px; } }
-  .headline-back--title > * {
-    margin-bottom: 0; }
-  .headline-back--title .back-link {
-    margin-right: 20px; }
-    .headline-back--title .back-link:hover, .headline-back--title .back-link:focus {
-      opacity: 0.6; }
-    .headline-back--title .back-link:active {
+@media (max-width: 767px) {
+  .top-link {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    top: 111px;
+    left: 17px;
+    z-index: 100;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff; }
+    .top-link:active {
       opacity: 0.3; }
-    @media (max-width: 1439px) {
-      .headline-back--title .back-link {
-        margin-top: -4px;
-        font-size: 14px; } }
-    @media (max-width: 767px) {
-      .headline-back--title .back-link {
-        position: absolute;
-        z-index: 2;
-        top: -352px;
-        left: 0;
-        color: #ffffff; }
-        .headline-back--title .back-link svg {
-          fill: #ffffff; } }
+    .top-link svg {
+      margin-right: 5px;
+      fill: #ffffff; } }
 
 .info-bottom {
   margin: 0 0;

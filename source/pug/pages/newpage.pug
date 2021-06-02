@@ -8,6 +8,7 @@ block variables
   - var hasHeader = true
   - var hasFooter = true
   - var currentPage = ""
+  - var hasTopLink = true
 
 block main
 
@@ -15,7 +16,10 @@ block main
   main
     .container
       .newpage
-        +renderTitleHeadlineWithBackButton(newPage.title, "news.html")
+        .top-wrapper
+          h2.title.title--h2=newPage.title
+          .hidden-sm
+            +renderBackButton("news.html")
         time.newpage__date(datetime=newPage.datetime) #{newPage.date}
         .newpage__content
           each text in newPage.content
