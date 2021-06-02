@@ -2494,7 +2494,7 @@ p {
 
 @media (max-width: 767px) {
   .promo__text-wrapper {
-    top: 0; } }
+    top: 20px; } }
 
 .promo__title {
   margin: 0;
@@ -2514,8 +2514,7 @@ p {
       margin: 0 0 32px; } }
   @media (min-width: 1920px) {
     .promo__title {
-      font-size: 36px;
-      margin-top: 36px; } }
+      font-size: 36px; } }
 
 .direction {
   padding-top: 30px; }
