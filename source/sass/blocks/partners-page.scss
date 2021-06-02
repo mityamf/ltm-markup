@@ -10,10 +10,12 @@
 
   @include viewport--lg {
     margin-top: -13px;
+    padding-bottom: 28px;
   }
 
   @include viewport--sm {
     margin-top: 17px;
+    padding-bottom: 0;
   }
 }
 
@@ -32,6 +34,12 @@
     width: 100%;
     max-width: 930px;
     margin: 0 auto;
+  }
+}
+
+.partners-page__button-wrapper {
+  @include viewport--sm {
+    margin-top: -10px;
   }
 }
 
