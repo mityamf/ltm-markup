@@ -8,7 +8,13 @@
   }
 
   @include viewport--sm {
-    margin-bottom: 95px;
+    margin-bottom: 0;
+  }
+}
+
+.privacy-policy__button-wrapper {
+  @include viewport--sm {
+    margin-top: -13px;
   }
 }
 

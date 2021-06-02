@@ -30,6 +30,9 @@ html(lang="en")
       if (hasHeader)
         +header(headerMod, currentPage)
 
+      if (hasTopLink)
+        +renderTopLink("#", "Back")
+
       block main
 
       if (hasFooter)
