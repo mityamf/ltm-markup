@@ -41,7 +41,7 @@ mixin renderEditPhotos(photoList, cover)
               +renderEditComponent(photo)
 
     .photos__block.photos__block--last
-      each photo in photoList.slice(8)
+      each photo in photoList.slice(7)
         .photos__item
           picture
             img(src=photo.src, srcset=photo.srcset, alt="Фото отеля")

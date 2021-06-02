@@ -2504,10 +2504,13 @@ p {
   font-family: "Proxima Nova", "Arial", sans-serif;
   text-transform: uppercase;
   line-height: 30px;
-  margin-top: 30px; }
+  margin-top: 30px;
+  letter-spacing: 2px; }
   @media (max-width: 767px) {
     .promo__title {
-      font-size: 21px;
+      font-size: 22px;
+      line-height: 26px;
+      letter-spacing: 1.2px;
       margin: 0 0 32px; } }
   @media (min-width: 1920px) {
     .promo__title {
