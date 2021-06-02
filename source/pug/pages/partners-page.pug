@@ -8,6 +8,7 @@ block variables
   - var hasHeader = true
   - var hasFooter = true
   - var currentPage = "Partners"
+  - var hasUpButton = true
 
 block main
 
@@ -21,4 +22,6 @@ block main
             each partner in partners.partnersList
               li.partners-page__item
                 +renderPartnerCard(partner.logo.src, partner.logo.width, partner.logo.height, partner.name, partner.rank, partner.link, partner.text)
-        //- +renderUpButton
+        .visible-sm
+          .partners-page__button-wrapper
+            +renderUpButton('up-button--mobile')
