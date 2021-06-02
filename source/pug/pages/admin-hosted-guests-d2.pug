@@ -20,9 +20,10 @@ block main
       +renderHeadline2("Hosted Buyers Guest List")
       +renderScheduleTabs(scheduleTabs)
 
-      .filters.filters--exhibitions
-        +renderAlphabetFilter(alphabetFilter)
-        +renderDropdownFilter(dropdownFilters)
+      .hidden-sm
+        .filters.filters--exhibitions
+          +renderAlphabetFilter(alphabetFilter)
+          +renderDropdownFilter(dropdownFilters)
 
       .visible-sm
         +renderMobileFilterButtons("Filters", "Clear all filters")

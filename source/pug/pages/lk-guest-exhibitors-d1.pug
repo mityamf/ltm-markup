@@ -20,10 +20,11 @@ block main
       +renderHeadline2("Список участников")
       +renderScheduleTabs(scheduleTabs)
 
-      .filters.filters--exhibitions
-        +renderAlphabetFilter(alphabetFilter)
-        +renderDropdownFilter(dropdownFilters)
-        +renderFilterButton(buttonFilter)
+      .hidden-sm
+        .filters.filters--exhibitions
+          +renderAlphabetFilter(alphabetFilter)
+          +renderDropdownFilter(dropdownFilters)
+          +renderFilterButton(buttonFilter)
 
       .visible-sm
         +renderMobileFilterButtons("Filters", "Clear all filters")

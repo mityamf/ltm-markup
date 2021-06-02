@@ -4,6 +4,12 @@
   height: 49px;
   cursor: pointer;
 
+  &[data-type*="select-multiple"] .choices__inner,
+  &[data-type*="select-one"] .choices__inner,
+  &[data-type*="text"] .choices__inner {
+    cursor: pointer;
+  }
+
   &.is-open .choices__list--dropdown {
     border-color: $color-default-white;
   }
