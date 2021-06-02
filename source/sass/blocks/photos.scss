@@ -70,6 +70,7 @@
     img {
       height: 459px;
       object-fit: cover;
+      width: 100%;
     }
 
     @include viewport--lg {
@@ -147,6 +148,22 @@
 
   &__block--last > .photos__item {
     object-fit: cover;
+  }
+
+  &--account {
+    @include viewport--lg {
+      .photos__item img {
+        height: 178px;
+      }
+
+      .photos__block--first img {
+        height: 366px;
+      }
+
+      .photos__block--second {
+        flex-basis: 58%;
+      }
+    }
   }
 
   &--edit {

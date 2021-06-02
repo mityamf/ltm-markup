@@ -33,6 +33,7 @@
   .title--h3 {
     width: 222px;
     margin: 0 15px 0 0;
+    word-break: break-word;
 
     @include viewport--lg {
       width: 174px;

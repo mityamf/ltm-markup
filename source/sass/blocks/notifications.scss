@@ -46,7 +46,8 @@
     height: 32px;
   }
 
-  th {
+  th,
+  td {
     height: 37px;
 
     .notifications__data-wrapper {
@@ -160,7 +161,9 @@
   }
 
   th:first-child,
-  th:last-child {
+  th:last-child,
+  td:first-child,
+  td:last-child {
     width: 215px;
 
     @include viewport--lg {
@@ -173,7 +176,7 @@
     }
   }
 
-  &--theme {
+  &__cell--theme {
     width: 235px;
     padding-right: 10px;
     position: relative;
@@ -195,7 +198,7 @@
     }
   }
 
-  &--icon {
+  &__cell--icon {
     width: 90px;
 
     text-align: left;
@@ -213,7 +216,7 @@
     }
   }
 
-  &--message {
+  &__cell--message {
     width: 500px;
     padding-right: 10px;
     position: relative;
@@ -232,15 +235,15 @@
     }
   }
 
-  &--date,
-  &--time {
+  &__cell--date,
+  &__cell--time {
     font-size: 11px;
     line-height: 13px;
     font-weight: normal;
     text-align: left;
   }
 
-  &--time {
+  &__cell--time {
     @include viewport--md {
       padding-right: 10px;
     }
@@ -250,7 +253,7 @@
     }
   }
 
-  &--date {
+  &__cell--date {
     width: 130px;
 
     @include viewport--lg {

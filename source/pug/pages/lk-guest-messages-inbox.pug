@@ -5,6 +5,7 @@ block variables
   - var hasHeader = true
   - var hasFooter = true
   - var currentPage = "Messages"
+  - var hasUpButton = true
 
 block main
   include ../data/pages/lk-guest-messages-inbox
@@ -12,7 +13,8 @@ block main
   main.container.container--no-padding.lk
     .admin
       +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates)
-      +renderLKParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, infoBlock)
+      .hidden-sm
+        +renderLKParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, infoBlock)
       .admin__control-wrapper
         +renderAdminTabs(adminTabs)
         +renderMailControl("Входящие", adminMailControl.linkList, adminMailControl.isSearchInput)

@@ -1,5 +1,5 @@
 const eventSwiper = () => {
-  return new Swiper('.direction__slider--event', {
+  return new Swiper('.direction--slider-event', {
     spaceBetween: 0,
     slidesPerGroup: 1,
     loop: false,
@@ -19,7 +19,7 @@ const eventSwiper = () => {
       768: {
         slidesPerView: 3,
       },
-      1024: {
+      1440: {
         slidesPerView: 4,
       },
     },

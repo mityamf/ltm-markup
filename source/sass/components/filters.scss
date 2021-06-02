@@ -64,6 +64,10 @@
     h3 {
       margin-bottom: auto;
 
+      @include viewport--lg {
+        padding-bottom: 19px;
+      }
+
       @include viewport--sm {
         margin-bottom: 12px;
       }
@@ -77,6 +81,7 @@
   &__dropdown-filter--mobile {
     display: block;
     width: 100%;
+    padding: 20px 0 0 0;
   }
 
   &__dropdown-filter--wide {
@@ -102,7 +107,7 @@
     width: 42%;
 
     @include viewport--lg {
-      width: 44%;
+      width: 42%;
     }
   }
 
@@ -133,6 +138,7 @@
   &__mobile-block {
     display: flex;
     justify-content: space-between;
+    padding: 18px 0 0 0;
   }
 
   &__mobile-block button {

@@ -6,16 +6,16 @@ mixin renderAlphabetFilter(alphabetFilter)
         li.filters__alphabet-item
           a(href="#", class="filters__alphabet-link")=filter
 
-mixin renderDropdownFilter(dropdownFilters)
-  each filter in dropdownFilters
+mixin renderDropdownFilter(dropdownFilters, i)
+  each filter, i in dropdownFilters
     .filters__dropdown-filter(class=filter.className)
       +renderHeadlineMiddle(filter.title)
-      select(id="hotel-select", class="input-dropdown", multiple)
+      select(id='hotel-select-' + [i], class="input-dropdown", multiple)
         each item in filter.filterList
           option(value=item, class="input-dropdown__option")=item
 
 mixin renderFilterButton(buttonFilter)
-  .filters__block--button-wrapper
+  .filters__block.filters__block--button-wrapper
     button.btn.btn--white.filters__button(type=buttonFilter.type)=buttonFilter.text
 
 mixin renderMobileFilterButtons(buttonFilters, buttonReset)

@@ -1,10 +1,10 @@
 mixin renderHotelCard(title, photoList, logo, link)
   - var mod = ["hotel-card__photo--big", "hotel-card__photo--small"]
-  li.hotel-card
+  li.hotel-cards__hotel-card.hotel-card
     a(href=link).hotel-card__link
-      ul.hotel-card__photos
+      .hotel-card__photos
         each photo, index in photoList
-          img(src=photo, class=mod[index % 2])
+          img(src=photo, class='hotel-card__photo ' + mod[index % 2], alt="Фото отеля")
       .hotel-card__info
-        img(src=logo)
+        img(src=logo, alt="Лого")
         h4.hotel-card__title=title

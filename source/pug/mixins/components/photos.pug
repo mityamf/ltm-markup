@@ -1,6 +1,6 @@
 mixin renderEditComponent(photo, visibility)
   if visibility
-    - var visibilityClass = 'photo-edit__visible'
+    - var visibilityClass = 'photo-edit--visible'
   .photo-edit(class=visibilityClass)
     .photo-edit__buttons
       label
@@ -16,14 +16,14 @@ mixin renderEditComponent(photo, visibility)
 
 mixin renderEditPhotos(photoList, cover)
   .top-block.top-block--edit
-    img(src=cover.src, srcset=cover.srcset)
+    img(src=cover.src, srcset=cover.srcset, alt="Фото отеля")
     +renderEditComponent(cover)
 
   .photos.photos--edit
     .photos__wrapper
       .photos__block.photos__block--first
         picture
-          img(src=photoList[0].src, srcset=photoList[0].srcset)
+          img(src=photoList[0].src, srcset=photoList[0].srcset, alt="Фото отеля")
         +renderEditComponent(photoList[0])
 
       .photos__block.photos__block--second
@@ -31,20 +31,20 @@ mixin renderEditPhotos(photoList, cover)
           each photo in photoList.slice(1, 4)
             .photos__item(class='photos__item--' + photo.mod)
               picture
-                img(src=photo.src, srcset=photo.srcset)
+                img(src=photo.src, srcset=photo.srcset, alt="Фото отеля")
               +renderEditComponent(photo)
         .photos__block__wrapper
           each photo in photoList.slice(4, 7)
             .photos__item(class='photos__item--' + photo.mod)
               picture
-                img(src=photo.src, srcset=photo.srcset)
+                img(src=photo.src, srcset=photo.srcset, alt="Фото отеля")
               +renderEditComponent(photo)
 
     .photos__block.photos__block--last
-      each photo in photoList.slice(8)
+      each photo in photoList.slice(7)
         .photos__item
           picture
-            img(src=photo.src, srcset=photo.srcset)
+            img(src=photo.src, srcset=photo.srcset, alt="Фото отеля")
           +renderEditComponent(photo)
 
       .photos__item.photos__item--upload
@@ -52,28 +52,28 @@ mixin renderEditPhotos(photoList, cover)
           input(type="file")
           +icon("icon-file-photo", 50, 50)
 
-mixin renderPhotos(photoList)
-  .photos
+mixin renderPhotos(photoList, mod)
+  .photos(class=mod)
     .photos__wrapper
       .photos__block.photos__block--first
         picture
-          img(src=photoList[0].src, srcset=photoList[0].srcset)
+          img(src=photoList[0].src, srcset=photoList[0].srcset, alt="Фото отеля")
 
       .photos__block.photos__block--second
         .photos__block__wrapper
           each photo in photoList.slice(1, 4)
             .photos__item(class='photos__item--' + photo.mod)
               picture
-                img(src=photo.src, srcset=photo.srcset)
+                img(src=photo.src, srcset=photo.srcset, alt="Фото отеля")
         .photos__block__wrapper
           each photo in photoList.slice(4, 6)
             .photos__item(class='photos__item--' + photo.mod)
               picture
-                img(src=photo.src, srcset=photo.srcset)
+                img(src=photo.src, srcset=photo.srcset, alt="Фото отеля")
 
           if photoList[6]
             .photos__item(class='photos__item--' + photoList[6].mod)
               picture
-                img(src=photoList[6].src, srcset=photoList[6].srcset)
+                img(src=photoList[6].src, srcset=photoList[6].srcset, alt="Фото отеля")
               .photos__link-more-wrapper
                 a(href="#" data-modal="gallery")='+' + (photoList.length - 7)

@@ -5,6 +5,7 @@ block variables
   - var hasHeader = true
   - var hasFooter = true
   - var currentPage = "Buyers Guest List2"
+  - var hasUpButton = true
 
 block main
   include ../data/pages/admin-guests-d2
@@ -12,7 +13,8 @@ block main
   main.container.container--no-padding.container--admin
     .admin
       +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
-      +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
+      .hidden-sm
+        +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
       .admin__control-wrapper
         +renderAdminTabs(adminTabs)
       +renderHeadline2("Buyers Guest List")
