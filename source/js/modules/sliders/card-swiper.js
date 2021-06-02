@@ -1,5 +1,5 @@
 const cardSwiper = () => {
-  return new Swiper('.direction__slider--card', {
+  return new Swiper('.direction--slider-card', {
     spaceBetween: 0,
     slidesPerGroup: 1,
     loop: false,

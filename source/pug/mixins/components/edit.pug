@@ -27,4 +27,4 @@ mixin renderEditBlock(editingBlockList, buttons, editingBlockStatus)
 
     .edit__buttons(class=buttonModClass)
       each button in buttons.buttonList
-        button(class=button.theme + " btn " + button.mod, type=button.type)=button.text
+        button(class=button.theme + " btn ", type=button.type)=button.text

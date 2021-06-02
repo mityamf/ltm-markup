@@ -12,21 +12,19 @@ block main
 
   main
     +promo(promoBg.titleItem, promoBg.btnItem, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
-
-    .container
-      section.direction.direction__swiper.direction--exhibitors
-        .swiper-container.direction__swiper-block
-          +renderHeadline2(chooseEvent.title)
-          ul.direction__list.swiper-wrapper
-            each event in chooseEventCard
-              li.swiper-slide
-                +direction(event.titleItem, event.dataItem, event.statusItem, event.timeItem, event.classStatus)
-          .visible-sm
-            .swiper-pagination.direction__pagination
-      .direction__arrow.direction__arrow--right
-        +icon("arrow-right", "11", "19")
-      .direction__arrow.direction__arrow--left
-        +icon("arrow-left", "11", "19")
+    section.direction.direction--exhibitors.direction-swiper
+      .swiper-container.direction__swiper-block
+        h2.visually-hidden List of available destinations
+        ul.direction__list.swiper-wrapper
+          each event in chooseEventCard
+            li.swiper-slide
+              +direction(event.titleItem, event.dataItem, event.statusItem, event.timeItem, event.classStatus)
+        .visible-sm
+          .swiper-pagination.direction__pagination
+        .direction__arrow.direction__arrow--right
+          +icon("arrow-right", 11, 19)
+        .direction__arrow.direction__arrow--left
+          +icon("arrow-left", 11, 19)
 
     .container
 
@@ -36,10 +34,12 @@ block main
         +renderFilterButton(buttonFilter)
 
       .visible-sm
-        +renderMobileFilterButtons("Filters", "Clear all filters")
+        .filters
+          +renderMobileFilterButtons("Filters", "Clear all filters")
 
       .visible-sm
-        +renderMobileDropdownFilter(dropdownMobileFilter)
+        .filters
+          +renderMobileDropdownFilter(dropdownMobileFilter)
 
       .exhibitors
         ul.hotel-cards
