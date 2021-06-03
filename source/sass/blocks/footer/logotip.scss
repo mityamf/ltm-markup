@@ -43,6 +43,10 @@
       width: 75px;
     }
   }
+
+  @include viewport--sm {
+    padding: 0;
+  }
 }
 
 .logotip__item {
