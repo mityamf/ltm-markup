@@ -71,7 +71,7 @@
     text-align: left;
   }
 
-  &__row th {
+  &__row td {
     display: inline-block;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -432,7 +432,8 @@
       }
     }
 
-    th {
+    th,
+    td {
       padding-top: 6px;
       padding-bottom: 6px;
 
@@ -491,7 +492,8 @@
       margin-right: 0;
     }
 
-    th {
+    th,
+    td {
       padding-top: 8px;
       padding-bottom: 1px;
 

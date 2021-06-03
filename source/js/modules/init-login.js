@@ -1,6 +1,6 @@
 const initLogin = () => {
   const login = document.querySelector('.login');
-  const loginShowBtn = document.querySelector('.header__link--sigh-in')
+  const loginShowBtn = document.querySelector('.header__link--sign-in');
   const showPasswordBtn = document.querySelector('.login__show-password');
   const inputPassword = document.querySelector('.login__input-password');
   const form = document.querySelector('.login__form');

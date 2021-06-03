@@ -9,10 +9,19 @@ block variables
 block main
   include ../data/pages/lk-profile-mobile
 
-  main.container.lk
+  main.container.admin.admin--mobile
     +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
-    +renderLKParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, infoBlock)
     .admin__control-wrapper
       +renderAdminTabs(adminTabs)
+    .visible-sm
+      +renderHeadlineBig("Adventa Agency")
+    .info-block
+      .info-block__top-wrapper
+        .info-block__headline
+          +renderHeadline2(infoBlock.title)
+          a.info-block__link(href=infoBlock.link)=infoBlock.link
+      .info-block__text-wrapper
+        p=infoBlock.text
+      button.btn.btn--blue(type=infoBlock.buttonType)=infoBlock.buttonText
     +renderSupportContacts(contactsList)
 

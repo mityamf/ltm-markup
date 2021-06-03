@@ -12,16 +12,18 @@ block main
   main.container.container--no-padding.lk
     .admin
       +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates)
-      +renderLKParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, infoBlock)
+      .hidden-sm
+        +renderLKParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, infoBlock)
       .admin__control-wrapper
         +renderAdminTabs(adminTabs)
       +renderHeadline2("Список участников")
       +renderScheduleTabs(scheduleTabs)
 
-      .filters.filters--exhibitions
-        +renderAlphabetFilter(alphabetFilter)
-        +renderDropdownFilter(dropdownFilters)
-        +renderFilterButton(buttonFilter)
+      .hidden-sm
+        .filters.filters--exhibitions
+          +renderAlphabetFilter(alphabetFilter)
+          +renderDropdownFilter(dropdownFilters)
+          +renderFilterButton(buttonFilter)
 
       .visible-sm
         +renderMobileFilterButtons("Filters", "Clear all filters")

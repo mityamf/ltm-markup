@@ -1,3 +1,11 @@
+.partners-page {
+  padding-top: 29px;
+
+  @include viewport--sm {
+    padding-top: 21px;
+  }
+}
+
 .partners__block {
   border-top: 1px solid $color-blue;
   padding-top: 43px;

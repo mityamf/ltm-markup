@@ -1,0 +1,24 @@
+.top-link {
+  @include viewport--sm {
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    top: 111px;
+    left: 17px;
+    z-index: 100;
+
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-default-white;
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    svg {
+      margin-right: 5px;
+      fill: $color-default-white;
+    }
+  }
+}

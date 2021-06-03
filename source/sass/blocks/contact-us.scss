@@ -1,5 +1,6 @@
 .contact-us {
   margin-bottom: 77px;
+  padding-top: 29px;
 
   @include viewport--lg {
     margin-bottom: 18px;
@@ -7,6 +8,7 @@
 
   @include viewport--sm {
     margin-bottom: 31px;
+    padding-top: 21px;
   }
 }
 

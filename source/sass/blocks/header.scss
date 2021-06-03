@@ -62,19 +62,16 @@
     }
   }
 
-  &__main-right {
+  &__link--sign-in {
     display: flex;
     align-items: center;
     margin-left: auto;
-    margin-bottom: 10px;
     flex-shrink: 0;
 
     svg {
       margin-left: 5px;
-    }
-
-    span {
-      min-width: 50px;
+      width: 26px;
+      height: 30px;
     }
 
     @include viewport--sm {
@@ -95,9 +92,11 @@
     }
   }
 
-  &__top {
+  &__top-list {
     display: flex;
     justify-content: flex-end;
+    margin-top: 0;
+    margin-bottom: 0;
     margin-left: auto;
     min-height: 30px;
     list-style: none;
@@ -108,28 +107,28 @@
       margin-left: 3px;
     }
 
-    a {
-      color: $color-nobel;
-      font-size: 12px;
-      line-height: 20px;
-      font-weight: 600;
-      transition: color 0.3s ease;
-
-      &:hover,
-      &:active {
-        color: $color-gray-dark;
-
-        svg {
-          fill: $color-gray-dark;
-        }
+    li:last-child {
+      .header__top-link {
+        padding-right: 0;
       }
     }
 
-    svg {
-      fill: $color-gray;
-      transition: 0.3s ease;
-    }
+    button {
+      border: none;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
 
+      svg {
+        fill: currentColor;
+        width: 17px;
+        height: 17px;
+        transition: 0.3s ease;
+      }
+    }
+  }
+
+  &__top {
     @include viewport--sm {
       order: 2;
       display: none;
@@ -137,58 +136,33 @@
   }
 
   &__top-link {
+    display: inline-block;
+    color: $color-nobel;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+
     padding: 10px;
     padding-top: 8px;
     padding-bottom: 8px;
     padding-right: 8px;
 
-    &--rus {
-      padding-right: 0;
+    &:hover,
+    &:active {
+      color: $color-gray-dark;
+
+      svg {
+        fill: $color-gray-dark;
+      }
     }
   }
 
   &__logo {
     margin-right: auto;
-
-    svg {
-      width: 222px;
-      height: 83px;
-    }
-
-    @include viewport--lg {
-      svg {
-        width: 178px;
-        height: 66px;
-      }
-    }
   }
 
-  &__logo--desktop {
-    @include viewport--sm {
-      display: none;
-    }
-  }
-
-  &__logo--mobile {
-    display: none;
-
-    @include viewport--sm {
-      display: block;
-      position: absolute;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-
-      svg {
-        width: 53px;
-        height: 47px;
-        fill: $color-blue;
-      }
-    }
-  }
-
-  &__item--terms,
-  &__item--search {
+  &__item--desktop-tablet {
     @include viewport--sm {
       display: none;
     }
@@ -198,9 +172,34 @@
     display: flex;
   }
 
-  &__search-button {
-    display: flex;
-    align-items: center;
+  &__logo-img--desktop {
+    width: 222px;
+    height: 83px;
+
+    @include viewport--lg {
+      width: 178px;
+      height: 66px;
+    }
+
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  &__logo-img--mobile {
+    display: none;
+
+    @include viewport--sm {
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 53px;
+      height: 47px;
+      fill: $color-blue;
+    }
   }
 }
 
@@ -246,7 +245,7 @@
     overflow-y: scroll;
 
     .main-nav {
-      margin-top: 190px;
+      margin-top: 140px;
       margin-right: 0;
       margin-bottom: 6px;
     }
@@ -256,8 +255,12 @@
       margin-top: 0;
     }
 
-    .main-nav__list,
     .header__top {
+      display: block;
+    }
+
+    .main-nav__list,
+    .header__top-list {
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -270,18 +273,19 @@
       a {
         padding: 10px;
         padding-bottom: 12.5px;
+        padding-left: 0;
       }
     }
 
-    .header__top {
+    .header__top-list {
       margin-top: 35px;
       padding-bottom: 10px;
+      padding-left: 0;
       margin-bottom: 50px;
       height: auto;
       background-color: $color-blue;
 
       a {
-        display: inline-block;
         font-size: 16px;
         line-height: 21px;
 
@@ -300,17 +304,14 @@
       color: $color-default-white;
     }
 
-    svg {
-      fill: $color-default-white;
+    .header__logo {
+      top: 83px;
     }
 
-    .header__logo--mobile {
-      top: 83px;
-
-      svg {
-        width: 105px;
-        height: 92px;
-      }
+    .header__logo-img--mobile {
+      fill: $color-default-white;
+      width: 105px;
+      height: 92px;
     }
   }
 
@@ -320,7 +321,7 @@
     }
   }
 
-  .header__main-right {
+  .header__link--sign-in {
     margin-top: 16px;
 
     @include viewport--sm {

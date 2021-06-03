@@ -1,7 +1,7 @@
 const initSearch = () => {
   const ESC = 27;
   const searchElement = document.querySelector('.header__search');
-  const searchButton = document.querySelector('.header__search-button');
+  const searchButton = document.querySelector('.js-search-button');
 
   if (searchElement) {
     const searchInput = searchElement.querySelector('.search-input__input');
