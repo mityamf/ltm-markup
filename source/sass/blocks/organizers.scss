@@ -1,5 +1,6 @@
 .organizers {
   margin-bottom: 82px;
+  padding-top: 29px;
 
   @include viewport--lg {
     margin-bottom: 5px;
@@ -7,6 +8,7 @@
 
   @include viewport--md {
     margin-bottom: 30px;
+    padding-top: 21px;
   }
 }
 
