@@ -3004,119 +3004,125 @@
           </div>
           <div class="account__notifications">
             <h3 class="title title--h3 title--middle">Notifications</h3>
+            <div class="visible-sm">
+              <div class="account__mobile-wrapper"><span>Status</span><span>Theme</span><span>Date</span></div>
+            </div>
             <table class="notifications__table">
-              <tr class="notifications__row">
-                <th></th>
-                <th>Status</th>
-                <th>Theme</th>
-                <th>Message</th>
-                <th>Date</th>
-                <th>Time</th>
-                <th></th>
-              </tr>
-              <tr class="notifications__row notifications__row--new">
-                <td></td>
-                <td class="notifications__cell notifications__cell--icon">
-                  <svg width="22" height="22" aria-hidden="true">
-                    <use xlink:href="#icon-mail-new"></use>
-                  </svg>
-                </td>
-                <td class="notifications__cell notifications__cell--theme">
-                  <div class="notifications__data-wrapper">Information About You Account</div><a class="notifications__open-link" href="#" aria-label="Открыть письмо"></a>
-                </td>
-                <td class="notifications__cell notifications__cell--message">
-                  <div class="notifications__data-wrapper">Dear Exhibitor, you can edit photo in your company profile in LTM</div><a class="notifications__open-link" href="#" aria-label="Открыть письмо">
-                    <svg width="11" height="19" aria-hidden="true">
-                      <use xlink:href="#icon-mail-arrow"></use>
-                    </svg></a>
-                </td>
-                <td class="notifications__cell notifications__cell--date">22 Dec. 2019</td>
-                <td class="notifications__cell notifications__cell--time">18:57</td>
-                <td></td>
-              </tr>
-              <tr class="notifications__row notifications__row--new">
-                <td></td>
-                <td class="notifications__cell notifications__cell--icon">
-                  <svg width="22" height="22" aria-hidden="true">
-                    <use xlink:href="#icon-mail-new"></use>
-                  </svg>
-                </td>
-                <td class="notifications__cell notifications__cell--theme">
-                  <div class="notifications__data-wrapper">Information About You Account</div><a class="notifications__open-link" href="#" aria-label="Открыть письмо"></a>
-                </td>
-                <td class="notifications__cell notifications__cell--message">
-                  <div class="notifications__data-wrapper">Dear Exhibitor, you can edit photo in your company profile in LTM</div><a class="notifications__open-link" href="#" aria-label="Открыть письмо">
-                    <svg width="11" height="19" aria-hidden="true">
-                      <use xlink:href="#icon-mail-arrow"></use>
-                    </svg></a>
-                </td>
-                <td class="notifications__cell notifications__cell--date">22 Dec. 2019</td>
-                <td class="notifications__cell notifications__cell--time">18:57</td>
-                <td></td>
-              </tr>
-              <tr class="notifications__row notifications__row--opened">
-                <td></td>
-                <td class="notifications__cell notifications__cell--icon">
-                  <svg width="22" height="22" aria-hidden="true">
-                    <use xlink:href="#icon-mail-opened"></use>
-                  </svg>
-                </td>
-                <td class="notifications__cell notifications__cell--theme">
-                  <div class="notifications__data-wrapper">Information About You Account</div><a class="notifications__open-link" href="#" aria-label="Открыть письмо"></a>
-                </td>
-                <td class="notifications__cell notifications__cell--message">
-                  <div class="notifications__data-wrapper">Dear Exhibitor, you can edit photo in your company profile in LTM</div><a class="notifications__open-link" href="#" aria-label="Открыть письмо">
-                    <svg width="11" height="19" aria-hidden="true">
-                      <use xlink:href="#icon-mail-arrow"></use>
-                    </svg></a>
-                </td>
-                <td class="notifications__cell notifications__cell--date">23 Dec. 2019</td>
-                <td class="notifications__cell notifications__cell--time">13:40</td>
-                <td></td>
-              </tr>
-              <tr class="notifications__row notifications__row--new">
-                <td></td>
-                <td class="notifications__cell notifications__cell--icon">
-                  <svg width="22" height="22" aria-hidden="true">
-                    <use xlink:href="#icon-mail-new"></use>
-                  </svg>
-                </td>
-                <td class="notifications__cell notifications__cell--theme">
-                  <div class="notifications__data-wrapper">Information About You Account</div><a class="notifications__open-link" href="#" aria-label="Открыть письмо"></a>
-                </td>
-                <td class="notifications__cell notifications__cell--message">
-                  <div class="notifications__data-wrapper">Dear Exhibitor, you can edit photo in your company profile in LTM</div><a class="notifications__open-link" href="#" aria-label="Открыть письмо">
-                    <svg width="11" height="19" aria-hidden="true">
-                      <use xlink:href="#icon-mail-arrow"></use>
-                    </svg></a>
-                </td>
-                <td class="notifications__cell notifications__cell--date">22 Dec. 2019</td>
-                <td class="notifications__cell notifications__cell--time">18:57</td>
-                <td></td>
-              </tr>
-              <tr class="notifications__row notifications__row--new">
-                <td></td>
-                <td class="notifications__cell notifications__cell--icon">
-                  <svg width="22" height="22" aria-hidden="true">
-                    <use xlink:href="#icon-mail-new"></use>
-                  </svg>
-                </td>
-                <td class="notifications__cell notifications__cell--theme">
-                  <div class="notifications__data-wrapper">Information About You Account</div><a class="notifications__open-link" href="#" aria-label="Открыть письмо"></a>
-                </td>
-                <td class="notifications__cell notifications__cell--message">
-                  <div class="notifications__data-wrapper">Dear Exhibitor, you can edit photo in your company profile in LTM</div><a class="notifications__open-link" href="#" aria-label="Открыть письмо">
-                    <svg width="11" height="19" aria-hidden="true">
-                      <use xlink:href="#icon-mail-arrow"></use>
-                    </svg></a>
-                </td>
-                <td class="notifications__cell notifications__cell--date">22 Dec. 2019</td>
-                <td class="notifications__cell notifications__cell--time">18:57</td>
-                <td></td>
-              </tr>
+              <thead>
+                <tr class="notifications__row">
+                  <th class="notifications__cell notifications__cell--empty"></th>
+                  <th class="notifications__cell notifications__cell--icon">Status</th>
+                  <th class="notifications__cell notifications__cell--theme">Theme</th>
+                  <th class="notifications__cell notifications__cell--message">Message</th>
+                  <th class="notifications__cell notifications__cell--date">Date</th>
+                  <th class="notifications__cell notifications__cell--time">Time</th>
+                  <th class="notifications__cell notifications__cell--empty"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="notifications__row notifications__row--new">
+                  <td class="notifications__cell notifications__cell--empty"></td>
+                  <td class="notifications__cell notifications__cell--icon">
+                    <svg width="22" height="22" aria-hidden="true">
+                      <use xlink:href="#icon-mail-new"></use>
+                    </svg>
+                  </td>
+                  <td class="notifications__cell notifications__cell--theme">
+                    <div class="notifications__data-wrapper">Information About You Account</div><a class="notifications__open-link" href="#" aria-label="Открыть письмо"></a>
+                  </td>
+                  <td class="notifications__cell notifications__cell--message">
+                    <div class="notifications__data-wrapper">Dear Exhibitor, you can edit photo in your company profile in LTM</div><a class="notifications__open-link" href="#" aria-label="Открыть письмо">
+                      <svg width="11" height="19" aria-hidden="true">
+                        <use xlink:href="#icon-mail-arrow"></use>
+                      </svg></a>
+                  </td>
+                  <td class="notifications__cell notifications__cell--date">22 Dec. 2019</td>
+                  <td class="notifications__cell notifications__cell--time">18:57</td>
+                  <td class="notifications__cell notifications__cell--empty"></td>
+                </tr>
+                <tr class="notifications__row notifications__row--new">
+                  <td class="notifications__cell notifications__cell--empty"></td>
+                  <td class="notifications__cell notifications__cell--icon">
+                    <svg width="22" height="22" aria-hidden="true">
+                      <use xlink:href="#icon-mail-new"></use>
+                    </svg>
+                  </td>
+                  <td class="notifications__cell notifications__cell--theme">
+                    <div class="notifications__data-wrapper">Information About You Account</div><a class="notifications__open-link" href="#" aria-label="Открыть письмо"></a>
+                  </td>
+                  <td class="notifications__cell notifications__cell--message">
+                    <div class="notifications__data-wrapper">Dear Exhibitor, you can edit photo in your company profile in LTM</div><a class="notifications__open-link" href="#" aria-label="Открыть письмо">
+                      <svg width="11" height="19" aria-hidden="true">
+                        <use xlink:href="#icon-mail-arrow"></use>
+                      </svg></a>
+                  </td>
+                  <td class="notifications__cell notifications__cell--date">22 Dec. 2019</td>
+                  <td class="notifications__cell notifications__cell--time">18:57</td>
+                  <td class="notifications__cell notifications__cell--empty"></td>
+                </tr>
+                <tr class="notifications__row notifications__row--opened">
+                  <td class="notifications__cell notifications__cell--empty"></td>
+                  <td class="notifications__cell notifications__cell--icon">
+                    <svg width="22" height="22" aria-hidden="true">
+                      <use xlink:href="#icon-mail-opened"></use>
+                    </svg>
+                  </td>
+                  <td class="notifications__cell notifications__cell--theme">
+                    <div class="notifications__data-wrapper">Information About You Account</div><a class="notifications__open-link" href="#" aria-label="Открыть письмо"></a>
+                  </td>
+                  <td class="notifications__cell notifications__cell--message">
+                    <div class="notifications__data-wrapper">Dear Exhibitor, you can edit photo in your company profile in LTM</div><a class="notifications__open-link" href="#" aria-label="Открыть письмо">
+                      <svg width="11" height="19" aria-hidden="true">
+                        <use xlink:href="#icon-mail-arrow"></use>
+                      </svg></a>
+                  </td>
+                  <td class="notifications__cell notifications__cell--date">23 Dec. 2019</td>
+                  <td class="notifications__cell notifications__cell--time">13:40</td>
+                  <td class="notifications__cell notifications__cell--empty"></td>
+                </tr>
+                <tr class="notifications__row notifications__row--new">
+                  <td class="notifications__cell notifications__cell--empty"></td>
+                  <td class="notifications__cell notifications__cell--icon">
+                    <svg width="22" height="22" aria-hidden="true">
+                      <use xlink:href="#icon-mail-new"></use>
+                    </svg>
+                  </td>
+                  <td class="notifications__cell notifications__cell--theme">
+                    <div class="notifications__data-wrapper">Information About You Account</div><a class="notifications__open-link" href="#" aria-label="Открыть письмо"></a>
+                  </td>
+                  <td class="notifications__cell notifications__cell--message">
+                    <div class="notifications__data-wrapper">Dear Exhibitor, you can edit photo in your company profile in LTM</div><a class="notifications__open-link" href="#" aria-label="Открыть письмо">
+                      <svg width="11" height="19" aria-hidden="true">
+                        <use xlink:href="#icon-mail-arrow"></use>
+                      </svg></a>
+                  </td>
+                  <td class="notifications__cell notifications__cell--date">22 Dec. 2019</td>
+                  <td class="notifications__cell notifications__cell--time">18:57</td>
+                  <td class="notifications__cell notifications__cell--empty"></td>
+                </tr>
+                <tr class="notifications__row notifications__row--new">
+                  <td class="notifications__cell notifications__cell--empty"></td>
+                  <td class="notifications__cell notifications__cell--icon">
+                    <svg width="22" height="22" aria-hidden="true">
+                      <use xlink:href="#icon-mail-new"></use>
+                    </svg>
+                  </td>
+                  <td class="notifications__cell notifications__cell--theme">
+                    <div class="notifications__data-wrapper">Information About You Account</div><a class="notifications__open-link" href="#" aria-label="Открыть письмо"></a>
+                  </td>
+                  <td class="notifications__cell notifications__cell--message">
+                    <div class="notifications__data-wrapper">Dear Exhibitor, you can edit photo in your company profile in LTM</div><a class="notifications__open-link" href="#" aria-label="Открыть письмо">
+                      <svg width="11" height="19" aria-hidden="true">
+                        <use xlink:href="#icon-mail-arrow"></use>
+                      </svg></a>
+                  </td>
+                  <td class="notifications__cell notifications__cell--date">22 Dec. 2019</td>
+                  <td class="notifications__cell notifications__cell--time">18:57</td>
+                  <td class="notifications__cell notifications__cell--empty"></td>
+                </tr>
+              </tbody>
             </table>
-            <button class="btn btn--white btn--more btn--desktop" type="button">All Notifications</button>
-            <button class="btn btn--white btn--more btn--mobile" type="button">More</button>
+            <button class="btn btn--white btn--more btn--desktop" type="button">All Messages</button>
           </div>
         </div>
         <div class="support-contacts">

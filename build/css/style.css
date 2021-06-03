@@ -7525,85 +7525,6 @@ p {
       text-align: center;
       padding-bottom: 11px; } }
 
-@media (max-width: 1200px) {
-  .account__notifications {
-    width: 100%;
-    padding-top: 28px; } }
-
-.account__notifications .title--h3 {
-  padding-left: 0;
-  padding-right: 17px;
-  margin-bottom: 0; }
-  @media (max-width: 767px) {
-    .account__notifications .title--h3 {
-      padding-left: 17px;
-      padding-right: 17px; } }
-
-.account__notifications .notifications--time {
-  width: 60px; }
-
-.account__notifications .btn--mobile {
-  display: none; }
-  @media (max-width: 767px) {
-    .account__notifications .btn--mobile {
-      display: block; } }
-
-.account__notifications .btn--desktop {
-  display: block;
-  padding: 15px;
-  width: 222px; }
-  @media (max-width: 1439px) {
-    .account__notifications .btn--desktop {
-      width: 222px; } }
-  @media (max-width: 767px) {
-    .account__notifications .btn--desktop {
-      display: none; } }
-
-@media (max-width: 767px) {
-  .account__notifications .notifications__row:first-child {
-    display: block;
-    padding: 0; } }
-
-@media (max-width: 767px) {
-  .account__notifications .notifications__table {
-    margin-bottom: 20px; } }
-
-@media (max-width: 767px) {
-  .account__notifications .btn--more {
-    padding: 14px 30px; } }
-
-.account__notifications th {
-  padding: 5px 0 5px 0; }
-  @media (max-width: 1439px) {
-    .account__notifications th {
-      white-space: nowrap;
-      overflow: hidden;
-      max-width: 269px;
-      padding: 5px 8px; } }
-
-.account__notifications th:first-child {
-  width: 32px; }
-  @media (max-width: 1439px) {
-    .account__notifications th:first-child {
-      display: block; } }
-
-.account__notifications tr:nth-child(even) {
-  background-color: #d6d6d6; }
-
-@media (max-width: 767px) {
-  .account__notifications .notifications--time,
-  .account__notifications .notifications--message,
-  .account__notifications .notifications--icon {
-    display: none; } }
-
-@media (max-width: 767px) {
-  .account__notifications .notifications--theme {
-    padding-left: 20px; } }
-
-@media (max-width: 767px) {
-  .account__notifications .notifications__row {
-    padding: 0 17px 0 17px; } }
-
 .account__event-block .direction {
   padding: 0; }
 
@@ -7616,6 +7537,87 @@ p {
   .container--no-padding .account__event-block {
     padding-left: 17px;
     padding-right: 17px; } }
+
+.account__notifications {
+  width: 100%; }
+  .account__notifications .notifications__table {
+    margin-top: 6px;
+    table-layout: fixed; }
+    @media (max-width: 767px) {
+      .account__notifications .notifications__table {
+        margin-top: 4px;
+        margin-bottom: 22px; } }
+  @media (max-width: 767px) {
+    .account__notifications .account__mobile-wrapper {
+      padding: 16px 39px 0 39px; } }
+  @media (max-width: 767px) {
+    .account__notifications .account__mobile-wrapper span {
+      font-size: 12px;
+      line-height: 20px;
+      color: #9f9f9f; } }
+  @media (max-width: 767px) {
+    .account__notifications .account__mobile-wrapper span:first-child {
+      margin-right: 10%; } }
+  .account__notifications tr:nth-child(even) {
+    background-color: #d6d6d6; }
+  .account__notifications tr {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media (max-width: 767px) {
+      .account__notifications tr {
+        padding: 6px 35px 10px; } }
+    @media (max-width: 767px) {
+      .account__notifications tr::before {
+        top: 14px;
+        left: 16px; } }
+  .account__notifications .notifications__cell--date {
+    top: 11px;
+    right: 21px;
+    letter-spacing: 0.4px; }
+  .account__notifications .notifications__cell--icon {
+    width: 80px; }
+    @media (max-width: 1439px) {
+      .account__notifications .notifications__cell--icon {
+        width: 57px; } }
+  .account__notifications .notifications__cell--message {
+    width: 48%;
+    padding-left: 13px; }
+    @media (max-width: 1550px) {
+      .account__notifications .notifications__cell--message {
+        width: 38%; } }
+    @media (max-width: 767px) {
+      .account__notifications .notifications__cell--message {
+        display: none; } }
+  .account__notifications td {
+    height: 38px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media (max-width: 767px) {
+      .account__notifications td {
+        height: auto; } }
+  @media (max-width: 767px) {
+    .account__notifications .notifications__cell--empty {
+      display: none; } }
+  .account__notifications .notifications__data-wrapper {
+    letter-spacing: 0.1px;
+    overflow: hidden;
+    white-space: nowrap; }
+    @media (max-width: 767px) {
+      .account__notifications .notifications__data-wrapper {
+        font-size: 12px;
+        line-height: 20px; } }
+  .account__notifications .title--h3 {
+    padding-left: 0;
+    padding-right: 17px;
+    margin-bottom: 0; }
+    @media (max-width: 767px) {
+      .account__notifications .title--h3 {
+        padding-left: 17px;
+        padding-right: 17px; } }
+  .account__notifications .btn--more {
+    padding: 13px 30px; }
 
 .modal-gallery__slider {
   width: 100%;
