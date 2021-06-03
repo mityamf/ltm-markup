@@ -1,6 +1,9 @@
 mixin renderAdminHeadline(eventName, eventPlace, dates, backLink)
   .admin-headline
-    +renderHeadlineWithBackButton(eventName, backLink)
+    .top-wrapper.top-wrapper--mobile
+      h2.title.title--h2=eventName
+      .hidden-sm
+        +renderBackButton(backLink)
     span.admin-headline__place=eventPlace
     time(datetime="dates")=dates
 

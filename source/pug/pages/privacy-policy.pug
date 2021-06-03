@@ -8,6 +8,7 @@ block variables
   - var hasHeader = true
   - var hasFooter = true
   - var currentPage = ""
+  - var hasUpButton = true
 
 block main
 
@@ -15,7 +16,10 @@ block main
   main#top
     .container
       .privacy-policy
-        +renderTitleHeadlineWithBackButton(privacyPolicy.title, "main.html")
+        .top-wrapper.top-wrapper--mobile
+          h2.title.title--h2=privacyPolicy.title
+          .hidden-sm
+            +renderBackButton("main.html")
         time.privacy-policy__date(datetime=privacyPolicy.datetime)= privacyPolicy.date
         .privacy-policy__wrapper
           p= privacyPolicy.text
@@ -25,3 +29,6 @@ block main
                 h3= item.question
                 each paragraph in item.answer
                   p= paragraph
+        .visible-sm
+          .privacy-policy__button-wrapper
+            +renderUpButton('up-button--mobile')
