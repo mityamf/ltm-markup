@@ -8481,7 +8481,17 @@ p {
   .support-contacts .direction {
     padding: 0; }
   .support-contacts .swiper-pagination {
-    bottom: -4px; }
+    bottom: -4px;
+    visibility: hidden; }
+    @media (max-width: 767px) {
+      .support-contacts .swiper-pagination {
+        display: block;
+        visibility: visible;
+        margin: 0 auto; } }
+  @media (max-width: 767px) {
+    .support-contacts .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px; } }
   .support-contacts .direction__arrow--left,
   .support-contacts .direction__arrow--right {
     top: 19%; }
