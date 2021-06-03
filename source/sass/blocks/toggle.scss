@@ -44,24 +44,24 @@
   }
 }
 
-span {
+.toggle__section {
   font-weight: 600;
   letter-spacing: 0.2px;
 }
 
-.toggle__photo {
+.toggle__section--photo {
   color: $color-blue;
 }
 
-.toggle--checked .toggle__photo {
+.toggle--checked .toggle__section--photo {
   color: $color-gray-dark;
 }
 
-.toggle__video {
+.toggle__section--video {
   color: $color-gray-dark;
 }
 
-.toggle--checked .toggle__video {
+.toggle--checked .toggle__section--video {
   color: $color-blue;
 }
 
