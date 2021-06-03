@@ -1,5 +1,5 @@
 mixin search(inputValue)
-  .header__search.header__search--hidden.container
+  .header__search.header__search--hidden
     form(action="/" class='search-input' autocomplete="off" + (attributes.class ? ' ' + attributes.class : ''))
       button.search-input__button(type="submit") Поиск
         +icon("icon-search", 33, 26)

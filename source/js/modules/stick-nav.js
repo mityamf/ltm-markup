@@ -1,28 +1,38 @@
-const topBar = document.querySelector('.header__top');
-const header = document.querySelector('header');
-
 const stickNav = () => {
 
-  let scrollPos = window.pageYOffset;
+  const header = document.querySelector('header');
 
-  const getTopBarHeight = () => topBar.offsetHeight;
+  if (header) {
 
-  const scroll = () => {
+    const topBar = header.querySelector('.header__top');
+    let breakpointWidth = 767;
 
-    let st = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollPos = window.pageYOffset;
 
-    if (st > scrollPos) {
-      header.style.transform = 'translateY(-' + getTopBarHeight() + 'px)';
-    } else {
-      header.style.transform = 'translateY(0)';
-    }
-    scrollPos = st <= 0 ? 0 : st;
-  };
+    const getTopBarHeight = () => topBar.offsetHeight;
 
-  getTopBarHeight();
-  window.addEventListener('resize', getTopBarHeight);
-  window.addEventListener('resize', scroll);
-  window.addEventListener('scroll', scroll);
+    const scroll = () => {
+
+      let st = window.pageYOffset || document.documentElement.scrollTop;
+
+      header.style.transform = (st > scrollPos) ? `translateY(-${getTopBarHeight()}px)` : 'translateY(0)';
+
+      scrollPos = st <= 0 ? 0 : st;
+    };
+
+    const checkScreenWidth = () => {
+      let screenWidth = window.innerWidth;
+
+      if (screenWidth > breakpointWidth) {
+        getTopBarHeight();
+      }
+    };
+
+    getTopBarHeight();
+    window.addEventListener('resize', checkScreenWidth);
+    window.addEventListener('resize', scroll);
+    window.addEventListener('scroll', scroll);
+  }
 };
 
 export {stickNav};

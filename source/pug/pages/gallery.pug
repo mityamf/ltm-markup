@@ -31,10 +31,10 @@ block main
     section.gallery.container.container--no-padding
       h1.visually-hidden Фото и видео
       .toggle
-        span.toggle__photo Photo
+        span.toggle__section.toggle__section--photo Photo
         input(type="checkbox" id="toggle-button" class="toggle__button")
         label(for="toggle-button" class="visually-hidden") Toggle Button
-        span.toggle__video Video
+        span.toggle__section.toggle__section--video Video
       .gallery__section.gallery__section--photo.photo
         h2.title.title--h2.title--sm-pd  Photo
         +photo-block
