@@ -16,9 +16,11 @@ block main
       .swiper-container.direction__swiper-block
         h2.title.title--h2 Choose the Event:
         ul.direction__list.swiper-wrapper
-          each event in chooseEventCard
+          each event, i in chooseEventCard
             li.swiper-slide
-              +direction(event.titleItem, event.dataItem, event.statusItem, event.timeItem, event.classStatus)
+              input(type="radio" id='choose-event--' + i, name="event-radio")
+              label.direction__radio(for='choose-event--' + i)
+                +direction(event.titleItem, event.dataItem, event.statusItem, event.timeItem, event.classStatus)
         .visible-sm
           .swiper-pagination.direction__pagination
         .direction__arrow.direction__arrow--right

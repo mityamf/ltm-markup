@@ -2735,7 +2735,8 @@ p {
   line-height: 14px; }
 
 .direction--exhibitors .direction__item {
-  padding: 8px 0; }
+  padding: 8px 0;
+  border: 1px solid transparent; }
   @media (max-width: 767px) {
     .direction--exhibitors .direction__item {
       -webkit-box-align: center;
@@ -2745,8 +2746,7 @@ p {
 
 .direction--exhibitors .swiper-slide {
   width: 236px;
-  margin-right: 10px;
-  border: 1px solid transparent; }
+  margin-right: 10px; }
   @media (max-width: 1439px) {
     .direction--exhibitors .swiper-slide {
       width: 274px; } }
@@ -2756,7 +2756,16 @@ p {
       margin: 0;
       width: 100%; } }
 
-.direction--exhibitors .swiper-slide-active {
+.direction--exhibitors input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  visibility: hidden; }
+
+.direction--exhibitors input:checked ~ .direction__radio .direction__item {
   border-color: #0098c1; }
 
 .direction--exhibitors .direction__arrow--right {
