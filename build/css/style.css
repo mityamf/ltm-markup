@@ -7236,13 +7236,27 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 7px 0 30px;
+  padding: 11px 0 30px;
   clear: both; }
   @media (max-width: 767px) {
     .account-hotel-info {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
       margin-top: -26px; } }
+  .account-hotel-info__link-hotel {
+    margin-bottom: 7px;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.8px;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease; }
+    @media (max-width: 767px) {
+      .account-hotel-info__link-hotel {
+        display: none; } }
+    .account-hotel-info__link-hotel:hover, .account-hotel-info__link-hotel:focus {
+      opacity: 0.7; }
+    .account-hotel-info__link-hotel:active {
+      opacity: 0.5; }
   .account-hotel-info p {
     letter-spacing: 0.1px; }
   .account-hotel-info p:first-of-type {
@@ -7266,7 +7280,8 @@ p {
         width: 100%; } }
     @media (max-width: 1439px) {
       .account-hotel-info__description {
-        padding-top: 10px; } }
+        padding-top: 3px;
+        max-width: 652px; } }
   .account-hotel-info__link-more {
     text-align: right;
     -webkit-transition: opacity 0.3s ease;
@@ -7277,7 +7292,7 @@ p {
       opacity: 0.5; }
     @media (max-width: 1439px) {
       .account-hotel-info__link-more {
-        margin-right: 90px;
+        margin-right: 0;
         margin-top: 15px; } }
     @media (max-width: 767px) {
       .account-hotel-info__link-more {
@@ -7298,7 +7313,7 @@ p {
         -webkit-box-pack: normal;
             -ms-flex-pack: normal;
                 justify-content: normal;
-        padding-top: 15px; } }
+        padding-top: 7px; } }
     @media (max-width: 767px) {
       .account-hotel-info__interactive {
         display: block;
@@ -7344,7 +7359,11 @@ p {
   transition: opacity 0.3s ease; }
   @media (max-width: 767px) {
     .account__link-hotel {
-      display: none; } }
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 0;
+      font-size: 20px;
+      line-height: 24px; } }
   .account__link-hotel:hover, .account__link-hotel:focus {
     opacity: 0.7; }
   .account__link-hotel:active {
@@ -7495,7 +7514,8 @@ p {
     .account__admin {
       width: 100%;
       margin: 0;
-      padding: 0 0 6px 0; } }
+      padding: 0 0 32px;
+      border-bottom: 1px solid #0098c1; } }
 
 .account__admin img {
   margin-right: 15px;
@@ -7575,10 +7595,13 @@ p {
 
 .account__notifications {
   width: 100%; }
+  @media (max-width: 767px) {
+    .account__notifications {
+      padding: 26px 0 0 0; } }
   .account__notifications .notifications {
     padding-bottom: 0; }
   .account__notifications .notifications__table {
-    margin-top: 6px;
+    margin-top: 0;
     table-layout: fixed; }
     @media (max-width: 767px) {
       .account__notifications .notifications__table {
@@ -7595,6 +7618,9 @@ p {
   @media (max-width: 767px) {
     .account__notifications .account__mobile-wrapper span:first-child {
       margin-right: 10%; } }
+  @media (max-width: 767px) {
+    .account__notifications .account__mobile-wrapper span:last-child {
+      float: right; } }
   .account__notifications tr:nth-child(even) {
     background-color: #d6d6d6; }
   .account__notifications tr {
@@ -7603,11 +7629,22 @@ p {
             align-items: center; }
     @media (max-width: 767px) {
       .account__notifications tr {
-        padding: 6px 35px 10px; } }
+        padding: 6px 35px 7px; } }
     @media (max-width: 767px) {
       .account__notifications tr::before {
         top: 14px;
         left: 16px; } }
+  .account__notifications .notifications td:first-child,
+  .account__notifications .notifications td:last-child,
+  .account__notifications .notifications th:first-child,
+  .account__notifications .notifications th:last-child {
+    width: 38px; }
+    @media (max-width: 1439px) {
+      .account__notifications .notifications td:first-child,
+      .account__notifications .notifications td:last-child,
+      .account__notifications .notifications th:first-child,
+      .account__notifications .notifications th:last-child {
+        width: 30px; } }
   .account__notifications .notifications__cell--date {
     top: 11px;
     right: 21px;
@@ -7619,13 +7656,19 @@ p {
         width: 57px; } }
   .account__notifications .notifications__cell--message {
     width: 48%;
-    padding-left: 13px; }
+    padding-left: 6px; }
     @media (max-width: 1550px) {
       .account__notifications .notifications__cell--message {
         width: 38%; } }
+    @media (max-width: 1439px) {
+      .account__notifications .notifications__cell--message {
+        padding-left: 14px; } }
     @media (max-width: 767px) {
       .account__notifications .notifications__cell--message {
         display: none; } }
+  .account__notifications thead .notifications__cell--message {
+    font-size: 12px;
+    line-height: 20px; }
   .account__notifications td {
     height: 38px;
     -webkit-box-align: center;
@@ -7976,7 +8019,7 @@ p {
   @media (max-width: 767px) {
     .photos-slider {
       display: block;
-      padding: 24px 0 0 0; } }
+      padding: 29px 0 0; } }
   .photos-slider__photo-list {
     display: -webkit-box;
     display: -ms-flexbox;

@@ -3,17 +3,18 @@ mixin renderEventsList(title, subtitle, hotelList)
     h2.title.title--h2=title
     h3.title.title--h3=subtitle
     .account__event-wrapper
-      div.direction.container.swiper-container.direction--slider-event
-        ul.account__event-list.direction-list.swiper-wrapper
-          each hotel in hotelList
-            li.account__event(class='account__event--' + hotel.status).swiper-slide
-              h4.title.title--h4=hotel.title
-              span.account__event-text=hotel.text
-              span.account__event-date=hotel.date
-              span.account__event-status=hotel.statusText
-                +icon("icon-event-" + hotel.status, 22, 22)
-              span.account__event-description=hotel.statusDescription
-              button.btn.btn--white(type="button")=hotel.buttonText
+      div.direction.container
+        .swiper-container.direction__slider-event
+          ul.account__event-list.direction-list.swiper-wrapper
+            each hotel in hotelList
+              li.account__event(class='account__event--' + hotel.status).swiper-slide
+                h4.title.title--h4=hotel.title
+                span.account__event-text=hotel.text
+                span.account__event-date=hotel.date
+                span.account__event-status=hotel.statusText
+                  +icon("icon-event-" + hotel.status, 22, 22)
+                span.account__event-description=hotel.statusDescription
+                button.btn.btn--white(type="button")=hotel.buttonText
         .direction__arrow.direction__arrow--right
           +icon("arrow-right", 11, 19)
         .direction__arrow.direction__arrow--left

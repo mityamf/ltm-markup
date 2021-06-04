@@ -1,12 +1,16 @@
 .account__notifications {
   width: 100%;
 
+  @include viewport--sm {
+    padding: 26px 0 0 0;
+  }
+
   .notifications {
     padding-bottom: 0;
   }
 
   .notifications__table {
-    margin-top: 6px;
+    margin-top: 0;
     table-layout: fixed;
 
     @include viewport--sm {
@@ -35,6 +39,12 @@
     }
   }
 
+  .account__mobile-wrapper span:last-child {
+    @include viewport--sm {
+      float: right;
+    }
+  }
+
   tr:nth-child(even) {
     background-color: $color-gray-light;
   }
@@ -43,7 +53,7 @@
     align-items: center;
 
     @include viewport--sm {
-      padding: 6px 35px 10px;
+      padding: 6px 35px 7px;
     }
 
     &::before {
@@ -51,6 +61,17 @@
         top: 14px;
         left: 16px;
       }
+    }
+  }
+
+  .notifications td:first-child,
+  .notifications td:last-child,
+  .notifications th:first-child,
+  .notifications th:last-child {
+    width: 38px;
+
+    @include viewport--lg {
+      width: 30px;
     }
   }
 
@@ -70,15 +91,24 @@
 
   .notifications__cell--message {
     width: 48%;
-    padding-left: 13px;
+    padding-left: 6px;
 
     @media (max-width: 1550px) {
       width: 38%;
     }
 
+    @include viewport--lg {
+      padding-left: 14px;
+    }
+
     @include viewport--sm {
       display: none;
     }
+  }
+
+  thead .notifications__cell--message {
+    font-size: 12px;
+    line-height: 20px;
   }
 
   td {
