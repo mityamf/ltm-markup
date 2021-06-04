@@ -151,7 +151,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @include viewport--sm {
+    @include viewport--md {
       padding-top: 10px;
     }
   }
@@ -184,7 +184,7 @@
       margin: 0 16px 24px auto;
     }
 
-    @include viewport--sm {
+    @include viewport--md {
       display: none;
     }
   }
