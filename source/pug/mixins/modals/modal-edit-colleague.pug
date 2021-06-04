@@ -1,0 +1,22 @@
+mixin modalEditColleague()
+  .edit-colleague
+    +renderHeadline2("Add/edit colleague")
+      .edit-colleague__photo-column
+        img(src="", width=103, height=103)
+      .edit-colleague__content-column
+        form(action="#" method="POST").edit-colleague__form
+          each item in formList
+            if item.type === 'text'
+              label(for=item.id)
+                input(placeholder=item.placeholder, id=item.id, name=item.name, type=item.type)
+
+            if item.type === 'select'
+
+
+            if item.type === 'textarea'
+              label
+                textarea(placeholder=item.placeholder)
+
+          .edit-colleague__buttons
+            button.btn.btn--white(type="reset")="Cancel"
+            button.btn.btn--white(type="reset")="Save"
