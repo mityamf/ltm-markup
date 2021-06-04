@@ -8,9 +8,10 @@ block variables
 block main
   include ../data/pages/account
 
-  main.container.container--no-padding
+  main.container.container--no-padding.account
     .hotel-headline.hotel-headline--account-page
-      a.account-hotel-info__link-hotel(href=accountHotelInfo.link)=accountHotelInfo.link
+      .visible-sm
+        a.account__link-hotel(href=accountHotelInfo.link)=accountHotelInfo.link
       .hotel-headline__wrapper
         +renderHeadline2(hotelHeadline.title)
         span=hotelHeadline.note
