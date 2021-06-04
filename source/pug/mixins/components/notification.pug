@@ -6,38 +6,38 @@ mixin renderNotifications(notifications)
         span="Status"
         span="Theme"
         span="Date"
+    .notifications
+      table.notifications__table
+        thead
+          tr.notifications__row
+            th.notifications__cell.notifications__cell--empty
+            th.notifications__cell.notifications__cell--icon="Status"
+            th.notifications__cell.notifications__cell--theme="Theme"
+            th.notifications__cell.notifications__cell--message="Message"
+            th.notifications__cell.notifications__cell--date="Date"
+            th.notifications__cell.notifications__cell--time="Time"
+            th.notifications__cell.notifications__cell--empty
 
-    table.notifications__table
-      thead
-        tr.notifications__row
-          th.notifications__cell.notifications__cell--empty
-          th.notifications__cell.notifications__cell--icon="Status"
-          th.notifications__cell.notifications__cell--theme="Theme"
-          th.notifications__cell.notifications__cell--message="Message"
-          th.notifications__cell.notifications__cell--date="Date"
-          th.notifications__cell.notifications__cell--time="Time"
-          th.notifications__cell.notifications__cell--empty
+        tbody
+          each notification in notifications
+            - var mod = "notifications__row--opened"
+            if notification.status === "new"
+              - var mod = "notifications__row--new"
 
-      tbody
-        each notification in notifications
-          - var mod = "notifications__row--opened"
-          if notification.status === "new"
-            - var mod = "notifications__row--new"
-
-          tr.notifications__row(class=mod)
-            td.notifications__cell.notifications__cell--empty
-            td.notifications__cell.notifications__cell--icon
-              if notification.status === "new"
-                +icon("icon-mail-new", 22, 22)
-              if notification.status === "opened"
-                +icon("icon-mail-opened", 22, 22)
-            td.notifications__cell.notifications__cell--theme
-              .notifications__data-wrapper=notification.theme
-              a.notifications__open-link(href=notification.link, aria-label="Открыть письмо")
-            td.notifications__cell.notifications__cell--message
-              .notifications__data-wrapper=notification.message
-              a.notifications__open-link(href=notification.link, aria-label="Открыть письмо")
-                +icon("icon-mail-arrow", 11, 19)
-            td.notifications__cell.notifications__cell--date=notification.date
-            td.notifications__cell.notifications__cell--time=notification.time
-            td.notifications__cell.notifications__cell--empty
+            tr.notifications__row(class=mod)
+              td.notifications__cell.notifications__cell--empty
+              td.notifications__cell.notifications__cell--icon
+                if notification.status === "new"
+                  +icon("icon-mail-new", 22, 22)
+                if notification.status === "opened"
+                  +icon("icon-mail-opened", 22, 22)
+              td.notifications__cell.notifications__cell--theme
+                .notifications__data-wrapper=notification.theme
+                a.notifications__open-link(href=notification.link, aria-label="Открыть письмо")
+              td.notifications__cell.notifications__cell--message
+                .notifications__data-wrapper=notification.message
+                a.notifications__open-link(href=notification.link, aria-label="Открыть письмо")
+                  +icon("icon-mail-arrow", 11, 19)
+              td.notifications__cell.notifications__cell--date=notification.date
+              td.notifications__cell.notifications__cell--time=notification.time
+              td.notifications__cell.notifications__cell--empty

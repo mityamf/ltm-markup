@@ -78,29 +78,6 @@
     }
   }
 
-  &__link-hotel {
-    margin-bottom: 7px;
-
-    font-size: 24px;
-    line-height: 29px;
-    letter-spacing: 0.8px;
-
-    @include viewport--sm {
-      display: none;
-    }
-
-    transition: opacity $default-transition-settings;
-
-    &:hover,
-    &:focus {
-      opacity: 0.7;
-    }
-
-    &:active {
-      opacity: 0.5;
-    }
-  }
-
   .btn--more {
     margin: 0 0 0 auto;
     padding: 13px 28px;

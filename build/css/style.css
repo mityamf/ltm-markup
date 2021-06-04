@@ -4695,7 +4695,7 @@ p {
             align-items: center;
     width: 100%;
     min-height: 100%;
-    padding: 60px 40px; }
+    padding: 10px 40px; }
     @media (max-width: 767px) {
       .modal__wrapper {
         padding: 60px 16px; } }
@@ -7304,20 +7304,6 @@ p {
         display: block;
         margin: 0 auto;
         padding-top: 0; } }
-  .account-hotel-info__link-hotel {
-    margin-bottom: 7px;
-    font-size: 24px;
-    line-height: 29px;
-    letter-spacing: 0.8px;
-    -webkit-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease; }
-    @media (max-width: 767px) {
-      .account-hotel-info__link-hotel {
-        display: none; } }
-    .account-hotel-info__link-hotel:hover, .account-hotel-info__link-hotel:focus {
-      opacity: 0.7; }
-    .account-hotel-info__link-hotel:active {
-      opacity: 0.5; }
   .account-hotel-info .btn--more {
     margin: 0 0 0 auto;
     padding: 13px 28px;
@@ -7349,6 +7335,21 @@ p {
       padding-top: 32px;
       padding-bottom: 61px; } }
 
+.account__link-hotel {
+  margin-bottom: 7px;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.8px;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; }
+  @media (max-width: 767px) {
+    .account__link-hotel {
+      display: none; } }
+  .account__link-hotel:hover, .account__link-hotel:focus {
+    opacity: 0.7; }
+  .account__link-hotel:active {
+    opacity: 0.5; }
+
 .account__event-block > .title--h2 {
   margin-bottom: 1px; }
   @media (max-width: 767px) {
@@ -7375,7 +7376,18 @@ p {
 
 .account__event {
   margin-right: 4px;
-  width: 341px; }
+  width: 341px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: auto; }
   @media (max-width: 767px) {
     .account__event {
       margin-right: 0; } }
@@ -7430,11 +7442,22 @@ p {
     .account__event-status {
       margin-top: 11px; } }
 
+.account__event-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden; }
+
 .account__event-status svg {
   margin-right: 15px; }
 
 .account__event-description {
-  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  font-size: 12px;
+  line-height: 15px;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
   font-size: 12px;
   line-height: 15px;
   color: #9f9f9f; }
@@ -7444,9 +7467,6 @@ p {
   font-size: 14px;
   line-height: 17px;
   color: #0098c1; }
-
-.account .btn {
-  width: 100%; }
 
 .account__contact-us {
   display: -webkit-box;
@@ -7555,6 +7575,8 @@ p {
 
 .account__notifications {
   width: 100%; }
+  .account__notifications .notifications {
+    padding-bottom: 0; }
   .account__notifications .notifications__table {
     margin-top: 6px;
     table-layout: fixed; }

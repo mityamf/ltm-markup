@@ -1,6 +1,10 @@
 .account__notifications {
   width: 100%;
 
+  .notifications {
+    padding-bottom: 0;
+  }
+
   .notifications__table {
     margin-top: 6px;
     table-layout: fixed;

@@ -9,6 +9,29 @@
     }
   }
 
+  &__link-hotel {
+    margin-bottom: 7px;
+
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.8px;
+
+    @include viewport--sm {
+      display: none;
+    }
+
+    transition: opacity $default-transition-settings;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
   &__event-block > .title--h2 {
     margin-bottom: 1px;
 
@@ -41,6 +64,10 @@
   &__event {
     margin-right: 4px;
     width: 341px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
 
     @include viewport--sm {
       margin-right: 0;
@@ -99,12 +126,24 @@
     }
   }
 
+  &__event-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
   &__event-status svg {
     margin-right: 15px;
   }
 
   &__event-description {
-    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    font-size: 12px;
+    line-height: 15px;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 
     font-size: 12px;
     line-height: 15px;
@@ -117,10 +156,6 @@
     font-size: 14px;
     line-height: 17px;
     color: $color-blue;
-  }
-
-  .btn {
-    width: 100%;
   }
 
   &__contact-us {

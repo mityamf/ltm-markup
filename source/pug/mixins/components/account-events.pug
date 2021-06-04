@@ -7,14 +7,14 @@ mixin renderEventsList(title, subtitle, hotelList)
         ul.account__event-list.direction-list.swiper-wrapper
           each hotel in hotelList
             li.account__event(class='account__event--' + hotel.status).swiper-slide
-              h4.title--h4=hotel.title
+              h4.title.title--h4=hotel.title
               span.account__event-text=hotel.text
               span.account__event-date=hotel.date
               span.account__event-status=hotel.statusText
                 +icon("icon-event-" + hotel.status, 22, 22)
               span.account__event-description=hotel.statusDescription
               button.btn.btn--white(type="button")=hotel.buttonText
-      .direction__arrow.direction__arrow--right
-        +icon("arrow-right", 11, 19)
-      .direction__arrow.direction__arrow--left
-        +icon("arrow-left", 11, 19)
+        .direction__arrow.direction__arrow--right
+          +icon("arrow-right", 11, 19)
+        .direction__arrow.direction__arrow--left
+          +icon("arrow-left", 11, 19)
