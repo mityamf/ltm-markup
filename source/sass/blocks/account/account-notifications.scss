@@ -1,6 +1,10 @@
 .account__notifications {
   width: 100%;
 
+  @include viewport--sm {
+    padding: 26px 0 0 0;
+  }
+
   .notifications {
     padding-bottom: 0;
   }
