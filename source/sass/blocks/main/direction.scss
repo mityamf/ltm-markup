@@ -178,7 +178,7 @@
   }
 
   .title--h2 {
-    margin-bottom: 27px;
+    margin-bottom: 20px;
     letter-spacing: 1.4px;
 
     @include viewport--lg {
@@ -223,7 +223,7 @@
   }
 
   .direction__item {
-    padding: 8px 0;
+    padding: 7px 0 15px 0;
     border: 1px solid transparent;
 
     @include viewport--sm {
@@ -233,11 +233,10 @@
   }
 
   .swiper-slide {
-    width: 236px;
-    margin-right: 10px;
+    //margin-right: 15px;
 
     @include viewport--lg {
-      width: 274px;
+      margin-right: 10px;
     }
 
     @include viewport--sm {

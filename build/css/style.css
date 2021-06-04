@@ -2703,7 +2703,7 @@ p {
     padding: 20px 15px 16px; } }
 
 .direction--exhibitors .title--h2 {
-  margin-bottom: 27px;
+  margin-bottom: 20px;
   letter-spacing: 1.4px; }
   @media (max-width: 1439px) {
     .direction--exhibitors .title--h2 {
@@ -2740,7 +2740,7 @@ p {
   line-height: 14px; }
 
 .direction--exhibitors .direction__item {
-  padding: 8px 0;
+  padding: 7px 0 15px 0;
   border: 1px solid transparent; }
   @media (max-width: 767px) {
     .direction--exhibitors .direction__item {
@@ -2749,17 +2749,15 @@ p {
               align-items: center;
       padding-right: 0; } }
 
-.direction--exhibitors .swiper-slide {
-  width: 236px;
-  margin-right: 10px; }
-  @media (max-width: 1439px) {
-    .direction--exhibitors .swiper-slide {
-      width: 274px; } }
-  @media (max-width: 767px) {
-    .direction--exhibitors .swiper-slide {
-      border: none;
-      margin: 0;
-      width: 100%; } }
+@media (max-width: 1439px) {
+  .direction--exhibitors .swiper-slide {
+    margin-right: 10px; } }
+
+@media (max-width: 767px) {
+  .direction--exhibitors .swiper-slide {
+    border: none;
+    margin: 0;
+    width: 100%; } }
 
 .direction--exhibitors input {
   width: 100%;
