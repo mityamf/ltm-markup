@@ -6023,6 +6023,14 @@ p {
 .hotel-page {
   padding-top: 1px;
   padding-bottom: 35px; }
+  .hotel-page .edit__buttons {
+    padding-top: 0; }
+    @media (max-width: 1439px) {
+      .hotel-page .edit__buttons {
+        padding-top: 23px; } }
+    @media (max-width: 767px) {
+      .hotel-page .edit__buttons {
+        padding-top: 30px; } }
   @media (max-width: 1439px) {
     .hotel-page {
       padding-bottom: 0; } }
