@@ -7511,10 +7511,11 @@ p {
           flex-wrap: wrap; } }
 
 .account__admin {
-  width: 340px;
+  width: 448px;
   margin-right: 16px; }
   @media (max-width: 1439px) {
     .account__admin {
+      width: 514px;
       margin-right: 35px; } }
   @media (max-width: 767px) {
     .account__admin {
@@ -10789,6 +10790,9 @@ p {
       opacity: 0.8; }
     .lk .info-block .btn:active {
       opacity: 0.5; }
+
+.edit-colleague .modal__close-btn {
+  fill: #0098c1; }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,

@@ -2831,13 +2831,13 @@
               <p class="participants__info">Only 2 participants are allowed</p>
               <ul class="participants__list">
                 <li class="participants__item"><img src="img/content/admin-photo.jpg" alt="Фото админа"/>
-                  <div class="participants__info-wrapper"><span class="participants__name">Stanislav</span><span class="participants__name">Ozeretsky</span><span class="participants__position">Sales Manager Russia and CIS</span></div><a class="participants__contact-link" href="mailto:123@gmail.com" aria-label="Написать по электронной почте">
+                  <div class="participants__info-wrapper"><span class="participants__name">Stanislav</span><span class="participants__name">Ozeretsky</span><span class="participants__position">Sales Manager Russia and CIS</span></div><a class="participants__contact-link" href="#" data-modal="edit-colleague">
                     <svg width="18" height="24" aria-hidden="true">
                       <use xlink:href="#icon-write"></use>
                     </svg></a>
                 </li>
                 <li class="participants__item"><img src="img/svg/icon-no-photo.svg" alt="Фото админа"/>
-                  <div class="participants__info-wrapper"><span class="participants__name">Colleague’s first name</span><span class="participants__name">Colleague’s first name</span><span class="participants__position">Position</span></div><a class="participants__contact-link" href="mailto:123@gmail.com" aria-label="Написать по электронной почте">
+                  <div class="participants__info-wrapper"><span class="participants__name">Colleague’s first name</span><span class="participants__name">Colleague’s first name</span><span class="participants__position">Position</span></div><a class="participants__contact-link" href="#" data-modal="edit-colleague">
                     <svg width="18" height="24" aria-hidden="true">
                       <use xlink:href="#icon-write"></use>
                     </svg></a>
@@ -3010,19 +3010,12 @@
         <button class="button button--transparent" type="button">ok</button>
       </div>
     </div>
-    <div class="modal modal--preload modal--forgot">
+    <div class="modal modal--preload modal--edit-colleague">
       <div class="modal__wrapper">
         <div class="modal__overlay"></div>
         <div class="modal__content modal-gallery">
-          <div class="forgot"><a class="forgot__logo" href="main.html">
-              <svg width="324" height="122" aria-hidden="true">
-                <use xlink:href="#logo-desktop"></use>
-              </svg></a>
-            <form class="forgot__form" action="#" method="POST">
-              <label class="visually-hidden" for="forgot-email">Inter your E-mail</label>
-              <input type="email" name="forgot-email" id="forgot-email" placeholder="Enter your E-mail" required="required"/><a class="forgot__link" href="buyer.html">Or send message to Organizers</a>
-              <button class="forgot__submit btn btn--blue" type="submit">Send</button>
-            </form>
+          <div class="edit-colleague">
+            <h2 class="title title--h2 title--big">Add/edit colleague</h2>
           </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
             <svg width="33" height="33" aria-hidden="true">

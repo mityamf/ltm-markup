@@ -179,10 +179,11 @@
   }
 
   &__admin {
-    width: 340px;
+    width: 448px;
     margin-right: 16px;
 
     @include viewport--lg {
+      width: 514px;
       margin-right: 35px;
     }
 
