@@ -7578,7 +7578,7 @@ p {
   .account__notifications .notifications {
     padding-bottom: 0; }
   .account__notifications .notifications__table {
-    margin-top: 6px;
+    margin-top: 0;
     table-layout: fixed; }
     @media (max-width: 767px) {
       .account__notifications .notifications__table {
@@ -7595,6 +7595,9 @@ p {
   @media (max-width: 767px) {
     .account__notifications .account__mobile-wrapper span:first-child {
       margin-right: 10%; } }
+  @media (max-width: 767px) {
+    .account__notifications .account__mobile-wrapper span:last-child {
+      float: right; } }
   .account__notifications tr:nth-child(even) {
     background-color: #d6d6d6; }
   .account__notifications tr {
@@ -7603,11 +7606,22 @@ p {
             align-items: center; }
     @media (max-width: 767px) {
       .account__notifications tr {
-        padding: 6px 35px 10px; } }
+        padding: 6px 35px 7px; } }
     @media (max-width: 767px) {
       .account__notifications tr::before {
         top: 14px;
         left: 16px; } }
+  .account__notifications .notifications td:first-child,
+  .account__notifications .notifications td:last-child,
+  .account__notifications .notifications th:first-child,
+  .account__notifications .notifications th:last-child {
+    width: 38px; }
+    @media (max-width: 1439px) {
+      .account__notifications .notifications td:first-child,
+      .account__notifications .notifications td:last-child,
+      .account__notifications .notifications th:first-child,
+      .account__notifications .notifications th:last-child {
+        width: 30px; } }
   .account__notifications .notifications__cell--date {
     top: 11px;
     right: 21px;
@@ -7619,13 +7633,19 @@ p {
         width: 57px; } }
   .account__notifications .notifications__cell--message {
     width: 48%;
-    padding-left: 13px; }
+    padding-left: 6px; }
     @media (max-width: 1550px) {
       .account__notifications .notifications__cell--message {
         width: 38%; } }
+    @media (max-width: 1439px) {
+      .account__notifications .notifications__cell--message {
+        padding-left: 14px; } }
     @media (max-width: 767px) {
       .account__notifications .notifications__cell--message {
         display: none; } }
+  .account__notifications thead .notifications__cell--message {
+    font-size: 12px;
+    line-height: 20px; }
   .account__notifications td {
     height: 38px;
     -webkit-box-align: center;
