@@ -9,6 +9,7 @@ block variables
 
 block main
   include ../data/pages/admin-messages-sent
+  include ../data/modal-colleague-admin
 
   main.container.container--no-padding.container--admin
     .admin
@@ -24,3 +25,7 @@ block main
       button.btn.btn--white.btn--more(type="button")="More"
 
     +renderSupportContacts(contactsList)
+
+block modals
+  +modal("modal--edit-colleague")
+    //+modalEditColleague(editCollegue)

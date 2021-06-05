@@ -1,5 +1,94 @@
 .edit-colleague {
-  .modal__close-btn {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__form {
+    width: 100%;
+  }
+
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+  }
+
+  .title {
+    width: 100%;
+  }
+
+  .modal__close-btn .btn--reset {
     fill: $color-blue;
+  }
+
+  &__block:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+  }
+
+  &__buttons .btn {
+    width: 45%;
+    padding: 15px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  &__photo-column {
+    width: 30%;
+    padding-right: 20px;
+  }
+
+  &__photo-column img {
+    margin: 0 auto 30px auto;
+  }
+
+  &__content-column {
+    width: 70%;
+  }
+
+  &__photo-upload {
+    width: 100%;
+    height: 30px;
+    background-color: $color-blue;
+    position: relative;
+    display: block;
+    padding: 5px 10px;
+    text-align: center;
+  }
+
+  &__photo-upload span {
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-default-white;
+  }
+
+  &__photo-upload input {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  &__upload-info {
+    padding-top: 20px;
+
+    font-size: 12px;
+    line-height: 20px;
+    color: $color-nobel;
+  }
+
+  &__upload-info span {
+    display: block;
+    text-align: center;
   }
 }

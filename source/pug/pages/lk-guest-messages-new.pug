@@ -8,6 +8,7 @@ block variables
 
 block main
   include ../data/pages/lk-guest-messages-new
+  include ../data/modal-colleague-lk
 
   main.container.lk
     .admin
@@ -20,3 +21,7 @@ block main
       h2.admin-table__headline="Новое сообщение"
       +renderEditBlock(editingBlockList, buttons, editingBlockStatus)
     +renderSupportContacts(contactsList)
+
+block modals
+  +modal("modal--edit-colleague")
+    //+modalEditColleague(editCollegue)

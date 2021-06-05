@@ -9,6 +9,7 @@ block variables
 
 block main
   include ../data/pages/lk-guest-messages-sent
+  include ../data/modal-colleague-lk
 
   main.container.container--no-padding.lk
     .admin
@@ -24,3 +25,7 @@ block main
       button.btn.btn--white.btn--more(type="button")="Показать больше"
 
     +renderSupportContacts(contactsList)
+
+block modals
+  +modal("modal--edit-colleague")
+    //+modalEditColleague(editCollegue)

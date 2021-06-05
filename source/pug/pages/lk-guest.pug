@@ -8,6 +8,7 @@ block variables
 
 block main
   include ../data/pages/lk-guest
+  include ../data/modal-colleague-lk
 
   main.container.lk
     +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
@@ -24,3 +25,11 @@ block main
       +renderDownloadFiles(downloadHeadline, downloadList)
     +renderSupportContacts(contactsList)
 
+block modals
+  include ../data/modal-colleague-lk
+  include ../data/modal-profile
+
+  +modal("modal--edit-colleague")
+    +modalEditColleague(editCollegue)
+  +modal("modal--edit-profile")
+    +modalEditProfile(editProfile)

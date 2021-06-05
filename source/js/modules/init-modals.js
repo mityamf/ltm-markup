@@ -15,6 +15,8 @@ const modalForgot = document.querySelector('.modal--forgot');
 const modalForgotBtns = document.querySelectorAll('[data-modal="forgot"]');
 const modalEditColleague = document.querySelector('.modal--edit-colleague');
 const modalEditColleagueBtns = document.querySelectorAll('[data-modal="edit-colleague"]');
+const modalEditProfile = document.querySelector('.modal--edit-profile');
+const modalEditProfileBtns = document.querySelectorAll('[data-modal="edit-profile"]');
 
 // аргументы setupModal(modal, closeCallback, modalBtns, openCallback, noPrevDefault, preventScrollLock)
 // возможна инициализация только с первыми аргументом,
@@ -51,6 +53,9 @@ const initModals = () => {
   }
   if (modalEditColleague && modalEditColleagueBtns.length) {
     setupModal(modalEditColleague, false, modalEditColleagueBtns);
+  }
+  if (modalEditProfile && modalEditProfileBtns.length) {
+    setupModal(modalEditProfile, false, modalEditProfileBtns);
   }
 };
 

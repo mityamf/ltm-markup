@@ -2846,11 +2846,11 @@
                   <div class="info-block__headline">
                     <h2 class="title title--h2 title--big">Adventa Agency</h2><a class="info-block__link" href="https://adventaagency.ru">https://adventaagency.ru</a>
                   </div>
-                  <button class="btn btn--blue" type="button">Редактировать</button>
+                  <button class="btn btn--blue" type="button" data-modal="edit-profile">Редактировать</button>
                 </div>
                 <div class="info-block__text-wrapper">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div><a class="info-block__more-link" href="https://adventaagency.ru" aria-label="Read More">
+                </div><a class="info-block__more-link" href="#" aria-label="Read More">
                   <svg width="103" height="22" aria-hidden="true">
                     <use xlink:href="#icon-read-more"></use>
                   </svg></a>
@@ -2990,20 +2990,11 @@
         <button class="button button--transparent" type="button">ok</button>
       </div>
     </div>
-    <div class="modal modal--preload modal--forgot">
+    <div class="modal modal--preload modal--edit-colleague">
       <div class="modal__wrapper">
         <div class="modal__overlay"></div>
         <div class="modal__content modal-gallery">
-          <div class="forgot"><a class="forgot__logo" href="main.html">
-              <svg width="324" height="122" aria-hidden="true">
-                <use xlink:href="#logo-desktop"></use>
-              </svg></a>
-            <form class="forgot__form" action="#" method="POST">
-              <label class="visually-hidden" for="forgot-email">Inter your E-mail</label>
-              <input type="email" name="forgot-email" id="forgot-email" placeholder="Enter your E-mail" required="required"/><a class="forgot__link" href="buyer.html">Or send message to Organizers</a>
-              <button class="forgot__submit btn btn--blue" type="submit">Send</button>
-            </form>
-          </div>
+          <!--+modalEditColleague(editCollegue)-->
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
             <svg width="33" height="33" aria-hidden="true">
               <use xlink:href="#icon-close"></use>

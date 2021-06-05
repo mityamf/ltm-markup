@@ -8,6 +8,7 @@ block variables
 
 block main
   include ../data/pages/admin-messages-read
+  include ../data/modal-colleague-admin
 
   main.container.container--admin
     .admin
@@ -21,3 +22,7 @@ block main
       +renderEditBlock(editingBlockList, buttons, editingBlockStatus)
 
     +renderSupportContacts(contactsList)
+
+block modals
+  +modal("modal--edit-colleague")
+    //+modalEditColleague(editCollegue)

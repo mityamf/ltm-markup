@@ -9,6 +9,7 @@ block variables
 
 block main
   include ../data/pages/lk-guest-schedule-d2
+  include ../data/modal-colleague-lk
 
   main.container.container--no-padding.lk
     .admin.admin--schedule
@@ -26,3 +27,7 @@ block main
       .admin__mobile-block-wrapper
         +renderUpButton()
     +renderSupportContacts(contactsList)
+
+block modals
+  +modal("modal--edit-colleague")
+    //+modalEditColleague(editCollegue)

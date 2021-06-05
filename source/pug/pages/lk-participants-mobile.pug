@@ -8,6 +8,7 @@ block variables
 
 block main
   include ../data/pages/lk-participants-mobile
+  include ../data/modal-colleague-lk
 
   main.container.admin.admin--mobile
     +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
@@ -32,3 +33,7 @@ block main
               +icon("icon-write", 18, 24)
       p.participants__text=participantsText
     +renderSupportContacts(contactsList)
+
+block modals
+  +modal("modal--edit-colleague")
+    //+modalEditColleague(editCollegue)
