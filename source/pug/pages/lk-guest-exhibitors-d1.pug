@@ -9,6 +9,7 @@ block variables
 
 block main
   include ../data/pages/lk-guest-exhibitors-d1
+  include ../data/modal-colleague-lk
 
   main.container.container--no-padding.lk
     .admin
@@ -33,3 +34,18 @@ block main
       +renderHostedGuestsList(adminHostedGuestsListTitles, adminHostedGuestsList)
       button.btn.btn--white.btn--more(type="button")="Показать больше"
     +renderSupportContacts(contactsList)
+
+block append modals
+  include ../data/mobile-admin-tabs
+  include ../data/modal-mobile-filters-lk
+  include ../data/modal-colleague-lk
+  include ../data/modal-profile
+
+  +mobileModal("modal--edit-colleague")
+    +modalEditColleague(editCollegue)
+  +mobileModal("modal--admin-menu")
+    +renderModalAdminTabs(adminTabs)
+  +mobileModal("modal--mobile-filters")
+    +renderMobileFilters(mobileFilters, mobileFiltersButtons)
+  +mobileModal("modal--edit-profile")
+    +modalEditProfile(editProfile)

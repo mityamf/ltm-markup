@@ -7,6 +7,7 @@ block variables
 
 block main
   include ../data/pages/account
+  include ../data/modal-colleague-admin
 
   main.container.container--no-padding.account
     .hotel-headline.hotel-headline--account-page
@@ -32,5 +33,9 @@ block main
     +renderSupportContacts(contactsList)
 
 block modals
+  include ../data/modal-colleague-admin
+
   +modal("modal--gallery")
     +modal-gallery()
+  +modal("modal--edit-colleague")
+    +modalEditColleague(editCollegue)

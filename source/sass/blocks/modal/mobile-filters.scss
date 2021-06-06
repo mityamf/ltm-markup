@@ -1,0 +1,60 @@
+.mobile-filters {
+  @include viewport--sm {
+    padding: 15px;
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  p {
+    margin: 0 0 20px 0;
+
+    font-size: 24px;
+    line-height: 29px;
+    color: $color-blue;
+    font-weight: lighter;
+  }
+
+  &__item:first-child .choices__list--single .choices__item {
+    text-align: center;
+    position: relative;
+
+    font-size: 38px;
+    line-height: 34px;
+    letter-spacing: 6px;
+
+    &::before,
+    &::after {
+      content: "-";
+      display: inline-block;
+      top: 0;
+    }
+  }
+
+  &__item {
+    margin-bottom: 25px;
+  }
+
+  .choices .choices__inner {
+    background-color: transparent;
+  }
+
+  &__button-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 222px;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  &__button-wrapper .btn:first-child {
+    margin-bottom: 20px;
+  }
+
+  &__button-wrapper .btn {
+    width: 100%;
+  }
+}
+

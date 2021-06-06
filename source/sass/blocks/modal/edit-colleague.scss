@@ -1,5 +1,157 @@
 .edit-colleague {
-  .modal__close-btn {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include viewport--sm {
+    flex-direction: column;
+  }
+
+  @include viewport--sm {
+    padding: 15px;
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+  }
+
+  .title {
+    width: 100%;
+  }
+
+  .modal__close-btn .btn--reset {
     fill: $color-blue;
+  }
+
+  &__block:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+  }
+
+  &__buttons .btn {
+    width: 45%;
+    padding: 15px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  &__photo-column {
+    width: 30%;
+    padding-right: 36px;
+
+    @include viewport--sm {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+
+  &__photo-column img {
+    margin: 0 auto 30px auto;
+  }
+
+  &__content-column {
+    width: 70%;
+
+    @include viewport--sm {
+      width: 100%;
+    }
+  }
+
+  &__photo-upload {
+    width: 100%;
+    background-color: $color-blue;
+    position: relative;
+    padding: 17px 10px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    opacity: 1;
+
+    transition: opacity $default-transition-settings;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  &__photo-upload span {
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-default-white;
+  }
+
+  &__photo-upload input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  &__upload-info {
+    padding-top: 20px;
+
+    font-size: 12px;
+    line-height: 20px;
+    color: $color-nobel;
+
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  &__upload-info span {
+    display: block;
+    text-align: center;
+  }
+
+  .choices__inner {
+    background-color: transparent;
+  }
+
+  .choices[data-type*="select-one"] .choices__inner {
+    padding: 10px 15px;
+  }
+
+  .choices__list--single {
+    padding: 0 16px 4px 4px;
+  }
+
+  .choices__list--single .choices__item {
+    font-weight: normal;
+  }
+}
+
+.modal--edit-colleague .modal__content {
+  width: 698px;
+
+  @include viewport--sm {
+    width: 100%;
   }
 }

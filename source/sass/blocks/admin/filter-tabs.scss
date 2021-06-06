@@ -1,7 +1,7 @@
 .filter-tabs {
   display: flex;
   list-style-type: none;
-  padding: 0 0 23px 0;
+  padding: 23px 0 23px;
   margin: 0;
 
   @include viewport--sm {
