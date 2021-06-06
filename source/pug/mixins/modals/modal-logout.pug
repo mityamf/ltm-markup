@@ -1,0 +1,21 @@
+mixin modal-logout()
+  .log-out__wrapp
+    button.modal__close-btn.btn-reset.log-out__close(type="button", aria-label="Закрыть попап")
+      +icon("icon-close", 26, 26)
+    a.log-out__logo(href="account.html")
+      +icon("mandarin-logo", 104, 80)
+    span.log-out__text Mandarin Oriental Hotel Group
+    a.log-out__exit(type="button", aria-label="Выход из личного кабинета" href="main.html")
+      +icon("exit", 23, 25)
+  nav.log-out__nav
+    ul.log-out__list
+      li.log-out__item
+        a.log-out__link(href="#") Participants
+      li.log-out__item
+        a.log-out__link(href="#") My events
+      li.log-out__item
+        a.log-out__link(href="#") Messages
+      li.log-out__item
+        a.log-out__link(href="#") Contact Organizers
+  a.log-out__exit--md(type="button", aria-label="Выход из личного кабинета" href="main.html")
+      +icon("exit", 23, 25)

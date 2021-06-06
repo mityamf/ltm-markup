@@ -14,6 +14,10 @@
     padding-bottom: 26px;
     padding-top: 27px;
   }
+
+  @include viewport--sm {
+    padding-bottom: 20px;
+  }
 }
 
 .partners__title {

@@ -40,6 +40,8 @@
 
     @include viewport--sm {
       padding-bottom: 0;
+      overflow: hidden;
+      height: 68px;
     }
   }
 }

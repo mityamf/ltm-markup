@@ -13,6 +13,8 @@ const modalGallery = document.querySelector('.modal--gallery');
 const modalGalleryBtns = document.querySelectorAll('[data-modal="gallery"]');
 const modalForgot = document.querySelector('.modal--forgot');
 const modalForgotBtns = document.querySelectorAll('[data-modal="forgot"]');
+const modalLogout = document.querySelector('.modal--logout');
+const modalLogoutBtns = document.querySelectorAll('[data-modal="logout"]');
 
 // аргументы setupModal(modal, closeCallback, modalBtns, openCallback, noPrevDefault, preventScrollLock)
 // возможна инициализация только с первыми аргументом,
@@ -46,6 +48,9 @@ const initModals = () => {
   }
   if (modalForgot && modalForgotBtns.length) {
     setupModal(modalForgot, false, modalForgotBtns);
+  }
+  if (modalLogout && modalLogoutBtns.length) {
+    setupModal(modalLogout, false, modalLogoutBtns);
   }
 };
 

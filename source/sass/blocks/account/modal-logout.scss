@@ -1,0 +1,169 @@
+.modal--logout {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -17%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  background-color: unset;
+  transform: scale(1.5);
+  overflow-y: hidden;
+
+  .modal__wrapper {
+    justify-content: flex-end;
+    width: 75%;
+    min-height: 100%;
+    padding: 0;
+  }
+
+  .modal__content {
+    width: 351px;
+    height: 351px;
+    padding: 0;
+  }
+
+  .modal__close-btn {
+    display: none;
+  }
+
+  .log-out__close {
+    display: none;
+  }
+
+  .log-out__wrapp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 34px;
+  }
+
+  .log-out__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 27px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .log-out__item {
+    padding-bottom: 13px;
+  }
+
+  .log-out__exit {
+    display: none;
+  }
+
+  .log-out__exit--md {
+    display: flex;
+    justify-content: center;
+
+    &:focus,
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .log-out__text {
+    font-weight: 600;
+  }
+
+  .log-out__link {
+    font-size: 14px;
+    font-weight: 600;
+
+    &:focus,
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  @media (max-width: 767px) {
+    top: 0;
+    z-index: 1000;
+    transform: none;
+    position: fixed;
+
+    .modal__wrapper {
+      padding: 0;
+      width: 100%;
+    }
+
+    .modal__content {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      background-color: $color-white;
+      padding-top: 34px;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .log-out__close {
+      display: contents;
+      width: 26px;
+      height: 26px;
+      align-self: center;
+
+      svg {
+        fill: $color-blue;
+      }
+
+      &:focus,
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .log-out__wrapp {
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      height: 17%;
+      padding: 0;
+    }
+
+    .log-out__exit {
+      display: block;
+      width: 38px;
+      border: 0;
+      height: 29px;
+      align-self: center;
+      background-color: unset;
+      cursor: pointer;
+
+      &:focus,
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .log-out__list {
+      margin-top: 62px;
+      align-items: flex-start;
+    }
+
+    .log-out__link {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .log-out__item {
+      padding-bottom: 25px;
+    }
+
+    .log-out__text {
+      display: none;
+    }
+
+    .log-out__exit--md {
+      display: none;
+    }
+  }
+}
