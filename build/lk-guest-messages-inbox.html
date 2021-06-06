@@ -2826,14 +2826,14 @@
                 <ul class="participants__list">
                   <li class="participants__item">
                     <div class="participants__note-wrapper"><img src="img/content/admin-photo-2.jpg" alt="Фото админа"/><span class="participants__note">Администратор</span></div>
-                    <div class="participants__info-wrapper"><span class="participants__name">Alexey</span><span class="participants__name">Stavsky</span><span class="participants__position">Director</span></div><a class="participants__contact-link" href="mailto:123@gmail.com" aria-label="Написать по электронной почте">
+                    <div class="participants__info-wrapper"><span class="participants__name">Alexey</span><span class="participants__name">Stavsky</span><span class="participants__position">Director</span></div><a class="participants__contact-link" href="#" data-modal="edit-colleague">
                       <svg width="18" height="24" aria-hidden="true">
                         <use xlink:href="#icon-write"></use>
                       </svg></a>
                   </li>
                   <li class="participants__item">
                     <div class="participants__note-wrapper"><img src="img/content/admin-photo-3.jpg" alt="Фото админа"/><span class="participants__note">Коллега</span></div>
-                    <div class="participants__info-wrapper"><span class="participants__name">Alyona</span><span class="participants__name">Alexandrova-Fedorova</span><span class="participants__position">PR-Manager</span></div><a class="participants__contact-link" href="mailto:123@gmail.com" aria-label="Написать по электронной почте">
+                    <div class="participants__info-wrapper"><span class="participants__name">Alyona</span><span class="participants__name">Alexandrova-Fedorova</span><span class="participants__position">PR-Manager</span></div><a class="participants__contact-link" href="#" data-modal="edit-colleague">
                       <svg width="18" height="24" aria-hidden="true">
                         <use xlink:href="#icon-write"></use>
                       </svg></a>
@@ -2859,7 +2859,7 @@
           </div>
           <div class="admin__control-wrapper">
             <ul class="admin-tabs__list">
-              <button class="admin-tabs__menu-button" type="button">
+              <button class="admin-tabs__menu-button" type="button" data-modal="admin-menu">
                 <svg width="32" height="32" aria-hidden="true">
                   <use xlink:href="#icon-mobile-menu"></use>
                 </svg>
@@ -3105,11 +3105,141 @@
         <button class="button button--transparent" type="button">ok</button>
       </div>
     </div>
-    <div class="modal modal--preload modal--edit-colleague">
+    <div class="modal modal--preload modal--edit-colleague modal--bottom-slide">
       <div class="modal__wrapper">
         <div class="modal__overlay"></div>
         <div class="modal__content modal-gallery">
-          <!--+modalEditColleague(editCollegue)-->
+          <div class="edit-colleague">
+            <h2 class="title title--h2 title--big">Редактировать профиль</h2>
+            <div class="edit-colleague__photo-column"><img src="img/content/admin-photo-edit.jpg" width="103" height="103"/>
+              <label class="edit-colleague__photo-upload"><span>Загрузить</span>
+                <input type="file"/>
+              </label>
+              <div class="edit-colleague__upload-info"><span>JPG, PNG</span><span>Min. 200x200 px.</span><span>Max. 3 mb.</span></div>
+            </div>
+            <div class="edit-colleague__content-column">
+              <form class="edit-colleague__form" action="#" method="POST">
+                <div class="edit-colleague__block">
+                  <label class="input-wrapper" for="name">Имя</label>
+                  <input placeholder="First name" id="name" name="name" type="text"/>
+                </div>
+                <div class="edit-colleague__block">
+                  <label class="input-wrapper" for="last-name">Фамилия</label>
+                  <input placeholder="Last name" id="last-name" name="last-name" type="text"/>
+                </div>
+                <div class="edit-colleague__block">
+                  <p>Обращение</p>
+                  <select class="input-dropdown" id="title-select">
+                    <option class="input-dropdown__option" value="Mr.">Mr.</option>
+                    <option class="input-dropdown__option" value="Mrs.">Mrs.</option>
+                  </select>
+                </div>
+                <div class="edit-colleague__block">
+                  <label class="input-wrapper" for="job-position">Должность</label>
+                  <input placeholder="Job position" id="job-position" name="job-position" type="text"/>
+                </div>
+                <div class="edit-colleague__block">
+                  <label class="input-wrapper" for="phone-number">Телефон</label>
+                  <input placeholder="+1 (111) 111 11 11" id="phone-number" name="phone-number" type="text"/>
+                </div>
+                <div class="edit-colleague__block">
+                  <label class="input-wrapper" for="phone-mobile">Мобильный телефон</label>
+                  <input placeholder="+1 (111) 111 11 11" id="phone-mobile" name="phone-mobile" type="text"/>
+                </div>
+                <div class="edit-colleague__block">
+                  <label class="input-wrapper" for="colleague-skype">Skype</label>
+                  <input placeholder="E-mail" id="colleague-skype" name="colleague-skype" type="text"/>
+                </div>
+                <div class="edit-colleague__block">
+                  <label class="input-wrapper" for="colleague-email-2">E-mail</label>
+                  <input placeholder="E-mail" id="colleague-email-2" name="colleague-email-2" type="text"/>
+                </div>
+                <div class="edit-colleague__buttons">
+                  <button class="btn btn--white" type="reset">Cancel</button>
+                  <button class="btn btn--blue" type="submit">Save</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+            <svg width="33" height="33" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--admin-menu modal--bottom-slide">
+      <div class="modal__wrapper">
+        <div class="modal__overlay"></div>
+        <div class="modal__content modal-gallery">
+          <div class="admin-menu">
+            <ul class="admin-menu__list">
+              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest.html">Программа и инфо</a></li>
+              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
+              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
+              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
+            </ul>
+          </div>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+            <svg width="33" height="33" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--edit-profile modal--bottom-slide">
+      <div class="modal__wrapper">
+        <div class="modal__overlay"></div>
+        <div class="modal__content modal-gallery">
+          <div class="edit-colleague">
+            <h2 class="title title--h2 title--big">Информация о компании</h2>
+            <form class="edit-colleague__form" action="#" method="POST">
+              <div class="edit-colleague__block">
+                <label class="input-wrapper" for="site">Web</label>
+                <input placeholder="https://" id="site" name="site" type="text"/>
+              </div>
+              <div class="edit-colleague__block">
+                <label class="input-wrapper" for="company-description">Описание компании</label>
+                <textarea placeholder="Описание компании, только на английском языке" id="company-description" name="company-description" type="textarea"></textarea>
+              </div>
+              <div class="edit-colleague__block">
+                <p>Страна</p>
+                <select class="input-dropdown" id="country-select">
+                  <option class="input-dropdown__option" value="Russia">Russia</option>
+                  <option class="input-dropdown__option" value="USA">USA</option>
+                </select>
+              </div>
+              <div class="edit-colleague__block">
+                <p>Город</p>
+                <select class="input-dropdown" id="city-select">
+                  <option class="input-dropdown__option" value="Moscow">Moscow</option>
+                  <option class="input-dropdown__option" value="Saratov">Saratov</option>
+                </select>
+              </div>
+              <div class="edit-colleague__block">
+                <label class="input-wrapper" for="company-address">Адрес</label>
+                <input placeholder="office, bld., St" id="company-address" name="company-address" type="text"/>
+              </div>
+              <div class="edit-colleague__block">
+                <label class="input-wrapper" for="company-post-index">Почтовый индекс</label>
+                <input placeholder="000000" id="company-post-index" name="company-post-index" type="text"/>
+              </div>
+              <div class="edit-colleague__block">
+                <label class="input-wrapper" for="company-phone">Телефон</label>
+                <input placeholder="+1 (111) 111 11 11" id="company-phone" name="company-phone" type="text"/>
+              </div>
+              <div class="edit-colleague__block">
+                <label class="input-wrapper" for="company-email">E-mail</label>
+                <input placeholder="E-mail" id="company-email" name="company-email" type="text"/>
+              </div>
+              <div class="edit-colleague__buttons">
+                <button class="btn btn--white" type="reset">Отмена</button>
+                <button class="btn btn--blue" type="submit">Сохранить</button>
+              </div>
+            </form>
+          </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
             <svg width="33" height="33" aria-hidden="true">
               <use xlink:href="#icon-close"></use>

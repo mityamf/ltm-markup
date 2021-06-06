@@ -28,8 +28,11 @@ block main
 block modals
   include ../data/modal-colleague-lk
   include ../data/modal-profile
+  include ../data/mobile-admin-tabs
 
-  +modal("modal--edit-colleague")
+  +mobileModal("modal--edit-colleague")
     +modalEditColleague(editCollegue)
-  +modal("modal--edit-profile")
+  +mobileModal("modal--admin-menu")
+    +renderModalAdminTabs(adminTabs)
+  +mobileModal("modal--edit-profile")
     +modalEditProfile(editProfile)

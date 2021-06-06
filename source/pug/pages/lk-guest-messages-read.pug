@@ -24,5 +24,13 @@ block main
     +renderSupportContacts(contactsList)
 
 block modals
-  +modal("modal--edit-colleague")
-    //+modalEditColleague(editCollegue)
+  include ../data/modal-colleague-lk
+  include ../data/modal-profile
+  include ../data/mobile-admin-tabs
+
+  +mobileModal("modal--edit-colleague")
+    +modalEditColleague(editCollegue)
+  +mobileModal("modal--admin-menu")
+    +renderModalAdminTabs(adminTabs)
+  +mobileModal("modal--edit-profile")
+    +modalEditProfile(editProfile)

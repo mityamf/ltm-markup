@@ -20,7 +20,7 @@ mixin renderFilterButton(buttonFilter)
 
 mixin renderMobileFilterButtons(buttonFilters, buttonReset)
   .filters__mobile-block
-    button(type="button")=buttonFilters
+    button(type="button" data-modal="mobile-filters")=buttonFilters
       +icon("icon-filters", 16, 16)
     button(type="reset")=buttonReset
 

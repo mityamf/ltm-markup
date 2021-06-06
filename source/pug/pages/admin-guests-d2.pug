@@ -31,6 +31,14 @@ block main
       button.btn.btn--white.btn--more(type="button")="More"
     +renderSupportContacts(contactsList)
 
-block modals
-  +modal("modal--edit-colleague")
-    //+modalEditColleague(editCollegue)
+block append modals
+  include ../data/mobile-admin-tabs
+  include ../data/modal-mobile-filters-admin
+  include ../data/modal-colleague-admin
+
+  +mobileModal("modal--edit-colleague")
+    +modalEditColleague(editCollegue)
+  +mobileModal("modal--admin-menu")
+    +renderModalAdminTabs(adminTabs)
+  +mobileModal("modal--mobile-filters")
+    +renderMobileFilters(mobileFilters, mobileFiltersButtons)

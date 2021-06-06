@@ -190,3 +190,35 @@
     }
   }
 }
+
+.modal--bottom-slide {
+  @include viewport--sm {
+    .modal__content {
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      bottom: -100vh;
+      position: absolute;
+      width: 100%;
+      transition: bottom ease 0.5s;
+      padding: 0;
+    }
+
+    &.modal--active .modal__content {
+      bottom: 0;
+    }
+
+    .modal__close-btn {
+      width: 50px;
+      height: 5px;
+      background: white;
+      border-radius: 5px;
+      left: 0;
+      right: 0;
+      margin: auto;
+
+      svg {
+        display: none;
+      }
+    }
+  }
+}

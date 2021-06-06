@@ -2819,7 +2819,7 @@
         </div>
         <div class="admin__control-wrapper">
           <ul class="admin-tabs__list">
-            <button class="admin-tabs__menu-button" type="button">
+            <button class="admin-tabs__menu-button" type="button" data-modal="admin-menu">
               <svg width="32" height="32" aria-hidden="true">
                 <use xlink:href="#icon-mobile-menu"></use>
               </svg>
@@ -2924,18 +2924,75 @@
         <button class="button button--transparent" type="button">ok</button>
       </div>
     </div>
-    <div class="modal modal--preload modal--forgot">
+    <div class="modal modal--preload modal--admin-menu modal--bottom-slide">
       <div class="modal__wrapper">
         <div class="modal__overlay"></div>
         <div class="modal__content modal-gallery">
-          <div class="forgot"><a class="forgot__logo" href="main.html">
-              <svg width="324" height="122" aria-hidden="true">
-                <use xlink:href="#logo-desktop"></use>
-              </svg></a>
-            <form class="forgot__form" action="#" method="POST">
-              <label class="visually-hidden" for="forgot-email">Inter your E-mail</label>
-              <input type="email" name="forgot-email" id="forgot-email" placeholder="Enter your E-mail" required="required"/><a class="forgot__link" href="buyer.html">Or send message to Organizers</a>
-              <button class="forgot__submit btn btn--blue" type="submit">Send</button>
+          <div class="admin-menu">
+            <ul class="admin-menu__list">
+              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest.html">Программа и инфо</a></li>
+              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
+              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
+              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
+            </ul>
+          </div>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+            <svg width="33" height="33" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--edit-profile modal--bottom-slide">
+      <div class="modal__wrapper">
+        <div class="modal__overlay"></div>
+        <div class="modal__content modal-gallery">
+          <div class="edit-colleague">
+            <h2 class="title title--h2 title--big">Информация о компании</h2>
+            <form class="edit-colleague__form" action="#" method="POST">
+              <div class="edit-colleague__block">
+                <label class="input-wrapper" for="site">Web</label>
+                <input placeholder="https://" id="site" name="site" type="text"/>
+              </div>
+              <div class="edit-colleague__block">
+                <label class="input-wrapper" for="company-description">Описание компании</label>
+                <textarea placeholder="Описание компании, только на английском языке" id="company-description" name="company-description" type="textarea"></textarea>
+              </div>
+              <div class="edit-colleague__block">
+                <p>Страна</p>
+                <select class="input-dropdown" id="country-select">
+                  <option class="input-dropdown__option" value="Russia">Russia</option>
+                  <option class="input-dropdown__option" value="USA">USA</option>
+                </select>
+              </div>
+              <div class="edit-colleague__block">
+                <p>Город</p>
+                <select class="input-dropdown" id="city-select">
+                  <option class="input-dropdown__option" value="Moscow">Moscow</option>
+                  <option class="input-dropdown__option" value="Saratov">Saratov</option>
+                </select>
+              </div>
+              <div class="edit-colleague__block">
+                <label class="input-wrapper" for="company-address">Адрес</label>
+                <input placeholder="office, bld., St" id="company-address" name="company-address" type="text"/>
+              </div>
+              <div class="edit-colleague__block">
+                <label class="input-wrapper" for="company-post-index">Почтовый индекс</label>
+                <input placeholder="000000" id="company-post-index" name="company-post-index" type="text"/>
+              </div>
+              <div class="edit-colleague__block">
+                <label class="input-wrapper" for="company-phone">Телефон</label>
+                <input placeholder="+1 (111) 111 11 11" id="company-phone" name="company-phone" type="text"/>
+              </div>
+              <div class="edit-colleague__block">
+                <label class="input-wrapper" for="company-email">E-mail</label>
+                <input placeholder="E-mail" id="company-email" name="company-email" type="text"/>
+              </div>
+              <div class="edit-colleague__buttons">
+                <button class="btn btn--white" type="reset">Отмена</button>
+                <button class="btn btn--blue" type="submit">Сохранить</button>
+              </div>
             </form>
           </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">

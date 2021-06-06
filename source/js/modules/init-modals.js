@@ -17,6 +17,10 @@ const modalEditColleague = document.querySelector('.modal--edit-colleague');
 const modalEditColleagueBtns = document.querySelectorAll('[data-modal="edit-colleague"]');
 const modalEditProfile = document.querySelector('.modal--edit-profile');
 const modalEditProfileBtns = document.querySelectorAll('[data-modal="edit-profile"]');
+const modalAdminTabs = document.querySelector('.modal--admin-menu');
+const modalAdminTabsBtns = document.querySelectorAll('[data-modal="admin-menu"]');
+const modalMobileFilters = document.querySelector('.modal--mobile-filters');
+const modalMobileFiltersBtns = document.querySelectorAll('[data-modal="mobile-filters"]');
 
 // аргументы setupModal(modal, closeCallback, modalBtns, openCallback, noPrevDefault, preventScrollLock)
 // возможна инициализация только с первыми аргументом,
@@ -56,6 +60,12 @@ const initModals = () => {
   }
   if (modalEditProfile && modalEditProfileBtns.length) {
     setupModal(modalEditProfile, false, modalEditProfileBtns);
+  }
+  if (modalAdminTabs && modalAdminTabsBtns.length) {
+    setupModal(modalAdminTabs, false, modalAdminTabsBtns);
+  }
+  if (modalMobileFilters && modalMobileFiltersBtns.length) {
+    setupModal(modalMobileFilters, false, modalMobileFiltersBtns);
   }
 };
 

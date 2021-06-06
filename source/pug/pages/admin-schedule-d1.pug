@@ -28,6 +28,11 @@ block main
         +renderUpButton()
     +renderSupportContacts(contactsList)
 
-block modals
-  +modal("modal--edit-colleague")
-    //+modalEditColleague(editCollegue)
+block append modals
+  include ../data/mobile-admin-tabs
+  include ../data/modal-colleague-admin
+
+  +mobileModal("modal--edit-colleague")
+    +modalEditColleague(editCollegue)
+  +mobileModal("modal--admin-menu")
+    +renderModalAdminTabs(adminTabs)
