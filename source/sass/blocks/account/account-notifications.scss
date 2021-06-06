@@ -1,0 +1,154 @@
+.account__notifications {
+  width: 100%;
+
+  @include viewport--sm {
+    padding: 26px 0 0 0;
+  }
+
+  .notifications {
+    padding-bottom: 0;
+  }
+
+  .notifications__table {
+    margin-top: 0;
+    table-layout: fixed;
+
+    @include viewport--sm {
+      margin-top: 4px;
+      margin-bottom: 22px;
+    }
+  }
+
+  .account__mobile-wrapper {
+    @include viewport--sm {
+      padding: 16px 39px 0 39px;
+    }
+  }
+
+  .account__mobile-wrapper span {
+    @include viewport--sm {
+      font-size: 12px;
+      line-height: 20px;
+      color: $color-nobel;
+    }
+  }
+
+  .account__mobile-wrapper span:first-child {
+    @include viewport--sm {
+      margin-right: 10%;
+    }
+  }
+
+  .account__mobile-wrapper span:last-child {
+    @include viewport--sm {
+      float: right;
+    }
+  }
+
+  tr:nth-child(even) {
+    background-color: $color-gray-light;
+  }
+
+  tr {
+    align-items: center;
+
+    @include viewport--sm {
+      padding: 6px 35px 7px;
+    }
+
+    &::before {
+      @include viewport--sm {
+        top: 14px;
+        left: 16px;
+      }
+    }
+  }
+
+  .notifications td:first-child,
+  .notifications td:last-child,
+  .notifications th:first-child,
+  .notifications th:last-child {
+    width: 38px;
+
+    @include viewport--lg {
+      width: 30px;
+    }
+  }
+
+  .notifications__cell--date {
+    top: 11px;
+    right: 21px;
+    letter-spacing: 0.4px;
+  }
+
+  .notifications__cell--icon {
+    width: 80px;
+
+    @include viewport--lg {
+      width: 57px;
+    }
+  }
+
+  .notifications__cell--message {
+    width: 48%;
+    padding-left: 6px;
+
+    @media (max-width: 1550px) {
+      width: 38%;
+    }
+
+    @include viewport--lg {
+      padding-left: 14px;
+    }
+
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  thead .notifications__cell--message {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  td {
+    height: 38px;
+    align-items: center;
+
+    @include viewport--sm {
+      height: auto;
+    }
+  }
+
+  .notifications__cell--empty {
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  .notifications__data-wrapper {
+    letter-spacing: 0.1px;
+    overflow: hidden;
+    white-space: nowrap;
+
+    @include viewport--sm {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+
+  .title--h3 {
+    padding-left: 0;
+    padding-right: 17px;
+    margin-bottom: 0;
+
+    @include viewport--sm {
+      padding-left: 17px;
+      padding-right: 17px;
+    }
+  }
+
+  .btn--more {
+    padding: 13px 30px;
+  }
+}

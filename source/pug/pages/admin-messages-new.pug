@@ -9,6 +9,7 @@ block variables
 
 block main
   include ../data/pages/admin-messages-new
+  include ../data/modal-colleague-admin
 
   main.container.container--admin
     .admin
@@ -22,3 +23,12 @@ block main
       +renderEditBlock(editingBlockList, buttons, editingBlockStatus)
 
     +renderSupportContacts(contactsList)
+
+block append modals
+  include ../data/mobile-admin-tabs
+  include ../data/modal-colleague-admin
+
+  +mobileModal("modal--edit-colleague")
+    +modalEditColleague(editCollegue)
+  +mobileModal("modal--admin-menu")
+    +renderModalAdminTabs(adminTabs)

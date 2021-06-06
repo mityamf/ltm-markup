@@ -1,0 +1,14 @@
+mixin renderMobileFilters(data, buttons)
+  .mobile-filters
+    ul.mobile-filters__list
+      each filter in data
+        li.mobile-filters__item(class='mobile-filters__item--' + filter.className)
+          if filter.mod === 'dropdown'
+            p=filter.title
+            select(class="input-dropdown")
+              each option in filter.filterList
+                option(value=option, class="input-dropdown__option")=option
+    .mobile-filters__button-wrapper
+      each button in buttons
+        button.btn(class=button.mod, type=button.type)=button.buttonText
+

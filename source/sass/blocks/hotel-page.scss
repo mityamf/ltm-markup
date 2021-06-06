@@ -2,6 +2,18 @@
   padding-top: 1px;
   padding-bottom: 35px;
 
+  .edit__buttons {
+    padding-top: 0;
+
+    @include viewport--lg {
+      padding-top: 23px;
+    }
+
+    @include viewport--sm {
+      padding-top: 30px;
+    }
+  }
+
   @include viewport--lg {
     padding-bottom: 0;
   }
@@ -151,7 +163,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @include viewport--sm {
+    @include viewport--md {
       padding-top: 10px;
     }
   }
@@ -184,7 +196,7 @@
       margin: 0 16px 24px auto;
     }
 
-    @include viewport--sm {
+    @include viewport--md {
       display: none;
     }
   }

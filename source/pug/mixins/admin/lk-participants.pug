@@ -13,7 +13,7 @@ mixin renderLKParticipantList(participantsHeadline, participantsInfo, participan
               span.participants__name=participant.name
               span.participants__name=participant.lastName
               span.participants__position=participant.position
-            a.participants__contact-link(href='mailto:' + participant.mail aria-label="Написать по электронной почте")
+            a.participants__contact-link(href='#' data-modal="edit-colleague")
               +icon("icon-write", 18, 24)
       p.participants__text=participantsText
     .lk__info-block.info-block
@@ -21,10 +21,10 @@ mixin renderLKParticipantList(participantsHeadline, participantsInfo, participan
         .info-block__headline
           +renderHeadline2(infoBlock.title)
           a.info-block__link(href=infoBlock.link)=infoBlock.link
-        button.btn.btn--blue(type=infoBlock.buttonType)=infoBlock.buttonText
+        button.btn.btn--blue(type=infoBlock.buttonType data-modal="edit-profile")=infoBlock.buttonText
       .info-block__text-wrapper
         p=infoBlock.text
-      a.info-block__more-link(href=infoBlock.link, aria-label="Read More")
+      a.info-block__more-link(href="#", aria-label="Read More")
         +icon("icon-read-more", 103, 22)
 
 

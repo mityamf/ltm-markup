@@ -9,6 +9,7 @@ block variables
 
 block main
   include ../data/pages/admin-sponsors-opportunities
+  include ../data/modal-colleague-admin
 
   main.container.container--no-padding.container--admin
     .admin
@@ -19,3 +20,12 @@ block main
         +renderAdminTabs(adminTabs)
       +renderSponsorshipList(sponsorshipHeadline, sponsorshipList)
     +renderSupportContacts(contactsList)
+
+block append modals
+  include ../data/mobile-admin-tabs
+  include ../data/modal-colleague-admin
+
+  +mobileModal("modal--edit-colleague")
+    +modalEditColleague(editCollegue)
+  +mobileModal("modal--admin-menu")
+    +renderModalAdminTabs(adminTabs)
