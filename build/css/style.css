@@ -6762,14 +6762,7 @@ p {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column;
-  margin-bottom: 45px; }
-  @media (max-width: 1439px) {
-    .privacy-policy {
-      margin-bottom: 39px; } }
-  @media (max-width: 767px) {
-    .privacy-policy {
-      margin-bottom: 0; } }
+          flex-direction: column; }
 
 @media (max-width: 767px) {
   .privacy-policy__button-wrapper {
