@@ -5791,14 +5791,7 @@ p {
   bottom: 0; }
 
 .newpage {
-  position: relative;
-  margin-bottom: 50px; }
-  @media (max-width: 1439px) {
-    .newpage {
-      margin-bottom: 0; } }
-  @media (max-width: 767px) {
-    .newpage {
-      margin-bottom: 31px; } }
+  position: relative; }
 
 .newpage h2 {
   letter-spacing: 0.04em; }
@@ -5822,18 +5815,21 @@ p {
       top: 5px;
       left: 0; } }
 
-.newpage__content {
+.content {
   max-width: 936px;
   margin: 0 auto; }
   @media (max-width: 1439px) {
-    .newpage__content {
+    .content {
       margin-top: 25px; } }
   @media (max-width: 767px) {
-    .newpage__content {
+    .content {
       margin-top: 13px; } }
 
-.newpage__content p:last-of-type {
+.newpage .content p:last-of-type {
   margin-bottom: 0; }
+
+.newpage .content p:first-of-type {
+  margin-top: 0; }
 
 .toggle {
   display: none;
