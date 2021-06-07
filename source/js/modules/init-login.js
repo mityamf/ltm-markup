@@ -30,6 +30,21 @@ const initLogin = () => {
     }
   };
 
+  const hideOnClickOutside = () => {
+    const outsideClickListener = (evt) => {
+      if (!login.contains(evt.target) && !loginShowBtn.contains(evt.target)) {
+        closePopup();
+        removeClickListener();
+      }
+    };
+
+    const removeClickListener = () => {
+      document.removeEventListener('click', outsideClickListener);
+    };
+
+    window.addEventListener('click', outsideClickListener);
+  };
+
   try {
     storage.email = localStorage.getItem('email');
   } catch (err) {
@@ -65,6 +80,8 @@ const initLogin = () => {
         }
       }
     });
+
+    hideOnClickOutside();
   }
 
   showPasswordBtn.addEventListener('click', () => {
