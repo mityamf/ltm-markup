@@ -4,7 +4,7 @@ mixin header(headerMod, currentPage)
       .container
         ul.header__top-list
           li.header__item.header__item--desktop-tablet
-            button(type="button").header__top-link.js-search-button
+            button(type="button").header__top-link.header__top-link--search.js-search-button
               +icon("icon-search", 17, 17)
           li.header__item.header__item--desktop-tablet
             a(href="#").header__top-link Terms & Conditions
@@ -23,9 +23,8 @@ mixin header(headerMod, currentPage)
               +icon("logo-mobile", 53, 47)(class="header__logo-img header__logo-img--mobile")
           +main-nav
           a(href="#").header__link.header__link--sign-in
-            span Sign in
+            span.header__sign-in-text Sign in
             +icon("icon-sign-in", 26, 30)
           +renderLogin
         +search
-
 

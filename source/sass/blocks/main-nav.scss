@@ -6,76 +6,86 @@
 
   &__list {
     display: flex;
-    flex-wrap: wrap;
     margin: 0;
     padding: 0;
 
     list-style: none;
 
-    li:not(:last-child) {
-      margin-right: 1.7%;
-    }
-
-    @include viewport--lg {
-      li:not(:last-child) {
-        margin-right: 5px;
-      }
-    }
-
     @include viewport--md {
       display: none;
-
-      li:not(:last-child) {
-        margin-right: 0;
-      }
     }
   }
 
   @include viewport--lg {
-    max-width: 757px;
-    margin-left: 25px;
+    max-width: 777px;
+    margin-left: 35px;
   }
 
-  @media (max-width: 1220px) {
-    margin-left: 10px;
+  @media (max-width: 1260px) {
+    margin-left: 20px;
     margin-right: 5px;
   }
 
   @include viewport--md {
-    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    margin-right: 15px;
   }
 
   @include viewport--sm {
-    margin-left: 0;
+    justify-content: flex-start;
+    margin-right: 0;
   }
 }
 
 .main-nav__link {
-  color: $color-blue;
+  color: inherit;
+  line-height: 21px;
+  font-weight: 600;
+  letter-spacing: 0.045em;
   display: inline-block;
   padding: 10px;
-  padding-left: 3px;
-  padding-right: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   &--active {
     color: $color-gray-dark;
+  }
+
+  @include viewport--lg {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  @media (max-width: 1250px) {
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  @include viewport--md {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  @include viewport--sm {
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
 .main-nav__toggle {
   display: none;
+  position: relative;
 
   @include viewport--md {
     display: block;
-    position: absolute;
-    top: -10px;
-    right: 20px;
     width: 25px;
     height: 20px;
     cursor: pointer;
     border: none;
-    background-color: transparent;
-    transition: transform $default-transition-settings;
+    background-color: $color-transparent;
 
     &:hover,
     &:focus {
@@ -84,71 +94,68 @@
     }
   }
 
-
   @include viewport--sm {
-    top: 17px;
-    left: 0;
     z-index: 2;
   }
 }
 
-.main-nav__toggle::before,
+.main-nav__toggle-img {
+  @include viewport--md {
+    fill: $color-blue;
+
+    &--open {
+      display: block;
+    }
+
+    &--close {
+      display: none;
+    }
+  }
+}
+
 .main-nav__toggle::after {
   content: "";
 
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -7px;
+  left: -7px;
 
-  width: 25px;
-  height: 2px;
+  width: 40px;
+  height: 35px;
 
-  background-color: $color-blue;
-
-  transition: box-shadow 0.3s ease-in-out;
+  background-color: $color-transparent;
 }
 
-.main-nav__toggle::after {
-  top: 8px;
-  box-shadow: 0 8px 0 0 $color-blue;
-}
 
 .header--menu-opened .main-nav__toggle {
   width: 26px;
   height: 26px;
-  top: 25px;
-
-  &::before,
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 26px;
-    height: 2px;
-
-    background-color: $color-blue;
-
-    transition: transform 0.3s ease-in-out;
-  }
-
-  &::before {
-    transform: rotate(45deg);
-  }
+  order: 2;
+  margin-top: 25px;
 
   &::after {
-    transform: rotate(-45deg);
-    box-shadow: none;
+    top: -5px;
+    left: -10px;
+  }
+
+
+  @include viewport--sm {
+    margin-top: 0;
+    margin-bottom: 75px;
+    order: 1;
+  }
+}
+
+.header--menu-opened .main-nav__toggle-img {
+  &--open {
+    display: none;
+  }
+
+  &--close {
+    display: block;
   }
 
   @include viewport--sm {
-    top: -95px;
-
-    &::before,
-    &::after {
-      background-color: $color-default-white;
-    }
+    fill: $color-default-white;
   }
 }

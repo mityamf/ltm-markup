@@ -1,17 +1,17 @@
 mixin renderLogin()
   .login
     form(action="#" method="POST").login__form
-      .login__form-wrapper
-        h3 Authorization for Exhibitors and Buyers
-        .login__form-input
-          label(for="login-email").visually-hidden Enter your login
-          input(type="email", name="login-email", id="login-email", placeholder="Your login", required)
-          p Enter for Guest
-        .login__form-input
-          label(for="login-password").visually-hidden Inter your password
-          input(type="password", name="login-password", id="login-password", placeholder="Password", required).login__input-password
-          button(type="button", title="Показать/Скрыть пароль").login__show-password
-            span.visually-hidden Показать/скрыть пароль
-        button(type="submit").login__btn.btn.btn--transparent Enter
-        a(href="#", data-modal="forgot").login__forgot Contact organizers in case of difficulties
+      h3.login__title Authorization for Exhibitors and Buyers
+      .login__form-input
+        label(for="login-email").visually-hidden Enter your login
+        input(type="email", name="login-email", id="login-email", placeholder="Your login", required)
+        a(href="lk-guest.html").login__link.login__link--lk-guest Enter for Guest
+      .login__form-input
+        label(for="login-password").visually-hidden Inter your password
+        input(type="password", name="login-password", id="login-password", placeholder="Password", required).login__input-password
+        button(type="button", title="Показать/Скрыть пароль", aria-label="Показать/скрыть пароль").login__show-password
+          +icon("ico_nonshowpassword", 30, 20)(class="login__show-password-img login__show-password-img--hide")
+          +icon("ico_showpassword", 30, 20)(class="login__show-password-img login__show-password-img--show")
+      button(type="submit").login__btn.btn.btn--transparent Enter
+      a(href="#", data-modal="forgot").login__forgot Contact organizers in case of difficulties
 
