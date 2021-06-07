@@ -1,11 +1,11 @@
 const initLogin = () => {
   const login = document.querySelector('.login');
   const loginShowBtn = document.querySelector('.header__link--sign-in');
-  const showPasswordBtn = document.querySelector('.login__show-password');
-  const inputPassword = document.querySelector('.login__input-password');
-  const form = document.querySelector('.login__form');
-  const forgotPasswordLink = document.querySelector('.login__forgot');
-  const userEmail = document.querySelector('#login-email');
+  const showPasswordBtn = login.querySelector('.login__show-password');
+  const inputPassword = login.querySelector('.login__input-password');
+  const form = login.querySelector('.login__form');
+  const forgotPasswordLink = login.querySelector('.login__forgot');
+  const userEmail = login.querySelector('#login-email');
   const isStorageSupport = true;
   const storage = {};
   const KeyCode = {
@@ -13,11 +13,21 @@ const initLogin = () => {
   };
 
   const openPopup = () => {
+    login.style.maxHeight = login.scrollHeight + 'px';
     login.classList.add('login--show');
   };
 
   const closePopup = () => {
+    login.style.maxHeight = null;
     login.classList.remove('login--show');
+  };
+
+  const togglePopup = () => {
+    if (login.classList.contains('login--show')) {
+      closePopup();
+    } else {
+      openPopup();
+    }
   };
 
   try {
@@ -27,9 +37,10 @@ const initLogin = () => {
   }
 
   if (login) {
+
     loginShowBtn.addEventListener('click', function (evt) {
       evt.preventDefault();
-      login.classList.toggle('login--show');
+      togglePopup();
 
       userEmail.value = storage.email;
       userEmail.focus();
@@ -38,7 +49,7 @@ const initLogin = () => {
     forgotPasswordLink.addEventListener('click', function (evt) {
       evt.preventDefault();
       closePopup();
-    })
+    });
 
     form.addEventListener('submit', function () {
       if (isStorageSupport) {
@@ -54,12 +65,6 @@ const initLogin = () => {
         }
       }
     });
-
-    login.addEventListener('click', function (evt) {
-      if (evt.target == login) {
-        closePopup();
-      }
-    });
   }
 
   showPasswordBtn.addEventListener('click', () => {
@@ -70,7 +75,7 @@ const initLogin = () => {
     } else {
       inputPassword.setAttribute('type', 'password');
     }
-  })
-}
+  });
+};
 
 export {initLogin};
