@@ -73,6 +73,8 @@
 @import "blocks/notification-message";
 @import "blocks/account/account-hotel-info";
 @import "blocks/account/account";
+@import "blocks/account/modal-logout";
+@import "blocks/account/account-notifications";
 @import "blocks/modal-gallery";
 @import "blocks/login";
 @import "blocks/forgot";
@@ -102,6 +104,13 @@
 @import "blocks/admin/wish-list";
 @import "blocks/admin/filter-tabs";
 @import "blocks/admin/lk";
+
+// Modals
+//---------------------------------
+
+@import "blocks/modal/edit-colleague";
+@import "blocks/modal/admin-menu";
+@import "blocks/modal/mobile-filters";
 
 // используйте это для отключения ховеров на тач устройствах
 // ! но не используйте это для текстовых полей ( input, textarea )

@@ -1,7 +1,7 @@
 const buyerSwiper = () => {
   let statusSwiper = null;
 
-  let statusSliders = document.querySelectorAll('.status__slider');
+  let statusSliders = document.querySelectorAll('.status-slider');
   let breakpointWidth = 768;
 
   function initSwiper() {

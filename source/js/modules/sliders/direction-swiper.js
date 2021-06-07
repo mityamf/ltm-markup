@@ -1,10 +1,8 @@
-/* eslint-disable new-cap */
 const directionSlider = () => {
-  // eslint-disable-next-line no-undef, no-unused-vars
-  let directionSwiper = new Swiper('.direction__swiper-block', {
-    spaceBetween: 0,
-    slidesPerGroup: 3,
-    slidesPerView: 4,
+  return new Swiper('.direction__swiper-block', {
+    spaceBetween: 15,
+    slidesPerGroup: 1,
+    slidesPerView: 6,
     loop: false,
     loopFillGroupWithBlank: true,
     pagination: {

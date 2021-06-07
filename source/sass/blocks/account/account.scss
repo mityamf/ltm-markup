@@ -9,6 +9,33 @@
     }
   }
 
+  &__link-hotel {
+    margin-bottom: 7px;
+
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.8px;
+
+    @include viewport--sm {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 0;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    transition: opacity $default-transition-settings;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
   &__event-block > .title--h2 {
     margin-bottom: 1px;
 
@@ -41,6 +68,10 @@
   &__event {
     margin-right: 4px;
     width: 341px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
 
     @include viewport--sm {
       margin-right: 0;
@@ -99,12 +130,24 @@
     }
   }
 
+  &__event-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
   &__event-status svg {
     margin-right: 15px;
   }
 
   &__event-description {
-    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    font-size: 12px;
+    line-height: 15px;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 
     font-size: 12px;
     line-height: 15px;
@@ -117,10 +160,6 @@
     font-size: 14px;
     line-height: 17px;
     color: $color-blue;
-  }
-
-  .btn {
-    width: 100%;
   }
 
   &__contact-us {
@@ -140,17 +179,19 @@
   }
 
   &__admin {
-    width: 340px;
+    width: 448px;
     margin-right: 16px;
 
     @include viewport--lg {
+      width: 514px;
       margin-right: 35px;
     }
 
     @include viewport--sm {
       width: 100%;
       margin: 0;
-      padding: 0 0 6px 0;
+      padding: 0 0 32px;
+      border-bottom: 1px solid $color-blue;
     }
   }
 
@@ -229,112 +270,6 @@
       margin: 0 auto;
       text-align: center;
       padding-bottom: 11px;
-    }
-  }
-
-  &__notifications {
-    @media (max-width: 1200px) {
-      width: 100%;
-      padding-top: 28px;
-    }
-  }
-
-  &__notifications .title--h3 {
-    padding-left: 0;
-    padding-right: 17px;
-    margin-bottom: 0;
-
-    @include viewport--sm {
-      padding-left: 17px;
-      padding-right: 17px;
-    }
-  }
-
-  &__notifications .notifications--time {
-    width: 60px;
-  }
-
-  &__notifications .btn--mobile {
-    display: none;
-
-    @include viewport--sm {
-      display: block;
-    }
-  }
-
-  &__notifications .btn--desktop {
-    display: block;
-    padding: 15px;
-    width: 222px;
-
-    @include viewport--lg {
-      width: 222px;
-    }
-
-    @include viewport--sm {
-      display: none;
-    }
-  }
-
-  &__notifications .notifications__row:first-child {
-    @include viewport--sm {
-      display: block;
-      padding: 0;
-    }
-  }
-
-  &__notifications .notifications__table {
-    @include viewport--sm {
-      margin-bottom: 20px;
-    }
-  }
-
-  &__notifications .btn--more {
-    @include viewport--sm {
-      padding: 14px 30px;
-    }
-  }
-
-  &__notifications th {
-    padding: 5px 0 5px 0;
-
-    @include viewport--lg {
-      white-space: nowrap;
-      overflow: hidden;
-      max-width: 269px;
-      padding: 5px 8px;
-    }
-  }
-
-  &__notifications th:first-child {
-    width: 32px;
-
-    @include viewport--lg {
-      display: block;
-    }
-  }
-
-  &__notifications tr:nth-child(even) {
-    background-color: $color-gray-light;
-  }
-
-  &__notifications .notifications--time,
-  &__notifications .notifications--message,
-  &__notifications .notifications--icon {
-    @include viewport--sm {
-      display: none;
-    }
-  }
-
-  &__notifications .notifications--theme {
-    @include viewport--sm {
-      padding-left: 20px;
-    }
-  }
-
-  &__notifications .notifications__row {
-    @include viewport--sm {
-      padding: 0 17px 0 17px;
     }
   }
 

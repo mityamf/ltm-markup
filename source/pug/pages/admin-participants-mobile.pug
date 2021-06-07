@@ -8,6 +8,7 @@ block variables
 
 block main
   include ../data/pages/admin-participants-mobile
+  include ../data/modal-colleague-admin
 
   main.container
     .admin.admin--mobile
@@ -19,3 +20,11 @@ block main
       +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
     +renderSupportContacts(contactsList)
 
+block append modals
+  include ../data/mobile-admin-tabs
+  include ../data/modal-colleague-admin
+
+  +mobileModal("modal--edit-colleague")
+    +modalEditColleague(editCollegue)
+  +mobileModal("modal--admin-menu")
+    +renderModalAdminTabs(adminTabs)

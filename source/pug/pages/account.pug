@@ -7,10 +7,12 @@ block variables
 
 block main
   include ../data/pages/account
+  include ../data/modal-colleague-admin
 
-  main.container.container--no-padding
+  main.container.container--no-padding.account
     .hotel-headline.hotel-headline--account-page
-      a.account-hotel-info__link-hotel(href=accountHotelInfo.link)=accountHotelInfo.link
+      .visible-sm
+        a.account__link-hotel(href=accountHotelInfo.link)=accountHotelInfo.link
       .hotel-headline__wrapper
         +renderHeadline2(hotelHeadline.title)
         span=hotelHeadline.note
@@ -26,7 +28,16 @@ block main
       .account__notifications
         +renderHeadline3("Notifications")
         +renderNotifications(notifications)
-        button(class="btn btn--white btn--more btn--desktop" type="button") All Notifications
-        button(class="btn btn--white btn--more btn--mobile" type="button") More
+        button(class="btn btn--white btn--more btn--desktop" type="button") All Messages
 
     +renderSupportContacts(contactsList)
+
+block modals
+  +modal("modal--logout")
+    +modal-logout()
+  include ../data/modal-colleague-admin
+
+  +modal("modal--gallery")
+    +modal-gallery()
+  +modal("modal--edit-colleague")
+    +modalEditColleague(editCollegue)

@@ -32,22 +32,24 @@ mixin interaction()
     .interaction__gallery.gallery-block
       h2.gallery-block__title Gallery
       .gallery-block__wrapper
-        .gallery-block__block-1
+        .gallery-block--sm
           picture
-            +img("content", "gallery-1", "png", "341", "222","img gallery")
-          picture.gallery__img
-            +img("content", "gallery-2", "png", "341", "222","img gallery")
-        .gallery-block__block-2
+            +img("content", "gallery-1", "png", "366", "272","img gallery")
+        .gallery-block--md
           picture
-            +img("content", "gallery-3", "png", "272", "222","img gallery")
-        .gallery-block__block-3
+            +img("content", "gallery-2", "png", "366", "272","img gallery")
+        .gallery-block--sm-1
           picture
-            +img("content", "gallery-4", "png", "272", "222","img gallery")
-        .gallery-block__block-4
-          picture.gallery__img
-            +img("content", "gallery-5", "png", "341", "222","img gallery")
+            +img("content", "gallery-3", "png", "366", "272","img gallery")
+        .gallery-block--md-1
           picture
-            +img("content", "gallery-6", "png", "341", "222","img gallery")
+            +img("content", "gallery-4", "png", "366", "272","img gallery")
+        .gallery-block--md
+          picture
+            +img("content", "gallery-5", "png", "366", "272","img gallery")
+        .gallery-block--sm
+          picture
+            +img("content", "gallery-6", "png", "366", "272","img gallery")
 
       .gallery-block__btn-block
         a.button.button--open(href="#")

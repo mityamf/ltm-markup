@@ -15,7 +15,20 @@
 
   .photos__item img {
     height: 222px;
+    width: 100%;
     object-fit: cover;
+  }
+
+  &__item--big {
+    width: 40%;
+  }
+
+  &__item--middle {
+    width: 35%;
+  }
+
+  &__item--small {
+    width: 25%;
   }
 
   &__link-more-wrapper {
@@ -96,11 +109,10 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0;
-    flex-basis: 50%;
+    flex-basis: 59%;
   }
 
   &__block--second .photos__item {
-    //height: 222px;
     object-fit: cover;
   }
 

@@ -1,0 +1,74 @@
+-
+  var editProfile = {
+    title: "Информация о компании",
+    description: "Название компании",
+    company: "Adventa Agency",
+    formList: [
+      {
+        headline: "Web",
+        placeholder: "https://",
+        type: "text",
+        id: "site",
+      },
+      {
+        headline: "Описание компании",
+        placeholder: "Описание компании, только на английском языке",
+        type: "textarea",
+        id: "company-description"
+      },
+      {
+        headline: "Страна",
+        type: "select",
+        options: [
+          'Russia',
+          'USA'
+        ],
+        id: "country-select"
+      },
+      {
+        headline: "Город",
+        type: "select",
+        options: [
+          'Moscow',
+          'Saratov'
+        ],
+        id: "city-select"
+      },
+      {
+        headline: "Адрес",
+        placeholder: "office, bld., St",
+        type: "text",
+        id: "company-address",
+      },
+      {
+        headline: "Почтовый индекс",
+        placeholder: "000000",
+        type: "text",
+        id: "company-post-index",
+      },
+      {
+        headline: "Телефон",
+        placeholder: "+1 (111) 111 11 11",
+        type: "text",
+        id: "company-phone",
+      },
+      {
+        headline: "E-mail",
+        placeholder: "E-mail",
+        type: "text",
+        id: "company-email",
+      },
+    ],
+    buttonList: [
+      {
+        text: "Отмена",
+        mod: "btn--white",
+        type: "reset"
+      },
+      {
+        text: "Сохранить",
+        mod: "btn--blue",
+        type: "submit"
+      }
+    ]
+  }

@@ -1,0 +1,6 @@
+mixin renderModalAdminTabs(data)
+  .admin-menu
+    ul.admin-menu__list
+      each tab in data
+        li.admin-menu__item
+          a.admin-menu__link(href=tab.link)=tab.text

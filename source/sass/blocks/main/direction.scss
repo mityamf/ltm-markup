@@ -178,7 +178,7 @@
   }
 
   .title--h2 {
-    margin-bottom: 27px;
+    margin-bottom: 20px;
     letter-spacing: 1.4px;
 
     @include viewport--lg {
@@ -223,7 +223,8 @@
   }
 
   .direction__item {
-    padding: 8px 0;
+    padding: 7px 0 15px 0;
+    border: 1px solid transparent;
 
     @include viewport--sm {
       align-items: center;
@@ -232,12 +233,10 @@
   }
 
   .swiper-slide {
-    width: 236px;
-    margin-right: 10px;
-    border: 1px solid transparent;
+    //margin-right: 15px;
 
     @include viewport--lg {
-      width: 274px;
+      margin-right: 10px;
     }
 
     @include viewport--sm {
@@ -247,7 +246,17 @@
     }
   }
 
-  .swiper-slide-active {
+  input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    visibility: hidden;
+  }
+
+  input:checked ~ .direction__radio .direction__item {
     border-color: $color-blue;
   }
 

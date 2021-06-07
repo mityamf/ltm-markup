@@ -1,0 +1,33 @@
+mixin modalEditColleague(data)
+  .edit-colleague
+    +renderHeadline2(data.title)
+    .edit-colleague__photo-column
+      img(src=data.photo, width=103, height=103)
+      label.edit-colleague__photo-upload
+        span Загрузить
+        input(type="file")
+      .edit-colleague__upload-info
+        span="JPG, PNG"
+        span="Min. 200x200 px."
+        span="Max. 3 mb."
+    .edit-colleague__content-column
+      form(action="#" method="POST").edit-colleague__form
+        each item in data.formList
+
+          if item.type === 'text'
+            .edit-colleague__block
+              label.input-wrapper(for=item.id)=item.headline
+              input(placeholder=item.placeholder, id=item.id, name=item.id, type=item.type)
+
+          if item.type === 'select'
+            .edit-colleague__block
+              p=item.headline
+              select(id=item.id, class="input-dropdown")
+                each option in item.options
+                  option(value=option, class="input-dropdown__option")=option
+
+        .edit-colleague__buttons
+          each button in data.buttonList
+            button.btn(class=button.mod type=button.type)=button.text
+
+
