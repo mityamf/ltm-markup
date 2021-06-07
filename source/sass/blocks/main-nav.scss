@@ -79,13 +79,17 @@
   display: none;
   position: relative;
 
+  @include pseudo-full;
+
+  cursor: pointer;
+  border: none;
+  background-color: $color-transparent;
+  color: inherit;
+
   @include viewport--md {
     display: block;
     width: 25px;
     height: 20px;
-    cursor: pointer;
-    border: none;
-    background-color: $color-transparent;
 
     &:hover,
     &:focus {
@@ -101,8 +105,6 @@
 
 .main-nav__toggle-img {
   @include viewport--md {
-    fill: $color-blue;
-
     &--open {
       display: block;
     }
@@ -113,31 +115,11 @@
   }
 }
 
-.main-nav__toggle::after {
-  content: "";
-
-  position: absolute;
-  top: -7px;
-  left: -7px;
-
-  width: 40px;
-  height: 35px;
-
-  background-color: $color-transparent;
-}
-
-
 .header--menu-opened .main-nav__toggle {
   width: 26px;
   height: 26px;
   order: 2;
   margin-top: 25px;
-
-  &::after {
-    top: -5px;
-    left: -10px;
-  }
-
 
   @include viewport--sm {
     margin-top: 0;
@@ -153,9 +135,5 @@
 
   &--close {
     display: block;
-  }
-
-  @include viewport--sm {
-    fill: $color-default-white;
   }
 }

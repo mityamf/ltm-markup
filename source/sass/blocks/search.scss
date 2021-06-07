@@ -38,8 +38,7 @@
     font-size: 33px;
     line-height: 44px;
     color: $color-default-white;
-    padding: 7px;
-    padding-left: 0;
+    padding: 7px 0;
     background-color: $color-blue;
   }
 }
@@ -68,9 +67,7 @@
   cursor: pointer;
   transition: opacity $default-transition-settings;
 
-
   svg {
-    fill: currentColor;
     width: 20px;
     height: 20px;
   }

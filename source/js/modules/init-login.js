@@ -6,6 +6,7 @@ const initLogin = () => {
   const form = login.querySelector('.login__form');
   const forgotPasswordLink = login.querySelector('.login__forgot');
   const userEmail = login.querySelector('#login-email');
+  const mobileWidth = window.matchMedia('(max-width:767px)');
   const isStorageSupport = true;
   const storage = {};
   const KeyCode = {
@@ -13,7 +14,9 @@ const initLogin = () => {
   };
 
   const openPopup = () => {
-    login.style.maxHeight = login.scrollHeight + 'px';
+    if (!mobileWidth.matches) {
+      login.style.maxHeight = login.scrollHeight + 'px';
+    }
     login.classList.add('login--show');
   };
 
