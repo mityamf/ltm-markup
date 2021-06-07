@@ -3,27 +3,27 @@ mixin header(headerMod, currentPage)
     .header__top
       .container
         ul.header__top-list
-          li.header__item.header__item--desktop-tablet
+          li.header__item.hidden-sm
             button(type="button").header__top-link.header__top-link--search.js-search-button
               +icon("icon-search", 17, 17)
-          li.header__item.header__item--desktop-tablet
+          li.header__item.hidden-sm
             a(href="#").header__top-link Terms & Conditions
           li.header__item
-            a(href="#", aria-label="Переключить на русский язык").header__top-link.header__top-link--rus Рус
+            a(href="#", aria-label="Переключить на русский язык").header__top-link Рус
     .header__main
       .container
         .header__main-wrapper
           if(currentPage === "main")
             a.header__logo
-              +icon("logo-desktop", 178, 67)(class="header__logo-img header__logo-img--desktop")
-              +icon("logo-mobile", 53, 47)(class="header__logo-img header__logo-img--mobile")
+              +icon("logo-desktop", 178, 67)(class="header__logo-img header__logo-img--desktop hidden-sm")
+              +icon("logo-mobile", 53, 47)(class="header__logo-img header__logo-img--mobile visible-sm")
           else
             a.header__logo(href="main.html", aria-label="Переход на главную")
-              +icon("logo-desktop", 178, 67)(class="header__logo-img header__logo-img--desktop")
-              +icon("logo-mobile", 53, 47)(class="header__logo-img header__logo-img--mobile")
+              +icon("logo-desktop", 178, 67)(class="header__logo-img header__logo-img--desktop hidden-sm")
+              +icon("logo-mobile", 53, 47)(class="header__logo-img header__logo-img--mobile visible-sm")
           +main-nav
           a(href="#").header__link.header__link--sign-in
-            span.header__sign-in-text Sign in
+            span.header__sign-in-text.hidden-sm Sign in
             +icon("icon-sign-in", 26, 30)
           +renderLogin
         +search
