@@ -19,10 +19,11 @@ block main
       .admin__control-wrapper
         +renderAdminTabs(adminTabs)
         +renderMailControl("Отправленные", adminMailControl.linkList, adminMailControl.isSearchInput)
-      h2.admin-table__headline="Отправленные"
+      h2.admin__headline="Отправленные"
       +renderSentMessages(adminSentMessagesTitles, adminSentMessages)
 
-      button.btn.btn--white.btn--more(type="button")="Показать больше"
+      .admin__button-wrapper
+        button.btn.btn--white.btn--more(type="button")="Показать больше"
 
     +renderSupportContacts(contactsList)
 
