@@ -173,9 +173,9 @@
   font-weight: 700;
   outline: 0;
   display: flex;
-  border: 1px solid #0098c1;
+  border: 1px solid $color-blue;
   border-radius: 1px;
-  color: #0098c1;
+  color: $color-blue;
   align-items: center;
   justify-content: center;
   line-height: 19px;
@@ -183,7 +183,7 @@
 
   &--footer-btn {
     width: 22%;
-    max-width: 103px;
+    //max-width: 103px;
     height: 42px;
     padding: 11px 42px;
 
@@ -202,11 +202,9 @@
   &--blue {
     font-size: 18px;
     font-weight: 600;
-    background-color: #0098c1;
-    color: #ffffff;
-    //padding: 14px 64px;
+    background-color: $color-blue;
+    color: $color-default-white;
     padding: 14px 31px;
-    //margin-top: 36px;
     align-self: center;
   }
 
