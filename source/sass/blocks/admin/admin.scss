@@ -2,11 +2,7 @@
   padding-bottom: 29px;
 
   @include viewport--lg {
-    padding-bottom: 49px;
-  }
-
-  @include viewport--sm {
-    padding-bottom: 31px;
+    padding-bottom: 0;
   }
 
   &__control-wrapper {
@@ -65,7 +61,7 @@
   }
 
   .title--h2 {
-    margin-bottom: 20px;
+    margin-bottom: 13px;
   }
 
   .edit .title--h3 {
@@ -78,11 +74,11 @@
     margin: 0;
   }
 
-  .title--big {
-    @include viewport--sm {
-      display: none;
-    }
-  }
+  //.title--big {
+  //  @include viewport--sm {
+  //    display: none;
+  //  }
+  //}
 
   .hotel-filters {
     border: none;

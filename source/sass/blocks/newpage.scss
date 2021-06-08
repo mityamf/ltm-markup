@@ -1,7 +1,3 @@
-.newpage {
-  position: relative;
-}
-
 .newpage h2 {
   letter-spacing: 0.04em;
 
@@ -25,7 +21,7 @@
   @include viewport--sm {
     position: absolute;
     top: 5px;
-    left: 0;
+    left: 17px;
   }
 }
 
