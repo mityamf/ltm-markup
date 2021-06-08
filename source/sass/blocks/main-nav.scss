@@ -1,5 +1,4 @@
 .main-nav {
-  margin-left: 50px;
   margin-right: 20px;
   max-width: 870px;
   flex-grow: 1;
@@ -18,11 +17,9 @@
 
   @include viewport--lg {
     max-width: 777px;
-    margin-left: 35px;
   }
 
   @media (max-width: 1260px) {
-    margin-left: 20px;
     margin-right: 5px;
   }
 

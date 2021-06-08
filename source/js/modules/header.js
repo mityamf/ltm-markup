@@ -5,6 +5,7 @@ const initHeader = () => {
   if (header) {
 
     const topBar = header.querySelector('.header__top');
+    const mobileWidth = window.matchMedia('(max-width:767px)');
 
     let scrollPos = window.pageYOffset;
 
@@ -16,7 +17,9 @@ const initHeader = () => {
 
       let st = window.pageYOffset || document.documentElement.scrollTop;
 
-      header.style.transform = (st > scrollPos) ? `translateY(-${getTopBarHeight()}px)` : null;
+      if (!mobileWidth.matches) {
+        header.style.transform = (st > scrollPos) ? `translateY(-${getTopBarHeight()}px)` : null;
+      }
 
       scrollPos = st <= 0 ? 0 : st;
     };
