@@ -23,12 +23,13 @@ block main
         time.privacy-policy__date(datetime=privacyPolicy.datetime)= privacyPolicy.date
         .privacy-policy__wrapper
           p= privacyPolicy.text
-          ul.privacy-policy__list
+          .privacy-policy__list
             each item in privacyPolicy.content
-              li
+              .privacy-policy__text-wrapper
                 h3= item.question
                 each paragraph in item.answer
                   p= paragraph
+
         .visible-sm
           .privacy-policy__button-wrapper
             +renderUpButton('up-button--mobile')

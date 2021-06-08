@@ -30,6 +30,18 @@
   }
 }
 
+@mixin pseudo-full {
+  &::before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: -10px;
+    bottom: -10px;
+    right: -10px;
+    background-color: $color-transparent;
+  }
+}
+
 // Mobile first
 
 /* @mixin viewport--md {

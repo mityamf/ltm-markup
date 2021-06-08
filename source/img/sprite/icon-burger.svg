@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" viewBox="0 0 25 20">
   <g id="button_menu" transform="translate(-20 -28)">
-    <rect id="Rectangle_10" data-name="Rectangle 10" width="25" height="2" transform="translate(20 28)" fill="#0098c1"/>
-    <rect id="Rectangle_10-2" data-name="Rectangle 10" width="25" height="2" transform="translate(20 37)" fill="#0098c1"/>
-    <rect id="Rectangle_10-3" data-name="Rectangle 10" width="25" height="2" transform="translate(20 46)" fill="#0098c1"/>
+    <rect id="Rectangle_10" data-name="Rectangle 10" width="25" height="2" transform="translate(20 28)" fill="currentColor"/>
+    <rect id="Rectangle_10-2" data-name="Rectangle 10" width="25" height="2" transform="translate(20 37)" fill="currentColor"/>
+    <rect id="Rectangle_10-3" data-name="Rectangle 10" width="25" height="2" transform="translate(20 46)" fill="currentColor"/>
   </g>
 </svg>

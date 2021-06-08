@@ -1,14 +1,5 @@
 .newpage {
   position: relative;
-  margin-bottom: 50px;
-
-  @include viewport--lg {
-    margin-bottom: 0;
-  }
-
-  @include viewport--sm {
-    margin-bottom: 31px;
-  }
 }
 
 .newpage h2 {
@@ -38,7 +29,7 @@
   }
 }
 
-.newpage__content {
+.content {
   max-width: 936px;
   margin: 0 auto;
 
@@ -51,6 +42,10 @@
   }
 }
 
-.newpage__content p:last-of-type {
+.newpage .content p:last-of-type {
   margin-bottom: 0;
+}
+
+.newpage .content p:first-of-type {
+  margin-top: 0;
 }

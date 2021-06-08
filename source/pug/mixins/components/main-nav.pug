@@ -1,12 +1,14 @@
 mixin main-nav()
-  include ../../data/header-links
+  include ../../data/main-nav
     nav.main-nav
       button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+        +icon("icon-burger", 25, 20)(class="main-nav__toggle-img main-nav__toggle-img--open")
+        +icon("icon-close", 20, 20)(class="main-nav__toggle-img main-nav__toggle-img--close")
       ul.main-nav__list
         each link in headerLinks
           if(link.text === currentPage)
-            li
+            li.main-nav__item
               a.main-nav__link.main-nav__link--active= link.text
           else
-            li
+            li.main-nav__item
               a.main-nav__link(href=link.href)= link.text

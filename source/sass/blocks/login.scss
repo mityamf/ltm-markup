@@ -4,12 +4,13 @@
   top: 100%;
   right: 50px;
   width: 100%;
-  max-width: 341px;
-  height: 0;
+  max-width: 340px;
+  max-height: 0;
   overflow: hidden;
   border-radius: 2px;
   background-color: $color-blue;
-  transition: 0.3s ease-out;
+  color: $color-default-white;
+  transition: 0.3s ease-in;
 
   @include viewport--lg {
     right: 80px;
@@ -20,26 +21,50 @@
   }
 
   &--show {
-    height: 261px;
-    transition: 0.3s ease-out;
+    @include viewport--sm {
+      background-color: $color-blue;
+      height: 100vh;
+      max-height: 100vh;
+      width: 100%;
+      max-width: 100%;
+      z-index: 10;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      overflow-y: scroll;
+      transition: transform 0.3s ease-in;
+    }
   }
 }
 
-.login__form-wrapper {
+.login__form {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px 20px 10px 19px;
+
+  @include viewport--sm {
+    margin: 0 auto;
+    max-width: 500px;
+    padding-bottom: 50px;
+  }
 }
 
-.login__form-wrapper h3 {
+.login__title {
   margin: 0;
   margin-bottom: 19px;
   padding: 0;
   font-size: 16px;
   font-weight: normal;
   line-height: 22px;
-  color: $color-default-white;
+
+  @include viewport--sm {
+    font-size: 32px;
+    line-height: 43px;
+    font-weight: 300;
+    text-align: center;
+  }
 }
 
 .login__form-input {
@@ -68,12 +93,13 @@
   }
 }
 
-.login__form-input input[type="email"] + p {
+.login__link {
   position: absolute;
-  top: 13px;
-  right: 17px;
+  display: block;
+  top: 0;
+  right: 0;
 
-  padding: 0;
+  padding: 13px 10px;
   margin: 0;
 
   font-size: 13px;
@@ -86,20 +112,47 @@
 
 .login__show-password {
   position: absolute;
-  top: 11px;
-  right: 10px;
+  top: 0;
+  right: 0;
   width: 30px;
   height: 20px;
-  padding: 0;
+  padding: 10px;
   border: none;
+  background-color: $color-transparent;
+  box-sizing: content-box;
   cursor: pointer;
   user-select: none;
   overflow: hidden;
-  background: url("../../img/svg/ico_nonshowpassword.svg") no-repeat center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    background-color: $color-transparent;
+  }
 }
 
-.login__show-password.login__show-password--active {
-  background: url("../../img/svg/ico_showpassword.svg") no-repeat center;
+.login__show-password-img {
+  &--hide {
+    display: block;
+  }
+
+  &--show {
+    display: none;
+  }
+}
+
+.login__show-password--active .login__show-password-img {
+  &--hide {
+    display: none;
+  }
+
+  &--show {
+    display: block;
+  }
 }
 
 .login__btn {
@@ -111,13 +164,13 @@
   letter-spacing: 0.01em;
 }
 
-.login__form-wrapper .login__forgot {
+.login__forgot {
   padding: 0;
   margin: 0;
   font-weight: normal;
   font-size: 12px;
   line-height: 18px;
-  color: $color-default-white;
+  color: inherit;
   letter-spacing: 0.015em;
 
   &:hover,
@@ -127,5 +180,36 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+.login__header {
+  @include viewport--sm {
+    position: relative;
+    min-height: 240px;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+}
+
+.login__close {
+  color: inherit;
+  position: relative;
+
+  @include pseudo-full;
+}
+
+.login__logo {
+  color: inherit;
+  position: absolute;
+  top: 83px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  svg {
+    width: 105px;
+    height: 92px;
   }
 }
