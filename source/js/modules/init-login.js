@@ -1,11 +1,15 @@
+import {disableScrolling, enableScrolling} from '../utils/scroll-lock';
+
 const initLogin = () => {
   const login = document.querySelector('.login');
   const loginShowBtn = document.querySelector('.header__link--sign-in');
-  const showPasswordBtn = document.querySelector('.login__show-password');
-  const inputPassword = document.querySelector('.login__input-password');
-  const form = document.querySelector('.login__form');
-  const forgotPasswordLink = document.querySelector('.login__forgot');
-  const userEmail = document.querySelector('#login-email');
+  const loginCloseBtn = login.querySelector('.login__close');
+  const showPasswordBtn = login.querySelector('.login__show-password');
+  const inputPassword = login.querySelector('.login__input-password');
+  const form = login.querySelector('.login__form');
+  const forgotPasswordLink = login.querySelector('.login__forgot');
+  const userEmail = login.querySelector('#login-email');
+  const mobileWidth = window.matchMedia('(max-width:767px)');
   const isStorageSupport = true;
   const storage = {};
   const KeyCode = {
@@ -13,23 +17,61 @@ const initLogin = () => {
   };
 
   const openPopup = () => {
+    if (mobileWidth.matches) {
+      disableScrolling();
+      loginCloseBtn.addEventListener('click', closePopup);
+    }
+
+    if (!mobileWidth.matches) {
+      login.style.maxHeight = login.scrollHeight + 'px';
+    }
     login.classList.add('login--show');
+    window.addEventListener('keydown', onEcsPress);
+    window.addEventListener('click', outsideClickListener);
   };
 
   const closePopup = () => {
+    login.style.maxHeight = null;
     login.classList.remove('login--show');
+    enableScrolling();
+    window.removeEventListener('keydown', onEcsPress);
+    loginCloseBtn.removeEventListener('click', closePopup);
+    window.removeEventListener('click', outsideClickListener);
   };
 
-  try {
-    storage.email = localStorage.getItem('email');
-  } catch (err) {
-    isStorageSupport = false;
-  }
+  const togglePopup = () => {
+    if (login.classList.contains('login--show')) {
+      closePopup();
+    } else {
+      openPopup();
+    }
+  };
+
+  const onEcsPress = (evt) => {
+    if (evt.keyCode === KeyCode.ESC) {
+      evt.preventDefault();
+      closePopup();
+    }
+  };
+
+
+  const outsideClickListener = (evt) => {
+    if (!login.contains(evt.target) && !loginShowBtn.contains(evt.target)) {
+      closePopup();
+    }
+  };
 
   if (login) {
+
+    try {
+      storage.email = localStorage.getItem('email');
+    } catch (err) {
+      isStorageSupport = false;
+    }
+
     loginShowBtn.addEventListener('click', function (evt) {
       evt.preventDefault();
-      login.classList.toggle('login--show');
+      togglePopup();
 
       userEmail.value = storage.email;
       userEmail.focus();
@@ -38,7 +80,7 @@ const initLogin = () => {
     forgotPasswordLink.addEventListener('click', function (evt) {
       evt.preventDefault();
       closePopup();
-    })
+    });
 
     form.addEventListener('submit', function () {
       if (isStorageSupport) {
@@ -46,20 +88,7 @@ const initLogin = () => {
       }
     });
 
-    window.addEventListener('keydown', function (evt) {
-      if (evt.keyCode === KeyCode.ESC) {
-        evt.preventDefault();
-        if (login.classList.contains('login--show')) {
-          closePopup();
-        }
-      }
-    });
-
-    login.addEventListener('click', function (evt) {
-      if (evt.target == login) {
-        closePopup();
-      }
-    });
+    window.addEventListener('resize', closePopup);
   }
 
   showPasswordBtn.addEventListener('click', () => {
@@ -70,7 +99,7 @@ const initLogin = () => {
     } else {
       inputPassword.setAttribute('type', 'password');
     }
-  })
-}
+  });
+};
 
 export {initLogin};

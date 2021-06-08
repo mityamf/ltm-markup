@@ -32,6 +32,22 @@ const initSearch = () => {
       }
     };
 
+    const hideOnClickOutside = () => {
+      const outsideClickListener = (evt) => {
+        if (!searchElement.contains(evt.target) && !searchButton.contains(evt.target)) {
+          closeSearch();
+          removeClickListener();
+        }
+      };
+
+      const removeClickListener = () => {
+        document.removeEventListener('click', outsideClickListener);
+      };
+
+      window.addEventListener('click', outsideClickListener);
+    };
+
+    hideOnClickOutside();
     searchButton.addEventListener('click', toggleSearch);
     window.addEventListener('resize', closeSearch);
   }

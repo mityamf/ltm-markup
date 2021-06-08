@@ -2,11 +2,11 @@ import {ieFix} from './utils/ie-fix';
 import {iosVhFix} from './utils/ios-vh-fix';
 
 import {initModals} from './modules/init-modals';
-import {stickNav} from './modules/stick-nav';
+import {initHeader} from './modules/header';
 import {initSearch} from './modules/search';
 import {initMenu} from './modules/init-menu';
 import {toggleGallery} from './modules/toggle-gallery';
-import {initGallerySwiper} from './modules/init-gallery-swiper';
+import {initGallerySlider} from './modules/init-gallery-slider';
 import {regSwiper} from './modules/sliders/reg-swiper';
 import {homeSwiper} from './modules/sliders/home-swiper';
 import {photosSwiper} from './modules/sliders/photos-swiper';
@@ -17,7 +17,7 @@ import {dropdown} from './modules/dropdown';
 import {initModalGallerySwiper} from './modules/init-modal-gallery-swiper';
 import {buyerSwiper} from './modules/sliders/buyer-swiper';
 import {directionSlider} from './modules/sliders/direction-swiper';
-//import {initResizePhotos} from './modules/admin-gallery';
+// import {initResizePhotos} from './modules/admin-gallery';
 import {initLogin} from './modules/init-login';
 
 // Utils
@@ -30,11 +30,11 @@ iosVhFix();
 // ---------------------------------
 
 initModals();
-stickNav();
+initHeader();
 initSearch();
 initMenu();
 toggleGallery();
-initGallerySwiper();
+initGallerySlider();
 photosSwiper();
 eventSwiper();
 cardSwiper();
@@ -42,7 +42,7 @@ dropdown();
 initSmoothAnchors();
 homeSwiper();
 initModalGallerySwiper();
-//initResizePhotos();
+// initResizePhotos();
 regSwiper();
 buyerSwiper();
 directionSlider();
