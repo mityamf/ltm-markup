@@ -19,7 +19,7 @@ block main
       .admin__control-wrapper
         +renderAdminTabs(adminTabs)
         +renderMailControl("Inbox", adminMailControl.linkList, adminMailControl.isSearchInput)
-      h2.admin-table__headline="Inbox"
+      h2.admin__headline="Inbox"
       +renderInboxMessages(adminInboxMessagesTitles, adminInboxMessages)
 
       .admin__button-wrapper

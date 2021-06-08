@@ -41,7 +41,7 @@
     padding: 0 15px;
 
     @include viewport--sm {
-      padding: 3px 0 0 0;
+      padding: 10px 0 0;
     }
   }
 
@@ -64,6 +64,19 @@
     }
   }
 
+  .edit__buttons {
+    padding-bottom: 17px;
+
+    @include viewport--lg {
+      padding-bottom: 50px;
+    }
+
+    @include viewport--sm {
+      margin: 0 auto 0;
+      padding-bottom: 10px;
+    }
+  }
+
   .title--h2 {
     margin-bottom: 13px;
   }
@@ -78,11 +91,21 @@
     margin: 0;
   }
 
-  //.title--big {
-  //  @include viewport--sm {
-  //    display: none;
-  //  }
-  //}
+  &__headline {
+    display: none;
+
+    @include viewport--sm {
+      display: block;
+      margin-top: 5px;
+      margin-bottom: 15px;
+
+      font-size: 38px;
+      font-weight: lighter;
+      line-height: 46px;
+      letter-spacing: 0.05em;
+      color: $color-blue;
+    }
+  }
 
   .hotel-filters {
     border: none;

@@ -9427,7 +9427,7 @@ p {
     padding: 0 15px; }
     @media (max-width: 767px) {
       .admin .edit__text-block {
-        padding: 3px 0 0 0; } }
+        padding: 10px 0 0; } }
   .admin .edit__input {
     padding: 5px 18px; }
   .admin .input-dropdown {
@@ -9439,6 +9439,15 @@ p {
   @media (max-width: 767px) {
     .admin .edit .btn {
       width: 222px; } }
+  .admin .edit__buttons {
+    padding-bottom: 17px; }
+    @media (max-width: 1439px) {
+      .admin .edit__buttons {
+        padding-bottom: 50px; } }
+    @media (max-width: 767px) {
+      .admin .edit__buttons {
+        margin: 0 auto 0;
+        padding-bottom: 10px; } }
   .admin .title--h2 {
     margin-bottom: 13px; }
   @media (max-width: 767px) {
@@ -9446,6 +9455,18 @@ p {
       margin-top: 20px; } }
   .admin .title--small {
     margin: 0; }
+  .admin__headline {
+    display: none; }
+    @media (max-width: 767px) {
+      .admin__headline {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        font-size: 38px;
+        font-weight: lighter;
+        line-height: 46px;
+        letter-spacing: 0.05em;
+        color: #0098c1; } }
   .admin .hotel-filters {
     border: none;
     padding: 19px 0 0 0; }
@@ -10701,23 +10722,6 @@ p {
         white-space: break-spaces;
         font-size: 14px;
         line-height: 13px; } }
-  .admin-table__headline {
-    display: none; }
-    @media (max-width: 767px) {
-      .admin-table__headline {
-        display: block;
-        margin-top: 5px;
-        margin-bottom: 15px;
-        font-size: 38px;
-        font-weight: lighter;
-        line-height: 46px;
-        letter-spacing: 0.05em;
-        color: #0098c1; } }
-
-@media (max-width: 767px) {
-  .container--no-padding .admin-table__headline {
-    padding-left: 17px;
-    padding-right: 17px; } }
 
 @media (max-width: 767px) {
   .admin--schedule .admin-table {

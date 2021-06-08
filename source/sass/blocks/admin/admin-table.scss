@@ -667,29 +667,6 @@
       line-height: 13px;
     }
   }
-
-  &__headline {
-    display: none;
-
-    @include viewport--sm {
-      display: block;
-      margin-top: 5px;
-      margin-bottom: 15px;
-
-      font-size: 38px;
-      font-weight: lighter;
-      line-height: 46px;
-      letter-spacing: 0.05em;
-      color: $color-blue;
-    }
-  }
-}
-
-.container--no-padding .admin-table__headline {
-  @include viewport--sm {
-    padding-left: 17px;
-    padding-right: 17px;
-  }
 }
 
 .admin--schedule .admin-table {
