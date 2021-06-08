@@ -27,6 +27,7 @@ const initLogin = () => {
     }
     login.classList.add('login--show');
     window.addEventListener('keydown', onEcsPress);
+    window.addEventListener('click', outsideClickListener);
   };
 
   const closePopup = () => {
@@ -35,6 +36,7 @@ const initLogin = () => {
     enableScrolling();
     window.removeEventListener('keydown', onEcsPress);
     loginCloseBtn.removeEventListener('click', closePopup);
+    window.removeEventListener('click', outsideClickListener);
   };
 
   const togglePopup = () => {
@@ -52,19 +54,11 @@ const initLogin = () => {
     }
   };
 
-  const hideOnClickOutside = () => {
-    const outsideClickListener = (evt) => {
-      if (!login.contains(evt.target) && !loginShowBtn.contains(evt.target)) {
-        closePopup();
-        removeClickListener();
-      }
-    };
 
-    const removeClickListener = () => {
-      document.removeEventListener('click', outsideClickListener);
-    };
-
-    window.addEventListener('click', outsideClickListener);
+  const outsideClickListener = (evt) => {
+    if (!login.contains(evt.target) && !loginShowBtn.contains(evt.target)) {
+      closePopup();
+    }
   };
 
   if (login) {
@@ -93,8 +87,6 @@ const initLogin = () => {
         localStorage.setItem('email', userEmail.value);
       }
     });
-
-    hideOnClickOutside();
 
     window.addEventListener('resize', closePopup);
   }

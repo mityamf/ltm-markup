@@ -2,11 +2,11 @@ import {ieFix} from './utils/ie-fix';
 import {iosVhFix} from './utils/ios-vh-fix';
 
 import {initModals} from './modules/init-modals';
-import {stickNav} from './modules/header';
+import {initHeader} from './modules/header';
 import {initSearch} from './modules/search';
 import {initMenu} from './modules/init-menu';
 import {toggleGallery} from './modules/toggle-gallery';
-import {initGallerySwiper} from './modules/init-gallery-swiper';
+import {initGallerySlider} from './modules/init-gallery-slider';
 import {regSwiper} from './modules/sliders/reg-swiper';
 import {homeSwiper} from './modules/sliders/home-swiper';
 import {photosSwiper} from './modules/sliders/photos-swiper';
@@ -30,11 +30,11 @@ iosVhFix();
 // ---------------------------------
 
 initModals();
-stickNav();
+initHeader();
 initSearch();
 initMenu();
 toggleGallery();
-initGallerySwiper();
+initGallerySlider();
 photosSwiper();
 eventSwiper();
 cardSwiper();
