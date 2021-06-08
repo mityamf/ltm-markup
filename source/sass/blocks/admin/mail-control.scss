@@ -66,27 +66,32 @@
   }
 
   &__link-item--active {
-    opacity: 0.5;
+    .mail-control__link {
+      color: $color-gray;
+    }
+
+    &:hover,
+    &:focus {
+      .mail-control__link {
+        color: $color-gray;
+      }
+    }
+  }
+
+  &__link-item {
+    &:hover,
+    &:focus {
+      .mail-control__link {
+        color: rgba(80, 80, 80, 0.7);
+      }
+    }
   }
 
   &__link {
     font-size: 16px;
     line-height: 20px;
     color: $color-gray-dark;
-    transition: opacity 0.3s ease;
-
-    &:hover,
-    &:focus {
-      opacity: 0.7;
-    }
-
-    &:active {
-      opacity: 0.5;
-    }
-  }
-
-  &__link--active {
-    color: $color-gray;
+    transition: color 0.3s $default-transition-settings;
   }
 
   &__find-label {
@@ -101,11 +106,19 @@
     &:hover,
     &:focus {
       .mail-control__find-input {
-        border-color: $color-gray-dark;
+        border-color: $color-blue;
+        outline: none;
       }
 
       svg {
         fill: $color-gray-dark;
+      }
+    }
+
+    &:active {
+      .mail-control__find-input {
+        border-color: rgba(0, 152, 193, 0.5);
+        outline-color: transparent;
       }
     }
   }
@@ -127,6 +140,15 @@
 
     @include viewport--lg {
       padding: 12px 14px 12px 41px;
+    }
+
+    &:hover {
+      border-color: rgba(0, 152, 193, 0.5);
+    }
+
+    &:focus {
+      border-color: $color-blue;
+      outline: none;
     }
   }
 }
