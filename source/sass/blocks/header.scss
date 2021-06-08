@@ -46,18 +46,19 @@
 
   &__main-wrapper {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding-top: 15px;
     padding-bottom: 8px;
 
     @include viewport--lg {
-      padding-top: 20px;
+      padding-top: 10px;
       padding-bottom: 5px;
     }
 
     @include viewport--sm {
       padding-top: 37px;
-      padding-bottom: 0;
+      padding-bottom: 37px;
     }
   }
 
@@ -159,7 +160,17 @@
   }
 
   &__logo {
-    margin-right: auto;
+    margin-right: 125px;
+    padding-top: 5px;
+
+    @include viewport--lg {
+      margin-right: 48px;
+      padding-top: 10px;
+    }
+
+    @media (max-width: 1260px) {
+      margin-right: 20px;
+    }
 
     @include viewport--sm {
       position: absolute;
