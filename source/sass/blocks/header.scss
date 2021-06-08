@@ -187,7 +187,6 @@
     @include viewport--sm {
       width: 53px;
       height: 47px;
-      fill: $color-blue;
     }
   }
 }
@@ -303,7 +302,6 @@
     }
 
     .header__logo-img--mobile {
-      fill: currentColor;
       width: 105px;
       height: 92px;
     }

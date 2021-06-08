@@ -1,5 +1,10 @@
 mixin renderLogin()
   .login
+    .login__header.visible-sm.container
+      button.login__close.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+        +icon("icon-close", 20, 20)
+      a.login__logo
+        +icon("logo-mobile", 53, 47)
     form(action="#" method="POST").login__form
       h3.login__title Authorization for Exhibitors and Buyers
       .login__form-input

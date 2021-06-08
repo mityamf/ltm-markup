@@ -2,7 +2,7 @@ import {ieFix} from './utils/ie-fix';
 import {iosVhFix} from './utils/ios-vh-fix';
 
 import {initModals} from './modules/init-modals';
-import {stickNav} from './modules/stick-nav';
+import {stickNav} from './modules/header';
 import {initSearch} from './modules/search';
 import {initMenu} from './modules/init-menu';
 import {toggleGallery} from './modules/toggle-gallery';
@@ -17,7 +17,7 @@ import {dropdown} from './modules/dropdown';
 import {initModalGallerySwiper} from './modules/init-modal-gallery-swiper';
 import {buyerSwiper} from './modules/sliders/buyer-swiper';
 import {directionSlider} from './modules/sliders/direction-swiper';
-//import {initResizePhotos} from './modules/admin-gallery';
+// import {initResizePhotos} from './modules/admin-gallery';
 import {initLogin} from './modules/init-login';
 
 // Utils
@@ -42,7 +42,7 @@ dropdown();
 initSmoothAnchors();
 homeSwiper();
 initModalGallerySwiper();
-//initResizePhotos();
+// initResizePhotos();
 regSwiper();
 buyerSwiper();
 directionSlider();
