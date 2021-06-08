@@ -2,12 +2,12 @@
   width: 100%;
   border-collapse: collapse;
   margin-top: 0;
-  margin-bottom: 31px;
+  margin-bottom: 0;
 
   @include viewport--sm {
     display: block;
-    margin-top: 42px;
-    margin-bottom: 31px;
+    width: auto;
+    margin: 36px -17px 0;
   }
 
   tbody {
@@ -121,6 +121,7 @@
       font-size: 14px;
       line-height: 17px;
       color: $color-blue;
+      letter-spacing: 0.4px;
     }
   }
 
@@ -135,6 +136,10 @@
     font-size: 12px;
     line-height: 20px;
     color: $color-zambezi;
+
+    @include viewport--sm {
+      letter-spacing: 0.3px;
+    }
   }
 
   &__cell--free > span {
@@ -269,7 +274,7 @@
     width: 17%;
 
     @include viewport--lg {
-      width: 22%;
+      width: 24%;
     }
 
     @include viewport--md {

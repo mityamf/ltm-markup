@@ -57,7 +57,7 @@
       border: none;
       background-color: transparent;
 
-      &:not(:first-of-type) {
+      &:not(.admin-tabs__item--active) {
         display: none;
       }
     }
@@ -107,6 +107,15 @@
 
       .admin-tabs__link {
         color: $color-default-white;
+      }
+
+      @include viewport--sm {
+        border-color: transparent;
+        background-color: transparent;
+
+        .admin-tabs__link {
+          color: $color-gray-dark;
+        }
       }
     }
   }
