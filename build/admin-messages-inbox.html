@@ -2844,7 +2844,7 @@
           </div>
         </div>
       </header>
-      <main class="container container--no-padding container--admin">
+      <main class="container container--admin">
         <div class="admin">
           <div class="admin-headline">
             <div class="top-wrapper top-wrapper--mobile">
@@ -2897,13 +2897,13 @@
             <div class="mail-control">
               <h3 class="title title--h3 title--middle">Inbox</h3>
               <ul class="mail-control__links">
-                <li class="mail-control__link-item mail-control__link-item--new "><a class="mail-control__link" href="lk-guest-messages-new.html">
+                <li class="mail-control__link-item mail-control__link-item--new "><a class="mail-control__link" href="admin-messages-new.html">
                     <svg width="24" height="24" aria-hidden="true">
                       <use xlink:href="#icon-write-message"></use>
                     </svg></a></li>
-                <li class="mail-control__link-item mail-control__link-item--inbox mail-control__link-item--active"><a class="mail-control__link" href="lk-guest-messages-inbox.html">Входящие</a></li>
-                <li class="mail-control__link-item mail-control__link-item--sent "><a class="mail-control__link" href="lk-guest-messages-sent.html">Отправленные</a></li>
-                <li class="mail-control__link-item mail-control__link-item--contacts "><a class="mail-control__link" href="lk-guest-messages-new.html">Написать организаторам</a></li>
+                <li class="mail-control__link-item mail-control__link-item--inbox mail-control__link-item--active"><a class="mail-control__link" href="admin-messages-inbox.html">Inbox</a></li>
+                <li class="mail-control__link-item mail-control__link-item--sent "><a class="mail-control__link" href="admin-messages-sent.html">Sent</a></li>
+                <li class="mail-control__link-item mail-control__link-item--contacts "><a class="mail-control__link" href="admin-messages-new.html">Contact Organizers</a></li>
               </ul>
               <label class="mail-control__find-label">
                 <input class="mail-control__find-input"/>
@@ -3048,7 +3048,9 @@
               </tr>
             </tbody>
           </table>
-          <button class="btn btn--white btn--more" type="button">More</button>
+          <div class="admin__button-wrapper">
+            <button class="btn btn--white btn--more" type="button">More</button>
+          </div>
         </div>
         <div class="support-contacts">
           <h3 class="title title--h3">Contacts for support</h3>
