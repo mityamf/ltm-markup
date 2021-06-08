@@ -12,7 +12,7 @@ block main
   include ../data/pages/admin-guests-d1
   include ../data/modal-colleague-admin
 
-  main.container.container--no-padding.container--admin
+  main.container.container--admin
     .admin
       +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
       .hidden-sm
@@ -29,7 +29,8 @@ block main
 
       +renderFilterTabs(filterTabs)
       +renderGuestsList(adminGuestsListTitles, adminGuestsList)
-      button.btn.btn--white.btn--more(type="button")="More"
+      .admin__button-wrapper
+        button.btn.btn--white.btn--more(type="button")="More"
     +renderSupportContacts(contactsList)
 
 block append modals
