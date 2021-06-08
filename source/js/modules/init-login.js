@@ -1,6 +1,9 @@
+import {disableScrolling, enableScrolling} from '../utils/scroll-lock';
+
 const initLogin = () => {
   const login = document.querySelector('.login');
   const loginShowBtn = document.querySelector('.header__link--sign-in');
+  const loginCloseBtn = login.querySelector('.login__close');
   const showPasswordBtn = login.querySelector('.login__show-password');
   const inputPassword = login.querySelector('.login__input-password');
   const form = login.querySelector('.login__form');
@@ -14,15 +17,24 @@ const initLogin = () => {
   };
 
   const openPopup = () => {
+    if (mobileWidth.matches) {
+      disableScrolling();
+      loginCloseBtn.addEventListener('click', closePopup);
+    }
+
     if (!mobileWidth.matches) {
       login.style.maxHeight = login.scrollHeight + 'px';
     }
     login.classList.add('login--show');
+    window.addEventListener('keydown', onEcsPress);
   };
 
   const closePopup = () => {
     login.style.maxHeight = null;
     login.classList.remove('login--show');
+    enableScrolling();
+    window.removeEventListener('keydown', onEcsPress);
+    loginCloseBtn.removeEventListener('click', closePopup);
   };
 
   const togglePopup = () => {
@@ -30,6 +42,13 @@ const initLogin = () => {
       closePopup();
     } else {
       openPopup();
+    }
+  };
+
+  const onEcsPress = (evt) => {
+    if (evt.keyCode === KeyCode.ESC) {
+      evt.preventDefault();
+      closePopup();
     }
   };
 
@@ -48,13 +67,13 @@ const initLogin = () => {
     window.addEventListener('click', outsideClickListener);
   };
 
-  try {
-    storage.email = localStorage.getItem('email');
-  } catch (err) {
-    isStorageSupport = false;
-  }
-
   if (login) {
+
+    try {
+      storage.email = localStorage.getItem('email');
+    } catch (err) {
+      isStorageSupport = false;
+    }
 
     loginShowBtn.addEventListener('click', function (evt) {
       evt.preventDefault();
@@ -75,16 +94,9 @@ const initLogin = () => {
       }
     });
 
-    window.addEventListener('keydown', function (evt) {
-      if (evt.keyCode === KeyCode.ESC) {
-        evt.preventDefault();
-        if (login.classList.contains('login--show')) {
-          closePopup();
-        }
-      }
-    });
-
     hideOnClickOutside();
+
+    window.addEventListener('resize', closePopup);
   }
 
   showPasswordBtn.addEventListener('click', () => {
