@@ -19,10 +19,11 @@ block main
       .admin__control-wrapper
         +renderAdminTabs(adminTabs)
         +renderMailControl("Входящие", adminMailControl.linkList, adminMailControl.isSearchInput)
-      h2.admin-table__headline="Входящие"
+      h2.admin__headline="Входящие"
       +renderInboxMessages(adminInboxMessagesTitles, adminInboxMessages)
 
-      button.btn.btn--white.btn--more(type="button")="Показать больше"
+      .admin__button-wrapper
+        button.btn.btn--white.btn--more(type="button")="Показать больше"
 
     +renderSupportContacts(contactsList)
 

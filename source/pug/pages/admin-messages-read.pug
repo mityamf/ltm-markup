@@ -18,7 +18,7 @@ block main
       .admin__control-wrapper
         +renderAdminTabs(adminTabs)
         +renderMailControl("Message", adminMailControl.linkList, adminMailControl.isSearchInput)
-      h2.admin-table__headline="Message"
+      h2.admin__headline="Message"
       +renderEditBlock(editingBlockList, buttons, editingBlockStatus)
 
     +renderSupportContacts(contactsList)
