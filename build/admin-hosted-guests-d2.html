@@ -2844,7 +2844,7 @@
           </div>
         </div>
       </header>
-      <main class="container container--no-padding container--admin">
+      <main class="container container--admin">
         <div class="admin">
           <div class="admin-headline">
             <div class="top-wrapper top-wrapper--mobile">
@@ -2975,13 +2975,15 @@
             </div>
           </div>
           <div class="visible-sm">
-            <div class="filters__mobile-block">
-              <button type="button" data-modal="mobile-filters">Filters
-                <svg width="16" height="16" aria-hidden="true">
-                  <use xlink:href="#icon-filters"></use>
-                </svg>
-              </button>
-              <button type="reset">Clear all filters</button>
+            <div class="filters">
+              <div class="filters__mobile-block">
+                <button type="button" data-modal="mobile-filters">Filters
+                  <svg width="16" height="16" aria-hidden="true">
+                    <use xlink:href="#icon-filters"></use>
+                  </svg>
+                </button>
+                <button type="reset">Clear all filters</button>
+              </div>
             </div>
           </div>
           <ul class="filter-tabs">
@@ -3056,7 +3058,9 @@
               </tr>
             </tbody>
           </table>
-          <button class="btn btn--white btn--more" type="button">More</button>
+          <div class="admin__button-wrapper">
+            <button class="btn btn--white btn--more" type="button">More</button>
+          </div>
         </div>
         <div class="support-contacts">
           <h3 class="title title--h3">Contacts for support</h3>

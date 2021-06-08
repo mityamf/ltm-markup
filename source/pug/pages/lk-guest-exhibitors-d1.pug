@@ -11,7 +11,7 @@ block main
   include ../data/pages/lk-guest-exhibitors-d1
   include ../data/modal-colleague-lk
 
-  main.container.container--no-padding.lk
+  main.container.lk
     .admin
       +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates)
       .hidden-sm
@@ -32,7 +32,8 @@ block main
 
       +renderFilterTabs(filterTabs)
       +renderHostedGuestsList(adminHostedGuestsListTitles, adminHostedGuestsList)
-      button.btn.btn--white.btn--more(type="button")="Показать больше"
+      .admin__button-wrapper
+        button.btn.btn--white.btn--more(type="button")="Показать больше"
     +renderSupportContacts(contactsList)
 
 block append modals
