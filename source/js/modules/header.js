@@ -25,17 +25,17 @@ const initHeader = () => {
       let currentWidth = document.documentElement.clientWidth;
 
       if (screenWidth !== currentWidth) {
-        console.log('считаю topbar');
         getTopBarHeight();
-        console.log(topBar.offsetHeight);
       }
     };
 
     getTopBarHeight();
+
     window.addEventListener('resize', function () {
       checkScreenWidth();
       scroll();
     });
+
     window.addEventListener('scroll', scroll);
   }
 };
