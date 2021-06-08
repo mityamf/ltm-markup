@@ -36,8 +36,6 @@
     }
 
     @include viewport--sm {
-      //padding-right: 16.5px;
-      //padding-left: 16.5px;
       padding-top: 11px;
     }
   }
@@ -121,7 +119,7 @@
   }
 
   &__about-text {
-    max-height: 106px;
+    max-height: 340px;
     overflow: hidden;
     width: 100%;
     max-width: 692px;

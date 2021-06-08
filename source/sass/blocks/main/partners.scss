@@ -51,11 +51,15 @@
 }
 
 .partners__item {
-  padding-right: 50px;
-  padding-bottom: 29px;
+  margin: 25px;
+  height: 150px;
+  max-width: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
 
   @include viewport--sm {
-    padding-right: 10px;
+    margin: 5px;
   }
 
   &:hover,
