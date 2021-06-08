@@ -19,10 +19,11 @@ mixin renderFilterButton(buttonFilter)
     button.btn.btn--white.filters__button(type=buttonFilter.type)=buttonFilter.text
 
 mixin renderMobileFilterButtons(buttonFilters, buttonReset)
-  .filters__mobile-block
-    button(type="button" data-modal="mobile-filters")=buttonFilters
-      +icon("icon-filters", 16, 16)
-    button(type="reset")=buttonReset
+  .filters
+    .filters__mobile-block
+      button(type="button" data-modal="mobile-filters")=buttonFilters
+        +icon("icon-filters", 16, 16)
+      button(type="reset")=buttonReset
 
 mixin renderMobileDropdownFilter(dropdownMobileFilter)
   .filters__dropdown-filter.filters__dropdown-filter--mobile
