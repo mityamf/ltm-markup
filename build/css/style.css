@@ -9549,6 +9549,14 @@ p {
   .admin-tabs {
     width: 55%; } }
 
+.admin-tabs__mobile-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 .admin-tabs__list {
   display: -webkit-box;
   display: -ms-flexbox;

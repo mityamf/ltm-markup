@@ -3,6 +3,11 @@
     width: 55%;
   }
 
+  &__mobile-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
