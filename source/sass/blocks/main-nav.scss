@@ -68,7 +68,7 @@
   display: none;
   position: relative;
 
-  @include pseudo-full;
+  @include pseudo-full($top: -10px, $bottom:-10px);
 
   cursor: pointer;
   border: none;
