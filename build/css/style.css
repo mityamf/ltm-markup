@@ -1403,6 +1403,7 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 17px;
   border: 1px solid #0098c1;
   border-radius: 1px;
   color: #0098c1;
@@ -1418,10 +1419,8 @@ p {
   -ms-flex-item-align: center;
       align-self: center; }
   .button--open {
-    padding: 4px 41px;
-    font-size: 16px; }
+    padding: 4px 41px; }
   .button--blue {
-    font-size: 18px;
     background-color: #0098c1;
     color: #ffffff; }
   .button--transparent {
@@ -2144,7 +2143,7 @@ p {
     .footer__mailing {
       width: 100%;
       padding-bottom: 36px;
-      max-width: initial; } }
+      max-width: inherit; } }
 
 .footer__menu {
   -ms-grid-row: 1;
@@ -2257,17 +2256,15 @@ p {
   opacity: 0.8; }
 
 .mailing__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding-top: 8px; }
+  padding-top: 8px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "label button" "check check"; }
   @media (max-width: 767px) {
     .mailing__form {
       padding: 0; } }
 
-.mailing__email {
+.form-label {
   border: 1px solid #0098c1;
   border-radius: 1px;
   background-color: #f2f2f2;
@@ -2279,17 +2276,14 @@ p {
   cursor: pointer;
   text-overflow: ellipsis;
   border-right: none; }
-  .mailing__email:focus, .mailing__email:hover {
+  .form-label:focus, .form-label:hover {
     opacity: 0.8; }
   @media (max-width: 767px) {
-    .mailing__email {
-      width: 63%;
+    .form-label {
+      width: 93%;
       padding: 6px 9px 6px 8px;
       margin-right: 10px;
       border-right: solid 1px; } }
-  @media (max-width: 365px) {
-    .mailing__email {
-      width: 53%; } }
 
 ::-webkit-input-placeholder {
   color: #0098c1; }
@@ -2297,12 +2291,12 @@ p {
 .mailing__checkbox {
   width: 100%; }
 
-.mailing__check {
+.form-check {
   position: absolute;
   z-index: -1;
   opacity: 0; }
 
-.mailing__check + label {
+.form-check + label {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -2317,10 +2311,10 @@ p {
   color: #9f9f9f;
   font-size: 12px;
   font-family: "Proxima Nova", "Arial", sans-serif; }
-  .mailing__check + label:focus, .mailing__check + label:hover {
+  .form-check + label:focus, .form-check + label:hover {
     opacity: 0.8; }
 
-.mailing__check + label::before {
+.form-check + label::before {
   content: "";
   display: inline-block;
   width: 20px;
@@ -2333,7 +2327,7 @@ p {
   border: 1px solid #0098c1;
   margin-right: 0.5em; }
 
-.mailing__check:checked + label::before {
+.form-check:checked + label::before {
   border-color: #0098c1;
   background-image: url("../img/svg/check.svg");
   background-repeat: no-repeat;
@@ -2377,14 +2371,17 @@ p {
         -ms-flex-pack: end;
             justify-content: flex-end;
     width: 40px;
-    height: 36px;
+    height: 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
   .menu__account-social {
-    padding: 8px; }
+    padding: 10px; }
     .menu__account-social:focus, .menu__account-social:hover {
       opacity: 0.8; }
+    .menu__account-social svg {
+      width: 22px;
+      height: 22px; }
   @media (max-width: 767px) {
     .menu__account {
       padding-top: 12px; } }
@@ -3261,7 +3258,7 @@ p {
       padding-bottom: 30px; } }
 
 .partners__item {
-  margin-right: 25px;
+  margin-left: 25px;
   margin-top: 25px;
   height: 150px;
   max-width: 100%;
@@ -3275,7 +3272,7 @@ p {
   @media (max-width: 767px) {
     .partners__item {
       max-width: 45%;
-      margin-right: 10px;
+      margin-left: 10px;
       margin-top: 10px; } }
   .partners__item:hover, .partners__item:focus {
     opacity: 0.8; }
