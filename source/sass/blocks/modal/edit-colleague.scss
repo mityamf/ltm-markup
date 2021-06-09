@@ -7,11 +7,23 @@
   }
 
   @include viewport--sm {
-    padding: 15px;
+    padding: 0;
   }
 
   &__form {
     width: 100%;
+  }
+
+  &__form-wrapper {
+    margin-bottom: -18px;
+
+    @include viewport--sm {
+      margin-bottom: -2px;
+    }
+  }
+
+  input {
+    padding: 5px 8px;
   }
 
   textarea {
@@ -22,14 +34,47 @@
 
   .title {
     width: 100%;
+
+    @include viewport--sm {
+      font-size: 24px;
+      line-height: 29px;
+    }
   }
 
   .modal__close-btn .btn--reset {
     fill: $color-blue;
   }
 
-  &__block:not(:last-child) {
-    margin-bottom: 15px;
+  &__block {
+    margin-bottom: 18px;
+
+    @include viewport--sm {
+      margin-bottom: 2px;
+    }
+  }
+
+  &__block:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &__block--half-width {
+    @include viewport--sm {
+      width: 47%;
+      display: inline-block;
+    }
+  }
+
+  &__block--right {
+    @include viewport--sm {
+      float: right;
+    }
+  }
+
+  &__name {
+    display: block;
+    font-size: 24px;
+    line-height: 29px;
+    color: $color-blue;
   }
 
   &__buttons {
@@ -39,7 +84,7 @@
   }
 
   &__buttons .btn {
-    width: 45%;
+    width: 48%;
     padding: 15px 0;
   }
 
@@ -48,7 +93,7 @@
   }
 
   &__photo-column {
-    width: 30%;
+    width: 22%;
     padding-right: 36px;
 
     @include viewport--sm {
@@ -58,11 +103,11 @@
   }
 
   &__photo-column img {
-    margin: 0 auto 30px auto;
+    margin: 5px auto 16px;
   }
 
   &__content-column {
-    width: 70%;
+    width: 72%;
 
     @include viewport--sm {
       width: 100%;
@@ -73,7 +118,7 @@
     width: 100%;
     background-color: $color-blue;
     position: relative;
-    padding: 17px 10px;
+    padding: 13px 10px;
     display: block;
     text-align: center;
     cursor: pointer;
@@ -115,7 +160,7 @@
   }
 
   &__upload-info {
-    padding-top: 20px;
+    padding-top: 7px;
 
     font-size: 12px;
     line-height: 20px;
@@ -131,12 +176,17 @@
     text-align: center;
   }
 
+  .choices {
+    height: 42px;
+  }
+
   .choices__inner {
     background-color: transparent;
   }
 
   .choices[data-type*="select-one"] .choices__inner {
-    padding: 10px 15px;
+    padding: 5px 8px;
+    height: 42px;
   }
 
   .choices__list--single {
@@ -150,6 +200,7 @@
 
 .modal--edit-colleague .modal__content {
   width: 698px;
+  padding: 24px 30px;
 
   @include viewport--sm {
     width: 100%;

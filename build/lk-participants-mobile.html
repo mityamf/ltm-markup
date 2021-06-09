@@ -2767,10 +2767,10 @@
         <div class="header__main">
           <div class="container">
             <div class="header__main-wrapper"><a class="header__logo" href="main.html" aria-label="Переход на главную">
-                <svg class="header__logo-img header__logo-img--desktop hidden-sm" width="178" height="67" aria-hidden="true">
+                <svg class="hidden-sm" width="178" height="67" aria-hidden="true">
                   <use xlink:href="#logo-desktop"></use>
                 </svg>
-                <svg class="header__logo-img header__logo-img--mobile visible-sm" width="53" height="47" aria-hidden="true">
+                <svg class="visible-sm" width="53" height="47" aria-hidden="true">
                   <use xlink:href="#logo-mobile"></use>
                 </svg></a>
               <nav class="main-nav">
@@ -2792,7 +2792,7 @@
                   <li class="main-nav__item"><a class="main-nav__link" href="partners-page.html">Partners</a></li>
                   <li class="main-nav__item"><a class="main-nav__link" href="contact-us.html">Contacts</a></li>
                 </ul>
-              </nav><a class="header__link header__link--sign-in" href="#"><span class="header__sign-in-text hidden-sm">Sign in</span>
+              </nav><a class="header__link header__link--sign-in" href="#"><span class="hidden-sm">Sign in</span>
                 <svg width="26" height="30" aria-hidden="true">
                   <use xlink:href="#icon-sign-in"></use>
                 </svg></a>
@@ -2816,7 +2816,7 @@
                 </div>
                 <div class="login__form-input">
                   <label class="visually-hidden" for="login-password">Inter your password</label>
-                  <input class="login__input-password" type="password" name="login-password" id="login-password" placeholder="Password" required="required"/>
+                  <input type="password" name="login-password" id="login-password" placeholder="Password" required="required"/>
                   <button class="login__show-password" type="button" title="Показать/Скрыть пароль" aria-label="Показать/скрыть пароль">
                     <svg class="login__show-password-img login__show-password-img--hide" width="30" height="20" aria-hidden="true">
                       <use xlink:href="#ico_nonshowpassword"></use>
@@ -2849,19 +2849,22 @@
           <h2 class="title--h2">Luxury Travel Mart Moscow Spring’ 2020</h2><span class="admin-headline__place">at Hyatt Regency Moscow Petrovsky Park</span>
           <time datetime="dates">27 – 28 February 2020</time>
         </div>
-        <div class="admin__control-wrapper">
+        <div class="admin__control-wrapper admin__control-wrapper--full-width">
           <div class="admin-tabs">
-            <ul class="admin-tabs__list">
+            <div class="admin-tabs__mobile-wrapper">
               <button class="admin-tabs__menu-button" type="button" data-modal="admin-menu">
                 <svg width="32" height="32" aria-hidden="true">
                   <use xlink:href="#icon-mobile-menu"></use>
                 </svg>
               </button>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest.html">Программа и инфо</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
-            </ul>
+              <ul class="admin-tabs__list">
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest.html">Программа и инфо</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
+                <li class="admin-tabs__item admin-tabs__item--active"><a class="admin-tabs__link" href="lk-participants-mobile.html">Сотрудники на выставку</a></li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="participants">
@@ -3008,7 +3011,7 @@
                 </div>
                 <div class="edit-colleague__block">
                   <label class="input-wrapper" for="colleague-skype">Skype</label>
-                  <input placeholder="E-mail" id="colleague-skype" name="colleague-skype" type="text"/>
+                  <input placeholder="Skype" id="colleague-skype" name="colleague-skype" type="text"/>
                 </div>
                 <div class="edit-colleague__block">
                   <label class="input-wrapper" for="colleague-email-2">E-mail</label>
@@ -3039,6 +3042,7 @@
               <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
               <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
               <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
+              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-participants-mobile.html">Сотрудники на выставку</a></li>
             </ul>
           </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">

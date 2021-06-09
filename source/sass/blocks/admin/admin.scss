@@ -45,6 +45,12 @@
     }
   }
 
+  &__control-wrapper--full-width .admin-tabs {
+    @include viewport--sm {
+      width: 100%;
+    }
+  }
+
   .headline-back {
     padding-right: 0;
     padding-left: 0;
@@ -260,7 +266,7 @@
       }
 
       .info-block {
-        padding-bottom: 20px;
+        padding-bottom: 27px;
       }
     }
   }

@@ -1,9 +1,11 @@
 mixin renderAdminTabs(adminTabs)
   .admin-tabs
-    ul.admin-tabs__list
+    .admin-tabs__mobile-wrapper
       button.admin-tabs__menu-button(type="button" data-modal="admin-menu")
         +icon("icon-mobile-menu", 32, 32)
-      each tab in adminTabs
-        - var activeMod = tab.currentPage === currentPage ? "admin-tabs__item--active" : ""
-        li.admin-tabs__item(class=activeMod)
-          a.admin-tabs__link(href=tab.link)=tab.text
+      ul.admin-tabs__list
+        each tab in adminTabs
+          - var activeMod = tab.currentPage === currentPage ? "admin-tabs__item--active" : ""
+          li.admin-tabs__item(class=activeMod)
+            a.admin-tabs__link(href=tab.link)=tab.text
+

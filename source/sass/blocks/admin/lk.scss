@@ -40,7 +40,7 @@
 
   .participants__info-wrapper {
     @include viewport--lg {
-      padding: 24px 0 0 0;
+      padding: 24px 0 0 9px;
     }
   }
 
@@ -114,6 +114,11 @@
       &:active {
         opacity: 0.5;
       }
+
+      @include viewport--sm {
+        font-size: 24px;
+        line-height: 29px;
+      }
     }
 
     &__more-link {
@@ -141,6 +146,10 @@
 
       @include viewport--lg {
         width: 178px;
+      }
+
+      @include viewport--sm {
+        width: 222px;
       }
 
       &:hover,

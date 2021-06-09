@@ -13,7 +13,7 @@ block main
   main.container
     .admin.admin--mobile
       +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
-      .admin__control-wrapper
+      .admin__control-wrapper.admin__control-wrapper--full-width
         +renderAdminTabs(adminTabs)
       +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
     +renderSupportContacts(contactsList)

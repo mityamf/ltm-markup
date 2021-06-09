@@ -2767,10 +2767,10 @@
         <div class="header__main">
           <div class="container">
             <div class="header__main-wrapper"><a class="header__logo" href="main.html" aria-label="Переход на главную">
-                <svg class="header__logo-img header__logo-img--desktop hidden-sm" width="178" height="67" aria-hidden="true">
+                <svg class="hidden-sm" width="178" height="67" aria-hidden="true">
                   <use xlink:href="#logo-desktop"></use>
                 </svg>
-                <svg class="header__logo-img header__logo-img--mobile visible-sm" width="53" height="47" aria-hidden="true">
+                <svg class="visible-sm" width="53" height="47" aria-hidden="true">
                   <use xlink:href="#logo-mobile"></use>
                 </svg></a>
               <nav class="main-nav">
@@ -2792,7 +2792,7 @@
                   <li class="main-nav__item"><a class="main-nav__link" href="partners-page.html">Partners</a></li>
                   <li class="main-nav__item"><a class="main-nav__link" href="contact-us.html">Contacts</a></li>
                 </ul>
-              </nav><a class="header__link header__link--sign-in" href="#"><span class="header__sign-in-text hidden-sm">Sign in</span>
+              </nav><a class="header__link header__link--sign-in" href="#"><span class="hidden-sm">Sign in</span>
                 <svg width="26" height="30" aria-hidden="true">
                   <use xlink:href="#icon-sign-in"></use>
                 </svg></a>
@@ -2816,7 +2816,7 @@
                 </div>
                 <div class="login__form-input">
                   <label class="visually-hidden" for="login-password">Inter your password</label>
-                  <input class="login__input-password" type="password" name="login-password" id="login-password" placeholder="Password" required="required"/>
+                  <input type="password" name="login-password" id="login-password" placeholder="Password" required="required"/>
                   <button class="login__show-password" type="button" title="Показать/Скрыть пароль" aria-label="Показать/скрыть пароль">
                     <svg class="login__show-password-img login__show-password-img--hide" width="30" height="20" aria-hidden="true">
                       <use xlink:href="#ico_nonshowpassword"></use>
@@ -2878,29 +2878,31 @@
               <p class="participants__text">If you want register more participants for this event, please send information to administrator. </p>
             </div>
           </div>
-          <div class="admin__control-wrapper">
+          <div class="admin__control-wrapper admin__control-wrapper--full-width">
             <div class="admin-tabs">
-              <ul class="admin-tabs__list">
+              <div class="admin-tabs__mobile-wrapper">
                 <button class="admin-tabs__menu-button" type="button" data-modal="admin-menu">
                   <svg width="32" height="32" aria-hidden="true">
                     <use xlink:href="#icon-mobile-menu"></use>
                   </svg>
                 </button>
-                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-deadlines.html">Deadlines &amp; Info</a></li>
-                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-messages-inbox.html">Messages</a></li>
-                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-schedule-d1.html">My Schedule</a></li>
-                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-guests-d1.html">Buyers Guest List</a></li>
-                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-hosted-guests-d1.html">Hosted Buyers Guest List</a></li>
-                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-sponsors-opportunities.html">Sponsorship Opportunities</a></li>
-              </ul>
+                <ul class="admin-tabs__list">
+                  <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-deadlines.html">Deadlines &amp; Info</a></li>
+                  <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-messages-inbox.html">Messages</a></li>
+                  <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-schedule-d1.html">My Schedule</a></li>
+                  <li class="admin-tabs__item admin-tabs__item--active"><a class="admin-tabs__link" href="admin-guests-d1.html">Buyers Guest List</a></li>
+                  <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-hosted-guests-d1.html">Hosted Buyers Guest List</a></li>
+                  <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-sponsors-opportunities.html">Sponsorship Opportunities</a></li>
+                </ul>
+              </div>
             </div>
           </div>
           <h2 class="title title--h2 title--big">Buyers Guest List</h2>
           <div class="schedule-tabs">
             <ul class="schedule-tabs__list">
-              <li class="schedule-tabs__item"><a class="schedule-tabs__link" href="lk-schedule-d1.html"><span class="schedule-tabs__text">День 1</span><span class="schedule-tabs__text schedule-tabs__text--hidden">–</span>
+              <li class="schedule-tabs__item"><a class="schedule-tabs__link" href="admin-guests-d1.html"><span class="schedule-tabs__text">День 1</span><span class="schedule-tabs__text schedule-tabs__text--hidden">–</span>
                   <time>27.02.2020</time></a></li>
-              <li class="schedule-tabs__item"><a class="schedule-tabs__link" href="lk-schedule-d2.html"><span class="schedule-tabs__text">День 2</span><span class="schedule-tabs__text schedule-tabs__text--hidden">–</span>
+              <li class="schedule-tabs__item schedule-tabs__item--active"><a class="schedule-tabs__link" href="admin-guests-d2.html"><span class="schedule-tabs__text">День 2</span><span class="schedule-tabs__text schedule-tabs__text--hidden">–</span>
                   <time>28.02.2020</time></a></li>
             </ul>
           </div>
@@ -2982,7 +2984,7 @@
               <button class="btn btn--white" type="reset">Clear all filtres</button>
             </li>
           </ul>
-          <table class="admin-table">
+          <table class="admin-table admin-table--guest-list">
             <thead>
               <tr class="admin-table__row admin-table__row--headline">
                 <th class="admin-table__cell admin-table__cell--company">Company</th>
