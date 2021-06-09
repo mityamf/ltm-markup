@@ -9631,9 +9631,11 @@ p {
 
 .admin-tabs__item--active, .admin-tabs__item:active {
   border-color: transparent;
-  background-color: #a7a7a7; }
+  background-color: #a7a7a7;
+  cursor: default; }
   .admin-tabs__item--active .admin-tabs__link, .admin-tabs__item:active .admin-tabs__link {
-    color: #ffffff; }
+    color: #ffffff;
+    cursor: default; }
   @media (max-width: 767px) {
     .admin-tabs__item--active, .admin-tabs__item:active {
       border-color: transparent;
@@ -9778,18 +9780,20 @@ p {
   .schedule-tabs__item--active, .schedule-tabs__item:active {
     border-color: transparent;
     background-color: #a7a7a7; }
+    .schedule-tabs__item--active .schedule-tabs__link, .schedule-tabs__item:active .schedule-tabs__link {
+      cursor: default;
+      background-color: #a7a7a7; }
     .schedule-tabs__item--active span,
     .schedule-tabs__item--active time, .schedule-tabs__item:active span,
     .schedule-tabs__item:active time {
       color: #ffffff; }
-    @media (max-width: 767px) {
-      .schedule-tabs__item--active:hover, .schedule-tabs__item:active:hover {
-        border-color: transparent;
-        background-color: #a7a7a7; }
-        .schedule-tabs__item--active:hover span,
-        .schedule-tabs__item--active:hover time, .schedule-tabs__item:active:hover span,
-        .schedule-tabs__item:active:hover time {
-          color: #ffffff; } }
+    .schedule-tabs__item--active:hover, .schedule-tabs__item:active:hover {
+      border-color: transparent;
+      background-color: #a7a7a7; }
+      .schedule-tabs__item--active:hover span,
+      .schedule-tabs__item--active:hover time, .schedule-tabs__item:active:hover span,
+      .schedule-tabs__item:active:hover time {
+        color: #ffffff; }
   .schedule-tabs__link,
   .schedule-tabs .generate-file__link {
     margin: 0 auto;
@@ -10256,10 +10260,11 @@ p {
     .mail-control__link-item--inbox, .mail-control__link-item--contacts {
       display: none; } }
   .mail-control__link-item--active .mail-control__link {
-    color: #a7a7a7; }
+    color: #a7a7a7;
+    cursor: default; }
   .mail-control__link-item--active:hover .mail-control__link, .mail-control__link-item--active:focus .mail-control__link {
     color: #a7a7a7; }
-  .mail-control__link-item:hover .mail-control__link, .mail-control__link-item:focus .mail-control__link {
+  .mail-control__link-item:not(.mail-control__link-item--active):hover .mail-control__link, .mail-control__link-item:not(.mail-control__link-item--active):focus .mail-control__link {
     color: rgba(80, 80, 80, 0.7); }
   .mail-control__link {
     font-size: 16px;
