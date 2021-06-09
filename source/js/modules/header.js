@@ -7,7 +7,7 @@ const initHeader = () => {
     const topBar = header.querySelector('.header__top');
     const mobileWidth = window.matchMedia('(max-width:767px)');
 
-    let scrollPos = window.pageYOffset;
+    let scrollPos = 0;
 
     let screenWidth = document.documentElement.clientWidth;
 
@@ -19,9 +19,8 @@ const initHeader = () => {
 
       if (!mobileWidth.matches) {
         header.style.transform = (st > scrollPos) ? `translateY(-${getTopBarHeight()}px)` : null;
+        scrollPos = st;
       }
-
-      scrollPos = st <= 0 ? 0 : st;
     };
 
     const checkScreenWidth = () => {
@@ -29,16 +28,14 @@ const initHeader = () => {
 
       if (screenWidth !== currentWidth) {
         getTopBarHeight();
+        scroll();
+        screenWidth = currentWidth;
       }
     };
 
     getTopBarHeight();
 
-    window.addEventListener('resize', function () {
-      checkScreenWidth();
-      scroll();
-    });
-
+    window.addEventListener('resize', checkScreenWidth);
     window.addEventListener('scroll', scroll);
   }
 };
