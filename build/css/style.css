@@ -1199,6 +1199,9 @@ textarea {
   textarea:active {
     opacity: 0.5; }
 
+.hidden {
+  display: none !important; }
+
 .container {
   width: 100%;
   max-width: 1510px;
@@ -1394,7 +1397,7 @@ p {
     padding: 15px 30px; }
 
 .button {
-  font-weight: 700;
+  font-weight: 600;
   outline: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1409,38 +1412,19 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   line-height: 19px;
-  cursor: pointer; }
-  .button--footer-btn {
-    width: 22%;
-    height: 42px;
-    padding: 11px 42px; }
-    @media (max-width: 767px) {
-      .button--footer-btn {
-        max-width: 78px;
-        margin-left: 10px; } }
+  cursor: pointer;
+  padding: 14px 31px;
+  -ms-flex-item-align: center;
+      align-self: center; }
   .button--open {
     padding: 4px 41px;
-    font-size: 16px;
-    font-weight: 600; }
+    font-size: 16px; }
   .button--blue {
     font-size: 18px;
-    font-weight: 600;
     background-color: #0098c1;
-    color: #ffffff;
-    padding: 14px 31px;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center; }
-  .button--btn-reg {
-    font-size: 17px;
-    font-weight: 600;
-    padding: 14px 31px;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center; }
+    color: #ffffff; }
   .button--transparent {
-    padding: 11px 42px;
-    margin-bottom: 42px;
+    padding: 10px 42px;
     background-color: transparent; }
   .button:hover, .button:focus {
     opacity: 0.8; }
@@ -2285,33 +2269,28 @@ p {
       padding: 0; } }
 
 .mailing__email {
-  max-width: 358px;
-  max-height: 42px;
-  width: 78%;
   border: 1px solid #0098c1;
   border-radius: 1px;
   background-color: #f2f2f2;
-  padding: 7px 23px 6px 15px;
+  padding: 6px 23px 6px 15px;
   font-size: 24px;
   font-style: light;
   outline: 0;
   color: #0098c1;
   cursor: pointer;
-  text-overflow: ellipsis; }
+  text-overflow: ellipsis;
+  border-right: none; }
   .mailing__email:focus, .mailing__email:hover {
     opacity: 0.8; }
-  @media (max-width: 1100px) {
-    .mailing__email {
-      width: 64%; } }
   @media (max-width: 767px) {
     .mailing__email {
-      max-width: inherit;
-      width: 70%;
-      padding: 7px 9px 6px 8px; } }
+      width: 63%;
+      padding: 6px 9px 6px 8px;
+      margin-right: 10px;
+      border-right: solid 1px; } }
   @media (max-width: 365px) {
     .mailing__email {
-      max-width: inherit;
-      width: 64%; } }
+      width: 53%; } }
 
 ::-webkit-input-placeholder {
   color: #0098c1; }
@@ -2384,6 +2363,8 @@ p {
     opacity: 0.8; }
 
 .menu__account {
+  width: 100%;
+  max-width: 112px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2421,7 +2402,8 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative; }
+  position: relative;
+  margin-bottom: 42px; }
   @media (max-width: 767px) {
     .cookies {
       padding-left: 16px;
@@ -2672,6 +2654,7 @@ p {
   margin: 0 auto;
   padding: 0 50px;
   padding-top: 30px;
+  width: 100%;
   max-width: 1510px; }
   .direction-swiper .swiper-container {
     position: static; }
@@ -3037,8 +3020,7 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 50%;
-  padding-left: 16px;
-  max-height: 780px; }
+  padding-left: 16px; }
   @media (min-width: 1920px) {
     .news-home__info {
       padding-left: 12px;
@@ -3271,16 +3253,17 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 45px; }
+  padding-top: 20px; }
   @media (max-width: 767px) {
     .partners__list {
-      padding-top: 20px; } }
+      padding-top: 10px; } }
   @media (min-width: 1920px) {
     .partners__list {
       padding-bottom: 30px; } }
 
 .partners__item {
-  margin: 25px;
+  margin-right: 25px;
+  margin-top: 25px;
   height: 150px;
   max-width: 100%;
   width: auto;
@@ -3292,9 +3275,13 @@ p {
           align-items: center; }
   @media (max-width: 767px) {
     .partners__item {
-      margin: 5px; } }
+      max-width: 45%;
+      margin-right: 10px;
+      margin-top: 10px; } }
   .partners__item:hover, .partners__item:focus {
     opacity: 0.8; }
+  .partners__item svg {
+    width: 100%; }
 
 .partners__btn {
   display: -webkit-box;
@@ -3354,7 +3341,7 @@ p {
   overflow: hidden;
   margin-right: 10px;
   margin-bottom: 20px; }
-  @media (max-width: 1007px) {
+  @media (max-width: 1207px) {
     .gallery-block--sm {
       width: 46%; } }
   @media (min-width: 1440px) {
@@ -3394,7 +3381,7 @@ p {
   overflow: hidden;
   margin-right: 10px;
   margin-bottom: 20px; }
-  @media (max-width: 1007px) {
+  @media (max-width: 1207px) {
     .gallery-block--sm-1 {
       width: 46%; } }
   @media (min-width: 1440px) {
@@ -4236,7 +4223,9 @@ p {
         font-size: 13px; } }
   .adoption__item h4 {
     margin: 0;
-    padding-bottom: 10px; }
+    padding-bottom: 10px;
+    overflow: hidden;
+    height: 68px; }
     @media (max-width: 767px) {
       .adoption__item h4 {
         padding-bottom: 0;

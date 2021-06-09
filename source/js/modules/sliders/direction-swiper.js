@@ -5,10 +5,6 @@ const directionSlider = () => {
     slidesPerView: 6,
     loop: false,
     loopFillGroupWithBlank: true,
-    pagination: {
-      el: '.direction__pagination',
-      clickable: true,
-    },
     navigation: {
       nextEl: '.direction__arrow--right',
       prevEl: '.direction__arrow--left',
