@@ -8,8 +8,8 @@ mixin renderSponsorshipList(sponsorshipHeadline, sponsorshipList)
           picture
             source(media="(max-width: 767px)" srcset=sponsorship.src)
             img(src=sponsorship.src srcset=sponsorship.src alt="Sponsorship image")
-            .sponsorship__text-wrapper
-              each text in sponsorship.textList
-                p=text
+          .sponsorship__text-wrapper
+            each text in sponsorship.textList
+              p=text
           - var disabled = sponsorship.status === "disabled"
           button.btn.btn--white(type="button" disabled=disabled)=sponsorship.buttonText
