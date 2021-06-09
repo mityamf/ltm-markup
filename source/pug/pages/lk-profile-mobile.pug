@@ -13,8 +13,6 @@ block main
     +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
     .admin__control-wrapper
       +renderAdminTabs(adminTabs)
-    .visible-sm
-      +renderHeadlineBig("Adventa Agency")
     .info-block
       .info-block__top-wrapper
         .info-block__headline
@@ -22,7 +20,7 @@ block main
           a.info-block__link(href=infoBlock.link)=infoBlock.link
       .info-block__text-wrapper
         p=infoBlock.text
-      button.btn.btn--blue(type=infoBlock.buttonType)=infoBlock.buttonText
+      button.btn.btn--blue(type=infoBlock.buttonType data-modal="edit-profile")=infoBlock.buttonText
     +renderSupportContacts(contactsList)
 
 block modals

@@ -15,8 +15,6 @@ block main
       +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
       .admin__control-wrapper
         +renderAdminTabs(adminTabs)
-      .visible-sm
-        +renderHeadlineBig("Participants at this Event")
       +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
     +renderSupportContacts(contactsList)
 

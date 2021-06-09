@@ -2890,17 +2890,19 @@
             </div>
           </div>
           <div class="admin__control-wrapper">
-            <ul class="admin-tabs__list">
-              <button class="admin-tabs__menu-button" type="button" data-modal="admin-menu">
-                <svg width="32" height="32" aria-hidden="true">
-                  <use xlink:href="#icon-mobile-menu"></use>
-                </svg>
-              </button>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest.html">Программа и инфо</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
-            </ul>
+            <div class="admin-tabs">
+              <ul class="admin-tabs__list">
+                <button class="admin-tabs__menu-button" type="button" data-modal="admin-menu">
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="#icon-mobile-menu"></use>
+                  </svg>
+                </button>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest.html">Программа и инфо</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
+              </ul>
+            </div>
             <div class="mail-control">
               <h3 class="title title--h3 title--middle">Сообщение</h3>
               <ul class="mail-control__links">
@@ -2912,15 +2914,9 @@
                 <li class="mail-control__link-item mail-control__link-item--sent "><a class="mail-control__link" href="lk-guest-messages-sent.html">Отправленные</a></li>
                 <li class="mail-control__link-item mail-control__link-item--contacts "><a class="mail-control__link" href="lk-guest-messages-new.html">Написать организаторам</a></li>
               </ul>
-              <label class="mail-control__find-label">
-                <input class="mail-control__find-input"/>
-                <svg width="14" height="15" aria-hidden="true">
-                  <use xlink:href="#icon-search"></use>
-                </svg>
-              </label>
             </div>
           </div>
-          <h2 class="admin-table__headline">Сообщение</h2>
+          <h2 class="admin__headline">Сообщение</h2>
           <div class="edit edit--disabled">
             <div class="edit__wrapper">
               <h3 class="title title--h3 title--small">От кого:</h3>

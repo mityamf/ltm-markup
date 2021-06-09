@@ -2844,7 +2844,7 @@
           </div>
         </div>
       </header>
-      <main class="container container--no-padding lk">
+      <main class="container lk">
         <div class="admin">
           <div class="admin-headline">
             <h2 class="title--h2">Luxury Travel Mart Moscow Spring’ 2020</h2><span class="admin-headline__place">at Hyatt Regency Moscow Petrovsky Park</span>
@@ -2890,17 +2890,19 @@
             </div>
           </div>
           <div class="admin__control-wrapper">
-            <ul class="admin-tabs__list">
-              <button class="admin-tabs__menu-button" type="button" data-modal="admin-menu">
-                <svg width="32" height="32" aria-hidden="true">
-                  <use xlink:href="#icon-mobile-menu"></use>
-                </svg>
-              </button>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest.html">Программа и инфо</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
-            </ul>
+            <div class="admin-tabs">
+              <ul class="admin-tabs__list">
+                <button class="admin-tabs__menu-button" type="button" data-modal="admin-menu">
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="#icon-mobile-menu"></use>
+                  </svg>
+                </button>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest.html">Программа и инфо</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
+              </ul>
+            </div>
           </div>
           <h2 class="title title--h2 title--big">Список участников</h2>
           <div class="schedule-tabs">
@@ -2979,13 +2981,15 @@
             </div>
           </div>
           <div class="visible-sm">
-            <div class="filters__mobile-block">
-              <button type="button" data-modal="mobile-filters">Filters
-                <svg width="16" height="16" aria-hidden="true">
-                  <use xlink:href="#icon-filters"></use>
-                </svg>
-              </button>
-              <button type="reset">Clear all filters</button>
+            <div class="filters">
+              <div class="filters__mobile-block">
+                <button type="button" data-modal="mobile-filters">Filters
+                  <svg width="16" height="16" aria-hidden="true">
+                    <use xlink:href="#icon-filters"></use>
+                  </svg>
+                </button>
+                <button type="reset">Clear all filters</button>
+              </div>
             </div>
           </div>
           <ul class="filter-tabs">
@@ -3057,7 +3061,9 @@
               </tr>
             </tbody>
           </table>
-          <button class="btn btn--white btn--more" type="button">Показать больше</button>
+          <div class="admin__button-wrapper">
+            <button class="btn btn--white btn--more" type="button">Показать больше</button>
+          </div>
         </div>
         <div class="support-contacts">
           <h3 class="title title--h3">Помощь</h3>
