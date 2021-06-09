@@ -1,14 +1,18 @@
 .mailing__form {
-  display: flex;
-  flex-wrap: wrap;
+  //display: flex;
+  //flex-wrap: wrap;
   padding-top: 8px;
+  display: grid;
+  grid-template-areas:
+    "label button"
+    "check check";
 
   @include viewport--sm {
     padding: 0;
   }
 }
 
-.mailing__email {
+.form-label {
   //max-width: 358px;
   //max-height: 42px;
   //width: 78%;
@@ -35,7 +39,7 @@
 
   @include viewport--sm {
     //max-width: inherit;
-    width: 63%;
+    width: 93%;
     padding: 6px 9px 6px 8px;
     margin-right: 10px;
     border-right: solid 1px;
@@ -43,7 +47,7 @@
 
   @media (max-width: 365px) {
     //max-width: inherit;
-    width: 53%;
+    //width: 53%;
   }
 }
 
@@ -55,13 +59,13 @@
   width: 100%;
 }
 
-.mailing__check {
+.form-check {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
 
-.mailing__check + label {
+.form-check + label {
   display: inline-flex;
   align-items: center;
   user-select: none;
@@ -76,7 +80,7 @@
   }
 }
 
-.mailing__check + label::before {
+.form-check + label::before {
   content: "";
   display: inline-block;
   width: 20px;
@@ -87,7 +91,7 @@
   margin-right: 0.5em;
 }
 
-.mailing__check:checked + label::before {
+.form-check:checked + label::before {
   border-color: $color-blue;
   background-image: url("../img/svg/check.svg");
   background-repeat: no-repeat;

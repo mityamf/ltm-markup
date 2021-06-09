@@ -9,13 +9,13 @@ mixin footer
           a.logotip__item(href="#")
             img.logotip__company-tm(src="./img/svg/tm-logo.svg" alt="company logo" width="110" height="57")
       .footer__mailing.mailing
-        form.mailing__form(action="#" method="POST")
-          input.mailing__email(type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters")
+        form.mailing__form.form(action="#" method="POST")
+          input.form-label(type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters")
           label.visually-hidden(for="mailing")
           button(type="button").button.button--transparent  Ok
           .mailing__checkbox
-            input.mailing__check(type="checkbox" id="check" name="check" value="yes")
-            label.mailing__check-label(for="check") I agree
+            input.form-check(type="checkbox" id="check" name="check" value="yes")
+            label.form-checkbox(for="check") I agree
       .footer__menu.menu
         ul.menu__list
           li
