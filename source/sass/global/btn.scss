@@ -173,6 +173,7 @@
   font-weight: 600;
   outline: 0;
   display: flex;
+  font-size: 17px;
   border: 1px solid $color-blue;
   border-radius: 1px;
   color: $color-blue;
@@ -185,11 +186,9 @@
 
   &--open {
     padding: 4px 41px;
-    font-size: 16px;
   }
 
   &--blue {
-    font-size: 18px;
     background-color: $color-blue;
     color: $color-default-white;
   }

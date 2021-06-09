@@ -39,7 +39,7 @@
   @include viewport--sm {
     width: 100%;
     padding-bottom: 36px;
-    max-width: initial;
+    max-width: inherit;
   }
 }
 

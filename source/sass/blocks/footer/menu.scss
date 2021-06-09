@@ -33,16 +33,21 @@
   li {
     justify-content: flex-end;
     width: 40px;
-    height: 36px;
+    height: 40px;
     display: flex;
   }
 
   &-social {
-    padding: 8px;
+    padding: 10px;
 
     &:focus,
     &:hover {
       opacity: 0.8;
+    }
+
+    svg {
+      width: 22px;
+      height: 22px;
     }
   }
 
