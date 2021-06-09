@@ -2753,8 +2753,8 @@
           <div class="container">
             <ul class="header__top-list">
               <li class="header__item hidden-sm">
-                <button class="header__top-link header__top-link--search js-search-button" type="button">
-                  <svg width="17" height="17" aria-hidden="true">
+                <button class="header__top-link js-search-button" type="button">
+                  <svg class="header__search-img" width="17" height="17" aria-hidden="true">
                     <use xlink:href="#icon-search"></use>
                   </svg>
                 </button>
@@ -2844,7 +2844,7 @@
           </div>
         </div>
       </header>
-      <main class="container container--no-padding container--admin">
+      <main class="container container--admin">
         <div class="admin admin--schedule">
           <div class="admin-headline">
             <div class="top-wrapper top-wrapper--mobile">
@@ -2879,19 +2879,21 @@
             </div>
           </div>
           <div class="admin__control-wrapper">
-            <ul class="admin-tabs__list">
-              <button class="admin-tabs__menu-button" type="button" data-modal="admin-menu">
-                <svg width="32" height="32" aria-hidden="true">
-                  <use xlink:href="#icon-mobile-menu"></use>
-                </svg>
-              </button>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-deadlines.html">Deadlines &amp; Info</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-messages-inbox.html">Messages</a></li>
-              <li class="admin-tabs__item admin-tabs__item--active"><a class="admin-tabs__link" href="admin-schedule-d1.html">My Schedule</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-guests-d1.html">Buyers Guest List</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-hosted-guests-d1.html">Hosted Buyers Guest List</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-sponsors-opportunities.html">Sponsorship Opportunities</a></li>
-            </ul>
+            <div class="admin-tabs">
+              <ul class="admin-tabs__list">
+                <button class="admin-tabs__menu-button" type="button" data-modal="admin-menu">
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="#icon-mobile-menu"></use>
+                  </svg>
+                </button>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-deadlines.html">Deadlines &amp; Info</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-messages-inbox.html">Messages</a></li>
+                <li class="admin-tabs__item admin-tabs__item--active"><a class="admin-tabs__link" href="admin-schedule-d1.html">My Schedule</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-guests-d1.html">Buyers Guest List</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-hosted-guests-d1.html">Hosted Buyers Guest List</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-sponsors-opportunities.html">Sponsorship Opportunities</a></li>
+              </ul>
+            </div>
           </div>
           <h2 class="title title--h2 title--big">My Schedule</h2>
           <div class="schedule-tabs">
@@ -2900,7 +2902,8 @@
                   <time>27 Feb. 2020</time></a></li>
               <li class="schedule-tabs__item"><a class="schedule-tabs__link" href="admin-schedule-d2.html"><span class="schedule-tabs__text">Day 2</span><span class="schedule-tabs__text schedule-tabs__text--hidden">–</span>
                   <time>28 Feb. 2020</time></a></li>
-              <li class="schedule-tabs__item schedule-tabs__item--generate-pdf"><a class="generate-file generate-file__link" href="#" aria-label="Скачать файл" download="download">Generate PDF with schedule</a>
+              <li class="schedule-tabs__item schedule-tabs__item--generate-pdf">
+                <div class="generate-file"><a class="generate-file__link" href="#" aria-label="Скачать файл" download="download">Generate PDF with schedule</a></div>
               </li>
             </ul>
           </div>
@@ -2948,12 +2951,14 @@
               </tr>
             </tbody>
           </table>
-          <div class="admin__mobile-block-wrapper"><a class="generate-file generate-file__link" href="#" aria-label="Скачать файл" download="download">Generate PDF with schedule</a>
+          <div class="admin__mobile-block-wrapper">
+            <div class="generate-file"><a class="generate-file__link" href="#" aria-label="Скачать файл" download="download">Generate PDF with schedule</a></div>
           </div>
           <div class="wish-list">
             <h2 class="title title--h2 title--big">Wish list</h2>
             <div class="wish-list__text-wrapper">
-              <p>My wish list for appointments outside of the working session</p><a class="generate-file generate-file__link" href="#" aria-label="Скачать файл" download="download">Generate PDF with Wish-list</a>
+              <p>My wish list for appointments outside of the working session</p>
+              <div class="generate-file"><a class="generate-file__link" href="#" aria-label="Скачать файл" download="download">Generate PDF with Wish-list</a></div>
             </div>
             <div class="wish-list__company-list-wrapper">
               <div class="wish-list__company-block">

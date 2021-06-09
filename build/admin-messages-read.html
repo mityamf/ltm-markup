@@ -2753,8 +2753,8 @@
           <div class="container">
             <ul class="header__top-list">
               <li class="header__item hidden-sm">
-                <button class="header__top-link header__top-link--search js-search-button" type="button">
-                  <svg width="17" height="17" aria-hidden="true">
+                <button class="header__top-link js-search-button" type="button">
+                  <svg class="header__search-img" width="17" height="17" aria-hidden="true">
                     <use xlink:href="#icon-search"></use>
                   </svg>
                 </button>
@@ -2879,19 +2879,21 @@
             </div>
           </div>
           <div class="admin__control-wrapper">
-            <ul class="admin-tabs__list">
-              <button class="admin-tabs__menu-button" type="button" data-modal="admin-menu">
-                <svg width="32" height="32" aria-hidden="true">
-                  <use xlink:href="#icon-mobile-menu"></use>
-                </svg>
-              </button>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-deadlines.html">Deadlines &amp; Info</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-messages-inbox.html">Messages</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-schedule-d1.html">My Schedule</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-guests-d1.html">Buyers Guest List</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-hosted-guests-d1.html">Hosted Buyers Guest List</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-sponsors-opportunities.html">Sponsorship Opportunities</a></li>
-            </ul>
+            <div class="admin-tabs">
+              <ul class="admin-tabs__list">
+                <button class="admin-tabs__menu-button" type="button" data-modal="admin-menu">
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="#icon-mobile-menu"></use>
+                  </svg>
+                </button>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-deadlines.html">Deadlines &amp; Info</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-messages-inbox.html">Messages</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-schedule-d1.html">My Schedule</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-guests-d1.html">Buyers Guest List</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-hosted-guests-d1.html">Hosted Buyers Guest List</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-sponsors-opportunities.html">Sponsorship Opportunities</a></li>
+              </ul>
+            </div>
             <div class="mail-control">
               <h3 class="title title--h3 title--middle">Message</h3>
               <ul class="mail-control__links">
@@ -2903,15 +2905,12 @@
                 <li class="mail-control__link-item mail-control__link-item--sent "><a class="mail-control__link" href="admin-messages-sent.html">Sent</a></li>
                 <li class="mail-control__link-item mail-control__link-item--contacts "><a class="mail-control__link" href="admin-messages-new.html">Contact Organizers</a></li>
               </ul>
-              <label class="mail-control__find-label">
-                <input class="mail-control__find-input"/>
-                <svg width="14" height="15" aria-hidden="true">
-                  <use xlink:href="#icon-search"></use>
-                </svg>
-              </label>
             </div>
           </div>
-          <h2 class="admin-table__headline">Message</h2>
+          <h2 class="admin__headline">Message</h2>
+          <div class="visible-sm">
+            <div class="admin__sender-info"><span class="admin__sender-from">Travel Luxury Agency</span><span class="admin__sender-subject">Appointment</span></div>
+          </div>
           <div class="edit edit--disabled">
             <div class="edit__wrapper">
               <h3 class="title title--h3 title--small">From:</h3>

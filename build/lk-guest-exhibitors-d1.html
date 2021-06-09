@@ -2753,8 +2753,8 @@
           <div class="container">
             <ul class="header__top-list">
               <li class="header__item hidden-sm">
-                <button class="header__top-link header__top-link--search js-search-button" type="button">
-                  <svg width="17" height="17" aria-hidden="true">
+                <button class="header__top-link js-search-button" type="button">
+                  <svg class="header__search-img" width="17" height="17" aria-hidden="true">
                     <use xlink:href="#icon-search"></use>
                   </svg>
                 </button>
@@ -2844,7 +2844,7 @@
           </div>
         </div>
       </header>
-      <main class="container container--no-padding lk">
+      <main class="container lk">
         <div class="admin">
           <div class="admin-headline">
             <h2 class="title--h2">Luxury Travel Mart Moscow Spring’ 2020</h2><span class="admin-headline__place">at Hyatt Regency Moscow Petrovsky Park</span>
@@ -2890,17 +2890,19 @@
             </div>
           </div>
           <div class="admin__control-wrapper">
-            <ul class="admin-tabs__list">
-              <button class="admin-tabs__menu-button" type="button" data-modal="admin-menu">
-                <svg width="32" height="32" aria-hidden="true">
-                  <use xlink:href="#icon-mobile-menu"></use>
-                </svg>
-              </button>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest.html">Программа и инфо</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
-              <li class="admin-tabs__item admin-tabs__item--active"><a class="admin-tabs__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
-            </ul>
+            <div class="admin-tabs">
+              <ul class="admin-tabs__list">
+                <button class="admin-tabs__menu-button" type="button" data-modal="admin-menu">
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="#icon-mobile-menu"></use>
+                  </svg>
+                </button>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest.html">Программа и инфо</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
+                <li class="admin-tabs__item admin-tabs__item--active"><a class="admin-tabs__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
+              </ul>
+            </div>
           </div>
           <h2 class="title title--h2 title--big">Список участников</h2>
           <div class="schedule-tabs">
@@ -2979,13 +2981,15 @@
             </div>
           </div>
           <div class="visible-sm">
-            <div class="filters__mobile-block">
-              <button type="button" data-modal="mobile-filters">Filters
-                <svg width="16" height="16" aria-hidden="true">
-                  <use xlink:href="#icon-filters"></use>
-                </svg>
-              </button>
-              <button type="reset">Clear all filters</button>
+            <div class="filters">
+              <div class="filters__mobile-block">
+                <button type="button" data-modal="mobile-filters">Filters
+                  <svg width="16" height="16" aria-hidden="true">
+                    <use xlink:href="#icon-filters"></use>
+                  </svg>
+                </button>
+                <button type="reset">Clear all filters</button>
+              </div>
             </div>
           </div>
           <ul class="filter-tabs">
@@ -2997,8 +3001,8 @@
             <thead>
               <tr class="admin-table__row admin-table__row--headline">
                 <th class="admin-table__cell admin-table__cell--company">Участник</th>
-                <th class="admin-table__cell admin-table__cell--name">Представитель</th>
-                <th class="admin-table__cell admin-table__cell--time">Свободные слоты</th>
+                <th class="admin-table__cell admin-table__cell--person">Представитель</th>
+                <th class="admin-table__cell admin-table__cell--select-time">Свободные слоты</th>
                 <th class="admin-table__cell admin-table__cell--button">Запрос</th>
                 <th class="admin-table__cell admin-table__cell--button">Контакт</th>
               </tr>
@@ -3057,7 +3061,9 @@
               </tr>
             </tbody>
           </table>
-          <button class="btn btn--white btn--more" type="button">Показать больше</button>
+          <div class="admin__button-wrapper">
+            <button class="btn btn--white btn--more" type="button">Показать больше</button>
+          </div>
         </div>
         <div class="support-contacts">
           <h3 class="title title--h3">Помощь</h3>

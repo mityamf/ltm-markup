@@ -11,7 +11,7 @@ block main
   include ../data/pages/admin-messages-inbox
   include ../data/modal-colleague-admin
 
-  main.container.container--no-padding.container--admin
+  main.container.container--admin
     .admin
       +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
       .hidden-sm
@@ -19,10 +19,11 @@ block main
       .admin__control-wrapper
         +renderAdminTabs(adminTabs)
         +renderMailControl("Inbox", adminMailControl.linkList, adminMailControl.isSearchInput)
-      h2.admin-table__headline="Inbox"
+      h2.admin__headline="Inbox"
       +renderInboxMessages(adminInboxMessagesTitles, adminInboxMessages)
 
-      button.btn.btn--white.btn--more(type="button")="More"
+      .admin__button-wrapper
+        button.btn.btn--white.btn--more(type="button")="More"
 
     +renderSupportContacts(contactsList)
 

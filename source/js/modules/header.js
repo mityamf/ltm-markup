@@ -1,13 +1,15 @@
-const stickNav = () => {
+const initHeader = () => {
 
   const header = document.querySelector('header');
 
   if (header) {
 
     const topBar = header.querySelector('.header__top');
-    let breakpointWidth = 767;
+    const mobileWidth = window.matchMedia('(max-width:767px)');
 
-    let scrollPos = window.pageYOffset;
+    let scrollPos = 0;
+
+    let screenWidth = document.documentElement.clientWidth;
 
     const getTopBarHeight = () => topBar.offsetHeight;
 
@@ -15,24 +17,27 @@ const stickNav = () => {
 
       let st = window.pageYOffset || document.documentElement.scrollTop;
 
-      header.style.transform = (st > scrollPos) ? `translateY(-${getTopBarHeight()}px)` : 'translateY(0)';
-
-      scrollPos = st <= 0 ? 0 : st;
+      if (!mobileWidth.matches) {
+        header.style.transform = (st > scrollPos) ? `translateY(-${getTopBarHeight()}px)` : null;
+        scrollPos = st;
+      }
     };
 
     const checkScreenWidth = () => {
-      let screenWidth = window.innerWidth;
+      let currentWidth = document.documentElement.clientWidth;
 
-      if (screenWidth > breakpointWidth) {
+      if (screenWidth !== currentWidth) {
         getTopBarHeight();
+        scroll();
+        screenWidth = currentWidth;
       }
     };
 
     getTopBarHeight();
+
     window.addEventListener('resize', checkScreenWidth);
-    window.addEventListener('resize', scroll);
     window.addEventListener('scroll', scroll);
   }
 };
 
-export {stickNav};
+export {initHeader};

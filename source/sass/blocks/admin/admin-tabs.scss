@@ -1,4 +1,8 @@
 .admin-tabs {
+  @include viewport--sm {
+    width: 55%;
+  }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -16,7 +20,6 @@
     @include viewport--sm {
       display: inline-flex;
       justify-content: flex-start;
-      width: 55%;
       margin: 0;
       padding: 0;
 
@@ -54,7 +57,7 @@
       border: none;
       background-color: transparent;
 
-      &:not(:first-of-type) {
+      &:not(.admin-tabs__item--active) {
         display: none;
       }
     }
@@ -94,6 +97,25 @@
 
       .admin-tabs__link {
         color: $color-gray-dark;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      background-color: $color-gray;
+
+      .admin-tabs__link {
+        color: $color-default-white;
+      }
+
+      @include viewport--sm {
+        border-color: transparent;
+        background-color: transparent;
+
+        .admin-tabs__link {
+          color: $color-gray-dark;
+        }
       }
     }
   }

@@ -57,7 +57,7 @@ mixin renderSentMessages(titleList, rowList)
             if row.status === "sent"
               +icon("icon-mail-sent", 34, 15)
           td(class=cellClass + 'destination admin-table__cell--sent-destination')=row.to
-          td(class=cellClass + 'tdeme')=row.subject
+          td(class=cellClass + 'theme')=row.subject
           td(class=cellClass + 'date')=row.date
           td(class=cellClass + 'time')=row.time
           td(class=cellClass + 'event')=row.event
@@ -89,7 +89,7 @@ mixin renderInboxMessages(titleList, rowList)
             if row.status === "opened"
               +icon("icon-mail-opened", 22, 21)
           td(class=cellClass + 'destination')=row.from
-          td(class=cellClass + 'tdeme')=row.subject
+          td(class=cellClass + 'theme')=row.subject
           td(class=cellClass + 'date')=row.date
           td(class=cellClass + 'time')=row.time
           if row.event
@@ -107,9 +107,9 @@ mixin renderGuestsList(titleList, rowList)
     thead
       tr.admin-table__row.admin-table__row--headline
         th(class=cellClass + 'company')=titleList.company
-        th(class=cellClass + 'name')=titleList.name
-        th(class=cellClass + 'name')=titleList.colleagueName
-        th(class=cellClass + 'time')=titleList.freeSlots
+        th(class=cellClass + 'person')=titleList.name
+        th(class=cellClass + 'person')=titleList.colleagueName
+        th(class=cellClass + 'select-time')=titleList.freeSlots
         th(class=cellClass + 'button')=titleList.request
         th(class=cellClass + 'button')=titleList.contact
     tbody
@@ -139,8 +139,8 @@ mixin renderHostedGuestsList(titleList, rowList)
     thead
       tr.admin-table__row.admin-table__row--headline
         th(class=cellClass + 'company')=titleList.company
-        th(class=cellClass + 'name')=titleList.name
-        th(class=cellClass + 'time')=titleList.freeSlots
+        th(class=cellClass + 'person')=titleList.name
+        th(class=cellClass + 'select-time')=titleList.freeSlots
         th(class=cellClass + 'button')=titleList.request
         th(class=cellClass + 'button')=titleList.contact
     tbody

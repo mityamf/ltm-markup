@@ -2753,8 +2753,8 @@
           <div class="container">
             <ul class="header__top-list">
               <li class="header__item hidden-sm">
-                <button class="header__top-link header__top-link--search js-search-button" type="button">
-                  <svg width="17" height="17" aria-hidden="true">
+                <button class="header__top-link js-search-button" type="button">
+                  <svg class="header__search-img" width="17" height="17" aria-hidden="true">
                     <use xlink:href="#icon-search"></use>
                   </svg>
                 </button>
@@ -3023,13 +3023,15 @@
           </div>
           <div class="visible-sm">
             <div class="filters filters--exhibitors">
-              <div class="filters__mobile-block">
-                <button type="button" data-modal="mobile-filters">Filters
-                  <svg width="16" height="16" aria-hidden="true">
-                    <use xlink:href="#icon-filters"></use>
-                  </svg>
-                </button>
-                <button type="reset">Clear all filters</button>
+              <div class="filters">
+                <div class="filters__mobile-block">
+                  <button type="button" data-modal="mobile-filters">Filters
+                    <svg width="16" height="16" aria-hidden="true">
+                      <use xlink:href="#icon-filters"></use>
+                    </svg>
+                  </button>
+                  <button type="reset">Clear all filters</button>
+                </div>
               </div>
             </div>
           </div>

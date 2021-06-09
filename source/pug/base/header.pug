@@ -4,8 +4,8 @@ mixin header(headerMod, currentPage)
       .container
         ul.header__top-list
           li.header__item.hidden-sm
-            button(type="button").header__top-link.header__top-link--search.js-search-button
-              +icon("icon-search", 17, 17)
+            button(type="button").header__top-link.js-search-button
+              +icon("icon-search", 17, 17)(class="header__search-img")
           li.header__item.hidden-sm
             a(href="#").header__top-link Terms & Conditions
           li.header__item

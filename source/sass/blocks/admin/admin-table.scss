@@ -2,12 +2,12 @@
   width: 100%;
   border-collapse: collapse;
   margin-top: 0;
-  margin-bottom: 31px;
+  margin-bottom: 0;
 
   @include viewport--sm {
     display: block;
-    margin-top: 42px;
-    margin-bottom: 31px;
+    width: auto;
+    margin: 36px -17px 0;
   }
 
   tbody {
@@ -121,6 +121,7 @@
       font-size: 14px;
       line-height: 17px;
       color: $color-blue;
+      letter-spacing: 0.4px;
     }
   }
 
@@ -135,6 +136,10 @@
     font-size: 12px;
     line-height: 20px;
     color: $color-zambezi;
+
+    @include viewport--sm {
+      letter-spacing: 0.3px;
+    }
   }
 
   &__cell--free > span {
@@ -243,6 +248,8 @@
 
   &__cell--date {
     width: 9%;
+    max-width: 127px;
+    overflow: hidden;
 
     @include viewport--lg {
       padding-left: 24px;
@@ -263,24 +270,30 @@
 
   &__cell--time {
     width: 6%;
+    max-width: 71px;
+    overflow: hidden;
   }
 
   &__cell--event {
     width: 17%;
+    max-width: 221px;
+    overflow: hidden;
 
     @include viewport--lg {
-      width: 22%;
+      width: 24%;
+      max-width: 269px;
     }
 
     @include viewport--md {
       width: 13%;
+      max-width: none;
       overflow: hidden;
     }
   }
 
   &__cell--person {
     width: 16%;
-    max-width: 220px;
+    max-width: 216px;
     margin-right: 18px;
 
     @include viewport--lg {
@@ -369,6 +382,10 @@
       width: 9%;
     }
 
+    @media (max-width: 1200px) {
+      width: 10%;
+    }
+
     @include viewport--md {
       width: 12%;
     }
@@ -400,7 +417,7 @@
   }
 
   &__cell--select-time {
-    width: 18%;
+    width: 16%;
     margin-right: 10px;
 
     @include viewport--sm {
@@ -651,7 +668,7 @@
     line-height: 18px;
 
     @include viewport--lg {
-      max-width: 95px;
+      max-width: 100px;
     }
 
     @include viewport--sm {
@@ -661,29 +678,6 @@
       font-size: 14px;
       line-height: 13px;
     }
-  }
-
-  &__headline {
-    display: none;
-
-    @include viewport--sm {
-      display: block;
-      margin-top: 5px;
-      margin-bottom: 15px;
-
-      font-size: 38px;
-      font-weight: lighter;
-      line-height: 46px;
-      letter-spacing: 0.05em;
-      color: $color-blue;
-    }
-  }
-}
-
-.container--no-padding .admin-table__headline {
-  @include viewport--sm {
-    padding-left: 17px;
-    padding-right: 17px;
   }
 }
 

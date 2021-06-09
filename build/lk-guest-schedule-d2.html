@@ -2753,8 +2753,8 @@
           <div class="container">
             <ul class="header__top-list">
               <li class="header__item hidden-sm">
-                <button class="header__top-link header__top-link--search js-search-button" type="button">
-                  <svg width="17" height="17" aria-hidden="true">
+                <button class="header__top-link js-search-button" type="button">
+                  <svg class="header__search-img" width="17" height="17" aria-hidden="true">
                     <use xlink:href="#icon-search"></use>
                   </svg>
                 </button>
@@ -2844,7 +2844,7 @@
           </div>
         </div>
       </header>
-      <main class="container container--no-padding lk">
+      <main class="container lk">
         <div class="admin admin--schedule">
           <div class="admin-headline">
             <h2 class="title--h2">Luxury Travel Mart Moscow Spring’ 2020</h2><span class="admin-headline__place">at Hyatt Regency Moscow Petrovsky Park</span>
@@ -2890,17 +2890,19 @@
             </div>
           </div>
           <div class="admin__control-wrapper">
-            <ul class="admin-tabs__list">
-              <button class="admin-tabs__menu-button" type="button" data-modal="admin-menu">
-                <svg width="32" height="32" aria-hidden="true">
-                  <use xlink:href="#icon-mobile-menu"></use>
-                </svg>
-              </button>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest.html">Программа и инфо</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
-            </ul>
+            <div class="admin-tabs">
+              <ul class="admin-tabs__list">
+                <button class="admin-tabs__menu-button" type="button" data-modal="admin-menu">
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="#icon-mobile-menu"></use>
+                  </svg>
+                </button>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest.html">Программа и инфо</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
+                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
+              </ul>
+            </div>
           </div>
           <h2 class="title title--h2 title--big">Список участников</h2>
           <div class="schedule-tabs">
@@ -2909,7 +2911,8 @@
                   <time>27.02.2020</time></a></li>
               <li class="schedule-tabs__item schedule-tabs__item--active"><a class="schedule-tabs__link" href="lk-guest-schedule-d2.html"><span class="schedule-tabs__text">День 2</span><span class="schedule-tabs__text schedule-tabs__text--hidden">–</span>
                   <time>28.02.2020</time></a></li>
-              <li class="schedule-tabs__item schedule-tabs__item--generate-pdf"><a class="generate-file generate-file__link" href="#" aria-label="Скачать файл" download="download">Скачать расписание PDF</a>
+              <li class="schedule-tabs__item schedule-tabs__item--generate-pdf">
+                <div class="generate-file"><a class="generate-file__link" href="#" aria-label="Скачать файл" download="download">Скачать расписание PDF</a></div>
               </li>
             </ul>
           </div>
@@ -2957,12 +2960,14 @@
               </tr>
             </tbody>
           </table>
-          <div class="admin__mobile-block-wrapper"><a class="generate-file generate-file__link" href="#" aria-label="Скачать файл" download="download">Скачать расписание PDF</a>
+          <div class="admin__mobile-block-wrapper">
+            <div class="generate-file"><a class="generate-file__link" href="#" aria-label="Скачать файл" download="download">Скачать расписание PDF</a></div>
           </div>
           <div class="wish-list">
             <h2 class="title title--h2 title--big">Wish list</h2>
             <div class="wish-list__text-wrapper">
-              <p>Участники, с которыми вы бы хотели встретиться</p><a class="generate-file generate-file__link" href="#" aria-label="Скачать файл" download="download">Скачать Wish list PDF</a>
+              <p>Участники, с которыми вы бы хотели встретиться</p>
+              <div class="generate-file"><a class="generate-file__link" href="#" aria-label="Скачать файл" download="download">Скачать Wish list PDF</a></div>
             </div>
             <div class="wish-list__company-list-wrapper">
               <div class="wish-list__company-block">

@@ -75,6 +75,10 @@
     letter-spacing: 0.5px;
   }
 
+  button:disabled {
+    cursor: default;
+  }
+
   img {
     width: 100%;
     max-height: 241px;
