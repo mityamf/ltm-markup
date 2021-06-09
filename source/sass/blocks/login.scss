@@ -25,6 +25,8 @@
       background-color: $color-blue;
       height: 100vh;
       max-height: 100vh;
+      height: calc(100 * var(--vh, 1vh));
+      max-height: calc(100 * var(--vh, 1vh));
       width: 100%;
       max-width: 100%;
       z-index: 10;
