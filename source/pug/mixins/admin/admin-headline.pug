@@ -5,10 +5,10 @@ mixin renderAdminHeadline(eventName, eventPlace, dates, backLink)
       .hidden-sm
         +renderBackButton(backLink)
     span.admin-headline__place=eventPlace
-    time(datetime="dates")=dates
+    time(datetime="2011-11-18")=dates
 
 mixin renderLKAdminHeadline(eventName, eventPlace, dates)
   .admin-headline
     h2.title--h2=eventName
     span.admin-headline__place=eventPlace
-    time(datetime="dates")=dates
+    time(datetime="2011-11-18")=dates
