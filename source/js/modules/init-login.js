@@ -24,10 +24,10 @@ const initLogin = () => {
 
     if (!mobileWidth.matches) {
       login.style.maxHeight = login.scrollHeight + 'px';
+      window.addEventListener('click', outsideClickListener);
     }
     login.classList.add('login--show');
     window.addEventListener('keydown', onEcsPress);
-    window.addEventListener('click', outsideClickListener);
   };
 
   const closePopup = () => {
