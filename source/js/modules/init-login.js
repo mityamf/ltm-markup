@@ -15,6 +15,7 @@ const initLogin = () => {
   const KeyCode = {
     ESC: 27,
   };
+  let screenWidth = document.documentElement.clientWidth;
 
   const openPopup = () => {
     if (mobileWidth.matches) {
@@ -61,6 +62,15 @@ const initLogin = () => {
     }
   };
 
+  const checkScreenWidth = () => {
+    let currentWidth = document.documentElement.clientWidth;
+
+    if (screenWidth !== currentWidth) {
+      closePopup();
+      screenWidth = currentWidth;
+    }
+  };
+
   if (login) {
 
     try {
@@ -88,7 +98,7 @@ const initLogin = () => {
       }
     });
 
-    window.addEventListener('resize', closePopup);
+    window.addEventListener('resize', checkScreenWidth);
   }
 
   showPasswordBtn.addEventListener('click', () => {

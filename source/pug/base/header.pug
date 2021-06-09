@@ -15,15 +15,15 @@ mixin header(headerMod, currentPage)
         .header__main-wrapper
           if(currentPage === "main")
             a.header__logo
-              +icon("logo-desktop", 178, 67)(class="header__logo-img header__logo-img--desktop hidden-sm")
-              +icon("logo-mobile", 53, 47)(class="header__logo-img header__logo-img--mobile visible-sm")
+              +icon("logo-desktop", 178, 67)(class="hidden-sm")
+              +icon("logo-mobile", 53, 47)(class="visible-sm")
           else
             a.header__logo(href="main.html", aria-label="Переход на главную")
-              +icon("logo-desktop", 178, 67)(class="header__logo-img header__logo-img--desktop hidden-sm")
-              +icon("logo-mobile", 53, 47)(class="header__logo-img header__logo-img--mobile visible-sm")
+              +icon("logo-desktop", 178, 67)(class="hidden-sm")
+              +icon("logo-mobile", 53, 47)(class="visible-sm")
           +main-nav
           a(href="#").header__link.header__link--sign-in
-            span.header__sign-in-text.hidden-sm Sign in
+            span.hidden-sm Sign in
             +icon("icon-sign-in", 26, 30)
         +renderLogin
         +search

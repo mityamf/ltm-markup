@@ -30,15 +30,15 @@
   }
 }
 
-@mixin pseudo-full {
+@mixin pseudo-full ($top: -5px, $left:-5px, $bottom:-5px, $right:-5px) {
   &::before {
     position: absolute;
     content: "";
-    top: -7px;
-    left: -5px;
-    bottom: -7px;
-    right: -5px;
-    background-color: $color-transparent;
+
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
   }
 }
 
