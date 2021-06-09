@@ -170,7 +170,7 @@
 }
 
 .button {
-  font-weight: 700;
+  font-weight: 600;
   outline: 0;
   display: flex;
   border: 1px solid $color-blue;
@@ -180,44 +180,22 @@
   justify-content: center;
   line-height: 19px;
   cursor: pointer;
-
-  &--footer-btn {
-    width: 22%;
-    //max-width: 103px;
-    height: 42px;
-    padding: 11px 42px;
-
-    @include viewport--sm {
-      max-width: 78px;
-      margin-left: 10px;
-    }
-  }
+  padding: 14px 31px;
+  align-self: center;
 
   &--open {
     padding: 4px 41px;
     font-size: 16px;
-    font-weight: 600;
   }
 
   &--blue {
     font-size: 18px;
-    font-weight: 600;
     background-color: $color-blue;
     color: $color-default-white;
-    padding: 14px 31px;
-    align-self: center;
-  }
-
-  &--btn-reg {
-    font-size: 17px;
-    font-weight: 600;
-    padding: 14px 31px;
-    align-self: center;
   }
 
   &--transparent {
-    padding: 11px 42px;
-    margin-bottom: 42px;
+    padding: 10px 42px;
     background-color: transparent;
   }
 

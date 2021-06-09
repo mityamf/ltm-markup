@@ -27,7 +27,7 @@ mixin interaction()
         li.interaction__item Sirene Luxury Hotel Bodrum;
       .interaction__btn-block
         a.button.button--open(href="#")
-          img(src="img/sprite/icon-arrow.svg", width="20", height="14", alt="arrow")
+          +icon("icon-arrow", 20, 14)
           span.visually-hidden read more
     .interaction__gallery.gallery-block
       h2.gallery-block__title Gallery
@@ -53,6 +53,6 @@ mixin interaction()
 
       .gallery-block__btn-block
         a.button.button--open(href="#")
-          img(src="img/sprite/icon-arrow.svg", width="20", height="14", alt="arrow")
+          +icon("icon-arrow", 20, 14)
           span.visually-hidden read more
     a(href="#").interaction__btn View All Exhibitors
