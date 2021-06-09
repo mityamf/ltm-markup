@@ -10,6 +10,20 @@
     margin: 36px -17px 0;
   }
 
+  &--guest-list {
+    thead {
+      @include viewport--md {
+        display: none;
+      }
+    }
+
+    tbody {
+      @include viewport--md {
+        display: block;
+      }
+    }
+  }
+
   tbody {
     @include viewport--md {
       display: grid;
@@ -21,7 +35,6 @@
   }
 
   &__row {
-    display: block;
     position: relative;
 
     @include viewport--sm {
@@ -292,29 +305,30 @@
   }
 
   &__cell--person {
-    width: 16%;
-    max-width: 216px;
-    margin-right: 18px;
+    width: 18%;
+    max-width: 234px;
+    padding-right: 18px;
 
     @include viewport--lg {
       max-width: 169px;
     }
 
-    @include viewport--sm {
+    @include viewport--md {
       display: inline-block;
       width: 44%;
       margin-bottom: 7px;
+      padding-right: 0;
     }
   }
 
   &__cell--person:last-of-type {
-    @include viewport--sm {
+    @include viewport--md {
       margin-right: 0;
     }
   }
 
   &__cell--mobile-person {
-    @include viewport--sm {
+    @include viewport--md {
       display: block;
       width: 100%;
     }
@@ -376,6 +390,7 @@
     margin-right: 20px;
     padding: 0;
     width: 7%;
+    padding-left: 18px;
 
     @include viewport--lg {
       margin-right: 20px;
@@ -397,10 +412,10 @@
   }
 
   &__cell--company {
-    margin-right: 25px;
+    padding-right: 25px;
     padding-left: 15px;
-    width: 32%;
-    max-width: 450px;
+    width: 34%;
+    max-width: 480px;
 
     font-size: 16px;
     line-height: 20px;
@@ -413,15 +428,23 @@
       display: block;
       width: 100%;
       margin: 0;
+      padding-right: 0;
     }
   }
 
-  &__cell--select-time {
-    width: 16%;
-    margin-right: 10px;
+  .admin-table__cell--select-time {
+    width: 17%;
+    max-width: 223px;
+
+    @include viewport--lg {
+      width: 20%;
+      max-width: 224px;
+      margin-right: 16px;
+    }
 
     @include viewport--sm {
-      width: 27%;
+      width: 48%;
+      margin-right: 7px;
     }
   }
 
@@ -485,26 +508,6 @@
       }
     }
 
-    .admin-table__cell--select-time {
-      width: 17%;
-      max-width: 223px;
-
-      @include viewport--lg {
-        width: 20%;
-        max-width: 224px;
-        margin-right: 16px;
-      }
-
-      @include viewport--sm {
-        width: 48%;
-        margin-right: 7px;
-      }
-    }
-
-    .admin-table__cell--button {
-      padding: 0;
-    }
-
     .admin-table__cell--button:last-of-type {
       margin-right: 0;
     }
@@ -512,7 +515,7 @@
     th,
     td {
       padding-top: 8px;
-      padding-bottom: 1px;
+      padding-bottom: 0;
 
       @include viewport--sm {
         padding: 0;
@@ -662,10 +665,12 @@
 
   .btn--request,
   .admin-table__link {
-    padding: 2px 7px;
-
     font-size: 12px;
     line-height: 18px;
+    width: 95px;
+    min-height: 22px;
+    padding: 0;
+    white-space: normal;
 
     @include viewport--lg {
       max-width: 100px;
@@ -677,6 +682,8 @@
       white-space: break-spaces;
       font-size: 14px;
       line-height: 13px;
+      width: 78px;
+      min-height: 42px;
     }
   }
 }
