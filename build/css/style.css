@@ -9386,6 +9386,18 @@ p {
   @media (max-width: 1439px) {
     .admin {
       padding-bottom: 0; } }
+  @media (max-width: 767px) {
+    .admin__sender-info {
+      display: block;
+      padding: 12px 0 11px;
+      letter-spacing: 0.4px;
+      font-size: 16px;
+      line-height: 20px; } }
+  @media (max-width: 767px) {
+    .admin__sender-subject {
+      display: block;
+      margin-top: 10px;
+      color: #a7a7a7; } }
   .admin__button-wrapper {
     padding: 31px 0 30px 0; }
   @media (max-width: 767px) {
@@ -9405,8 +9417,32 @@ p {
     padding-left: 0; }
   .admin .edit {
     padding: 0; }
+    @media (max-width: 1439px) {
+      .admin .edit {
+        padding: 8px 0 0 0; } }
+    @media (max-width: 767px) {
+      .admin .edit {
+        padding: 13px 0 0; } }
+  @media (max-width: 767px) {
+    .admin .edit .title--big {
+      display: none; } }
+  @media (max-width: 767px) {
+    .admin .edit:not(.edit--active) .title--small {
+      display: none; } }
+  @media (max-width: 767px) {
+    .admin .edit__input {
+      padding: 5px 9px; } }
+  .admin .edit__input:focus {
+    outline: none; }
+  .admin .edit__wrapper {
+    grid-row-gap: 18px; }
+    @media (max-width: 767px) {
+      .admin .edit__wrapper {
+        grid-row-gap: 0; } }
+  .admin .edit__text-block p {
+    margin: 6px 0 22px; }
   .admin .edit__label {
-    margin-top: 5px; }
+    margin-top: 0; }
     @media (max-width: 767px) {
       .admin .edit__label:last-of-type {
         margin-bottom: 29px; } }
@@ -9415,8 +9451,6 @@ p {
     @media (max-width: 767px) {
       .admin .edit__text-block {
         padding: 10px 0 0; } }
-  .admin .edit__input {
-    padding: 5px 18px; }
   .admin .input-dropdown {
     width: 100%; }
   @media (max-width: 1439px) {
@@ -9439,7 +9473,10 @@ p {
     margin-bottom: 13px; }
   @media (max-width: 767px) {
     .admin .edit .title--h3 {
-      margin-top: 20px; } }
+      margin-top: 12px;
+      margin-bottom: 5px; } }
+  .admin .edit .choices__list--single .choices__item {
+    letter-spacing: 1px; }
   .admin .title--small {
     margin: 0; }
   .admin__headline {
