@@ -16,12 +16,12 @@ mixin renderSchedule(titleList, rowList)
         else
           th(class=cellClass + 'empty')
     tbody
-      each row in rowList
+      each row, i in rowList
         tr.admin-table__row.admin-table__row--schedule
           td(class=cellClass + 'empty')
           td(class=cellClass + 'schedule-time')=row.time
           td(class=cellClass + 'select-company')
-            select(id="company-select", class="input-dropdown")
+            select(class="input-dropdown", id='select-company-0' + i)
               each option in row.company
                 option(value="Choose a company", class="input-dropdown__option")=option
           td(class=cellClass + 'button')
@@ -113,7 +113,7 @@ mixin renderGuestsList(titleList, rowList)
         th(class=cellClass + 'button')=titleList.request
         th(class=cellClass + 'button')=titleList.contact
     tbody
-      each row in rowList
+      each row, i in rowList
         tr.admin-table__row.admin-table__row--guests
           td(class=cellClass + 'company')=row.company
             span=row.place
@@ -122,7 +122,7 @@ mixin renderGuestsList(titleList, rowList)
           td(class=cellClass + 'person')=row.colleagueName
             span=row.colleaguePosition
           td(class=cellClass + 'select-time')
-            select(id="free-slot-select", class="input-dropdown")
+            select(class="input-dropdown", id='select-time' + i)
               each option in row.freeSlots
                 option(value=option, class="input-dropdown__option")=option
           td(class=cellClass + 'button')
@@ -144,7 +144,7 @@ mixin renderHostedGuestsList(titleList, rowList)
         th(class=cellClass + 'button')=titleList.request
         th(class=cellClass + 'button')=titleList.contact
     tbody
-      each row in rowList
+      each row, i in rowList
         tr.admin-table__row.admin-table__row--guests
           td(class=cellClass + 'company')=row.company
             span=row.place
@@ -152,7 +152,7 @@ mixin renderHostedGuestsList(titleList, rowList)
             if row.position
               span=row.position
           td(class=cellClass + 'select-time')
-            select(id="free-slot-select-2", class="input-dropdown")
+            select(class="input-dropdown", id='select-time-00' + i)
               each option in row.freeSlots
                 option(value=option, class="input-dropdown__option")=option
           td(class=cellClass + 'button')

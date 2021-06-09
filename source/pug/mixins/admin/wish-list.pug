@@ -7,7 +7,7 @@ mixin renderWishList(wishList)
     .wish-list__company-list-wrapper
       .wish-list__company-block
         .wish-list__choose-company
-          select(id="company-select-3", class="input-dropdown")
+          select(id="company-select-wish", class="input-dropdown")
             each option in wishList.selectCompany
               option(value="Choose a company", class="input-dropdown__option")=option
           button.btn.btn--white.btn--request(type="submit")=wishList.request

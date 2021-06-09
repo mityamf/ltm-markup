@@ -1,5 +1,5 @@
 mixin renderFilterTabs(filterTabs)
   ul.filter-tabs
     each filterTab in filterTabs
-      li.filter-tabs__item(key=filterTab.id)
+      li.filter-tabs__item
         button.btn.btn--white(type=filterTab.type)=filterTab.text
