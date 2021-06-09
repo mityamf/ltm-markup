@@ -58,20 +58,23 @@
 
     @include viewport--sm {
       padding-top: 37px;
-      padding-bottom: 37px;
+      padding-bottom: 17px;
     }
   }
 
   &__link--sign-in {
     display: flex;
     align-items: center;
-    margin-left: auto;
     flex-shrink: 0;
 
     svg {
       margin-left: 5px;
       width: 26px;
       height: 30px;
+    }
+
+    @include viewport--md {
+      margin-left: 20px;
     }
 
     @include viewport--sm {
@@ -85,12 +88,6 @@
         width: 22px;
         height: 26px;
       }
-    }
-  }
-
-  &__sign-in-text {
-    @include viewport--sm {
-      display: none;
     }
   }
 
@@ -118,7 +115,7 @@
 
   &__item {
     padding: 0;
-    margin-left: 8px;
+    margin-left: 10px;
   }
 
   &__item:last-child {
@@ -126,13 +123,16 @@
   }
 
   &__top-link {
-    display: inline-block;
     color: $color-nobel;
     font-size: 12px;
     line-height: 20px;
     font-weight: 600;
     position: relative;
     transition: color 0.3s ease;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 
     @include pseudo-full;
 
@@ -142,21 +142,15 @@
 
       svg {
         fill: $color-gray-dark;
-      }
-    }
-
-    &--search {
-      border: none;
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-
-      svg {
-        width: 17px;
-        height: 17px;
         transition: 0.3s ease;
       }
     }
+  }
+
+
+  &__search-img {
+    width: 17px;
+    height: 17px;
   }
 
   &__logo {
@@ -170,6 +164,7 @@
 
     @media (max-width: 1260px) {
       margin-right: 20px;
+      padding-top: 0;
     }
 
     @include viewport--sm {
@@ -232,6 +227,10 @@
     .header__main-wrapper {
       align-items: flex-start;
     }
+
+    .header__link--sign-in {
+      margin-top: 21px;
+    }
   }
 
   @include viewport--sm {
@@ -244,11 +243,13 @@
     left: 0;
     overflow-y: scroll;
 
+    .header__main-wrapper {
+      padding-top: 105px;
+      padding-bottom: 10px;
+    }
+
     .main-nav {
       flex-direction: column;
-      margin-top: 70px;
-      margin-right: 0;
-      margin-bottom: 12px;
     }
 
     .header__main {
@@ -259,6 +260,7 @@
 
     .header__top {
       display: block;
+      color: $color-default-white;
     }
 
     .main-nav__list,
@@ -282,6 +284,12 @@
       padding: 10px;
       padding-bottom: 12.5px;
       padding-left: 0;
+      transition: $default-transition-settings;
+    }
+
+    .header__top-link {
+      font-size: 16px;
+      line-height: 21px;
     }
 
     .header__top-list {
@@ -291,16 +299,6 @@
       margin-bottom: 50px;
       height: auto;
       background-color: $color-blue;
-    }
-
-    .header__top-link {
-      font-size: 16px;
-      line-height: 21px;
-
-      &:hover,
-      &:active {
-        color: $color-default-white;
-      }
     }
 
     .main-nav__list {
@@ -321,14 +319,6 @@
   .header__search.header__search--hidden {
     @include viewport--sm {
       display: block;
-    }
-  }
-
-  .header__link--sign-in {
-    margin-top: 21px;
-
-    @include viewport--sm {
-      display: none;
     }
   }
 }
