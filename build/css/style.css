@@ -10440,7 +10440,9 @@ p {
         width: 67%;
         max-width: none; } }
   .admin-table__cell--date {
-    width: 9%; }
+    width: 9%;
+    max-width: 127px;
+    overflow: hidden; }
     @media (max-width: 1439px) {
       .admin-table__cell--date {
         padding-left: 24px;
@@ -10455,15 +10457,21 @@ p {
         width: auto;
         padding-right: 0; } }
   .admin-table__cell--time {
-    width: 6%; }
+    width: 6%;
+    max-width: 71px;
+    overflow: hidden; }
   .admin-table__cell--event {
-    width: 17%; }
+    width: 17%;
+    max-width: 221px;
+    overflow: hidden; }
     @media (max-width: 1439px) {
       .admin-table__cell--event {
-        width: 24%; } }
+        width: 24%;
+        max-width: 269px; } }
     @media (max-width: 1023px) {
       .admin-table__cell--event {
         width: 13%;
+        max-width: none;
         overflow: hidden; } }
   .admin-table__cell--person {
     width: 16%;
