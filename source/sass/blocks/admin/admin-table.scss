@@ -248,6 +248,8 @@
 
   &__cell--date {
     width: 9%;
+    max-width: 127px;
+    overflow: hidden;
 
     @include viewport--lg {
       padding-left: 24px;
@@ -268,17 +270,23 @@
 
   &__cell--time {
     width: 6%;
+    max-width: 71px;
+    overflow: hidden;
   }
 
   &__cell--event {
     width: 17%;
+    max-width: 221px;
+    overflow: hidden;
 
     @include viewport--lg {
       width: 24%;
+      max-width: 269px;
     }
 
     @include viewport--md {
       width: 13%;
+      max-width: none;
       overflow: hidden;
     }
   }
