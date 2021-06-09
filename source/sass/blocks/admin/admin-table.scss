@@ -293,7 +293,7 @@
 
   &__cell--person {
     width: 16%;
-    max-width: 220px;
+    max-width: 216px;
     margin-right: 18px;
 
     @include viewport--lg {
@@ -382,6 +382,10 @@
       width: 9%;
     }
 
+    @media (max-width: 1200px) {
+      width: 10%;
+    }
+
     @include viewport--md {
       width: 12%;
     }
@@ -413,7 +417,7 @@
   }
 
   &__cell--select-time {
-    width: 18%;
+    width: 16%;
     margin-right: 10px;
 
     @include viewport--sm {
@@ -664,7 +668,7 @@
     line-height: 18px;
 
     @include viewport--lg {
-      max-width: 95px;
+      max-width: 100px;
     }
 
     @include viewport--sm {
