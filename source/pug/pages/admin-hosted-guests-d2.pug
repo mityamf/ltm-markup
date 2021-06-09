@@ -16,7 +16,7 @@ block main
       +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
       .hidden-sm
         +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
-      .admin__control-wrapper
+      .admin__control-wrapper.admin__control-wrapper--full-width
         +renderAdminTabs(adminTabs)
       +renderHeadline2("Hosted Buyers Guest List")
       +renderScheduleTabs(scheduleTabs)
