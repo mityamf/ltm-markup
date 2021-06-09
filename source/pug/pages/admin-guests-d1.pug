@@ -29,8 +29,12 @@ block main
 
       +renderFilterTabs(filterTabs)
       +renderGuestsList(adminGuestsListTitles, adminGuestsList)
+
       .admin__button-wrapper
         button.btn.btn--white.btn--more(type="button")="More"
+        .visible-sm
+          +renderUpButton('up-button--mobile')
+
     +renderSupportContacts(contactsList)
 
 block append modals

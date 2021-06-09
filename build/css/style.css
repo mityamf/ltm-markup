@@ -10694,7 +10694,7 @@ p {
         .admin-table__row--messages .admin-table__cell--destination,
         .admin-table__row--messages .admin-table__cell--theme {
           display: block;
-          width: 100%;
+          width: 93%;
           font-size: 16px;
           line-height: 20px; }
         .admin-table__row--messages .admin-table__cell--destination {
