@@ -3102,7 +3102,7 @@
             <form class="mailing__form" action="#" method="POST">
               <input class="mailing__email" type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
               <label class="visually-hidden" for="mailing"></label>
-              <button class="button button--footer-btn" type="button">Ok</button>
+              <button class="button button--transparent" type="button"> Ok</button>
               <div class="mailing__checkbox">
                 <input class="mailing__check" type="checkbox" id="check" name="check" value="yes"/>
                 <label class="mailing__check-label" for="check">I agree</label>
@@ -3184,7 +3184,7 @@
                 </div>
                 <div class="edit-colleague__block">
                   <label class="input-wrapper" for="colleague-skype">Skype</label>
-                  <input placeholder="E-mail" id="colleague-skype" name="colleague-skype" type="text"/>
+                  <input placeholder="Skype" id="colleague-skype" name="colleague-skype" type="text"/>
                 </div>
                 <div class="edit-colleague__block">
                   <label class="input-wrapper" for="colleague-email-2">E-mail</label>
@@ -3232,43 +3232,46 @@
           <div class="edit-colleague">
             <h2 class="title title--h2 title--big">Информация о компании</h2>
             <form class="edit-colleague__form" action="#" method="POST">
-              <div class="edit-colleague__block">
-                <label class="input-wrapper" for="site">Web</label>
-                <input placeholder="https://" id="site" name="site" type="text"/>
-              </div>
-              <div class="edit-colleague__block">
-                <label class="input-wrapper" for="company-description">Описание компании</label>
-                <textarea placeholder="Описание компании, только на английском языке" id="company-description" name="company-description" type="textarea"></textarea>
-              </div>
-              <div class="edit-colleague__block">
-                <p>Страна</p>
-                <select class="input-dropdown" id="country-select">
-                  <option class="input-dropdown__option" value="Russia">Russia</option>
-                  <option class="input-dropdown__option" value="USA">USA</option>
-                </select>
-              </div>
-              <div class="edit-colleague__block">
-                <p>Город</p>
-                <select class="input-dropdown" id="city-select">
-                  <option class="input-dropdown__option" value="Moscow">Moscow</option>
-                  <option class="input-dropdown__option" value="Saratov">Saratov</option>
-                </select>
-              </div>
-              <div class="edit-colleague__block">
-                <label class="input-wrapper" for="company-address">Адрес</label>
-                <input placeholder="office, bld., St" id="company-address" name="company-address" type="text"/>
-              </div>
-              <div class="edit-colleague__block">
-                <label class="input-wrapper" for="company-post-index">Почтовый индекс</label>
-                <input placeholder="000000" id="company-post-index" name="company-post-index" type="text"/>
-              </div>
-              <div class="edit-colleague__block">
-                <label class="input-wrapper" for="company-phone">Телефон</label>
-                <input placeholder="+1 (111) 111 11 11" id="company-phone" name="company-phone" type="text"/>
-              </div>
-              <div class="edit-colleague__block">
-                <label class="input-wrapper" for="company-email">E-mail</label>
-                <input placeholder="E-mail" id="company-email" name="company-email" type="text"/>
+              <div class="edit-colleague__form-wrapper">
+                <div class="edit-colleague__block edit-colleague__block--full-width"><span>Название компании</span><span class="edit-colleague__name">Adventa Agency</span></div>
+                <div class="edit-colleague__block edit-colleague__block--full-width">
+                  <label class="input-wrapper" for="site">Web</label>
+                  <input placeholder="https://" id="site" name="site" type="text"/>
+                </div>
+                <div class="edit-colleague__block edit-colleague__block--full-width">
+                  <label class="input-wrapper" for="company-description">Описание компании</label>
+                  <textarea placeholder="Описание компании, только на английском языке" id="company-description" name="company-description" type="textarea"></textarea>
+                </div>
+                <div class="edit-colleague__block edit-colleague__block--full-width">
+                  <p>Страна</p>
+                  <select class="input-dropdown" id="country-select">
+                    <option class="input-dropdown__option" value="Russia">Russia</option>
+                    <option class="input-dropdown__option" value="USA">USA</option>
+                  </select>
+                </div>
+                <div class="edit-colleague__block edit-colleague__block--full-width">
+                  <p>Город</p>
+                  <select class="input-dropdown" id="city-select">
+                    <option class="input-dropdown__option" value="Moscow">Moscow</option>
+                    <option class="input-dropdown__option" value="Saratov">Saratov</option>
+                  </select>
+                </div>
+                <div class="edit-colleague__block edit-colleague__block--full-width">
+                  <label class="input-wrapper" for="company-address">Адрес</label>
+                  <input placeholder="office, bld., St" id="company-address" name="company-address" type="text"/>
+                </div>
+                <div class="edit-colleague__block edit-colleague__block--half-width">
+                  <label class="input-wrapper" for="company-post-index">Почтовый индекс</label>
+                  <input placeholder="000000" id="company-post-index" name="company-post-index" type="text"/>
+                </div>
+                <div class="edit-colleague__block edit-colleague__block--half-width edit-colleague__block--right">
+                  <label class="input-wrapper" for="company-phone">Телефон</label>
+                  <input placeholder="+1 (111) 111 11 11" id="company-phone" name="company-phone" type="text"/>
+                </div>
+                <div class="edit-colleague__block edit-colleague__block--full-width">
+                  <label class="input-wrapper" for="company-email">E-mail</label>
+                  <input placeholder="E-mail" id="company-email" name="company-email" type="text"/>
+                </div>
               </div>
               <div class="edit-colleague__buttons">
                 <button class="btn btn--white" type="reset">Отмена</button>

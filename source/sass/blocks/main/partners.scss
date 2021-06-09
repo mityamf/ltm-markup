@@ -39,10 +39,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding-top: 45px;
+  padding-top: 20px;
 
   @include viewport--sm {
-    padding-top: 20px;
+    padding-top: 10px;
   }
 
   @media (min-width: 1920px) {
@@ -51,7 +51,8 @@
 }
 
 .partners__item {
-  margin: 25px;
+  margin-right: 25px;
+  margin-top: 25px;
   height: 150px;
   max-width: 100%;
   width: auto;
@@ -59,12 +60,18 @@
   align-items: center;
 
   @include viewport--sm {
-    margin: 5px;
+    max-width: 45%;
+    margin-right: 10px;
+    margin-top: 10px;
   }
 
   &:hover,
   &:focus {
     opacity: 0.8;
+  }
+
+  svg {
+    width: 100%;
   }
 }
 

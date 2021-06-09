@@ -1,0 +1,14 @@
+.generate-file {
+  @include viewport--sm {
+    border: 1px solid $color-blue;
+
+    &:active {
+      border-color: $color-gray;
+      background-color: $color-gray;
+
+      .generate-file__link {
+        color: $color-default-white;
+      }
+    }
+  }
+}

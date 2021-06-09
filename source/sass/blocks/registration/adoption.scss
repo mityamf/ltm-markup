@@ -37,6 +37,8 @@
   h4 {
     margin: 0;
     padding-bottom: 10px;
+    overflow: hidden;
+    height: 68px;
 
     @include viewport--sm {
       padding-bottom: 0;

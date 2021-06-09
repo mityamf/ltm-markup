@@ -9,14 +9,14 @@ block variables
 block main
   include ../data/pages/lk-profile-mobile
 
-  main.container.admin.admin--mobile
+  main.container.admin.admin--mobile.lk
     +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
-    .admin__control-wrapper
+    .admin__control-wrapper.admin__control-wrapper--full-width
       +renderAdminTabs(adminTabs)
     .info-block
       .info-block__top-wrapper
         .info-block__headline
-          +renderHeadline2(infoBlock.title)
+          h2.admin__headline=infoBlock.title
           a.info-block__link(href=infoBlock.link)=infoBlock.link
       .info-block__text-wrapper
         p=infoBlock.text

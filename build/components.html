@@ -2955,7 +2955,10 @@
             <h2>3. Кнопка перехода в блок</h2>
             <p>Используется на разных страницах</p>
             <p style="color: red;"></p>
-            <div><a class="news-home__button news-home__button-open" href="#" style="position: inherit; display: inline-block;"><img src="img/svg/icon-arrow.svg" width="20" height="14" alt="arrow"><span class="visually-hidden">read more</span></a></div>
+            <div><a class="button button--open" href="#">
+                <svg width="20" height="14" aria-hidden="true">
+                  <use xlink:href="#icon-arrow"></use>
+                </svg><span class="visually-hidden">read more</span></a></div>
           </section>
         </div>
       </main>
@@ -2969,7 +2972,7 @@
             <form class="mailing__form" action="#" method="POST">
               <input class="mailing__email" type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
               <label class="visually-hidden" for="mailing"></label>
-              <button class="button button--footer-btn" type="button">Ok</button>
+              <button class="button button--transparent" type="button"> Ok</button>
               <div class="mailing__checkbox">
                 <input class="mailing__check" type="checkbox" id="check" name="check" value="yes"/>
                 <label class="mailing__check-label" for="check">I agree</label>

@@ -104,6 +104,7 @@
 @import "blocks/admin/wish-list";
 @import "blocks/admin/filter-tabs";
 @import "blocks/admin/lk";
+@import "blocks/admin/generate-file";
 
 // Modals
 //---------------------------------
@@ -111,6 +112,7 @@
 @import "blocks/modal/edit-colleague";
 @import "blocks/modal/admin-menu";
 @import "blocks/modal/mobile-filters";
+@import "blocks/modal/edit-profile";
 
 // используйте это для отключения ховеров на тач устройствах
 // ! но не используйте это для текстовых полей ( input, textarea )

@@ -103,13 +103,13 @@ mixin renderInboxMessages(titleList, rowList)
 //Таблица со списком гостей
 
 mixin renderGuestsList(titleList, rowList)
-  table.admin-table
+  table.admin-table.admin-table--guest-list
     thead
       tr.admin-table__row.admin-table__row--headline
         th(class=cellClass + 'company')=titleList.company
-        th(class=cellClass + 'name')=titleList.name
-        th(class=cellClass + 'name')=titleList.colleagueName
-        th(class=cellClass + 'time')=titleList.freeSlots
+        th(class=cellClass + 'person')=titleList.name
+        th(class=cellClass + 'person')=titleList.colleagueName
+        th(class=cellClass + 'select-time')=titleList.freeSlots
         th(class=cellClass + 'button')=titleList.request
         th(class=cellClass + 'button')=titleList.contact
     tbody
@@ -139,8 +139,8 @@ mixin renderHostedGuestsList(titleList, rowList)
     thead
       tr.admin-table__row.admin-table__row--headline
         th(class=cellClass + 'company')=titleList.company
-        th(class=cellClass + 'name')=titleList.name
-        th(class=cellClass + 'time')=titleList.freeSlots
+        th(class=cellClass + 'person')=titleList.name
+        th(class=cellClass + 'select-time')=titleList.freeSlots
         th(class=cellClass + 'button')=titleList.request
         th(class=cellClass + 'button')=titleList.contact
     tbody
