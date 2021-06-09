@@ -103,7 +103,7 @@ mixin renderInboxMessages(titleList, rowList)
 //Таблица со списком гостей
 
 mixin renderGuestsList(titleList, rowList)
-  table.admin-table
+  table.admin-table.admin-table--guest-list
     thead
       tr.admin-table__row.admin-table__row--headline
         th(class=cellClass + 'company')=titleList.company

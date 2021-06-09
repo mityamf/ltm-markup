@@ -1,0 +1,39 @@
+.modal--edit-profile .modal__content {
+  width: 698px;
+  padding: 24px 30px;
+
+  @include viewport--sm {
+    width: 100%;
+    padding: 34px 17px;
+  }
+}
+
+.modal--edit-profile .edit-colleague__form {
+  padding: 0 88px;
+
+  @include viewport--sm {
+    padding: 0;
+  }
+}
+
+.modal--edit-profile input,
+.modal--edit-profile textarea {
+  padding: 6px 10px;
+}
+
+.modal--edit-profile textarea {
+  min-height: 133px;
+
+  @include viewport--sm {
+    min-height: 74px;
+  }
+}
+
+.modal--edit-profile .edit-colleague__block:not(:last-child) {
+  margin-bottom: 8px;
+
+  @include viewport--sm {
+    margin-bottom: 2px;
+  }
+}
+
