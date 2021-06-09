@@ -92,9 +92,11 @@
   &__item:active {
     border-color: transparent;
     background-color: $color-gray;
+    cursor: default;
 
     .admin-tabs__link {
       color: $color-default-white;
+      cursor: default;
     }
 
     @include viewport--sm {

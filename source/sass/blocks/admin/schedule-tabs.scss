@@ -118,20 +118,23 @@
     border-color: transparent;
     background-color: $color-gray;
 
+    .schedule-tabs__link {
+      cursor: default;
+      background-color: $color-gray;
+    }
+
     span,
     time {
       color: $color-default-white;
     }
 
-    @include viewport--sm {
-      &:hover {
-        border-color: transparent;
-        background-color: $color-gray;
+    &:hover {
+      border-color: transparent;
+      background-color: $color-gray;
 
-        span,
-        time {
-          color: $color-default-white;
-        }
+      span,
+      time {
+        color: $color-default-white;
       }
     }
   }
