@@ -118,7 +118,7 @@
 
   &__item {
     padding: 0;
-    margin-left: 8px;
+    margin-left: 10px;
   }
 
   &__item:last-child {
@@ -126,13 +126,16 @@
   }
 
   &__top-link {
-    display: inline-block;
     color: $color-nobel;
     font-size: 12px;
     line-height: 20px;
     font-weight: 600;
     position: relative;
     transition: color 0.3s ease;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 
     @include pseudo-full;
 
@@ -142,21 +145,15 @@
 
       svg {
         fill: $color-gray-dark;
-      }
-    }
-
-    &--search {
-      border: none;
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-
-      svg {
-        width: 17px;
-        height: 17px;
         transition: 0.3s ease;
       }
     }
+  }
+
+
+  &__search-img {
+    width: 17px;
+    height: 17px;
   }
 
   &__logo {

@@ -1947,44 +1947,42 @@ p {
         display: none; } }
   .header__item {
     padding: 0;
-    margin-left: 8px; }
+    margin-left: 10px; }
   .header__item:last-child {
     padding-right: 0; }
   .header__top-link {
-    display: inline-block;
     color: #9f9f9f;
     font-size: 12px;
     line-height: 20px;
     font-weight: 600;
     position: relative;
     -webkit-transition: color 0.3s ease;
-    transition: color 0.3s ease; }
+    transition: color 0.3s ease;
+    border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer; }
     .header__top-link::before {
       position: absolute;
       content: "";
-      top: -10px;
-      left: -10px;
-      bottom: -10px;
-      right: -10px;
+      top: -7px;
+      left: -5px;
+      bottom: -7px;
+      right: -5px;
       background-color: rgba(255, 255, 255, 0); }
     .header__top-link:hover, .header__top-link:active {
       color: #505050; }
       .header__top-link:hover svg, .header__top-link:active svg {
-        fill: #505050; }
-    .header__top-link--search {
-      border: none;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      cursor: pointer; }
-      .header__top-link--search svg {
-        width: 17px;
-        height: 17px;
+        fill: #505050;
         -webkit-transition: 0.3s ease;
         transition: 0.3s ease; }
+  .header__search-img {
+    width: 17px;
+    height: 17px; }
   .header__logo {
     margin-right: 125px;
     padding-top: 5px; }
@@ -4989,10 +4987,10 @@ p {
   .main-nav__toggle::before {
     position: absolute;
     content: "";
-    top: -10px;
-    left: -10px;
-    bottom: -10px;
-    right: -10px;
+    top: -7px;
+    left: -5px;
+    bottom: -7px;
+    right: -5px;
     background-color: rgba(255, 255, 255, 0); }
   @media (max-width: 1023px) {
     .main-nav__toggle {
@@ -5059,8 +5057,7 @@ p {
 .search-input__input {
   width: 100%;
   border: none;
-  padding: 20px;
-  padding-left: 0;
+  padding: 20px 0;
   font-size: 38px;
   font-weight: 300;
   line-height: 51px;
@@ -8226,10 +8223,10 @@ p {
   .login__close::before {
     position: absolute;
     content: "";
-    top: -10px;
-    left: -10px;
-    bottom: -10px;
-    right: -10px;
+    top: -7px;
+    left: -5px;
+    bottom: -7px;
+    right: -5px;
     background-color: rgba(255, 255, 255, 0); }
 
 .login__logo {
