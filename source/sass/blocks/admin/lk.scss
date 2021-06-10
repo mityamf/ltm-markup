@@ -70,6 +70,10 @@
     font-size: 12px;
     line-height: 20px;
     color: $color-nobel;
+
+    @include viewport--sm {
+      display: none;
+    }
   }
 
   .participants__contact-link {

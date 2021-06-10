@@ -19,7 +19,7 @@
     }
 
     @include viewport--sm {
-      margin-bottom: 24px;
+      margin-bottom: 31px;
 
       font-size: 38px;
       line-height: 46px;
@@ -37,7 +37,7 @@
     @include viewport--sm {
       font-size: 14px;
       line-height: 17px;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.7px;
     }
   }
 
@@ -46,7 +46,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     margin: 0 -17px -17px 0;
-    padding: 40px 0 40px;
+    padding: 41px 0 39px;
 
     @include viewport--lg {
       padding: 40px 0 42px 0;
@@ -54,7 +54,7 @@
     }
 
     @include viewport--sm {
-      padding: 39px 0 6px;
+      padding: 32px 0 6px;
       margin: 0 0 -9px 0;
     }
   }
@@ -139,6 +139,12 @@
       padding: 0 20px;
 
       line-height: 16px;
+    }
+  }
+
+  & &__note {
+    @include viewport--sm {
+      display: none;
     }
   }
 

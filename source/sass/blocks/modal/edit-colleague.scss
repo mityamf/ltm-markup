@@ -24,12 +24,20 @@
 
   input {
     padding: 5px 8px;
+
+    @include viewport--sm {
+      margin-top: 4px;
+    }
   }
 
   textarea {
     display: block;
     width: 100%;
     padding: 10px 15px;
+
+    @include viewport--sm {
+      margin-top: 4px;
+    }
   }
 
   .title {
@@ -46,10 +54,10 @@
   }
 
   &__block {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 
     @include viewport--sm {
-      margin-bottom: 2px;
+      margin-bottom: 10px;
     }
   }
 
@@ -80,7 +88,11 @@
   &__buttons {
     display: flex;
     justify-content: space-between;
-    padding: 15px 0;
+    padding: 0 0 15px 0;
+
+    @include viewport--sm {
+      padding: 9px 0 15px;
+    }
   }
 
   &__buttons .btn {
@@ -178,6 +190,10 @@
 
   .choices {
     height: 42px;
+
+    @include viewport--sm {
+      margin-top: 4px;
+    }
   }
 
   .choices__inner {
@@ -204,5 +220,6 @@
 
   @include viewport--sm {
     width: 100%;
+    padding: 28px 17px 15px 17px;
   }
 }

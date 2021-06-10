@@ -7,7 +7,7 @@ mixin renderScheduleTabs(scheduleTabs, generatePDF)
           a.schedule-tabs__link(href=tab.link)
             span.schedule-tabs__text=tab.text
             span.schedule-tabs__text.schedule-tabs__text--hidden=tab.separator
-            time=tab.date
+            time(datetime="2011-11-18")=tab.date
       if generatePDF
         li.schedule-tabs__item.schedule-tabs__item--generate-pdf
           +renderGeneratePDFButton(generatePDF.link, generatePDF.text)

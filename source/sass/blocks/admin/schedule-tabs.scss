@@ -1,6 +1,10 @@
 .schedule-tabs {
   padding-bottom: 20px;
 
+  @include viewport--sm {
+    padding-bottom: 0;
+  }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -16,6 +20,7 @@
 
     @include viewport--sm {
       width: 100%;
+      margin: 0 0 -10px 0;
     }
   }
 
@@ -76,7 +81,13 @@
     }
 
     @include viewport--sm {
-      width: calc((100% / 2) - 10px);
+      width: calc(97% / 2);
+    }
+  }
+
+  &__item:last-child {
+    @include viewport--sm {
+      margin-right: 0;
     }
   }
 
@@ -118,20 +129,23 @@
     border-color: transparent;
     background-color: $color-gray;
 
+    .schedule-tabs__link {
+      cursor: default;
+      background-color: $color-gray;
+    }
+
     span,
     time {
       color: $color-default-white;
     }
 
-    @include viewport--sm {
-      &:hover {
-        border-color: transparent;
-        background-color: $color-gray;
+    &:hover {
+      border-color: transparent;
+      background-color: $color-gray;
 
-        span,
-        time {
-          color: $color-default-white;
-        }
+      span,
+      time {
+        color: $color-default-white;
       }
     }
   }

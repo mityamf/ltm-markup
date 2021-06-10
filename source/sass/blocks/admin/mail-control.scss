@@ -68,6 +68,7 @@
   &__link-item--active {
     .mail-control__link {
       color: $color-gray;
+      cursor: default;
     }
 
     &:hover,
@@ -78,7 +79,7 @@
     }
   }
 
-  &__link-item {
+  &__link-item:not(.mail-control__link-item--active) {
     &:hover,
     &:focus {
       .mail-control__link {
