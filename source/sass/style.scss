@@ -92,7 +92,7 @@
 @import "components/filters";
 @import "components/photo-edit";
 @import "blocks/admin/admin";
-@import "blocks/admin/admin-tabs";
+@import "blocks/admin/tabs";
 @import "blocks/admin/schedule-tabs";
 @import "blocks/admin/sponsorship";
 @import "blocks/admin/download";
@@ -110,7 +110,6 @@
 //---------------------------------
 
 @import "blocks/modal/edit-colleague";
-@import "blocks/modal/admin-menu";
 @import "blocks/modal/mobile-filters";
 @import "blocks/modal/edit-profile";
 
