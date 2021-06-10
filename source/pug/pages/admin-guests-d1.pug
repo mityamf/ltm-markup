@@ -27,6 +27,9 @@ block main
           +renderAlphabetFilter(alphabetFilter)
           +renderDropdownFilter(dropdownFilters)
 
+      .visible-sm
+        +renderMobileFilterButtons("Filters", "Clear all filters")
+
       +renderFilterTabs(filterTabs)
       +renderGuestsList(adminGuestsListTitles, adminGuestsList)
 

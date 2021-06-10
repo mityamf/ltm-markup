@@ -22,6 +22,10 @@
 
   h3 {
     padding-bottom: 24px;
+
+    @include viewport--lg {
+      letter-spacing: 0.8px;
+    }
   }
 
   &__block--alphabet {
@@ -112,6 +116,10 @@
   &__dropdown-filter:not(:last-of-type),
   &__block:not(:last-of-type) {
     margin-right: 15px;
+
+    @include viewport--lg {
+      margin-right: 9px;
+    }
 
     @include viewport--sm {
       margin-right: 0;
