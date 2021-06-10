@@ -2879,22 +2879,20 @@
             </div>
           </div>
           <div class="admin__control-wrapper admin__control-wrapper--full-width">
-            <div class="admin-tabs">
-              <div class="admin-tabs__mobile-wrapper">
-                <button class="admin-tabs__menu-button" type="button" data-modal="admin-menu">
-                  <svg width="32" height="32" aria-hidden="true">
-                    <use xlink:href="#icon-mobile-menu"></use>
-                  </svg>
-                </button>
-                <ul class="admin-tabs__list">
-                  <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-deadlines.html">Deadlines &amp; Info</a></li>
-                  <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-messages-inbox.html">Messages</a></li>
-                  <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-schedule-d1.html">My Schedule</a></li>
-                  <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-guests-d1.html">Buyers Guest List</a></li>
-                  <li class="admin-tabs__item admin-tabs__item--active"><a class="admin-tabs__link" href="admin-hosted-guests-d1.html">Hosted Buyers Guest List</a></li>
-                  <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-sponsors-opportunities.html">Sponsorship Opportunities</a></li>
-                </ul>
-              </div>
+            <div class="tabs">
+              <button class="tabs__menu-button" type="button" data-modal="admin-menu">
+                <svg width="32" height="32" aria-hidden="true">
+                  <use xlink:href="#icon-mobile-menu"></use>
+                </svg>
+              </button>
+              <ul class="tabs__list">
+                <li class="tabs__item"><a class="tabs__link" href="admin-deadlines.html">Deadlines &amp; Info</a></li>
+                <li class="tabs__item"><a class="tabs__link" href="admin-messages-inbox.html">Messages</a></li>
+                <li class="tabs__item"><a class="tabs__link" href="admin-schedule-d1.html">My Schedule</a></li>
+                <li class="tabs__item"><a class="tabs__link" href="admin-guests-d1.html">Buyers Guest List</a></li>
+                <li class="tabs__item tabs__item--active"><a class="tabs__link" href="admin-hosted-guests-d1.html">Hosted Buyers Guest List</a></li>
+                <li class="tabs__item"><a class="tabs__link" href="admin-sponsors-opportunities.html">Sponsorship Opportunities</a></li>
+              </ul>
             </div>
           </div>
           <h2 class="title title--h2 title--big">Hosted Buyers Guest List</h2>
@@ -3245,14 +3243,19 @@
       <div class="modal__wrapper">
         <div class="modal__overlay"></div>
         <div class="modal__content modal-gallery">
-          <div class="admin-menu">
-            <ul class="admin-menu__list">
-              <li class="admin-menu__item"><a class="admin-menu__link" href="admin-deadlines.html">Deadlines &amp; Info</a></li>
-              <li class="admin-menu__item"><a class="admin-menu__link" href="admin-messages-inbox.html">Messages</a></li>
-              <li class="admin-menu__item"><a class="admin-menu__link" href="admin-schedule-d1.html">My Schedule</a></li>
-              <li class="admin-menu__item"><a class="admin-menu__link" href="admin-guests-d1.html">Buyers Guest List</a></li>
-              <li class="admin-menu__item"><a class="admin-menu__link" href="admin-hosted-guests-d1.html">Hosted Buyers Guest List</a></li>
-              <li class="admin-menu__item"><a class="admin-menu__link" href="admin-sponsors-opportunities.html">Sponsorship Opportunities</a></li>
+          <div class="tabs tabs--modal">
+            <button class="tabs__menu-button" type="button" data-modal="admin-menu">
+              <svg width="32" height="32" aria-hidden="true">
+                <use xlink:href="#icon-mobile-menu"></use>
+              </svg>
+            </button>
+            <ul class="tabs__list">
+              <li class="tabs__item"><a class="tabs__link" href="admin-deadlines.html">Deadlines &amp; Info</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="admin-messages-inbox.html">Messages</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="admin-schedule-d1.html">My Schedule</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="admin-guests-d1.html">Buyers Guest List</a></li>
+              <li class="tabs__item tabs__item--active"><a class="tabs__link" href="admin-hosted-guests-d1.html">Hosted Buyers Guest List</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="admin-sponsors-opportunities.html">Sponsorship Opportunities</a></li>
             </ul>
           </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">

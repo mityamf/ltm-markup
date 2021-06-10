@@ -2850,21 +2850,19 @@
           <time datetime="2011-11-18">27 – 28 February 2020</time>
         </div>
         <div class="admin__control-wrapper admin__control-wrapper--full-width">
-          <div class="admin-tabs">
-            <div class="admin-tabs__mobile-wrapper">
-              <button class="admin-tabs__menu-button" type="button" data-modal="admin-menu">
-                <svg width="32" height="32" aria-hidden="true">
-                  <use xlink:href="#icon-mobile-menu"></use>
-                </svg>
-              </button>
-              <ul class="admin-tabs__list">
-                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest.html">Программа и инфо</a></li>
-                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
-                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
-                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
-                <li class="admin-tabs__item admin-tabs__item--active"><a class="admin-tabs__link" href="lk-participants-mobile.html">Сотрудники на выставку</a></li>
-              </ul>
-            </div>
+          <div class="tabs">
+            <button class="tabs__menu-button" type="button" data-modal="admin-menu">
+              <svg width="32" height="32" aria-hidden="true">
+                <use xlink:href="#icon-mobile-menu"></use>
+              </svg>
+            </button>
+            <ul class="tabs__list">
+              <li class="tabs__item"><a class="tabs__link" href="lk-guest.html">Программа и инфо</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
+              <li class="tabs__item tabs__item--active"><a class="tabs__link" href="lk-participants-mobile.html">Сотрудники на выставку</a></li>
+            </ul>
           </div>
         </div>
         <div class="participants">
@@ -3036,13 +3034,18 @@
       <div class="modal__wrapper">
         <div class="modal__overlay"></div>
         <div class="modal__content modal-gallery">
-          <div class="admin-menu">
-            <ul class="admin-menu__list">
-              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest.html">Программа и инфо</a></li>
-              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
-              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
-              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
-              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-participants-mobile.html">Сотрудники на выставку</a></li>
+          <div class="tabs tabs--modal">
+            <button class="tabs__menu-button" type="button" data-modal="admin-menu">
+              <svg width="32" height="32" aria-hidden="true">
+                <use xlink:href="#icon-mobile-menu"></use>
+              </svg>
+            </button>
+            <ul class="tabs__list">
+              <li class="tabs__item"><a class="tabs__link" href="lk-guest.html">Программа и инфо</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
+              <li class="tabs__item tabs__item--active"><a class="tabs__link" href="lk-participants-mobile.html">Сотрудники на выставку</a></li>
             </ul>
           </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
