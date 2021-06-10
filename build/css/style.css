@@ -11227,6 +11227,9 @@ p {
   .lk .info-block__text-wrapper {
     display: block;
     width: 100%; }
+    @media (max-width: 767px) {
+      .lk .info-block__text-wrapper {
+        padding-bottom: 12px; } }
   .lk .info-block__text-wrapper p {
     letter-spacing: 0.1px; }
   .lk .info-block__link {
