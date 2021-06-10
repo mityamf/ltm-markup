@@ -10,7 +10,11 @@
 
   @include viewport--md {
     flex-direction: column;
-    height: 400px;
+    height: auto;
+
+    .news-home__info-img {
+      width: 100%;
+    }
   }
 }
 

@@ -12,42 +12,44 @@
   }
 }
 
-.form-label {
-  //max-width: 358px;
-  //max-height: 42px;
-  //width: 78%;
+.form-fiield {
   border: 1px solid $color-blue;
   border-radius: 1px;
-  background-color: $color-white;
-  padding: 6px 23px 6px 15px;
-  font-size: 24px;
-  font-style: light;
-  outline: 0;
-  color: $color-blue;
-  cursor: pointer;
-  text-overflow: ellipsis;
   border-right: none;
 
-  &:focus,
-  &:hover {
-    opacity: 0.8;
-  }
-
-  @media (max-width: 1100px) {
-    //width: 63%;
-  }
-
   @include viewport--sm {
-    //max-width: inherit;
-    width: 93%;
-    padding: 6px 9px 6px 8px;
+    width: 97%;
     margin-right: 10px;
-    border-right: solid 1px;
+    border-right: solid 1px $color-blue;
   }
 
-  @media (max-width: 365px) {
-    //max-width: inherit;
-    //width: 53%;
+
+  label {
+    @include viewport--sm {
+      width: 100%;
+    }
+  }
+
+  input {
+    border: none;
+    background-color: $color-white;
+    padding: 6px 23px 6px 15px;
+    font-size: 24px;
+    font-style: light;
+    outline: 0;
+    color: $color-blue;
+    cursor: pointer;
+    text-overflow: ellipsis;
+
+    &:focus,
+    &:hover {
+      opacity: 0.8;
+    }
+
+    @include viewport--sm {
+      width: 100%;
+      padding: 6px 9px 6px 8px;
+    }
   }
 }
 
@@ -55,45 +57,46 @@
   color: $color-blue;
 }
 
-.mailing__checkbox {
-  width: 100%;
-}
-
 .form-check {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
+  width: 100%;
 
-.form-check + label {
-  display: inline-flex;
-  align-items: center;
-  user-select: none;
-  padding-top: 8px;
-  color: $color-nobel;
-  font-size: 12px;
-  font-family: $font-family--p;
-
-  &:focus,
-  &:hover {
-    opacity: 0.8;
+  input {
+    width: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
   }
-}
 
-.form-check + label::before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  flex-grow: 0;
-  border: 1px solid $color-blue;
-  margin-right: 0.5em;
-}
+  input + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    padding-top: 8px;
+    color: $color-nobel;
+    font-size: 12px;
+    font-family: $font-family--p;
 
-.form-check:checked + label::before {
-  border-color: $color-blue;
-  background-image: url("../img/svg/check.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+    &:focus,
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  input + label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid $color-blue;
+    margin-right: 0.5em;
+  }
+
+  input:checked + label::before {
+    border-color: $color-blue;
+    background-image: url("../img/svg/check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }

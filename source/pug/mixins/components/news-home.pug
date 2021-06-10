@@ -10,16 +10,21 @@ mixin news-home()
         p Companies that participate in the Luxury Travel Mart include five-star hotels and resorts, elite car companies, cruise and yacht charter companies, private jet charters, DMC and luxury operators. Most of the best-known brands in the luxury travel industry have participated and continue to participate in LTM each year.
         p This B2B event has been carefully thought out and planned in such a way that sellers and potential buyers of services – companies working with VIP clients, have the opportunity to establish partnerships within the space of a single day. The main aim of the of the organisers of the Luxury Travel Mart is to expand the geography of sales of the exhibition’s participants and also to introduce players to new areas and services to which they previously did not have access.
       .news-home__btn-block
-        a.button.button--open(href="#")
+        a.button.button--open(href="about.html")
           +icon("icon-arrow", 20, 14)
           span.visually-hidden read more
     .news-home__info.news-home__slider.swiper-container
       h2.news-home__info-title News &#38; Information
       ul.news-home__info-list.swiper-wrapper
-        +news-info
+        li.news-home__info-item.swiper-slide
+          +renderNewsPreview("sorasak", "Japan – partner of the LTM anniversary exhibition", "20 June 2019", "2019-06-20", "The partner country of the 15th anniversary exhibition of the Luxury Travel Mart, which will take place in the Hyatt Regency Petrovsky Park from February 28 to March 1, 2019, will be Japan, establishing a new tradition.")
+        li.news-home__info-item.swiper-slide
+          +renderNewsPreview("banquet", "LTM Anniversary Exhibition", "18 June 2019", "2019-06-18", "Next year Moscow will welcome spring with a certain flair. A spectacular celebration is set to take place on the first day of March – the 15th anniversary of the Luxury Travel Mart, which brings together the leading players from the luxury tourism industry from across the globe…")
+        li.news-home__info-item.swiper-slide
+          +renderNewsPreview("drawbridge", "Luxury Travel Mart Presents a Absolutely New Luxury Event Format", "17 June 2019", "2019-06-17", "The partner country of the 15th anniversary exhibition of the Luxury Travel Mart, which will take place in the Hyatt Regency Petrovsky Park from February 28 to March 1, 2019, will be Japan, establishing a new tradition. Represented for the first time at LTM last year, Japan quickly became one of the main players in the exhibition. The Japanese exhibit, which included 14 companies…")
       .news-home__button-next
         +icon("icon-arrow_right_white", 19, 30)
       .news-home__button-prev
         +icon("icon-arrow_right_white", 19, 30)
       .news-home__pagination
-      a.news-home__info-(href="#")  All News &#38; Information
+      a.news-home__info-(href="news.html")  All News &#38; Information

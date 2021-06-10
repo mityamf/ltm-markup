@@ -1,11 +1,13 @@
 mixin renderNewsPreview(newsImage, newsTitle, newsDate, newsDatetime, newsPreview)
   .news-preview
-    .news-preview__image-container
+    .news-home__info-img
       +img("content", newsImage, "jpg", "222", "222", newsTitle)
-    .news-preview__content
-      time.news-preview__date(datetime= newsDatetime)= newsDate
-      h3= newsTitle
-      p= newsPreview
-    a.news-preview__button.btn.btn--read-more.btn--reduced(href="newpage.html")
-      +icon("icon-arrow", 20, 14)
-      span.visually-hidden read more
+    .news-home__info-content
+      time.news-home__info-date(datetime=newsDatetime)= newsDate
+      h3.news-home__title-info= newsTitle
+      .news-home__info-text
+        p= newsPreview
+      .news-home__btn-block
+        a.button.button--open(href="newpage.html")
+          +icon("icon-arrow", 20, 14)
+          span.visually-hidden read more

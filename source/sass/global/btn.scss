@@ -198,6 +198,10 @@
     background-color: transparent;
   }
 
+  &--big {
+    padding: 13px 62px;
+  }
+
   &:hover,
   &:focus {
     opacity: 0.8;
