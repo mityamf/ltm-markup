@@ -3,7 +3,7 @@ mixin renderContactCard(avatar, name, position, work, telephones)
     .contact-card__image-container
       +img("content", avatar, "jpg", width="103", height="103", name)
     .contact-card__item-container
-      p.contact-card__name.title.title--h3= name
+      h3.contact-card__name.title.title--h3= name
       p #{position} <br>#{work}
       if telephones
         each tel in telephones

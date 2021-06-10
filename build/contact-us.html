@@ -2863,7 +2863,7 @@
                     <div class="contact-card__image-container"><img src="img/content/contacts-user001.jpg" srcset="img/content/contacts-user001@2x.jpg 2x" width="103" height="103" alt="Artyom Polanskiy"/>
                     </div>
                     <div class="contact-card__item-container">
-                      <p class="contact-card__name title title--h3">Artyom Polanskiy</p>
+                      <h3 class="contact-card__name title title--h3">Artyom Polanskiy</h3>
                       <p>Event Manager <br>General Administration and Exhibitors</p><a class="contact-card__tel" href="tel:+79162043136">+7 916 204 31 36</a><a class="contact-card__tel" href="tel:+380671117763">+380 67 111 77 63</a><a class="contact-card__mail" href="#">
                         <svg width="42" height="18" aria-hidden="true">
                           <use xlink:href="#ico_sendingmessage"></use>
@@ -2876,7 +2876,7 @@
                     <div class="contact-card__image-container"><img src="img/content/contacts-user002.jpg" srcset="img/content/contacts-user002@2x.jpg 2x" width="103" height="103" alt="Maria Shankina"/>
                     </div>
                     <div class="contact-card__item-container">
-                      <p class="contact-card__name title title--h3">Maria Shankina</p>
+                      <h3 class="contact-card__name title title--h3">Maria Shankina</h3>
                       <p>Event Manager <br>General Administration and Sponsorship</p><a class="contact-card__tel" href="tel:+79857765522">+7 985 776 55 22</a><a class="contact-card__tel" href="tel:+74956450421">+7 495 645 04 21</a><a class="contact-card__mail" href="#">
                         <svg width="42" height="18" aria-hidden="true">
                           <use xlink:href="#ico_sendingmessage"></use>
@@ -2889,7 +2889,7 @@
                     <div class="contact-card__image-container"><img src="img/content/contacts-user003.jpg" srcset="img/content/contacts-user003@2x.jpg 2x" width="103" height="103" alt="Yaroslav Kyreev"/>
                     </div>
                     <div class="contact-card__item-container">
-                      <p class="contact-card__name title title--h3">Yaroslav Kyreev</p>
+                      <h3 class="contact-card__name title title--h3">Yaroslav Kyreev</h3>
                       <p>Event Manager <br>Buyers and Appointments – LTM Kyiv</p><a class="contact-card__tel" href="tel:+380673712222">+380 67 371 22 22</a><a class="contact-card__mail" href="#">
                         <svg width="42" height="18" aria-hidden="true">
                           <use xlink:href="#ico_sendingmessage"></use>
@@ -2902,7 +2902,7 @@
                     <div class="contact-card__image-container"><img src="img/content/contacts-user004.jpg" srcset="img/content/contacts-user004@2x.jpg 2x" width="103" height="103" alt="Irina Bezpalaya"/>
                     </div>
                     <div class="contact-card__item-container">
-                      <p class="contact-card__name title title--h3">Irina Bezpalaya</p>
+                      <h3 class="contact-card__name title title--h3">Irina Bezpalaya</h3>
                       <p>Event Coordinator <br>Buyers and Appointments</p><a class="contact-card__tel" href="tel:+79852467232">+7 985 246 72 32</a><a class="contact-card__tel" href="tel:+74956450422">+7 495 645 04 22</a><a class="contact-card__mail" href="#">
                         <svg width="42" height="18" aria-hidden="true">
                           <use xlink:href="#ico_sendingmessage"></use>
@@ -2927,26 +2927,29 @@
       <footer class="container">
         <div class="footer">
           <ul class="footer__logotip logotip">
-            <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company-ap" src="./img/svg/g10.svg" alt="company logo" width="67" height="73"/></a></li>
-            <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company-tm" src="./img/svg/tm-logo.svg" alt="company logo" width="110" height="57"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="organizers.html"><img class="logotip__company-ap" src="./img/svg/g10.svg" alt="company logo" width="67" height="73"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="organizers.html"><img class="logotip__company-tm" src="./img/svg/tm-logo.svg" alt="company logo" width="110" height="57"/></a></li>
           </ul>
           <div class="footer__mailing mailing">
-            <form class="mailing__form form" action="#" method="POST">
-              <input class="form-label" type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
-              <label class="visually-hidden" for="mailing"></label>
+            <form class="mailing__form" action="#" method="POST">
+              <div class="form-fiield">
+                <label for="mailing">
+                  <input type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
+                </label>
+              </div>
               <button class="button button--transparent" type="button"> Ok</button>
-              <div class="mailing__checkbox">
-                <input class="form-check" type="checkbox" id="check" name="check" value="yes"/>
-                <label class="form-checkbox" for="check">I agree</label>
+              <div class="mailing__checkbox form-check">
+                <input type="checkbox" id="check" name="check" value="yes"/>
+                <label for="check">I agree</label>
               </div>
             </form>
           </div>
           <div class="footer__menu menu">
             <ul class="menu__list">
-              <li><a class="menu__item" href="#">Terms Conditions</a></li>
-              <li><a class="menu__item" href="#">Have a question?</a></li>
-              <li><a class="menu__item" href="#">Privacy policy</a></li>
-              <li><a class="menu__item" href="#">Cookie policy</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Terms Conditions</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Have a question?</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Privacy policy</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Cookie policy</a></li>
             </ul>
             <ul class="menu__account">
               <li><a class="menu__account-social menu__account-social-fb" href="#">
