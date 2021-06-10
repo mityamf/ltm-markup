@@ -119,10 +119,14 @@
   }
 
   &__about-text {
-    max-height: 340px;
+    //max-height: 340px;
     overflow: hidden;
     width: 100%;
     max-width: 692px;
+
+    @media (max-width: 1440px) {
+      max-height: 255px;
+    }
   }
 }
 
@@ -179,7 +183,7 @@
 
   @media (min-width: 1920px) {
     padding-left: 12px;
-    max-height: 825px;
+    max-height: 830px;
   }
 
   &-title {
