@@ -135,7 +135,7 @@ mixin renderGuestsList(titleList, rowList)
 
 
 mixin renderHostedGuestsList(titleList, rowList)
-  table.admin-table
+  table.admin-table.admin-table--guest
     thead
       tr.admin-table__row.admin-table__row--headline
         th(class=cellClass + 'company')=titleList.company
