@@ -14,6 +14,6 @@ block main
     .notifications
       +renderHeadlineWithBackButton("Notifications", "#")
       +renderNotifications(notifications)
-      button.btn.btn--white.btn--more.btn--desktop(type="button")="All Notifications"
-      button.btn.btn--white.btn--more.btn--mobile(type="button")="More"
+      button.button.button--transparent.button--desktop(type="button")="All Notifications"
+      button.button.button--transparent.button--mobile(type="button")="More"
     +renderSupportContacts(contactsList)

@@ -11,8 +11,8 @@ mixin footer
       .footer__mailing.mailing
         form.mailing__form(action="#" method="POST")
           .form-fiield
-            label(for="mailing")
-              input(type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters")
+            input(type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters")
+            label.visually-hidden(for="mailing") E-mail field
           button(type="button").button.button--transparent  Ok
           .mailing__checkbox.form-check
             input(type="checkbox" id="check" name="check" value="yes")

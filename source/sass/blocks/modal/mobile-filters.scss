@@ -53,15 +53,16 @@
     margin: 0 auto;
   }
 
-  .btn {
+  .button {
+    width: 222px;
     padding: 15px 0;
   }
 
-  &__button-wrapper .btn:first-child {
+  &__button-wrapper .button:first-child {
     margin-bottom: 30px;
   }
 
-  &__button-wrapper .btn {
+  &__button-wrapper .button {
     width: 100%;
   }
 }

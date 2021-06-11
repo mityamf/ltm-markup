@@ -2826,7 +2826,7 @@
                     </svg>
                   </button>
                 </div>
-                <button class="login__btn btn btn--transparent" type="submit">Enter</button><a class="login__forgot" href="#" data-modal="forgot">Contact organizers in case of difficulties</a>
+                <button class="login__btn button button--white" type="submit">Enter</button><a class="login__forgot" href="#" data-modal="forgot">Contact organizers in case of difficulties</a>
               </form>
             </div>
             <div class="header__search header__search--hidden">
@@ -2857,11 +2857,11 @@
           <h2 class="registration__title">Registration for All Exhibitions</h2>
           <div class="registration__exhibitor exhibitor">
             <h3 class="exhibitor__title">Exhibitor</h3>
-            <p class="exhibitor__text">A representative of a hotel or group of hotels, airline, resort, medical facility, sports tourism organization, etc. The company is represented at the exhibition. Paid participation.</p><span class="exhibitor__info">Registration form is not supported in early versions of Internet Explorer (min. 10 version). Please use an alternative browser.</span><a class="button button--btn-reg" href="exhibitor.html"> Exhibitor registration</a>
+            <p class="exhibitor__text">A representative of a hotel or group of hotels, airline, resort, medical facility, sports tourism organization, etc. The company is represented at the exhibition. Paid participation.</p><span class="exhibitor__info">Registration form is not supported in early versions of Internet Explorer (min. 10 version). Please use an alternative browser.</span><a class="button" href="exhibitor.html"> Exhibitor registration</a>
           </div>
           <div class="registration__buyer buyer">
             <h3 class="buyer__title">Buyer, VIP buyer, Hosted Buyer</h3>
-            <p class="buyer__text">Гостевая регистрация на Рабочую сессию, Вечерний коктейль и по программе Hosted Buyer. Участие бесплатное, требуется подтверждение организаторов.</p><span class="buyer__info">Регистрационная форма не поддерживается в ранних версиях Internet Explorer (мин. 10 версия). Пожалуйста, используйте альтернативный браузер.</span><a class="button button--btn-reg" href="buyer.html"> Гостевая регистрация</a>
+            <p class="buyer__text">Гостевая регистрация на Рабочую сессию, Вечерний коктейль и по программе Hosted Buyer. Участие бесплатное, требуется подтверждение организаторов.</p><span class="buyer__info">Регистрационная форма не поддерживается в ранних версиях Internet Explorer (мин. 10 версия). Пожалуйста, используйте альтернативный браузер.</span><a class="button" href="buyer.html">Гостевая регистрация</a>
           </div>
           <div class="registration__terms terms">
             <h2 class="terms__title">Terms &#38; Conditions</h2>
@@ -2872,7 +2872,7 @@
               <p>All cancelation of participation must be received in writing by fax or email. A full refund of the participation fee will be made if canceled up to six months prior to the event. If canceled six to four months prior to the event - 50% of the participation fee will be charged for the cancelation. No refund of the participation fee will be made if canceled later then four months prior to the event.</p>
               <p>Included in the fee: participation in all events of the Luxury Travel Mart. No hidden charges.</p>
               <p>A block of rooms will be reserved at each of the venue hotels. Rates will be provided upon request.</p>
-            </div><a class="button button--btn-reg terms__btn" href="#">Read more</a>
+            </div><a class="button terms__btn" href="#">Read more</a>
           </div>
         </section>
       </main>
@@ -2885,9 +2885,8 @@
           <div class="footer__mailing mailing">
             <form class="mailing__form" action="#" method="POST">
               <div class="form-fiield">
-                <label for="mailing">
-                  <input type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
-                </label>
+                <input type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
+                <label class="visually-hidden" for="mailing">E-mail field</label>
               </div>
               <button class="button button--transparent" type="button"> Ok</button>
               <div class="mailing__checkbox form-check">
@@ -2939,7 +2938,7 @@
             <form class="forgot__form" action="#" method="POST">
               <label class="visually-hidden" for="forgot-email">Inter your E-mail</label>
               <input type="email" name="forgot-email" id="forgot-email" placeholder="Enter your E-mail" required="required"/><a class="forgot__link" href="buyer.html">Or send message to Organizers</a>
-              <button class="forgot__submit btn btn--blue" type="submit">Send</button>
+              <button class="forgot__submit button button--blue" type="submit">Send</button>
             </form>
           </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">

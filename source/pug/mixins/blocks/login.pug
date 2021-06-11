@@ -17,6 +17,5 @@ mixin renderLogin()
         button(type="button", title="Показать/Скрыть пароль", aria-label="Показать/скрыть пароль").login__show-password
           +icon("ico_nonshowpassword", 30, 20)(class="login__show-password-img login__show-password-img--hide")
           +icon("ico_showpassword", 30, 20)(class="login__show-password-img login__show-password-img--show")
-      button(type="submit").login__btn.btn.btn--transparent Enter
+      button(type="submit").login__btn.button.button--white Enter
       a(href="#", data-modal="forgot").login__forgot Contact organizers in case of difficulties
-

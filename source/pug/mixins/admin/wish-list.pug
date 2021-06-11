@@ -10,18 +10,16 @@ mixin renderWishList(wishList)
           select(id="company-select-wish", class="input-dropdown")
             each option in wishList.selectCompany
               option(value="Choose a company", class="input-dropdown__option")=option
-          button.btn.btn--white.btn--request(type="submit")=wishList.request
+          button.button.button--transparent.btn--request(type="submit")=wishList.request
         span="Company"
         ul.wish-list__company-list
           each company in wishList.companyList.columnOne
             li.wish-list__company-item=company
-        button.btn.btn--white.btn--more(type="button")="More"
+        button.button.button--transparent.btn--more(type="button")="More"
       .wish-list__company-block
         p=wishList.text
         span="Company"
         ul.wish-list__company-list
           each company in wishList.companyList.columnTwo
             li.wish-list__company-item=company
-        button.btn.btn--white.btn--more(type="button")="More"
-
-
+        button.button.button--transparent.btn--more(type="button")="More"

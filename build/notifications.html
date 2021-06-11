@@ -2826,7 +2826,7 @@
                     </svg>
                   </button>
                 </div>
-                <button class="login__btn btn btn--transparent" type="submit">Enter</button><a class="login__forgot" href="#" data-modal="forgot">Contact organizers in case of difficulties</a>
+                <button class="login__btn button button--white" type="submit">Enter</button><a class="login__forgot" href="#" data-modal="forgot">Contact organizers in case of difficulties</a>
               </form>
             </div>
             <div class="header__search header__search--hidden">
@@ -3220,8 +3220,8 @@
               </tbody>
             </table>
           </div>
-          <button class="btn btn--white btn--more btn--desktop" type="button">All Notifications</button>
-          <button class="btn btn--white btn--more btn--mobile" type="button">More</button>
+          <button class="button button--transparent button--desktop" type="button">All Notifications</button>
+          <button class="button button--transparent button--mobile" type="button">More</button>
         </div>
         <div class="support-contacts">
           <h3 class="title title--h3">Contacts for support</h3>
@@ -3275,9 +3275,8 @@
           <div class="footer__mailing mailing">
             <form class="mailing__form" action="#" method="POST">
               <div class="form-fiield">
-                <label for="mailing">
-                  <input type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
-                </label>
+                <input type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
+                <label class="visually-hidden" for="mailing">E-mail field</label>
               </div>
               <button class="button button--transparent" type="button"> Ok</button>
               <div class="mailing__checkbox form-check">
@@ -3329,7 +3328,7 @@
             <form class="forgot__form" action="#" method="POST">
               <label class="visually-hidden" for="forgot-email">Inter your E-mail</label>
               <input type="email" name="forgot-email" id="forgot-email" placeholder="Enter your E-mail" required="required"/><a class="forgot__link" href="buyer.html">Or send message to Organizers</a>
-              <button class="forgot__submit btn btn--blue" type="submit">Send</button>
+              <button class="forgot__submit button button--blue" type="submit">Send</button>
             </form>
           </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
