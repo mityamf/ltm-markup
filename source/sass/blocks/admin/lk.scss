@@ -97,6 +97,10 @@
     &__text-wrapper {
       display: block;
       width: 100%;
+
+      @include viewport--sm {
+        padding-bottom: 12px;
+      }
     }
 
     &__text-wrapper p {
