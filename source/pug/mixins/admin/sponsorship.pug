@@ -12,4 +12,4 @@ mixin renderSponsorshipList(sponsorshipHeadline, sponsorshipList)
             each text in sponsorship.textList
               p=text
           - var disabled = sponsorship.status === "disabled"
-          button.btn.btn--white(type="button" disabled=disabled)=sponsorship.buttonText
+          button.button.button--transparent(type="button" disabled=disabled)=sponsorship.buttonText

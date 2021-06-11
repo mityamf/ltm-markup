@@ -21,8 +21,11 @@
     letter-spacing: 0.01em;
   }
 
-  .btn {
+  .button {
+    width: 222px;
     margin-top: 38px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @include viewport--lg {
@@ -46,7 +49,7 @@
   @include viewport--sm {
     margin-top: 30px;
 
-    .btn {
+    .button {
       margin-top: 0;
     }
 

@@ -1,188 +1,22 @@
-.btn {
-  display: inline-block;
-  padding: 18px 0;
-
-  font-size: 16px;
-  line-height: 19px;
-
-  cursor: pointer;
-
-  &--white {
-    border: 1px solid $color-blue;
-    background-color: transparent;
-
-    color: $color-blue;
-
-    transition: color background-color $default-transition-settings;
-  }
-
-  &--white:disabled {
-    border-color: $color-gray;
-    background-color: transparent;
-
-    color: $color-gray;
-
-    &:hover,
-    &:focus {
-      border-color: $color-gray;
-      background-color: transparent;
-
-      color: $color-gray;
-    }
-  }
-
-  &--blue {
-    background-color: $color-blue;
-    border: none;
-
-    color: $color-default-white;
-
-    cursor: pointer;
-    transition: opacity $default-transition-settings;
-
-    &:hover,
-    &:focus {
-      opacity: 0.8;
-    }
-
-    &:active {
-      opacity: 0.5;
-    }
-  }
-
-  &--white:hover,
-  &--white:focus {
-    border-color: transparent;
-    background-color: $color-blue;
-
-    color: $color-default-white;
-  }
-
-  &--white:active {
-    border-color: transparent;
-    background-color: $color-gray;
-
-    color: $color-default-white;
-  }
-
-  @include viewport--md {
-    &--white:hover,
-    &--white:focus {
-      border-color: $color-blue;
-      background-color: transparent;
-
-      color: $color-blue;
-    }
-
-    &--white:active {
-      border-color: transparent;
-      background-color: $color-gray;
-
-      color: $color-default-white;
-    }
-  }
-
-  &--transparent {
-    background-color: transparent;
-    border: 1px solid $color-default-white;
-    border-radius: 2px;
-    color: $color-default-white;
-    cursor: pointer;
-
-    &:hover,
-    &:focus {
-      border-color: transparent;
-      background-color: $color-default-white;
-
-      color: $color-blue;
-    }
-
-    &:active {
-      border-color: transparent;
-      background-color: $color-gray;
-
-      color: $color-default-white;
-    }
-  }
-
-  &--more {
-    display: block;
-    margin: 0 auto;
-    padding: 20px 30px;
-    width: 222px;
-
-    @include viewport--sm {
-      padding: 17px 30px;
-    }
-  }
-
-  &--more-news {
-    padding: 13px 69px;
-
-    &:hover,
-    &:focus {
-      border-color: transparent;
-      background-color: $color-blue;
-
-      color: $color-default-white;
-    }
-
-    &:active {
-      border-color: transparent;
-      background-color: $color-gray;
-
-      color: $color-default-white;
-    }
-  }
-
-  &--read-more {
-    padding: 2px 41px;
-    border: 1px solid $color-blue;
-    background-color: transparent;
-
-    svg {
-      vertical-align: middle;
-    }
-
-    &:hover,
-    &:focus {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
-  }
-
-  &--reduced {
-    @include viewport--lg {
-      padding: 1px 32px;
-    }
-
-    @include viewport--md {
-      padding: 1px 41px;
-    }
-  }
-
-  &--more-low {
-    padding: 15px 30px;
-  }
-}
-
 .button {
-  font-weight: 600;
-  outline: 0;
   display: flex;
-  font-size: 17px;
-  border: 1px solid $color-blue;
-  border-radius: 1px;
-  color: $color-blue;
+  align-self: center;
   align-items: center;
   justify-content: center;
+
+  font-weight: 600;
+  font-size: 17px;
+  outline: 0;
+  color: $color-blue;
   line-height: 19px;
+  letter-spacing: 0.5px;
+
+  border: 1px solid $color-blue;
+  border-radius: 1px;
+
+
   cursor: pointer;
   padding: 14px 31px;
-  align-self: center;
 
   &--open {
     padding: 4px 41px;
@@ -194,16 +28,34 @@
   }
 
   &--transparent {
-    padding: 10px 42px;
+    padding: 12px 42px;
     background-color: transparent;
   }
 
-  &--big {
-    padding: 13px 62px;
+  &--white {
+    background-color: transparent;
+    color: $color-default-white;
+    border: 1px solid $color-default-white;
   }
 
   &:hover,
   &:focus {
     opacity: 0.8;
+  }
+
+  &:disabled {
+    border-color: $color-gray;
+    background-color: transparent;
+
+    color: $color-gray;
+
+    &:hover,
+    &:focus {
+      border-color: $color-gray;
+      background-color: transparent;
+
+      color: $color-gray;
+      opacity: 1;
+    }
   }
 }

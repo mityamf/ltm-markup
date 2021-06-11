@@ -234,7 +234,7 @@
 
   //Стили для кнопок
 
-  .btn--request {
+  .button--request {
     padding: 0 5px;
     height: max-content;
 
@@ -303,7 +303,7 @@
     }
   }
 
-  .btn--more {
+  .button {
     display: none;
 
     @include viewport--sm {
