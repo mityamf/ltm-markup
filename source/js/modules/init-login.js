@@ -27,17 +27,25 @@ const initLogin = () => {
       login.style.maxHeight = login.scrollHeight + 'px';
       window.addEventListener('click', outsideClickListener);
     }
+
     login.classList.add('login--show');
     window.addEventListener('keydown', onEcsPress);
   };
 
   const closePopup = () => {
-    login.style.maxHeight = null;
+
+    if (mobileWidth.matches) {
+      enableScrolling();
+      loginCloseBtn.removeEventListener('click', closePopup);
+    }
+
+    if (!mobileWidth.matches) {
+      login.style.maxHeight = null;
+      window.removeEventListener('click', outsideClickListener);
+    }
+
     login.classList.remove('login--show');
-    enableScrolling();
     window.removeEventListener('keydown', onEcsPress);
-    loginCloseBtn.removeEventListener('click', closePopup);
-    window.removeEventListener('click', outsideClickListener);
   };
 
   const togglePopup = () => {
