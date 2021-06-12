@@ -8,11 +8,19 @@
   &__container {
     height: 391px;
 
+    @include viewport--lg {
+      height: 386px;
+    }
+
     @include viewport--md {
       height: 500px;
     }
 
     @include viewport--sm {
+      height: 350px;
+    }
+
+    @media (max-width: 500px) {
       height: 210px;
     }
   }

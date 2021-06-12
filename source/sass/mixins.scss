@@ -30,7 +30,7 @@
   }
 }
 
-@mixin pseudo-full ($top: -5px, $left:-5px, $bottom:-5px, $right:-5px) {
+@mixin pseudo-full ($top: -5px, $left:-5px, $bottom: $top, $right: $left) {
   &::before {
     position: absolute;
     content: "";

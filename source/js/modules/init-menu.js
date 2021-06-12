@@ -40,7 +40,7 @@ const initMobileMenu = () => {
   if (tabletWidth.matches) {
     menuToggle.addEventListener('click', toggleMenu);
   } else {
-    closeMenu();
+    menuToggle.removeEventListener('click', toggleMenu);
   }
 };
 
