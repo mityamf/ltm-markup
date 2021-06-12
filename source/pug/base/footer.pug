@@ -3,29 +3,30 @@ mixin footer
     .footer
       ul.footer__logotip.logotip
         li.logotip__list
-          a.logotip__item(href="#")
+          a.logotip__item(href="organizers.html")
             img.logotip__company-ap(src="./img/svg/g10.svg" alt="company logo" width="67" height="73")
         li.logotip__list
-          a.logotip__item(href="#")
+          a.logotip__item(href="organizers.html")
             img.logotip__company-tm(src="./img/svg/tm-logo.svg" alt="company logo" width="110" height="57")
       .footer__mailing.mailing
         form.mailing__form(action="#" method="POST")
-          input.mailing__email(type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters")
-          label.visually-hidden(for="mailing")
+          .form-fiield
+            input(type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters")
+            label.visually-hidden(for="mailing") E-mail field
           button(type="button").button.button--transparent  Ok
-          .mailing__checkbox
-            input.mailing__check(type="checkbox" id="check" name="check" value="yes")
-            label.mailing__check-label(for="check") I agree
+          .mailing__checkbox.form-check
+            input(type="checkbox" id="check" name="check" value="yes")
+            label(for="check") I agree
       .footer__menu.menu
         ul.menu__list
           li
-            a.menu__item(href="#") Terms Conditions
+            a.menu__item(href="privacy-policy.html") Terms Conditions
           li
-            a.menu__item(href="#") Have a question?
+            a.menu__item(href="privacy-policy.html") Have a question?
           li
-            a.menu__item(href="#") Privacy policy
+            a.menu__item(href="privacy-policy.html") Privacy policy
           li
-            a.menu__item(href="#") Cookie policy
+            a.menu__item(href="privacy-policy.html") Cookie policy
         ul.menu__account
           li
             a.menu__account-social.menu__account-social-fb(href="#")

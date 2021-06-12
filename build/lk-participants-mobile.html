@@ -2828,7 +2828,7 @@
                     </svg>
                   </button>
                 </div>
-                <button class="login__btn btn btn--transparent" type="submit">Enter</button><a class="login__forgot" href="#" data-modal="forgot">Contact organizers in case of difficulties</a>
+                <button class="login__btn button button--white" type="submit">Enter</button><a class="login__forgot" href="#" data-modal="forgot">Contact organizers in case of difficulties</a>
               </form>
             </div>
             <div class="header__search header__search--hidden">
@@ -2849,21 +2849,21 @@
       <main class="container admin admin--mobile">
         <div class="admin-headline">
           <h2 class="title--h2">Luxury Travel Mart Moscow Spring’ 2020</h2><span class="admin-headline__place">at Hyatt Regency Moscow Petrovsky Park</span>
-          <time datetime="dates">27 – 28 February 2020</time>
+          <time datetime="2011-11-18">27 – 28 February 2020</time>
         </div>
         <div class="admin__control-wrapper admin__control-wrapper--full-width">
-          <div class="admin-tabs">
-            <ul class="admin-tabs__list">
-              <button class="admin-tabs__menu-button" type="button" data-modal="admin-menu">
-                <svg width="32" height="32" aria-hidden="true">
-                  <use xlink:href="#icon-mobile-menu"></use>
-                </svg>
-              </button>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest.html">Программа и инфо</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
-              <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
-              <li class="admin-tabs__item admin-tabs__item--active"><a class="admin-tabs__link" href="lk-participants-mobile.html">Сотрудники на выставку</a></li>
+          <div class="tabs">
+            <button class="tabs__menu-button" type="button" data-modal="admin-menu">
+              <svg width="32" height="32" aria-hidden="true">
+                <use xlink:href="#icon-mobile-menu"></use>
+              </svg>
+            </button>
+            <ul class="tabs__list">
+              <li class="tabs__item"><a class="tabs__link" href="lk-guest.html">Программа и инфо</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
+              <li class="tabs__item tabs__item--active"><a class="tabs__link" href="lk-participants-mobile.html">Сотрудники на выставку</a></li>
             </ul>
           </div>
         </div>
@@ -2922,26 +2922,28 @@
       <footer class="container">
         <div class="footer">
           <ul class="footer__logotip logotip">
-            <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company-ap" src="./img/svg/g10.svg" alt="company logo" width="67" height="73"/></a></li>
-            <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company-tm" src="./img/svg/tm-logo.svg" alt="company logo" width="110" height="57"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="organizers.html"><img class="logotip__company-ap" src="./img/svg/g10.svg" alt="company logo" width="67" height="73"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="organizers.html"><img class="logotip__company-tm" src="./img/svg/tm-logo.svg" alt="company logo" width="110" height="57"/></a></li>
           </ul>
           <div class="footer__mailing mailing">
             <form class="mailing__form" action="#" method="POST">
-              <input class="mailing__email" type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
-              <label class="visually-hidden" for="mailing"></label>
+              <div class="form-fiield">
+                <input type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
+                <label class="visually-hidden" for="mailing">E-mail field</label>
+              </div>
               <button class="button button--transparent" type="button"> Ok</button>
-              <div class="mailing__checkbox">
-                <input class="mailing__check" type="checkbox" id="check" name="check" value="yes"/>
-                <label class="mailing__check-label" for="check">I agree</label>
+              <div class="mailing__checkbox form-check">
+                <input type="checkbox" id="check" name="check" value="yes"/>
+                <label for="check">I agree</label>
               </div>
             </form>
           </div>
           <div class="footer__menu menu">
             <ul class="menu__list">
-              <li><a class="menu__item" href="#">Terms Conditions</a></li>
-              <li><a class="menu__item" href="#">Have a question?</a></li>
-              <li><a class="menu__item" href="#">Privacy policy</a></li>
-              <li><a class="menu__item" href="#">Cookie policy</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Terms Conditions</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Have a question?</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Privacy policy</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Cookie policy</a></li>
             </ul>
             <ul class="menu__account">
               <li><a class="menu__account-social menu__account-social-fb" href="#">
@@ -2974,7 +2976,7 @@
         <div class="modal__content modal-gallery">
           <div class="edit-colleague">
             <h2 class="title title--h2 title--big">Редактировать профиль</h2>
-            <div class="edit-colleague__photo-column"><img src="img/content/admin-photo-edit.jpg" width="103" height="103"/>
+            <div class="edit-colleague__photo-column"><img src="img/content/admin-photo-edit.jpg" width="103" height="103" alt="Фото админа"/>
               <label class="edit-colleague__photo-upload"><span>Загрузить</span>
                 <input type="file"/>
               </label>
@@ -3018,8 +3020,8 @@
                   <input placeholder="E-mail" id="colleague-email-2" name="colleague-email-2" type="text"/>
                 </div>
                 <div class="edit-colleague__buttons">
-                  <button class="btn btn--white" type="reset">Cancel</button>
-                  <button class="btn btn--blue" type="submit">Save</button>
+                  <button class="button button--transparent" type="reset">Cancel</button>
+                  <button class="button button--blue" type="submit">Save</button>
                 </div>
               </form>
             </div>
@@ -3036,13 +3038,18 @@
       <div class="modal__wrapper">
         <div class="modal__overlay"></div>
         <div class="modal__content modal-gallery">
-          <div class="admin-menu">
-            <ul class="admin-menu__list">
-              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest.html">Программа и инфо</a></li>
-              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
-              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
-              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
-              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-participants-mobile.html">Сотрудники на выставку</a></li>
+          <div class="tabs tabs--modal">
+            <button class="tabs__menu-button" type="button" data-modal="admin-menu">
+              <svg width="32" height="32" aria-hidden="true">
+                <use xlink:href="#icon-mobile-menu"></use>
+              </svg>
+            </button>
+            <ul class="tabs__list">
+              <li class="tabs__item"><a class="tabs__link" href="lk-guest.html">Программа и инфо</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
+              <li class="tabs__item tabs__item--active"><a class="tabs__link" href="lk-participants-mobile.html">Сотрудники на выставку</a></li>
             </ul>
           </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">

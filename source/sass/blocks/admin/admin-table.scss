@@ -310,12 +310,12 @@
     padding-right: 18px;
 
     @include viewport--lg {
-      max-width: 169px;
+      max-width: 187px;
     }
 
     @include viewport--md {
       display: inline-block;
-      width: 44%;
+      width: 49%;
       margin-bottom: 7px;
       padding-right: 0;
     }
@@ -393,7 +393,7 @@
     padding-left: 18px;
 
     @include viewport--lg {
-      margin-right: 20px;
+      margin-right: 12px;
       width: 9%;
     }
 
@@ -421,7 +421,7 @@
     line-height: 20px;
 
     @include viewport--lg {
-      max-width: 257px;
+      max-width: 283px;
     }
 
     @include viewport--sm {
@@ -439,7 +439,7 @@
     @include viewport--lg {
       width: 20%;
       max-width: 224px;
-      margin-right: 16px;
+      margin-right: 0;
     }
 
     @include viewport--sm {
@@ -482,7 +482,7 @@
       }
     }
 
-    .btn {
+    .button {
       width: 100%;
       white-space: normal;
     }
@@ -519,6 +519,38 @@
 
       @include viewport--sm {
         padding: 0;
+      }
+    }
+
+    .admin-table__cell--company {
+      width: 51%;
+      max-width: 595px;
+
+      @include viewport--lg {
+        width: 33%;
+        max-width: 369px;
+      }
+
+      @include viewport--sm {
+        display: block;
+        width: 98%;
+        max-width: none;
+      }
+    }
+
+    .admin-table__cell--person {
+      width: 25%;
+      max-width: 352px;
+
+      @include viewport--lg {
+        width: 33%;
+        max-width: 289px;
+      }
+
+      @include viewport--sm {
+        display: block;
+        width: 98%;
+        max-width: none;
       }
     }
   }
@@ -561,7 +593,7 @@
       .admin-table__cell--destination,
       .admin-table__cell--theme {
         display: block;
-        width: 100%;
+        width: 93%;
 
         font-size: 16px;
         line-height: 20px;
@@ -598,6 +630,18 @@
 
     &:active {
       opacity: 0.5;
+    }
+  }
+
+  &--guest-list {
+    @include viewport--sm {
+      margin: 18px -17px 0;
+    }
+  }
+
+  &--guest {
+    @include viewport--sm {
+      margin: 18px -17px 0;
     }
   }
 
@@ -663,7 +707,7 @@
 
   //Стили кнопок отправки запроса/сообщений
 
-  .btn--request,
+  .button--request,
   .admin-table__link {
     font-size: 12px;
     line-height: 18px;

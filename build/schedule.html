@@ -2828,7 +2828,7 @@
                     </svg>
                   </button>
                 </div>
-                <button class="login__btn btn btn--transparent" type="submit">Enter</button><a class="login__forgot" href="#" data-modal="forgot">Contact organizers in case of difficulties</a>
+                <button class="login__btn button button--white" type="submit">Enter</button><a class="login__forgot" href="#" data-modal="forgot">Contact organizers in case of difficulties</a>
               </form>
             </div>
             <div class="header__search header__search--hidden">
@@ -2859,11 +2859,11 @@
           <div class="schedule">
             <h2 class="title title--h2 title--without-margin">Program of LTM Moscow Spring:</h2>
             <div class="schedule__days">
-              <p class="schedule__subtitle">Day 1</p>
+              <h3 class="schedule__subtitle">Day 1</h3>
               <div class="schedule__day">
                 <p>10:00 – 18:00 — First day is dedicated to hosted buyers only, with a huge group of hosted buyers from the Russian regions, CIS countries and Baltic States. All appointments are pre-scheduled, with 10 minutes per appointment, 2 coffee-breaks and lunch during the day.</p>
               </div>
-              <p class="schedule__subtitle">Day 2</p>
+              <h3 class="schedule__subtitle">Day 2</h3>
               <div class="schedule__day">
                 <p>10:00 – 15:50 — Individual pre-scheduled appointments with top-buyers. Each appointment will last 10 minutes</p>
                 <p>15:50 – 16:30 — After-session networking and lunch with guests of the morning session.</p>
@@ -2872,7 +2872,7 @@
             </div>
             <h2 class="title title--h2 title--without-margin">Program of LTM Kyiv, Almaty & LTM Moscow Autumn:</h2>
             <div class="schedule__days">
-              <p class="schedule__subtitle"></p>
+              <h3 class="schedule__subtitle"></h3>
               <div class="schedule__day">
                 <p>10:00 – 16:55 — Individual pre - scheduled appointments with top - buyers.Each appointment will last 10 minutes.</p>
                 <p>All appointments are scheduled through LTM web-site and/or LTM mobile apps.</p>
@@ -2891,26 +2891,28 @@
       <footer class="container">
         <div class="footer">
           <ul class="footer__logotip logotip">
-            <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company-ap" src="./img/svg/g10.svg" alt="company logo" width="67" height="73"/></a></li>
-            <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company-tm" src="./img/svg/tm-logo.svg" alt="company logo" width="110" height="57"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="organizers.html"><img class="logotip__company-ap" src="./img/svg/g10.svg" alt="company logo" width="67" height="73"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="organizers.html"><img class="logotip__company-tm" src="./img/svg/tm-logo.svg" alt="company logo" width="110" height="57"/></a></li>
           </ul>
           <div class="footer__mailing mailing">
             <form class="mailing__form" action="#" method="POST">
-              <input class="mailing__email" type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
-              <label class="visually-hidden" for="mailing"></label>
+              <div class="form-fiield">
+                <input type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
+                <label class="visually-hidden" for="mailing">E-mail field</label>
+              </div>
               <button class="button button--transparent" type="button"> Ok</button>
-              <div class="mailing__checkbox">
-                <input class="mailing__check" type="checkbox" id="check" name="check" value="yes"/>
-                <label class="mailing__check-label" for="check">I agree</label>
+              <div class="mailing__checkbox form-check">
+                <input type="checkbox" id="check" name="check" value="yes"/>
+                <label for="check">I agree</label>
               </div>
             </form>
           </div>
           <div class="footer__menu menu">
             <ul class="menu__list">
-              <li><a class="menu__item" href="#">Terms Conditions</a></li>
-              <li><a class="menu__item" href="#">Have a question?</a></li>
-              <li><a class="menu__item" href="#">Privacy policy</a></li>
-              <li><a class="menu__item" href="#">Cookie policy</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Terms Conditions</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Have a question?</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Privacy policy</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Cookie policy</a></li>
             </ul>
             <ul class="menu__account">
               <li><a class="menu__account-social menu__account-social-fb" href="#">
@@ -2948,7 +2950,7 @@
             <form class="forgot__form" action="#" method="POST">
               <label class="visually-hidden" for="forgot-email">Inter your E-mail</label>
               <input type="email" name="forgot-email" id="forgot-email" placeholder="Enter your E-mail" required="required"/><a class="forgot__link" href="buyer.html">Or send message to Organizers</a>
-              <button class="forgot__submit btn btn--blue" type="submit">Send</button>
+              <button class="forgot__submit button button--blue" type="submit">Send</button>
             </form>
           </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">

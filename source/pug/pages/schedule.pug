@@ -17,7 +17,7 @@ block main
           +renderHeadlineBig(program.title)
           .schedule__days
             each schedule in program.schedules
-              p.schedule__subtitle=schedule.subtitle
+              h3.schedule__subtitle=schedule.subtitle
               .schedule__day
                 +renderTextContentBlock(schedule.textList)
 

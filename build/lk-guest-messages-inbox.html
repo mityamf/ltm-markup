@@ -2828,7 +2828,7 @@
                     </svg>
                   </button>
                 </div>
-                <button class="login__btn btn btn--transparent" type="submit">Enter</button><a class="login__forgot" href="#" data-modal="forgot">Contact organizers in case of difficulties</a>
+                <button class="login__btn button button--white" type="submit">Enter</button><a class="login__forgot" href="#" data-modal="forgot">Contact organizers in case of difficulties</a>
               </form>
             </div>
             <div class="header__search header__search--hidden">
@@ -2850,7 +2850,7 @@
         <div class="admin">
           <div class="admin-headline">
             <h2 class="title--h2">Luxury Travel Mart Moscow Spring’ 2020</h2><span class="admin-headline__place">at Hyatt Regency Moscow Petrovsky Park</span>
-            <time datetime="dates">27 – 28 February 2020</time>
+            <time datetime="2011-11-18">27 – 28 February 2020</time>
           </div>
           <div class="hidden-sm">
             <div class="lk__participants-wrapper">
@@ -2880,7 +2880,7 @@
                   <div class="info-block__headline">
                     <h2 class="title title--h2 title--big">Adventa Agency</h2><a class="info-block__link" href="https://adventaagency.ru">https://adventaagency.ru</a>
                   </div>
-                  <button class="btn btn--blue" type="button" data-modal="edit-profile">Редактировать</button>
+                  <button class="button button--blue" type="button" data-modal="edit-profile">Редактировать</button>
                 </div>
                 <div class="info-block__text-wrapper">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -2892,17 +2892,17 @@
             </div>
           </div>
           <div class="admin__control-wrapper">
-            <div class="admin-tabs">
-              <ul class="admin-tabs__list">
-                <button class="admin-tabs__menu-button" type="button" data-modal="admin-menu">
-                  <svg width="32" height="32" aria-hidden="true">
-                    <use xlink:href="#icon-mobile-menu"></use>
-                  </svg>
-                </button>
-                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest.html">Программа и инфо</a></li>
-                <li class="admin-tabs__item admin-tabs__item--active"><a class="admin-tabs__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
-                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
-                <li class="admin-tabs__item"><a class="admin-tabs__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
+            <div class="tabs">
+              <button class="tabs__menu-button" type="button" data-modal="admin-menu">
+                <svg width="32" height="32" aria-hidden="true">
+                  <use xlink:href="#icon-mobile-menu"></use>
+                </svg>
+              </button>
+              <ul class="tabs__list">
+                <li class="tabs__item"><a class="tabs__link" href="lk-guest.html">Программа и инфо</a></li>
+                <li class="tabs__item tabs__item--active"><a class="tabs__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
+                <li class="tabs__item"><a class="tabs__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
+                <li class="tabs__item"><a class="tabs__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
               </ul>
             </div>
             <div class="mail-control">
@@ -3060,7 +3060,7 @@
             </tbody>
           </table>
           <div class="admin__button-wrapper">
-            <button class="btn btn--white btn--more" type="button">Показать больше</button>
+            <button class="button button--transparent" type="button">Показать больше</button>
           </div>
         </div>
         <div class="support-contacts">
@@ -3097,26 +3097,28 @@
       <footer class="container">
         <div class="footer">
           <ul class="footer__logotip logotip">
-            <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company-ap" src="./img/svg/g10.svg" alt="company logo" width="67" height="73"/></a></li>
-            <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company-tm" src="./img/svg/tm-logo.svg" alt="company logo" width="110" height="57"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="organizers.html"><img class="logotip__company-ap" src="./img/svg/g10.svg" alt="company logo" width="67" height="73"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="organizers.html"><img class="logotip__company-tm" src="./img/svg/tm-logo.svg" alt="company logo" width="110" height="57"/></a></li>
           </ul>
           <div class="footer__mailing mailing">
             <form class="mailing__form" action="#" method="POST">
-              <input class="mailing__email" type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
-              <label class="visually-hidden" for="mailing"></label>
+              <div class="form-fiield">
+                <input type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
+                <label class="visually-hidden" for="mailing">E-mail field</label>
+              </div>
               <button class="button button--transparent" type="button"> Ok</button>
-              <div class="mailing__checkbox">
-                <input class="mailing__check" type="checkbox" id="check" name="check" value="yes"/>
-                <label class="mailing__check-label" for="check">I agree</label>
+              <div class="mailing__checkbox form-check">
+                <input type="checkbox" id="check" name="check" value="yes"/>
+                <label for="check">I agree</label>
               </div>
             </form>
           </div>
           <div class="footer__menu menu">
             <ul class="menu__list">
-              <li><a class="menu__item" href="#">Terms Conditions</a></li>
-              <li><a class="menu__item" href="#">Have a question?</a></li>
-              <li><a class="menu__item" href="#">Privacy policy</a></li>
-              <li><a class="menu__item" href="#">Cookie policy</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Terms Conditions</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Have a question?</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Privacy policy</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Cookie policy</a></li>
             </ul>
             <ul class="menu__account">
               <li><a class="menu__account-social menu__account-social-fb" href="#">
@@ -3149,7 +3151,7 @@
         <div class="modal__content modal-gallery">
           <div class="edit-colleague">
             <h2 class="title title--h2 title--big">Редактировать профиль</h2>
-            <div class="edit-colleague__photo-column"><img src="img/content/admin-photo-edit.jpg" width="103" height="103"/>
+            <div class="edit-colleague__photo-column"><img src="img/content/admin-photo-edit.jpg" width="103" height="103" alt="Фото админа"/>
               <label class="edit-colleague__photo-upload"><span>Загрузить</span>
                 <input type="file"/>
               </label>
@@ -3193,8 +3195,8 @@
                   <input placeholder="E-mail" id="colleague-email-2" name="colleague-email-2" type="text"/>
                 </div>
                 <div class="edit-colleague__buttons">
-                  <button class="btn btn--white" type="reset">Cancel</button>
-                  <button class="btn btn--blue" type="submit">Save</button>
+                  <button class="button button--transparent" type="reset">Cancel</button>
+                  <button class="button button--blue" type="submit">Save</button>
                 </div>
               </form>
             </div>
@@ -3211,12 +3213,17 @@
       <div class="modal__wrapper">
         <div class="modal__overlay"></div>
         <div class="modal__content modal-gallery">
-          <div class="admin-menu">
-            <ul class="admin-menu__list">
-              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest.html">Программа и инфо</a></li>
-              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
-              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
-              <li class="admin-menu__item"><a class="admin-menu__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
+          <div class="tabs tabs--modal">
+            <button class="tabs__menu-button" type="button" data-modal="admin-menu">
+              <svg width="32" height="32" aria-hidden="true">
+                <use xlink:href="#icon-mobile-menu"></use>
+              </svg>
+            </button>
+            <ul class="tabs__list">
+              <li class="tabs__item"><a class="tabs__link" href="lk-guest.html">Программа и инфо</a></li>
+              <li class="tabs__item tabs__item--active"><a class="tabs__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="lk-guest-schedule-d1.html">Моё расписание</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="lk-guest-exhibitors-d1.html">Список участников</a></li>
             </ul>
           </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
@@ -3234,50 +3241,48 @@
           <div class="edit-colleague">
             <h2 class="title title--h2 title--big">Информация о компании</h2>
             <form class="edit-colleague__form" action="#" method="POST">
-              <div class="edit-colleague__form-wrapper">
-                <div class="edit-colleague__block edit-colleague__block--full-width"><span>Название компании</span><span class="edit-colleague__name">Adventa Agency</span></div>
-                <div class="edit-colleague__block edit-colleague__block--full-width">
-                  <label class="input-wrapper" for="site">Web</label>
-                  <input placeholder="https://" id="site" name="site" type="text"/>
-                </div>
-                <div class="edit-colleague__block edit-colleague__block--full-width">
-                  <label class="input-wrapper" for="company-description">Описание компании</label>
-                  <textarea placeholder="Описание компании, только на английском языке" id="company-description" name="company-description" type="textarea"></textarea>
-                </div>
-                <div class="edit-colleague__block edit-colleague__block--full-width">
-                  <p>Страна</p>
-                  <select class="input-dropdown" id="country-select">
-                    <option class="input-dropdown__option" value="Russia">Russia</option>
-                    <option class="input-dropdown__option" value="USA">USA</option>
-                  </select>
-                </div>
-                <div class="edit-colleague__block edit-colleague__block--full-width">
-                  <p>Город</p>
-                  <select class="input-dropdown" id="city-select">
-                    <option class="input-dropdown__option" value="Moscow">Moscow</option>
-                    <option class="input-dropdown__option" value="Saratov">Saratov</option>
-                  </select>
-                </div>
-                <div class="edit-colleague__block edit-colleague__block--full-width">
-                  <label class="input-wrapper" for="company-address">Адрес</label>
-                  <input placeholder="office, bld., St" id="company-address" name="company-address" type="text"/>
-                </div>
-                <div class="edit-colleague__block edit-colleague__block--half-width">
-                  <label class="input-wrapper" for="company-post-index">Почтовый индекс</label>
-                  <input placeholder="000000" id="company-post-index" name="company-post-index" type="text"/>
-                </div>
-                <div class="edit-colleague__block edit-colleague__block--half-width edit-colleague__block--right">
-                  <label class="input-wrapper" for="company-phone">Телефон</label>
-                  <input placeholder="+1 (111) 111 11 11" id="company-phone" name="company-phone" type="text"/>
-                </div>
-                <div class="edit-colleague__block edit-colleague__block--full-width">
-                  <label class="input-wrapper" for="company-email">E-mail</label>
-                  <input placeholder="E-mail" id="company-email" name="company-email" type="text"/>
-                </div>
+              <div class="edit-colleague__block edit-colleague__block--full-width"><span>Название компании</span><span class="edit-colleague__name">Adventa Agency</span></div>
+              <div class="edit-colleague__block edit-colleague__block--full-width">
+                <label class="input-wrapper" for="site">Web</label>
+                <input placeholder="https://" id="site" name="site" type="text"/>
+              </div>
+              <div class="edit-colleague__block edit-colleague__block--full-width">
+                <label class="input-wrapper" for="company-description">Описание компании</label>
+                <textarea placeholder="Описание компании, только на английском языке" id="company-description" name="company-description" type="textarea"></textarea>
+              </div>
+              <div class="edit-colleague__block edit-colleague__block--full-width">
+                <p>Страна</p>
+                <select class="input-dropdown" id="country-select">
+                  <option class="input-dropdown__option" value="Russia">Russia</option>
+                  <option class="input-dropdown__option" value="USA">USA</option>
+                </select>
+              </div>
+              <div class="edit-colleague__block edit-colleague__block--full-width">
+                <p>Город</p>
+                <select class="input-dropdown" id="city-select">
+                  <option class="input-dropdown__option" value="Moscow">Moscow</option>
+                  <option class="input-dropdown__option" value="Saratov">Saratov</option>
+                </select>
+              </div>
+              <div class="edit-colleague__block edit-colleague__block--full-width">
+                <label class="input-wrapper" for="company-address">Адрес</label>
+                <input placeholder="office, bld., St" id="company-address" name="company-address" type="text"/>
+              </div>
+              <div class="edit-colleague__block edit-colleague__block--half-width">
+                <label class="input-wrapper" for="company-post-index">Почтовый индекс</label>
+                <input placeholder="000000" id="company-post-index" name="company-post-index" type="text"/>
+              </div>
+              <div class="edit-colleague__block edit-colleague__block--half-width edit-colleague__block--right">
+                <label class="input-wrapper" for="company-phone">Телефон</label>
+                <input placeholder="+1 (111) 111 11 11" id="company-phone" name="company-phone" type="text"/>
+              </div>
+              <div class="edit-colleague__block edit-colleague__block--full-width">
+                <label class="input-wrapper" for="company-email">E-mail</label>
+                <input placeholder="E-mail" id="company-email" name="company-email" type="text"/>
               </div>
               <div class="edit-colleague__buttons">
-                <button class="btn btn--white" type="reset">Отмена</button>
-                <button class="btn btn--blue" type="submit">Сохранить</button>
+                <button class="button button--transparent" type="reset">Отмена</button>
+                <button class="button button--blue" type="submit">Сохранить</button>
               </div>
             </form>
           </div>

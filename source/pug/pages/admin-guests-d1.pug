@@ -4,7 +4,7 @@ block variables
   - var title = "Buyers Guest List"
   - var hasHeader = true
   - var hasFooter = true
-  - var currentPage = "lk-exhibitors-d1"
+  - var currentPage = "Buyers Guest List"
   - var hasUpButton = true
 
 
@@ -27,10 +27,17 @@ block main
           +renderAlphabetFilter(alphabetFilter)
           +renderDropdownFilter(dropdownFilters)
 
+      .visible-sm
+        +renderMobileFilterButtons("Filters", "Clear all filters")
+
       +renderFilterTabs(filterTabs)
       +renderGuestsList(adminGuestsListTitles, adminGuestsList)
+
       .admin__button-wrapper
-        button.btn.btn--white.btn--more(type="button")="More"
+        button.button.button--transparent(type="button")="More"
+        .visible-sm
+          +renderUpButton('up-button--mobile')
+
     +renderSupportContacts(contactsList)
 
 block append modals

@@ -70,6 +70,10 @@
     font-size: 12px;
     line-height: 20px;
     color: $color-nobel;
+
+    @include viewport--sm {
+      display: none;
+    }
   }
 
   .participants__contact-link {
@@ -93,6 +97,10 @@
     &__text-wrapper {
       display: block;
       width: 100%;
+
+      @include viewport--sm {
+        padding-bottom: 12px;
+      }
     }
 
     &__text-wrapper p {
@@ -138,7 +146,7 @@
       }
     }
 
-    .btn {
+    .button {
       padding: 17px 30px;
       width: 222px;
       height: max-content;

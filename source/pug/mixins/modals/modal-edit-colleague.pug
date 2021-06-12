@@ -2,7 +2,7 @@ mixin modalEditColleague(data)
   .edit-colleague
     +renderHeadline2(data.title)
     .edit-colleague__photo-column
-      img(src=data.photo, width=103, height=103)
+      img(src=data.photo, width=103, height=103, alt="Фото админа")
       label.edit-colleague__photo-upload
         span Загрузить
         input(type="file")
@@ -28,6 +28,6 @@ mixin modalEditColleague(data)
 
         .edit-colleague__buttons
           each button in data.buttonList
-            button.btn(class=button.mod type=button.type)=button.text
+            button.button(class=button.mod type=button.type)=button.text
 
 

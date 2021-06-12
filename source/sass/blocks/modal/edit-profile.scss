@@ -29,11 +29,3 @@
   }
 }
 
-.modal--edit-profile .edit-colleague__block:not(:last-child) {
-  margin-bottom: 8px;
-
-  @include viewport--sm {
-    margin-bottom: 2px;
-  }
-}
-

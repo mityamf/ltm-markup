@@ -2828,7 +2828,7 @@
                     </svg>
                   </button>
                 </div>
-                <button class="login__btn btn btn--transparent" type="submit">Enter</button><a class="login__forgot" href="#" data-modal="forgot">Contact organizers in case of difficulties</a>
+                <button class="login__btn button button--white" type="submit">Enter</button><a class="login__forgot" href="#" data-modal="forgot">Contact organizers in case of difficulties</a>
               </form>
             </div>
             <div class="header__search header__search--hidden">
@@ -2857,7 +2857,7 @@
                   </svg><span>Back</span></a>
               </div>
             </div><span class="admin-headline__place">at Hyatt Regency Moscow Petrovsky Park</span>
-            <time datetime="dates">27 – 28 February 2020</time>
+            <time datetime="2011-11-18">27 – 28 February 2020</time>
           </div>
           <div class="hidden-sm">
             <div class="participants">
@@ -2881,29 +2881,29 @@
             </div>
           </div>
           <div class="admin__control-wrapper admin__control-wrapper--full-width">
-            <div class="admin-tabs">
-              <ul class="admin-tabs__list">
-                <button class="admin-tabs__menu-button" type="button" data-modal="admin-menu">
-                  <svg width="32" height="32" aria-hidden="true">
-                    <use xlink:href="#icon-mobile-menu"></use>
-                  </svg>
-                </button>
-                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-deadlines.html">Deadlines &amp; Info</a></li>
-                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-messages-inbox.html">Messages</a></li>
-                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-schedule-d1.html">My Schedule</a></li>
-                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-guests-d1.html">Buyers Guest List</a></li>
-                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-hosted-guests-d1.html">Hosted Buyers Guest List</a></li>
-                <li class="admin-tabs__item"><a class="admin-tabs__link" href="admin-sponsors-opportunities.html">Sponsorship Opportunities</a></li>
+            <div class="tabs">
+              <button class="tabs__menu-button" type="button" data-modal="admin-menu">
+                <svg width="32" height="32" aria-hidden="true">
+                  <use xlink:href="#icon-mobile-menu"></use>
+                </svg>
+              </button>
+              <ul class="tabs__list">
+                <li class="tabs__item"><a class="tabs__link" href="admin-deadlines.html">Deadlines &amp; Info</a></li>
+                <li class="tabs__item"><a class="tabs__link" href="admin-messages-inbox.html">Messages</a></li>
+                <li class="tabs__item"><a class="tabs__link" href="admin-schedule-d1.html">My Schedule</a></li>
+                <li class="tabs__item tabs__item--active"><a class="tabs__link" href="admin-guests-d1.html">Buyers Guest List</a></li>
+                <li class="tabs__item"><a class="tabs__link" href="admin-hosted-guests-d1.html">Hosted Buyers Guest List</a></li>
+                <li class="tabs__item"><a class="tabs__link" href="admin-sponsors-opportunities.html">Sponsorship Opportunities</a></li>
               </ul>
             </div>
           </div>
           <h2 class="title title--h2 title--big">Buyers Guest List</h2>
           <div class="schedule-tabs">
             <ul class="schedule-tabs__list">
-              <li class="schedule-tabs__item"><a class="schedule-tabs__link" href="lk-schedule-d1.html"><span class="schedule-tabs__text">День 1</span><span class="schedule-tabs__text schedule-tabs__text--hidden">–</span>
-                  <time>27.02.2020</time></a></li>
-              <li class="schedule-tabs__item"><a class="schedule-tabs__link" href="lk-schedule-d2.html"><span class="schedule-tabs__text">День 2</span><span class="schedule-tabs__text schedule-tabs__text--hidden">–</span>
-                  <time>28.02.2020</time></a></li>
+              <li class="schedule-tabs__item schedule-tabs__item--active"><a class="schedule-tabs__link" href="admin-guests-d1.html"><span class="schedule-tabs__text">День 1</span><span class="schedule-tabs__text schedule-tabs__text--hidden">–</span>
+                  <time datetime="2011-11-18">27.02.2020</time></a></li>
+              <li class="schedule-tabs__item"><a class="schedule-tabs__link" href="admin-guests-d2.html"><span class="schedule-tabs__text">День 2</span><span class="schedule-tabs__text schedule-tabs__text--hidden">–</span>
+                  <time datetime="2011-11-18">28.02.2020</time></a></li>
             </ul>
           </div>
           <div class="hidden-sm">
@@ -2971,17 +2971,31 @@
               <div class="filters__dropdown-filter">
                 <h3 class="title title--h3 title--without-margin">Main activities:</h3>
                 <select class="input-dropdown" id="hotel-select-2" multiple="multiple">
-                  <option class="input-dropdown__option" value=""></option>
+                  <option class="input-dropdown__option" value="Apartments &amp; villas rental">Apartments &amp; villas rental</option>
+                  <option class="input-dropdown__option" value="Hello, hello">Hello, hello</option>
+                  <option class="input-dropdown__option" value="Come with kittens">Come with kittens</option>
                 </select>
               </div>
             </div>
           </div>
+          <div class="visible-sm">
+            <div class="filters">
+              <div class="filters__mobile-block">
+                <button type="button" data-modal="mobile-filters">Filters
+                  <svg width="16" height="16" aria-hidden="true">
+                    <use xlink:href="#icon-filters"></use>
+                  </svg>
+                </button>
+                <button type="reset">Clear all filters</button>
+              </div>
+            </div>
+          </div>
           <ul class="filter-tabs">
-            <li class="filter-tabs__item" key="0">
-              <button class="btn btn--white" type="button">By available slots</button>
+            <li class="filter-tabs__item">
+              <button class="button button--transparent" type="button">By available slots</button>
             </li>
-            <li class="filter-tabs__item" key="1">
-              <button class="btn btn--white" type="reset">Clear all filtres</button>
+            <li class="filter-tabs__item">
+              <button class="button button--transparent" type="reset">Clear all filtres</button>
             </li>
           </ul>
           <table class="admin-table admin-table--guest-list">
@@ -3001,16 +3015,16 @@
                 <td class="admin-table__cell admin-table__cell--person">Ivan Skorodubov<span>Director</span></td>
                 <td class="admin-table__cell admin-table__cell--person">Svetlana Yakovleva<span>PR-director</span></td>
                 <td class="admin-table__cell admin-table__cell--select-time">
-                  <select class="input-dropdown" id="free-slot-select">
+                  <select class="input-dropdown" id="select-time0">
                     <option class="input-dropdown__option" value="10:00 – 10:10">10:00 – 10:10</option>
                     <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
                   </select>
                 </td>
                 <td class="admin-table__cell admin-table__cell--button">
-                  <button class="btn btn--white btn--request" type="submit" disabled="disabled">Request sent</button>
+                  <button class="button button--transparent button--request" type="submit" disabled="disabled">Request sent</button>
                 </td>
                 <td class="admin-table__cell admin-table__cell--button">
-                  <button class="btn btn--white btn--request" type="submit">Send a message</button>
+                  <button class="button button--transparent button--request" type="submit">Send a message</button>
                 </td>
               </tr>
               <tr class="admin-table__row admin-table__row--guests">
@@ -3018,16 +3032,16 @@
                 <td class="admin-table__cell admin-table__cell--person">Eugenia Stuslova<span>Senior Sales Manager</span></td>
                 <td class="admin-table__cell admin-table__cell--person">Aleksandr Senkov<span>Sales Manager</span></td>
                 <td class="admin-table__cell admin-table__cell--select-time">
-                  <select class="input-dropdown" id="free-slot-select">
+                  <select class="input-dropdown" id="select-time1">
                     <option class="input-dropdown__option" value="10:00 – 10:10">10:00 – 10:10</option>
                     <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
                   </select>
                 </td>
                 <td class="admin-table__cell admin-table__cell--button">
-                  <button class="btn btn--white btn--request" type="submit">Send a request</button>
+                  <button class="button button--transparent button--request" type="submit">Send a request</button>
                 </td>
                 <td class="admin-table__cell admin-table__cell--button">
-                  <button class="btn btn--white btn--request" type="submit">Send a message</button>
+                  <button class="button button--transparent button--request" type="submit">Send a message</button>
                 </td>
               </tr>
               <tr class="admin-table__row admin-table__row--guests">
@@ -3035,22 +3049,27 @@
                 <td class="admin-table__cell admin-table__cell--person">Anna Petrenko<span>Manager</span></td>
                 <td class="admin-table__cell admin-table__cell--person">Valentina Petrenko<span>Sales Manager</span></td>
                 <td class="admin-table__cell admin-table__cell--select-time">
-                  <select class="input-dropdown" id="free-slot-select">
+                  <select class="input-dropdown" id="select-time2">
                     <option class="input-dropdown__option" value="13:00 – 17:10">13:00 – 17:10</option>
                     <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
                   </select>
                 </td>
                 <td class="admin-table__cell admin-table__cell--button">
-                  <button class="btn btn--white btn--request" type="submit">Send a request</button>
+                  <button class="button button--transparent button--request" type="submit">Send a request</button>
                 </td>
                 <td class="admin-table__cell admin-table__cell--button">
-                  <button class="btn btn--white btn--request" type="submit">Send a message</button>
+                  <button class="button button--transparent button--request" type="submit">Send a message</button>
                 </td>
               </tr>
             </tbody>
           </table>
           <div class="admin__button-wrapper">
-            <button class="btn btn--white btn--more" type="button">More</button>
+            <button class="button button--transparent" type="button">More</button>
+            <div class="visible-sm"><a class="up-button up-button--mobile" href="#top" aria-label="Вернуться в начало">
+                <svg width="54" height="54" aria-hidden="true">
+                  <use xlink:href="#icon-arrow-up"></use>
+                </svg></a>
+            </div>
           </div>
         </div>
         <div class="support-contacts">
@@ -3099,26 +3118,28 @@
       <footer class="container">
         <div class="footer">
           <ul class="footer__logotip logotip">
-            <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company-ap" src="./img/svg/g10.svg" alt="company logo" width="67" height="73"/></a></li>
-            <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company-tm" src="./img/svg/tm-logo.svg" alt="company logo" width="110" height="57"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="organizers.html"><img class="logotip__company-ap" src="./img/svg/g10.svg" alt="company logo" width="67" height="73"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="organizers.html"><img class="logotip__company-tm" src="./img/svg/tm-logo.svg" alt="company logo" width="110" height="57"/></a></li>
           </ul>
           <div class="footer__mailing mailing">
             <form class="mailing__form" action="#" method="POST">
-              <input class="mailing__email" type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
-              <label class="visually-hidden" for="mailing"></label>
+              <div class="form-fiield">
+                <input type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
+                <label class="visually-hidden" for="mailing">E-mail field</label>
+              </div>
               <button class="button button--transparent" type="button"> Ok</button>
-              <div class="mailing__checkbox">
-                <input class="mailing__check" type="checkbox" id="check" name="check" value="yes"/>
-                <label class="mailing__check-label" for="check">I agree</label>
+              <div class="mailing__checkbox form-check">
+                <input type="checkbox" id="check" name="check" value="yes"/>
+                <label for="check">I agree</label>
               </div>
             </form>
           </div>
           <div class="footer__menu menu">
             <ul class="menu__list">
-              <li><a class="menu__item" href="#">Terms Conditions</a></li>
-              <li><a class="menu__item" href="#">Have a question?</a></li>
-              <li><a class="menu__item" href="#">Privacy policy</a></li>
-              <li><a class="menu__item" href="#">Cookie policy</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Terms Conditions</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Have a question?</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Privacy policy</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Cookie policy</a></li>
             </ul>
             <ul class="menu__account">
               <li><a class="menu__account-social menu__account-social-fb" href="#">
@@ -3156,7 +3177,7 @@
             <form class="forgot__form" action="#" method="POST">
               <label class="visually-hidden" for="forgot-email">Inter your E-mail</label>
               <input type="email" name="forgot-email" id="forgot-email" placeholder="Enter your E-mail" required="required"/><a class="forgot__link" href="buyer.html">Or send message to Organizers</a>
-              <button class="forgot__submit btn btn--blue" type="submit">Send</button>
+              <button class="forgot__submit button button--blue" type="submit">Send</button>
             </form>
           </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
@@ -3173,7 +3194,7 @@
         <div class="modal__content modal-gallery">
           <div class="edit-colleague">
             <h2 class="title title--h2 title--big">Add/edit colleague</h2>
-            <div class="edit-colleague__photo-column"><img src="img/content/admin-photo-edit.jpg" width="103" height="103"/>
+            <div class="edit-colleague__photo-column"><img src="img/content/admin-photo-edit.jpg" width="103" height="103" alt="Фото админа"/>
               <label class="edit-colleague__photo-upload"><span>Загрузить</span>
                 <input type="file"/>
               </label>
@@ -3209,8 +3230,8 @@
                   <input placeholder="E-mail" id="colleague-email" name="colleague-email" type="text"/>
                 </div>
                 <div class="edit-colleague__buttons">
-                  <button class="btn btn--white" type="reset">Cancel</button>
-                  <button class="btn btn--blue" type="submit">Save</button>
+                  <button class="button button--transparent" type="reset">Cancel</button>
+                  <button class="button bytton--blue" type="submit">Save</button>
                 </div>
               </form>
             </div>
@@ -3227,14 +3248,19 @@
       <div class="modal__wrapper">
         <div class="modal__overlay"></div>
         <div class="modal__content modal-gallery">
-          <div class="admin-menu">
-            <ul class="admin-menu__list">
-              <li class="admin-menu__item"><a class="admin-menu__link" href="admin-deadlines.html">Deadlines &amp; Info</a></li>
-              <li class="admin-menu__item"><a class="admin-menu__link" href="admin-messages-inbox.html">Messages</a></li>
-              <li class="admin-menu__item"><a class="admin-menu__link" href="admin-schedule-d1.html">My Schedule</a></li>
-              <li class="admin-menu__item"><a class="admin-menu__link" href="admin-guests-d1.html">Buyers Guest List</a></li>
-              <li class="admin-menu__item"><a class="admin-menu__link" href="admin-hosted-guests-d1.html">Hosted Buyers Guest List</a></li>
-              <li class="admin-menu__item"><a class="admin-menu__link" href="admin-sponsors-opportunities.html">Sponsorship Opportunities</a></li>
+          <div class="tabs tabs--modal">
+            <button class="tabs__menu-button" type="button" data-modal="admin-menu">
+              <svg width="32" height="32" aria-hidden="true">
+                <use xlink:href="#icon-mobile-menu"></use>
+              </svg>
+            </button>
+            <ul class="tabs__list">
+              <li class="tabs__item"><a class="tabs__link" href="admin-deadlines.html">Deadlines &amp; Info</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="admin-messages-inbox.html">Messages</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="admin-schedule-d1.html">My Schedule</a></li>
+              <li class="tabs__item tabs__item--active"><a class="tabs__link" href="admin-guests-d1.html">Buyers Guest List</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="admin-hosted-guests-d1.html">Hosted Buyers Guest List</a></li>
+              <li class="tabs__item"><a class="tabs__link" href="admin-sponsors-opportunities.html">Sponsorship Opportunities</a></li>
             </ul>
           </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
@@ -3320,8 +3346,8 @@
               </li>
             </ul>
             <div class="mobile-filters__button-wrapper">
-              <button class="btn btn--white" type="button">By available slots</button>
-              <button class="btn btn--blue" type="button">Apply</button>
+              <button class="button button--transparent" type="button">By available slots</button>
+              <button class="button button--blue" type="button">Apply</button>
             </div>
           </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">

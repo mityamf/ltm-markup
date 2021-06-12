@@ -32,17 +32,22 @@
 
   li {
     justify-content: flex-end;
-    width: 40px;
-    height: 36px;
+    //width: 40px;
+    height: 40px;
     display: flex;
   }
 
   &-social {
-    padding: 8px;
+    padding: 10px;
 
     &:focus,
     &:hover {
       opacity: 0.8;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
     }
   }
 

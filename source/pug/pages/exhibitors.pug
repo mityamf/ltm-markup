@@ -50,12 +50,13 @@ block main
             +renderHotelCard(hotel.title, hotel.photoList, hotel.logo, hotel.link)
 
         .alphabet-hotel
+          h2.visually-hidden Alphabetically
           .alphabet-hotel__block-list
             each hotel in alphabetHotel
               +renderAlphabetHotel(hotel.title, hotel.hotelList)
 
       .visible-sm
-        button.btn.btn--white.btn--more(type="button")="More"
+        button.button.button--transparent(type="button")="More"
         +renderUpButton('up-button--mobile')
 
 block append modals

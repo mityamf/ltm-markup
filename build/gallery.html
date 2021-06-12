@@ -2828,7 +2828,7 @@
                     </svg>
                   </button>
                 </div>
-                <button class="login__btn btn btn--transparent" type="submit">Enter</button><a class="login__forgot" href="#" data-modal="forgot">Contact organizers in case of difficulties</a>
+                <button class="login__btn button button--white" type="submit">Enter</button><a class="login__forgot" href="#" data-modal="forgot">Contact organizers in case of difficulties</a>
               </form>
             </div>
             <div class="header__search header__search--hidden">
@@ -3149,7 +3149,9 @@
                   <h3 class="title title--h3">Luxury Travel Mart in General <span></span></h3>
                 </div>
                 <div class="video__container">
-                  <video class="video__player" controls preload="metadata" poster="img/bg/bg-video-1.jpg" src="https://cdp.playfamily.ru/data/storage38/trl/78210a9e-c6a1-4b96-8431-34809673e066.webm"></video>
+                  <video class="video__player" controls preload="metadata" poster="img/bg/bg-video-1.jpg" src="https://cdp.playfamily.ru/data/storage38/trl/78210a9e-c6a1-4b96-8431-34809673e066.webm">
+                    <button class="button button--transparent" type="button">More</button>
+                  </video>
                 </div>
               </li>
               <li class="gallery__block-item">
@@ -3157,7 +3159,9 @@
                   <h3 class="title title--h3">Luxury Travel Mart 15th <span>Anniversary Party</span></h3>
                 </div>
                 <div class="video__container">
-                  <video class="video__player" controls preload="metadata" poster="img/bg/bg-video-2.jpg" src="https://cdp.playfamily.ru/data/storage38/trl/78210a9e-c6a1-4b96-8431-34809673e066.webm"></video>
+                  <video class="video__player" controls preload="metadata" poster="img/bg/bg-video-2.jpg" src="https://cdp.playfamily.ru/data/storage38/trl/78210a9e-c6a1-4b96-8431-34809673e066.webm">
+                    <button class="button button--transparent" type="button">More</button>
+                  </video>
                 </div>
               </li>
               <li class="gallery__block-item">
@@ -3165,7 +3169,9 @@
                   <h3 class="title title--h3">Our Exhibitors About Us <span></span></h3>
                 </div>
                 <div class="video__container">
-                  <video class="video__player" controls preload="metadata" poster="img/bg/bg-video-3.jpg" src="https://cdp.playfamily.ru/data/storage38/trl/78210a9e-c6a1-4b96-8431-34809673e066.webm"></video>
+                  <video class="video__player" controls preload="metadata" poster="img/bg/bg-video-3.jpg" src="https://cdp.playfamily.ru/data/storage38/trl/78210a9e-c6a1-4b96-8431-34809673e066.webm">
+                    <button class="button button--transparent" type="button">More</button>
+                  </video>
                 </div>
               </li>
               <li class="gallery__block-item">
@@ -3173,12 +3179,13 @@
                   <h3 class="title title--h3">Luxury Travel Mart 10th <span>Anniversary Party</span></h3>
                 </div>
                 <div class="video__container">
-                  <video class="video__player" controls preload="metadata" poster="img/bg/bg-video-4.jpg" src="https://cdp.playfamily.ru/data/storage38/trl/78210a9e-c6a1-4b96-8431-34809673e066.webm"></video>
+                  <video class="video__player" controls preload="metadata" poster="img/bg/bg-video-4.jpg" src="https://cdp.playfamily.ru/data/storage38/trl/78210a9e-c6a1-4b96-8431-34809673e066.webm">
+                    <button class="button button--transparent" type="button">More</button>
+                  </video>
                 </div>
               </li>
             </ul>
           </div>
-          <button class="btn btn--white btn--more btn--more-low" type="button">More</button>
         </section>
         <div class="container"><a class="up-button up-button--right up-button--xl" href="#top" aria-label="Вернуться в начало">
             <svg width="54" height="54" aria-hidden="true">
@@ -3188,26 +3195,28 @@
       <footer class="container">
         <div class="footer">
           <ul class="footer__logotip logotip">
-            <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company-ap" src="./img/svg/g10.svg" alt="company logo" width="67" height="73"/></a></li>
-            <li class="logotip__list"><a class="logotip__item" href="#"><img class="logotip__company-tm" src="./img/svg/tm-logo.svg" alt="company logo" width="110" height="57"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="organizers.html"><img class="logotip__company-ap" src="./img/svg/g10.svg" alt="company logo" width="67" height="73"/></a></li>
+            <li class="logotip__list"><a class="logotip__item" href="organizers.html"><img class="logotip__company-tm" src="./img/svg/tm-logo.svg" alt="company logo" width="110" height="57"/></a></li>
           </ul>
           <div class="footer__mailing mailing">
             <form class="mailing__form" action="#" method="POST">
-              <input class="mailing__email" type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
-              <label class="visually-hidden" for="mailing"></label>
+              <div class="form-fiield">
+                <input type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters"/>
+                <label class="visually-hidden" for="mailing">E-mail field</label>
+              </div>
               <button class="button button--transparent" type="button"> Ok</button>
-              <div class="mailing__checkbox">
-                <input class="mailing__check" type="checkbox" id="check" name="check" value="yes"/>
-                <label class="mailing__check-label" for="check">I agree</label>
+              <div class="mailing__checkbox form-check">
+                <input type="checkbox" id="check" name="check" value="yes"/>
+                <label for="check">I agree</label>
               </div>
             </form>
           </div>
           <div class="footer__menu menu">
             <ul class="menu__list">
-              <li><a class="menu__item" href="#">Terms Conditions</a></li>
-              <li><a class="menu__item" href="#">Have a question?</a></li>
-              <li><a class="menu__item" href="#">Privacy policy</a></li>
-              <li><a class="menu__item" href="#">Cookie policy</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Terms Conditions</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Have a question?</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Privacy policy</a></li>
+              <li><a class="menu__item" href="privacy-policy.html">Cookie policy</a></li>
             </ul>
             <ul class="menu__account">
               <li><a class="menu__account-social menu__account-social-fb" href="#">
@@ -3245,7 +3254,7 @@
             <form class="forgot__form" action="#" method="POST">
               <label class="visually-hidden" for="forgot-email">Inter your E-mail</label>
               <input type="email" name="forgot-email" id="forgot-email" placeholder="Enter your E-mail" required="required"/><a class="forgot__link" href="buyer.html">Or send message to Organizers</a>
-              <button class="forgot__submit btn btn--blue" type="submit">Send</button>
+              <button class="forgot__submit button button--blue" type="submit">Send</button>
             </form>
           </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">

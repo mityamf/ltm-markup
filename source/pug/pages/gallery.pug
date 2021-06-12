@@ -47,7 +47,7 @@ block main
                 h3.title.title--h3 #{item.title} #[span #{item.titleOnlyDesktop}]
               .video__container
                 video.video__player(controls preload="metadata" poster= `${item.img}` src= `${item.src}`)
-      button.btn.btn--white.btn--more.btn--more-low(type="button")="More"
+                  button.button.button--transparent(type="button")="More"
     .container
       a.up-button.up-button--right.up-button--xl(href="#top", aria-label="Вернуться в начало")
         +icon("icon-arrow-up", 54, 54)

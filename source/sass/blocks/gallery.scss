@@ -48,7 +48,6 @@
     margin-left: 15px;
     height: 154px;
     margin-top: 15px;
-    //margin-bottom: 15px;
 
     img {
       width: 100%;
@@ -103,7 +102,6 @@
       margin: 0;
     }
   }
-
 
   &__sublist-item--long {
     width: calc((100% - 45px) / 3);
@@ -209,6 +207,13 @@
     min-height: 55px;
   }
 
+  .button {
+    width: 222px;
+    margin-top: 38px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .title--h2 {
     margin-bottom: 5px;
   }
@@ -218,14 +223,10 @@
     letter-spacing: 0.01em;
   }
 
-  .btn {
-    margin-top: 38px;
-  }
-
   @include viewport--sm {
     margin-top: 30px;
 
-    .btn {
+    .button {
       margin-top: 0;
     }
 
