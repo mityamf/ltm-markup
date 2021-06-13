@@ -235,7 +235,7 @@
     text-align: left;
   }
 
-  &__contact-button {
+  &__edit-button {
     position: absolute;
     top: 24px;
     right: 0;
@@ -255,6 +255,12 @@
     &:active {
       opacity: 0.5;
     }
+  }
+
+  &__edit-button svg {
+    width: 18px;
+    height: 24px;
+    color: $color-gray;
   }
 
   &__admin-wrapper {

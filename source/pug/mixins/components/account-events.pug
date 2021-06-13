@@ -15,7 +15,7 @@ mixin renderEventsList(title, subtitle, hotelList)
                   +icon("icon-event-" + hotel.status, 22, 22)
                 span.account__event-description=hotel.statusDescription
                 button.button.buttun--transparent(type="button")=hotel.buttonText
-        .direction__arrow.direction__arrow--right
+        button.direction__arrow.direction__arrow--right
           +icon("arrow-right", 11, 19)
-        .direction__arrow.direction__arrow--left
+        button.direction__arrow.direction__arrow--left
           +icon("arrow-left", 11, 19)
