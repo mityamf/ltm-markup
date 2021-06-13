@@ -4698,7 +4698,12 @@ p {
     @media (max-width: 767px) {
       .modal__content {
         width: 100%;
-        padding: 80px 40px; } }
+        padding: 80px 40px;
+        overflow: scroll;
+        max-height: 100vh;
+        min-height: -webkit-max-content;
+        min-height: -moz-max-content;
+        min-height: max-content; } }
   .modal__close-btn {
     position: absolute;
     top: 15px;
@@ -11203,7 +11208,7 @@ p {
   @media (max-width: 767px) {
     .edit-colleague {
       padding: 0; } }
-  .edit-colleague__form {
+  .edit-colleague__form form {
     width: 100%; }
   .edit-colleague__form-wrapper {
     margin-bottom: -18px; }
