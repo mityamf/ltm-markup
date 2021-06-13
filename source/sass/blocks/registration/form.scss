@@ -131,8 +131,6 @@
     flex-direction: column;
     max-width: 462px;
     width: 100%;
-    //padding-right: 10px;
-    //padding-bottom: 20px;
 
     label {
       font-weight: 600;
@@ -549,6 +547,9 @@
     &:focus,
     &:hover {
       opacity: 0.8;
+      border-color: transparent;
+      background-color: $color-blue;
+      color: $color-default-white;
     }
 
     @include viewport--sm {
