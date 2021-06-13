@@ -2596,7 +2596,14 @@ p {
   outline: none;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
-      align-self: center; }
+      align-self: center;
+  border: none;
+  background-color: transparent; }
+
+.direction__arrow svg {
+  width: 11px;
+  height: 19px;
+  color: #0098c1; }
 
 .direction__arrow--right {
   position: absolute;
@@ -7538,7 +7545,7 @@ p {
   color: #9f9f9f;
   text-align: left; }
 
-.account__contact-button {
+.account__edit-button {
   position: absolute;
   top: 24px;
   right: 0;
@@ -7548,10 +7555,15 @@ p {
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
   cursor: pointer; }
-  .account__contact-button:hover, .account__contact-button:focus {
+  .account__edit-button:hover, .account__edit-button:focus {
     opacity: 0.7; }
-  .account__contact-button:active {
+  .account__edit-button:active {
     opacity: 0.5; }
+
+.account__edit-button svg {
+  width: 18px;
+  height: 24px;
+  color: #a7a7a7; }
 
 .account__admin-wrapper {
   display: -webkit-box;

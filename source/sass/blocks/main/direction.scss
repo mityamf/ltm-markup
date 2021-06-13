@@ -103,6 +103,14 @@
 .direction__arrow {
   outline: none;
   align-self: center;
+  border: none;
+  background-color: transparent;
+}
+
+.direction__arrow svg {
+  width: 11px;
+  height: 19px;
+  color: $color-blue;
 }
 
 .direction__arrow--right {
