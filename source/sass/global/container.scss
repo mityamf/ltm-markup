@@ -32,7 +32,7 @@
 
   &--admin {
     .btn--more {
-      padding: 14px 30px;
+      margin: 0 auto;
 
       @include viewport--lg {
         width: 178px;

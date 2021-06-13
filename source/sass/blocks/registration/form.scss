@@ -639,3 +639,29 @@
     background-position: center;
   }
 }
+
+.form-reg--search {
+  width: auto;
+
+  @include viewport--md {
+    display: none;
+  }
+
+  label {
+    position: relative;
+  }
+
+  label svg {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    color: $color-gray;
+    width: 14px;
+    height: 15px;
+  }
+
+  input {
+    padding-left: 35px;
+    border-color: $color-gray;
+  }
+}
