@@ -35,10 +35,10 @@ block main
           +renderFilterTabs(filterTabs)
           +renderHostedGuestsList(adminHostedGuestsListTitles, adminHostedGuestsList)
 
-      .admin__button-wrapper
-        button.button.button--transparent(type="button")="More"
-        .visible-sm
-          +renderUpButton('up-button--mobile')
+        .admin__button-wrapper
+          button.button.button--transparent(type="button")="More"
+          .visible-sm
+            +renderUpButton('up-button--mobile')
 
         +renderSupportContacts(contactsList)
 

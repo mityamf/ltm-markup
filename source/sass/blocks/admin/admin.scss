@@ -27,8 +27,6 @@
     .button {
       margin: 0 auto;
       width: 222px;
-      padding: 12px 0;
-      padding-bottom: 30px;
       grid-template-areas: "first" "second" "third";
     }
   }
@@ -110,27 +108,24 @@
     grid-area: first;
   }
 
-    @include viewport--sm {
-      display: block;
-      padding-bottom: 30px;
+  &__section--second {
+    grid-area: second;
+  }
 
-      .generate-file {
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        border: 1px solid $color-blue;
-        width: 238px;
-        padding: 13px 7px;
-        letter-spacing: 0.7px;
-      }
-    }
+  &__section--third {
+    grid-area: third;
+  }
 
-    .up-button {
-      margin: 0 auto;
-      display: block;
-      text-align: center;
-    }
+  &__section > p:first-of-type {
+    margin-top: 0;
+  }
+
+  &__section > p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &__section {
+    padding: 10px 0;
   }
 
   &--mobile {
@@ -153,30 +148,5 @@
         padding-bottom: 27px;
       }
     }
-  }
-}
-
-  &__section--second {
-    grid-area: second;
-  }
-
-  &__section--third {
-    grid-area: third;
-  }
-
-  &__section > p:first-of-type {
-    margin-top: 0;
-  }
-
-  &__section > p:last-of-type {
-    margin-bottom: 0;
-  }
-
-  &__section {
-    padding: 10px 0;
-  }
-
-  &__button-wrapper {
-    padding-bottom: 30px;
   }
 }
