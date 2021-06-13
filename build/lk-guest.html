@@ -3086,47 +3086,49 @@
               </div>
             </div>
             <div class="edit-colleague__content-column">
-              <form class="edit-colleague__form" action="#" method="POST">
-                <div class="edit-colleague__block">
-                  <label class="input-wrapper" for="name">Имя</label>
-                  <input placeholder="First name" id="name" name="name" type="text"/>
-                </div>
-                <div class="edit-colleague__block">
-                  <label class="input-wrapper" for="last-name">Фамилия</label>
-                  <input placeholder="Last name" id="last-name" name="last-name" type="text"/>
-                </div>
-                <div class="edit-colleague__block">
-                  <p>Обращение</p>
-                  <select class="input-dropdown" id="title-select">
-                    <option class="input-dropdown__option" value="Mr.">Mr.</option>
-                    <option class="input-dropdown__option" value="Mrs.">Mrs.</option>
-                  </select>
-                </div>
-                <div class="edit-colleague__block">
-                  <label class="input-wrapper" for="job-position">Должность</label>
-                  <input placeholder="Job position" id="job-position" name="job-position" type="text"/>
-                </div>
-                <div class="edit-colleague__block">
-                  <label class="input-wrapper" for="phone-number">Телефон</label>
-                  <input placeholder="+1 (111) 111 11 11" id="phone-number" name="phone-number" type="text"/>
-                </div>
-                <div class="edit-colleague__block">
-                  <label class="input-wrapper" for="phone-mobile">Мобильный телефон</label>
-                  <input placeholder="+1 (111) 111 11 11" id="phone-mobile" name="phone-mobile" type="text"/>
-                </div>
-                <div class="edit-colleague__block">
-                  <label class="input-wrapper" for="colleague-skype">Skype</label>
-                  <input placeholder="Skype" id="colleague-skype" name="colleague-skype" type="text"/>
-                </div>
-                <div class="edit-colleague__block">
-                  <label class="input-wrapper" for="colleague-email-2">E-mail</label>
-                  <input placeholder="E-mail" id="colleague-email-2" name="colleague-email-2" type="text"/>
-                </div>
-                <div class="edit-colleague__buttons">
-                  <button class="button button--transparent" type="reset">Cancel</button>
-                  <button class="button button--blue" type="submit">Save</button>
-                </div>
-              </form>
+              <div class="edit-colleague__form">
+                <form action="#" method="POST">
+                  <div class="edit-colleague__block">
+                    <label class="input-wrapper" for="name">Имя</label>
+                    <input placeholder="First name" id="name" name="name" type="text"/>
+                  </div>
+                  <div class="edit-colleague__block">
+                    <label class="input-wrapper" for="last-name">Фамилия</label>
+                    <input placeholder="Last name" id="last-name" name="last-name" type="text"/>
+                  </div>
+                  <div class="edit-colleague__block">
+                    <p>Обращение</p>
+                    <select class="input-dropdown" id="title-select">
+                      <option class="input-dropdown__option" value="Mr.">Mr.</option>
+                      <option class="input-dropdown__option" value="Mrs.">Mrs.</option>
+                    </select>
+                  </div>
+                  <div class="edit-colleague__block">
+                    <label class="input-wrapper" for="job-position">Должность</label>
+                    <input placeholder="Job position" id="job-position" name="job-position" type="text"/>
+                  </div>
+                  <div class="edit-colleague__block">
+                    <label class="input-wrapper" for="phone-number">Телефон</label>
+                    <input placeholder="+1 (111) 111 11 11" id="phone-number" name="phone-number" type="text"/>
+                  </div>
+                  <div class="edit-colleague__block">
+                    <label class="input-wrapper" for="phone-mobile">Мобильный телефон</label>
+                    <input placeholder="+1 (111) 111 11 11" id="phone-mobile" name="phone-mobile" type="text"/>
+                  </div>
+                  <div class="edit-colleague__block">
+                    <label class="input-wrapper" for="colleague-skype">Skype</label>
+                    <input placeholder="Skype" id="colleague-skype" name="colleague-skype" type="text"/>
+                  </div>
+                  <div class="edit-colleague__block">
+                    <label class="input-wrapper" for="colleague-email-2">E-mail</label>
+                    <input placeholder="E-mail" id="colleague-email-2" name="colleague-email-2" type="text"/>
+                  </div>
+                  <div class="edit-colleague__buttons">
+                    <button class="button button--transparent" type="reset">Cancel</button>
+                    <button class="button button--blue" type="submit">Save</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
@@ -3168,51 +3170,53 @@
         <div class="modal__content modal-gallery">
           <div class="edit-colleague">
             <h2 class="title title--h2 title--big">Информация о компании</h2>
-            <form class="edit-colleague__form" action="#" method="POST">
-              <div class="edit-colleague__block edit-colleague__block--full-width"><span>Название компании</span><span class="edit-colleague__name">Adventa Agency</span></div>
-              <div class="edit-colleague__block edit-colleague__block--full-width">
-                <label class="input-wrapper" for="site">Web</label>
-                <input placeholder="https://" id="site" name="site" type="text"/>
-              </div>
-              <div class="edit-colleague__block edit-colleague__block--full-width">
-                <label class="input-wrapper" for="company-description">Описание компании</label>
-                <textarea placeholder="Описание компании, только на английском языке" id="company-description" name="company-description" type="textarea"></textarea>
-              </div>
-              <div class="edit-colleague__block edit-colleague__block--full-width">
-                <p>Страна</p>
-                <select class="input-dropdown" id="country-select">
-                  <option class="input-dropdown__option" value="Russia">Russia</option>
-                  <option class="input-dropdown__option" value="USA">USA</option>
-                </select>
-              </div>
-              <div class="edit-colleague__block edit-colleague__block--full-width">
-                <p>Город</p>
-                <select class="input-dropdown" id="city-select">
-                  <option class="input-dropdown__option" value="Moscow">Moscow</option>
-                  <option class="input-dropdown__option" value="Saratov">Saratov</option>
-                </select>
-              </div>
-              <div class="edit-colleague__block edit-colleague__block--full-width">
-                <label class="input-wrapper" for="company-address">Адрес</label>
-                <input placeholder="office, bld., St" id="company-address" name="company-address" type="text"/>
-              </div>
-              <div class="edit-colleague__block edit-colleague__block--half-width">
-                <label class="input-wrapper" for="company-post-index">Почтовый индекс</label>
-                <input placeholder="000000" id="company-post-index" name="company-post-index" type="text"/>
-              </div>
-              <div class="edit-colleague__block edit-colleague__block--half-width edit-colleague__block--right">
-                <label class="input-wrapper" for="company-phone">Телефон</label>
-                <input placeholder="+1 (111) 111 11 11" id="company-phone" name="company-phone" type="text"/>
-              </div>
-              <div class="edit-colleague__block edit-colleague__block--full-width">
-                <label class="input-wrapper" for="company-email">E-mail</label>
-                <input placeholder="E-mail" id="company-email" name="company-email" type="text"/>
-              </div>
-              <div class="edit-colleague__buttons">
-                <button class="button button--transparent" type="reset">Отмена</button>
-                <button class="button button--blue" type="submit">Сохранить</button>
-              </div>
-            </form>
+            <div class="edit-colleague__form">
+              <form action="#" method="POST">
+                <div class="edit-colleague__block edit-colleague__block--full-width"><span>Название компании</span><span class="edit-colleague__name">Adventa Agency</span></div>
+                <div class="edit-colleague__block edit-colleague__block--full-width">
+                  <label class="input-wrapper" for="site">Web</label>
+                  <input placeholder="https://" id="site" name="site" type="text"/>
+                </div>
+                <div class="edit-colleague__block edit-colleague__block--full-width">
+                  <label class="input-wrapper" for="company-description">Описание компании</label>
+                  <textarea placeholder="Описание компании, только на английском языке" id="company-description" name="company-description" type="textarea"></textarea>
+                </div>
+                <div class="edit-colleague__block edit-colleague__block--full-width">
+                  <p>Страна</p>
+                  <select class="input-dropdown" id="country-select">
+                    <option class="input-dropdown__option" value="Russia">Russia</option>
+                    <option class="input-dropdown__option" value="USA">USA</option>
+                  </select>
+                </div>
+                <div class="edit-colleague__block edit-colleague__block--full-width">
+                  <p>Город</p>
+                  <select class="input-dropdown" id="city-select">
+                    <option class="input-dropdown__option" value="Moscow">Moscow</option>
+                    <option class="input-dropdown__option" value="Saratov">Saratov</option>
+                  </select>
+                </div>
+                <div class="edit-colleague__block edit-colleague__block--full-width">
+                  <label class="input-wrapper" for="company-address">Адрес</label>
+                  <input placeholder="office, bld., St" id="company-address" name="company-address" type="text"/>
+                </div>
+                <div class="edit-colleague__block edit-colleague__block--half-width">
+                  <label class="input-wrapper" for="company-post-index">Почтовый индекс</label>
+                  <input placeholder="000000" id="company-post-index" name="company-post-index" type="text"/>
+                </div>
+                <div class="edit-colleague__block edit-colleague__block--half-width edit-colleague__block--right">
+                  <label class="input-wrapper" for="company-phone">Телефон</label>
+                  <input placeholder="+1 (111) 111 11 11" id="company-phone" name="company-phone" type="text"/>
+                </div>
+                <div class="edit-colleague__block edit-colleague__block--full-width">
+                  <label class="input-wrapper" for="company-email">E-mail</label>
+                  <input placeholder="E-mail" id="company-email" name="company-email" type="text"/>
+                </div>
+                <div class="edit-colleague__buttons">
+                  <button class="button button--transparent" type="reset">Отмена</button>
+                  <button class="button button--blue" type="submit">Сохранить</button>
+                </div>
+              </form>
+            </div>
           </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
             <svg width="33" height="33" aria-hidden="true">
