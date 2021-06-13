@@ -11,21 +11,24 @@ block main
   include ../data/pages/admin-messages-inbox
   include ../data/modal-colleague-admin
 
-  main.container.container--admin
+  main
     .admin
-      +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
-      .hidden-sm
+      .container.container--admin
+        +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
         +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
-      .admin__control-wrapper
-        +renderAdminTabs(adminTabs)
-        +renderMailControl("Inbox", adminMailControl.linkList, adminMailControl.isSearchInput)
-      h2.admin__headline="Inbox"
-      +renderInboxMessages(adminInboxMessagesTitles, adminInboxMessages)
 
-      .admin__button-wrapper
-        button.button.button--transparent(type="button")="More"
+        .admin__control-wrapper
+          +renderAdminTabs(adminTabs, modal=false, menu=true)
+          +renderMailControl(adminMailControl.linkList, adminMailControl.isSearchInput)
+          h2.admin__section-title="Inbox"
 
-    +renderSupportContacts(contactsList)
+        .admin__content-wrapper
+          +renderInboxMessages(adminInboxMessagesTitles, adminInboxMessages)
+
+        .admin__button-wrapper
+          button.button.button--transparent(type="button")="More"
+
+        +renderSupportContacts(contactsList)
 
 block append modals
   include ../data/mobile-admin-tabs
@@ -34,4 +37,4 @@ block append modals
   +mobileModal("modal--edit-colleague")
     +modalEditColleague(editCollegue)
   +mobileModal("modal--admin-menu")
-    +renderModalAdminTabs(adminTabs)
+    +renderModalAdminTabs(adminTabs, modal=true, menu=false)

@@ -171,6 +171,10 @@
   content: none;
 }
 
+.swiper-pagination-bullet-active {
+  background-color: $color-blue;
+}
+
 .direction--exhibitors {
   @include viewport--sm {
     display: flex;
@@ -312,12 +316,6 @@
       margin: 0 5px;
       background: initial;
       border: 1px solid $color-blue;
-    }
-  }
-
-  .swiper-pagination-bullet-active {
-    @include viewport--sm {
-      background: $color-blue;
     }
   }
 }

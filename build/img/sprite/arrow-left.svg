@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="11.73" height="19.021" viewBox="0 0 11.73 19.021"><defs></defs><g transform="translate(0)"><path class="a" d="M68.161,0,70.38,2.219,63.088,9.511,70.38,16.8l-2.219,2.219L58.65,9.511Z" transform="translate(-58.65)"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="11.73" height="19.021" viewBox="0 0 11.73 19.021">
+  <g id="chevron-right" transform="translate(-0.5 -6)">
+    <path id="Контур_566" data-name="Контур 566" d="M68.161,0,70.38,2.219,63.088,9.511,70.38,16.8l-2.219,2.219L58.65,9.511Z" transform="translate(-58.15 6)" fill="currentColor"/>
+  </g>
+</svg>

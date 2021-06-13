@@ -1,9 +1,17 @@
-mixin renderDownloadFiles(downloadHeadline, downloadList)
+mixin renderDownloadList(downloadList, hasLeftPadding)
+  if hasLeftPadding
+    - var leftPaddingClass = 'download-list--left-padding'
+  else
+    - var leftPaddingClass = ''
+
+  ul.download__list.download-list(class=leftPaddingClass)
+    each file in downloadList
+      li.download-list__item
+        a.download-list__link(href=file.link aria-label="Скачать файл" download)=file.text
+          +icon("icon-download", 26, 35)
+
+mixin renderDownloadFiles(downloadHeadline, downloadList, hasLeftPadding)
   .download
-    +renderHeadline2(downloadHeadline)
-    ul.download__list
-      each file in downloadList
-        li.download__item
-          a.download__link(href=file.link aria-label="Скачать файл" download)
-            +icon("icon-download", 26, 35)
-            span=file.text
+    h2.admin__section-title=downloadHeadline
+    +renderDownloadList(downloadList, hasLeftPadding)
+

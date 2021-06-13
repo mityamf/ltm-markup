@@ -1,0 +1,15 @@
+.headline-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 22px;
+
+  background-color: inherit;
+
+  @include viewport--sm {
+    flex-direction: row-reverse;
+    align-items: baseline;
+    padding-top: 32px;
+  }
+}

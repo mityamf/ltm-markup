@@ -3,13 +3,12 @@ mixin modalEditColleague(data)
     +renderHeadline2(data.title)
     .edit-colleague__photo-column
       img(src=data.photo, width=103, height=103, alt="Фото админа")
-      label.edit-colleague__photo-upload
-        span Загрузить
-        input(type="file")
+      label.edit-colleague__photo-upload.btn.btn--blue Загрузить
+        input(type="file").visually-hidden
       .edit-colleague__upload-info
-        span="JPG, PNG"
-        span="Min. 200x200 px."
-        span="Max. 3 mb."
+        p="JPG, PNG"
+        p="Min. 200x200 px."
+        p="Max. 3 mb."
     .edit-colleague__content-column
       form(action="#" method="POST").edit-colleague__form
         each item in data.formList

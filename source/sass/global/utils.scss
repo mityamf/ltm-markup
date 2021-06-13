@@ -55,7 +55,7 @@
 
 .hidden-sm {
   @include viewport--sm {
-    display: none;
+    display: none !important;
   }
 }
 

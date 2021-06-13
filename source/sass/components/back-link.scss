@@ -1,0 +1,11 @@
+.back-link {
+  display: flex;
+  flex-direction: row-reverse;
+
+  svg {
+    fill: $color-blue;
+    width: 11px;
+    height: 19px;
+    margin-right: 5px;
+  }
+}
