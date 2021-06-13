@@ -10937,21 +10937,17 @@ p {
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    margin: 0; }
     @media (max-width: 767px) {
       .wish-list__text-wrapper {
         display: block; } }
   .wish-list__text-wrapper p {
-    margin: 0;
-    max-width: 582px;
     font-size: 24px;
     line-height: 29px;
     font-weight: lighter;
     color: #0098c1;
     letter-spacing: 1px; }
-    @media (max-width: 767px) {
-      .wish-list__text-wrapper p {
-        display: block; } }
   .wish-list__control-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -11023,13 +11019,14 @@ p {
       .wish-list__company-block:first-child {
         padding-top: 0;
         margin: 0; } }
-  .wish-list__company-block > span {
+  .wish-list__company-block > .title--h4 {
     display: block;
+    margin: 0;
     font-size: 12px;
     line-height: 20px;
     color: #9f9f9f; }
     @media (max-width: 767px) {
-      .wish-list__company-block > span {
+      .wish-list__company-block > .title--h4 {
         padding-left: 17px;
         padding-right: 17px; } }
   .wish-list__company-list {
