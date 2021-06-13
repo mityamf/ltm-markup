@@ -19,7 +19,7 @@ mixin renderFilterButton(buttonFilter)
     button.button.button--transparent.filters__button(type=buttonFilter.type)=buttonFilter.text
 
 mixin renderMobileFilterButtons(buttonFilters, buttonReset)
-  .filters
+  form.filters
     .filters__mobile-block
       button(type="button" data-modal="mobile-filters")=buttonFilters
         +icon("icon-filters", 16, 16)

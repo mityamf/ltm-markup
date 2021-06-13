@@ -2995,23 +2995,25 @@
                 </tbody>
               </table>
               <div class="admin__mobile-block-wrapper">
-                <div class="generate-file"><a class="generate-file__link" href="#" aria-label="Скачать файл" download="download">Скачать расписание PDF</a></div>
+                <div class="generate-file">
+                  <button class="generate-file__link button button--transparent" aria-label="Скачать файл" type="button">Скачать расписание PDF</button>
+                </div>
               </div>
               <div class="wish-list">
                 <h2 class="title title--h2 title--big">Wish list</h2>
                 <div class="wish-list__text-wrapper">
                   <p>Участники, с которыми вы бы хотели встретиться</p>
-                  <div class="generate-file"><a class="generate-file__link" href="#" aria-label="Скачать файл" download="download">Скачать Wish list PDF</a></div>
+                  <button class="button button--transparent button--mobile" type="button">Generate PDF with Wish-list</button>
                 </div>
                 <div class="wish-list__company-list-wrapper">
                   <div class="wish-list__company-block">
-                    <div class="wish-list__choose-company">
+                    <form class="wish-list__choose-company">
                       <select class="input-dropdown" id="company-select-wish">
                         <option class="input-dropdown__option" value="Choose a company">Choose a company</option>
                         <option class="input-dropdown__option" value="Choose a company">Hello, hello</option>
                       </select>
                       <button class="button button--transparent btn--request" type="submit">Send a request</button>
-                    </div><span>Company</span>
+                    </form><span>Company</span>
                     <ul class="wish-list__company-list">
                       <li class="wish-list__company-item">Pegas Touristic</li>
                       <li class="wish-list__company-item">Luxury Events Agency</li>
@@ -3023,7 +3025,9 @@
                       <li class="wish-list__company-item">The First T Agency</li>
                       <li class="wish-list__company-item">Luxury Travel LLC</li>
                     </ul>
-                    <button class="button button--transparent btn--more" type="button">More</button>
+                    <div class="admin__mobile-block-wrapper visible-sm">
+                      <button class="button button--transparent" type="button">More</button>
+                    </div>
                   </div>
                   <div class="wish-list__company-block">
                     <p>Участники, которые хотели бы встретиться с вами</p><span>Company</span>
@@ -3038,7 +3042,12 @@
                       <li class="wish-list__company-item">The First T Agency</li>
                       <li class="wish-list__company-item">Luxury Travel LLC</li>
                     </ul>
-                    <button class="button button--transparent btn--more" type="button">More</button>
+                    <div class="admin__button-wrapper visible-sm">
+                      <button class="button button--transparent" type="button">More</button><a class="up-button up-button--mobile" href="#top" aria-label="Вернуться в начало">
+                        <svg width="54" height="54" aria-hidden="true">
+                          <use xlink:href="#icon-arrow-up"></use>
+                        </svg></a>
+                    </div>
                   </div>
                 </div>
               </div>
