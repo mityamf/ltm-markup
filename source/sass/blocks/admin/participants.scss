@@ -1,30 +1,6 @@
 .participants {
-  padding: 26px 0 27px;
-
+  padding: 26px 0;
   border-bottom: 1px solid $color-blue;
-
-  @include viewport--lg {
-    padding: 27px 0 34px;
-  }
-
-  @include viewport--sm {
-    padding: 0 0 30px;
-  }
-
-  .title--h2 {
-    margin-bottom: 10px;
-
-    @include viewport--lg {
-      letter-spacing: 1.8px;
-    }
-
-    @include viewport--sm {
-      margin-bottom: 31px;
-
-      font-size: 38px;
-      line-height: 46px;
-    }
-  }
 
   &__info {
     margin: 0;
@@ -45,17 +21,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin: 0 -17px -17px 0;
-    padding: 41px 0 39px;
+    padding: 41px 0;
+    column-gap: 15px;
+    row-gap: 15px;
 
     @include viewport--lg {
-      padding: 40px 0 42px 0;
-      margin: 0 -9px -9px 0;
+      padding: 40px 0;
     }
 
     @include viewport--sm {
       padding: 32px 0 6px;
-      margin: 0 0 -9px 0;
     }
   }
 
@@ -63,6 +38,7 @@
     margin-right: 16px;
     width: 103px;
     height: 103px;
+    object-fit: cover;
 
     border-radius: 100%;
 
@@ -71,19 +47,34 @@
     }
   }
 
-  &__item {
-    display: flex;
-    margin-right: 17px;
-    margin-bottom: 17px;
+  &--half-width {
+    border-bottom: none;
+  }
 
-    @include viewport--lg {
-      margin-right: 9px;
-      margin-bottom: 9px;
+  &--half-width &__item {
+    width: 48%;
+
+    @include viewport--md {
+      width: 100%;
+      max-width: none;
     }
+  }
+
+  &:not(&--half-width) &__item {
+    max-width: 334px;
 
     @include viewport--md {
       width: calc((100% / 2) - 9px);
     }
+
+    @include viewport--sm {
+      width: 100%;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
 
     @include viewport--sm {
       width: 100%;
@@ -95,33 +86,26 @@
   }
 
   &__info-wrapper {
-    padding: 21px 37px 0 0;
-
-    @include viewport--lg {
-      padding: 24px 59px 0 0;
-    }
+    padding: 0;
 
     @include viewport--sm {
       display: block;
       width: 100%;
-      padding: 18px 0 0;
-
       text-align: center;
     }
   }
 
-  &__item span {
-    display: block;
+  &__name > h4 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    color: $color-gray-dark;
     word-break: break-word;
   }
 
-  &__name {
-    font-size: 16px;
-    line-height: 20px;
-    color: $color-gray-dark;
-  }
-
-  &__position {
+  &__position > p {
+    margin: 0;
     font-size: 12px;
     line-height: 20px;
     color: $color-nobel;
@@ -148,8 +132,13 @@
     }
   }
 
-  &__contact-link {
+  &__edit-button {
     transition: opacity 0.3s ease;
+    border: none;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
 
     @include viewport--sm {
       position: absolute;
@@ -165,5 +154,11 @@
     &:active {
       opacity: 0.5;
     }
+  }
+
+  &__edit-button svg {
+    color: $color-gray;
+    width: 18px;
+    height: 24px;
   }
 }

@@ -1,4 +1,4 @@
-//Таблица с расписанием
+//- Таблица с расписанием
 
 - var cellClass = 'admin-table__cell admin-table__cell--'
 
@@ -37,7 +37,7 @@ mixin renderSchedule(titleList, rowList)
           else
             td(class=cellClass + 'empty')
 
-//Таблица с отправленными сообщениями
+//- Таблица с отправленными сообщениями
 
 mixin renderSentMessages(titleList, rowList)
   table.admin-table
@@ -66,7 +66,7 @@ mixin renderSentMessages(titleList, rowList)
               +icon("icon-mail-arrow", 11, 19)
           td(class=cellClass + 'mobile-event')=row.event
 
-//Таблица с входящими сообщениями
+//- Таблица с входящими сообщениями
 
 mixin renderInboxMessages(titleList, rowList)
   table.admin-table
@@ -100,7 +100,7 @@ mixin renderInboxMessages(titleList, rowList)
           if row.event
             td(class=cellClass + 'mobile-event')=row.event
 
-//Таблица со списком гостей
+//- Таблица со списком гостей
 
 mixin renderGuestsList(titleList, rowList)
   table.admin-table.admin-table--guest-list

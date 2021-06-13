@@ -11,34 +11,39 @@ block main
   include ../data/pages/lk-guest-exhibitors-d1
   include ../data/modal-colleague-lk
 
-  main.container.lk
-    .admin
-      +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates)
-      .hidden-sm
-        +renderLKParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, infoBlock)
-      .admin__control-wrapper.admin__control-wrapper--full-width
-        +renderAdminTabs(adminTabs)
-      +renderHeadline2("Список участников")
-      +renderScheduleTabs(scheduleTabs)
+  main
+      .container
+        +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates)
 
-      .hidden-sm
-        .filters.filters--exhibitions
-          +renderAlphabetFilter(alphabetFilter)
-          +renderDropdownFilter(dropdownFilters)
-          +renderFilterButton(buttonFilter)
+        .admin__block-wrapper
+          +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, true)
+          +renderInfoBlock(infoBlock)
 
-      .visible-sm
-        +renderMobileFilterButtons("Filters", "Clear all filters")
+        .admin__control-wrapper.admin__control-wrapper--full-width
+          +renderAdminTabs(adminTabs, modal=false, menu=true)
 
-      +renderFilterTabs(filterTabs)
-      +renderHostedGuestsList(adminHostedGuestsListTitles, adminHostedGuestsList)
+        .admin__content-wrapper
+          h2.admin__section-title="Список участников"
+          +renderAdminTabs(scheduleTabs)
 
-      .admin__button-wrapper
-        button.btn.btn--white.btn--more(type="button")="Показать больше"
-        .visible-sm
-          +renderUpButton('up-button--mobile')
+          .hidden-sm
+            .filters.filters--exhibitions
+              +renderAlphabetFilter(alphabetFilter)
+              +renderDropdownFilter(dropdownFilters)
+              +renderFilterButton(buttonFilter)
 
-    +renderSupportContacts(contactsList)
+          .visible-sm
+            +renderMobileFilterButtons("Filters", "Clear all filters")
+
+          +renderFilterTabs(filterTabs)
+          +renderHostedGuestsList(adminHostedGuestsListTitles, adminHostedGuestsList)
+
+          .admin__button-wrapper
+            button.btn.btn--white.btn--more(type="button")="Показать больше"
+            .visible-sm
+              +renderUpButton('up-button--mobile')
+
+        +renderSupportContacts(contactsList)
 
 block append modals
   include ../data/mobile-admin-tabs
@@ -49,7 +54,7 @@ block append modals
   +mobileModal("modal--edit-colleague")
     +modalEditColleague(editCollegue)
   +mobileModal("modal--admin-menu")
-    +renderModalAdminTabs(adminTabs)
+    +renderModalAdminTabs(adminTabs, modal=true, menu=false)
   +mobileModal("modal--mobile-filters")
     +renderMobileFilters(mobileFilters, mobileFiltersButtons)
   +mobileModal("modal--edit-profile")

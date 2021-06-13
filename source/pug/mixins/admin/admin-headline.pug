@@ -1,14 +1,11 @@
 mixin renderAdminHeadline(eventName, eventPlace, dates, backLink)
-  .admin-headline
-    .top-wrapper.top-wrapper--mobile
-      h2.title.title--h2=eventName
-      .hidden-sm
-        +renderBackButton(backLink)
-    span.admin-headline__place=eventPlace
-    time(datetime="2011-11-18")=dates
-
-mixin renderLKAdminHeadline(eventName, eventPlace, dates)
-  .admin-headline
-    h2.title--h2=eventName
-    span.admin-headline__place=eventPlace
-    time(datetime="2011-11-18")=dates
+  .top-wrapper
+    .top-wrapper__headline-wrapper
+      h2.title.title--h2.top-wrapper__title !{eventName}
+      if backLink
+        a.back-link.hidden-sm(href=link) Back
+          +icon("link-arrow", 12, 20)
+    .top-wrapper__place
+      p !{eventPlace}
+    .top-wrapper__dates
+      p !{dates}

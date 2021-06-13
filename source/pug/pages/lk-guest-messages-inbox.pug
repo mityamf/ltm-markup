@@ -11,21 +11,27 @@ block main
   include ../data/pages/lk-guest-messages-inbox
   include ../data/modal-colleague-lk
 
-  main.container.lk
+  main
     .admin
-      +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates)
-      .hidden-sm
-        +renderLKParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, infoBlock)
-      .admin__control-wrapper
-        +renderAdminTabs(adminTabs)
-        +renderMailControl("Входящие", adminMailControl.linkList, adminMailControl.isSearchInput)
-      h2.admin__headline="Входящие"
-      +renderInboxMessages(adminInboxMessagesTitles, adminInboxMessages)
+      .container
+        +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates)
 
-      .admin__button-wrapper
-        button.btn.btn--white.btn--more(type="button")="Показать больше"
+        .admin__block-wrapper
+          +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, true)
+          +renderInfoBlock(infoBlock)
 
-    +renderSupportContacts(contactsList)
+        .admin__control-wrapper
+          +renderAdminTabs(adminTabs, modal=false, menu=true)
+          +renderMailControl(adminMailControl.linkList, adminMailControl.isSearchInput)
+          h2.admin__section-title.visible-sm="Входящие"
+
+        .admin__content-wrapper
+          +renderInboxMessages(adminInboxMessagesTitles, adminInboxMessages)
+
+        .admin__button-wrapper
+          button.btn.btn--white.btn--more(type="button")="Показать больше"
+
+        +renderSupportContacts(contactsList)
 
 block modals
   include ../data/modal-colleague-lk
@@ -35,6 +41,6 @@ block modals
   +mobileModal("modal--edit-colleague")
     +modalEditColleague(editCollegue)
   +mobileModal("modal--admin-menu")
-    +renderModalAdminTabs(adminTabs)
+    +renderModalAdminTabs(adminTabs, modal=true, menu=false)
   +mobileModal("modal--edit-profile")
     +modalEditProfile(editProfile)

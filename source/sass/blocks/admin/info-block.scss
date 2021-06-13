@@ -1,0 +1,84 @@
+.info-block {
+  display: inline-block;
+
+  &__top-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text-wrapper {
+    display: block;
+    width: 100%;
+
+    @include viewport--sm {
+      padding-bottom: 12px;
+    }
+  }
+
+  &__text-wrapper p {
+    letter-spacing: 0.1px;
+  }
+
+  &__link {
+    font-size: 24px;
+    line-height: 29px;
+    color: $color-blue;
+    letter-spacing: 0.7px;
+    transition: opacity 0.3s ease;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    @include viewport--sm {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  &__more-link {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 36px;
+    margin-bottom: 0;
+    transition: opacity 0.3s ease;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  .btn {
+    padding: 17px 30px;
+    width: 222px;
+    height: max-content;
+    transition: opacity 0.3s ease;
+
+    @include viewport--lg {
+      width: 178px;
+    }
+
+    @include viewport--sm {
+      width: 222px;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}

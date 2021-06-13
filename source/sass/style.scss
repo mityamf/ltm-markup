@@ -81,6 +81,7 @@
 @import "blocks/photos-slider";
 @import "blocks/photos";
 @import "components/top-wrapper";
+@import "components/back-link";
 @import "components/top-link";
 @import "components/info-bottom";
 @import "components/hotel-card";
@@ -91,11 +92,13 @@
 @import "components/up-button";
 @import "components/filters";
 @import "components/photo-edit";
+@import "components/headline-wrapper";
 @import "blocks/admin/admin";
 @import "blocks/admin/tabs";
 @import "blocks/admin/schedule-tabs";
 @import "blocks/admin/sponsorship";
 @import "blocks/admin/download";
+@import "blocks/admin/download-list";
 @import "blocks/admin/participants";
 @import "blocks/admin/deadlines-info";
 @import "blocks/admin/admin-headline";
@@ -103,7 +106,7 @@
 @import "blocks/admin/admin-table";
 @import "blocks/admin/wish-list";
 @import "blocks/admin/filter-tabs";
-@import "blocks/admin/lk";
+@import "blocks/admin/info-block";
 @import "blocks/admin/generate-file";
 
 // Modals

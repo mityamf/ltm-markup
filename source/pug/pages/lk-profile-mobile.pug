@@ -9,25 +9,30 @@ block variables
 block main
   include ../data/pages/lk-profile-mobile
 
-  main.container.admin.admin--mobile.lk
-    +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
-    .admin__control-wrapper.admin__control-wrapper--full-width
-      +renderAdminTabs(adminTabs)
-    .info-block
-      .info-block__top-wrapper
-        .info-block__headline
-          h2.admin__headline=infoBlock.title
-          a.info-block__link(href=infoBlock.link)=infoBlock.link
-      .info-block__text-wrapper
-        p=infoBlock.text
-      button.btn.btn--blue(type=infoBlock.buttonType data-modal="edit-profile")=infoBlock.buttonText
-    +renderSupportContacts(contactsList)
+  main
+    .admin.admin--mobile
+      .container
+        +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates)
+
+        .admin__control-wrapper.admin__control-wrapper--full-width
+          +renderAdminTabs(adminTabs, modal=false, menu=true)
+
+        .admin__content-wrapper
+          .info-block
+            .info-block__top-wrapper
+              .info-block__headline
+                h2.admin__headline=infoBlock.title
+                a.info-block__link(href=infoBlock.link)=infoBlock.link
+            .info-block__text-wrapper
+              p=infoBlock.text
+            button.btn.btn--blue(type=infoBlock.buttonType data-modal="edit-profile")=infoBlock.buttonText
+        +renderSupportContacts(contactsList)
 
 block modals
   include ../data/modal-profile
   include ../data/mobile-admin-tabs
 
   +mobileModal("modal--admin-menu")
-    +renderModalAdminTabs(adminTabs)
+    +renderModalAdminTabs(adminTabs, modal=true, menu=false)
   +mobileModal("modal--edit-profile")
     +modalEditProfile(editProfile)
