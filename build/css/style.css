@@ -1331,10 +1331,18 @@ p {
   .button--transparent {
     padding: 12px 42px;
     background-color: transparent; }
+    .button--transparent:hover, .button--transparent:focus {
+      border-color: transparent;
+      background-color: #0098c1;
+      color: #ffffff; }
   .button--white {
     background-color: transparent;
     color: #ffffff;
     border: 1px solid #ffffff; }
+    .button--white:hover, .button--white:focus {
+      border-color: #0098c1;
+      background-color: #ffffff;
+      color: #0098c1; }
   .button:hover, .button:focus {
     opacity: 0.8; }
   .button:disabled {
@@ -4031,7 +4039,10 @@ p {
         -ms-flex-pack: center;
             justify-content: center; }
     .form-reg__submit a:focus, .form-reg__submit a:hover {
-      opacity: 0.8; }
+      opacity: 0.8;
+      border-color: transparent;
+      background-color: #0098c1;
+      color: #ffffff; }
     @media (max-width: 767px) {
       .form-reg__submit a {
         margin-bottom: 29px; } }
