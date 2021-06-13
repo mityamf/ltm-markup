@@ -7,13 +7,13 @@ mixin renderSupportContacts(contactsList)
           li.support-contacts__item.swiper-slide
             img(src=contact.src alt="Фото админа")
             .support-contacts__info
-              span.support-contacts__text=contact.name
-              span.support-contacts__text=contact.position
+              h4.support-contacts__text=contact.name
+              p.support-contacts__text=contact.position
               a(class="support-contacts__link", href='mailto:' + contact.email)
                 +icon("icon-support-email", 42, 18)
               a(class="support-contacts__link", href='tel:' + contact.phone)=contact.phoneText
       .swiper-pagination.direction__pagination
-      .direction__arrow.direction__arrow--right
+      button.direction__arrow.direction__arrow--right
         +icon("arrow-right", 11, 19)
-      .direction__arrow.direction__arrow--left
+      button.direction__arrow.direction__arrow--left
         +icon("arrow-left", 11, 19)

@@ -1,38 +1,16 @@
 .admin {
-  padding-bottom: 29px;
-
-  @include viewport--lg {
-    padding-bottom: 0;
-  }
-
-  &__sender-info {
-    @include viewport--sm {
-      display: block;
-      padding: 12px 0 11px;
-      letter-spacing: 0.4px;
-      font-size: 16px;
-      line-height: 20px;
-    }
-  }
-
-  &__sender-subject {
-    @include viewport--sm {
-      display: block;
-      margin-top: 10px;
-      color: $color-gray;
-    }
-  }
-
-  .filters {
-    padding: 20px 0 0;
-    border: none;
+  &__text-wrapper {
+    padding-bottom: 37px;
+    display: grid;
+    grid-template-areas: "first third" "second _";
 
     @include viewport--lg {
-      padding: 7px 0 0;
+      padding-bottom: 50px;
     }
 
     @include viewport--sm {
       padding: 0;
+      grid-template-areas: "first" "second" "third";
     }
   }
 
@@ -50,221 +28,105 @@
     .button {
       margin: 0 auto;
       width: 222px;
-      padding: 12px 0;
+      grid-template-areas: "first" "second" "third";
     }
   }
 
   &__control-wrapper {
-    @include viewport--sm {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0 14px;
-    }
-  }
-
-  &__control-wrapper--full-width .admin-tabs {
-    @include viewport--sm {
-      width: 100%;
-    }
-  }
-
-  .headline-back {
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  .edit {
-    padding: 0;
-
-    @include viewport--lg {
-      padding: 8px 0 0 0;
-    }
+    display: grid;
+    grid-template-areas: "tabs tabs" "title control";
 
     @include viewport--sm {
-      padding: 13px 0 0;
-    }
-  }
-
-  .edit .title--big {
-    @include viewport--sm {
-      display: none;
-    }
-  }
-
-  .edit:not(.edit--active) .title--small {
-    @include viewport--sm {
-      display: none;
-    }
-  }
-
-  .edit__input {
-    @include viewport--sm {
-      padding: 5px 9px;
+      grid-template-areas: "tabs control" "title title";
+      padding: 20px 0 0 0;
     }
 
-    &:focus {
-      outline: none;
-    }
-  }
+    .tabs {
+      grid-column: tabs;
 
-  .edit__wrapper {
-    grid-row-gap: 18px;
-
-    @include viewport--sm {
-      grid-row-gap: 0;
-    }
-  }
-
-  .edit__text-block p {
-    margin: 6px 0 22px;
-  }
-
-  .edit__label {
-    margin-top: 0;
-
-    &:last-of-type {
       @include viewport--sm {
-        margin-bottom: 29px;
+        width: 70%;
+      }
+    }
+
+    .mail-control {
+      grid-area: control;
+    }
+
+    .title {
+      grid-area: title;
+    }
+  }
+
+  &__control-wrapper--full-width {
+    .tabs {
+      @include viewport--sm {
+        width: 100%;
       }
     }
   }
 
-  .edit__text-block {
-    padding: 0 15px;
-
-    @include viewport--sm {
-      padding: 10px 0 0;
-    }
-  }
-
-  .input-dropdown {
-    width: 100%;
-  }
-
-  .edit .button {
-    @include viewport--lg {
-      width: 178px;
-      //padding: 17px;
-    }
-
-    @include viewport--sm {
-      width: 222px;
-    }
-  }
-
-  .edit__buttons {
-    padding-bottom: 17px;
+  &__content-wrapper {
+    padding-bottom: 37px;
 
     @include viewport--lg {
       padding-bottom: 50px;
     }
 
     @include viewport--sm {
-      margin: 0 auto 0;
-      padding-bottom: 10px;
-    }
-  }
-
-  .title--h2 {
-    margin-bottom: 13px;
-  }
-
-  .edit .title--h3 {
-    @include viewport--sm {
-      margin-top: 12px;
-      margin-bottom: 5px;
-    }
-  }
-
-  .edit .choices__list--single .choices__item {
-    letter-spacing: 1px;
-  }
-
-  .title--small {
-    margin: 0;
-  }
-
-  &__headline {
-    display: none;
-
-    @include viewport--sm {
-      display: block;
-      margin-top: 5px;
-      margin-bottom: 15px;
-
-      font-size: 38px;
-      font-weight: lighter;
-      line-height: 46px;
-      letter-spacing: 0.05em;
-      color: $color-blue;
-    }
-  }
-
-  .hotel-filters {
-    border: none;
-    padding: 19px 0 0 0;
-  }
-
-  .hotel-filter--list {
-    width: 580px;
-  }
-
-  .hotel-filter__list li {
-    margin-right: 7px;
-  }
-
-  .hotel-filter--dropdown:first-of-type {
-    width: 340px;
-  }
-
-  .hotel-filter--dropdown:not(:first-of-type) {
-    width: 222px;
-  }
-
-  &--schedule {
-    padding-bottom: 116px;
-
-    @include viewport--lg {
-      padding-bottom: 49px;
-    }
-
-    @include viewport--sm {
-      padding-bottom: 0;
-    }
-
-    .title--big {
-      @include viewport--sm {
-        font-size: 38px;
-        line-height: 46px;
-      }
-    }
-  }
-
-  &__mobile-block-wrapper {
-    display: none;
-
-    @include viewport--sm {
-      display: block;
       padding-bottom: 30px;
-
-      .generate-file {
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        border: 1px solid $color-blue;
-        width: 238px;
-        padding: 13px 7px;
-        letter-spacing: 0.7px;
-      }
     }
+  }
 
-    .up-button {
-      margin: 0 auto;
-      display: block;
-      text-align: center;
+  &__block-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include viewport--sm {
+      grid-template-columns: 100%;
     }
+  }
+
+  &__section-title {
+    margin: 0 0 30px 0;
+
+    color: $color-blue;
+    font-size: 38px;
+    line-height: 46px;
+    font-weight: lighter;
+    letter-spacing: 1.7px;
+  }
+
+  &__section--participants {
+    grid-area: participants;
+  }
+
+  &__section--info-block {
+    grid-area: info-block;
+  }
+
+  &__section--first {
+    grid-area: first;
+  }
+
+  &__section--second {
+    grid-area: second;
+  }
+
+  &__section--third {
+    grid-area: third;
+  }
+
+  &__section > p:first-of-type {
+    margin-top: 0;
+  }
+
+  &__section > p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &__section {
+    padding: 10px 0;
   }
 
   &--mobile {
@@ -289,4 +151,3 @@
     }
   }
 }
-

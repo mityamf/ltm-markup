@@ -2,6 +2,7 @@ import {disableScrolling, enableScrolling} from './scroll-lock';
 
 const openModal = (modal, callback, preventScrollLock) => {
   modal.classList.add('modal--active');
+  document.body.classList.add('modal-opened');
 
   if (callback) {
     callback();
@@ -14,6 +15,7 @@ const openModal = (modal, callback, preventScrollLock) => {
 
 const closeModal = (modal, callback, preventScrollLock) => {
   modal.classList.remove('modal--active');
+  document.body.classList.remove('modal-opened');
 
   if (callback) {
     callback();

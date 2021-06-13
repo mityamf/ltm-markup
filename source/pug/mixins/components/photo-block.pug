@@ -1,47 +1,47 @@
 mixin photo-block()
-  ul.photo__block-list
+  ul.gallery__block-list
     each item in photoList
-      li.photo__item
-        .photo__title-wrap
+      li.gallery__block-item
+        .gallery__title-wrap
           h3.title.title--h3 #{item.title} #[span #{item.titleOnlyDesktop}]
         .swiper-container.photo__slider
-          ul.photo__sublist.swiper-wrapper
-            each photo in item.photos
-              if photo.isUp
-                if photo.isBig
-                  li.photo__sublist-item.photo__sublist-item--big.photo__sublist-item--up.swiper-slide
-                    a.photo__link(href="#")
-                      .photo__image-wrapper
+          ul.gallery__sublist.swiper-wrapper
+            each image in item.images
+              if image.isLong
+                if image.isWide
+                  li.gallery__sublist-item.gallery__sublist-item--wide.gallery__sublist-item--long.swiper-slide
+                    a.gallery__link(href="#")
+                      .gallery__image-wrapper
                         picture
-                          +webp("content", `${photo.src}`)
-                          +img("content", `${photo.src}`, "png", 460, 222, "Фотография с мероприятия")
+                          +webp("content", `${image.src}`)
+                          +img("content", `${image.src}`, "png", 460, 222, "Фотография с мероприятия")
                 else
-                  li.photo__sublist-item.photo__sublist-item--up.swiper-slide
-                        a.photo__link(href="#")
-                          .photo__image-wrapper
+                  li.gallery__sublist-item.gallery__sublist-item--long.swiper-slide
+                        a.gallery__link(href="#")
+                          .gallery__image-wrapper
                             picture
-                              +webp("content", `${photo.src}`)
-                              +img("content", `${photo.src}`, "png", 222, 222, "Фотография с мероприятия")
+                              +webp("content", `${image.src}`)
+                              +img("content", `${image.src}`, "png", 222, 222, "Фотография с мероприятия")
               else
-                if photo.text
-                  li.photo__sublist-item.swiper-slide
-                    a.photo__link(href="#")
-                      .photo__image-wrapper.photo__image-wrapper--add-link
+                if image.text
+                  li.gallery__sublist-item.swiper-slide
+                    a.gallery__link(href="#")
+                      .gallery__image-wrapper.gallery__image-wrapper--add-link
                         picture
-                          +webp("content", `${photo.src}`)
-                          +img("content", `${photo.src}`, "png", 222, 154, "Фотография с мероприятия")
-                        .photo__desc
-                          +icon("fb-icon", 11, 22)
-                          span #{photo.text}
+                          +webp("content", `${image.src}`)
+                          +img("content", `${image.src}`, "png", 222, 154, "Фотография с мероприятия")
+                        .gallery__desc
+                          +icon("icon-fb", 11, 22)
+                          span #{image.text}
                 else
-                  li.photo__sublist-item.swiper-slide
-                    a.photo__link(href="#")
-                      .photo__image-wrapper
+                  li.gallery__sublist-item.swiper-slide
+                    a.gallery__link(href="#")
+                      .gallery__image-wrapper
                         picture
-                          +webp("content", `${photo.src}`)
-                          +img("content", `${photo.src}`, "png", 222, 154, "Фотография с мероприятия")
-          .photo__button-next
+                          +webp("content", `${image.src}`)
+                          +img("content", `${image.src}`, "png", 222, 154, "Фотография с мероприятия")
+          button(type="button").photo__button-next
             +icon("icon-arrow_right_white", 19, 30)
-          .photo__button-prev
+          button(type="button").photo__button-prev
             +icon("icon-arrow_right_white", 19, 30)
           .photo__pagination

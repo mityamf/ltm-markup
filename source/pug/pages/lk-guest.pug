@@ -10,20 +10,30 @@ block main
   include ../data/pages/lk-guest
   include ../data/modal-colleague-lk
 
-  main.container.lk
-    +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
-    .hidden-sm
-      +renderLKParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, infoBlock)
-    .admin__control-wrapper.admin__control-wrapper--full-width
-      +renderAdminTabs(adminTabs)
-    .deadlines-info
-      .deadlines-info__content
-        each textBlock in deadlinesInfoContent
-          +renderHeadline2(textBlock.title)
-          .deadlines-info__text
-            +renderTextContentBlock(textBlock.textList)
-      +renderDownloadFiles(downloadHeadline, downloadList)
-    +renderSupportContacts(contactsList)
+  main
+    .container
+      +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates)
+
+      .admin__block-wrapper
+        +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, true)
+        +renderInfoBlock(infoBlock)
+
+      .admin__control-wrapper.admin__control-wrapper--full-width
+        +renderAdminTabs(adminTabs, modal=false, menu=true)
+
+      .admin__text-wrapper
+        .admin__section.admin__section--first
+          h2.admin__section-title=deadlinesInfoContent[0].title
+          +renderTextContentBlock(deadlinesInfoContent[0].textList)
+
+        .admin__section.admin__section--second
+          h2.admin__section-title=deadlinesInfoContent[1].title
+          +renderTextContentBlock(deadlinesInfoContent[1].textList)
+
+        .admin__section.admin__section--third
+          +renderDownloadFiles(downloadHeadline, downloadList, hasLeftPadding=true)
+
+      +renderSupportContacts(contactsList)
 
 block modals
   include ../data/modal-colleague-lk
@@ -33,6 +43,6 @@ block modals
   +mobileModal("modal--edit-colleague")
     +modalEditColleague(editCollegue)
   +mobileModal("modal--admin-menu")
-    +renderModalAdminTabs(adminTabs)
+    +renderModalAdminTabs(adminTabs, modal=true, menu=false)
   +mobileModal("modal--edit-profile")
     +modalEditProfile(editProfile)

@@ -9,28 +9,29 @@ block main
   include ../data/pages/account
   include ../data/modal-colleague-admin
 
-  main.container.container--no-padding.account
-    .hotel-headline.hotel-headline--account-page
-      .visible-sm
-        a.account__link-hotel(href=accountHotelInfo.link)=accountHotelInfo.link
-      .hotel-headline__wrapper
-        +renderHeadline2(hotelHeadline.title)
-        span=hotelHeadline.note
-      +icon(hotelHeadline.logo, hotelHeadline.logoWidth, hotelHeadline.logoHeight)
-    +renderPhotos(hotelPhotos.photoList, 'photos--account')
-    +renderImageSlider(hotelPhotos.photoList, 'photos-slider--account')
-    +renderAccountHotelInfo(accountHotelInfo.text, accountHotelInfo.link, accountHotelInfo.buttonText)
-    +renderEventsList(eventList.title, eventList.subtitle, eventList.hotelList)
+  main
+    .container.container--no-padding.account
+      .hotel-headline.hotel-headline--account-page
+        .visible-sm
+          a.account__link-hotel(href=accountHotelInfo.link)=accountHotelInfo.link
+        .hotel-headline__wrapper
+          +renderHeadline2(hotelHeadline.title)
+          span=hotelHeadline.note
+        +icon(hotelHeadline.logo, hotelHeadline.logoWidth, hotelHeadline.logoHeight)
+      +renderPhotos(hotelPhotos.photoList, 'photos--account')
+      +renderImageSlider(hotelPhotos.photoList, 'photos-slider--account')
+      +renderAccountHotelInfo(accountHotelInfo.text, accountHotelInfo.link, accountHotelInfo.buttonText)
+      +renderEventsList(eventList.title, eventList.subtitle, eventList.hotelList)
 
-    .account__contact-us
-      .account__admin
-        +renderAccountAdmin(administrator.title, administrator.src, administrator.name, administrator.lastName, administrator.position, administrator.text)
-      .account__notifications
-        +renderHeadline3("Notifications")
-        +renderNotifications(notifications)
-        button(class="button button--transporent" type="button") All Messages
+      .account__contact-us
+        .account__admin
+          +renderAccountAdmin(administrator.title, administrator.src, administrator.name, administrator.lastName, administrator.position, administrator.text)
+        .account__notifications
+          +renderHeadline3("Notifications")
+          +renderNotifications(notifications)
+          button(class="button button--transparent" type="button") All Messages
 
-    +renderSupportContacts(contactsList)
+      +renderSupportContacts(contactsList)
 
 block modals
   +modal("modal--logout")

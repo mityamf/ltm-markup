@@ -12,33 +12,37 @@ block main
   include ../data/pages/admin-guests-d1
   include ../data/modal-colleague-admin
 
-  main.container.container--admin
+  main
     .admin
-      +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
-      .hidden-sm
+      .container.container--admin
+        +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
         +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
-      .admin__control-wrapper.admin__control-wrapper--full-width
-        +renderAdminTabs(adminTabs)
-      +renderHeadline2("Buyers Guest List")
-      +renderScheduleTabs(scheduleTabs, generatePDF)
 
-      .hidden-sm
-        .filters
-          +renderAlphabetFilter(alphabetFilter)
-          +renderDropdownFilter(dropdownFilters)
+        .admin__control-wrapper.admin__control-wrapper--full-width
+          +renderAdminTabs(adminTabs, modal=false, menu=true)
 
-      .visible-sm
-        +renderMobileFilterButtons("Filters", "Clear all filters")
+        .admin__content-wrapper
+          h2.admin__section-title="Buyers Guest List"
+          +renderAdminTabs(scheduleTabs)
 
-      +renderFilterTabs(filterTabs)
-      +renderGuestsList(adminGuestsListTitles, adminGuestsList)
+          .hidden-sm
+            .filters
+              +renderAlphabetFilter(alphabetFilter)
+              +renderDropdownFilter(dropdownFilters)
 
-      .admin__button-wrapper
-        button.button.button--transparent(type="button")="More"
-        .visible-sm
-          +renderUpButton('up-button--mobile')
+          .visible-sm
+            +renderMobileFilterButtons("Filters", "Clear all filters")
 
-    +renderSupportContacts(contactsList)
+          +renderFilterTabs(filterTabs)
+
+          +renderGuestsList(adminGuestsListTitles, adminGuestsList)
+
+        .admin__button-wrapper
+          button.button.button--transparent(type="button")="More"
+          .visible-sm
+            +renderUpButton('up-button--mobile')
+
+        +renderSupportContacts(contactsList)
 
 block append modals
   include ../data/mobile-admin-tabs
@@ -48,6 +52,6 @@ block append modals
   +mobileModal("modal--edit-colleague")
     +modalEditColleague(editCollegue)
   +mobileModal("modal--admin-menu")
-    +renderModalAdminTabs(adminTabs)
+    +renderModalAdminTabs(adminTabs, modal=true, menu=false)
   +mobileModal("modal--mobile-filters")
     +renderMobileFilters(mobileFilters, mobileFiltersButtons)

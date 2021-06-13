@@ -2,7 +2,7 @@
   var adminHeadline = {
     eventName: "Luxury Travel Mart Moscow Spring’ 2020",
     eventPlace: "at Hyatt Regency Moscow Petrovsky Park",
-    dates: "27 – 28 February 2020",
+    dates: '<time datetime="2011-11-18">27</time> – <time datetime="2011-11-18">28 February 2020</time>',
     backLink: "#"
   }
 - var participantsHeadline = "Participants at this Event"
@@ -13,15 +13,13 @@
   var participantsList = [
     {
       photo: "img/content/admin-photo.jpg",
-      name: "Stanislav",
-      lastName: "Ozeretsky",
+      name: "Stanislav<br>Ozeretsky",
       position: "Sales Manager Russia and CIS",
       mail: "123@gmail.com"
     },
     {
       photo: "img/svg/icon-no-photo.svg",
-      name: "Colleague’s first name",
-      lastName: "Colleague’s first name",
+      name: "Colleague’s first name<br>Colleague’s first name",
       position: "Position",
       mail: "123@gmail.com"
     }
@@ -121,17 +119,16 @@
       type: "reset"
     },
   ]
+
 -
   var scheduleTabs = [
     {
-      text: "Day 1",
-      separator: "–",
-      date: "27 Feb. 2020",
+      text: 'Day 1<span class="hidden-sm">&nbsp;&ndash;&nbsp;</span><time datetime="2001-05-15T19:00">27 Feb. 2020</time>',
       link: "admin-hosted-guests-d1.html",
       currentPage: "Hosted Buyers Guest List"
     },
     {
-      text: "Day 2",
+      text: 'Day 2<span class="hidden-sm">&nbsp;&ndash;&nbsp;</span><time datetime="2001-05-15T19:00">28 Feb. 2020</time>',
       separator: "–",
       date: "28 Feb. 2020",
       link: "admin-hosted-guests-d2.html",

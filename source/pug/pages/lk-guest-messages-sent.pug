@@ -11,21 +11,27 @@ block main
   include ../data/pages/lk-guest-messages-sent
   include ../data/modal-colleague-lk
 
-  main.container.lk
+  main
     .admin
-      +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates)
-      .hidden-sm
-        +renderLKParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, infoBlock)
-      .admin__control-wrapper
-        +renderAdminTabs(adminTabs)
-        +renderMailControl("Отправленные", adminMailControl.linkList, adminMailControl.isSearchInput)
-      h2.admin__headline="Отправленные"
-      +renderSentMessages(adminSentMessagesTitles, adminSentMessages)
+      .container
+        +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates)
 
-      .admin__button-wrapper
-        button.button.button--transparent(type="button")="Показать больше"
+        .admin__block-wrapper
+          +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, true)
+          +renderInfoBlock(infoBlock)
 
-    +renderSupportContacts(contactsList)
+        .admin__control-wrapper
+          +renderAdminTabs(adminTabs, modal=false, menu=true)
+          +renderMailControl(adminMailControl.linkList, adminMailControl.isSearchInput)
+          h2.admin__section-title.visible-sm="Отправленные"
+
+        .admin__content-wrapper
+          +renderSentMessages(adminSentMessagesTitles, adminSentMessages)
+
+        .admin__button-wrapper
+          button.button.button--transparent(type="button")="Показать больше"
+
+        +renderSupportContacts(contactsList)
 
 block modals
   include ../data/modal-colleague-lk
@@ -35,6 +41,6 @@ block modals
   +mobileModal("modal--edit-colleague")
     +modalEditColleague(editCollegue)
   +mobileModal("modal--admin-menu")
-    +renderModalAdminTabs(adminTabs)
+    +renderModalAdminTabs(adminTabs, modal=true, menu=false)
   +mobileModal("modal--edit-profile")
     +modalEditProfile(editProfile)

@@ -1,16 +1,20 @@
-mixin renderAdminTabs(tabs, modal)
+mixin renderAdminTabs(tabs, modal, menu)
+  - var modClass = ''
   if modal
-    - var modalModClass = 'tabs--modal'
-  else
-    - var modalModClass = ''
+    - var modClass = 'tabs--modal'
+  if menu
+    - var modClass = 'tabs--menu'
 
-  .tabs(class=modalModClass)
+
+  .tabs(class=modClass)
     button.tabs__menu-button(type="button" data-modal="admin-menu")
       +icon("icon-mobile-menu", 32, 32)
     ul.tabs__list
       each tab in tabs
         - var activeMod = tab.currentPage === currentPage ? "tabs__item--active" : ""
+        - var href = activeMod === "tabs__item--active" ? null : tab.link
+
         li.tabs__item(class=activeMod)
-          a.tabs__link(href=tab.link)=tab.text
+          a.tabs__link(href=href) !{tab.text}
 
 

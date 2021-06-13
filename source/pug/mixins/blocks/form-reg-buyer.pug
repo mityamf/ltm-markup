@@ -29,9 +29,9 @@ mixin form-reg-buyer()
             input.form-reg__check(type="checkbox" id="choices5" name="check" value="choices")
             label(for="choices5")
             +direction("Luxury Travel Mart Exchange Grand Hotel Europe, Saint-Petersburg, Russia", "20 June 2020", "Waiting list", "2020-06-20", "direction__status--waiting")
-        .direction__arrow.direction__arrow--right
+        button.direction__arrow.direction__arrow--right
           +icon("arrow-right", "11", "19")
-        .direction__arrow.direction__arrow--left
+        button.direction__arrow.direction__arrow--left
           +icon("arrow-left", "11", "19")
     +form-reg__pop-up
 
