@@ -11,7 +11,7 @@ mixin renderWishList(wishList)
             each option in wishList.selectCompany
               option(value="Choose a company", class="input-dropdown__option")=option
           button.button.button--transparent.btn--request(type="submit")=wishList.request
-        span="Company"
+        h4.title.title--h4="Company"
         ul.wish-list__company-list
           each company in wishList.companyList.columnOne
             li.wish-list__company-item=company
