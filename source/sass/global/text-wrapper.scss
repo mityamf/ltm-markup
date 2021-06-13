@@ -22,4 +22,8 @@
   @include viewport--sm {
     letter-spacing: 0.2px;
   }
+
+  p {
+    margin-top: 0;
+  }
 }

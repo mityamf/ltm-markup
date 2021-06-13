@@ -52,6 +52,12 @@
     }
   }
 
+  &__link svg {
+    width: 42px;
+    height: 18px;
+    color: $color-blue;
+  }
+
   img {
     display: block;
     width: 103px;

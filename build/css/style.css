@@ -1309,6 +1309,8 @@ p {
   @media (max-width: 767px) {
     .text-content {
       letter-spacing: 0.2px; } }
+  .text-content p {
+    margin-top: 0; }
 
 .button {
   display: -webkit-box;
@@ -8766,6 +8768,10 @@ p {
       opacity: 0.8; }
     .support-contacts__link:active {
       opacity: 0.5; }
+  .support-contacts__link svg {
+    width: 42px;
+    height: 18px;
+    color: #0098c1; }
   .support-contacts img {
     display: block;
     width: 103px;
@@ -9356,7 +9362,8 @@ p {
       padding-bottom: 50px; } }
   @media (max-width: 767px) {
     .admin__text-wrapper {
-      padding: 0; } }
+      padding: 0;
+          grid-template-areas: "first" "second" "third"; } }
 
 .admin .filter-tabs {
   padding: 7px 0 22px; }
@@ -9464,6 +9471,17 @@ p {
 .admin__button-wrapper .button > .admin__section--third {
   -ms-grid-row: 3;
   -ms-grid-column: 1; }
+
+@media (max-width: 767px){
+    .admin__section--first {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1; }
+    .admin__section--second {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1; }
+    .admin__section--third {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1; } }
 
 .admin__section > p:first-of-type {
   margin-top: 0; }
@@ -9912,7 +9930,8 @@ p {
       letter-spacing: 0.7px; } }
 
 .download-list {
-  list-style-type: none; }
+  list-style-type: none;
+  margin: 0; }
   .download-list--left-padding {
     padding: 0 0 0 75px; }
     @media (max-width: 1439px) {
