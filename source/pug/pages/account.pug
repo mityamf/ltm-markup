@@ -23,13 +23,13 @@ block main
       +renderAccountHotelInfo(accountHotelInfo.text, accountHotelInfo.link, accountHotelInfo.buttonText)
       +renderEventsList(eventList.title, eventList.subtitle, eventList.hotelList)
 
-      .account__contact-us
-        .account__admin
-          +renderAccountAdmin(administrator.title, administrator.src, administrator.name, administrator.lastName, administrator.position, administrator.text)
-        .account__notifications
-          +renderHeadline3("Notifications")
-          +renderNotifications(notifications)
-          button(class="btn btn--white btn--more btn--desktop" type="button") All Messages
+    .account__contact-us
+      .account__admin
+        +renderAccountAdmin(administrator.title, administrator.src, administrator.name, administrator.lastName, administrator.position, administrator.text)
+      .account__notifications
+        +renderHeadline3("Notifications")
+        +renderNotifications(notifications)
+        button(class="button button--transporent" type="button") All Messages
 
       +renderSupportContacts(contactsList)
 

@@ -16,6 +16,8 @@ const initGallerySlider = () => {
           },
           pagination: {
             el: '.photo__pagination',
+            type: 'bullets',
+            clickable: true,
           },
         });
       });

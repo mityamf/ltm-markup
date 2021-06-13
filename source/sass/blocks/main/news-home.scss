@@ -193,6 +193,7 @@
     font-weight: 300;
     padding-bottom: 22px;
     padding-top: 4px;
+    -webkit-line-clamp: 3;
   }
 
   &-list {
@@ -261,6 +262,7 @@
     p {
       margin: 0;
       padding-left: 13px;
+      -webkit-line-clamp: 5;
     }
   }
 

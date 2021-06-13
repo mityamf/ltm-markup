@@ -25,7 +25,7 @@ block main
                 a.info-block__link(href=infoBlock.link)=infoBlock.link
             .info-block__text-wrapper
               p=infoBlock.text
-            button.btn.btn--blue(type=infoBlock.buttonType data-modal="edit-profile")=infoBlock.buttonText
+            button.button.button--blue(type=infoBlock.buttonType data-modal="edit-profile")=infoBlock.buttonText
         +renderSupportContacts(contactsList)
 
 block modals

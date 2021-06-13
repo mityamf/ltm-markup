@@ -26,9 +26,9 @@ mixin renderSchedule(titleList, rowList)
                 option(value="Choose a company", class="input-dropdown__option")=option
           td(class=cellClass + 'button')
             if row.requestStatus === "sent"
-              button.btn.btn--white.btn--request(type="submit" disabled)=row.requestSent
+              button.button.button--transparent.button--request(type="submit" disabled)=row.requestSent
             else
-              button.btn.btn--white.btn--request(type="submit")=row.request
+              button.button.button--transparent.button--request(type="submit")=row.request
 
           td(class=cellClass + 'status' + ' admin-table__cell--' + row.status.toLowerCase())
             span=row.status
@@ -127,11 +127,11 @@ mixin renderGuestsList(titleList, rowList)
                 option(value=option, class="input-dropdown__option")=option
           td(class=cellClass + 'button')
             if row.requestStatus === "sent"
-              button.btn.btn--white.btn--request(type="submit" disabled)=row.requestSent
+              button.button.button--transparent.button--request(type="submit" disabled)=row.requestSent
             else
-              button.btn.btn--white.btn--request(type="submit")=row.request
+              button.button.button--transparent.button--request(type="submit")=row.request
           td(class=cellClass + 'button')
-            button.btn.btn--white.btn--request(type="submit")=row.contact
+            button.button.button--transparent.button--request(type="submit")=row.contact
 
 
 mixin renderHostedGuestsList(titleList, rowList)
@@ -157,8 +157,8 @@ mixin renderHostedGuestsList(titleList, rowList)
                 option(value=option, class="input-dropdown__option")=option
           td(class=cellClass + 'button')
             if row.requestStatus === "sent"
-              button.btn.btn--white.btn--request(type="submit" disabled)=row.requestSent
+              button.button.button--transparent.button--request(type="submit" disabled)=row.requestSent
             else
-              button.btn.btn--white.btn--request(type="submit")=row.request
+              button.button.button--transparent.button--request(type="submit")=row.request
           td(class=cellClass + 'button')
-            button.btn.btn--white.btn--request(type="submit")=row.contact
+            button.button.button--transparent.button--request(type="submit")=row.contact

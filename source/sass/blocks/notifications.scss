@@ -16,9 +16,10 @@
   @include viewport--sm {
     padding-bottom: 28px;
 
-    .btn {
+    .button {
       padding: 15px;
       width: 222px;
+      margin: 0 auto;
     }
   }
 
@@ -61,7 +62,7 @@
     }
   }
 
-  .btn--mobile {
+  .button--mobile {
     display: none;
 
     @include viewport--sm {
@@ -69,10 +70,11 @@
     }
   }
 
-  .btn--desktop {
+  .button--desktop {
     display: block;
     padding: 15px;
     width: 222px;
+    margin: 0 auto;
 
     @include viewport--lg {
       width: 182px;

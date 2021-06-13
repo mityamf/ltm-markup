@@ -138,7 +138,8 @@
 
   &__block--button-wrapper {
     align-items: flex-end;
-    display: inline-flex;
+    // display: inline-flex;
+    display: -webkit-inline-box;
     padding-bottom: 5px;
   }
 

@@ -1,7 +1,7 @@
 extends ../base/layout
 
 block data
-  include ../data/photos
+  include ../data/photo
   include ../data/video
 
 block variables
@@ -36,18 +36,18 @@ block main
         label(for="toggle-button" class="visually-hidden") Toggle Button
         span.toggle__section.toggle__section--video Video
       .gallery__section.gallery__section--photo.photo
-        h2.title.title--h2.title--sm-pd  Photo
+        h2.title.title--h2.title--sm-pd Photo
         +photo-block
       .gallery__section.gallery__section--video.video
         h2.title.title--h2.title--sm-pd Video
-        ul.video__block-list
-          each videoItem in videoList
-            li.video__block-item
-              .video__title-wrap
-                h3.title.title--h3 #{videoItem.title} #[span #{videoItem.titleOnlyDesktop}]
+        ul.gallery__block-list
+          each item in videoList
+            li.gallery__block-item
+              .gallery__title-wrap
+                h3.title.title--h3 #{item.title} #[span #{item.titleOnlyDesktop}]
               .video__container
-                video.video__player(controls preload="metadata" poster= `${videoItem.img}` src= `${videoItem.src}`)
-      button.btn.btn--white.btn--more.btn--more-low(type="button")="More"
+                video.video__player(controls preload="metadata" poster= `${item.img}` src= `${item.src}`)
+                  button.button.button--transparent(type="button")="More"
     .container
       a.up-button.up-button--right.up-button--xl(href="#top", aria-label="Вернуться в начало")
         +icon("icon-arrow-up", 54, 54)

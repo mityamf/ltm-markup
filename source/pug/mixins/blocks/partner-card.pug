@@ -8,6 +8,6 @@ mixin renderPartnerCard(logoSrc, logoWidth, logoHeight, name, rank, link, text)
         span.partner-card__rank= rank
       a.partner-card__link(href= link)= link
       p= text
-      a.partner-card__button.btn.btn--read-more(href="#")
+      a.partner-card__button.button.button--open(href="#")
         +icon("icon-arrow", 20, 14)
         span.visually-hidden read more
