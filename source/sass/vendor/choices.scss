@@ -1,7 +1,7 @@
 @import "node_modules/choices.js/src/styles/choices";
 
 .choices {
-  height: 49px;
+  height: 42px;
   cursor: pointer;
 
   &[data-type*="select-multiple"] .choices__inner,
@@ -43,8 +43,8 @@
   }
 
   &__inner {
-    padding: 9px 15px;
-    height: 49px;
+    padding: 5px 15px;
+    height: 42px;
     cursor: pointer;
 
     border-color: $color-blue;

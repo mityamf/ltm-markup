@@ -26,10 +26,14 @@ block main
         .admin__content-wrapper
           h2.admin__section-title="Список участников"
           +renderAdminTabs(scheduleTabs)
+          .admin__additional-buttons
+            button.button.button--transparent.hidden-sm(type="button") Скачать расписание PDF
 
           +renderSchedule(adminScheduleTitles, adminSchedule)
-          .admin__mobile-block-wrapper
-            +renderGeneratePDFButton("#", "Скачать расписание PDF")
+
+          .admin__mobile-block-wrapper.visible-sm
+            button.button.button--transparent(type="button")="Скачать расписание PDF"
+
           +renderWishList(wishList)
           .admin__button-wrapper.visible-sm
             +renderUpButton('up-button--mobile')
