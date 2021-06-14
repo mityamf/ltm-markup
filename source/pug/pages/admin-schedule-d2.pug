@@ -23,8 +23,14 @@ block main
         .admin__content-wrapper
           h2.admin__section-title="My Schedule"
           +renderAdminTabs(scheduleTabs)
+          .admin__additional-buttons
+            button.button.button--transparent.hidden-sm(type="button") Generate PDF with schedule
 
           +renderSchedule(adminScheduleTitles, adminSchedule)
+
+          .admin__mobile-block-wrapper.visible-sm
+            button.button.button--transparent(type="button")="Generate PDF with schedule"
+
           +renderWishList(wishList)
           .admin__button-wrapper.visible-sm
             +renderUpButton('up-button--mobile')

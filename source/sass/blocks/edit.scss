@@ -145,23 +145,6 @@
     width: 100%;
   }
 
-  .choices {
-    height: 42px;
-    width: 100%;
-    border-radius: 0;
-    background-color: transparent;
-  }
-
-  .choices[data-type*="select-one"] .choices__inner {
-    height: 42px;
-    border-radius: 0;
-    background-color: transparent;
-
-    @include viewport--sm {
-      padding: 3px 4px;
-    }
-  }
-
   &__buttons {
     padding-top: 17px;
     padding-left: 237px;
