@@ -106,33 +106,31 @@ mixin renderGuestsList(titleList, rowList)
   table.admin-table.admin-table--guest-list
     thead
       tr.admin-table__row.admin-table__row--headline
-        th(class=cellClass + 'company')=titleList.company
-        th(class=cellClass + 'person')=titleList.name
-        th(class=cellClass + 'person')=titleList.colleagueName
+        th(class=cellClass + 'guest-company')=titleList.company
+        th(class=cellClass + 'guest-person')=titleList.name
+        th(class=cellClass + 'guest-person')=titleList.colleagueName
         th(class=cellClass + 'select-time')=titleList.freeSlots
         th(class=cellClass + 'button')=titleList.request
         th(class=cellClass + 'button')=titleList.contact
     tbody
       each row, i in rowList
         tr.admin-table__row.admin-table__row--guests
-          td(class=cellClass + 'company')=row.company
+          td(class=cellClass + 'guest-company')=row.company
             span=row.place
-          td(class=cellClass + 'person')=row.name
+          td(class=cellClass + 'guest-person')=row.name
             span=row.position
-          td(class=cellClass + 'person')=row.colleagueName
+          td(class=cellClass + 'guest-person')=row.colleagueName
             span=row.colleaguePosition
-          td(class=cellClass + 'select-time')
+          td(class=cellClass + 'guest-select-time')
             select(class="input-dropdown", id='select-time' + i)
               each option in row.freeSlots
                 option(value=option, class="input-dropdown__option")=option
-          td(class=cellClass + 'button')
+          td(class=cellClass + 'guest-button')
             if row.requestStatus === "sent"
               button.button.button--transparent.button--request(type="submit" disabled)=row.requestSent
             else
               button.button.button--transparent.button--request(type="submit")=row.request
-          td(class=cellClass + 'button')
             button.button.button--transparent.button--request(type="submit")=row.contact
-
 
 mixin renderHostedGuestsList(titleList, rowList)
   table.admin-table.admin-table--guest
