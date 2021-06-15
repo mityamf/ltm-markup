@@ -41,21 +41,10 @@
     }
   }
 
-  &__more-link {
-    display: flex;
-    flex-direction: row-reverse;
-    margin-top: 36px;
-    margin-bottom: 0;
-    transition: opacity 0.3s ease;
-
-    &:hover,
-    &:focus {
-      opacity: 0.8;
-    }
-
-    &:active {
-      opacity: 0.5;
-    }
+  &__more-wrapper {
+    display: inline-block;
+    padding-top: 36px;
+    float: right;
   }
 
   .btn {

@@ -11286,22 +11286,10 @@ table {
       .info-block__link {
         font-size: 24px;
         line-height: 29px; } }
-  .info-block__more-link {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    margin-top: 36px;
-    margin-bottom: 0;
-    -webkit-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease; }
-    .info-block__more-link:hover, .info-block__more-link:focus {
-      opacity: 0.8; }
-    .info-block__more-link:active {
-      opacity: 0.5; }
+  .info-block__more-wrapper {
+    display: inline-block;
+    padding-top: 36px;
+    float: right; }
   .info-block .btn {
     padding: 17px 30px;
     width: 222px;

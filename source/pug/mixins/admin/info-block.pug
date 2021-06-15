@@ -7,6 +7,11 @@ mixin renderInfoBlock(infoBlock)
       button.button.button--blue(type=infoBlock.buttonType data-modal="edit-profile")=infoBlock.buttonText
     .info-block__text-wrapper
       p=infoBlock.text
-    a.info-block__more-link(href="#", aria-label="Read More")
-      +icon("icon-read-more", 103, 22)
+
+    .info-block__more-wrapper
+      a.button.button--open(href="newpage.html")
+        +icon("icon-arrow", 20, 14)
+        span.visually-hidden read more
+    //a.info-block__more-link(href="#", aria-label="Read More")
+    //  +icon("icon-read-more", 103, 22)
 
