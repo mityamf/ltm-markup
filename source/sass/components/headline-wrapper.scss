@@ -12,4 +12,12 @@
     align-items: baseline;
     padding-top: 32px;
   }
+
+  &--left {
+    @include viewport--sm {
+      flex-direction: row;
+      align-items: baseline;
+      padding-top: 32px;
+    }
+  }
 }

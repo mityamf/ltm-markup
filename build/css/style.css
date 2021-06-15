@@ -1220,7 +1220,7 @@ textarea {
       padding: 0 24px; } }
   @media (max-width: 767px) {
     .container {
-      padding: 0 16.5px; } }
+      padding: 0 16px; } }
   @media (max-width: 767px) {
     .container--no-padding {
       padding: 0; } }
@@ -7021,7 +7021,8 @@ p {
       padding-bottom: 47px; } }
   @media (max-width: 767px) {
     .notifications {
-      padding-bottom: 28px; }
+      padding-bottom: 28px;
+      margin: 0 -16px; }
       .notifications .button {
         padding: 15px;
         width: 222px;
@@ -9382,6 +9383,16 @@ p {
       -webkit-box-direction: reverse;
           -ms-flex-direction: row-reverse;
               flex-direction: row-reverse;
+      -webkit-box-align: baseline;
+          -ms-flex-align: baseline;
+              align-items: baseline;
+      padding-top: 32px; } }
+  @media (max-width: 767px) {
+    .headline-wrapper--left {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
       -webkit-box-align: baseline;
           -ms-flex-align: baseline;
               align-items: baseline;
