@@ -16,7 +16,8 @@ block main
   main#top
     .container
       .partners-page
-        +renderHeadline2(partners.title)
+        .headline-wrapper
+          h2=partners.title
         .partners-page__wrapper
           ul.partners-page__list
             each partner in partners.partnersList

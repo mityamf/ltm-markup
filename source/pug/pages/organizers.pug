@@ -15,7 +15,8 @@ block main
   main
     .container
       .organizers
-        +renderHeadline2(organizers.title)
+        .headline-wrapper
+          h2=organizers.title
         .organizers__wrapper
           ul.organizers__list
             each item in organizers.organizersList

@@ -16,7 +16,7 @@ block main
   main
     .container
       .headline-wrapper
-        h2.title.title--h2=newPage.title
+        h2=newPage.title
         .hidden-sm
           +renderBackButton("news.html")
       time.newpage__date(datetime=newPage.datetime) #{newPage.date}
