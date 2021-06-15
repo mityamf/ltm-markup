@@ -43,4 +43,10 @@
       }
     }
   }
+
+  &__button-wrapper .button {
+    @include viewport--sm {
+      width: 222px;
+    }
+  }
 }

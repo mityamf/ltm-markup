@@ -12,7 +12,7 @@ mixin modalEditProfile(data)
               span.edit-colleague__name=item.text
 
           if item.type === 'text'
-            +renderInputText(item.id, item.placeholder, item.type, item.mod)
+            +renderInputText(item.headline, item.id, item.placeholder, item.type, item.mod)
 
           if item.type === 'select'
             +renderSelect(item.headline, item.id, item.options, item.mod)

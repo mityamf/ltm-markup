@@ -15,10 +15,10 @@ mixin modalEditColleague(data)
           each item in data.formList
 
             if item.type === 'text'
-              +renderInputText(item.id, item.placeholder, item.type)
+              +renderInputText(item.headline, item.id, item.placeholder, item.type, item.mod)
 
             if item.type === 'select'
-              +renderSelect(item.headline, item.id, item.options)
+              +renderSelect(item.headline, item.id, item.options, item.mod)
 
           .edit-colleague__buttons
             each button in data.buttonList

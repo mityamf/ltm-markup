@@ -153,10 +153,10 @@ mixin renderHostedGuestsList(titleList, rowList)
             select(class="input-dropdown", id='select-time-00' + i)
               each option in row.freeSlots
                 option(value=option, class="input-dropdown__option")=option
-          td(class=cellClass + 'button')
+          td(class=cellClass + 'guest-button')
             if row.requestStatus === "sent"
               button.button.button--transparent.button--request(type="submit" disabled)=row.requestSent
             else
               button.button.button--transparent.button--request(type="submit")=row.request
-          td(class=cellClass + 'button')
             button.button.button--transparent.button--request(type="submit")=row.contact
+

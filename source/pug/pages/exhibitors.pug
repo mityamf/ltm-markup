@@ -55,7 +55,7 @@ block main
             each hotel in alphabetHotel
               +renderAlphabetHotel(hotel.title, hotel.hotelList)
 
-      .visible-sm
+      .visible-sm.container__button-wrapper
         button.button.button--transparent(type="button")="More"
         +renderUpButton('up-button--mobile')
 

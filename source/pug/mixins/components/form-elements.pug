@@ -1,7 +1,3 @@
-- var modClass = 'form-reg__block'
-if mod
-  - var modClass = 'form-reg__block--' + mod
-
 mixin renderInputSearch()
   .form-reg.form-reg--search
     .form-reg__block
@@ -9,15 +5,23 @@ mixin renderInputSearch()
         input(type="text")
         +icon("icon-search", 14, 15)
 
-mixin renderInputText(id, placeholder, type, mod)
-  .form-reg
+mixin renderInputText(headline, id, placeholder, type, mod)
+  - var modClass = 'form-reg__block'
+  if mod
+    - var modClass = 'form-reg--' + mod
+
+  .form-reg(class=modClass)
     .form-reg__block
-      label
+      label=headline
         input(type=type placeholder=placeholder)
 
 mixin renderSelect(headline, id, options, mod)
-  .form-reg.form-reg--select
-    .form-reg__block(class=modClass)
+  - var modClass = 'form-reg__block'
+  if mod
+    - var modClass = 'form-reg--' + mod
+
+  .form-reg.form-reg--select(class=modClass)
+    .form-reg__block
       p=headline
         select(id=id, class="input-dropdown")
           each option in options
