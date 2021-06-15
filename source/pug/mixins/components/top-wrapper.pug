@@ -7,11 +7,12 @@ mixin renderHeadlineWithBackButton(title, link)
     h2.title.title--h2=title
     +renderBackButton(link)
 
-mixin renderTitleHeadline(title)
-  .headline-wrapper.headline-wrapper--title
+mixin renderHeadline(title)
+  .headline-wrapper.headline-wrapper--left
     h2.title.title--h2=title
 
-mixin renderTitleHeadlineWithBackButton(title, link)
-  .headline-wrapper.headline-wrapper--title
+mixin renderHeadlineWithDesktopBackButton(title, link)
+  .headline-wrapper.headline-wrapper--left
     h2.title.title--h2=title
-    +renderBackButton(link)
+    .hidden-sm
+      +renderBackButton(link)
