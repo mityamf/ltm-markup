@@ -286,6 +286,12 @@
       display: none;
     }
   }
+
+  .photos-slider {
+    @include viewport--sm {
+      margin: 0 -16px;
+    }
+  }
 }
 
 .container--no-padding .account__admin,

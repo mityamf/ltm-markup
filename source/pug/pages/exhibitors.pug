@@ -31,17 +31,17 @@ block main
     .container
 
       .hidden-sm
-        .filters.filters--exhibitions
+        form.filters.filters--exhibitions
           +renderAlphabetFilter(alphabetFilter)
           +renderDropdownFilter(dropdownFilters)
           +renderFilterButton(buttonFilter)
 
       .visible-sm
-        .filters.filters--exhibitors
+        form.filters.filters--exhibitors
           +renderMobileFilterButtons("Filters", "Clear all filters")
 
       .visible-sm
-        .filters.filters--select-mobile
+        form.filters.filters--select-mobile
           +renderMobileDropdownFilter(dropdownMobileFilter)
 
       .exhibitors
@@ -55,7 +55,7 @@ block main
             each hotel in alphabetHotel
               +renderAlphabetHotel(hotel.title, hotel.hotelList)
 
-      .visible-sm
+      .visible-sm.container__button-wrapper
         button.button.button--transparent(type="button")="More"
         +renderUpButton('up-button--mobile')
 

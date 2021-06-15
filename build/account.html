@@ -2855,7 +2855,7 @@
         </div>
       </header>
       <main>
-        <div class="container container--no-padding account">
+        <div class="container account">
           <div class="hotel-headline hotel-headline--account-page">
             <div class="visible-sm"><a class="account__link-hotel" href="https://www.mandarinoriental.com">https://www.mandarinoriental.com</a></div>
             <div class="hotel-headline__wrapper">
@@ -2982,42 +2982,42 @@
                         <svg width="22" height="22" aria-hidden="true">
                           <use xlink:href="#icon-event-paid"></use>
                         </svg></span><span class="account__event-description">You can send and receive requests, view basic information, register colleagues, etc.</span>
-                      <button class="button buttun--transparent" type="button">Select this event</button>
+                      <button class="button button--transparent" type="button">Select this event</button>
                     </li>
                     <li class="account__event account__event--unpaid swiper-slide">
                       <h4 class="title title--h4">Luxury Travel Mart Almaty Spring’ 2020</h4><span class="account__event-text">at The Ritz-Carlton, Almaty, Kazakhstan</span><span class="account__event-date">3 March 2020</span><span class="account__event-status">Unpaid yet
                         <svg width="22" height="22" aria-hidden="true">
                           <use xlink:href="#icon-event-unpaid"></use>
                         </svg></span><span class="account__event-description">You can’t send and receive requests, view basic information, register colleagues, etc. Please, pay the bill.</span>
-                      <button class="button buttun--transparent" type="button">Select this event</button>
+                      <button class="button button--transparent" type="button">Select this event</button>
                     </li>
                     <li class="account__event account__event--not-registered swiper-slide">
                       <h4 class="title title--h4">Luxury Travel Mart Kyiv Autumn’ 2020</h4><span class="account__event-text">at The Intercontinental, Kyiv, Ukraine</span><span class="account__event-date">24 September 2020</span><span class="account__event-status">Not Registered
                         <svg width="22" height="22" aria-hidden="true">
                           <use xlink:href="#icon-event-not-registered"></use>
                         </svg></span><span class="account__event-description">You can’t send and receive requests, view basic information, register colleagues, etc. Please register before sold-out.</span>
-                      <button class="button buttun--transparent" type="button">Registration</button>
+                      <button class="button button--transparent" type="button">Registration</button>
                     </li>
                     <li class="account__event account__event--not-registered swiper-slide">
                       <h4 class="title title--h4">Luxury Travel Mart Almaty Autumn’ 2020</h4><span class="account__event-text">at The Ritz-Carlton, Almaty, Kazakhstan</span><span class="account__event-date">24 September 2020</span><span class="account__event-status">Not Registered
                         <svg width="22" height="22" aria-hidden="true">
                           <use xlink:href="#icon-event-not-registered"></use>
                         </svg></span><span class="account__event-description">You can’t send and receive requests, view basic information, register colleagues, etc. Please register before sold-out.</span>
-                      <button class="button buttun--transparent" type="button">Registration</button>
+                      <button class="button button--transparent" type="button">Registration</button>
                     </li>
                     <li class="account__event account__event--unpaid swiper-slide">
                       <h4 class="title title--h4">Luxury Travel Mart Almaty Spring’ 2020</h4><span class="account__event-text">at The Ritz-Carlton, Almaty, Kazakhstan</span><span class="account__event-date">3 March 2020</span><span class="account__event-status">Unpaid yet
                         <svg width="22" height="22" aria-hidden="true">
                           <use xlink:href="#icon-event-unpaid"></use>
                         </svg></span><span class="account__event-description">You can’t send and receive requests, view basic information, register colleagues, etc. Please, pay the bill.</span>
-                      <button class="button buttun--transparent" type="button">Select this event</button>
+                      <button class="button button--transparent" type="button">Select this event</button>
                     </li>
                     <li class="account__event account__event--not-registered swiper-slide">
                       <h4 class="title title--h4">Luxury Travel Mart Kyiv Autumn’ 2020</h4><span class="account__event-text">at The Intercontinental, Kyiv, Ukraine</span><span class="account__event-date">24 September 2020</span><span class="account__event-status">Not Registered
                         <svg width="22" height="22" aria-hidden="true">
                           <use xlink:href="#icon-event-not-registered"></use>
                         </svg></span><span class="account__event-description">You can’t send and receive requests, view basic information, register colleagues, etc. Please register before sold-out.</span>
-                      <button class="button buttun--transparent" type="button">Registration</button>
+                      <button class="button button--transparent" type="button">Registration</button>
                     </li>
                   </ul>
                 </div>
@@ -3048,9 +3048,6 @@
             </div>
             <div class="account__notifications">
               <h3 class="title title--h3 title--middle">Notifications</h3>
-              <div class="visible-sm">
-                <div class="account__mobile-wrapper"><span>Status</span><span>Theme</span><span>Date</span></div>
-              </div>
               <div class="notifications">
                 <table class="notifications__table">
                   <thead>
@@ -3167,8 +3164,8 @@
                     </tr>
                   </tbody>
                 </table>
+                <button class="button button--transparent" type="button">All Messages</button>
               </div>
-              <button class="button button--transparent" type="button">All Messages</button>
             </div>
           </div>
           <div class="support-contacts">
@@ -3459,32 +3456,50 @@
             <div class="edit-colleague__content-column">
               <div class="edit-colleague__form">
                 <form action="#" method="POST">
-                  <div class="edit-colleague__block">
-                    <label class="input-wrapper" for="name">Participant first name</label>
-                    <input placeholder="First name" id="name" name="name" type="text"/>
+                  <div class="form-reg form-reg--full-width">
+                    <div class="form-reg__block">
+                      <label>Participant first name
+                        <input type="text" placeholder="First name"/>
+                      </label>
+                    </div>
                   </div>
-                  <div class="edit-colleague__block">
-                    <label class="input-wrapper" for="last-name">Participant last name</label>
-                    <input placeholder="Last name" id="last-name" name="last-name" type="text"/>
+                  <div class="form-reg form-reg--full-width">
+                    <div class="form-reg__block">
+                      <label>Participant last name
+                        <input type="text" placeholder="Last name"/>
+                      </label>
+                    </div>
                   </div>
-                  <div class="edit-colleague__block">
-                    <p>Title</p>
-                    <select class="input-dropdown" id="title-select">
-                      <option class="input-dropdown__option" value="Mr.">Mr.</option>
-                      <option class="input-dropdown__option" value="Mrs.">Mrs.</option>
-                    </select>
+                  <div class="form-reg form-reg--select form-reg--full-width">
+                    <div class="form-reg__block">
+                      <p>Title
+                        <select class="input-dropdown" id="title-select">
+                          <option class="input-dropdown__option" value="Mr.">Mr.</option>
+                          <option class="input-dropdown__option" value="Mrs.">Mrs.</option>
+                        </select>
+                      </p>
+                    </div>
                   </div>
-                  <div class="edit-colleague__block">
-                    <label class="input-wrapper" for="job-position">Job position:</label>
-                    <input placeholder="Job position" id="job-position" name="job-position" type="text"/>
+                  <div class="form-reg form-reg--full-width">
+                    <div class="form-reg__block">
+                      <label>Job position:
+                        <input type="text" placeholder="Job position"/>
+                      </label>
+                    </div>
                   </div>
-                  <div class="edit-colleague__block">
-                    <label class="input-wrapper" for="phone-number">Telephone</label>
-                    <input placeholder="+1 (111) 111 11 11" id="phone-number" name="phone-number" type="text"/>
+                  <div class="form-reg form-reg--full-width">
+                    <div class="form-reg__block">
+                      <label>Telephone
+                        <input type="text" placeholder="+1 (111) 111 11 11"/>
+                      </label>
+                    </div>
                   </div>
-                  <div class="edit-colleague__block">
-                    <label class="input-wrapper" for="colleague-email">E-mail</label>
-                    <input placeholder="E-mail" id="colleague-email" name="colleague-email" type="text"/>
+                  <div class="form-reg form-reg--full-width">
+                    <div class="form-reg__block">
+                      <label>E-mail
+                        <input type="text" placeholder="E-mail"/>
+                      </label>
+                    </div>
                   </div>
                   <div class="edit-colleague__buttons">
                     <button class="button button--transparent" type="reset">Cancel</button>

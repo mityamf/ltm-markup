@@ -2926,16 +2926,21 @@
             </div>
             <div class="admin__content-wrapper">
               <h2 class="admin__section-title">My Schedule</h2>
-              <div class="tabs">
-                <button class="tabs__menu-button" type="button" data-modal="admin-menu">
-                  <svg width="32" height="32" aria-hidden="true">
-                    <use xlink:href="#icon-mobile-menu"></use>
-                  </svg>
-                </button>
-                <ul class="tabs__list">
-                  <li class="tabs__item tabs__item--active"><a class="tabs__link">Day 1<span class="hidden-sm">&nbsp;&ndash;&nbsp;</span><time datetime="2001-05-15T19:00">27 Feb. 2020</time></a></li>
-                  <li class="tabs__item"><a class="tabs__link" href="admin-schedule-d2.html">Day 2<span class="hidden-sm">&nbsp;&ndash;&nbsp;</span><time datetime="2001-05-15T19:00">28 Feb. 2020</time></a></li>
-                </ul>
+              <div class="admin__tabs-wrapper">
+                <div class="tabs">
+                  <button class="tabs__menu-button" type="button" data-modal="admin-menu">
+                    <svg width="32" height="32" aria-hidden="true">
+                      <use xlink:href="#icon-mobile-menu"></use>
+                    </svg>
+                  </button>
+                  <ul class="tabs__list">
+                    <li class="tabs__item tabs__item--active"><a class="tabs__link">Day 1<span class="hidden-sm">&nbsp;&ndash;&nbsp;</span><time datetime="2001-05-15T19:00">27 Feb. 2020</time></a></li>
+                    <li class="tabs__item"><a class="tabs__link" href="admin-schedule-d2.html">Day 2<span class="hidden-sm">&nbsp;&ndash;&nbsp;</span><time datetime="2001-05-15T19:00">28 Feb. 2020</time></a></li>
+                  </ul>
+                </div>
+                <div class="admin__additional-buttons">
+                  <button class="button button--transparent hidden-sm" type="button">Generate PDF with schedule</button>
+                </div>
               </div>
               <table class="admin-table">
                 <thead>
@@ -2981,24 +2986,25 @@
                   </tr>
                 </tbody>
               </table>
-              <div class="admin__mobile-block-wrapper">
-                <div class="generate-file"><a class="generate-file__link" href="#" aria-label="Скачать файл" download="download">Generate PDF with schedule</a></div>
+              <div class="admin__mobile-block-wrapper visible-sm">
+                <button class="button button--transparent" type="button">Generate PDF with schedule</button>
               </div>
               <div class="wish-list">
                 <h2 class="title title--h2 title--big">Wish list</h2>
                 <div class="wish-list__text-wrapper">
                   <p>My wish list for appointments outside of the working session</p>
-                  <div class="generate-file"><a class="generate-file__link" href="#" aria-label="Скачать файл" download="download">Generate PDF with Wish-list</a></div>
+                  <button class="button button--transparent button--mobile" type="button">Generate PDF with Wish-list</button>
                 </div>
                 <div class="wish-list__company-list-wrapper">
                   <div class="wish-list__company-block">
-                    <div class="wish-list__choose-company">
+                    <form class="wish-list__choose-company">
                       <select class="input-dropdown" id="company-select-wish">
                         <option class="input-dropdown__option" value="Choose a company">Choose a company</option>
                         <option class="input-dropdown__option" value="Choose a company">Hello, hello</option>
                       </select>
                       <button class="button button--transparent btn--request" type="submit">Send a request</button>
-                    </div><span>Company</span>
+                    </form>
+                    <h4 class="title title--h4">Company</h4>
                     <ul class="wish-list__company-list">
                       <li class="wish-list__company-item">Pegas Touristic</li>
                       <li class="wish-list__company-item">Luxury Events Agency</li>
@@ -3010,7 +3016,9 @@
                       <li class="wish-list__company-item">The First T Agency</li>
                       <li class="wish-list__company-item">Luxury Travel LLC</li>
                     </ul>
-                    <button class="button button--transparent btn--more" type="button">More</button>
+                    <div class="admin__mobile-block-wrapper visible-sm">
+                      <button class="button button--transparent" type="button">More</button>
+                    </div>
                   </div>
                   <div class="wish-list__company-block">
                     <p>The following guests are interested in an appointment with you outside of the working session</p><span>Company</span>
@@ -3025,14 +3033,14 @@
                       <li class="wish-list__company-item">The First T Agency</li>
                       <li class="wish-list__company-item">Luxury Travel LLC</li>
                     </ul>
-                    <button class="button button--transparent btn--more" type="button">More</button>
+                    <div class="admin__button-wrapper visible-sm">
+                      <button class="button button--transparent" type="button">More</button><a class="up-button up-button--mobile" href="#top" aria-label="Вернуться в начало">
+                        <svg width="54" height="54" aria-hidden="true">
+                          <use xlink:href="#icon-arrow-up"></use>
+                        </svg></a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="admin__button-wrapper"><a class="up-button up-button--mobile" href="#top" aria-label="Вернуться в начало">
-                  <svg width="54" height="54" aria-hidden="true">
-                    <use xlink:href="#icon-arrow-up"></use>
-                  </svg></a>
               </div>
             </div>
             <div class="support-contacts">
@@ -3184,32 +3192,50 @@
             <div class="edit-colleague__content-column">
               <div class="edit-colleague__form">
                 <form action="#" method="POST">
-                  <div class="edit-colleague__block">
-                    <label class="input-wrapper" for="name">Participant first name</label>
-                    <input placeholder="First name" id="name" name="name" type="text"/>
+                  <div class="form-reg form-reg--full-width">
+                    <div class="form-reg__block">
+                      <label>Participant first name
+                        <input type="text" placeholder="First name"/>
+                      </label>
+                    </div>
                   </div>
-                  <div class="edit-colleague__block">
-                    <label class="input-wrapper" for="last-name">Participant last name</label>
-                    <input placeholder="Last name" id="last-name" name="last-name" type="text"/>
+                  <div class="form-reg form-reg--full-width">
+                    <div class="form-reg__block">
+                      <label>Participant last name
+                        <input type="text" placeholder="Last name"/>
+                      </label>
+                    </div>
                   </div>
-                  <div class="edit-colleague__block">
-                    <p>Title</p>
-                    <select class="input-dropdown" id="title-select">
-                      <option class="input-dropdown__option" value="Mr.">Mr.</option>
-                      <option class="input-dropdown__option" value="Mrs.">Mrs.</option>
-                    </select>
+                  <div class="form-reg form-reg--select form-reg--full-width">
+                    <div class="form-reg__block">
+                      <p>Title
+                        <select class="input-dropdown" id="title-select">
+                          <option class="input-dropdown__option" value="Mr.">Mr.</option>
+                          <option class="input-dropdown__option" value="Mrs.">Mrs.</option>
+                        </select>
+                      </p>
+                    </div>
                   </div>
-                  <div class="edit-colleague__block">
-                    <label class="input-wrapper" for="job-position">Job position:</label>
-                    <input placeholder="Job position" id="job-position" name="job-position" type="text"/>
+                  <div class="form-reg form-reg--full-width">
+                    <div class="form-reg__block">
+                      <label>Job position:
+                        <input type="text" placeholder="Job position"/>
+                      </label>
+                    </div>
                   </div>
-                  <div class="edit-colleague__block">
-                    <label class="input-wrapper" for="phone-number">Telephone</label>
-                    <input placeholder="+1 (111) 111 11 11" id="phone-number" name="phone-number" type="text"/>
+                  <div class="form-reg form-reg--full-width">
+                    <div class="form-reg__block">
+                      <label>Telephone
+                        <input type="text" placeholder="+1 (111) 111 11 11"/>
+                      </label>
+                    </div>
                   </div>
-                  <div class="edit-colleague__block">
-                    <label class="input-wrapper" for="colleague-email">E-mail</label>
-                    <input placeholder="E-mail" id="colleague-email" name="colleague-email" type="text"/>
+                  <div class="form-reg form-reg--full-width">
+                    <div class="form-reg__block">
+                      <label>E-mail
+                        <input type="text" placeholder="E-mail"/>
+                      </label>
+                    </div>
                   </div>
                   <div class="edit-colleague__buttons">
                     <button class="button button--transparent" type="reset">Cancel</button>

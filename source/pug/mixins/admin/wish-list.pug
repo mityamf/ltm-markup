@@ -3,23 +3,26 @@ mixin renderWishList(wishList)
     +renderHeadline2(wishList.title)
     .wish-list__text-wrapper
       p=wishList.description
-      +renderGeneratePDFButton(wishList.generatePDF.link, wishList.generatePDF.text)
+      button.button.button--transparent.button--mobile(type="button")="Generate PDF with Wish-list"
     .wish-list__company-list-wrapper
       .wish-list__company-block
-        .wish-list__choose-company
+        form.wish-list__choose-company
           select(id="company-select-wish", class="input-dropdown")
             each option in wishList.selectCompany
               option(value="Choose a company", class="input-dropdown__option")=option
           button.button.button--transparent.btn--request(type="submit")=wishList.request
-        span="Company"
+        h4.title.title--h4="Company"
         ul.wish-list__company-list
           each company in wishList.companyList.columnOne
             li.wish-list__company-item=company
-        button.button.button--transparent.btn--more(type="button")="More"
+        .admin__mobile-block-wrapper.visible-sm
+          button.button.button--transparent(type="button")="More"
       .wish-list__company-block
         p=wishList.text
         span="Company"
         ul.wish-list__company-list
           each company in wishList.companyList.columnTwo
             li.wish-list__company-item=company
-        button.button.button--transparent.btn--more(type="button")="More"
+        .admin__button-wrapper.visible-sm
+          button.button.button--transparent(type="button")="More"
+          +renderUpButton('up-button--mobile')

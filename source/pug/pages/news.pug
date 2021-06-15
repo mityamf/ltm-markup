@@ -15,10 +15,8 @@ block main
   main
     .container
       .news
-        .top-wrapper.top-wrapper--mobile
-          h2.title.title--h2=news.title
-          .hidden-sm
-            +renderBackButton("main.html")
+        +renderHeadlineWithDesktopBackButton(news.title, "main.html")
+
         ul.news__list
           each item in news.newsList
             li.news__item

@@ -15,6 +15,7 @@
 
   @include viewport--sm {
     padding-bottom: 28px;
+    margin: 0 -16px;
 
     .button {
       padding: 15px;

@@ -12,6 +12,4 @@ mixin renderMailControl(linkList, isSearchInput)
               +icon(link.icon, link.iconWidth, link.iconHeight)
 
     if isSearchInput
-      label.mail-control__find-label
-        input.mail-control__find-input
-        +icon("icon-search", 14, 15)
+      +renderInputSearch()

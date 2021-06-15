@@ -10,7 +10,7 @@ block main
   include ../data/modal-colleague-admin
 
   main
-    .container.container--no-padding.account
+    .container.account
       .hotel-headline.hotel-headline--account-page
         .visible-sm
           a.account__link-hotel(href=accountHotelInfo.link)=accountHotelInfo.link
@@ -28,8 +28,9 @@ block main
           +renderAccountAdmin(administrator.title, administrator.src, administrator.name, administrator.lastName, administrator.position, administrator.text)
         .account__notifications
           +renderHeadline3("Notifications")
-          +renderNotifications(notifications)
-          button(class="button button--transparent" type="button") All Messages
+          .notifications
+            +renderNotifications(notifications)
+            button(class="button button--transparent" type="button") All Messages
 
       +renderSupportContacts(contactsList)
 
