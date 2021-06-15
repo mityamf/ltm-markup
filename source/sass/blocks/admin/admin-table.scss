@@ -1,157 +1,151 @@
 .admin-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 0;
-  margin-bottom: 0;
-
   @include viewport--sm {
-    display: block;
-    width: auto;
-    margin: 0 -17px;
+    margin: 0 -16px;
   }
 
-  &--guest-list {
-    thead {
-      @include viewport--md {
-        display: none;
-      }
-    }
-
-    tbody {
-      @include viewport--md {
-        display: block;
-      }
-    }
+  .button {
+    padding: 2px;
+    font-size: 14px;
+    line-height: 13px;
   }
 
-  tbody {
-    @include viewport--md {
-      display: grid;
-    }
-
+  .choices__list--single .choices__item {
     @include viewport--sm {
-      display: block;
+      padding: 6px 6px 4px 4px;
+      font-size: 16px;
+      line-height: 22px;
+      white-space: nowrap;
     }
   }
 
-  &__row {
-    position: relative;
-
+  .choices__list--dropdown .choices__item--selectable {
     @include viewport--sm {
-      display: inline-block;
-    }
-
-    &:nth-child(even) {
-      background-color: $color-gray-light;
+      font-size: 16px;
     }
   }
 
-  &__message-link {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-  }
-
-  &__message-link svg {
-    display: none;
-
+  .choices__list--single {
     @include viewport--sm {
-      display: block;
-      position: absolute;
-      top: 44px;
-      right: 16px;
-    }
-  }
-
-  &__row--headline {
-    @include viewport--sm {
-      display: none;
-    }
-  }
-
-  & &__row--headline th {
-    display: inline-block;
-    padding-top: 0;
-    padding-bottom: 0;
-
-    font-size: 12px;
-    line-height: 20px;
-    color: $color-nobel;
-    text-align: left;
-  }
-
-  &__row td {
-    display: inline-block;
-    padding-top: 8px;
-    padding-bottom: 8px;
-
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    text-align: left;
-
-    @include viewport--sm {
-      max-width: none;
       padding: 0;
     }
   }
 
-  &__row .admin-table__cell--time:not(.admin-table__cell--mobile-time) {
-    @media (max-width: 950px) {
-      display: none;
-    }
+  &__cell > span {
+    display: block;
+
+    color: $color-nobel;
   }
 
-  &__row .admin-table__cell--event {
+  &__cell--guest-button {
     @include viewport--sm {
-      display: none;
+      width: 48%;
+      margin-left: auto;
     }
   }
 
-  &__row .admin-table__cell--time-limit {
-    margin-left: 20px;
+  &__button-wrapper {
+    display: flex;
+    column-gap: 10px;
+    width: 100%;
+
+    .button,
+    span {
+      min-width: 112px;
+
+      @include viewport--lg {
+        min-width: 122px;
+      }
+
+      @include viewport--sm {
+        min-width: 0;
+        width: 48%;
+      }
+    }
+  }
+
+  &__cell--button {
+    width: 12%;
+
+    .button {
+      width: 100%;
+      padding: 5px;
+    }
 
     @include viewport--sm {
-      display: none;
+      width: 26%;
+      display: inline-flex;
+      margin-left: auto;
+
+      .button {
+        font-size: 14px;
+        line-height: 13px;
+      }
     }
   }
 
-  &__row .admin-table__cell--empty {
+  &__cell--select-company {
+    width: 40%;
+
+    .choices {
+      width: 100%;
+    }
+
     @include viewport--sm {
-      display: none;
+      width: 70%;
     }
   }
 
-  &__row .admin-table__cell--mobile-event {
-    display: none;
+  &__cell--guest-company {
+    @include viewport--sm {
+      display: block;
+      width: 95%;
+    }
+  }
+
+  &__cell--company {
+    width: 40%;
+
+    @include viewport--md {
+      width: 25%;
+    }
 
     @include viewport--sm {
       display: block;
-
-      font-size: 14px;
-      line-height: 17px;
-      color: $color-blue;
-      letter-spacing: 0.4px;
+      width: 95%;
     }
   }
 
-  &__cell--theme,
-  &__cell--date,
-  &__cell--time,
-  &__cell--status,
-  &__cell--destination,
-  &__cell--event,
-  &__cell--company,
-  &__cell--time-limit {
-    font-size: 12px;
-    line-height: 20px;
-    color: $color-zambezi;
-
+  &__cell--guest-person {
     @include viewport--sm {
-      letter-spacing: 0.3px;
+      display: inline-flex;
+      flex-wrap: wrap;
+      width: 48%;
+
+      span {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  &__cell--person {
+    @include viewport--sm {
+      width: 95%;
+    }
+  }
+
+  &__cell--schedule-time {
+    @include viewport--sm {
+      display: block;
+      width: 95%;
+    }
+  }
+
+  &__cell--status {
+    @include viewport--sm {
+      position: absolute;
+      top: 15px;
+      right: 17px;
     }
   }
 
@@ -159,544 +153,193 @@
     color: $color-green;
   }
 
-  &__cell--person > span,
-  &__cell--company > span,
-  &__cell--guest-person > span,
-  &__cell--guest-company > span {
-    display: block;
-
-    font-size: 12px;
-    line-height: 20px;
-    color: $color-nobel;
-  }
-
-  &__cell--status {
-    width: 5%;
-  }
-
-  &__cell--message {
-    max-width: 300px;
-    width: auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    font-size: 16px;
-    line-height: 22px;
+  &__cell--empty {
+    width: 250px;
 
     @include viewport--lg {
-      max-width: 181px;
+      width: 129px;
     }
 
     @include viewport--md {
-      max-width: none;
-      width: fit-content;
+      width: 80px;
     }
 
     @include viewport--sm {
-      width: 90%;
-      max-width: none;
+      width: 0;
+    }
+  }
+
+  &__cell--select-time,
+  &__cell--guest-select-time {
+    width: 222px;
+
+    @include viewport--sm {
+      width: 50%;
     }
   }
 
   &__cell--destination {
-    width: 8%;
-
     overflow: hidden;
-  }
-
-  &__cell--icon {
-    position: relative;
-    padding: 0 0 0 31px;
-    width: 8%;
-
-    @include viewport--lg {
-      padding: 0 0 0 26px;
-    }
-  }
-
-  &__cell--icon svg {
-    position: absolute;
-    left: 38px;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 105px;
+    width: -webkit-fill-available;
+    text-overflow: ellipsis;
 
     @include viewport--lg {
-      left: 31px;
-    }
-  }
-
-  &__cell--new svg {
-    top: 0;
-  }
-
-  &__cell--opened svg {
-    top: -5px;
-  }
-
-  &__cell--sent svg {
-    top: 0;
-  }
-
-  &__cell--theme {
-    width: 27%;
-    max-width: 381px;
-
-    overflow: hidden;
-
-    @include viewport--lg {
-      width: 25%;
-      max-width: 263px;
-      overflow: hidden;
-    }
-
-    @include viewport--md {
-      width: 18%;
-    }
-
-    @media (max-width: 950px) {
-      width: 12%;
+      max-width: 83px;
     }
 
     @include viewport--sm {
-      width: 67%;
+      padding-left: 17px;
+      display: block;
+      width: 95%;
       max-width: none;
+    }
+  }
+
+  &__cell--sent-destination {
+    @include viewport--sm {
+      padding-left: 0;
+    }
+  }
+
+  &__cell--theme {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 331px;
+    width: -webkit-fill-available;
+    text-overflow: ellipsis;
+
+    @include viewport--lg {
+      max-width: 233px;
+    }
+
+    @media (max-width: 1150px) {
+      max-width: 197px;
+    }
+
+    @include viewport--md {
+      max-width: 133px;
+    }
+
+    @include viewport--sm {
+      display: block;
+      width: 95%;
+      max-width: none;
+    }
+  }
+
+  &__cell--message {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 352px;
+    width: -webkit-fill-available;
+    text-overflow: ellipsis;
+
+    @include viewport--lg {
+      max-width: 252px;
+    }
+
+    @include viewport--md {
+      max-width: 153px;
+    }
+
+    @include viewport--sm {
+      display: block;
+      width: 95%;
+    }
+  }
+
+  &__cell--event {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 162px;
+    width: -webkit-fill-available;
+    text-overflow: ellipsis;
+
+    @include viewport--sm {
+      display: none;
+      max-width: none;
+      width: 95%;
+    }
+  }
+
+  &__cell--mobile-event {
+    @include viewport--sm {
+      display: block;
+      width: 95%;
+      color: $color-blue;
     }
   }
 
   &__cell--date {
-    width: 9%;
-    max-width: 127px;
-    overflow: hidden;
-
-    @include viewport--lg {
-      padding-left: 24px;
-      width: 12%;
-    }
-
-    @include viewport--md {
-      width: 10%;
-      padding-right: 10px;
-      padding-left: 10px;
-    }
+    white-space: nowrap;
 
     @include viewport--sm {
-      width: auto;
-      padding-right: 0;
+      position: absolute;
+      top: 15px;
+      right: 17px;
+
+      font-size: 11px;
+      line-height: 13px;
     }
   }
 
   &__cell--time {
-    width: 6%;
-    max-width: 71px;
-    overflow: hidden;
-  }
-
-  &__cell--event {
-    width: 17%;
-    max-width: 221px;
-    overflow: hidden;
-
-    @include viewport--lg {
-      width: 24%;
-      max-width: 269px;
-    }
-
-    @include viewport--md {
-      width: 13%;
-      max-width: none;
-      overflow: hidden;
-    }
-  }
-
-  &__cell--person {
-    width: 18%;
-    max-width: 234px;
-    padding-right: 18px;
-
-    @include viewport--lg {
-      max-width: 187px;
-    }
-
-    @include viewport--md {
-      display: inline-block;
-      width: 49%;
-      margin-bottom: 7px;
-      padding-right: 0;
-    }
-  }
-
-  &__cell--guest-person:last-of-type {
-    @include viewport--md {
-      margin-right: 0;
-    }
-  }
-
-  &__cell--mobile-person {
-    @include viewport--md {
-      display: block;
-      width: 100%;
-    }
-  }
-
-  &__cell--empty {
-    width: 17%;
-
-    @include viewport--lg {
-      width: 11%;
-    }
-
-    @include viewport--md {
-      width: 10px;
-    }
-  }
-
-  &__cell--empty:last-of-type {
-    @include viewport--lg {
-      width: 7%;
-    }
-  }
-
-  .admin-table__cell--schedule-time {
-    margin-right: 10px;
-    width: 7%;
-
-    @include viewport--lg {
-      width: 9%;
-    }
-
-    @include viewport--md {
-      width: 12%;
-    }
-
-    @include viewport--sm {
-      display: block;
-      margin-bottom: 5px;
-      width: 100%;
-      margin-right: 0;
-    }
-  }
-
-  &__cell--select-company {
-    margin-right: 12px;
-    width: 41%;
-
-    @include viewport--lg {
-      margin-right: 8px;
-      width: 52%;
-    }
-
-    @include viewport--sm {
-      width: 72%;
-    }
-  }
-
-  &__cell--button {
-    margin-right: 20px;
-    padding: 0;
-    width: 7%;
-    padding-left: 18px;
-
-    @include viewport--lg {
-      margin-right: 12px;
-      width: 9%;
-    }
-
-    @media (max-width: 1200px) {
-      width: 10%;
-    }
-
-    @include viewport--md {
-      width: 12%;
-    }
-
-    @include viewport--sm {
-      width: 23%;
-      margin-right: 0;
-    }
-  }
-
-  &__cell--guest-button {
-    display: inline-flex !important;
-    column-gap: 10px;
-    justify-content: space-between;
-    width: 17%;
-    float: right;
-    padding-right: 15px;
-
-    @include viewport--sm {
-      width: 48%;
-    }
-
-    .button--request {
-      width: 100px !important;
-
-      @include viewport--sm {
-        width: 48% !important;
-        max-width: none !important;
-      }
-    }
-  }
-
-  &__cell--company {
-    padding-right: 25px;
-    padding-left: 15px;
-    width: 34%;
-    max-width: 480px;
-
-    font-size: 16px;
-    line-height: 20px;
-
-    @include viewport--lg {
-      max-width: 283px;
-    }
-
-    @include viewport--sm {
-      display: block;
-      width: 100%;
-      margin: 0;
-      padding-right: 0;
-    }
-  }
-
-  &__cell--guest-company {
-    padding-right: 25px;
-    padding-left: 15px;
-    width: 24%;
-    max-width: 480px;
-
-    font-size: 16px;
-    line-height: 20px;
-
-    @include viewport--lg {
-      max-width: 283px;
-    }
-
-    @include viewport--sm {
-      display: block;
-      width: 100%;
-      margin: 0;
-      padding-right: 0;
-    }
-  }
-
-  .admin-table__cell--select-time {
-    width: 17%;
-    max-width: 223px;
-
-    @include viewport--lg {
-      width: 20%;
-      max-width: 224px;
-      margin-right: 0;
-    }
-
-    @include viewport--sm {
-      width: 48%;
-      margin-right: 7px;
-    }
-  }
-
-  .admin-table__cell--guest-select-time {
-    width: 20%;
-    max-width: 306px;
-
-    @include viewport--lg {
-      width: 20%;
-      max-width: 224px;
-      margin-right: 0;
-    }
-
-    @include viewport--sm {
-      width: 48%;
-      margin-right: 7px;
-    }
-  }
-
-  //Уникальные стили для разных категорий таблиц
-
-  &__row--schedule {
-    @include viewport--lg {
-      .admin-table__cell--status {
-        width: 2%;
-      }
-    }
-
-    @include viewport--sm {
-      position: relative;
-      width: 100%;
-      display: block;
-      padding: 9px 7px 8px 15px;
-
-      .admin-table__cell--status {
-        position: absolute;
-        display: block;
-        top: 7px;
-        right: 45px;
-        width: 0;
-      }
-    }
-
-    th,
-    td {
-      padding-top: 6px;
-      padding-bottom: 6px;
-
-      @include viewport--sm {
-        padding: 0;
-      }
-    }
-
-    .button {
-      width: 100%;
-      white-space: normal;
-    }
-  }
-
-  &__row--guests {
-    display: table-row;
-
-    @include viewport--lg {
-      display: table-row;
-    }
-
-    @include viewport--sm {
-      display: block;
-      padding: 9px 16px 10px 16px;
-    }
-
-    .admin-table__cell--button:last-of-type {
-      margin-right: 0;
-    }
-
-    th,
-    td {
-      padding-top: 8px;
-      padding-bottom: 0;
-
-      @include viewport--sm {
-        padding: 0;
-      }
-    }
-
-    .admin-table__cell--company {
-      width: 51%;
-      max-width: 595px;
-
-      @include viewport--lg {
-        width: 33%;
-        max-width: 369px;
-      }
-
-      @include viewport--sm {
-        display: block;
-        width: 98%;
-        max-width: none;
-      }
-    }
-
-    .admin-table__cell--person {
-      width: 25%;
-      max-width: 352px;
-
-      @include viewport--lg {
-        width: 33%;
-        max-width: 289px;
-      }
-
-      @include viewport--sm {
-        display: block;
-        width: 98%;
-        max-width: none;
-      }
-    }
-
-    .admin-table__cell--guest-person {
-      width: 15%;
-      max-width: 352px;
-
-      @include viewport--lg {
-        width: 17%;
-        max-width: 289px;
-        margin-right: 10px;
-      }
-
-      @include viewport--sm {
-        display: inline-block;
-        width: 48%;
-        max-width: none;
-        margin-right: 0;
-      }
-    }
-  }
-
-  &__row--messages {
     white-space: nowrap;
-    overflow: hidden;
 
-    @include viewport--sm {
-      position: relative;
-      width: 100%;
-      padding: 8px 10px 10px 17px;
+    @media (max-width: 1150px) {
+      display: none;
+    }
+  }
 
-      .admin-table__cell--icon svg {
+  &__cell--new {
+    &::before {
+      background-color: $color-blue;
+    }
+  }
+
+  &__cell--opened {
+    &::before {
+      background-color: $color-gray;
+    }
+  }
+
+  &__cell--icon {
+    svg {
+      @include viewport--sm {
         display: none;
       }
+    }
 
-      .admin-table__cell--new,
-      .admin-table__cell--opened {
-        position: absolute;
-        top: 16px;
-        left: 16px;
+    @include viewport--sm {
+      &::before {
+        content: "";
+        border-radius: 100%;
         width: 10px;
         height: 10px;
-        border-radius: 100%;
-      }
-
-      .admin-table__cell--new {
-        background-color: $color-blue;
-      }
-
-      .admin-table__cell--opened {
-        background-color: $color-gray;
-      }
-
-      .admin-table__cell--sent {
-        display: none;
-      }
-
-      .admin-table__cell--destination,
-      .admin-table__cell--theme {
-        display: block;
-        width: 93%;
-
-        font-size: 16px;
-        line-height: 20px;
-      }
-
-      .admin-table__cell--destination {
-        padding-left: 19px;
-        letter-spacing: 0.1px;
-      }
-
-      .admin-table__cell--sent-destination {
-        padding-left: 0;
-      }
-
-      .admin-table__cell--date {
-        display: block;
         position: absolute;
-        top: 17px;
-        right: 15px;
-
-        letter-spacing: 0.3px;
-        font-size: 11px;
-        line-height: 13px;
-        color: $color-zambezi;
+        top: 18px;
+        left: 17px;
+        display: block;
       }
     }
+  }
 
-    transition: opacity $default-transition-settings;
+  &__message-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 
     &:hover,
     &:focus {
-      opacity: 0.7;
+      opacity: 0.8;
     }
 
     &:active {
@@ -704,48 +347,14 @@
     }
   }
 
-  &--guest-list {
-    @include viewport--sm {
-      margin: 18px -17px 0;
-    }
-  }
-
-  &--guest {
-    @include viewport--sm {
-      margin: 18px -17px 0;
-    }
-  }
-
-  //Стили кнопок отправки запроса/сообщений
-
-  .button--request,
-  .admin-table__link {
-    font-size: 12px;
-    line-height: 18px;
-    width: 95px;
-    min-height: 22px;
-    padding: 0;
-    white-space: normal;
-
-    @include viewport--lg {
-      max-width: 100px;
-    }
+  &__message-link svg {
+    position: absolute;
+    top: 47px;
+    right: 17px;
+    visibility: hidden;
 
     @include viewport--sm {
-      padding: 6px 5px;
-
-      white-space: break-spaces;
-      font-size: 14px;
-      line-height: 13px;
-      width: 78px;
-      min-height: 42px;
+      visibility: visible;
     }
-  }
-}
-
-.admin--schedule .admin-table {
-  @include viewport--sm {
-    margin-top: 0;
-    margin-bottom: 20px;
   }
 }

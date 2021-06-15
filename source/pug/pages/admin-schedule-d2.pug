@@ -22,9 +22,10 @@ block main
 
         .admin__content-wrapper
           h2.admin__section-title="My Schedule"
-          +renderAdminTabs(scheduleTabs)
-          .admin__additional-buttons
-            button.button.button--transparent.hidden-sm(type="button") Generate PDF with schedule
+          .admin__tabs-wrapper
+            +renderAdminTabs(scheduleTabs)
+            .admin__additional-buttons
+              button.button.button--transparent.hidden-sm(type="button") Generate PDF with schedule
 
           +renderSchedule(adminScheduleTitles, adminSchedule)
 
