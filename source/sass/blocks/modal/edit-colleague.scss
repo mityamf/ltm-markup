@@ -15,6 +15,11 @@
     width: 100%;
   }
 
+  label {
+    font-weight: lighter;
+    max-height: max-content;
+  }
+
   textarea {
     display: block;
     width: 100%;
@@ -38,15 +43,12 @@
     fill: $color-blue;
   }
 
-  .form-reg__block {
-    margin-bottom: 20px;
-
-    @include viewport--sm {
-      margin-bottom: 10px;
-    }
+  .form-reg__block,
+  &__block {
+    margin-bottom: 10px;
   }
 
-  .form-reg__block--half-width {
+  .form-reg--half-width {
     @include viewport--sm {
       width: 47%;
       display: inline-block;
@@ -58,7 +60,7 @@
     background-color: transparent;
   }
 
-  .form-reg__block--right {
+  &__block--right {
     @include viewport--sm {
       float: right;
     }
@@ -84,6 +86,7 @@
 
   p {
     margin: 0;
+    font-weight: lighter;
   }
 
   &__photo-column {

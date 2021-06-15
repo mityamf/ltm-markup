@@ -139,6 +139,10 @@
     @include viewport--lg {
       width: 100%;
     }
+
+    @include viewport--sm {
+      margin-bottom: 15px;
+    }
   }
 
   &__select-wrapper--full {
