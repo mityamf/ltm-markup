@@ -3029,64 +3029,73 @@
                   <button class="button button--transparent" type="reset">Clear all filtres</button>
                 </li>
               </ul>
-              <table class="admin-table admin-table--guest">
-                <thead>
-                  <tr class="admin-table__row admin-table__row--headline">
-                    <th class="admin-table__cell admin-table__cell--company">Company</th>
-                    <th class="admin-table__cell admin-table__cell--person">Representative</th>
-                    <th class="admin-table__cell admin-table__cell--select-time">Free Slots</th>
-                    <th class="admin-table__cell admin-table__cell--button">Request</th>
-                    <th class="admin-table__cell admin-table__cell--button">Contact</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="admin-table__row admin-table__row--guests">
-                    <td class="admin-table__cell admin-table__cell--company">Travel Luxury Agency<span>Worldwide</span></td>
-                    <td class="admin-table__cell admin-table__cell--person admin-table__cell--mobile-person">Ivan Skorodubov<span>Director</span>
-                    </td>
-                    <td class="admin-table__cell admin-table__cell--select-time">
-                      <select class="input-dropdown" id="select-time-000">
-                        <option class="input-dropdown__option" value="10:00 – 10:10">10:00 – 10:10</option>
-                        <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
-                      </select>
-                    </td>
-                    <td class="admin-table__cell admin-table__cell--guest-button">
-                      <button class="button button--transparent button--request" type="submit">Send a request</button>
-                      <button class="button button--transparent button--request" type="submit">Send a message</button>
-                    </td>
-                  </tr>
-                  <tr class="admin-table__row admin-table__row--guests">
-                    <td class="admin-table__cell admin-table__cell--company">Prime Luxury Travel<span>Worldwide</span></td>
-                    <td class="admin-table__cell admin-table__cell--person admin-table__cell--mobile-person">Eugenia Stuslova
-                    </td>
-                    <td class="admin-table__cell admin-table__cell--select-time">
-                      <select class="input-dropdown" id="select-time-001">
-                        <option class="input-dropdown__option" value="10:00 – 10:10">10:00 – 10:10</option>
-                        <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
-                      </select>
-                    </td>
-                    <td class="admin-table__cell admin-table__cell--guest-button">
-                      <button class="button button--transparent button--request" type="submit">Send a request</button>
-                      <button class="button button--transparent button--request" type="submit">Send a message</button>
-                    </td>
-                  </tr>
-                  <tr class="admin-table__row admin-table__row--guests">
-                    <td class="admin-table__cell admin-table__cell--company">Anastasia Tours<span>UAE, Turkey</span></td>
-                    <td class="admin-table__cell admin-table__cell--person admin-table__cell--mobile-person">Anna Petrenko
-                    </td>
-                    <td class="admin-table__cell admin-table__cell--select-time">
-                      <select class="input-dropdown" id="select-time-002">
-                        <option class="input-dropdown__option" value="13:00 – 17:10">13:00 – 17:10</option>
-                        <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
-                      </select>
-                    </td>
-                    <td class="admin-table__cell admin-table__cell--guest-button">
-                      <button class="button button--transparent button--request" type="submit">Send a request</button>
-                      <button class="button button--transparent button--request" type="submit">Send a message</button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="admin-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="admin-table__cell admin-table__cell--company">Company</th>
+                      <th class="admin-table__cell admin-table__cell--person">Representative</th>
+                      <th class="admin-table__cell admin-table__cell--select-time">Free Slots</th>
+                      <th class="admin-table__cell admin-table__cell--guest-button">
+                        <div class="admin-table__button-wrapper"><span>Request</span><span>Contact</span></div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="admin-table__cell admin-table__cell--company">Travel Luxury Agency<span>Worldwide</span></td>
+                      <td class="admin-table__cell admin-table__cell--person admin-table__cell--mobile-person">Ivan Skorodubov<span>Director</span>
+                      </td>
+                      <td class="admin-table__cell admin-table__cell--select-time">
+                        <select class="input-dropdown" id="select-time-000">
+                          <option class="input-dropdown__option" value="10:00 – 10:10">10:00 – 10:10</option>
+                          <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
+                        </select>
+                      </td>
+                      <td class="admin-table__cell admin-table__cell--guest-button">
+                        <div class="admin-table__button-wrapper">
+                          <button class="button button--transparent button--request" type="submit">Send a request</button>
+                          <button class="button button--transparent button--request" type="submit">Send a message</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="admin-table__cell admin-table__cell--company">Prime Luxury Travel<span>Worldwide</span></td>
+                      <td class="admin-table__cell admin-table__cell--person admin-table__cell--mobile-person">Eugenia Stuslova
+                      </td>
+                      <td class="admin-table__cell admin-table__cell--select-time">
+                        <select class="input-dropdown" id="select-time-001">
+                          <option class="input-dropdown__option" value="10:00 – 10:10">10:00 – 10:10</option>
+                          <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
+                        </select>
+                      </td>
+                      <td class="admin-table__cell admin-table__cell--guest-button">
+                        <div class="admin-table__button-wrapper">
+                          <button class="button button--transparent button--request" type="submit">Send a request</button>
+                          <button class="button button--transparent button--request" type="submit">Send a message</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="admin-table__cell admin-table__cell--company">Anastasia Tours<span>UAE, Turkey</span></td>
+                      <td class="admin-table__cell admin-table__cell--person admin-table__cell--mobile-person">Anna Petrenko
+                      </td>
+                      <td class="admin-table__cell admin-table__cell--select-time">
+                        <select class="input-dropdown" id="select-time-002">
+                          <option class="input-dropdown__option" value="13:00 – 17:10">13:00 – 17:10</option>
+                          <option class="input-dropdown__option" value="12:00 – 12:20">12:00 – 12:20</option>
+                        </select>
+                      </td>
+                      <td class="admin-table__cell admin-table__cell--guest-button">
+                        <div class="admin-table__button-wrapper">
+                          <button class="button button--transparent button--request" type="submit">Send a request</button>
+                          <button class="button button--transparent button--request" type="submit">Send a message</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div class="admin__button-wrapper">
               <button class="button button--transparent" type="button">More</button>
