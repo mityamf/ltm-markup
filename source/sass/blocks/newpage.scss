@@ -28,6 +28,7 @@
 .content {
   max-width: 936px;
   margin: 0 auto;
+  letter-spacing: 0.1px;
 
   @include viewport--lg {
     margin-top: 25px;

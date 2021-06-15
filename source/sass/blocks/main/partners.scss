@@ -32,14 +32,13 @@
 }
 
 .partners__list {
-  //margin: 0;
-  margin-left: -25px;
+  margin-left: -55px;
   margin-top: -25px;
   padding: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding-top: 45px;
 
@@ -55,7 +54,7 @@
 }
 
 .partners__item {
-  margin-left: 25px;
+  margin-left: 55px;
   margin-top: 25px;
   height: 150px;
   max-width: 100%;

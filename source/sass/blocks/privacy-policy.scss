@@ -29,33 +29,19 @@
   @include viewport--sm {
     margin-top: 15px;
   }
-}
 
-.privacy-policy__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+  h3 {
+    margin-top: 11px;
+    margin-bottom: -3px;
 
-.privacy-policy__list li {
-  margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 29px;
+    letter-spacing: 0.043em;
+    color: $color-blue;
 
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-}
-
-.privacy-policy__list h3 {
-  margin-top: 11px;
-  margin-bottom: -3px;
-
-  font-size: 24px;
-  font-weight: lighter;
-  line-height: 29px;
-  letter-spacing: 0.043em;
-  color: $color-blue;
-
-  @include viewport--md {
-    margin-bottom: 10px;
+    @include viewport--md {
+      margin-bottom: 10px;
+    }
   }
 }

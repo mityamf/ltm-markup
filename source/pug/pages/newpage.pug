@@ -15,8 +15,10 @@ block main
   +promo(promoBg.titleItem, promoBg.btnItem, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem, true)
   main
     .container
-      +renderHeadlineWithDesktopBackButton(newPage.title, "news.html")
-
+      .headline-wrapper
+        h2=newPage.title
+        .hidden-sm
+          +renderBackButton("news.html")
       time.newpage__date(datetime=newPage.datetime) #{newPage.date}
       .content
         each text in newPage.content
