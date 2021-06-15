@@ -16,24 +16,25 @@ block main
 
         .about__content
           .about__text-wrapper.about__text-wrapper--mobile
-            +renderHeadlineBig(aboutEvent.title)
-            .text-wrapper
+            +renderHeadline2(aboutEvent.title)
+            .text-content
               +renderTextContentBlock(aboutEvent.textList)
             +renderOpenMoreButton(eventBlock.buttonText)
 
           .about__text-wrapper
-            +renderHeadlineBig(eventBlock.title)
+            +renderHeadline2(eventBlock.title)
             .about__text-wrapper.about__text-wrapper--dates
               each event in eventBlock.eventList
-                +renderHeadlineMiddle(event.subtitle)
-                .text-wrapper
+                +renderHeadline3(event.subtitle)
+                .text-content
                   p !{event.date}
                   +renderTextContentBlock(event.textList)
 
         aside.about__aside
-          +renderHeadlineBig(benefits.benefitsTitle)
+          +renderHeadline2(benefits.benefitsTitle)
           ul.about__benefit-list
             each benefit in benefits.benefitsList
               li.about__benefit-item
-                +icon(benefit.src, benefit.width, benefit.height)
-                p=benefit.text
+                svg.about__benefit-icon(width=benefit.width, height=benefit.height, aria-hidden="true")
+                  use(xlink:href="#" + benefit.src)
+                p.about__benefit-text=benefit.text

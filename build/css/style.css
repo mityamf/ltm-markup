@@ -5580,8 +5580,8 @@ table {
   .about__text-wrapper > .text-wrapper {
     padding: 10px 0 0 0; }
   @media (max-width: 767px) {
-    .about__text-wrapper--mobile > .text-wrapper {
-      max-height: 139px;
+    .about__text-wrapper--mobile > .text-content {
+      max-height: 130px;
       overflow: hidden; } }
   .about__text-wrapper--dates {
     padding: 25px 0 0 0; }
@@ -5631,14 +5631,14 @@ table {
     @media (max-width: 1439px) {
       .about__benefit-item {
         margin-bottom: 31px; } }
-  .about__benefit-item p {
+  .about__benefit-text {
     margin: 0;
     letter-spacing: 0.1px; }
-  .about__benefit-item > svg {
+  .about__benefit-icon {
     display: block;
     margin: 0 auto 11px; }
     @media (max-width: 1439px) {
-      .about__benefit-item > svg {
+      .about__benefit-icon {
         margin: 0 auto 13px auto; } }
   .about__aside {
     width: auto; }
