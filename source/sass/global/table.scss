@@ -1,0 +1,17 @@
+table {
+  border-collapse: collapse;
+
+  tr:nth-child(even) {
+    background-color: $color-gray-light;
+  }
+
+  thead th {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    font-size: 12px;
+    line-height: 20px;
+    color: $color-nobel;
+    text-align: left;
+  }
+}

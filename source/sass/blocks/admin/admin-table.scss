@@ -160,7 +160,9 @@
   }
 
   &__cell--person > span,
-  &__cell--company > span {
+  &__cell--company > span,
+  &__cell--guest-person > span,
+  &__cell--guest-company > span {
     display: block;
 
     font-size: 12px;
@@ -321,7 +323,7 @@
     }
   }
 
-  &__cell--person:last-of-type {
+  &__cell--guest-person:last-of-type {
     @include viewport--md {
       margin-right: 0;
     }
@@ -411,6 +413,28 @@
     }
   }
 
+  &__cell--guest-button {
+    display: inline-flex !important;
+    column-gap: 10px;
+    justify-content: space-between;
+    width: 17%;
+    float: right;
+    padding-right: 15px;
+
+    @include viewport--sm {
+      width: 48%;
+    }
+
+    .button--request {
+      width: 100px !important;
+
+      @include viewport--sm {
+        width: 48% !important;
+        max-width: none !important;
+      }
+    }
+  }
+
   &__cell--company {
     padding-right: 25px;
     padding-left: 15px;
@@ -432,9 +456,46 @@
     }
   }
 
+  &__cell--guest-company {
+    padding-right: 25px;
+    padding-left: 15px;
+    width: 24%;
+    max-width: 480px;
+
+    font-size: 16px;
+    line-height: 20px;
+
+    @include viewport--lg {
+      max-width: 283px;
+    }
+
+    @include viewport--sm {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding-right: 0;
+    }
+  }
+
   .admin-table__cell--select-time {
     width: 17%;
     max-width: 223px;
+
+    @include viewport--lg {
+      width: 20%;
+      max-width: 224px;
+      margin-right: 0;
+    }
+
+    @include viewport--sm {
+      width: 48%;
+      margin-right: 7px;
+    }
+  }
+
+  .admin-table__cell--guest-select-time {
+    width: 20%;
+    max-width: 306px;
 
     @include viewport--lg {
       width: 20%;
@@ -543,6 +604,24 @@
         display: block;
         width: 98%;
         max-width: none;
+      }
+    }
+
+    .admin-table__cell--guest-person {
+      width: 15%;
+      max-width: 352px;
+
+      @include viewport--lg {
+        width: 17%;
+        max-width: 289px;
+        margin-right: 10px;
+      }
+
+      @include viewport--sm {
+        display: inline-block;
+        width: 48%;
+        max-width: none;
+        margin-right: 0;
       }
     }
   }

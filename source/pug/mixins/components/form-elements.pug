@@ -16,11 +16,9 @@ mixin renderInputText(id, placeholder, type, mod)
         input(type=type placeholder=placeholder)
 
 mixin renderSelect(headline, id, options, mod)
-  .form-reg
+  .form-reg.form-reg--select
     .form-reg__block(class=modClass)
       p=headline
         select(id=id, class="input-dropdown")
           each option in options
             option(value=option, class="input-dropdown__option")=option
-
-

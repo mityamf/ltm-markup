@@ -19,6 +19,12 @@
     }
   }
 
+  &__text-wrapper:first-of-type p {
+    @include viewport--sm {
+      width: 60%;
+    }
+  }
+
   &__text-wrapper {
     display: flex;
     justify-content: space-between;
@@ -46,6 +52,7 @@
     display: flex;
     padding-bottom: 33px;
     width: 100%;
+    justify-content: space-between;
     margin-right: 10px;
     align-items: center;
 
@@ -57,6 +64,10 @@
       padding-right: 17px;
       padding-left: 17px;
       padding-bottom: 18px;
+
+      .button--transparent {
+        padding: 0;
+      }
     }
   }
 
