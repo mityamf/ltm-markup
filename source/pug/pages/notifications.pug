@@ -9,10 +9,10 @@ block variables
 block main
   include ../data/pages/notifications
 
-  main.container.container--no-padding
+  main.container
     +renderHotelHeadline(hotelHeadline.title, hotelHeadline.logo, hotelHeadline.note, hotelHeadline.logoWidth, hotelHeadline.logoHeight)
+    +renderHeadlineWithBackButton("Notifications", "#")
     .notifications
-      +renderHeadlineWithBackButton("Notifications", "#")
       +renderNotifications(notifications)
       button.button.button--transparent.button--desktop(type="button")="All Notifications"
       button.button.button--transparent.button--mobile(type="button")="More"

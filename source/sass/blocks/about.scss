@@ -58,9 +58,9 @@
     padding: 10px 0 0 0;
   }
 
-  &__text-wrapper--mobile > .text-wrapper {
+  &__text-wrapper--mobile > .text-content {
     @include viewport--sm {
-      max-height: 139px;
+      max-height: 130px;
       overflow: hidden;
     }
   }
@@ -137,13 +137,13 @@
     }
   }
 
-  &__benefit-item p {
+  &__benefit-text {
     margin: 0;
 
     letter-spacing: 0.1px;
   }
 
-  &__benefit-item > svg {
+  &__benefit-icon {
     display: block;
     margin: 0 auto 11px;
 

@@ -1,0 +1,28 @@
+mixin renderInputSearch()
+  .form-reg.form-reg--search
+    .form-reg__block
+      label
+        input(type="text")
+        +icon("icon-search", 14, 15)
+
+mixin renderInputText(headline, id, placeholder, type, mod)
+  - var modClass = 'form-reg__block'
+  if mod
+    - var modClass = 'form-reg--' + mod
+
+  .form-reg(class=modClass)
+    .form-reg__block
+      label=headline
+        input(type=type placeholder=placeholder)
+
+mixin renderSelect(headline, id, options, mod)
+  - var modClass = 'form-reg__block'
+  if mod
+    - var modClass = 'form-reg--' + mod
+
+  .form-reg.form-reg--select(class=modClass)
+    .form-reg__block
+      p=headline
+        select(id=id, class="input-dropdown")
+          each option in options
+            option(value=option, class="input-dropdown__option")=option

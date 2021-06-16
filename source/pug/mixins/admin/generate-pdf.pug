@@ -1,4 +1,4 @@
 mixin renderGeneratePDFButton(link, text)
   .generate-file
-    a.generate-file__link(href=link aria-label="Скачать файл" download)=text
+    button.generate-file__link.button.button--transparent(aria-label="Скачать файл" type="button")=text
 

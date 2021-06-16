@@ -7,6 +7,7 @@ const cardSwiper = () => {
     pagination: {
       el: '.direction__pagination',
       clickable: true,
+      bulletElement: 'button',
     },
     navigation: {
       nextEl: '.direction__arrow--right',

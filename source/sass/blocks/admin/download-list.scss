@@ -1,0 +1,57 @@
+.download-list {
+  list-style-type: none;
+  margin: 0;
+
+  &--left-padding {
+    padding: 0 0 0 75px;
+
+    @include viewport--lg {
+      padding: 0 0 0 55px;
+    }
+
+    @include viewport--sm {
+      padding: 0 0 0;
+    }
+  }
+
+  &__item:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: max-content;
+    transition: opacity 0.3s ease;
+
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-gray-dark;
+    font-weight: normal;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &__link svg {
+    margin-right: 17px;
+    color: $color-blue;
+    width: 26px;
+    height: 35px;
+
+    @include viewport--lg {
+      margin-right: 12px;
+    }
+
+    @include viewport--sm {
+      margin-right: 17px;
+    }
+  }
+}

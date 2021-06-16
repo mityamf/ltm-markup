@@ -11,22 +11,34 @@ block main
   include ../data/pages/lk-guest-schedule-d1
   include ../data/modal-colleague-lk
 
-  main.container.lk
+  main
     .admin.admin--schedule
-      +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates)
-      .hidden-sm
-        +renderLKParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, infoBlock)
-      .admin__control-wrapper.admin__control-wrapper--full-width
-        +renderAdminTabs(adminTabs)
-      +renderHeadline2("Список участников")
-      +renderScheduleTabs(scheduleTabs, generatePDF)
-      +renderSchedule(adminScheduleTitles, adminSchedule)
-      .admin__mobile-block-wrapper
-        +renderGeneratePDFButton("#", "Скачать расписание PDF")
-      +renderWishList(wishList)
-      .admin__mobile-block-wrapper
-        +renderUpButton()
-    +renderSupportContacts(contactsList)
+      .container
+        +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates)
+
+        .admin__block-wrapper
+          +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, true)
+          +renderInfoBlock(infoBlock)
+
+        .admin__control-wrapper.admin__control-wrapper--full-width
+          +renderAdminTabs(adminTabs, modal=false, menu=true)
+
+        .admin__content-wrapper
+          h2.admin__section-title="Список участников"
+          .admin__tabs-wrapper
+            +renderAdminTabs(scheduleTabs)
+            .admin__additional-buttons
+              button.button.button--transparent.hidden-sm(type="button") Скачать расписание PDF
+
+          +renderSchedule(adminScheduleTitles, adminSchedule)
+
+          .admin__mobile-block-wrapper.visible-sm
+            button.button.button--transparent(type="button")="Скачать расписание PDF"
+
+          +renderWishList(wishList)
+          .admin__button-wrapper.visible-sm
+            +renderUpButton('up-button--mobile')
+        +renderSupportContacts(contactsList)
 
 block modals
   include ../data/modal-colleague-lk
@@ -36,6 +48,6 @@ block modals
   +mobileModal("modal--edit-colleague")
     +modalEditColleague(editCollegue)
   +mobileModal("modal--admin-menu")
-    +renderModalAdminTabs(adminTabs)
+    +renderModalAdminTabs(adminTabs, modal=true, menu=false)
   +mobileModal("modal--edit-profile")
     +modalEditProfile(editProfile)

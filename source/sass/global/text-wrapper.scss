@@ -2,13 +2,28 @@
   p {
     margin: 0;
 
-    font-size: 16px;
+    // font-size: 16px;
     line-height: 22px;
-    color: $color-gray-dark;
-    letter-spacing: 0.1px;
+    // color: $color-gray-dark;
+    //letter-spacing: 0.1px;
 
     @include viewport--sm {
       letter-spacing: 0.2px;
     }
+  }
+}
+
+.text-content {
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-gray-dark;
+  letter-spacing: 0.1px;
+
+  @include viewport--sm {
+    letter-spacing: 0.2px;
+  }
+
+  p {
+    margin-top: 0;
   }
 }

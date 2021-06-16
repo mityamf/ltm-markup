@@ -10,13 +10,39 @@ block main
   include ../data/pages/admin-participants-mobile
   include ../data/modal-colleague-admin
 
-  main.container
+  main
     .admin.admin--mobile
-      +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
-      .admin__control-wrapper.admin__control-wrapper--full-width
-        +renderAdminTabs(adminTabs)
-      +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
-    +renderSupportContacts(contactsList)
+      .container
+        +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
+
+        .admin__control-wrapper.admin__control-wrapper--full-width
+          +renderAdminTabs(adminTabs, modal=false, menu=true)
+
+        .admin__content-wrapper
+          .admin__content-wrapper
+            .participants.participants--half-width
+              p.participants__info !{participantsInfo}
+              ul.participants__list
+                each participant in participantsList
+                  li.participants__item
+
+                    if participant.note
+                      .participants__note-wrapper
+                        img(src=participant.photo alt="Фото админа")
+                        span.participants__note !{participant.note}
+                    else
+                      img(src=participant.photo alt="Фото админа")
+
+                    .participants__info-wrapper
+                      .participants__name
+                        h4 !{participant.name}
+                      .participants__position
+                        p !{participant.position}
+                    button.participants__edit-button(data-modal="edit-colleague")
+                      +icon("icon-write", 18, 24)
+
+              p.participants__text !{participantsText}
+        +renderSupportContacts(contactsList)
 
 block append modals
   include ../data/mobile-admin-tabs
@@ -25,4 +51,4 @@ block append modals
   +mobileModal("modal--edit-colleague")
     +modalEditColleague(editCollegue)
   +mobileModal("modal--admin-menu")
-    +renderModalAdminTabs(adminTabs)
+    +renderModalAdminTabs(adminTabs, modal=true, menu=false)

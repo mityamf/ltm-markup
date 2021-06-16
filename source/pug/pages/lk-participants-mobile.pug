@@ -10,27 +10,39 @@ block main
   include ../data/pages/lk-participants-mobile
   include ../data/modal-colleague-lk
 
-  main.container.admin.admin--mobile
-    +renderLKAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
-    .admin__control-wrapper.admin__control-wrapper--full-width
-      +renderAdminTabs(adminTabs)
-    .participants
-      +renderHeadline2(participantsHeadline)
-      p.participants__info=participantsInfo
-      ul.participants__list
-        each participant in participantsList
-          li.participants__item
-            .participants__note-wrapper
-              img(src=participant.photo alt="Фото админа")
-              span.participants__note=participant.note
-            .participants__info-wrapper
-              span.participants__name=participant.name
-              span.participants__name=participant.lastName
-              span.participants__position=participant.position
-            a.participants__contact-link(href='mailto:' + participant.mail aria-label="Написать по электронной почте")
-              +icon("icon-write", 18, 24)
-      p.participants__text=participantsText
-    +renderSupportContacts(contactsList)
+  main
+    .admin.admin--mobile
+      .container
+        +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates)
+
+        .admin__control-wrapper.admin__control-wrapper--full-width
+          +renderAdminTabs(adminTabs, modal=false, menu=true)
+
+        .admin__content-wrapper
+          .participants.participants--half-width
+            p.participants__info !{participantsInfo}
+            ul.participants__list
+              each participant in participantsList
+                li.participants__item
+
+                  if participant.note
+                    .participants__note-wrapper
+                      img(src=participant.photo alt="Фото админа")
+                      span.participants__note !{participant.note}
+                  else
+                    img(src=participant.photo alt="Фото админа")
+
+                  .participants__info-wrapper
+                    .participants__name
+                      h4 !{participant.name}
+                    .participants__position
+                      p !{participant.position}
+                  button.participants__edit-button(data-modal="edit-colleague")
+                    +icon("icon-write", 18, 24)
+
+            p.participants__text !{participantsText}
+
+        +renderSupportContacts(contactsList)
 
 block modals
   include ../data/modal-colleague-lk
@@ -39,4 +51,4 @@ block modals
   +mobileModal("modal--edit-colleague")
     +modalEditColleague(editCollegue)
   +mobileModal("modal--admin-menu")
-    +renderModalAdminTabs(adminTabs)
+    +renderModalAdminTabs(adminTabs, modal=true, menu=false)

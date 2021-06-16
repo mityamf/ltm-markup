@@ -1,0 +1,15 @@
+mixin renderInfoBlock(infoBlock)
+  .info-block.hidden-sm
+    .info-block__top-wrapper
+      .info-block__headline
+        +renderHeadline2(infoBlock.title)
+        a.info-block__link(href=infoBlock.link)=infoBlock.link
+      button.button.button--blue(type=infoBlock.buttonType data-modal="edit-profile")=infoBlock.buttonText
+    .info-block__text-wrapper
+      p=infoBlock.text
+
+    .info-block__more-wrapper
+      a.button.button--open(href="main.html")
+        +icon("icon-arrow", 20, 14)
+        span.visually-hidden read more
+

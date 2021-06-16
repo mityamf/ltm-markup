@@ -28,14 +28,30 @@
   }
 
   &--transparent {
-    padding: 12px 42px;
+    padding: 12px 12px;
     background-color: transparent;
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      background-color: $color-blue;
+
+      color: $color-default-white;
+    }
   }
 
   &--white {
     background-color: transparent;
     color: $color-default-white;
     border: 1px solid $color-default-white;
+
+    &:hover,
+    &:focus {
+      border-color: $color-blue;
+      background-color: $color-default-white;
+
+      color: $color-blue;
+    }
   }
 
   &:hover,

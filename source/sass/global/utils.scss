@@ -55,7 +55,7 @@
 
 .hidden-sm {
   @include viewport--sm {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -124,6 +124,7 @@ textarea {
   color: $color-blue;
   font-size: 24px;
   line-height: 29px;
+  font-weight: lighter;
 
   &:hover,
   &:focus {

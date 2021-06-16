@@ -139,27 +139,14 @@
     @include viewport--lg {
       width: 100%;
     }
+
+    @include viewport--sm {
+      margin-bottom: 15px;
+    }
   }
 
   &__select-wrapper--full {
     width: 100%;
-  }
-
-  .choices {
-    height: 42px;
-    width: 100%;
-    border-radius: 0;
-    background-color: transparent;
-  }
-
-  .choices[data-type*="select-one"] .choices__inner {
-    height: 42px;
-    border-radius: 0;
-    background-color: transparent;
-
-    @include viewport--sm {
-      padding: 3px 4px;
-    }
   }
 
   &__buttons {

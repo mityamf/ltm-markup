@@ -17,19 +17,13 @@
 
   &__list {
     display: flex;
-    padding: 0;
-    margin: 0 -20px -20px 0;
+    padding: 0 0 20px 0;
+    margin: 0;
 
     list-style-type: none;
-
-    @include viewport--sm {
-      margin: 0;
-    }
   }
 
   &__item {
-    margin-bottom: 20px;
-
     text-align: center;
 
     @include viewport--sm {
@@ -58,11 +52,18 @@
     }
   }
 
+  &__link svg {
+    width: 42px;
+    height: 18px;
+    color: $color-blue;
+  }
+
   img {
     display: block;
     width: 103px;
     height: 103px;
     margin: 0 auto 20px auto;
+    object-fit: cover;
 
     border-radius: 100%;
   }
@@ -72,6 +73,7 @@
     margin-bottom: 10px;
 
     text-align: center;
+    font-weight: normal;
   }
 
   .direction {
@@ -96,9 +98,16 @@
     }
   }
 
-  .direction__arrow--left,
-  .direction__arrow--right {
+  .direction__arrow {
+    border: none;
+    background-color: transparent;
     top: 19%;
+  }
+
+  .direction__arrow svg {
+    color: $color-blue;
+    width: 11px;
+    height: 19px;
   }
 
   .direction__arrow--left {

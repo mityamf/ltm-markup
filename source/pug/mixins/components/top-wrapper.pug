@@ -1,18 +1,18 @@
 mixin renderBackButton(link)
-  a.back-link(href=link)
+  a.back-link(href=link) Back
     +icon("arrow-left-white", 12, 20)
-    span Back
 
 mixin renderHeadlineWithBackButton(title, link)
-  .top-wrapper
+  .headline-wrapper
     h2.title.title--h2=title
     +renderBackButton(link)
 
-mixin renderTitleHeadline(title)
-  .top-wrapper.top-wrapper--title
+mixin renderHeadline(title)
+  .headline-wrapper.headline-wrapper--left
     h2.title.title--h2=title
 
-mixin renderTitleHeadlineWithBackButton(title, link)
-  .top-wrapper.top-wrapper--title
+mixin renderHeadlineWithDesktopBackButton(title, link)
+  .headline-wrapper.headline-wrapper--left
     h2.title.title--h2=title
-    +renderBackButton(link)
+    .hidden-sm
+      +renderBackButton(link)

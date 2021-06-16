@@ -1,164 +1,175 @@
-//Таблица с расписанием
+//- Таблица с расписанием
 
 - var cellClass = 'admin-table__cell admin-table__cell--'
 
 mixin renderSchedule(titleList, rowList)
-  table.admin-table
-    thead
-      tr.admin-table__row.admin-table__row--headline
-        th(class=cellClass + 'empty')
-        th(class=cellClass + 'schedule-time')=titleList.time
-        th(class=cellClass + 'select-company')=titleList.company
-        th(class=cellClass + 'button')=titleList.request
-        th(class=cellClass + 'status')=titleList.status
-        if titleList.timeLimit
-          th(class=cellClass + 'time-limit')=titleList.timeLimit
-        else
+  .admin-table
+    table
+      thead
+        tr
           th(class=cellClass + 'empty')
-    tbody
-      each row, i in rowList
-        tr.admin-table__row.admin-table__row--schedule
-          td(class=cellClass + 'empty')
-          td(class=cellClass + 'schedule-time')=row.time
-          td(class=cellClass + 'select-company')
-            select(class="input-dropdown", id='select-company-0' + i)
-              each option in row.company
-                option(value="Choose a company", class="input-dropdown__option")=option
-          td(class=cellClass + 'button')
-            if row.requestStatus === "sent"
-              button.button.button--transparent.button--request(type="submit" disabled)=row.requestSent
-            else
-              button.button.button--transparent.button--request(type="submit")=row.request
-
-          td(class=cellClass + 'status' + ' admin-table__cell--' + row.status.toLowerCase())
-            span=row.status
-          if row.timeLimit
-            td(class=cellClass + 'time-limit')=row.timeLimit
+          th(class=cellClass + 'schedule-time')=titleList.time
+          th(class=cellClass + 'select-company')=titleList.company
+          th(class=cellClass + 'button')=titleList.request
+          th(class=cellClass + 'status')=titleList.status
+          if titleList.timeLimit
+            th(class=cellClass + 'time-limit')=titleList.timeLimit
           else
+            th(class=cellClass + 'empty')
+      tbody
+        each row, i in rowList
+          tr
             td(class=cellClass + 'empty')
+            td(class=cellClass + 'schedule-time')=row.time
+            td(class=cellClass + 'select-company')
+              select(class="input-dropdown", id='select-company-0' + i)
+                each option in row.company
+                  option(value="Choose a company", class="input-dropdown__option")=option
+            td(class=cellClass + 'button')
+              if row.requestStatus === "sent"
+                button.button.button--transparent.button--request(type="submit" disabled)=row.requestSent
+              else
+                button.button.button--transparent.button--request(type="submit")=row.request
 
-//Таблица с отправленными сообщениями
+            td(class=cellClass + 'status' + ' admin-table__cell--' + row.status.toLowerCase())
+              span=row.status
+            if row.timeLimit
+              td(class=cellClass + 'time-limit')=row.timeLimit
+            else
+              td(class=cellClass + 'empty')
+
+//- Таблица с отправленными сообщениями
 
 mixin renderSentMessages(titleList, rowList)
-  table.admin-table
-    thead
-      tr.admin-table__row.admin-table__row--headline
-        th(class=cellClass + 'icon')=titleList.status
-        th(class=cellClass + 'destination')=titleList.to
-        th(class=cellClass + 'theme')=titleList.subject
-        th(class=cellClass + 'date')=titleList.date
-        th(class=cellClass + 'time')=titleList.time
-        th(class=cellClass + 'event')=titleList.event
-        th(class=cellClass + 'message')=titleList.message
-    tbody
-      each row in rowList
-        tr.admin-table__row.admin-table__row--messages
-          td(class=cellClass + 'icon' + ' admin-table__cell--' + row.status)
-            if row.status === "sent"
-              +icon("icon-mail-sent", 34, 15)
-          td(class=cellClass + 'destination admin-table__cell--sent-destination')=row.to
-          td(class=cellClass + 'theme')=row.subject
-          td(class=cellClass + 'date')=row.date
-          td(class=cellClass + 'time')=row.time
-          td(class=cellClass + 'event')=row.event
-          td(class=cellClass + 'message')=row.message
-            a.admin-table__message-link(href=row.openMessageLink)
-              +icon("icon-mail-arrow", 11, 19)
-          td(class=cellClass + 'mobile-event')=row.event
+  .admin-table
+    table
+      thead
+        tr
+          th(class=cellClass + 'icon')=titleList.status
+          th(class=cellClass + 'destination')=titleList.to
+          th(class=cellClass + 'theme')=titleList.subject
+          th(class=cellClass + 'date')=titleList.date
+          th(class=cellClass + 'time')=titleList.time
+          th(class=cellClass + 'event')=titleList.event
+          th(class=cellClass + 'message')=titleList.message
+      tbody
+        each row in rowList
+          tr
+            td(class=cellClass + 'icon' + ' admin-table__cell--' + row.status)
+              if row.status === "sent"
+                +icon("icon-mail-sent", 34, 15)
+            td(class=cellClass + 'destination admin-table__cell--sent-destination')=row.to
+            td(class=cellClass + 'theme')=row.subject
+            td(class=cellClass + 'date')=row.date
+            td(class=cellClass + 'time')=row.time
+            td(class=cellClass + 'event')=row.event
+            td(class=cellClass + 'message')=row.message
+              a.admin-table__message-link(href=row.openMessageLink)
+                +icon("icon-mail-arrow", 11, 19)
+            td.visible-sm(class=cellClass + 'mobile-event')=row.event
 
-//Таблица с входящими сообщениями
+//- Таблица с входящими сообщениями
 
 mixin renderInboxMessages(titleList, rowList)
-  table.admin-table
-    thead
-      tr.admin-table__row.admin-table__row--headline
-        th(class=cellClass + 'icon')=titleList.status
-        th(class=cellClass + 'destination')=titleList.from
-        th(class=cellClass + 'theme')=titleList.subject
-        th(class=cellClass + 'date')=titleList.date
-        th(class=cellClass + 'time')=titleList.time
-        if titleList.event
-          th(class=cellClass + 'event')=titleList.event
-        th(class=cellClass + 'message')=titleList.message
-    tbody
-      each row in rowList
-        tr.admin-table__row.admin-table__row--messages
-          td(class=cellClass + 'icon' + ' admin-table__cell--' + row.status)
-            if row.status === "new"
-              +icon("icon-mail-new", 22, 14)
-            if row.status === "opened"
-              +icon("icon-mail-opened", 22, 21)
-          td(class=cellClass + 'destination')=row.from
-          td(class=cellClass + 'theme')=row.subject
-          td(class=cellClass + 'date')=row.date
-          td(class=cellClass + 'time')=row.time
-          if row.event
-            td(class=cellClass + 'event')=row.event
-          td(class=cellClass + 'message')=row.message
-            a.admin-table__message-link(href=row.openMessageLink)
-              +icon("icon-mail-arrow", 11, 19)
-          if row.event
-            td(class=cellClass + 'mobile-event')=row.event
+  .admin-table
+    table
+      thead
+        tr
+          th(class=cellClass + 'icon')=titleList.status
+          th(class=cellClass + 'destination')=titleList.from
+          th(class=cellClass + 'theme')=titleList.subject
+          th(class=cellClass + 'date')=titleList.date
+          th(class=cellClass + 'time')=titleList.time
+          if titleList.event
+            th(class=cellClass + 'event')=titleList.event
+          th(class=cellClass + 'message')=titleList.message
+      tbody
+        each row in rowList
+          tr
+            td(class=cellClass + 'icon' + ' admin-table__cell--' + row.status)
+              if row.status === "new"
+                +icon("icon-mail-new", 22, 14)
+              if row.status === "opened"
+                +icon("icon-mail-opened", 22, 21)
+            td(class=cellClass + 'destination')=row.from
+            td(class=cellClass + 'theme')=row.subject
+            td(class=cellClass + 'date')=row.date
+            td(class=cellClass + 'time')=row.time
+            if row.event
+              td(class=cellClass + 'event')=row.event
+            td(class=cellClass + 'message')=row.message
+              a.admin-table__message-link(href=row.openMessageLink)
+                +icon("icon-mail-arrow", 11, 19)
+            if row.event
+              td.visible-sm(class=cellClass + 'mobile-event')=row.event
 
-//Таблица со списком гостей
+//- Таблица со списком гостей
 
 mixin renderGuestsList(titleList, rowList)
-  table.admin-table.admin-table--guest-list
-    thead
-      tr.admin-table__row.admin-table__row--headline
-        th(class=cellClass + 'company')=titleList.company
-        th(class=cellClass + 'person')=titleList.name
-        th(class=cellClass + 'person')=titleList.colleagueName
-        th(class=cellClass + 'select-time')=titleList.freeSlots
-        th(class=cellClass + 'button')=titleList.request
-        th(class=cellClass + 'button')=titleList.contact
-    tbody
-      each row, i in rowList
-        tr.admin-table__row.admin-table__row--guests
-          td(class=cellClass + 'company')=row.company
-            span=row.place
-          td(class=cellClass + 'person')=row.name
-            span=row.position
-          td(class=cellClass + 'person')=row.colleagueName
-            span=row.colleaguePosition
-          td(class=cellClass + 'select-time')
-            select(class="input-dropdown", id='select-time' + i)
-              each option in row.freeSlots
-                option(value=option, class="input-dropdown__option")=option
-          td(class=cellClass + 'button')
-            if row.requestStatus === "sent"
-              button.button.button--transparent.button--request(type="submit" disabled)=row.requestSent
-            else
-              button.button.button--transparent.button--request(type="submit")=row.request
-          td(class=cellClass + 'button')
-            button.button.button--transparent.button--request(type="submit")=row.contact
+  .admin-table
+    table
+      thead
+        tr
+          th(class=cellClass + 'guest-company')=titleList.company
+          th(class=cellClass + 'guest-person')=titleList.name
+          th(class=cellClass + 'guest-person')=titleList.colleagueName
+          th(class=cellClass + 'select-time')=titleList.freeSlots
+          th(class=cellClass + 'guest-button')
+            .admin-table__button-wrapper
+              span=titleList.request
+              span=titleList.contact
 
+      tbody
+        each row, i in rowList
+          tr
+            td(class=cellClass + 'guest-company')=row.company
+              span=row.place
+            td(class=cellClass + 'guest-person')=row.name
+              span=row.position
+            td(class=cellClass + 'guest-person')=row.colleagueName
+              span=row.colleaguePosition
+            td(class=cellClass + 'guest-select-time')
+              select(class="input-dropdown", id='select-time' + i)
+                each option in row.freeSlots
+                  option(value=option, class="input-dropdown__option")=option
+            td(class=cellClass + 'guest-button')
+              .admin-table__button-wrapper
+                if row.requestStatus === "sent"
+                  button.button.button--transparent.button--request(type="submit" disabled)=row.requestSent
+                else
+                  button.button.button--transparent.button--request(type="submit")=row.request
+                button.button.button--transparent.button--request(type="submit")=row.contact
 
 mixin renderHostedGuestsList(titleList, rowList)
-  table.admin-table.admin-table--guest
-    thead
-      tr.admin-table__row.admin-table__row--headline
-        th(class=cellClass + 'company')=titleList.company
-        th(class=cellClass + 'person')=titleList.name
-        th(class=cellClass + 'select-time')=titleList.freeSlots
-        th(class=cellClass + 'button')=titleList.request
-        th(class=cellClass + 'button')=titleList.contact
-    tbody
-      each row, i in rowList
-        tr.admin-table__row.admin-table__row--guests
-          td(class=cellClass + 'company')=row.company
-            span=row.place
-          td(class=cellClass + 'person admin-table__cell--mobile-person')=row.name
-            if row.position
-              span=row.position
-          td(class=cellClass + 'select-time')
-            select(class="input-dropdown", id='select-time-00' + i)
-              each option in row.freeSlots
-                option(value=option, class="input-dropdown__option")=option
-          td(class=cellClass + 'button')
-            if row.requestStatus === "sent"
-              button.button.button--transparent.button--request(type="submit" disabled)=row.requestSent
-            else
-              button.button.button--transparent.button--request(type="submit")=row.request
-          td(class=cellClass + 'button')
-            button.button.button--transparent.button--request(type="submit")=row.contact
+  .admin-table
+    table
+      thead
+        tr
+          th(class=cellClass + 'company')=titleList.company
+          th(class=cellClass + 'person')=titleList.name
+          th(class=cellClass + 'select-time')=titleList.freeSlots
+          th(class=cellClass + 'guest-button')
+            .admin-table__button-wrapper
+              span=titleList.request
+              span=titleList.contact
+
+      tbody
+        each row, i in rowList
+          tr
+            td(class=cellClass + 'company')=row.company
+              span=row.place
+            td(class=cellClass + 'person admin-table__cell--mobile-person')=row.name
+              if row.position
+                span=row.position
+            td(class=cellClass + 'select-time')
+              select(class="input-dropdown", id='select-time-00' + i)
+                each option in row.freeSlots
+                  option(value=option, class="input-dropdown__option")=option
+            td(class=cellClass + 'guest-button')
+              .admin-table__button-wrapper
+                if row.requestStatus === "sent"
+                  button.button.button--transparent.button--request(type="submit" disabled)=row.requestSent
+                else
+                  button.button.button--transparent.button--request(type="submit")=row.request
+                button.button.button--transparent.button--request(type="submit")=row.contact
+

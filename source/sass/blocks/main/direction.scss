@@ -103,6 +103,14 @@
 .direction__arrow {
   outline: none;
   align-self: center;
+  border: none;
+  background-color: transparent;
+}
+
+.direction__arrow svg {
+  width: 11px;
+  height: 19px;
+  color: $color-blue;
 }
 
 .direction__arrow--right {
@@ -169,6 +177,10 @@
 .direction__arrow,
 .direction-button-prev::after {
   content: none;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $color-blue;
 }
 
 .direction--exhibitors {
@@ -312,12 +324,6 @@
       margin: 0 5px;
       background: initial;
       border: 1px solid $color-blue;
-    }
-  }
-
-  .swiper-pagination-bullet-active {
-    @include viewport--sm {
-      background: $color-blue;
     }
   }
 }

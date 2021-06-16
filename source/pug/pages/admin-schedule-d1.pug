@@ -11,22 +11,29 @@ block main
   include ../data/pages/admin-schedule-d1
   include ../data/modal-colleague-admin
 
-  main.container.container--admin
+  main
     .admin.admin--schedule
-      +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
-      .hidden-sm
+      .container.container--admin
+        +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
         +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
-      .admin__control-wrapper.admin__control-wrapper--full-width
-        +renderAdminTabs(adminTabs)
-      +renderHeadline2("My Schedule")
-      +renderScheduleTabs(scheduleTabs, generatePDF)
-      +renderSchedule(adminScheduleTitles, adminSchedule)
-      .admin__mobile-block-wrapper
-        +renderGeneratePDFButton("#", "Generate PDF with schedule")
-      +renderWishList(wishList)
-      .admin__mobile-block-wrapper
-        +renderUpButton()
-    +renderSupportContacts(contactsList)
+
+        .admin__control-wrapper.admin__control-wrapper--full-width
+          +renderAdminTabs(adminTabs, modal=false, menu=true)
+
+        .admin__content-wrapper
+          h2.admin__section-title="My Schedule"
+          .admin__tabs-wrapper
+            +renderAdminTabs(scheduleTabs)
+            .admin__additional-buttons
+              button.button.button--transparent.hidden-sm(type="button") Generate PDF with schedule
+
+          +renderSchedule(adminScheduleTitles, adminSchedule)
+
+          .admin__mobile-block-wrapper.visible-sm
+            button.button.button--transparent(type="button")="Generate PDF with schedule"
+
+          +renderWishList(wishList)
+        +renderSupportContacts(contactsList)
 
 block append modals
   include ../data/mobile-admin-tabs
@@ -35,4 +42,4 @@ block append modals
   +mobileModal("modal--edit-colleague")
     +modalEditColleague(editCollegue)
   +mobileModal("modal--admin-menu")
-    +renderModalAdminTabs(adminTabs)
+    +renderModalAdminTabs(adminTabs, modal=true, menu=false)
