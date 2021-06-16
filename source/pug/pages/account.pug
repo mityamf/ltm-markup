@@ -8,6 +8,7 @@ block variables
 block main
   include ../data/pages/account
   include ../data/modal-colleague-admin
+  include ../data/modal-gallery
 
   main
     .container.account
@@ -40,6 +41,6 @@ block modals
   include ../data/modal-colleague-admin
 
   +modal("modal--gallery")
-    +modal-gallery()
+    +modal-gallery(modalImages)
   +modal("modal--edit-colleague")
     +modalEditColleague(editCollegue)
