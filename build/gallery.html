@@ -2870,31 +2870,31 @@
                 </div>
                 <div class="swiper-container photo__slider">
                   <ul class="gallery__sublist swiper-wrapper">
-                    <li class="gallery__sublist-item gallery__sublist-item--wide gallery__sublist-item--long swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item gallery__sublist-item--wide gallery__sublist-item--long swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-1.1.webp 1x, img/content/photo-thumbnail-1.1@2x.webp 2x"/><img src="img/content/photo-thumbnail-1.1.png" srcset="img/content/photo-thumbnail-1.1@2x.png 2x" width="460" height="222" alt="Фотография с мероприятия"/>
                           </picture>
                         </div></a></li>
-                    <li class="gallery__sublist-item gallery__sublist-item--long swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item gallery__sublist-item--long swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-1.2.webp 1x, img/content/photo-thumbnail-1.2@2x.webp 2x"/><img src="img/content/photo-thumbnail-1.2.png" srcset="img/content/photo-thumbnail-1.2@2x.png 2x" width="222" height="222" alt="Фотография с мероприятия"/>
                           </picture>
                         </div></a></li>
-                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-1.3.webp 1x, img/content/photo-thumbnail-1.3@2x.webp 2x"/><img src="img/content/photo-thumbnail-1.3.png" srcset="img/content/photo-thumbnail-1.3@2x.png 2x" width="222" height="154" alt="Фотография с мероприятия"/>
                           </picture>
                         </div></a></li>
-                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-1.4.webp 1x, img/content/photo-thumbnail-1.4@2x.webp 2x"/><img src="img/content/photo-thumbnail-1.4.png" srcset="img/content/photo-thumbnail-1.4@2x.png 2x" width="222" height="154" alt="Фотография с мероприятия"/>
                           </picture>
                         </div></a></li>
-                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper gallery__image-wrapper--add-link">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-1.5.webp 1x, img/content/photo-thumbnail-1.5@2x.webp 2x"/><img src="img/content/photo-thumbnail-1.5.png" srcset="img/content/photo-thumbnail-1.5@2x.png 2x" width="222" height="154" alt="Фотография с мероприятия"/>
@@ -2918,6 +2918,76 @@
                   </button>
                   <div class="photo__pagination"></div>
                 </div>
+                <div class="modal modal--preload modal--gallery">
+                  <div class="modal__wrapper">
+                    <div class="modal__overlay"></div>
+                    <div class="modal__content modal-gallery">
+                      <div class="modal-gallery__slider swiper-container">
+                        <ul class="modal-gallery__slider-wrapper swiper-wrapper">
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-1.1.jpg" srcset="img/slides/photo-fullsize-1.1@2x.jpg 2x" width="1412" height="941" alt="slide item no. 1"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-1.2.jpg" srcset="img/slides/photo-fullsize-1.2@2x.jpg 2x" width="1412" height="941" alt="slide item no. 2"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-1.3.jpg" srcset="img/slides/photo-fullsize-1.3@2x.jpg 2x" width="1412" height="941" alt="slide item no. 3"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-1.4.jpg" srcset="img/slides/photo-fullsize-1.4@2x.jpg 2x" width="1412" height="941" alt="slide item no. 4"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-1.5.jpg" srcset="img/slides/photo-fullsize-1.5@2x.jpg 2x" width="1412" height="941" alt="slide item no. 5"/>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="modal-gallery__mini-slider swiper-container" thumbsSlider="">
+                        <ul class="modal-gallery__mini-slider-wrapper swiper-wrapper">
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-1.1.jpg" srcset="img/slides/photo-fullsize-1.1@2x.jpg 2x" width="103" height="69" alt="slide item no. 1"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-1.2.jpg" srcset="img/slides/photo-fullsize-1.2@2x.jpg 2x" width="103" height="69" alt="slide item no. 2"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-1.3.jpg" srcset="img/slides/photo-fullsize-1.3@2x.jpg 2x" width="103" height="69" alt="slide item no. 3"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-1.4.jpg" srcset="img/slides/photo-fullsize-1.4@2x.jpg 2x" width="103" height="69" alt="slide item no. 4"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-1.5.jpg" srcset="img/slides/photo-fullsize-1.5@2x.jpg 2x" width="103" height="69" alt="slide item no. 5"/>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="modal-gallery__btn-next">
+                        <svg width="19" height="30" aria-hidden="true">
+                          <use xlink:href="#arrow-right-white"></use>
+                        </svg>
+                      </div>
+                      <div class="modal-gallery__btn-prev">
+                        <svg width="19" height="30" aria-hidden="true">
+                          <use xlink:href="#arrow-left-white"></use>
+                        </svg>
+                      </div>
+                      <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+                        <svg width="33" height="33" aria-hidden="true">
+                          <use xlink:href="#icon-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li class="gallery__block-item">
                 <div class="gallery__title-wrap">
@@ -2925,31 +2995,31 @@
                 </div>
                 <div class="swiper-container photo__slider">
                   <ul class="gallery__sublist swiper-wrapper">
-                    <li class="gallery__sublist-item gallery__sublist-item--wide gallery__sublist-item--long swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item gallery__sublist-item--wide gallery__sublist-item--long swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-2.1.webp 1x, img/content/photo-thumbnail-2.1@2x.webp 2x"/><img src="img/content/photo-thumbnail-2.1.png" srcset="img/content/photo-thumbnail-2.1@2x.png 2x" width="460" height="222" alt="Фотография с мероприятия"/>
                           </picture>
                         </div></a></li>
-                    <li class="gallery__sublist-item gallery__sublist-item--long swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item gallery__sublist-item--long swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-2.2.webp 1x, img/content/photo-thumbnail-2.2@2x.webp 2x"/><img src="img/content/photo-thumbnail-2.2.png" srcset="img/content/photo-thumbnail-2.2@2x.png 2x" width="222" height="222" alt="Фотография с мероприятия"/>
                           </picture>
                         </div></a></li>
-                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-2.3.webp 1x, img/content/photo-thumbnail-2.3@2x.webp 2x"/><img src="img/content/photo-thumbnail-2.3.png" srcset="img/content/photo-thumbnail-2.3@2x.png 2x" width="222" height="154" alt="Фотография с мероприятия"/>
                           </picture>
                         </div></a></li>
-                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-2.4.webp 1x, img/content/photo-thumbnail-2.4@2x.webp 2x"/><img src="img/content/photo-thumbnail-2.4.png" srcset="img/content/photo-thumbnail-2.4@2x.png 2x" width="222" height="154" alt="Фотография с мероприятия"/>
                           </picture>
                         </div></a></li>
-                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper gallery__image-wrapper--add-link">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-2.5.webp 1x, img/content/photo-thumbnail-2.5@2x.webp 2x"/><img src="img/content/photo-thumbnail-2.5.png" srcset="img/content/photo-thumbnail-2.5@2x.png 2x" width="222" height="154" alt="Фотография с мероприятия"/>
@@ -2973,6 +3043,76 @@
                   </button>
                   <div class="photo__pagination"></div>
                 </div>
+                <div class="modal modal--preload modal--gallery">
+                  <div class="modal__wrapper">
+                    <div class="modal__overlay"></div>
+                    <div class="modal__content modal-gallery">
+                      <div class="modal-gallery__slider swiper-container">
+                        <ul class="modal-gallery__slider-wrapper swiper-wrapper">
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-2.1.jpg" srcset="img/slides/photo-fullsize-2.1@2x.jpg 2x" width="1412" height="941" alt="slide item no. 1"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-2.2.jpg" srcset="img/slides/photo-fullsize-2.2@2x.jpg 2x" width="1412" height="941" alt="slide item no. 2"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-2.3.jpg" srcset="img/slides/photo-fullsize-2.3@2x.jpg 2x" width="1412" height="941" alt="slide item no. 3"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-2.4.jpg" srcset="img/slides/photo-fullsize-2.4@2x.jpg 2x" width="1412" height="941" alt="slide item no. 4 "/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-2.5.jpg" srcset="img/slides/photo-fullsize-2.5@2x.jpg 2x" width="1412" height="941" alt="slide item no. 5"/>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="modal-gallery__mini-slider swiper-container" thumbsSlider="">
+                        <ul class="modal-gallery__mini-slider-wrapper swiper-wrapper">
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-2.1.jpg" srcset="img/slides/photo-fullsize-2.1@2x.jpg 2x" width="103" height="69" alt="slide item no. 1"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-2.2.jpg" srcset="img/slides/photo-fullsize-2.2@2x.jpg 2x" width="103" height="69" alt="slide item no. 2"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-2.3.jpg" srcset="img/slides/photo-fullsize-2.3@2x.jpg 2x" width="103" height="69" alt="slide item no. 3"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-2.4.jpg" srcset="img/slides/photo-fullsize-2.4@2x.jpg 2x" width="103" height="69" alt="slide item no. 4 "/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-2.5.jpg" srcset="img/slides/photo-fullsize-2.5@2x.jpg 2x" width="103" height="69" alt="slide item no. 5"/>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="modal-gallery__btn-next">
+                        <svg width="19" height="30" aria-hidden="true">
+                          <use xlink:href="#arrow-right-white"></use>
+                        </svg>
+                      </div>
+                      <div class="modal-gallery__btn-prev">
+                        <svg width="19" height="30" aria-hidden="true">
+                          <use xlink:href="#arrow-left-white"></use>
+                        </svg>
+                      </div>
+                      <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+                        <svg width="33" height="33" aria-hidden="true">
+                          <use xlink:href="#icon-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li class="gallery__block-item">
                 <div class="gallery__title-wrap">
@@ -2980,31 +3120,31 @@
                 </div>
                 <div class="swiper-container photo__slider">
                   <ul class="gallery__sublist swiper-wrapper">
-                    <li class="gallery__sublist-item gallery__sublist-item--wide gallery__sublist-item--long swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item gallery__sublist-item--wide gallery__sublist-item--long swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-3.1.webp 1x, img/content/photo-thumbnail-3.1@2x.webp 2x"/><img src="img/content/photo-thumbnail-3.1.png" srcset="img/content/photo-thumbnail-3.1@2x.png 2x" width="460" height="222" alt="Фотография с мероприятия"/>
                           </picture>
                         </div></a></li>
-                    <li class="gallery__sublist-item gallery__sublist-item--long swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item gallery__sublist-item--long swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-3.2.webp 1x, img/content/photo-thumbnail-3.2@2x.webp 2x"/><img src="img/content/photo-thumbnail-3.2.png" srcset="img/content/photo-thumbnail-3.2@2x.png 2x" width="222" height="222" alt="Фотография с мероприятия"/>
                           </picture>
                         </div></a></li>
-                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-3.3.webp 1x, img/content/photo-thumbnail-3.3@2x.webp 2x"/><img src="img/content/photo-thumbnail-3.3.png" srcset="img/content/photo-thumbnail-3.3@2x.png 2x" width="222" height="154" alt="Фотография с мероприятия"/>
                           </picture>
                         </div></a></li>
-                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-3.4.webp 1x, img/content/photo-thumbnail-3.4@2x.webp 2x"/><img src="img/content/photo-thumbnail-3.4.png" srcset="img/content/photo-thumbnail-3.4@2x.png 2x" width="222" height="154" alt="Фотография с мероприятия"/>
                           </picture>
                         </div></a></li>
-                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper gallery__image-wrapper--add-link">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-3.5.webp 1x, img/content/photo-thumbnail-3.5@2x.webp 2x"/><img src="img/content/photo-thumbnail-3.5.png" srcset="img/content/photo-thumbnail-3.5@2x.png 2x" width="222" height="154" alt="Фотография с мероприятия"/>
@@ -3028,6 +3168,76 @@
                   </button>
                   <div class="photo__pagination"></div>
                 </div>
+                <div class="modal modal--preload modal--gallery">
+                  <div class="modal__wrapper">
+                    <div class="modal__overlay"></div>
+                    <div class="modal__content modal-gallery">
+                      <div class="modal-gallery__slider swiper-container">
+                        <ul class="modal-gallery__slider-wrapper swiper-wrapper">
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-3.1.jpg" srcset="img/slides/photo-fullsize-3.1@2x.jpg 2x" width="1412" height="941" alt="slide item no. 1"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-3.2.jpg" srcset="img/slides/photo-fullsize-3.2@2x.jpg 2x" width="1412" height="941" alt="slide item no. 2"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-3.3.jpg" srcset="img/slides/photo-fullsize-3.3@2x.jpg 2x" width="1412" height="941" alt="slide item no. 3"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-3.4.jpg" srcset="img/slides/photo-fullsize-3.4@2x.jpg 2x" width="1412" height="941" alt="slide item no. 4"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-3.5.jpg" srcset="img/slides/photo-fullsize-3.5@2x.jpg 2x" width="1412" height="941" alt="slide item no. 5"/>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="modal-gallery__mini-slider swiper-container" thumbsSlider="">
+                        <ul class="modal-gallery__mini-slider-wrapper swiper-wrapper">
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-3.1.jpg" srcset="img/slides/photo-fullsize-3.1@2x.jpg 2x" width="103" height="69" alt="slide item no. 1"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-3.2.jpg" srcset="img/slides/photo-fullsize-3.2@2x.jpg 2x" width="103" height="69" alt="slide item no. 2"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-3.3.jpg" srcset="img/slides/photo-fullsize-3.3@2x.jpg 2x" width="103" height="69" alt="slide item no. 3"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-3.4.jpg" srcset="img/slides/photo-fullsize-3.4@2x.jpg 2x" width="103" height="69" alt="slide item no. 4"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-3.5.jpg" srcset="img/slides/photo-fullsize-3.5@2x.jpg 2x" width="103" height="69" alt="slide item no. 5"/>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="modal-gallery__btn-next">
+                        <svg width="19" height="30" aria-hidden="true">
+                          <use xlink:href="#arrow-right-white"></use>
+                        </svg>
+                      </div>
+                      <div class="modal-gallery__btn-prev">
+                        <svg width="19" height="30" aria-hidden="true">
+                          <use xlink:href="#arrow-left-white"></use>
+                        </svg>
+                      </div>
+                      <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+                        <svg width="33" height="33" aria-hidden="true">
+                          <use xlink:href="#icon-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li class="gallery__block-item">
                 <div class="gallery__title-wrap">
@@ -3035,31 +3245,31 @@
                 </div>
                 <div class="swiper-container photo__slider">
                   <ul class="gallery__sublist swiper-wrapper">
-                    <li class="gallery__sublist-item gallery__sublist-item--wide gallery__sublist-item--long swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item gallery__sublist-item--wide gallery__sublist-item--long swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-4.1.webp 1x, img/content/photo-thumbnail-4.1@2x.webp 2x"/><img src="img/content/photo-thumbnail-4.1.png" srcset="img/content/photo-thumbnail-4.1@2x.png 2x" width="460" height="222" alt="Фотография с мероприятия"/>
                           </picture>
                         </div></a></li>
-                    <li class="gallery__sublist-item gallery__sublist-item--long swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item gallery__sublist-item--long swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-4.2.webp 1x, img/content/photo-thumbnail-4.2@2x.webp 2x"/><img src="img/content/photo-thumbnail-4.2.png" srcset="img/content/photo-thumbnail-4.2@2x.png 2x" width="222" height="222" alt="Фотография с мероприятия"/>
                           </picture>
                         </div></a></li>
-                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-4.3.webp 1x, img/content/photo-thumbnail-4.3@2x.webp 2x"/><img src="img/content/photo-thumbnail-4.3.png" srcset="img/content/photo-thumbnail-4.3@2x.png 2x" width="222" height="154" alt="Фотография с мероприятия"/>
                           </picture>
                         </div></a></li>
-                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-4.4.webp 1x, img/content/photo-thumbnail-4.4@2x.webp 2x"/><img src="img/content/photo-thumbnail-4.4.png" srcset="img/content/photo-thumbnail-4.4@2x.png 2x" width="222" height="154" alt="Фотография с мероприятия"/>
                           </picture>
                         </div></a></li>
-                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper gallery__image-wrapper--add-link">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-4.5.webp 1x, img/content/photo-thumbnail-4.5@2x.webp 2x"/><img src="img/content/photo-thumbnail-4.5.png" srcset="img/content/photo-thumbnail-4.5@2x.png 2x" width="222" height="154" alt="Фотография с мероприятия"/>
@@ -3083,6 +3293,76 @@
                   </button>
                   <div class="photo__pagination"></div>
                 </div>
+                <div class="modal modal--preload modal--gallery">
+                  <div class="modal__wrapper">
+                    <div class="modal__overlay"></div>
+                    <div class="modal__content modal-gallery">
+                      <div class="modal-gallery__slider swiper-container">
+                        <ul class="modal-gallery__slider-wrapper swiper-wrapper">
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-4.1.jpg" srcset="img/slides/photo-fullsize-4.1@2x.jpg 2x" width="1412" height="941" alt="slide item no. 1"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-4.2.jpg" srcset="img/slides/photo-fullsize-4.2@2x.jpg 2x" width="1412" height="941" alt="slide item no. 2"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-4.3.jpg" srcset="img/slides/photo-fullsize-4.3@2x.jpg 2x" width="1412" height="941" alt="slide item no. 3"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-4.4.jpg" srcset="img/slides/photo-fullsize-4.4@2x.jpg 2x" width="1412" height="941" alt="slide item no. 4"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-4.5.jpg" srcset="img/slides/photo-fullsize-4.5@2x.jpg 2x" width="1412" height="941" alt="slide item no. 5"/>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="modal-gallery__mini-slider swiper-container" thumbsSlider="">
+                        <ul class="modal-gallery__mini-slider-wrapper swiper-wrapper">
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-4.1.jpg" srcset="img/slides/photo-fullsize-4.1@2x.jpg 2x" width="103" height="69" alt="slide item no. 1"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-4.2.jpg" srcset="img/slides/photo-fullsize-4.2@2x.jpg 2x" width="103" height="69" alt="slide item no. 2"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-4.3.jpg" srcset="img/slides/photo-fullsize-4.3@2x.jpg 2x" width="103" height="69" alt="slide item no. 3"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-4.4.jpg" srcset="img/slides/photo-fullsize-4.4@2x.jpg 2x" width="103" height="69" alt="slide item no. 4"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-4.5.jpg" srcset="img/slides/photo-fullsize-4.5@2x.jpg 2x" width="103" height="69" alt="slide item no. 5"/>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="modal-gallery__btn-next">
+                        <svg width="19" height="30" aria-hidden="true">
+                          <use xlink:href="#arrow-right-white"></use>
+                        </svg>
+                      </div>
+                      <div class="modal-gallery__btn-prev">
+                        <svg width="19" height="30" aria-hidden="true">
+                          <use xlink:href="#arrow-left-white"></use>
+                        </svg>
+                      </div>
+                      <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+                        <svg width="33" height="33" aria-hidden="true">
+                          <use xlink:href="#icon-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li class="gallery__block-item">
                 <div class="gallery__title-wrap">
@@ -3090,31 +3370,31 @@
                 </div>
                 <div class="swiper-container photo__slider">
                   <ul class="gallery__sublist swiper-wrapper">
-                    <li class="gallery__sublist-item gallery__sublist-item--wide gallery__sublist-item--long swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item gallery__sublist-item--wide gallery__sublist-item--long swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-5.1.webp 1x, img/content/photo-thumbnail-5.1@2x.webp 2x"/><img src="img/content/photo-thumbnail-5.1.png" srcset="img/content/photo-thumbnail-5.1@2x.png 2x" width="460" height="222" alt="Фотография с мероприятия"/>
                           </picture>
                         </div></a></li>
-                    <li class="gallery__sublist-item gallery__sublist-item--long swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item gallery__sublist-item--long swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-5.2.webp 1x, img/content/photo-thumbnail-5.2@2x.webp 2x"/><img src="img/content/photo-thumbnail-5.2.png" srcset="img/content/photo-thumbnail-5.2@2x.png 2x" width="222" height="222" alt="Фотография с мероприятия"/>
                           </picture>
                         </div></a></li>
-                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-5.3.webp 1x, img/content/photo-thumbnail-5.3@2x.webp 2x"/><img src="img/content/photo-thumbnail-5.3.png" srcset="img/content/photo-thumbnail-5.3@2x.png 2x" width="222" height="154" alt="Фотография с мероприятия"/>
                           </picture>
                         </div></a></li>
-                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-5.4.webp 1x, img/content/photo-thumbnail-5.4@2x.webp 2x"/><img src="img/content/photo-thumbnail-5.4.png" srcset="img/content/photo-thumbnail-5.4@2x.png 2x" width="222" height="154" alt="Фотография с мероприятия"/>
                           </picture>
                         </div></a></li>
-                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#">
+                    <li class="gallery__sublist-item swiper-slide"><a class="gallery__link" href="#" data-modal="gallery-multiple">
                         <div class="gallery__image-wrapper gallery__image-wrapper--add-link">
                           <picture>
                             <source type="image/webp" srcset="img/content/photo-thumbnail-5.5.webp 1x, img/content/photo-thumbnail-5.5@2x.webp 2x"/><img src="img/content/photo-thumbnail-5.5.png" srcset="img/content/photo-thumbnail-5.5@2x.png 2x" width="222" height="154" alt="Фотография с мероприятия"/>
@@ -3137,6 +3417,76 @@
                     </svg>
                   </button>
                   <div class="photo__pagination"></div>
+                </div>
+                <div class="modal modal--preload modal--gallery">
+                  <div class="modal__wrapper">
+                    <div class="modal__overlay"></div>
+                    <div class="modal__content modal-gallery">
+                      <div class="modal-gallery__slider swiper-container">
+                        <ul class="modal-gallery__slider-wrapper swiper-wrapper">
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-5.1.jpg" srcset="img/slides/photo-fullsize-5.1@2x.jpg 2x" width="1412" height="941" alt="slide item no. 1"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-5.2.jpg" srcset="img/slides/photo-fullsize-5.2@2x.jpg 2x" width="1412" height="941" alt="slide item no. 2"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-5.3.jpg" srcset="img/slides/photo-fullsize-5.3@2x.jpg 2x" width="1412" height="941" alt="slide item no. 3"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-5.4.jpg" srcset="img/slides/photo-fullsize-5.4@2x.jpg 2x" width="1412" height="941" alt="slide item no. 4"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__slide swiper-slide">
+                            <div class="modal-gallery__image-container"><img src="img/slides/photo-fullsize-5.5.jpg" srcset="img/slides/photo-fullsize-5.5@2x.jpg 2x" width="1412" height="941" alt="slide item no. 5"/>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="modal-gallery__mini-slider swiper-container" thumbsSlider="">
+                        <ul class="modal-gallery__mini-slider-wrapper swiper-wrapper">
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-5.1.jpg" srcset="img/slides/photo-fullsize-5.1@2x.jpg 2x" width="103" height="69" alt="slide item no. 1"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-5.2.jpg" srcset="img/slides/photo-fullsize-5.2@2x.jpg 2x" width="103" height="69" alt="slide item no. 2"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-5.3.jpg" srcset="img/slides/photo-fullsize-5.3@2x.jpg 2x" width="103" height="69" alt="slide item no. 3"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-5.4.jpg" srcset="img/slides/photo-fullsize-5.4@2x.jpg 2x" width="103" height="69" alt="slide item no. 4"/>
+                            </div>
+                          </li>
+                          <li class="modal-gallery__mini-slide swiper-slide">
+                            <div class="modal-gallery__mini-image-container"><img src="img/slides/photo-fullsize-5.5.jpg" srcset="img/slides/photo-fullsize-5.5@2x.jpg 2x" width="103" height="69" alt="slide item no. 5"/>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="modal-gallery__btn-next">
+                        <svg width="19" height="30" aria-hidden="true">
+                          <use xlink:href="#arrow-right-white"></use>
+                        </svg>
+                      </div>
+                      <div class="modal-gallery__btn-prev">
+                        <svg width="19" height="30" aria-hidden="true">
+                          <use xlink:href="#arrow-left-white"></use>
+                        </svg>
+                      </div>
+                      <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+                        <svg width="33" height="33" aria-hidden="true">
+                          <use xlink:href="#icon-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </li>
             </ul>

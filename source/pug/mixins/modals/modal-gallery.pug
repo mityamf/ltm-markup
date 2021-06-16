@@ -1,5 +1,5 @@
-mixin modal-gallery()
-  include ../../data/modal-gallery
+mixin modal-gallery(modalImages)
+
   .modal-gallery__slider.swiper-container
     ul.modal-gallery__slider-wrapper.swiper-wrapper
       each image in modalImages
