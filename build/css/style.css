@@ -8631,29 +8631,26 @@ table {
       .top-wrapper__title {
         font-size: 24px;
         line-height: 29px; } }
-  .top-wrapper__place {
+  .top-wrapper__text {
     display: block;
     width: 100%;
-    padding-top: 1px; }
-    @media (max-width: 1439px) {
-      .top-wrapper__place {
-        padding-top: 4px; } }
-  .top-wrapper__place > p {
     margin: 0;
     font-size: 24px;
     line-height: 29px;
     font-weight: lighter;
     color: #0098c1;
     letter-spacing: 1px; }
+    @media (max-width: 1439px) {
+      .top-wrapper__text {
+        padding-top: 4px; } }
     @media (max-width: 767px) {
-      .top-wrapper__place > p {
+      .top-wrapper__text {
         font-size: 16px;
         line-height: 19px;
         letter-spacing: 0.7px; } }
   .top-wrapper__dates {
     display: block;
     width: 100%;
-    padding-top: 3px;
     font-size: 16px;
     line-height: 20px; }
 
@@ -11020,7 +11017,8 @@ table {
     line-height: 12px; }
 
 .info-block {
-  display: inline-block; }
+  display: inline-block;
+  padding-left: 30px; }
   .info-block__top-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;

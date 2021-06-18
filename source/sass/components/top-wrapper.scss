@@ -28,17 +28,9 @@
     }
   }
 
-  &__place {
+  &__text {
     display: block;
     width: 100%;
-    padding-top: 1px;
-
-    @include viewport--lg {
-      padding-top: 4px;
-    }
-  }
-
-  &__place > p {
     margin: 0;
 
     font-size: 24px;
@@ -46,6 +38,10 @@
     font-weight: lighter;
     color: $color-blue;
     letter-spacing: 1px;
+
+    @include viewport--lg {
+      padding-top: 4px;
+    }
 
     @include viewport--sm {
       font-size: 16px;
@@ -57,77 +53,8 @@
   &__dates {
     display: block;
     width: 100%;
-    padding-top: 3px;
 
     font-size: 16px;
     line-height: 20px;
   }
 }
-
-
-//.top-wrapper {
-//  display: flex;
-//  justify-content: space-between;
-//  align-items: center;
-//  width: 100%;
-//  padding-top: 22px;
-//
-//  background-color: inherit;
-//
-//  @include viewport--sm {
-//    flex-direction: row-reverse;
-//    align-items: baseline;
-//    padding-top: 32px;
-//  }
-//
-//  &--mobile {
-//    @include viewport--sm {
-//      flex-direction: row;
-//      text-align: left;
-//    }
-//  }
-//
-//  .back-link {
-//    display: flex;
-//    align-items: center;
-//    justify-content: space-between;
-//    margin-bottom: 15px;
-//
-//    font-size: 14px;
-//    line-height: 17px;
-//
-//    &:hover,
-//    &:focus {
-//      opacity: 0.8;
-//    }
-//
-//    &:active {
-//      opacity: 0.5;
-//    }
-//  }
-//
-//  svg {
-//    margin-right: 5px;
-//    vertical-align: middle;
-//    fill: $color-blue;
-//  }
-//
-//  .title--h2 {
-//    @include viewport--sm {
-//      margin-bottom: 0;
-//    }
-//  }
-//}
-//
-//.container--no-padding .top-wrapper {
-//  padding-bottom: 0;
-//
-//  @include viewport--sm {
-//    padding: 29px 17px 25px 17px;
-//  }
-//}
-//
-//.admin-headline .top-wrapper {
-//  padding-top: 0;
-//}
-//
