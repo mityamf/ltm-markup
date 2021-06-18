@@ -5,7 +5,7 @@ const initLogin = () => {
   const loginShowBtn = document.querySelector('.header__link--sign-in');
   const loginCloseBtn = login.querySelector('.login__close');
   const showPasswordBtn = login.querySelector('.login__show-password');
-  const inputPassword = login.querySelector('.login__input-password');
+  const inputPassword = login.querySelector('input[type="password"]');
   const form = login.querySelector('.login__form');
   const forgotPasswordLink = login.querySelector('.login__forgot');
   const userEmail = login.querySelector('#login-email');
@@ -107,17 +107,17 @@ const initLogin = () => {
     });
 
     window.addEventListener('resize', checkScreenWidth);
+
+    showPasswordBtn.addEventListener('click', () => {
+      showPasswordBtn.classList.toggle('login__show-password--active');
+
+      if (inputPassword.getAttribute('type') === 'password') {
+        inputPassword.setAttribute('type', 'text');
+      } else {
+        inputPassword.setAttribute('type', 'password');
+      }
+    });
   }
-
-  showPasswordBtn.addEventListener('click', () => {
-    showPasswordBtn.classList.toggle('login__show-password--active');
-
-    if (inputPassword.getAttribute('type') === 'password') {
-      inputPassword.setAttribute('type', 'text');
-    } else {
-      inputPassword.setAttribute('type', 'password');
-    }
-  });
 };
 
 export {initLogin};

@@ -5,7 +5,7 @@ const initGallerySlider = () => {
   let gallerySlidersBlocks = document.querySelectorAll('.photo__slider');
   let breakpointWidth = 768;
 
-  function initSwiper() {
+  const initSwiper = () => {
     let screenWidth = window.innerWidth;
     if (screenWidth < breakpointWidth && gallerySlider === null) {
       gallerySlidersBlocks.forEach(function (gallerySliderBlock) {
@@ -27,7 +27,7 @@ const initGallerySlider = () => {
         gallerySlider = null;
       });
     }
-  }
+  };
 
   initSwiper();
 

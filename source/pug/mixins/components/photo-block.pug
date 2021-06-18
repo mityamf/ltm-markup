@@ -1,4 +1,4 @@
-mixin photo-block()
+mixin photo-block(photoList)
   ul.gallery__block-list
     each item in photoList
       li.gallery__block-item
@@ -10,38 +10,41 @@ mixin photo-block()
               if image.isLong
                 if image.isWide
                   li.gallery__sublist-item.gallery__sublist-item--wide.gallery__sublist-item--long.swiper-slide
-                    a.gallery__link(href="#")
+                    a.gallery__link(href="#" data-modal="gallery-multiple")
                       .gallery__image-wrapper
                         picture
-                          +webp("content", `${image.src}`)
-                          +img("content", `${image.src}`, "png", 460, 222, "Фотография с мероприятия")
+                          +webp("content", `${image.srcThumbnail}`)
+                          +img("content", `${image.srcThumbnail}`, "png", 460, 222, "Фотография с мероприятия")
                 else
                   li.gallery__sublist-item.gallery__sublist-item--long.swiper-slide
-                        a.gallery__link(href="#")
+                        a.gallery__link(href="#" data-modal="gallery-multiple")
                           .gallery__image-wrapper
                             picture
-                              +webp("content", `${image.src}`)
-                              +img("content", `${image.src}`, "png", 222, 222, "Фотография с мероприятия")
+                              +webp("content", `${image.srcThumbnail}`)
+                              +img("content", `${image.srcThumbnail}`, "png", 222, 222, "Фотография с мероприятия")
               else
                 if image.text
                   li.gallery__sublist-item.swiper-slide
-                    a.gallery__link(href="#")
+                    a.gallery__link(href="#" data-modal="gallery-multiple")
                       .gallery__image-wrapper.gallery__image-wrapper--add-link
                         picture
-                          +webp("content", `${image.src}`)
-                          +img("content", `${image.src}`, "png", 222, 154, "Фотография с мероприятия")
+                          +webp("content", `${image.srcThumbnail}`)
+                          +img("content", `${image.srcThumbnail}`, "png", 222, 154, "Фотография с мероприятия")
                         .gallery__desc
                           +icon("icon-fb", 11, 22)
                           span #{image.text}
                 else
                   li.gallery__sublist-item.swiper-slide
-                    a.gallery__link(href="#")
+                    a.gallery__link(href="#" data-modal="gallery-multiple")
                       .gallery__image-wrapper
                         picture
-                          +webp("content", `${image.src}`)
-                          +img("content", `${image.src}`, "png", 222, 154, "Фотография с мероприятия")
+                          +webp("content", `${image.srcThumbnail}`)
+                          +img("content", `${image.srcThumbnail}`, "png", 222, 154, "Фотография с мероприятия")
           button(type="button").photo__button-next
             +icon("icon-arrow_right_white", 19, 30)
           button(type="button").photo__button-prev
             +icon("icon-arrow_right_white", 19, 30)
           .photo__pagination
+        +modal("modal--gallery")
+          +modal-gallery(item.images)
+

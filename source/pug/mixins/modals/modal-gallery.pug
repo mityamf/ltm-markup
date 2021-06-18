@@ -1,5 +1,5 @@
-mixin modal-gallery()
-  include ../../data/modal-gallery
+mixin modal-gallery(modalImages)
+
   .modal-gallery__slider.swiper-container
     ul.modal-gallery__slider-wrapper.swiper-wrapper
       each image in modalImages
@@ -12,7 +12,7 @@ mixin modal-gallery()
         li.modal-gallery__mini-slide.swiper-slide
           .modal-gallery__mini-image-container
             +img("slides", image.src, "jpg", "103", "69", image.altText)
-  .modal-gallery__btn-next
+  button(type="button").modal-gallery__btn-next
     +icon("arrow-right-white", "19", "30")
-  .modal-gallery__btn-prev
-    +icon("arrow-left-white", "19", "30")
+  button(type="button").modal-gallery__btn-prev
+    +icon("arrow-right-white", "19", "30")

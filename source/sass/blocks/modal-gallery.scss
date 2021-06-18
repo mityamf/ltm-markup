@@ -18,41 +18,50 @@
 .modal-gallery__mini-slide {
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
-.modal-gallery__btn-next {
+.modal-gallery__btn-next,
+.modal-gallery__btn-prev {
   position: absolute;
   top: 50%;
-  right: -33px;
-  transform: translate(0, -162%);
   cursor: pointer;
   user-select: none;
+  transform: translate(0, -162%);
+  background-color: $color-transparent;
+  width: 19px;
+  height: 30px;
+  color: $color-default-white;
+  padding: 0;
+  border: none;
 
   @include viewport--lg {
     transform: translate(0, -86%);
-    right: -27px;
   }
 
   svg {
-    fill: $color-default-white;
+    width: 19px;
+    height: 30px;
+  }
+}
+
+.modal-gallery__btn-next {
+  right: -33px;
+
+  @include viewport--lg {
+    right: -27px;
   }
 }
 
 .modal-gallery__btn-prev {
-  position: absolute;
-  top: 50%;
   left: -33px;
-  transform: translate(0, -162%);
-  cursor: pointer;
-  user-select: none;
-
-  @include viewport--lg {
-    transform: translate(0, -86%);
-    left: -27px;
-  }
 
   svg {
-    fill: $color-default-white;
+    transform: rotate(-180deg);
+  }
+
+  @include viewport--lg {
+    left: -27px;
   }
 }
 
@@ -95,8 +104,4 @@
     object-fit: cover;
     object-position: center;
   }
-}
-
-.modal-gallery__mini-slide {
-  cursor: pointer;
 }
