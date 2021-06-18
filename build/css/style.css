@@ -9588,7 +9588,7 @@ table {
   @media (max-width: 767px) {
     .admin__control-wrapper {
           grid-template-areas: "tabs control" "title title";
-      padding: 20px 0 0 0; } }
+      padding: 20px 0; } }
   .admin__control-wrapper .tabs {
     grid-column: tabs; }
     @media (max-width: 767px) {
@@ -9725,6 +9725,9 @@ table {
 .admin__section > p:last-of-type {
   margin-bottom: 0; }
 
+.admin__section {
+  padding-bottom: 10px; }
+
 @media (max-width: 767px) {
   .admin--mobile .participants {
     border: none; }
@@ -9799,7 +9802,7 @@ table {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      padding: 10px 0; } }
+      padding: 0; } }
   .tabs__list {
     display: -webkit-box;
     display: -ms-flexbox;
