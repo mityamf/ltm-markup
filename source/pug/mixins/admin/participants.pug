@@ -18,10 +18,8 @@ mixin renderParticipantList(participantsHeadline, participantsInfo, participants
             img(src=participant.photo alt="Фото админа")
 
           .participants__info-wrapper
-            .participants__name
-              h4 !{participant.name}
-            .participants__position
-              p !{participant.position}
+            h4.participants__name !{participant.name}
+            p.participants__position !{participant.position}
           button.participants__edit-button(data-modal="edit-colleague")
             +icon("icon-write", 18, 24)
 

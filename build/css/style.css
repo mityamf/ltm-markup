@@ -7680,6 +7680,7 @@ table {
   display: block;
   border: none;
   background-color: transparent;
+  color: #a7a7a7;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
   cursor: pointer; }
@@ -7690,8 +7691,7 @@ table {
 
 .account__edit-button svg {
   width: 18px;
-  height: 24px;
-  color: #a7a7a7; }
+  height: 24px; }
 
 .account__admin-wrapper {
   display: -webkit-box;
@@ -9715,7 +9715,7 @@ table {
     padding-bottom: 27px; } }
 
 .tabs {
-  padding: 3px 0 18px; }
+  padding: 18px 0; }
   @media (max-width: 767px) {
     .tabs {
       display: -webkit-box;
@@ -9724,7 +9724,7 @@ table {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      padding-bottom: 10px; } }
+      padding: 10px 0; } }
   .tabs__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -9739,6 +9739,7 @@ table {
        -moz-column-gap: 15px;
             column-gap: 15px;
     row-gap: 10px;
+    margin: 0;
     list-style-type: none; }
     @media (max-width: 1439px) {
       .tabs__list {
@@ -10280,14 +10281,14 @@ table {
         display: block;
         width: 100%;
         text-align: center; } }
-  .participants__name > h4 {
+  .participants__name {
     margin: 0;
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
     color: #505050;
     word-break: break-word; }
-  .participants__position > p {
+  .participants__position {
     margin: 0;
     font-size: 12px;
     line-height: 20px;
@@ -10313,7 +10314,8 @@ table {
     background-color: transparent;
     width: 50px;
     height: 50px;
-    cursor: pointer; }
+    cursor: pointer;
+    color: #a7a7a7; }
     @media (max-width: 767px) {
       .participants__edit-button {
         position: absolute;
@@ -10324,7 +10326,6 @@ table {
     .participants__edit-button:active {
       opacity: 0.5; }
   .participants__edit-button svg {
-    color: #a7a7a7;
     width: 18px;
     height: 24px; }
 
