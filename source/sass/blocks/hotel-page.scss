@@ -169,25 +169,8 @@
   }
 
   .back-link {
-    display: flex;
     clear: both;
-    align-items: center;
-
-    svg {
-      margin-right: 5px;
-      fill: $color-blue;
-    }
-
-    &:hover,
-    &:focus {
-      opacity: 0.8;
-    }
-
-    &:active {
-      opacity: 0.5;
-    }
   }
-
 
   &__links > .back-link {
     margin: 0 21px 33px auto;
