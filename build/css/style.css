@@ -8932,11 +8932,10 @@ table {
     padding: 0; }
   .support-contacts .swiper-pagination {
     bottom: -4px;
-    visibility: hidden; }
+    display: none; }
     @media (max-width: 767px) {
       .support-contacts .swiper-pagination {
         display: block;
-        visibility: visible;
         margin: 0 auto; } }
   @media (max-width: 767px) {
     .support-contacts .swiper-pagination-bullet {
@@ -11178,6 +11177,8 @@ table {
         padding-right: 0; } }
   .edit-colleague__photo-column img {
     margin: 5px auto 16px;
+    width: 103px;
+    height: 103px;
     -o-object-fit: cover;
        object-fit: cover; }
   .edit-colleague__content-column {
@@ -11201,16 +11202,16 @@ table {
     font-size: 16px;
     line-height: 19px;
     color: #ffffff; }
-  .edit-colleague__upload-info p {
+  .edit-colleague__upload-info {
     display: block;
     text-align: center;
     margin: 0;
-    padding-top: 0;
+    padding-top: 15px;
     font-size: 12px;
     line-height: 20px;
     color: #9f9f9f; }
     @media (max-width: 767px) {
-      .edit-colleague__upload-info p {
+      .edit-colleague__upload-info {
         display: none; } }
 
 .modal--edit-colleague .modal__content {

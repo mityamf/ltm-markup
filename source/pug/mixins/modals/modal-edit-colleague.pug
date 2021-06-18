@@ -5,10 +5,7 @@ mixin modalEditColleague(data)
       img(src=data.photo, width=103, height=103, alt="Фото админа")
       label.edit-colleague__photo-upload.button.button--blue Загрузить
         input(type="file").visually-hidden
-      .edit-colleague__upload-info
-        p="JPG, PNG"
-        p="Min. 200x200 px."
-        p="Max. 3 mb."
+      p.edit-colleague__upload-info !{data.uploadDescription}
     .edit-colleague__content-column
       .edit-colleague__form
         form(action="#" method="POST")
