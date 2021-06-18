@@ -21,17 +21,17 @@ block main
           +renderAdminTabs(adminTabs, modal=false, menu=true)
 
         .admin__text-wrapper
-          .admin__section.admin__section--first
+          .admin__section.admin__section--info
             .text-content
-              h2.admin__section-title=deadlinesInfoContent[0].title
+              h2.title.title--h2=deadlinesInfoContent[0].title
               +renderTextContentBlock(deadlinesInfoContent[0].textList)
 
-          .admin__section.admin__section--second
+          .admin__section.admin__section--details
             .text-content
-              h2.admin__section-title=deadlinesInfoContent[1].title
+              h2.title.title--h2=deadlinesInfoContent[1].title
               +renderTextContentBlock(deadlinesInfoContent[1].textList)
 
-          .admin__section.admin__section--third
+          .admin__section.admin__section--links
             +renderDownloadFiles(downloadHeadline, downloadList, hasLeftPadding=true)
 
         +renderSupportContacts(contactsList)
