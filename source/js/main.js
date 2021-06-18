@@ -19,6 +19,7 @@ import {buyerSwiper} from './modules/sliders/buyer-swiper';
 import {directionSlider} from './modules/sliders/direction-swiper';
 // import {initResizePhotos} from './modules/admin-gallery';
 import {initLogin} from './modules/init-login';
+import {initCookies} from './modules/cookies';
 
 // Utils
 // ---------------------------------
@@ -47,3 +48,4 @@ regSwiper();
 buyerSwiper();
 directionSlider();
 initLogin();
+initCookies();
