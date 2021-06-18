@@ -184,6 +184,11 @@
 
   &__section--links {
     grid-area: links;
+    padding-left: 20px;
+
+    @include viewport--sm {
+      padding-left: 0;
+    }
   }
 
   &__section > p:first-of-type {
@@ -192,10 +197,6 @@
 
   &__section > p:last-of-type {
     margin-bottom: 0;
-  }
-
-  &__section {
-    padding: 10px 0;
   }
 
   &--mobile {

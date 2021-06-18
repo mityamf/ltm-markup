@@ -1244,7 +1244,6 @@ textarea {
 .title--h2 {
   margin-bottom: 15px;
   margin-top: 0;
-  padding-right: 15px;
   font-size: 38px;
   font-weight: lighter;
   line-height: 46px;
@@ -9681,7 +9680,8 @@ table {
 .admin__section--links {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
-  grid-area: links; }
+  grid-area: links;
+  padding-left: 20px; }
 
 .admin__button-wrapper .button > .admin__section--links {
   -ms-grid-row: 3;
@@ -9715,15 +9715,15 @@ table {
     .admin__section--links {
     -ms-grid-row: 3;
     -ms-grid-column: 1; } }
+  @media (max-width: 767px) {
+    .admin__section--links {
+      padding-left: 0; } }
 
 .admin__section > p:first-of-type {
   margin-top: 0; }
 
 .admin__section > p:last-of-type {
   margin-bottom: 0; }
-
-.admin__section {
-  padding: 10px 0; }
 
 @media (max-width: 767px) {
   .admin--mobile .participants {
