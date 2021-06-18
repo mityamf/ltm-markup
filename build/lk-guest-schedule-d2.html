@@ -2822,11 +2822,11 @@
                 <h3 class="login__title">Authorization for Exhibitors and Buyers</h3>
                 <div class="login__form-input">
                   <label class="visually-hidden" for="login-email">Enter your login</label>
-                  <input type="email" name="login-email" id="login-email" placeholder="Your login" required="required"/><a class="login__link login__link--lk-guest" href="lk-guest.html">Enter for Guest</a>
+                  <input type="email" name="login-email" id="login-email" placeholder="Your login"/><a class="login__link login__link--lk-guest" href="lk-guest.html">Enter for Guest</a>
                 </div>
                 <div class="login__form-input">
                   <label class="visually-hidden" for="login-password">Inter your password</label>
-                  <input type="password" name="login-password" id="login-password" placeholder="Password" required="required"/>
+                  <input type="password" name="login-password" id="login-password" placeholder="Password"/>
                   <button class="login__show-password" type="button" title="Показать/Скрыть пароль" aria-label="Показать/скрыть пароль">
                     <svg class="login__show-password-img login__show-password-img--hide" width="30" height="20" aria-hidden="true">
                       <use xlink:href="#ico_nonshowpassword"></use>
@@ -2861,12 +2861,8 @@
               <div class="top-wrapper__headline-wrapper">
                 <h2 class="title title--h2 top-wrapper__title">Luxury Travel Mart Moscow Spring’ 2020</h2>
               </div>
-              <div class="top-wrapper__place">
-                <p>at Hyatt Regency Moscow Petrovsky Park</p>
-              </div>
-              <div class="top-wrapper__dates">
-                <p><time datetime="2011-11-18">27</time> – <time datetime="2011-11-18">28 February 2020</time></p>
-              </div>
+              <p class="top-wrapper__text">at Hyatt Regency Moscow Petrovsky Park</p>
+              <p class="top-wrapper__dates"><time datetime="2011-11-18">27</time> – <time datetime="2011-11-18">28 February 2020</time></p>
             </div>
             <div class="admin__block-wrapper">
               <div class="participants hidden-sm participants--half-width">
@@ -2875,12 +2871,8 @@
                   <li class="participants__item">
                     <div class="participants__note-wrapper"><img src="img/content/admin-photo-2.jpg" alt="Фото админа"/><span class="participants__note">Администратор</span></div>
                     <div class="participants__info-wrapper">
-                      <div class="participants__name">
-                        <h4>Alexey<br>Stavsky</h4>
-                      </div>
-                      <div class="participants__position">
-                        <p>Director</p>
-                      </div>
+                      <h4 class="participants__name">Alexey<br>Stavsky</h4>
+                      <p class="participants__position">Director</p>
                     </div>
                     <button class="participants__edit-button" data-modal="edit-colleague">
                       <svg width="18" height="24" aria-hidden="true">
@@ -2891,12 +2883,8 @@
                   <li class="participants__item">
                     <div class="participants__note-wrapper"><img src="img/content/admin-photo-3.jpg" alt="Фото админа"/><span class="participants__note">Коллега</span></div>
                     <div class="participants__info-wrapper">
-                      <div class="participants__name">
-                        <h4>Alyona<br>Alexandrova-Fedorova</h4>
-                      </div>
-                      <div class="participants__position">
-                        <p>PR-Manager</p>
-                      </div>
+                      <h4 class="participants__name">Alyona<br>Alexandrova-Fedorova</h4>
+                      <p class="participants__position">PR-Manager</p>
                     </div>
                     <button class="participants__edit-button" data-modal="edit-colleague">
                       <svg width="18" height="24" aria-hidden="true">
@@ -2917,12 +2905,10 @@
                 <div class="info-block__text-wrapper">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
-                <div class="info-block__more-wrapper"><a class="button button--open" href="newpage.html">
+                <div class="info-block__more-wrapper"><a class="button button--open" href="main.html">
                     <svg width="20" height="14" aria-hidden="true">
                       <use xlink:href="#icon-arrow"></use>
                     </svg><span class="visually-hidden">read more</span></a></div>
-                <!--a.info-block__more-link(href="#", aria-label="Read More")-->
-                <!--  +icon("icon-read-more", 103, 22)-->
               </div>
             </div>
             <div class="admin__control-wrapper admin__control-wrapper--full-width">
@@ -2942,64 +2928,68 @@
             </div>
             <div class="admin__content-wrapper">
               <h2 class="admin__section-title">Список участников</h2>
-              <div class="tabs">
-                <button class="tabs__menu-button" type="button" data-modal="admin-menu">
-                  <svg width="32" height="32" aria-hidden="true">
-                    <use xlink:href="#icon-mobile-menu"></use>
-                  </svg>
-                </button>
-                <ul class="tabs__list">
-                  <li class="tabs__item"><a class="tabs__link" href="lk-guest-schedule-d1.html">День 1<span class="hidden-sm">&nbsp;&ndash;&nbsp;</span><time datetime="2001-05-15T19:00">27.02.2020</time></a></li>
-                  <li class="tabs__item tabs__item--active"><a class="tabs__link">День 2<span class="hidden-sm">&nbsp;&ndash;&nbsp;</span><time datetime="2001-05-15T19:00">28.02.2020</time></a></li>
-                </ul>
+              <div class="admin__tabs-wrapper">
+                <div class="tabs">
+                  <button class="tabs__menu-button" type="button" data-modal="admin-menu">
+                    <svg width="32" height="32" aria-hidden="true">
+                      <use xlink:href="#icon-mobile-menu"></use>
+                    </svg>
+                  </button>
+                  <ul class="tabs__list">
+                    <li class="tabs__item"><a class="tabs__link" href="lk-guest-schedule-d1.html">День 1<span class="hidden-sm">&nbsp;&ndash;&nbsp;</span><time datetime="2001-05-15T19:00">27.02.2020</time></a></li>
+                    <li class="tabs__item tabs__item--active"><a class="tabs__link">День 2<span class="hidden-sm">&nbsp;&ndash;&nbsp;</span><time datetime="2001-05-15T19:00">28.02.2020</time></a></li>
+                  </ul>
+                </div>
+                <div class="admin__additional-buttons">
+                  <button class="button button--transparent hidden-sm" type="button">Скачать расписание PDF</button>
+                </div>
               </div>
-              <div class="admin__additional-buttons">
-                <button class="button button--transparent hidden-sm" type="button">Скачать расписание PDF</button>
+              <div class="admin-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="admin-table__cell admin-table__cell--empty"></th>
+                      <th class="admin-table__cell admin-table__cell--schedule-time">Время</th>
+                      <th class="admin-table__cell admin-table__cell--select-company">Участник</th>
+                      <th class="admin-table__cell admin-table__cell--button">Запрос</th>
+                      <th class="admin-table__cell admin-table__cell--status">Статус</th>
+                      <th class="admin-table__cell admin-table__cell--time-limit">Времени осталось</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="admin-table__cell admin-table__cell--empty"></td>
+                      <td class="admin-table__cell admin-table__cell--schedule-time">10:00 – 10:10</td>
+                      <td class="admin-table__cell admin-table__cell--select-company">
+                        <select class="input-dropdown" id="select-company-00">
+                          <option class="input-dropdown__option" value="Choose a company">Choose a company</option>
+                          <option class="input-dropdown__option" value="Choose a company">Mandarin International Hotel Group</option>
+                        </select>
+                      </td>
+                      <td class="admin-table__cell admin-table__cell--button">
+                        <button class="button button--transparent button--request" type="submit" disabled="disabled">Request sent</button>
+                      </td>
+                      <td class="admin-table__cell admin-table__cell--status admin-table__cell--free"><span>Free</span></td>
+                      <td class="admin-table__cell admin-table__cell--time-limit">12 days</td>
+                    </tr>
+                    <tr>
+                      <td class="admin-table__cell admin-table__cell--empty"></td>
+                      <td class="admin-table__cell admin-table__cell--schedule-time">10:00 – 10:10</td>
+                      <td class="admin-table__cell admin-table__cell--select-company">
+                        <select class="input-dropdown" id="select-company-01">
+                          <option class="input-dropdown__option" value="Choose a company">Choose a company</option>
+                          <option class="input-dropdown__option" value="Choose a company">Mandarin International Hotel Group</option>
+                        </select>
+                      </td>
+                      <td class="admin-table__cell admin-table__cell--button">
+                        <button class="button button--transparent button--request" type="submit" disabled="disabled">Request sent</button>
+                      </td>
+                      <td class="admin-table__cell admin-table__cell--status admin-table__cell--free"><span>Free</span></td>
+                      <td class="admin-table__cell admin-table__cell--empty"></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <table class="admin-table">
-                <thead>
-                  <tr class="admin-table__row admin-table__row--headline">
-                    <th class="admin-table__cell admin-table__cell--empty"></th>
-                    <th class="admin-table__cell admin-table__cell--schedule-time">Время</th>
-                    <th class="admin-table__cell admin-table__cell--select-company">Участник</th>
-                    <th class="admin-table__cell admin-table__cell--button">Запрос</th>
-                    <th class="admin-table__cell admin-table__cell--status">Статус</th>
-                    <th class="admin-table__cell admin-table__cell--time-limit">Времени осталось</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="admin-table__row admin-table__row--schedule">
-                    <td class="admin-table__cell admin-table__cell--empty"></td>
-                    <td class="admin-table__cell admin-table__cell--schedule-time">10:00 – 10:10</td>
-                    <td class="admin-table__cell admin-table__cell--select-company">
-                      <select class="input-dropdown" id="select-company-00">
-                        <option class="input-dropdown__option" value="Choose a company">Choose a company</option>
-                        <option class="input-dropdown__option" value="Choose a company">Mandarin International Hotel Group</option>
-                      </select>
-                    </td>
-                    <td class="admin-table__cell admin-table__cell--button">
-                      <button class="button button--transparent button--request" type="submit" disabled="disabled">Request sent</button>
-                    </td>
-                    <td class="admin-table__cell admin-table__cell--status admin-table__cell--free"><span>Free</span></td>
-                    <td class="admin-table__cell admin-table__cell--time-limit">12 days</td>
-                  </tr>
-                  <tr class="admin-table__row admin-table__row--schedule">
-                    <td class="admin-table__cell admin-table__cell--empty"></td>
-                    <td class="admin-table__cell admin-table__cell--schedule-time">10:00 – 10:10</td>
-                    <td class="admin-table__cell admin-table__cell--select-company">
-                      <select class="input-dropdown" id="select-company-01">
-                        <option class="input-dropdown__option" value="Choose a company">Choose a company</option>
-                        <option class="input-dropdown__option" value="Choose a company">Mandarin International Hotel Group</option>
-                      </select>
-                    </td>
-                    <td class="admin-table__cell admin-table__cell--button">
-                      <button class="button button--transparent button--request" type="submit" disabled="disabled">Request sent</button>
-                    </td>
-                    <td class="admin-table__cell admin-table__cell--status admin-table__cell--free"><span>Free</span></td>
-                    <td class="admin-table__cell admin-table__cell--empty"></td>
-                  </tr>
-                </tbody>
-              </table>
               <div class="admin__mobile-block-wrapper visible-sm">
                 <button class="button button--transparent" type="button">Скачать расписание PDF</button>
               </div>
@@ -3162,11 +3152,7 @@
               <label class="edit-colleague__photo-upload button button--blue">Загрузить
                 <input class="visually-hidden" type="file"/>
               </label>
-              <div class="edit-colleague__upload-info">
-                <p>JPG, PNG</p>
-                <p>Min. 200x200 px.</p>
-                <p>Max. 3 mb.</p>
-              </div>
+              <p class="edit-colleague__upload-info">JPG, PNG<br>Min. 200x200 px.<br>Max. 3 mb.</p>
             </div>
             <div class="edit-colleague__content-column">
               <div class="edit-colleague__form">

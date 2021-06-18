@@ -95,7 +95,7 @@
     }
   }
 
-  &__name > h4 {
+  &__name {
     margin: 0;
     font-size: 16px;
     line-height: 20px;
@@ -104,7 +104,7 @@
     word-break: break-word;
   }
 
-  &__position > p {
+  &__position {
     margin: 0;
     font-size: 12px;
     line-height: 20px;
@@ -139,6 +139,7 @@
     width: 50px;
     height: 50px;
     cursor: pointer;
+    color: $color-gray;
 
     @include viewport--sm {
       position: absolute;
@@ -157,7 +158,6 @@
   }
 
   &__edit-button svg {
-    color: $color-gray;
     width: 18px;
     height: 24px;
   }

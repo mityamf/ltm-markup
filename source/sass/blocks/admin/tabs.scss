@@ -1,10 +1,10 @@
 .tabs {
-  padding: 3px 0 18px;
+  padding: 18px 0;
 
   @include viewport--sm {
     display: flex;
     align-items: center;
-    padding-bottom: 10px;
+    padding: 0;
   }
 
   &__list {
@@ -14,6 +14,7 @@
     padding-left: 0;
     column-gap: 15px;
     row-gap: 10px;
+    margin: 0;
 
     list-style-type: none;
 

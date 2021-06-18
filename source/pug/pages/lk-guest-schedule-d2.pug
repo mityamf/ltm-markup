@@ -25,9 +25,10 @@ block main
 
         .admin__content-wrapper
           h2.admin__section-title="Список участников"
-          +renderAdminTabs(scheduleTabs)
-          .admin__additional-buttons
-            button.button.button--transparent.hidden-sm(type="button") Скачать расписание PDF
+          .admin__tabs-wrapper
+            +renderAdminTabs(scheduleTabs)
+            .admin__additional-buttons
+              button.button.button--transparent.hidden-sm(type="button") Скачать расписание PDF
 
           +renderSchedule(adminScheduleTitles, adminSchedule)
 

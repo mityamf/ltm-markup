@@ -133,28 +133,3 @@
     }
   }
 }
-
-.back-link {
-  display: flex;
-
-  &:hover,
-  &:focus {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
-}
-
-.back-link span {
-  font-size: 14px;
-  line-height: 17px;
-  color: $color-blue;
-}
-
-.back-link svg {
-  margin-right: 5px;
-
-  fill: $color-blue;
-}

@@ -243,6 +243,7 @@
 
     border: none;
     background-color: transparent;
+    color: #a7a7a7;
 
     transition: opacity $default-transition-settings;
     cursor: pointer;
@@ -260,7 +261,6 @@
   &__edit-button svg {
     width: 18px;
     height: 24px;
-    color: $color-gray;
   }
 
   &__admin-wrapper {

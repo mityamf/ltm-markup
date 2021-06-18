@@ -66,6 +66,7 @@
 
     background-color: $color-default-white;
 
+
     @include viewport--sm {
       width: 100%;
       padding: 80px 40px;
@@ -79,6 +80,7 @@
     position: absolute;
     top: 15px;
     right: 15px;
+    color: $color-default-white;
   }
 
   &--responsive {

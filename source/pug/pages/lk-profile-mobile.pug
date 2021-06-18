@@ -21,10 +21,12 @@ block main
           .info-block
             .info-block__top-wrapper
               .info-block__headline
-                h2.admin__headline=infoBlock.title
+                h2.admin__section-title=infoBlock.title
                 a.info-block__link(href=infoBlock.link)=infoBlock.link
+
             .info-block__text-wrapper
               p=infoBlock.text
+
             button.button.button--blue(type=infoBlock.buttonType data-modal="edit-profile")=infoBlock.buttonText
         +renderSupportContacts(contactsList)
 
