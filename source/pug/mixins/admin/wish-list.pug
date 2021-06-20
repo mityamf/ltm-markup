@@ -3,7 +3,7 @@ mixin renderWishList(wishList)
     +renderHeadline2(wishList.title)
     .wish-list__text-wrapper
       p=wishList.description
-      button.button.button--transparent.button--mobile(type="button")="Generate PDF with Wish-list"
+      button.button.button--transparent.visible-sm(type="button")="Generate PDF with Wish-list"
     .wish-list__company-list-wrapper
       .wish-list__company-block
         form.wish-list__choose-company
@@ -19,10 +19,9 @@ mixin renderWishList(wishList)
           button.button.button--transparent(type="button")="More"
       .wish-list__company-block
         p=wishList.text
-        span="Company"
+        h4.title.title--h4="Company"
         ul.wish-list__company-list
           each company in wishList.companyList.columnTwo
             li.wish-list__company-item=company
         .admin__button-wrapper.visible-sm
           button.button.button--transparent(type="button")="More"
-          +renderUpButton('up-button--mobile')
