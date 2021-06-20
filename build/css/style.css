@@ -1399,7 +1399,7 @@ table {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
         padding: 15px 17px;
-        width: 100%; } }
+        width: 100vw; } }
   table thead th {
     padding: 0 10px;
     font-size: 12px;
@@ -8906,15 +8906,15 @@ table {
     display: block;
     margin-bottom: 10px;
     font-size: 14px;
-    line-height: 17px; }
+    line-height: 17px;
+    color: #0098c1; }
     .support-contacts__link:hover, .support-contacts__link:focus {
       opacity: 0.8; }
     .support-contacts__link:active {
       opacity: 0.5; }
   .support-contacts__link svg {
     width: 42px;
-    height: 18px;
-    color: #0098c1; }
+    height: 18px; }
   .support-contacts img {
     display: block;
     width: 103px;
@@ -8944,9 +8944,9 @@ table {
   .support-contacts .direction__arrow {
     border: none;
     background-color: transparent;
-    top: 19%; }
+    top: 19%;
+    color: #0098c1; }
   .support-contacts .direction__arrow svg {
-    color: #0098c1;
     width: 11px;
     height: 19px; }
   .support-contacts .direction__arrow--left {
@@ -9587,7 +9587,8 @@ table {
   @media (max-width: 767px) {
     .admin__control-wrapper {
           grid-template-areas: "tabs control" "title title";
-      padding: 20px 0; } }
+      padding: 20px 0 0 0;
+      grid-row-gap: 10px; } }
   .admin__control-wrapper .tabs {
     grid-column: tabs; }
     @media (max-width: 767px) {
@@ -9597,6 +9598,9 @@ table {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
     grid-area: control; }
+    @media (max-width: 767px) {
+      .admin__control-wrapper .mail-control {
+        padding-top: 3px; } }
   .admin__control-wrapper .title {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
@@ -9606,7 +9610,7 @@ table {
     -ms-grid-row: 1;
     -ms-grid-column: 2; }
     .admin__control-wrapper .title {
-    -ms-grid-row: 2;
+    -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2; } }
 
@@ -10463,26 +10467,7 @@ table {
           justify-content: space-between;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: end;
-  padding: 0 0 20px; }
-  @media (max-width: 767px) {
-    .mail-control {
-      padding-bottom: 0;
-      width: 42%; } }
-  .mail-control .title--h3 {
-    margin: 0 20px 0 0;
-    width: 32%;
-    font-size: 38px;
-    line-height: 46px; }
-    @media (max-width: 1439px) {
-      .mail-control .title--h3 {
-        width: 27%; } }
-    @media (max-width: 1023px) {
-      .mail-control .title--h3 {
-        width: 40%; } }
-    @media (max-width: 767px) {
-      .mail-control .title--h3 {
-        display: none; } }
+          align-items: end; }
   .mail-control__links {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -10510,15 +10495,12 @@ table {
       .mail-control__link-item:not(:last-of-type) {
         margin-right: 0;
         padding: 0; } }
-  @media (max-width: 1023px) {
-    .mail-control__link-item--inbox, .mail-control__link-item--contacts {
-      display: none; } }
-  .mail-control__link-item--active .mail-control__link {
+  .mail-control__link--active {
     color: #a7a7a7;
     cursor: default; }
-  .mail-control__link-item--active:hover .mail-control__link, .mail-control__link-item--active:focus .mail-control__link {
-    color: #a7a7a7; }
-  .mail-control__link-item:not(.mail-control__link-item--active):hover .mail-control__link, .mail-control__link-item:not(.mail-control__link-item--active):focus .mail-control__link {
+    .mail-control__link--active:hover, .mail-control__link--active:focus {
+      color: #a7a7a7; }
+  .mail-control__link--active:not(.mail-control__link-item--active):hover, .mail-control__link--active:not(.mail-control__link-item--active):focus {
     color: rgba(80, 80, 80, 0.7); }
   .mail-control__link {
     font-size: 16px;
@@ -11068,9 +11050,9 @@ table {
       .info-block__link {
         font-size: 24px;
         line-height: 29px; } }
-  .info-block__more-wrapper {
+  .info-block .button--open {
     display: inline-block;
-    padding-top: 36px;
+    margin-top: 36px;
     float: right; }
   .info-block .btn {
     padding: 17px 30px;

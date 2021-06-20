@@ -3,11 +3,12 @@ mixin renderMailControl(linkList, isSearchInput)
     ul.mail-control__links
 
       each link in linkList
-        - var activeMod = link.currentPage === currentPage ? "mail-control__link-item--active" : ""
-        - var href = activeMod === "mail-control__link-item--active" ? null : link.link
+        - var activeMod = link.currentPage === currentPage ? "mail-control__link--active" : ""
+        - var href = activeMod === "mail-control__link--active" ? null : link.link
+        - var mobileHideClass = link.mod === "inbox" || link.mod === "contacts" ? 'hidden-sm' : ''
 
-        li.mail-control__link-item(class='mail-control__link-item--' + link.mod + ' ' + activeMod)
-          a.mail-control__link(href=href)=link.text
+        li.mail-control__link-item(class='mail-control__link-item--' + link.mod + ' ' + mobileHideClass)
+          a.mail-control__link(class=activeMod href=href)=link.text
             if link.icon
               +icon(link.icon, link.iconWidth, link.iconHeight)
 
