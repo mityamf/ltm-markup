@@ -24,6 +24,7 @@
     padding: 41px 0;
     column-gap: 15px;
     row-gap: 15px;
+    margin: 0;
 
     @include viewport--lg {
       padding: 40px 0;
@@ -54,7 +55,7 @@
   &--half-width &__item {
     width: 48%;
 
-    @include viewport--md {
+    @media (max-width: 1400px) {
       width: 100%;
       max-width: none;
     }
@@ -63,7 +64,7 @@
   &:not(&--half-width) &__item {
     max-width: 334px;
 
-    @include viewport--md {
+    @media (max-width: 1400px) {
       width: calc((100% / 2) - 9px);
     }
 
@@ -127,6 +128,12 @@
   }
 
   & &__note {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    color: $color-nobel;
+
     @include viewport--sm {
       display: none;
     }

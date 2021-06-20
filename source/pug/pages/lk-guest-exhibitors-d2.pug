@@ -29,14 +29,15 @@ block main
 
           .hidden-sm
             form.filters.filters--exhibitions
-              +renderAlphabetFilter(alphabetFilter)
-              +renderDropdownFilter(dropdownFilters)
-              +renderFilterButton(buttonFilter)
+              .filters__wrapper
+                +renderAlphabetFilter(alphabetFilter)
+                +renderDropdownFilter(dropdownFilters)
+                +renderFilterButton(buttonFilter)
+              +renderFilterTabs(filterTabs)
 
           .visible-sm
             +renderMobileFilterButtons("Filters", "Clear all filters")
 
-          +renderFilterTabs(filterTabs)
           +renderHostedGuestsList(adminHostedGuestsListTitles, adminHostedGuestsList)
 
         .admin__button-wrapper
