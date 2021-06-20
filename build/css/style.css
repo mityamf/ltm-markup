@@ -9536,7 +9536,7 @@ p {
       padding: 14px 0 22px; } }
 
 .admin__button-wrapper {
-  padding: 31px 0 30px 0; }
+  padding: 31px 0 0 0; }
   .admin__button-wrapper .button {
     margin: 0 auto;
     width: 222px;
@@ -10871,8 +10871,10 @@ p {
             justify-content: space-between;
     margin: 0; }
     @media (max-width: 767px) {
-      .wish-list__text-wrapper {
-        display: block; } }
+      .wish-list__text-wrapper .button {
+        width: 40%;
+        padding: 5px;
+        margin-left: 20px; } }
   .wish-list__text-wrapper p {
     font-size: 24px;
     line-height: 29px;
@@ -10906,9 +10908,13 @@ p {
       .wish-list__choose-company {
         padding-right: 17px;
         padding-left: 17px;
-        padding-bottom: 18px; }
+        padding-bottom: 18px; } }
+    .wish-list__choose-company .button--transparent {
+      padding: 12px 28px;
+      margin-left: 20px; }
+      @media (max-width: 1439px) {
         .wish-list__choose-company .button--transparent {
-          padding: 0; } }
+          padding: 5px; } }
   .wish-list__text-company {
     width: 50%; }
   .wish-list__company-block > p {
