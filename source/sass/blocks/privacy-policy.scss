@@ -1,6 +1,7 @@
 .privacy-policy {
   display: flex;
   flex-direction: column;
+  margin-top: 29px;
 }
 
 .privacy-policy__button-wrapper {
@@ -31,8 +32,8 @@
   }
 
   h3 {
-    margin-top: 11px;
-    margin-bottom: -3px;
+    margin-top: 0;
+    margin-bottom: 11px;
 
     font-size: 24px;
     font-weight: lighter;
@@ -43,5 +44,15 @@
     @include viewport--md {
       margin-bottom: 10px;
     }
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+    margin-top: 0;
   }
 }
