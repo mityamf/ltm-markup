@@ -8,8 +8,8 @@ mixin renderInfoBlock(infoBlock)
     .info-block__text-wrapper
       p=infoBlock.text
 
-    .info-block__more-wrapper
-      a.button.button--open(href="main.html")
-        +icon("icon-arrow", 20, 14)
-        span.visually-hidden read more
+    a.button.button--open(href="main.html")
+      +icon("icon-arrow", 20, 14)
+      span.visually-hidden read more
+
 

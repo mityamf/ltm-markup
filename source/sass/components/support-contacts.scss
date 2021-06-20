@@ -41,6 +41,7 @@
 
     font-size: 14px;
     line-height: 17px;
+    color: $color-blue;
 
     &:hover,
     &:focus {
@@ -55,7 +56,6 @@
   &__link svg {
     width: 42px;
     height: 18px;
-    color: $color-blue;
   }
 
   img {
@@ -101,10 +101,10 @@
     border: none;
     background-color: transparent;
     top: 19%;
+    color: $color-blue;
   }
 
   .direction__arrow svg {
-    color: $color-blue;
     width: 11px;
     height: 19px;
   }

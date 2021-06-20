@@ -2,32 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: end;
-  padding: 0 0 20px;
-
-  @include viewport--sm {
-    padding-bottom: 0;
-    width: 42%;
-  }
-
-  .title--h3 {
-    margin: 0 20px 0 0;
-    width: 32%;
-
-    font-size: 38px;
-    line-height: 46px;
-
-    @include viewport--lg {
-      width: 27%;
-    }
-
-    @include viewport--md {
-      width: 40%;
-    }
-
-    @include viewport--sm {
-      display: none;
-    }
-  }
 
   &__links {
     display: flex;
@@ -58,33 +32,20 @@
     }
   }
 
-  &__link-item--inbox,
-  &__link-item--contacts {
-    @include viewport--md {
-      display: none;
-    }
-  }
+  &__link--active {
+    color: $color-gray;
+    cursor: default;
 
-  &__link-item--active {
-    .mail-control__link {
+    &:hover,
+    &:focus {
       color: $color-gray;
-      cursor: default;
-    }
-
-    &:hover,
-    &:focus {
-      .mail-control__link {
-        color: $color-gray;
-      }
     }
   }
 
-  &__link-item:not(.mail-control__link-item--active) {
+  &__link--active:not(.mail-control__link-item--active) {
     &:hover,
     &:focus {
-      .mail-control__link {
-        color: rgba(80, 80, 80, 0.7);
-      }
+      color: rgba(80, 80, 80, 0.7);
     }
   }
 
