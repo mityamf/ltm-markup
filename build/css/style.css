@@ -8889,7 +8889,10 @@ p {
     display: block; }
   .support-contacts__link {
     display: block;
-    margin-bottom: 10px;
+    margin: 0 auto 10px auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
     font-size: 14px;
     line-height: 17px;
     color: #0098c1; }
@@ -9140,15 +9143,19 @@ p {
   text-align: center; }
 
 .filters {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 33px 0 20px;
-  border-bottom: 1px solid #0098c1; }
+  padding: 30px 0 30px; }
   @media (max-width: 767px) {
     .filters {
-      padding: 0 0 20px;
-      border-bottom: none; } }
+      padding: 0 0 20px; } }
+  .filters__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 1px solid #0098c1;
+    padding-bottom: 20px; }
+    @media (max-width: 767px) {
+      .filters__wrapper {
+        border-bottom: none; } }
   @media (max-width: 767px) {
     .filters--exhibitors {
       border-top: 1px solid #0098c1; } }
@@ -10260,7 +10267,8 @@ p {
     -webkit-column-gap: 15px;
        -moz-column-gap: 15px;
             column-gap: 15px;
-    row-gap: 15px; }
+    row-gap: 15px;
+    margin: 0; }
     @media (max-width: 1439px) {
       .participants__list {
         padding: 40px 0; } }
@@ -10281,13 +10289,13 @@ p {
     border-bottom: none; }
   .participants--half-width .participants__item {
     width: 48%; }
-    @media (max-width: 1023px) {
+    @media (max-width: 1400px) {
       .participants--half-width .participants__item {
         width: 100%;
         max-width: none; } }
   .participants:not(.participants--half-width) .participants__item {
     max-width: 334px; }
-    @media (max-width: 1023px) {
+    @media (max-width: 1400px) {
       .participants:not(.participants--half-width) .participants__item {
         width: calc((100% / 2) - 9px); } }
     @media (max-width: 767px) {
@@ -10338,9 +10346,15 @@ p {
       .participants__text {
         padding: 0 20px;
         line-height: 16px; } }
-  @media (max-width: 767px) {
-    .participants .participants__note {
-      display: none; } }
+  .participants .participants__note {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    color: #9f9f9f; }
+    @media (max-width: 767px) {
+      .participants .participants__note {
+        display: none; } }
   .participants__edit-button {
     -webkit-transition: opacity 0.3s ease;
     transition: opacity 0.3s ease;
