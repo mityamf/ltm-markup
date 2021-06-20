@@ -1,3 +1,7 @@
+mixin tabsMenuButton()
+  button.tabs__menu-button.visible-sm(type="button" data-modal="admin-menu")
+    +icon("icon-mobile-menu", 32, 32)
+
 mixin renderAdminTabs(tabs, modal, menu)
   - var modClass = ''
   if modal
@@ -6,8 +10,8 @@ mixin renderAdminTabs(tabs, modal, menu)
     - var modClass = 'tabs--menu'
 
   .tabs(class=modClass)
-    button.tabs__menu-button(type="button" data-modal="admin-menu")
-      +icon("icon-mobile-menu", 32, 32)
+    if menu
+      +tabsMenuButton()
     ul.tabs__list
       each tab in tabs
         - var activeMod = tab.currentPage === currentPage ? "tabs__item--active" : ""

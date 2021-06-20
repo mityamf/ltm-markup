@@ -2897,7 +2897,7 @@
             </div>
             <div class="admin__control-wrapper admin__control-wrapper--full-width">
               <div class="tabs tabs--menu">
-                <button class="tabs__menu-button" type="button" data-modal="admin-menu">
+                <button class="tabs__menu-button visible-sm" type="button" data-modal="admin-menu">
                   <svg width="32" height="32" aria-hidden="true">
                     <use xlink:href="#icon-mobile-menu"></use>
                   </svg>
@@ -2916,11 +2916,6 @@
               <h2 class="admin__section-title">My Schedule</h2>
               <div class="admin__tabs-wrapper">
                 <div class="tabs">
-                  <button class="tabs__menu-button" type="button" data-modal="admin-menu">
-                    <svg width="32" height="32" aria-hidden="true">
-                      <use xlink:href="#icon-mobile-menu"></use>
-                    </svg>
-                  </button>
                   <ul class="tabs__list">
                     <li class="tabs__item"><a class="tabs__link" href="admin-schedule-d1.html">Day 1<span class="hidden-sm">&nbsp;&ndash;&nbsp;</span><time datetime="2001-05-15T19:00">27 Feb. 2020</time></a></li>
                     <li class="tabs__item tabs__item--active"><a class="tabs__link">Day 2<span class="hidden-sm">&nbsp;&ndash;&nbsp;</span><time datetime="2001-05-15T19:00">28 Feb. 2020</time></a></li>
@@ -2930,52 +2925,50 @@
                   <button class="button button--transparent hidden-sm" type="button">Generate PDF with schedule</button>
                 </div>
               </div>
-              <div class="admin-table">
-                <table>
-                  <thead>
-                    <tr>
-                      <th class="admin-table__cell admin-table__cell--empty"></th>
-                      <th class="admin-table__cell admin-table__cell--schedule-time">Time</th>
-                      <th class="admin-table__cell admin-table__cell--select-company">Company</th>
-                      <th class="admin-table__cell admin-table__cell--button">Request</th>
-                      <th class="admin-table__cell admin-table__cell--status">Status</th>
-                      <th class="admin-table__cell admin-table__cell--empty"></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="admin-table__cell admin-table__cell--empty"></td>
-                      <td class="admin-table__cell admin-table__cell--schedule-time">10:00 – 10:10</td>
-                      <td class="admin-table__cell admin-table__cell--select-company">
-                        <select class="input-dropdown" id="select-company-00">
-                          <option class="input-dropdown__option" value="Choose a company">Choose a company</option>
-                          <option class="input-dropdown__option" value="Choose a company">Mandarin International Hotel Group</option>
-                        </select>
-                      </td>
-                      <td class="admin-table__cell admin-table__cell--button">
-                        <button class="button button--transparent button--request" type="submit" disabled="disabled">Request sent</button>
-                      </td>
-                      <td class="admin-table__cell admin-table__cell--status admin-table__cell--free"><span>Free</span></td>
-                      <td class="admin-table__cell admin-table__cell--empty"></td>
-                    </tr>
-                    <tr>
-                      <td class="admin-table__cell admin-table__cell--empty"></td>
-                      <td class="admin-table__cell admin-table__cell--schedule-time">10:00 – 10:10</td>
-                      <td class="admin-table__cell admin-table__cell--select-company">
-                        <select class="input-dropdown" id="select-company-01">
-                          <option class="input-dropdown__option" value="Choose a company">Choose a company</option>
-                          <option class="input-dropdown__option" value="Choose a company">Mandarin International Hotel Group</option>
-                        </select>
-                      </td>
-                      <td class="admin-table__cell admin-table__cell--button">
-                        <button class="button button--transparent button--request" type="submit">Send a request</button>
-                      </td>
-                      <td class="admin-table__cell admin-table__cell--status admin-table__cell--free"><span>Free</span></td>
-                      <td class="admin-table__cell admin-table__cell--empty"></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th class="table__cell table__cell--empty"></th>
+                    <th class="table__cell table__cell--schedule-time">Time</th>
+                    <th class="table__cell table__cell--select-company">Company</th>
+                    <th class="table__cell table__cell--button">Request</th>
+                    <th class="table__cell table__cell--status">Status</th>
+                    <th class="table__cell table__cell--empty"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="table__cell table__cell--empty"></td>
+                    <td class="table__cell table__cell--schedule-time">10:00 – 10:10</td>
+                    <td class="table__cell table__cell--select-company">
+                      <select class="input-dropdown" id="select-company-00">
+                        <option class="input-dropdown__option" value="Choose a company">Choose a company</option>
+                        <option class="input-dropdown__option" value="Choose a company">Mandarin International Hotel Group</option>
+                      </select>
+                    </td>
+                    <td class="table__cell table__cell--button">
+                      <button class="button button--transparent button--request" type="submit" disabled="disabled">Request sent</button>
+                    </td>
+                    <td class="table__cell table__cell--status table__cell--free"><span>Free</span></td>
+                    <td class="table__cell table__cell--empty"></td>
+                  </tr>
+                  <tr>
+                    <td class="table__cell table__cell--empty"></td>
+                    <td class="table__cell table__cell--schedule-time">10:00 – 10:10</td>
+                    <td class="table__cell table__cell--select-company">
+                      <select class="input-dropdown" id="select-company-01">
+                        <option class="input-dropdown__option" value="Choose a company">Choose a company</option>
+                        <option class="input-dropdown__option" value="Choose a company">Mandarin International Hotel Group</option>
+                      </select>
+                    </td>
+                    <td class="table__cell table__cell--button">
+                      <button class="button button--transparent button--request" type="submit">Send a request</button>
+                    </td>
+                    <td class="table__cell table__cell--status table__cell--free"><span>Free</span></td>
+                    <td class="table__cell table__cell--empty"></td>
+                  </tr>
+                </tbody>
+              </table>
               <div class="admin__mobile-block-wrapper visible-sm">
                 <button class="button button--transparent" type="button">Generate PDF with schedule</button>
               </div>
@@ -3249,11 +3242,6 @@
         <div class="modal__overlay"></div>
         <div class="modal__content modal-gallery">
           <div class="tabs tabs--modal">
-            <button class="tabs__menu-button" type="button" data-modal="admin-menu">
-              <svg width="32" height="32" aria-hidden="true">
-                <use xlink:href="#icon-mobile-menu"></use>
-              </svg>
-            </button>
             <ul class="tabs__list">
               <li class="tabs__item"><a class="tabs__link" href="admin-deadlines.html">Deadlines & Info</a></li>
               <li class="tabs__item"><a class="tabs__link" href="admin-messages-inbox.html">Messages</a></li>

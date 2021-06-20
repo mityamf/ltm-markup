@@ -1,6 +1,50 @@
-.admin-table {
+.table {
+  border-collapse: collapse;
+  width: 100%;
+
   @include viewport--sm {
     margin: 0 -16px;
+  }
+
+  tr:nth-child(even) {
+    background-color: $color-gray-light;
+  }
+
+  tr {
+    position: relative;
+
+    @include viewport--sm {
+      display: inline-flex;
+      flex-wrap: wrap;
+      padding: 15px 17px;
+      width: 100vw;
+    }
+  }
+
+  thead th {
+    padding: 0 10px;
+
+    font-size: 12px;
+    line-height: 20px;
+    color: $color-nobel;
+    text-align: left;
+  }
+
+  thead {
+    @include viewport--sm {
+      display: none;
+    }
+  }
+
+  tbody td {
+    padding: 5px 10px;
+    font-size: 16px;
+    line-height: 22px;
+
+    @include viewport--sm {
+      padding: 0;
+      line-height: 20px;
+    }
   }
 
   .button {
@@ -59,6 +103,8 @@
       @include viewport--sm {
         min-width: 0;
         width: 48%;
+        font-size: 12px;
+        padding: 3px;
       }
     }
   }
@@ -284,7 +330,7 @@
       top: 15px;
       right: 17px;
 
-      font-size: 11px;
+      font-size: 11px !important;
       line-height: 13px;
     }
   }
@@ -310,6 +356,10 @@
   }
 
   &__cell--icon {
+    @include viewport--sm {
+      width: 20px;
+    }
+
     svg {
       @include viewport--sm {
         display: none;
