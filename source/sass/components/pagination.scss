@@ -1,0 +1,22 @@
+.pagination.swiper-pagination {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  bottom: 0;
+
+  .swiper-pagination-bullet {
+    @include viewport--sm {
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      background: initial;
+      border: 1px solid $color-blue;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    @include viewport--sm {
+      background: $color-blue;
+    }
+  }
+}
