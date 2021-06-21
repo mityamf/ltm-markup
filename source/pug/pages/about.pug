@@ -16,19 +16,18 @@ block main
 
         .about__content
           .about__text-wrapper.about__text-wrapper--mobile
-            +renderHeadline2(aboutEvent.title)
             .text-content
+              +renderHeadline2(aboutEvent.title)
               +renderTextContentBlock(aboutEvent.textList)
             +renderOpenMoreButton(eventBlock.buttonText)
 
           .about__text-wrapper
-            +renderHeadline2(eventBlock.title)
-            .about__text-wrapper.about__text-wrapper--dates
+            .text-content
+              +renderHeadline2(eventBlock.title)
               each event in eventBlock.eventList
                 +renderHeadline3(event.subtitle)
-                .text-content
-                  p !{event.date}
-                  +renderTextContentBlock(event.textList)
+                p !{event.date}
+                +renderTextContentBlock(event.textList)
 
         aside.about__aside
           +renderHeadline2(benefits.benefitsTitle)

@@ -22,7 +22,7 @@ block main
         .admin__control-wrapper
           +renderAdminTabs(adminTabs, modal=false, menu=true)
           +renderMailControl(adminMailControl.linkList, adminMailControl.isSearchInput)
-          h2.admin__section-title="Сообщение"
+          h2.title.title--h2="Сообщение"
 
         .admin__content-wrapper
           +renderEditBlock(editingBlockList, buttons, editingBlockStatus)

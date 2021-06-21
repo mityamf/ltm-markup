@@ -23,7 +23,7 @@ block main
         .admin__control-wrapper
           +renderAdminTabs(adminTabs, modal=false, menu=true)
           +renderMailControl(adminMailControl.linkList, adminMailControl.isSearchInput)
-          h2.admin__section-title.visible-sm="Входящие"
+          h2.title.title--h2.visible-sm="Входящие"
 
         .admin__content-wrapper
           +renderInboxMessages(adminInboxMessagesTitles, adminInboxMessages)

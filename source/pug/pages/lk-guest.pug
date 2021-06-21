@@ -23,11 +23,11 @@ block main
 
       .admin__text-wrapper
         .admin__section.admin__section--info
-          h2.admin__section-title=deadlinesInfoContent[0].title
+          h2.title.title--h2=deadlinesInfoContent[0].title
           +renderTextContentBlock(deadlinesInfoContent[0].textList)
 
         .admin__section.admin__section--details
-          h2.admin__section-title=deadlinesInfoContent[1].title
+          h2.title.title--h2=deadlinesInfoContent[1].title
           +renderTextContentBlock(deadlinesInfoContent[1].textList)
 
         .admin__section.admin__section--links
