@@ -9,22 +9,6 @@
   }
 
   @include viewport--md {
-    padding: 25px 95px 42px 95px;
-  }
-
-  @include viewport--sm {
     padding: 23px 0;
-  }
-
-  p {
-    letter-spacing: 0.1px;
-
-    @include viewport--sm {
-      letter-spacing: 0.3px;
-    }
-  }
-
-  p:last-child {
-    margin-bottom: 0;
   }
 }

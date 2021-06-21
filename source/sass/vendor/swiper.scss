@@ -193,6 +193,10 @@
   pointer-events: none;
 }
 
+.swiper-button-disabled {
+  opacity: 0.35;
+}
+
 .swiper-button-prev:after,
 .swiper-button-next:after {
   font-family: swiper-icons;
