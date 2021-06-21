@@ -2367,12 +2367,10 @@ textarea {
   background-color: inherit;
   cursor: pointer;
   outline: none; }
-  .cookies__btn-close svg {
-    fill: #0098c1; }
-    @media (max-width: 767px) {
-      .cookies__btn-close svg {
-        width: 24px;
-        height: 24px; } }
+  @media (max-width: 767px) {
+    .cookies__btn-close svg {
+      width: 24px;
+      height: 24px; } }
   @media (max-width: 767px) {
     .cookies__btn-close {
       top: 12px;
@@ -3397,7 +3395,8 @@ textarea {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-bottom: 37px;
-  padding-right: 10px; }
+  padding-right: 10px;
+  padding-top: 10px; }
   @media (max-width: 767px) {
     .registration__exhibitor,
     .registration__buyer {
@@ -3503,7 +3502,8 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  padding-top: 29px; }
   .exhibitor-reg__block {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6273,6 +6273,11 @@ textarea {
         .hotel-page--headline-wrapper .hotel-headline--edit .back-link {
           padding-top: 27px;
           padding-left: 0; } }
+  .hotel-page .headline-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
 
 .edit {
   padding: 0;
@@ -9361,11 +9366,7 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
-  padding-top: 22px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

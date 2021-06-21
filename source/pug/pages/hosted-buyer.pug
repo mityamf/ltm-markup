@@ -8,16 +8,17 @@ block variables
   - var hasHeader = true
   - var hasFooter = true
   - var currentPage = "Registration"
+  - var hasTopLink = true
 
 block main
   main
     +promo("The leading luxury travel exhibition in eastern europe, russia & cis", "", "./img/bg/reg-bg.png", "./img/bg/reg-bg@2x.png", "1920", "534", "./img/bg/regBg-mobile.png 1x, ./img/bg/regBg-mobile@2x.png 2x", "promo__none", "promo__info-reg")
     section.exhibitor-reg
-      .exhibitor-reg__block.container
-        h2.exhibitor-reg__title Регистрация гостя (Buyer, VIP Buyer, Hosted Buyer)
-        a.exhibitor-reg__btn(href="registration.html")
-          +icon("icon-back", "12", "20")
-          span Back
+      .headline-wrapper.headline-wrapper--left.container
+        h2.title.title--h2 Регистрация гостя (Buyer, VIP Buyer, Hosted Buyer)
+        .hidden-sm
+          a.back-link(href="registration.html") Back
+            +icon("arrow-left", 12, 20)
       +form-reg-hosted
 
 block modals
