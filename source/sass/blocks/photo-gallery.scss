@@ -1,0 +1,92 @@
+.photo-gallery {
+  a[href] {
+    backface-visibility: hidden;
+    transition: opacity $default-transition-settings;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    @include viewport--sm {
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__button-next,
+  &__button-prev {
+    position: absolute;
+    top: 50%;
+    margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
+    z-index: 50;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-transparent;
+    width: 19px;
+    height: 30px;
+    color: $color-default-white;
+    padding: 0;
+    border: none;
+
+    svg {
+      width: 19px;
+      height: 30px;
+    }
+
+    @include viewport--sm {
+      display: flex;
+    }
+  }
+
+  &__button-next {
+    right: 10px;
+    left: auto;
+  }
+
+  &__button-prev {
+    right: auto;
+    left: 10px;
+
+    svg {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__pagination {
+    display: none;
+
+    @include viewport--sm {
+      display: inline-block;
+      text-align: center;
+      margin-top: 5px;
+
+      span {
+        width: 10px;
+        height: 10px;
+      }
+
+      .swiper-pagination-bullet {
+        background: transparent;
+        border: 1px solid $color-blue;
+        opacity: 1;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: $color-blue;
+      }
+    }
+  }
+
+  @include viewport--sm {
+    margin-top: 45px;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+}

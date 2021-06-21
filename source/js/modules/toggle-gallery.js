@@ -19,8 +19,8 @@ const toggleGallery = () => {
 
     const changeBlock = () => {
       const toggleBlock = document.querySelector('.toggle');
-      const photoSection = document.querySelector('.gallery__section--photo');
-      const videoSection = document.querySelector('.gallery__section--video');
+      const photoSection = document.querySelector('.js-photo');
+      const videoSection = document.querySelector('.js-video');
       const breakpointWidth = window.matchMedia('(max-width:767px)');
 
       const onToggleBtnClick = (evt) => {

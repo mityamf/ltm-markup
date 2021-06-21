@@ -2,7 +2,7 @@ const initGallerySlider = () => {
 
   let gallerySlider = null;
 
-  let gallerySlidersBlocks = document.querySelectorAll('.photo__slider');
+  let gallerySlidersBlocks = document.querySelectorAll('.photo-gallery');
   let breakpointWidth = 768;
 
   const initSwiper = () => {
@@ -11,11 +11,11 @@ const initGallerySlider = () => {
       gallerySlidersBlocks.forEach(function (gallerySliderBlock) {
         gallerySlider = new Swiper(gallerySliderBlock, {
           navigation: {
-            nextEl: '.photo__button-next',
-            prevEl: '.photo__button-prev',
+            nextEl: '.photo-gallery__button-next',
+            prevEl: '.photo-gallery__button-prev',
           },
           pagination: {
-            el: '.photo__pagination',
+            el: '.photo-gallery__pagination',
             type: 'bullets',
             clickable: true,
           },

@@ -17,6 +17,9 @@
     }
 
     @include viewport--sm {
+      margin-left: -16px;
+      margin-right: -16px;
+
       height: 350px;
     }
 
@@ -37,13 +40,6 @@
     }
 
     @include viewport--sm {
-      padding: 0 16.5px;
-      margin-bottom: 20px;
-
-      .title--h3 {
-        letter-spacing: 0.3px;
-      }
-
       span {
         display: none;
       }
