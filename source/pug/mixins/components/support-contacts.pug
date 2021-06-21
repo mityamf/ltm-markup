@@ -12,7 +12,7 @@ mixin renderSupportContacts(contactsList)
               a(class="support-contacts__link", href='mailto:' + contact.email)
                 +icon("icon-support-email", 42, 18)
               a(class="support-contacts__link", href='tel:' + contact.phone)=contact.phoneText
-      .swiper-pagination.direction__pagination
+      .pagination.swiper-pagination.direction__pagination.visible-sm
       button.direction__arrow.direction__arrow--right
         +icon("arrow-right", 11, 19)
       button.direction__arrow.direction__arrow--left

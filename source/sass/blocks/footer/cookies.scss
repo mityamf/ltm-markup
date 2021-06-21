@@ -77,3 +77,11 @@
     opacity: 0.8;
   }
 }
+
+#cookie_notification {
+  display: none;
+}
+
+#cookie_notification.show{
+  display: block;
+}

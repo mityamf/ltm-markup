@@ -36,10 +36,11 @@ mixin footer
               +icon("inst-icon", 22, 22)
       .footer__info
         span.footer__info-info &copy; All right reserved by Artyom Polanskiy and Travel Media LLC.
-  .cookies
-    button.cookies__btn-close(type="button", aria-label="Закрыть")
+  .cookies(id="hidden-element")
+    button.cookies__btn-close(type="button", aria-label="Закрыть" id="cookie_close-btn")
       +icon("icon-close", 33, 33)
     h2.cookies__title LTM Website uses cookies
     p.cookies__description Website uses cookies and similar technologies. We use functional cookies to make sure our websites work well and secure and analytical cookies to offer you the best possible user experience. By clicking on ’Agree’, you consent to the placing of these cookies.
     a.cookies__info(href="#") For more information read Cookies policy
-    button.button.button--transparent(type="button") ok
+    button.button.button--transparent(type="button" id="cookie_close") ok
+

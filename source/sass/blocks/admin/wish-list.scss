@@ -31,7 +31,11 @@
     margin: 0;
 
     @include viewport--sm {
-      display: block;
+      .button {
+        width: 40%;
+        padding: 5px;
+        margin-left: 20px;
+      }
     }
   }
 
@@ -64,9 +68,14 @@
       padding-right: 17px;
       padding-left: 17px;
       padding-bottom: 18px;
+    }
 
-      .button--transparent {
-        padding: 0;
+    .button--transparent {
+      padding: 12px 28px;
+      margin-left: 20px;
+
+      @include viewport--lg {
+        padding: 5px;
       }
     }
   }
@@ -75,9 +84,8 @@
     width: 50%;
   }
 
-  &__company-block > p {
+  &__company-description {
     margin: 0;
-    max-width: 614px;
     letter-spacing: 1px;
     padding-bottom: 28px;
 

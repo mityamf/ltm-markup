@@ -1,5 +1,6 @@
 .info-block {
   display: inline-block;
+  padding-left: 30px;
 
   &__top-wrapper {
     display: flex;
@@ -41,9 +42,9 @@
     }
   }
 
-  &__more-wrapper {
+  .button--open {
     display: inline-block;
-    padding-top: 36px;
+    margin-top: 36px;
     float: right;
   }
 

@@ -60,27 +60,8 @@
   }
 
   &__pagination {
-    display: none;
-
     @include viewport--sm {
-      display: inline-block;
-      text-align: center;
       margin-top: 5px;
-
-      span {
-        width: 10px;
-        height: 10px;
-      }
-
-      .swiper-pagination-bullet {
-        background: transparent;
-        border: 1px solid $color-blue;
-        opacity: 1;
-      }
-
-      .swiper-pagination-bullet-active {
-        background: $color-blue;
-      }
     }
   }
 

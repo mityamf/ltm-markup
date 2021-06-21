@@ -18,7 +18,6 @@
 @import "global/btn";
 @import "global/open-more";
 @import "global/field";
-@import "global/table";
 
 // Blocks
 //---------------------------------
@@ -95,17 +94,16 @@
 @import "components/filters";
 @import "components/photo-edit";
 @import "components/headline-wrapper";
+@import "components/pagination";
 @import "blocks/admin/admin";
 @import "blocks/admin/tabs";
 @import "blocks/admin/schedule-tabs";
 @import "blocks/admin/sponsorship";
-@import "blocks/admin/download";
-@import "blocks/admin/download-list";
 @import "blocks/admin/participants";
 @import "blocks/admin/deadlines-info";
 @import "blocks/admin/admin-headline";
 @import "blocks/admin/mail-control";
-@import "blocks/admin/admin-table";
+@import "blocks/admin/table";
 @import "blocks/admin/wish-list";
 @import "blocks/admin/filter-tabs";
 @import "blocks/admin/info-block";

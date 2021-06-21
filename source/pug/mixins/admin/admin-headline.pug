@@ -5,7 +5,6 @@ mixin renderAdminHeadline(eventName, eventPlace, dates, backLink)
       if backLink
         a.back-link.hidden-sm(href=link) Back
           +icon("link-arrow", 12, 20)
-    .top-wrapper__place
-      p !{eventPlace}
-    .top-wrapper__dates
-      p !{dates}
+    p.top-wrapper__text !{eventPlace}
+    p.top-wrapper__dates !{dates}
+

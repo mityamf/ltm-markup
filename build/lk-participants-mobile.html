@@ -2861,16 +2861,12 @@
               <div class="top-wrapper__headline-wrapper">
                 <h2 class="title title--h2 top-wrapper__title">Luxury Travel Mart Moscow Spring’ 2020</h2>
               </div>
-              <div class="top-wrapper__place">
-                <p>at Hyatt Regency Moscow Petrovsky Park</p>
-              </div>
-              <div class="top-wrapper__dates">
-                <p><time datetime="2011-11-18">27</time> – <time datetime="2011-11-18">28 February 2020</time></p>
-              </div>
+              <p class="top-wrapper__text">at Hyatt Regency Moscow Petrovsky Park</p>
+              <p class="top-wrapper__dates"><time datetime="2011-11-18">27</time> – <time datetime="2011-11-18">28 February 2020</time></p>
             </div>
             <div class="admin__control-wrapper admin__control-wrapper--full-width">
               <div class="tabs tabs--menu">
-                <button class="tabs__menu-button" type="button" data-modal="admin-menu">
+                <button class="tabs__menu-button visible-sm" type="button" data-modal="admin-menu">
                   <svg width="32" height="32" aria-hidden="true">
                     <use xlink:href="#icon-mobile-menu"></use>
                   </svg>
@@ -2947,7 +2943,7 @@
                     </div>
                   </li>
                 </ul>
-                <div class="swiper-pagination direction__pagination"></div>
+                <div class="pagination swiper-pagination direction__pagination visible-sm"></div>
                 <button class="direction__arrow direction__arrow--right">
                   <svg width="11" height="19" aria-hidden="true">
                     <use xlink:href="#arrow-right"></use>
@@ -3003,15 +2999,15 @@
           <div class="footer__info"><span class="footer__info-info">&copy; All right reserved by Artyom Polanskiy and Travel Media LLC.</span></div>
         </div>
       </footer>
-      <div class="cookies">
-        <button class="cookies__btn-close" type="button" aria-label="Закрыть">
+      <div class="cookies" id="hidden-element">
+        <button class="cookies__btn-close" type="button" aria-label="Закрыть" id="cookie_close-btn">
           <svg width="33" height="33" aria-hidden="true">
             <use xlink:href="#icon-close"></use>
           </svg>
         </button>
         <h2 class="cookies__title">LTM Website uses cookies</h2>
         <p class="cookies__description">Website uses cookies and similar technologies. We use functional cookies to make sure our websites work well and secure and analytical cookies to offer you the best possible user experience. By clicking on ’Agree’, you consent to the placing of these cookies.</p><a class="cookies__info" href="#">For more information read Cookies policy</a>
-        <button class="button button--transparent" type="button">ok</button>
+        <button class="button button--transparent" type="button" id="cookie_close">ok</button>
       </div>
     </div>
     <div class="modal modal--preload modal--edit-colleague modal--bottom-slide">
@@ -3024,11 +3020,7 @@
               <label class="edit-colleague__photo-upload button button--blue">Загрузить
                 <input class="visually-hidden" type="file"/>
               </label>
-              <div class="edit-colleague__upload-info">
-                <p>JPG, PNG</p>
-                <p>Min. 200x200 px.</p>
-                <p>Max. 3 mb.</p>
-              </div>
+              <p class="edit-colleague__upload-info">JPG, PNG<br>Min. 200x200 px.<br>Max. 3 mb.</p>
             </div>
             <div class="edit-colleague__content-column">
               <div class="edit-colleague__form">
@@ -3113,11 +3105,6 @@
         <div class="modal__overlay"></div>
         <div class="modal__content modal-gallery">
           <div class="tabs tabs--modal">
-            <button class="tabs__menu-button" type="button" data-modal="admin-menu">
-              <svg width="32" height="32" aria-hidden="true">
-                <use xlink:href="#icon-mobile-menu"></use>
-              </svg>
-            </button>
             <ul class="tabs__list">
               <li class="tabs__item"><a class="tabs__link" href="lk-guest.html">Программа и инфо</a></li>
               <li class="tabs__item"><a class="tabs__link" href="lk-guest-messages-inbox.html">Сообщения</a></li>

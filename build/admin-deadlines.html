@@ -2864,24 +2864,16 @@
                     <use xlink:href="#link-arrow"></use>
                   </svg></a>
               </div>
-              <div class="top-wrapper__place">
-                <p>at Hyatt Regency Moscow Petrovsky Park</p>
-              </div>
-              <div class="top-wrapper__dates">
-                <p><time datetime="2011-11-18">27</time> – <time datetime="2011-11-18">28 February 2020</time></p>
-              </div>
+              <p class="top-wrapper__text">at Hyatt Regency Moscow Petrovsky Park</p>
+              <p class="top-wrapper__dates"><time datetime="2011-11-18">27</time> – <time datetime="2011-11-18">28 February 2020</time></p>
             </div>
             <div class="participants hidden-sm">
               <p class="participants__info">Only 2 participants are allowed</p>
               <ul class="participants__list">
                 <li class="participants__item"><img src="img/content/admin-photo.jpg" alt="Фото админа"/>
                   <div class="participants__info-wrapper">
-                    <div class="participants__name">
-                      <h4>Stanislav<br>Ozeretsky</h4>
-                    </div>
-                    <div class="participants__position">
-                      <p>Sales Manager Russia and CIS</p>
-                    </div>
+                    <h4 class="participants__name">Stanislav<br>Ozeretsky</h4>
+                    <p class="participants__position">Sales Manager Russia and CIS</p>
                   </div>
                   <button class="participants__edit-button" data-modal="edit-colleague">
                     <svg width="18" height="24" aria-hidden="true">
@@ -2891,12 +2883,8 @@
                 </li>
                 <li class="participants__item"><img src="img/svg/icon-no-photo.svg" alt="Фото админа"/>
                   <div class="participants__info-wrapper">
-                    <div class="participants__name">
-                      <h4>Colleague’s first name<br>Colleague’s first name</h4>
-                    </div>
-                    <div class="participants__position">
-                      <p>Position</p>
-                    </div>
+                    <h4 class="participants__name">Colleague’s first name<br>Colleague’s first name</h4>
+                    <p class="participants__position">Position</p>
                   </div>
                   <button class="participants__edit-button" data-modal="edit-colleague">
                     <svg width="18" height="24" aria-hidden="true">
@@ -2909,7 +2897,7 @@
             </div>
             <div class="admin__control-wrapper admin__control-wrapper--full-width">
               <div class="tabs tabs--menu">
-                <button class="tabs__menu-button" type="button" data-modal="admin-menu">
+                <button class="tabs__menu-button visible-sm" type="button" data-modal="admin-menu">
                   <svg width="32" height="32" aria-hidden="true">
                     <use xlink:href="#icon-mobile-menu"></use>
                   </svg>
@@ -2925,17 +2913,17 @@
               </div>
             </div>
             <div class="admin__text-wrapper">
-              <div class="admin__section admin__section--first">
+              <div class="admin__section admin__section--info">
                 <div class="text-content">
-                  <h2 class="admin__section-title">Deadlines</h2>
+                  <h2 class="title title--h2">Deadlines</h2>
                   <p>July 3, 2019: Opening of registration for the buyers.</p>
                   <p>September 3, 2019: Password, user name and detailed instructions on how to use the online system and to set up your <br>appointments  <br>will be sent for your attention.</p>
                   <p>September 4 – 20, 2019: Scheduling of appointments for the working session. September 20, 2019: </p>
                 </div>
               </div>
-              <div class="admin__section admin__section--second">
+              <div class="admin__section admin__section--details">
                 <div class="text-content">
-                  <h2 class="admin__section-title">Program of the Event</h2>
+                  <h2 class="title title--h2">Program of the Event</h2>
                   <p>Registration desk will be located in the Foyer of the Ballroom Hall (2nd floor). Organizers – Almaty Hall (2nd floor).</p>
                   <p>10:00 – 12:55 Individual pre-scheduled appointments.<br>Each appointment will last 10 minutes according to the following scheme (5 minutes added for moving from one exhibitor to the next):</p>
                   <p>10:00 – 10:10 / 10:15 – 10:25 / 10:30 – 10:40 / 10:45 – 10:55 / 11:00 – 11:10 / 11:15 – 11:25 / 11:30 – 11:40 / 11:45 – 11:55 / 12:00 – 12:10 / 12:15 – 12:25 / 12:30 – 12:40 / 12:45 – 12:55</p>
@@ -2952,24 +2940,22 @@
                   <p>Thank you for your understanding.</p>
                 </div>
               </div>
-              <div class="admin__section admin__section--third">
-                <div class="download">
-                  <h2 class="admin__section-title">Files to Download</h2>
-                  <ul class="download__list download-list download-list--left-padding">
-                    <li class="download-list__item"><a class="download-list__link" href="" aria-label="Скачать файл" download="download">Detailed program
-                        <svg width="26" height="35" aria-hidden="true">
-                          <use xlink:href="#icon-download"></use>
-                        </svg></a></li>
-                    <li class="download-list__item"><a class="download-list__link" href="" aria-label="Скачать файл" download="download">Floor plan for the working session
-                        <svg width="26" height="35" aria-hidden="true">
-                          <use xlink:href="#icon-download"></use>
-                        </svg></a></li>
-                    <li class="download-list__item"><a class="download-list__link" href="" aria-label="Скачать файл" download="download">Floor plan for Hosted buyer session
-                        <svg width="26" height="35" aria-hidden="true">
-                          <use xlink:href="#icon-download"></use>
-                        </svg></a></li>
-                  </ul>
-                </div>
+              <div class="admin__section admin__section--links">
+                <h2 class="title title--h2">Files to Download</h2>
+                <ul class="admin__download-list admin__download-list--left-padding">
+                  <li class="admin__download-item"><a class="admin__download-link" href="" aria-label="Скачать файл" download="download">Detailed program
+                      <svg width="26" height="35" aria-hidden="true">
+                        <use xlink:href="#icon-download"></use>
+                      </svg></a></li>
+                  <li class="admin__download-item"><a class="admin__download-link" href="" aria-label="Скачать файл" download="download">Floor plan for the working session
+                      <svg width="26" height="35" aria-hidden="true">
+                        <use xlink:href="#icon-download"></use>
+                      </svg></a></li>
+                  <li class="admin__download-item"><a class="admin__download-link" href="" aria-label="Скачать файл" download="download">Floor plan for Hosted buyer session
+                      <svg width="26" height="35" aria-hidden="true">
+                        <use xlink:href="#icon-download"></use>
+                      </svg></a></li>
+                </ul>
               </div>
             </div>
             <div class="support-contacts">
@@ -3031,7 +3017,7 @@
                     </div>
                   </li>
                 </ul>
-                <div class="swiper-pagination direction__pagination"></div>
+                <div class="pagination swiper-pagination direction__pagination visible-sm"></div>
                 <button class="direction__arrow direction__arrow--right">
                   <svg width="11" height="19" aria-hidden="true">
                     <use xlink:href="#arrow-right"></use>
@@ -3087,15 +3073,15 @@
           <div class="footer__info"><span class="footer__info-info">&copy; All right reserved by Artyom Polanskiy and Travel Media LLC.</span></div>
         </div>
       </footer>
-      <div class="cookies">
-        <button class="cookies__btn-close" type="button" aria-label="Закрыть">
+      <div class="cookies" id="hidden-element">
+        <button class="cookies__btn-close" type="button" aria-label="Закрыть" id="cookie_close-btn">
           <svg width="33" height="33" aria-hidden="true">
             <use xlink:href="#icon-close"></use>
           </svg>
         </button>
         <h2 class="cookies__title">LTM Website uses cookies</h2>
         <p class="cookies__description">Website uses cookies and similar technologies. We use functional cookies to make sure our websites work well and secure and analytical cookies to offer you the best possible user experience. By clicking on ’Agree’, you consent to the placing of these cookies.</p><a class="cookies__info" href="#">For more information read Cookies policy</a>
-        <button class="button button--transparent" type="button">ok</button>
+        <button class="button button--transparent" type="button" id="cookie_close">ok</button>
       </div>
     </div>
     <div class="modal modal--preload modal--forgot">
@@ -3130,11 +3116,7 @@
               <label class="edit-colleague__photo-upload button button--blue">Загрузить
                 <input class="visually-hidden" type="file"/>
               </label>
-              <div class="edit-colleague__upload-info">
-                <p>JPG, PNG</p>
-                <p>Min. 200x200 px.</p>
-                <p>Max. 3 mb.</p>
-              </div>
+              <p class="edit-colleague__upload-info">JPG, PNG<br>Min. 200x200 px.<br>Max. 3 mb.</p>
             </div>
             <div class="edit-colleague__content-column">
               <div class="edit-colleague__form">
@@ -3186,7 +3168,7 @@
                   </div>
                   <div class="edit-colleague__buttons">
                     <button class="button button--transparent" type="reset">Cancel</button>
-                    <button class="button bytton--blue" type="submit">Save</button>
+                    <button class="button button--blue" type="submit">Save</button>
                   </div>
                 </form>
               </div>
@@ -3205,11 +3187,6 @@
         <div class="modal__overlay"></div>
         <div class="modal__content modal-gallery">
           <div class="tabs tabs--modal">
-            <button class="tabs__menu-button" type="button" data-modal="admin-menu">
-              <svg width="32" height="32" aria-hidden="true">
-                <use xlink:href="#icon-mobile-menu"></use>
-              </svg>
-            </button>
             <ul class="tabs__list">
               <li class="tabs__item tabs__item--active"><a class="tabs__link">Deadlines & Info</a></li>
               <li class="tabs__item"><a class="tabs__link" href="admin-messages-inbox.html">Messages</a></li>

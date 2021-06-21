@@ -20,6 +20,7 @@ import {directionSlider} from './modules/sliders/direction-swiper';
 // import {initResizePhotos} from './modules/admin-gallery';
 import {initLogin} from './modules/init-login';
 import {scrollToTop} from './modules/scroll-to-top';
+import {initCookies} from './modules/cookies';
 
 // Utils
 // ---------------------------------
@@ -49,4 +50,4 @@ buyerSwiper();
 directionSlider();
 initLogin();
 scrollToTop();
-
+initCookies();

@@ -1,3 +1,4 @@
+/* eslint-disable no-invalid-this */
 const initHeader = () => {
 
   const header = document.querySelector('header');
