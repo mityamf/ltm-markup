@@ -59,15 +59,18 @@
     }
   }
 
-  &__pagination {
-    @include viewport--sm {
-      margin-top: 5px;
-    }
-  }
-
   @include viewport--sm {
     margin-top: 45px;
     margin-left: -16px;
     margin-right: -16px;
+  }
+}
+
+.photo-gallery__pagination.swiper-pagination {
+  display: none;
+
+  @include viewport--sm {
+    margin-top: 5px;
+    display: inline-block;
   }
 }

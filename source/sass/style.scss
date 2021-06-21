@@ -49,7 +49,6 @@
 @import "blocks/main-nav";
 @import "blocks/search";
 @import "blocks/gallery";
-@import "blocks/photo-gallery";
 @import "blocks/video";
 @import "blocks/about";
 @import "blocks/schedule";
@@ -95,6 +94,7 @@
 @import "components/photo-edit";
 @import "components/headline-wrapper";
 @import "components/pagination";
+@import "blocks/photo-gallery";
 @import "blocks/admin/admin";
 @import "blocks/admin/tabs";
 @import "blocks/admin/schedule-tabs";
