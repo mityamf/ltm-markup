@@ -44,7 +44,7 @@ mixin photo-block(photoList)
             +icon("icon-arrow_right_white", 19, 30)
           button(type="button").photo__button-prev
             +icon("icon-arrow_right_white", 19, 30)
-          .photo__pagination
+          .pagination.swiper-pagination.photo__pagination.visible-sm
         +modal("modal--gallery")
           +modal-gallery(item.images)
 
