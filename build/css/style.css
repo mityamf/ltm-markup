@@ -1287,10 +1287,6 @@ textarea {
     padding: 0 16.5px;
     margin-bottom: 10px; } }
 
-p {
-  margin: 10px 0 20px 0;
-  letter-spacing: 0.1px; }
-
 .text-wrapper p {
   margin: 0;
   line-height: 22px; }
@@ -10929,9 +10925,8 @@ p {
           padding: 5px; } }
   .wish-list__text-company {
     width: 50%; }
-  .wish-list__company-block > p {
+  .wish-list__company-description {
     margin: 0;
-    max-width: 614px;
     letter-spacing: 1px;
     padding-bottom: 28px;
     font-size: 24px;
@@ -10939,10 +10934,10 @@ p {
     font-weight: lighter;
     color: #0098c1; }
     @media (max-width: 1439px) {
-      .wish-list__company-block > p {
+      .wish-list__company-description {
         padding-bottom: 9px; } }
     @media (max-width: 767px) {
-      .wish-list__company-block > p {
+      .wish-list__company-description {
         padding: 26px 17px 24px 17px; } }
   .wish-list__company-list-wrapper {
     display: -webkit-box;

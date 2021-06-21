@@ -18,7 +18,7 @@ mixin renderWishList(wishList)
         .admin__mobile-block-wrapper.visible-sm
           button.button.button--transparent(type="button")="More"
       .wish-list__company-block
-        p=wishList.text
+        p.wish-list__company-description=wishList.text
         h4.title.title--h4="Company"
         ul.wish-list__company-list
           each company in wishList.companyList.columnTwo
