@@ -50,13 +50,6 @@
   margin: 0;
 }
 
-.title--sm-pd {
-  @include viewport--sm {
-    padding: 0 16.5px;
-    margin-bottom: 10px;
-  }
-}
-
 //p {
 //  margin: 10px 0 20px 0;
 //  letter-spacing: 0.1px;
