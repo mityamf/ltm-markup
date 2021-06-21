@@ -513,6 +513,9 @@ template {
   cursor: auto;
   pointer-events: none; }
 
+.swiper-button-disabled {
+  opacity: 0.35; }
+
 .swiper-button-prev:after,
 .swiper-button-next:after {
   font-family: swiper-icons;
@@ -2751,6 +2754,9 @@ textarea {
 
 .direction--exhibitors input:checked ~ .direction__radio .direction__item {
   border-color: #0098c1; }
+  @media (max-width: 767px) {
+    .direction--exhibitors input:checked ~ .direction__radio .direction__item {
+      border: none; } }
 
 .direction--exhibitors .direction__arrow--right {
   top: 72%; }
@@ -5448,7 +5454,7 @@ textarea {
       .about__content {
         width: 100%;
         max-width: none;
-        padding-bottom: 0;
+        padding-bottom: 30px;
         padding-right: 0;
         border-bottom: 1px solid #0098c1; } }
   .about__text-wrapper {
@@ -5466,8 +5472,14 @@ textarea {
     padding: 10px 0 0 0; }
   @media (max-width: 767px) {
     .about__text-wrapper--mobile > .text-content {
-      max-height: 130px;
-      overflow: hidden; } }
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -moz-box;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      line-clamp: 5;
+      box-orient: vertical; } }
   .about__text-wrapper--dates {
     padding: 25px 0 0 0; }
     @media (max-width: 1439px) {
@@ -8599,17 +8611,7 @@ textarea {
       padding: 30px 95px 30px 95px; } }
   @media (max-width: 1023px) {
     .info-bottom {
-      padding: 25px 95px 42px 95px; } }
-  @media (max-width: 767px) {
-    .info-bottom {
       padding: 23px 0; } }
-  .info-bottom p {
-    letter-spacing: 0.1px; }
-    @media (max-width: 767px) {
-      .info-bottom p {
-        letter-spacing: 0.3px; } }
-  .info-bottom p:last-child {
-    margin-bottom: 0; }
 
 .hotel-card {
   padding: 5px;
@@ -9438,6 +9440,8 @@ textarea {
   @media (max-width: 767px) {
     .pagination.swiper-pagination .swiper-pagination-bullet-active {
       background: #0098c1; } }
+  .pagination.swiper-pagination .swiper-button-disabled {
+    opacity: 0.5; }
 
 .photo-gallery a[href] {
   -webkit-backface-visibility: hidden;
@@ -9528,7 +9532,7 @@ textarea {
       padding: 14px 0 22px; } }
 
 .admin__button-wrapper {
-  padding: 31px 0 0 0; }
+  padding: 30px 0; }
   .admin__button-wrapper .button {
     margin: 0 auto;
     width: 222px;
@@ -9650,14 +9654,6 @@ textarea {
     .admin__block-wrapper {
       -ms-grid-columns: 100%;
       grid-template-columns: 100%; } }
-
-.admin__section-title {
-  margin: 0 0 30px 0;
-  color: #0098c1;
-  font-size: 38px;
-  line-height: 46px;
-  font-weight: lighter;
-  letter-spacing: 1.7px; }
 
 .admin__section--participants {
   grid-area: participants; }
