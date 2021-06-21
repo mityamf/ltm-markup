@@ -4,7 +4,7 @@ mixin photo-block(photoList)
       li.gallery__block-item
         .gallery__title-wrap
           h3.title.title--h3 #{item.title} #[span #{item.titleOnlyDesktop}]
-        .swiper-container.photo__slider
+        .swiper-container.photo-gallery
           ul.gallery__sublist.swiper-wrapper
             each image in item.images
               if image.isLong
@@ -40,11 +40,11 @@ mixin photo-block(photoList)
                         picture
                           +webp("content", `${image.srcThumbnail}`)
                           +img("content", `${image.srcThumbnail}`, "png", 222, 154, "Фотография с мероприятия")
-          button(type="button").photo__button-next
+          button(type="button").photo-gallery__button-next
             +icon("icon-arrow_right_white", 19, 30)
-          button(type="button").photo__button-prev
+          button(type="button").photo-gallery__button-prev
             +icon("icon-arrow_right_white", 19, 30)
-          .pagination.swiper-pagination.photo__pagination.visible-sm
+          .pagination.swiper-pagination.photo-gallery__pagination.visible-sm
         +modal("modal--gallery")
           +modal-gallery(item.images)
 

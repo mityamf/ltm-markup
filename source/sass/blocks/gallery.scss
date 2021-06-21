@@ -16,7 +16,7 @@
     }
   }
 
-  &__section:not(:last-of-type) {
+  &__section:not(:last-child) {
     margin-right: 15px;
 
     @include viewport--lg {
@@ -30,6 +30,8 @@
 
   &__block-list {
     margin: 0;
+    padding: 0;
+    list-style: none;
   }
 
   &__block-item {
@@ -41,6 +43,7 @@
     flex-direction: column;
     justify-content: space-between;
     margin: 0;
+    list-style: none;
   }
 
   &__sublist-item {
@@ -83,6 +86,8 @@
     margin-right: 0;
     margin-top: -15px;
     margin-bottom: 0;
+    padding: 0;
+    list-style: none;
 
     @include viewport--lg {
       margin-left: -10px;
@@ -190,12 +195,6 @@
     }
 
     @include viewport--sm {
-      padding: 0 16.5px;
-
-      .title--h3 {
-        letter-spacing: 0.3px;
-      }
-
       span {
         display: none;
       }

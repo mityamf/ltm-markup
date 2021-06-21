@@ -28,26 +28,24 @@ block main
 
   main
     +promo(promoBg.titleItem, promoBg.btnItem, promoBg.imgItem, promoBg.img2xItem, promoBg.widthItem, promoBg.heightItem, promoBg.imgSource, promoBg.classItem, promoBg.promoItem)
-    section.gallery.container.container--no-padding
+    section.gallery.container
       h1.visually-hidden Фото и видео
       .toggle
         span.toggle__section.toggle__section--photo Photo
         input(type="checkbox" id="toggle-button" class="toggle__button")
         label(for="toggle-button" class="visually-hidden") Toggle Button
         span.toggle__section.toggle__section--video Video
-      .gallery__section.gallery__section--photo.photo
-        h2.title.title--h2.title--sm-pd Photo
+      .gallery__section.js-photo
+        h2.title.title--h2 Photo
         +photo-block(photoList)
-      .gallery__section.gallery__section--video.video
-        h2.title.title--h2.title--sm-pd Video
+      .gallery__section.js-video
+        h2.title.title--h2 Video
         ul.gallery__block-list
           each item in videoList
             li.gallery__block-item
-              .gallery__title-wrap
-                h3.title.title--h3 #{item.title} #[span #{item.titleOnlyDesktop}]
+              h3.title.title--h3 #{item.title} #[span #{item.titleOnlyDesktop}]
               .video__container
                 video.video__player(controls preload="metadata" poster= `${item.img}` src= `${item.src}`)
                   button.button.button--transparent(type="button")="More"
     .container
-      a.up-button.up-button--right.up-button--xl(href="#top", aria-label="Вернуться в начало")
-        +icon("icon-arrow-up", 54, 54)
+      +renderUpButton('up-button--right up-button--xl')

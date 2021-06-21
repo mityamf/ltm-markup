@@ -1,9 +1,4 @@
-.photo {
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-
+.photo-gallery {
   a[href] {
     backface-visibility: hidden;
     transition: opacity $default-transition-settings;
@@ -70,9 +65,9 @@
     }
   }
 
-  &__slider {
-    @include viewport--sm {
-      margin-top: 45px;
-    }
+  @include viewport--sm {
+    margin-top: 45px;
+    margin-left: -16px;
+    margin-right: -16px;
   }
 }
