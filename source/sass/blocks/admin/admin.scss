@@ -98,10 +98,11 @@
   &__control-wrapper {
     display: grid;
     grid-template-areas: "tabs tabs" "title control";
+    padding-bottom: 18px;
 
     @include viewport--sm {
       grid-template-areas: "tabs control" "title title";
-      padding: 20px 0 0 0;
+      padding: 20px 0;
       grid-row-gap: 10px;
     }
 
@@ -123,6 +124,7 @@
 
     .title {
       grid-area: title;
+      margin: 0;
     }
   }
 

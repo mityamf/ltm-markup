@@ -81,6 +81,14 @@
     padding: 0;
   }
 
+  .pagination {
+    display: none !important;
+
+    @include viewport--sm {
+      display: inline-block !important;
+    }
+  }
+
   .direction__arrow {
     border: none;
     background-color: transparent;
