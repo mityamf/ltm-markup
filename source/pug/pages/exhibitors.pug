@@ -32,9 +32,10 @@ block main
 
       .hidden-sm
         form.filters.filters--exhibitions
-          +renderAlphabetFilter(alphabetFilter)
-          +renderDropdownFilter(dropdownFilters)
-          +renderFilterButton(buttonFilter)
+          .filters__wrapper
+            +renderAlphabetFilter(alphabetFilter)
+            +renderDropdownFilter(dropdownFilters)
+            +renderFilterButton(buttonFilter)
 
       .visible-sm
         form.filters.filters--exhibitors

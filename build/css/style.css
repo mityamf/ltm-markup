@@ -8905,6 +8905,11 @@ p {
     font-weight: normal; }
   .support-contacts .direction {
     padding: 0; }
+  .support-contacts .pagination {
+    display: none !important; }
+    @media (max-width: 767px) {
+      .support-contacts .pagination {
+        display: inline-block !important; } }
   .support-contacts .direction__arrow {
     border: none;
     background-color: transparent;
@@ -9427,10 +9432,6 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -9439,13 +9440,16 @@ p {
           align-items: center;
   width: 100%;
   padding-top: 22px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: inherit; }
   @media (max-width: 767px) {
     .headline-wrapper {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: reverse;
-          -ms-flex-direction: row-reverse;
-              flex-direction: row-reverse;
+      -webkit-box-align: baseline;
+          -ms-flex-align: baseline;
+              align-items: baseline;
       padding-top: 32px; } }
   .headline-wrapper h2 {
     margin: 0;
@@ -9598,11 +9602,12 @@ p {
 .admin__control-wrapper {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "tabs tabs" "title control"; }
+      grid-template-areas: "tabs tabs" "title control";
+  padding-bottom: 18px; }
   @media (max-width: 767px) {
     .admin__control-wrapper {
           grid-template-areas: "tabs control" "title title";
-      padding: 20px 0 0 0;
+      padding: 20px 0;
       grid-row-gap: 10px; } }
   .admin__control-wrapper .tabs {
     grid-column: tabs; }
@@ -9619,7 +9624,8 @@ p {
   .admin__control-wrapper .title {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
-    grid-area: title; }
+    grid-area: title;
+    margin: 0; }
   @media (max-width: 767px){
     .admin__control-wrapper .mail-control {
     -ms-grid-row: 1;

@@ -1,15 +1,20 @@
 .headline-wrapper {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding-top: 22px;
+  flex-direction: column;
+  //justify-content: space-between;
+  //align-items: center;
+  //width: 100%;
+  // padding-top: 22px;
 
   background-color: inherit;
 
   @include viewport--sm {
-    flex-direction: row-reverse;
+    //flex-direction: row-reverse;
+    align-items: baseline;
     padding-top: 32px;
   }
 
