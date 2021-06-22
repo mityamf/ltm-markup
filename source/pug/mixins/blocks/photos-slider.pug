@@ -21,7 +21,7 @@ mixin renderEditImageSlider(photoList)
             picture
               img(src=photo.src, srcset=photo.srcset, alt="Фото отеля")
             +renderEditComponent(photo, true)
-      .swiper-pagination.direction__pagination
+      .pagination.swiper-pagination.direction__pagination
       .direction__arrow.swiper-button-next.direction__arrow--right
         +icon("arrow-white-right", 18, 30)
       .direction__arrow.swiper-button-prev.direction__arrow--left
