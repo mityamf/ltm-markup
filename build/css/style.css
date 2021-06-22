@@ -8229,9 +8229,11 @@ textarea {
 
 .forgot__logo {
   margin-bottom: 63px; }
+  @media (max-width: 767px) {
+    .forgot__logo svg {
+      width: 250px; } }
 
 .forgot__form {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8244,7 +8246,6 @@ textarea {
           align-items: center; }
 
 .forgot__form input {
-  width: 100%;
   padding: 6px 9px 7px 9px;
   margin-bottom: 8px;
   border: 1px solid #0098c1;
@@ -8277,6 +8278,9 @@ textarea {
     line-height: 29px;
     letter-spacing: 0.03em;
     color: #0098c1; }
+  @media (max-width: 767px) {
+    .forgot__form input {
+      max-width: 250px; } }
 
 .forgot .forgot__link {
   margin-bottom: 50px;
