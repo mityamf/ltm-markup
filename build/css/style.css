@@ -6264,8 +6264,7 @@ textarea {
       .hotel-page--headline-wrapper .hotel-headline--edit {
         display: none; } }
     .hotel-page--headline-wrapper .hotel-headline--edit .back-link {
-      padding-top: 13px;
-      padding-left: 25px; }
+      padding-top: 13px; }
       @media (max-width: 1439px) {
         .hotel-page--headline-wrapper .hotel-headline--edit .back-link {
           padding-top: 27px;
@@ -6354,6 +6353,9 @@ textarea {
       opacity: 0.8; }
     .edit__label:active {
       opacity: 0.5; }
+    @media (max-width: 767px) {
+      .edit__label {
+        margin-bottom: 20px; } }
   .edit__input {
     padding: 8px 18px;
     width: 100%;
@@ -7539,12 +7541,12 @@ textarea {
   @media (max-width: 1439px) {
     .account__admin {
       width: 514px;
-      margin-right: 35px; } }
+      margin-right: 35px;
+      padding-bottom: 25px; } }
   @media (max-width: 767px) {
     .account__admin {
       width: 100%;
       margin: 0;
-      padding: 0 0 32px;
       border-bottom: 1px solid #0098c1; } }
 
 .account__admin img {
@@ -8288,10 +8290,6 @@ textarea {
 .photos-slider {
   clear: both;
   display: none; }
-  .photos-slider .swiper-container-horizontal > .swiper-pagination-bullets,
-  .photos-slider .swiper-pagination-custom,
-  .photos-slider .swiper-pagination-fraction {
-    bottom: 0; }
   @media (max-width: 767px) {
     .photos-slider {
       display: block;
@@ -8308,7 +8306,7 @@ textarea {
     @media (max-width: 767px) {
       .photos-slider__photo-list {
         margin: 0;
-        padding-bottom: 35px; } }
+        padding-bottom: 10px; } }
   .photos-slider .direction__list .swiper-slide {
     width: 100%;
     height: 375px; }
@@ -8330,9 +8328,6 @@ textarea {
     right: 12px; }
   .photos-slider .direction__arrow--left {
     left: 12px; }
-  .photos-slider .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px; }
   @media (max-width: 767px) {
     .photos-slider picture,
     .photos-slider img {
@@ -8342,7 +8337,7 @@ textarea {
   .photos-slider--account .swiper-container-horizontal > .swiper-pagination-bullets,
   .photos-slider--account .swiper-pagination-custom,
   .photos-slider--account .swiper-pagination-fraction {
-    bottom: 10px; } }
+    bottom: 25px; } }
 
 .photos {
   display: -webkit-box;
@@ -9544,6 +9539,9 @@ textarea {
   .admin__mobile-block-wrapper .button--transparent {
     width: 222px; } }
 
+.admin--schedule .table {
+  margin-top: 25px; }
+
 .admin__tabs-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9553,6 +9551,9 @@ textarea {
     width: -moz-max-content;
     width: max-content;
     padding: 0; }
+    @media (max-width: 767px) {
+      .admin__tabs-wrapper .tabs {
+        width: 100%; } }
 
 .admin__sender-info {
   width: 100%;
@@ -9582,10 +9583,8 @@ textarea {
   display: flex;
   padding-left: 10px; }
   .admin__additional-buttons .button--transparent {
-    padding: 16px; }
-  @media (max-width: 1439px) {
-    .admin__additional-buttons {
-      padding-left: 15px; } }
+    padding: 3px 10px;
+    min-height: 49px; }
   @media (max-width: 767px) {
     .admin__additional-buttons {
       padding-left: 0; } }
@@ -10588,7 +10587,7 @@ textarea {
     line-height: 22px; }
     @media (max-width: 767px) {
       .table tbody td {
-        padding: 0;
+        padding: 3px 0;
         line-height: 20px; } }
   .table .button {
     padding: 2px;

@@ -44,12 +44,20 @@
     }
   }
 
+  &--schedule .table {
+    margin-top: 25px;
+  }
+
   &__tabs-wrapper {
     display: flex;
 
     .tabs {
       width: max-content;
       padding: 0;
+
+      @include viewport--sm {
+        width: 100%;
+      }
     }
   }
 
@@ -83,11 +91,8 @@
     padding-left: 10px;
 
     .button--transparent {
-      padding: 16px;
-    }
-
-    @include viewport--lg {
-      padding-left: 15px;
+      padding: 3px 10px;
+      min-height: 49px;
     }
 
     @include viewport--sm {

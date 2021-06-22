@@ -183,12 +183,12 @@
     @include viewport--lg {
       width: 514px;
       margin-right: 35px;
+      padding-bottom: 25px;
     }
 
     @include viewport--sm {
       width: 100%;
       margin: 0;
-      padding: 0 0 32px;
       border-bottom: 1px solid $color-blue;
     }
   }
