@@ -5,7 +5,6 @@ block variables
   - var hasHeader = true
   - var hasFooter = true
   - var currentPage = "Schedule"
-  - var hasUpButton = true
 
 block main
   include ../data/pages/lk-guest-schedule-d1
@@ -36,8 +35,6 @@ block main
             button.button.button--transparent(type="button")="Скачать расписание PDF"
 
           +renderWishList(wishList)
-          .admin__button-wrapper.visible-sm
-            +renderUpButton('up-button--mobile')
         +renderSupportContacts(contactsList)
 
 block modals

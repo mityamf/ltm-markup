@@ -42,7 +42,7 @@
     line-height: 22px;
 
     @include viewport--sm {
-      padding: 0;
+      padding: 3px 0;
       line-height: 20px;
     }
   }

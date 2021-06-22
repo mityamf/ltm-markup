@@ -2956,18 +2956,18 @@
                   <use xlink:href="#arrow-white-left"></use>
                 </svg>
               </div>
-              <div class="swiper-pagination direction__pagination"></div>
+              <div class="pagination swiper-pagination direction__pagination"></div>
             </div>
           </div>
           <div class="account-hotel-info">
             <div class="account-hotel-info__description">
-              <p>Mandarin Oriental Hotel Group is the award-winning owner and operator of some of the world’s most prestigious hotels, resorts and residences. Over the past fifty years, the Group has grown its business from its original flagship properties in Asia – the acclaimed Mandarin Oriental, Hong Kong and Mandarin Oriental, Bangkok – to successfully operate in major business centres and key leisure destinations around the world.</p><a class="account-hotel-info__link-more" href="#" aria-label="Читать больше">
+              <p>Mandarin Oriental Hotel Group is the award-winning owner and operator of some of the world’s most prestigious hotels, resorts and residences. Over the past fifty years, the Group has grown its business from its original flagship properties in Asia – the acclaimed Mandarin Oriental, Hong Kong and Mandarin Oriental, Bangkok – to successfully operate in major business centres and key leisure destinations around the world.</p><a class="account-hotel-info__link-more" href="hotel-page.html" aria-label="Читать больше">
                 <svg width="103" height="22" aria-hidden="true">
                   <use xlink:href="#icon-read-more"></use>
                 </svg></a>
             </div>
             <div class="account-hotel-info__interactive"><a class="account-hotel-info__link-hotel" href="https://www.mandarinoriental.com">https://www.mandarinoriental.com</a>
-              <button class="button button--blue" type="button">Edit Information</button>
+              <button class="button button--blue" type="button" data-modal="edit-profile">Edit Information</button>
             </div>
           </div>
           <div class="account__event-block">
@@ -3503,6 +3503,89 @@
                   </div>
                 </form>
               </div>
+            </div>
+          </div>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+            <svg width="33" height="33" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--edit-profile modal--bottom-slide">
+      <div class="modal__wrapper">
+        <div class="modal__overlay"></div>
+        <div class="modal__content modal-gallery">
+          <div class="edit-colleague">
+            <h2 class="title title--h2 title--big">Информация о компании</h2>
+            <div class="edit-colleague__form">
+              <form action="#" method="POST">
+                <div class="edit-colleague__block edit-colleague__block--full-width"><span>Название компании</span><span class="edit-colleague__name">Adventa Agency</span></div>
+                <div class="form-reg form-reg--full-width">
+                  <div class="form-reg__block">
+                    <label>Web
+                      <input type="text" placeholder="https://"/>
+                    </label>
+                  </div>
+                </div>
+                <div class="edit-colleague__block edit-colleague__block--full-width">
+                  <label class="input-wrapper" for="company-description">Описание компании</label>
+                  <textarea placeholder="Описание компании, только на английском языке" id="company-description" name="company-description" type="textarea"></textarea>
+                </div>
+                <div class="form-reg form-reg--select form-reg--full-width">
+                  <div class="form-reg__block">
+                    <p>Страна
+                      <select class="input-dropdown" id="country-select">
+                        <option class="input-dropdown__option" value="Russia">Russia</option>
+                        <option class="input-dropdown__option" value="USA">USA</option>
+                      </select>
+                    </p>
+                  </div>
+                </div>
+                <div class="form-reg form-reg--select form-reg--full-width">
+                  <div class="form-reg__block">
+                    <p>Город
+                      <select class="input-dropdown" id="city-select">
+                        <option class="input-dropdown__option" value="Moscow">Moscow</option>
+                        <option class="input-dropdown__option" value="Saratov">Saratov</option>
+                      </select>
+                    </p>
+                  </div>
+                </div>
+                <div class="form-reg form-reg--full-width">
+                  <div class="form-reg__block">
+                    <label>Адрес
+                      <input type="text" placeholder="office, bld., St"/>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-reg form-reg--half-width">
+                  <div class="form-reg__block">
+                    <label>Почтовый индекс
+                      <input type="text" placeholder="000000"/>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-reg form-reg--half-width edit-colleague__block--right">
+                  <div class="form-reg__block">
+                    <label>Телефон
+                      <input type="text" placeholder="+1 (111) 111 11 11"/>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-reg form-reg--full-width">
+                  <div class="form-reg__block">
+                    <label>E-mail
+                      <input type="text" placeholder="E-mail"/>
+                    </label>
+                  </div>
+                </div>
+                <div class="edit-colleague__buttons">
+                  <button class="button button--transparent" type="reset">Отмена</button>
+                  <button class="button button--blue" type="submit">Сохранить</button>
+                </div>
+              </form>
             </div>
           </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
