@@ -3364,7 +3364,11 @@ textarea {
   @media (min-width: 1440px) {
     .gallery-block--md-1 {
       max-width: 222px;
-      max-height: 222px; } }
+      max-height: 222px; }
+      .gallery-block--md-1 img {
+        height: 222px;
+        -o-object-fit: cover;
+           object-fit: cover; } }
   @media (min-width: 1920px) {
     .gallery-block--md-1 {
       margin-right: 20px; } }
@@ -4321,7 +4325,8 @@ textarea {
           flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  overflow: initial; }
 
 .modal--submission .modal__overlay {
   position: absolute;
@@ -4717,6 +4722,9 @@ textarea {
 
 .modal--choices .modal__content {
   width: 100%;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
   padding: 0;
   border-radius: 15px 15px 0 0;
   display: -webkit-box;
@@ -4725,7 +4733,8 @@ textarea {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  overflow: initial; }
 
 .modal--choices .modal__close-btn {
   width: 50px;
