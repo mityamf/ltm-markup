@@ -111,6 +111,10 @@
     &:active {
       opacity: 0.5;
     }
+
+    @include viewport--sm {
+      margin-bottom: 20px;
+    }
   }
 
   &__input {
