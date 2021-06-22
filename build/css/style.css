@@ -6163,13 +6163,10 @@ textarea {
     @media (max-width: 767px) {
       .hotel-page__text-list {
         padding: 0; } }
-    .hotel-page__text-list p {
+    .hotel-page__text-list .text-content {
       width: 935px; }
-    @media (max-width: 767px) {
-      .hotel-page__text-list p:first-of-type {
-        margin-top: 0; } }
     @media (max-width: 1439px) {
-      .hotel-page__text-list p {
+      .hotel-page__text-list .text-content {
         max-width: 835px;
         width: auto; } }
     @media (max-width: 1023px) {
@@ -6177,11 +6174,11 @@ textarea {
         -webkit-box-ordinal-group: 2;
             -ms-flex-order: 1;
                 order: 1; }
-        .hotel-page__text-list p {
+        .hotel-page__text-list .text-content {
           max-width: none;
           width: 100%; } }
     @media (max-width: 767px) {
-      .hotel-page__text-list p {
+      .hotel-page__text-list .text-content {
         max-width: none;
         width: 100%; } }
   .hotel-page__title {
@@ -10944,8 +10941,17 @@ textarea {
         padding: 27px 0 0;
         margin: 0 -17px; } }
   .wish-list__company-block {
-    display: inline-block;
-    width: calc((100% / 2)); }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
     @media (max-width: 767px) {
       .wish-list__company-block {
         display: block;
@@ -10958,14 +10964,14 @@ textarea {
       .wish-list__company-block:first-child {
         padding-top: 0;
         margin: 0; } }
-  .wish-list__company-block > .title--h4 {
+  .wish-list__company-wrapper > .title--h4 {
     display: block;
     margin: 0;
     font-size: 12px;
     line-height: 20px;
     color: #9f9f9f; }
     @media (max-width: 767px) {
-      .wish-list__company-block > .title--h4 {
+      .wish-list__company-wrapper > .title--h4 {
         padding-left: 17px;
         padding-right: 17px; } }
   .wish-list__company-list {
