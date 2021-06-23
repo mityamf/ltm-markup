@@ -73,18 +73,10 @@ const initModalGallerySwiper = () => {
 
     if (modal.classList.contains('modal--active') && modalSwiper === null && modalMiniSwiper === null) {
 
-      modalSwiper = new Swiper(slider, {
-        loop: true,
-        navigation: {
-          nextEl: '.modal-gallery__btn-next',
-          prevEl: '.modal-gallery__btn-prev',
-        },
-        thumbs: {
-          swiper: modalMiniSwiper,
-        },
-      });
-
       modalMiniSwiper = new Swiper(miniSlider, {
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        centerInsufficientSlides: true,
         slideToClickedSlide: true,
         breakpoints: {
           0: {
@@ -95,6 +87,18 @@ const initModalGallerySwiper = () => {
             spaceBetween: 16,
             slidesPerView: 12,
           },
+        },
+      });
+
+      modalSwiper = new Swiper(slider, {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: '.modal-gallery__btn-next',
+          prevEl: '.modal-gallery__btn-prev',
+        },
+        thumbs: {
+          swiper: modalMiniSwiper,
         },
       });
     }
