@@ -3,7 +3,6 @@ import {disableScrolling, enableScrolling} from '../utils/scroll-lock';
 const initModalGallerySwiper = () => {
 
   const modalGalleryBtns = document.querySelectorAll('[data-modal="gallery"]');
-  const modalMultipleGalBtns = document.querySelectorAll('[data-modal="gallery-multiple"]');
 
   let modalSwiper = null;
   let modalMiniSwiper = null;
@@ -51,37 +50,24 @@ const initModalGallerySwiper = () => {
     });
   };
 
-  if (modalMultipleGalBtns.length) {
-    modalMultipleGalBtns.forEach((btn) => {
+  if (modalGalleryBtns.length) {
+    modalGalleryBtns.forEach((btn) => {
 
-      let block = btn.closest('.gallery__block-item');
+      let block = btn.closest('.js-gallery');
       let modalBlock = block.querySelector('.modal--gallery');
       let modalSlider = modalBlock.querySelector('.modal-gallery__slider');
       let modalMiniSlider = modalBlock.querySelector('.modal-gallery__mini-slider');
 
       btn.addEventListener('click', (evt) => {
         evt.preventDefault();
+        let clickedSlide = evt.target.closest('[data-modal="gallery"]');
+        let clickedSlideId = Number(clickedSlide.dataset.id);
         openModal(modalBlock);
         initSwiper(modalBlock, modalSlider, modalMiniSlider);
+        modalSlider.swiper.slideToLoop(clickedSlideId - 1, 200);
       });
     });
   }
-
-  if (modalGalleryBtns.length) {
-    modalGalleryBtns.forEach((btn) => {
-
-      const modalSlider = document.querySelector('.modal-gallery__slider');
-      const modalMiniSlider = document.querySelector('.modal-gallery__mini-slider');
-      const modalGallery = document.querySelector('.modal--gallery');
-
-      btn.addEventListener('click', (evt) => {
-        evt.preventDefault();
-        openModal(modalGallery);
-        initSwiper(modalGallery, modalSlider, modalMiniSlider);
-      });
-    });
-  }
-
 
   const initSwiper = (modal, slider, miniSlider) => {
 
@@ -89,7 +75,6 @@ const initModalGallerySwiper = () => {
 
       modalSwiper = new Swiper(slider, {
         loop: true,
-        slidesPerView: 1,
         navigation: {
           nextEl: '.modal-gallery__btn-next',
           prevEl: '.modal-gallery__btn-prev',
@@ -100,9 +85,7 @@ const initModalGallerySwiper = () => {
       });
 
       modalMiniSwiper = new Swiper(miniSlider, {
-        // freeMode: true,
-        // watchSlidesVisibility: true,
-        // watchSlidesProgress: true,
+        slideToClickedSlide: true,
         breakpoints: {
           0: {
             spaceBetween: 10,
