@@ -95,18 +95,12 @@
       padding: 0;
     }
 
-    p {
+    .text-content {
       width: 935px;
     }
 
-    p:first-of-type {
-      @include viewport--sm {
-        margin-top: 0;
-      }
-    }
-
     @include viewport--lg {
-      p {
+      .text-content {
         max-width: 835px;
         width: auto;
       }
@@ -115,14 +109,14 @@
     @include viewport--md {
       order: 1;
 
-      p {
+      .text-content {
         max-width: none;
         width: 100%;
       }
     }
 
     @include viewport--sm {
-      p {
+      .text-content {
         max-width: none;
         width: 100%;
       }
@@ -227,7 +221,6 @@
 
       .back-link {
         padding-top: 13px;
-        padding-left: 25px;
 
         @include viewport--lg {
           padding-top: 27px;
@@ -235,5 +228,9 @@
         }
       }
     }
+  }
+
+  .headline-wrapper {
+    flex-direction: row;
   }
 }

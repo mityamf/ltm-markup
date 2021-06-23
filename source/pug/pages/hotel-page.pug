@@ -27,7 +27,8 @@ block main
                 +renderBackButton("#")
                 a.hotel-page__link(href=hotel.link)=hotel.link
             .hotel-page__text-list
-              +renderTextContentBlock(hotel.textList)
+              .text-content
+                +renderTextContentBlock(hotel.textList)
 
 block modals
   +modal("modal--gallery")

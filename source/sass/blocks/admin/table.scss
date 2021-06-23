@@ -42,7 +42,7 @@
     line-height: 22px;
 
     @include viewport--sm {
-      padding: 0;
+      padding: 3px 0;
       line-height: 20px;
     }
   }
@@ -406,5 +406,9 @@
     @include viewport--sm {
       visibility: visible;
     }
+  }
+
+  .choices__list--dropdown .choices__item--selectable {
+    font-size: 20px;
   }
 }

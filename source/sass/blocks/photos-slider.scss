@@ -2,13 +2,6 @@
   clear: both;
   display: none;
 
-
-  .swiper-container-horizontal > .swiper-pagination-bullets,
-  .swiper-pagination-custom,
-  .swiper-pagination-fraction {
-    bottom: 0;
-  }
-
   @include viewport--sm {
     display: block;
     padding: 29px 0 0;
@@ -23,7 +16,7 @@
 
     @include viewport--sm {
       margin: 0;
-      padding-bottom: 35px;
+      padding-bottom: 10px;
     }
   }
 
@@ -62,11 +55,6 @@
     left: 12px;
   }
 
-  .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-  }
-
   picture,
   img {
     @include viewport--sm {
@@ -80,7 +68,7 @@
     .swiper-container-horizontal > .swiper-pagination-bullets,
     .swiper-pagination-custom,
     .swiper-pagination-fraction {
-      bottom: 10px;
+      bottom: 25px;
     }
   }
 }

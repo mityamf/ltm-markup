@@ -59,8 +59,6 @@
   outline: none;
 
   svg {
-    fill: $color-blue;
-
     @include viewport--sm {
       width: 24px;
       height: 24px;
