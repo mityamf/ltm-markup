@@ -1,5 +1,9 @@
 .newpage {
   margin-top: 29px;
+
+  @include viewport--sm {
+    margin-top: 0;
+  }
 }
 
 .newpage h2 {

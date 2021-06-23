@@ -5838,6 +5838,9 @@ textarea {
 
 .newpage {
   margin-top: 29px; }
+  @media (max-width: 767px) {
+    .newpage {
+      margin-top: 0; } }
 
 .newpage h2 {
   letter-spacing: 0.04em; }
