@@ -18,7 +18,6 @@ const dropdown = () => {
 
         activeBtn = dropdownsBtn;
       });
-
     });
   };
 
