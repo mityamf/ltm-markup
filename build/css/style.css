@@ -8394,7 +8394,7 @@ textarea {
   .photos-slider--account .swiper-container-horizontal > .swiper-pagination-bullets,
   .photos-slider--account .swiper-pagination-custom,
   .photos-slider--account .swiper-pagination-fraction {
-    bottom: 25px; } }
+    bottom: 10px; } }
 
 .photos {
   display: -webkit-box;

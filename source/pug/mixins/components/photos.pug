@@ -23,7 +23,8 @@ mixin renderEditPhotos(photoList, cover)
     .photos__wrapper
       .photos__block.photos__block--first
         picture
-          img(src=photoList[0].src, srcset=photoList[0].srcset, alt="Фото отеля")
+          +webp("content", `${photoList[0].src}`)
+          +img("content", `${photoList[0].src}`, "jpg", 222, 154, "Фото отеля")
         +renderEditComponent(photoList[0])
 
       .photos__block.photos__block--second
@@ -31,20 +32,23 @@ mixin renderEditPhotos(photoList, cover)
           each photo in photoList.slice(1, 4)
             .photos__item(class='photos__item--' + photo.mod)
               picture
-                img(src=photo.src, srcset=photo.srcset, alt="Фото отеля")
+                +webp("content", `${photo.src}`)
+                +img("content", `${photo.src}`, "jpg", 222, 154, "Фото отеля")
               +renderEditComponent(photo)
         .photos__block__wrapper
           each photo in photoList.slice(4, 7)
             .photos__item(class='photos__item--' + photo.mod)
               picture
-                img(src=photo.src, srcset=photo.srcset, alt="Фото отеля")
+                +webp("content", `${photo.src}`)
+                +img("content", `${photo.src}`, "jpg", 222, 154, "Фото отеля")
               +renderEditComponent(photo)
 
     .photos__block.photos__block--last
       each photo in photoList.slice(7)
         .photos__item
           picture
-            img(src=photo.src, srcset=photo.srcset, alt="Фото отеля")
+            +webp("content", `${photo.src}`)
+            +img("content", `${photo.src}`, "jpg", 222, 154, "Фото отеля")
           +renderEditComponent(photo)
 
       .photos__item.photos__item--upload
@@ -56,24 +60,29 @@ mixin renderPhotos(photoList, mod)
   .photos(class=mod)
     .photos__wrapper
       .photos__block.photos__block--first
-        picture
-          img(src=photoList[0].src, srcset=photoList[0].srcset, alt="Фото отеля")
+        a.photos__gallery-link(href="#" data-modal="gallery" id=photoList[0].id)
+          picture
+            +webp("content", `${photoList[0].src}`)
+            +img("content", `${photoList[0].src}`, "jpg", 222, 154, "Фото отеля")
 
       .photos__block.photos__block--second
         .photos__block__wrapper
           each photo in photoList.slice(1, 4)
             .photos__item(class='photos__item--' + photo.mod)
-              picture
-                img(src=photo.src, srcset=photo.srcset, alt="Фото отеля")
+              a.photos__gallery-link(href="#" data-modal="gallery" id=photo.id)
+                +webp("content", `${photo.src}`)
+                +img("content", `${photo.src}`, "jpg", 222, 154, "Фото отеля")
         .photos__block__wrapper
           each photo in photoList.slice(4, 6)
             .photos__item(class='photos__item--' + photo.mod)
-              picture
-                img(src=photo.src, srcset=photo.srcset, alt="Фото отеля")
+              a.photos__gallery-link(href="#" data-modal="gallery" id=photo.id)
+                +webp("content", `${photo.src}`)
+                +img("content", `${photo.src}`, "jpg", 222, 154, "Фото отеля")
 
           if photoList[6]
             .photos__item(class='photos__item--' + photoList[6].mod)
-              picture
-                img(src=photoList[6].src, srcset=photoList[6].srcset, alt="Фото отеля")
+              a.photos__gallery-link(href="#" data-modal="gallery" id=photoList[6].id)
+                +webp("content", `${photoList[6].src}`)
+                +img("content", `${photoList[6].src}`, "jpg", 222, 154, "Фото отеля")
               .photos__link-more-wrapper
                 a(href="#" data-modal="gallery")='+' + (photoList.length - 7)
