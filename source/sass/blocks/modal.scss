@@ -80,7 +80,7 @@
     position: absolute;
     top: 15px;
     right: 15px;
-    color: $color-default-white;
+    color: $color-blue;
   }
 
   &--responsive {
@@ -150,6 +150,7 @@
     right: -50px;
     cursor: pointer;
     user-select: none;
+    color: $color-default-white;
 
     @include viewport--lg {
       right: -40px;
@@ -188,6 +189,7 @@
     width: 33px;
     height: 33px;
     outline: none;
+    color: $color-blue;
 
     svg {
       fill: $color-blue;
