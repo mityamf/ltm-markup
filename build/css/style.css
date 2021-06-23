@@ -5477,6 +5477,9 @@ textarea {
   @media (max-width: 767px) {
     .about {
       padding-top: 20px; } }
+  @media (max-width: 767px) {
+    .about .title--h2 {
+      margin-bottom: 20px; } }
   .about__content {
     max-width: 800px;
     padding-right: 30px;
@@ -10681,6 +10684,9 @@ textarea {
        -moz-column-gap: 10px;
             column-gap: 10px;
     width: 100%; }
+    @media (max-width: 767px) {
+      .table__button-wrapper {
+        height: 100%; } }
     .table__button-wrapper .button,
     .table__button-wrapper span {
       min-width: 112px; }
@@ -10694,7 +10700,8 @@ textarea {
           min-width: 0;
           width: 48%;
           font-size: 12px;
-          padding: 3px; } }
+          padding: 3px;
+          height: 100%; } }
   .table__cell--button {
     width: 12%; }
     .table__cell--button .button {
