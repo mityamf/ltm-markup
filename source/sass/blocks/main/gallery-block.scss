@@ -57,6 +57,11 @@
     width: 36%;
     max-width: 341px;
     max-height: 222px;
+    
+    img {
+      height: 222px;
+      object-fit: cover;
+    }
   }
 
   @media (min-width: 1920px) {
