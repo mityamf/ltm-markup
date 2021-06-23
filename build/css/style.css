@@ -10652,9 +10652,11 @@ textarea {
       font-size: 16px;
       line-height: 22px;
       white-space: nowrap; } }
-  @media (max-width: 767px) {
-    .table .choices__list--dropdown .choices__item--selectable {
-      font-size: 16px; } }
+  .table .choices__list--dropdown .choices__item--selectable {
+    font-size: 20px; }
+    @media (max-width: 767px) {
+      .table .choices__list--dropdown .choices__item--selectable {
+        font-size: 16px; } }
   @media (max-width: 767px) {
     .table .choices__list--single {
       padding: 0; } }
@@ -10889,8 +10891,6 @@ textarea {
     @media (max-width: 767px) {
       .table__message-link svg {
         visibility: visible; } }
-  .table .choices__list--dropdown .choices__item--selectable {
-    font-size: 20px; }
 
 .wish-list {
   display: block;
