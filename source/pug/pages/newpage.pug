@@ -22,6 +22,7 @@ block main
             .hidden-sm
               +renderBackButton("news.html")
           time.newpage__date(datetime=newPage.datetime) #{newPage.date}
-        .text-content
-          each text in newPage.content
-            p= text
+        .content
+          .text-content
+            each text in newPage.content
+              p= text
