@@ -1,7 +1,7 @@
 mixin photo-block(photoList)
   ul.gallery__block-list
     each item in photoList
-      li.gallery__block-item
+      li.gallery__block-item.js-gallery
         .gallery__title-wrap
           h3.title.title--h3 #{item.title} #[span #{item.titleOnlyDesktop}]
         .swiper-container.photo-gallery
@@ -10,14 +10,14 @@ mixin photo-block(photoList)
               if image.isLong
                 if image.isWide
                   li.gallery__sublist-item.gallery__sublist-item--wide.gallery__sublist-item--long.swiper-slide
-                    a.gallery__link(href="#" data-modal="gallery-multiple")
+                    a.gallery__link(href="#" data-modal="gallery" data-id=`${image.id}`)
                       .gallery__image-wrapper
                         picture
                           +webp("content", `${image.srcThumbnail}`)
                           +img("content", `${image.srcThumbnail}`, "png", 460, 222, "Фотография с мероприятия")
                 else
                   li.gallery__sublist-item.gallery__sublist-item--long.swiper-slide
-                        a.gallery__link(href="#" data-modal="gallery-multiple")
+                        a.gallery__link(href="#" data-modal="gallery" data-id=`${image.id}`)
                           .gallery__image-wrapper
                             picture
                               +webp("content", `${image.srcThumbnail}`)
@@ -25,7 +25,7 @@ mixin photo-block(photoList)
               else
                 if image.text
                   li.gallery__sublist-item.swiper-slide
-                    a.gallery__link(href="#" data-modal="gallery-multiple")
+                    a.gallery__link(href="#" data-modal="gallery-multiple" data-id=`${image.id}`)
                       .gallery__image-wrapper.gallery__image-wrapper--add-link
                         picture
                           +webp("content", `${image.srcThumbnail}`)
@@ -35,7 +35,7 @@ mixin photo-block(photoList)
                           span #{image.text}
                 else
                   li.gallery__sublist-item.swiper-slide
-                    a.gallery__link(href="#" data-modal="gallery-multiple")
+                    a.gallery__link(href="#" data-modal="gallery" data-id=`${image.id}`)
                       .gallery__image-wrapper
                         picture
                           +webp("content", `${image.srcThumbnail}`)
