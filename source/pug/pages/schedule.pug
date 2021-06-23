@@ -14,10 +14,10 @@ block main
     .container
       .schedule
         each program in programs
-          +renderHeadlineBig(program.title)
+          h2=program.title
           .schedule__days
             each schedule in program.schedules
-              h3.schedule__subtitle=schedule.subtitle
+              h3=program.title=schedule.subtitle
               .schedule__day
                 +renderTextContentBlock(schedule.textList)
 
