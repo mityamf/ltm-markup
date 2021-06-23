@@ -57,10 +57,10 @@ mixin renderEditPhotos(photoList, cover)
           +icon("icon-file-photo", 50, 50)
 
 mixin renderPhotos(photoList, mod)
-  .photos(class=mod)
+  .photos.js-gallery(class=mod)
     .photos__wrapper
       .photos__block.photos__block--first
-        a.photos__gallery-link(href="#" data-modal="gallery" id=photoList[0].id)
+        a.photos__gallery-link(href="#" data-modal="gallery" data-id=photoList[0].id)
           picture
             +webp("content", `${photoList[0].src}`)
             +img("content", `${photoList[0].src}`, "jpg", 222, 154, "Фото отеля")
@@ -69,20 +69,23 @@ mixin renderPhotos(photoList, mod)
         .photos__block__wrapper
           each photo in photoList.slice(1, 4)
             .photos__item(class='photos__item--' + photo.mod)
-              a.photos__gallery-link(href="#" data-modal="gallery" id=photo.id)
+              a.photos__gallery-link(href="#" data-modal="gallery" data-id=photo.id)
                 +webp("content", `${photo.src}`)
                 +img("content", `${photo.src}`, "jpg", 222, 154, "Фото отеля")
         .photos__block__wrapper
           each photo in photoList.slice(4, 6)
             .photos__item(class='photos__item--' + photo.mod)
-              a.photos__gallery-link(href="#" data-modal="gallery" id=photo.id)
+              a.photos__gallery-link(href="#" data-modal="gallery" data-id=photo.id)
                 +webp("content", `${photo.src}`)
                 +img("content", `${photo.src}`, "jpg", 222, 154, "Фото отеля")
 
           if photoList[6]
             .photos__item(class='photos__item--' + photoList[6].mod)
-              a.photos__gallery-link(href="#" data-modal="gallery" id=photoList[6].id)
+              a.photos__gallery-link(href="#" data-modal="gallery" data-id=photoList[6].id)
                 +webp("content", `${photoList[6].src}`)
                 +img("content", `${photoList[6].src}`, "jpg", 222, 154, "Фото отеля")
               .photos__link-more-wrapper
                 a(href="#" data-modal="gallery")='+' + (photoList.length - 7)
+
+    +modal("modal--gallery")
+      +modal-gallery(photoList)

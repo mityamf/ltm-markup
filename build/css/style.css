@@ -4850,7 +4850,7 @@ textarea {
     position: absolute;
     top: 15px;
     right: 15px;
-    color: #ffffff; }
+    color: #0098c1; }
   .modal--responsive .modal__content {
     width: 100%; }
   .modal--fit-content .modal__content {
@@ -4912,7 +4912,8 @@ textarea {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none; }
+          user-select: none;
+  color: #ffffff; }
   @media (max-width: 1439px) {
     .modal--gallery .modal__close-btn {
       right: -40px; } }
@@ -4950,7 +4951,8 @@ textarea {
   right: -49px;
   width: 33px;
   height: 33px;
-  outline: none; }
+  outline: none;
+  color: #0098c1; }
   .modal--forgot .modal__close-btn svg {
     fill: #0098c1; }
   @media (max-width: 767px) {
