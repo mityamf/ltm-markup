@@ -5744,6 +5744,14 @@ textarea {
       .news-preview .news-home__info-img {
         width: 100%; } }
 
+.news-preview__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; }
+
 .news-preview__image-container {
   position: relative;
   -ms-flex-negative: 0;
