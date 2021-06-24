@@ -65,23 +65,24 @@ mixin form-reg()
           input(type="text" name="address"  id="address" placeholder="Address" required="required")
         .form-reg__block
           h3.form-reg__block-title City
-          select
+          select(id="select-city", class="input-dropdown")
             option Aachen
-            option(value="London") London
-            option(value="Japan") Japan
-            option(value="Almaty") Almaty
-            option(value="Moscow") Moscow
-            option(value="Petersburg") Petersburg
+            option(value="London", class="input-dropdown__option") London
+            option(value="Japan", class="input-dropdown__option") Japan
+            option(value="Almaty", class="input-dropdown__option") Almaty
+            option(value="Moscow", class="input-dropdown__option") Moscow
+            option(value="Petersburg", class="input-dropdown__option") Petersburg
         .form-reg__block
           h3.form-reg__block-title Country
-          select
+          select(id="select-country", class="input-dropdown")
             option Aphhanistan
-            option(value="Aphhanistan") Aphhanistan
-            option(value="Aphhanistan") Aphhanistan1
-            option(value="Aphhanistan") Aphhanistan2
-            option(value="Aphhanistan") Aphhanistan3
-            option(value="Aphhanistan") Aphhanistan4
-            option(value="Aphhanistan") Aphhanistan5
+            option(value="Aphhanistan", class="input-dropdown__option") Aphhanistan
+            option(value="Aphhanistan", class="input-dropdown__option") Aphhanistan1
+            option(value="Aphhanistan", class="input-dropdown__option") Aphhanistan2
+            option(value="Aphhanistan", class="input-dropdown__option") Aphhanistan3
+            option(value="Aphhanistan", class="input-dropdown__option") Aphhanistan4
+            option(value="Aphhanistan", class="input-dropdown__option") Aphhanistan5
+
         .form-reg__block
           h3.form-reg__block-title Area of the business
           select
