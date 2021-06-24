@@ -704,9 +704,11 @@
       background-color: transparent;
 
       font-size: 20px;
-      line-height: 29px;
-      font-weight: lighter;
       color: $color-blue;
+
+      @include viewport--sm {
+        font-size: 24px !important;
+      }
     }
 
     &__input--cloned {
@@ -792,6 +794,14 @@
     &[data-type*="select-one"] .choices__inner {
       padding: 3px 10px;
       font-size: 20px;
+
+      @include viewport--sm {
+        font-size: 24px;
+      }
+    }
+
+    &__list--single {
+      padding: 4px 16px 4px 0;
     }
   }
 }

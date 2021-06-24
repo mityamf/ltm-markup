@@ -32,10 +32,14 @@
     border: none;
     background-color: transparent;
 
-    font-size: 24px;
+    font-size: 20px;
     line-height: 29px;
     font-weight: lighter;
     color: $color-blue;
+
+    @include viewport--sm {
+      font-size: 24px;
+    }
   }
 
   &__input--cloned {
@@ -43,7 +47,7 @@
   }
 
   &__inner {
-    padding: 5px 15px;
+    padding: 5px 10px;
     height: 42px;
     cursor: pointer;
 
@@ -119,6 +123,6 @@
   }
 
   &[data-type*="select-one"] .choices__inner {
-    padding: 3px 15px;
+    padding: 3px 10px;
   }
 }
