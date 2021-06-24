@@ -4,7 +4,10 @@ mixin renderHotelCard(title, photoList, logo, link)
     a(href=link).hotel-card__link
       .hotel-card__photos
         each photo, index in photoList
-          img(src=photo, class='hotel-card__photo ' + mod[index % 2], alt="Фото отеля")
+          picture(class='hotel-card__photo ' + mod[index % 2])
+            +webp("content", `${photo}`)
+            +img("content", `${photo}`, "jpg", 222, 154, "Фото отеля")
+
       .hotel-card__info
         img(src=logo, alt="Лого")
         h4.hotel-card__title=title

@@ -6027,6 +6027,10 @@ textarea {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; } }
+  @media (max-width: 767px) {
+    .exhibitors {
+      max-width: 450px;
+      margin: 0 auto; } }
 
 .hotel-filter {
   display: -webkit-inline-box;
@@ -8745,16 +8749,16 @@ textarea {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding: 0;
-    width: calc(100% + 5px);
+    width: 100%;
     margin-bottom: -5px;
     margin-right: -5px;
     list-style-type: none; }
-  .hotel-card__photos > img {
-    margin-right: 5px;
-    margin-bottom: 5px;
-    border-radius: 3px;
+  .hotel-card__photos img {
     -o-object-fit: cover;
-       object-fit: cover; }
+       object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 3px; }
   .hotel-card__photo--big {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -8762,7 +8766,9 @@ textarea {
     width: 217px;
     height: 147px;
     -o-object-fit: cover;
-       object-fit: cover; }
+       object-fit: cover;
+    margin-right: 5px;
+    margin-bottom: 5px; }
     @media (max-width: 1023px) {
       .hotel-card__photo--big {
         width: 242px; } }
