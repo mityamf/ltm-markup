@@ -67,33 +67,33 @@ mixin form-reg-hosted()
           input(type="text" name="nameCompany"  id="nameCompany" placeholder="Company name" required="required")
         .form-reg__block
           h3.form-reg__block-title Вид деятельности
-          select
+          select(id="select-country", class="input-dropdown")
             option Tour operator
-            option(value="London") London
-            option(value="Japan") Japan
-            option(value="Almaty") Almaty
-            option(value="Moscow") Moscow
-            option(value="Petersburg") Petersburg
+            option(value="London", class="input-dropdown__option") London
+            option(value="Japan", class="input-dropdown__option") Japan
+            option(value="Almaty", class="input-dropdown__option") Almaty
+            option(value="Moscow", class="input-dropdown__option") Moscow
+            option(value="Petersburg", class="input-dropdown__option") Petersburg
         .form-reg__block
           h3.form-reg__block-title Направление деятельности
-          select
+          select(id="select-country", class="input-dropdown")
             option Car Rental
-            option(value="Aphhanistan") Aphhanistan
-            option(value="Aphhanistan") Aphhanistan1
-            option(value="Aphhanistan") Aphhanistan2
-            option(value="Aphhanistan") Aphhanistan3
-            option(value="Aphhanistan") Aphhanistan4
-            option(value="Aphhanistan") Aphhanistan5
+            option(value="Aphhanistan", class="input-dropdown__option") Aphhanistan
+            option(value="Aphhanistan", class="input-dropdown__option") Aphhanistan1
+            option(value="Aphhanistan", class="input-dropdown__option") Aphhanistan2
+            option(value="Aphhanistan", class="input-dropdown__option") Aphhanistan3
+            option(value="Aphhanistan", class="input-dropdown__option") Aphhanistan4
+            option(value="Aphhanistan", class="input-dropdown__option") Aphhanistan5
         .form-reg__block
           h3.form-reg__block-title Страна
-          select
+          select(id="select-country", class="input-dropdown")
             option Russia
-            option(value="Aphhanistan") Aphhanistan
-            option(value="Aphhanistan") Aphhanistan1
-            option(value="Aphhanistan") Aphhanistan2
-            option(value="Aphhanistan") Aphhanistan3
-            option(value="Aphhanistan") Aphhanistan4
-            option(value="Aphhanistan") Aphhanistan5
+            option(value="Aphhanistan", class="input-dropdown__option") Aphhanistan
+            option(value="Aphhanistan", class="input-dropdown__option") Aphhanistan1
+            option(value="Aphhanistan", class="input-dropdown__option") Aphhanistan2
+            option(value="Aphhanistan", class="input-dropdown__option") Aphhanistan3
+            option(value="Aphhanistan", class="input-dropdown__option") Aphhanistan4
+            option(value="Aphhanistan", class="input-dropdown__option") Aphhanistan5
         .form-reg__block
           label(for="address") Фактический адрес компании
           input(type="text" name="address"  id="address" placeholder="Address" required="required")
@@ -102,14 +102,14 @@ mixin form-reg-hosted()
           input(type="text" name="login"  id="login" placeholder="000000" required="required")
         .form-reg__block
           h3.form-reg__block-title Город
-          select
+          select(id="select-country", class="input-dropdown")
             option Aachen
-            option(value="business") business
-            option(value="trade") trade
-            option(value="sale") sale
-            option(value="entertainment") entertainment
-            option(value="journeys") journeys
-            option(value="sale") sale
+            option(value="business", class="input-dropdown__option") business
+            option(value="trade", class="input-dropdown__option") trade
+            option(value="sale", class="input-dropdown__option") sale
+            option(value="entertainment", class="input-dropdown__option") entertainment
+            option(value="journeys", class="input-dropdown__option") journeys
+            option(value="sale", class="input-dropdown__option") sale
         .form-reg__block
           label(for="Web-site") Адрес веб-страницы
           input(type="text" name="Web-site"  id="Web-site" placeholder="https://" required="required")
@@ -206,12 +206,12 @@ mixin form-reg-hosted()
           input(type="text" name="Last_name"  id="Last_name" placeholder="Last name" required="required")
         .form-reg__block
           h3.form-reg__block-title Обращение
-          select
+          select(id="select-country", class="input-dropdown")
             option Aachen
-            option(value="Mr") Mr.
-            option(value="Mrs") Mrs.
-            option(value="Ms") Ms.
-            option(value="Dr") Dr.
+            option(value="Mr", class="input-dropdown__option") Mr.
+            option(value="Mrs", class="input-dropdown__option") Mrs.
+            option(value="Ms", class="input-dropdown__option") Ms.
+            option(value="Dr", class="input-dropdown__option") Dr.
         .form-reg__block
           label(for="title") Должность
           input(type="text" name="title"  id="title" placeholder="Job title" required="required")
@@ -242,12 +242,12 @@ mixin form-reg-hosted()
           input(type="text" name="Last_name2"  id="Last_name2" placeholder="Last name" required="required")
         .form-reg__block
           h3.form-reg__block-title Обращение
-          select
+          select(id="select-country", class="input-dropdown")
             option Aachen
-            option(value="Mr") Mr.
-            option(value="Mrs") Mrs.
-            option(value="Ms") Ms.
-            option(value="Dr") Dr.
+            option(value="Mr", class="input-dropdown__option") Mr.
+            option(value="Mrs", class="input-dropdown__option") Mrs.
+            option(value="Ms", class="input-dropdown__option") Ms.
+            option(value="Dr", class="input-dropdown__option") Dr.
         .form-reg__block
           label(for="title2") Должность
           input(type="text" name="title2"  id="title2" placeholder="Job title" required="required")
@@ -263,24 +263,24 @@ mixin form-reg-hosted()
       .form-reg__grid-wrap
         .form-reg__block
           h3.form-reg__block-title Через:
-          select
+          select(id="select-country", class="input-dropdown")
             option DMCs
-            option(value="dMCs") dMCs
-            option(value="DmCS") DmCS
-            option(value="DMsC") DMsC
-            option(value="DMCS") DMCS
+            option(value="dMCs", class="input-dropdown__option") dMCs
+            option(value="DmCS", class="input-dropdown__option") DmCS
+            option(value="DMsC", class="input-dropdown__option") DMsC
+            option(value="DMCS", class="input-dropdown__option") DMCS
 
     .form-reg__info.container
       h3.form-reg__title.form-reg__title-eight Укажите ваши 3 бронирования отелей класса люкс за последние 6 месяцев
       .form-reg__grid-wrap
         .form-reg__block
           h3.form-reg__block-title Канал через который осуществлялось бронирование
-          select
+          select(id="select-country", class="input-dropdown")
             option DMCs
-            option(value="dMCs") dMCs
-            option(value="DmCS") DmCS
-            option(value="DMsC") DMsC
-            option(value="DMCS") DMCS
+            option(value="dMCs", class="input-dropdown__option") dMCs
+            option(value="DmCS", class="input-dropdown__option") DmCS
+            option(value="DMsC", class="input-dropdown__option") DMsC
+            option(value="DMCS", class="input-dropdown__option") DMCS
         .form-reg__block
           label(for="Hotel") Название отеля
           input(type="text" name="Hotel"  id="Hotel" placeholder="Hotel" required="required")
@@ -289,12 +289,12 @@ mixin form-reg-hosted()
           input(type="text" name="Tel_or_email"  id="Tel_or_email" placeholder="Telephone or E-mail" required="required")
         .form-reg__block
           h3.form-reg__block-title Канал через который осуществлялось бронирование
-          select
+          select(id="select-country", class="input-dropdown")
             option DMCs
-            option(value="dMCs") dMCs
-            option(value="DmCS") DmCS
-            option(value="DMsC") DMsC
-            option(value="DMCS") DMCS
+            option(value="dMCs", class="input-dropdown__option") dMCs
+            option(value="DmCS", class="input-dropdown__option") DmCS
+            option(value="DMsC", class="input-dropdown__option") DMsC
+            option(value="DMCS", class="input-dropdown__option") DMCS
         .form-reg__block
           label(for="Hotel2") Название отеля
           input(type="text" name="Hotel2"  id="Hotel2" placeholder="Hotel" required="required")
@@ -303,12 +303,12 @@ mixin form-reg-hosted()
           input(type="text" name="Tel_or_email2"  id="Tel_or_email2" placeholder="Telephone or E-mail" required="required")
         .form-reg__block
           h3.form-reg__block-title Канал через который осуществлялось бронирование
-          select
+          select(id="select-country", class="input-dropdown")
             option DMCs
-            option(value="dMCs") dMCs
-            option(value="DmCS") DmCS
-            option(value="DMsC") DMsC
-            option(value="DMCS") DMCS
+            option(value="dMCs", class="input-dropdown__option") dMCs
+            option(value="DmCS", class="input-dropdown__option") DmCS
+            option(value="DMsC", class="input-dropdown__option") DMsC
+            option(value="DMCS", class="input-dropdown__option") DMCS
         .form-reg__block
           label(for="Hotel3") Название отеля
           input(type="text" name="Hotel3"  id="Hotel3" placeholder="Hotel" required="required")
