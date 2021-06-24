@@ -17,6 +17,12 @@
     padding-top: 20px;
   }
 
+  .title--h2 {
+    @include viewport--sm {
+      margin-bottom: 20px;
+    }
+  }
+
   &__content {
     max-width: 800px;
     padding-right: 30px;

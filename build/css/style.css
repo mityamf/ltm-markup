@@ -3290,7 +3290,11 @@ textarea {
     .gallery-block__sm {
       width: 36%;
       max-width: 341px;
-      max-height: 222px; } }
+      max-height: 222px; }
+      .gallery-block__sm img {
+        height: 222px;
+        -o-object-fit: cover;
+           object-fit: cover; } }
   @media (min-width: 1920px) {
     .gallery-block__sm {
       margin-right: 20px; } }
@@ -5476,6 +5480,9 @@ textarea {
   @media (max-width: 767px) {
     .about {
       padding-top: 20px; } }
+  @media (max-width: 767px) {
+    .about .title--h2 {
+      margin-bottom: 20px; } }
   .about__content {
     max-width: 800px;
     padding-right: 30px;
@@ -5834,6 +5841,9 @@ textarea {
 
 .newpage {
   margin-top: 29px; }
+  @media (max-width: 767px) {
+    .newpage {
+      margin-top: 0; } }
 
 .newpage h2 {
   letter-spacing: 0.04em; }
@@ -5851,8 +5861,7 @@ textarea {
   line-height: 14px;
   font-weight: 400;
   letter-spacing: 0.01em;
-  color: #a7a7a7;
-  margin-top: 15px; }
+  color: #a7a7a7; }
   @media (max-width: 767px) {
     .newpage__date {
       position: absolute;
@@ -10680,6 +10689,9 @@ textarea {
        -moz-column-gap: 10px;
             column-gap: 10px;
     width: 100%; }
+    @media (max-width: 767px) {
+      .table__button-wrapper {
+        height: 100%; } }
     .table__button-wrapper .button,
     .table__button-wrapper span {
       min-width: 112px; }
@@ -10693,7 +10705,8 @@ textarea {
           min-width: 0;
           width: 48%;
           font-size: 12px;
-          padding: 3px; } }
+          padding: 3px;
+          height: 100%; } }
   .table__cell--button {
     width: 12%; }
     .table__cell--button .button {

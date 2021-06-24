@@ -94,6 +94,10 @@
     column-gap: 10px;
     width: 100%;
 
+    @include viewport--sm {
+      height: 100%;
+    }
+
     .button,
     span {
       min-width: 112px;
@@ -107,6 +111,7 @@
         width: 48%;
         font-size: 12px;
         padding: 3px;
+        height: 100%;
       }
     }
   }
