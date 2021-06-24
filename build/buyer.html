@@ -2765,7 +2765,7 @@
           <div class="container">
             <ul class="header__top-list">
               <li class="header__item hidden-sm">
-                <button class="header__top-link js-search-button" type="button">
+                <button class="header__top-link js-search-button" type="button" aria-label="Открыть поле поиска">
                   <svg class="header__search-img" width="17" height="17" aria-hidden="true">
                     <use xlink:href="#icon-search"></use>
                   </svg>
@@ -3075,95 +3075,60 @@
             <div class="form-reg__location container">
               <h3 class="form-reg__title form-reg__title-four">Выберите приоритетные направления:</h3>
               <div class="form-reg__grid-wrap">
-                <div class="form-reg__dropdown">
-                  <h4>Северная Америка</h4>
-                  <button class="form-reg__btn" type="button">Выбрать всё</button>
-                  <div class="form-reg__content">
-                    <div class="form-reg__list">
-                      <input class="form-reg__check" id="choices-0" type="checkbox" name="complex" value="complex-0"/>
-                      <label for="choices-0">choices-3</label>
-                      <input class="form-reg__check" id="choices-1" type="checkbox" name="complex" value="complex-1"/>
-                      <label for="choices-1">choices-3</label>
-                      <input class="form-reg__check" id="choices-2" type="checkbox" name="complex" value="complex-2"/>
-                      <label for="choices-2">choices-3</label>
-                    </div>
-                  </div>
-                  <div class="form-reg__overlay"></div>
+                <div class="form-reg__block form-reg__block--checkbox">
+                  <h3 class="form-reg__block-title">Северная Америка</h3>
+                  <select class="input-dropdown" id="select-business" multiple="multiple">
+                    <option>All selected</option>
+                    <option class="input-dropdown__option" value="business">business</option>
+                    <option class="input-dropdown__option" value="choices-3">choices-3</option>
+                    <option class="input-dropdown__option" value="choices-3">choices-3</option>
+                    <option class="input-dropdown__option" value="choices-3">choices-3</option>
+                  </select>
                 </div>
-                <div class="form-reg__dropdown">
-                  <h4>Европа</h4>
-                  <button class="form-reg__btn" type="button">Выбрать всё</button>
-                  <div class="form-reg__content">
-                    <div class="form-reg__list">
-                      <input class="form-reg__check" id="choices-3" type="checkbox" name="complex" value="complex-0"/>
-                      <label for="choices-3">choices-3</label>
-                      <input class="form-reg__check" id="choices-33" type="checkbox" name="complex" value="complex-1"/>
-                      <label for="choices-33">choices-3</label>
-                      <input class="form-reg__check" id="choices-4" type="checkbox" name="complex" value="complex-2"/>
-                      <label for="choices-4">choices-3</label>
-                    </div>
-                  </div>
-                  <div class="form-reg__overlay"></div>
+                <div class="form-reg__block form-reg__block--checkbox">
+                  <h3 class="form-reg__block-title">Европа</h3>
+                  <select class="input-dropdown" id="select-business" multiple="multiple">
+                    <option>All selected</option>
+                    <option class="input-dropdown__option" value="choices-3">choices-3</option>
+                    <option class="input-dropdown__option" value="choices-3">choices-3</option>
+                    <option class="input-dropdown__option" value="choices-3">choices-3</option>
+                  </select>
                 </div>
-                <div class="form-reg__dropdown">
-                  <h4>Южная Америка</h4>
-                  <button class="form-reg__btn" type="button">Выбрать всё</button>
-                  <div class="form-reg__content">
-                    <div class="form-reg__list">
-                      <input class="form-reg__check" id="choices-5" type="checkbox" name="complex" value="complex-0"/>
-                      <label for="choices-5">choices-1</label>
-                      <input class="form-reg__check" id="choices-6" type="checkbox" name="complex" value="complex-1"/>
-                      <label for="choices-6">choices-2</label>
-                      <input class="form-reg__check" id="choices-7" type="checkbox" name="complex" value="complex-2"/>
-                      <label for="choices-7">choices-3</label>
-                    </div>
-                  </div>
-                  <div class="form-reg__overlay"></div>
+                <div class="form-reg__block form-reg__block--checkbox">
+                  <h3 class="form-reg__block-title">Южная Америка</h3>
+                  <select class="input-dropdown" id="select-business" multiple="multiple">
+                    <option>All selected</option>
+                    <option class="input-dropdown__option" value="choices-3">choices-3</option>
+                    <option class="input-dropdown__option" value="choices-3">choices-3</option>
+                    <option class="input-dropdown__option" value="choices-3">choices-3</option>
+                  </select>
                 </div>
-                <div class="form-reg__dropdown">
-                  <h4>Африка</h4>
-                  <button class="form-reg__btn" type="button">Выбрать всё</button>
-                  <div class="form-reg__content">
-                    <div class="form-reg__list">
-                      <input class="form-reg__check" id="choices-8" type="checkbox" name="complex" value="complex-0"/>
-                      <label for="choices-8">choices-4</label>
-                      <input class="form-reg__check" id="choices-9" type="checkbox" name="complex" value="complex-1"/>
-                      <label for="choices-9">choices-5</label>
-                      <input class="form-reg__check" id="choices-10" type="checkbox" name="complex" value="complex-2"/>
-                      <label for="choices-10">choices-6</label>
-                    </div>
-                  </div>
-                  <div class="form-reg__overlay"></div>
+                <div class="form-reg__block form-reg__block--checkbox">
+                  <h3 class="form-reg__block-title">Африка</h3>
+                  <select class="input-dropdown" id="select-business" multiple="multiple">
+                    <option>Chois area of the business</option>
+                    <option class="input-dropdown__option" value="choices-3">choices-3</option>
+                    <option class="input-dropdown__option" value="choices-3">choices-3</option>
+                    <option class="input-dropdown__option" value="choices-3">choices-3</option>
+                  </select>
                 </div>
-                <div class="form-reg__dropdown">
-                  <h4>Азия</h4>
-                  <button class="form-reg__btn" type="button">Выбрать всё</button>
-                  <div class="form-reg__content">
-                    <div class="form-reg__list">
-                      <input class="form-reg__check" id="choices-11" type="checkbox" name="complex" value="complex-0"/>
-                      <label for="choices-11">choices-7</label>
-                      <input class="form-reg__check" id="choices-12" type="checkbox" name="complex" value="complex-1"/>
-                      <label for="choices-12">choices-8</label>
-                      <input class="form-reg__check" id="choices-13" type="checkbox" name="complex" value="complex-2"/>
-                      <label for="choices-13">choices-9</label>
-                    </div>
-                  </div>
-                  <div class="form-reg__overlay"></div>
+                <div class="form-reg__block form-reg__block--checkbox">
+                  <h3 class="form-reg__block-title">Азия</h3>
+                  <select class="input-dropdown" id="select-business" multiple="multiple">
+                    <option>Chois area of the business</option>
+                    <option class="input-dropdown__option" value="choices-3">choices-3</option>
+                    <option class="input-dropdown__option" value="choices-3">choices-3</option>
+                    <option class="input-dropdown__option" value="choices-3">choices-3</option>
+                  </select>
                 </div>
-                <div class="form-reg__dropdown">
-                  <h4>Океания</h4>
-                  <button class="form-reg__btn" type="button">Выбрать всё</button>
-                  <div class="form-reg__content">
-                    <div class="form-reg__list">
-                      <input class="form-reg__check" id="choices-14" type="checkbox" name="complex" value="complex-0"/>
-                      <label for="choices-14">choices-10</label>
-                      <input class="form-reg__check" id="choices-15" type="checkbox" name="complex" value="complex-1"/>
-                      <label for="choices-15">choices-11</label>
-                      <input class="form-reg__check" id="choices-16" type="checkbox" name="complex" value="complex-2"/>
-                      <label for="choices-16">choices-12</label>
-                    </div>
-                  </div>
-                  <div class="form-reg__overlay"></div>
+                <div class="form-reg__block form-reg__block--checkbox">
+                  <h3 class="form-reg__block-title">Океания</h3>
+                  <select class="input-dropdown" id="select-business" multiple="multiple">
+                    <option>Chois area of the business</option>
+                    <option class="input-dropdown__option" value="choices-3">choices-3</option>
+                    <option class="input-dropdown__option" value="choices-3">choices-3</option>
+                    <option class="input-dropdown__option" value="choices-3">choices-3</option>
+                  </select>
                 </div>
               </div>
               <input class="form-reg__check" type="checkbox" id="Global" name="Global" value="Global"/>
@@ -3318,11 +3283,11 @@
               <li><a class="menu__item" href="privacy-policy.html">Cookie policy</a></li>
             </ul>
             <ul class="menu__account">
-              <li><a class="menu__account-social menu__account-social-fb" href="#">
+              <li><a class="menu__account-social menu__account-social-fb" href="#" aria-label="Перейти на Фейсбук">
                   <svg width="10" height="25" aria-hidden="true">
                     <use xlink:href="#fb-icon"></use>
                   </svg></a></li>
-              <li><a class="menu__account-social menu__account-social-inst" href="#">
+              <li><a class="menu__account-social menu__account-social-inst" href="#" aria-label="Перейти в Инстаграм">
                   <svg width="22" height="22" aria-hidden="true">
                     <use xlink:href="#inst-icon"></use>
                   </svg></a></li>

@@ -681,6 +681,18 @@
   border: 1px solid $color-blue;
 }
 
+.form-reg__block--checkbox {
+  position: relative;
+}
+
+.form-reg__checkbox-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: $color-blue;
+  font-size: 24px;
+}
+
 .form-reg--select {
   .choices {
     height: 42px;

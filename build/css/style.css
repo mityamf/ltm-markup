@@ -4197,6 +4197,16 @@ textarea {
   left: 10px;
   border: 1px solid #0098c1; }
 
+.form-reg__block--checkbox {
+  position: relative; }
+
+.form-reg__checkbox-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #0098c1;
+  font-size: 24px; }
+
 .form-reg--select .choices {
   height: 42px;
   cursor: pointer; }
@@ -5537,6 +5547,7 @@ textarea {
     .about__text-wrapper--mobile > .text-content {
       overflow: hidden;
       text-overflow: ellipsis;
+      max-height: 143px;
       display: -moz-box;
       display: -webkit-box;
       -webkit-line-clamp: 5;
@@ -6332,7 +6343,7 @@ textarea {
     transition: opacity 0.3s ease; }
     @media (max-width: 767px) {
       .hotel-page__link {
-        font-size: 20px;
+        font-size: 14px;
         line-height: 24px;
         text-align: center; } }
     .hotel-page__link:hover, .hotel-page__link:focus {
