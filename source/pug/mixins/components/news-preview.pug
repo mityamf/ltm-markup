@@ -1,5 +1,6 @@
 mixin renderNewsPreview(newsImage, newsTitle, newsDate, newsDatetime, newsPreview)
   .news-preview
+    a(href="newpage.html" class="news-preview__link")
     .news-home__info-img
       +img("content", newsImage, "jpg", "222", "222", newsTitle)
     .news-home__info-content
