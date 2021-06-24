@@ -1680,14 +1680,18 @@ textarea {
     padding: 0;
     border: none;
     background-color: transparent;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 29px;
     font-weight: lighter;
     color: #0098c1; }
+    @media (max-width: 767px) {
+      .choices__list--multiple .choices__item,
+      .choices__list--single .choices__item {
+        font-size: 24px; } }
   .choices__input--cloned {
     display: none; }
   .choices__inner {
-    padding: 5px 15px;
+    padding: 5px 10px;
     height: 42px;
     cursor: pointer;
     border-color: #0098c1;
@@ -1739,7 +1743,7 @@ textarea {
     pointer-events: none;
     background-image: url("../img/svg/icon-check.svg"); }
   .choices[data-type*="select-one"] .choices__inner {
-    padding: 3px 15px; }
+    padding: 3px 10px; }
 
 .header {
   display: -webkit-box;
@@ -4205,9 +4209,11 @@ textarea {
     border: none;
     background-color: transparent;
     font-size: 20px;
-    line-height: 29px;
-    font-weight: lighter;
     color: #0098c1; }
+    @media (max-width: 767px) {
+      .form-reg--select .choices__list--multiple .choices__item,
+      .form-reg--select .choices__list--single .choices__item {
+        font-size: 24px !important; } }
   .form-reg--select .choices__input--cloned {
     display: none; }
   .form-reg--select .choices__inner {
@@ -4265,6 +4271,11 @@ textarea {
   .form-reg--select .choices[data-type*="select-one"] .choices__inner {
     padding: 3px 10px;
     font-size: 20px; }
+    @media (max-width: 767px) {
+      .form-reg--select .choices[data-type*="select-one"] .choices__inner {
+        font-size: 24px; } }
+  .form-reg--select .choices__list--single {
+    padding: 4px 16px 4px 0; }
 
 .adoption__title {
   color: #0098c1;

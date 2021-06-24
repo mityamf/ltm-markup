@@ -85,14 +85,14 @@ mixin form-reg()
 
         .form-reg__block
           h3.form-reg__block-title Area of the business
-          select(id="select-country", class="input-dropdown")
+          select(id="select-business", class="input-dropdown")
             option Chois area of the business
-            option(value="business" class="input-dropdown__option") business
-            option(value="trade" class="input-dropdown__option") trade
-            option(value="sale" class="input-dropdown__option") sale
-            option(value="entertainment" class="input-dropdown__option") entertainment
-            option(value="journeys" class="input-dropdown__option") journeys
-            option(value="sale" class="input-dropdown__option") sale
+            option(value="business", class="input-dropdown__option") business
+            option(value="trade", class="input-dropdown__option") trade
+            option(value="sale", class="input-dropdown__option") sale
+            option(value="entertainment", class="input-dropdown__option") entertainment
+            option(value="journeys", class="input-dropdown__option") journeys
+            option(value="sale", class="input-dropdown__option") sale
         .form-reg__block
           label(for="Web-site") Web-site
           input(type="text" name="Web-site"  id="Web-site" placeholder="https://" required="required")
@@ -132,6 +132,7 @@ mixin form-reg()
           button.form-reg__btn(type='button') All selected
           .form-reg__content
             .form-reg__list
+              select(id="select-title", class="input-dropdown", multiple)
               input.form-reg__check#choices-5(type='checkbox' name='complex' value='complex-0')
               label(for='choices-5') choices-1
               input.form-reg__check#choices-6(type='checkbox' name='complex' value='complex-1')
@@ -190,12 +191,12 @@ mixin form-reg()
           input(type="text" name="Last_name"  id="Last_name" placeholder="Last name" required="required")
         .form-reg__block
           h3.form-reg__block-title Title
-          select(id="select-country", class="input-dropdown")
+          select(id="select-title", class="input-dropdown")
             option Aachen
-            option(value="Mr" class="input-dropdown__option") Mr.
-            option(value="Mrs" class="input-dropdown__option") Mrs.
-            option(value="Ms" class="input-dropdown__option") Ms.
-            option(value="Dr" class="input-dropdown__option") Dr.
+            option(value="Mr", class="input-dropdown__option") Mr.
+            option(value="Mrs", class="input-dropdown__option") Mrs.
+            option(value="Ms", class="input-dropdown__option") Ms.
+            option(value="Dr", class="input-dropdown__option") Dr.
         .form-reg__block
           label(for="title") Job title:
           input(type="text" name="title"  id="title" placeholder="Job title" required="required")
