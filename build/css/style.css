@@ -4187,6 +4187,16 @@ textarea {
     padding-left: 35px;
     border-color: #a7a7a7; }
 
+.form-reg__block--checkbox .choices__list--dropdown .choices__item--selectable::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 17px;
+  height: 17px;
+  top: 13px;
+  left: 10px;
+  border: 1px solid #0098c1; }
+
 .form-reg--select .choices {
   height: 42px;
   cursor: pointer; }
@@ -4239,7 +4249,8 @@ textarea {
     display: inline-block;
     background-repeat: no-repeat;
     background-image: url("../img/svg/icon-small-check.svg");
-    background-size: cover; }
+    background-size: cover;
+    background-color: red; }
   .form-reg--select .choices__list--dropdown {
     margin-top: 10px;
     max-height: 340px; }

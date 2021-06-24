@@ -24,10 +24,12 @@ const choiceHandler = (choiceElement) => {
 document.querySelectorAll('.input-dropdown')
   .forEach((item) => {
     const choiceElement = new Choices(item, {
-      searchEnabled: false,
+      searchEnabled: true,
       itemSelectText: '',
       removeItems: false,
       renderSelectedChoices: 'always',
+      placeholder: true,
+      placeholderValue: "mmj3e34r43r4rr23r23d"
     });
     choiceHandler(choiceElement);
   });

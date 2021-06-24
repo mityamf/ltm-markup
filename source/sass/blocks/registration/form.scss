@@ -670,6 +670,17 @@
   }
 }
 
+.form-reg__block--checkbox .choices__list--dropdown .choices__item--selectable::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 17px;
+  height: 17px;
+  top: 13px;
+  left: 10px;
+  border: 1px solid $color-blue;
+}
+
 .form-reg--select {
   .choices {
     height: 42px;
@@ -749,6 +760,7 @@
       background-repeat: no-repeat;
       background-image: url("../img/svg/icon-small-check.svg");
       background-size: cover;
+      background-color: red;
     }
 
     &__list--dropdown {
