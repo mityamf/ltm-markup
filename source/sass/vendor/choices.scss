@@ -91,6 +91,7 @@
   &__list--dropdown .choices__item--selectable.is-highlighted {
     background-color: $color-default-white;
     border: none;
+    word-break: break-word;
   }
 
   &__list--dropdown .choices__item--selectable {
@@ -120,6 +121,13 @@
     background-repeat: no-repeat;
     pointer-events: none;
     background-image: url("../img/svg/icon-check.svg");
+
+    @include viewport--sm {
+      height: 21px;
+      background-size: contain;
+      width: 20px;
+      top: 57%;
+    }
   }
 
   &[data-type*="select-one"] .choices__inner {

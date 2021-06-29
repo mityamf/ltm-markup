@@ -29,8 +29,8 @@
   user-select: none;
   transform: translate(0, -162%);
   background-color: $color-transparent;
-  width: 19px;
-  height: 30px;
+  width: 100px;
+  height: 109px;
   color: $color-default-white;
   padding: 0;
   border: none;
@@ -46,7 +46,7 @@
 }
 
 .modal-gallery__btn-next {
-  right: -33px;
+  right: -75px !important;
 
   @include viewport--lg {
     right: -27px;
@@ -54,7 +54,7 @@
 }
 
 .modal-gallery__btn-prev {
-  left: -33px;
+  left: -75px !important;
 
   svg {
     transform: rotate(-180deg);
