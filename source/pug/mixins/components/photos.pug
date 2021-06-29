@@ -88,7 +88,7 @@ mixin renderPhotos(photoList, mod)
                   +webp("content", `${photoList[6].src}`)
                   +img("content", `${photoList[6].src}`, "jpg", 222, 154, "Фото отеля")
               .photos__link-more-wrapper
-                a(href="#" data-modal="gallery")='+' + (photoList.length - 7)
+                a(href="#" data-modal="gallery" data-id='0' + (photoList.length + 1))='+' + (photoList.length - 7)
 
     +modal("modal--gallery")
       +modal-gallery(photoList)
