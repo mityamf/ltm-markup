@@ -12,6 +12,10 @@
   @include viewport--md {
     margin-bottom: 30px;
   }
+
+  @include viewport--sm {
+    padding-top: 0;
+  }
 }
 
 .news__list {
@@ -39,5 +43,11 @@
     row-gap: 30px;
     margin-top: 10px;
     margin-bottom: 31px;
+  }
+}
+
+.news p {
+  @include viewport--sm {
+    padding: 0;
   }
 }

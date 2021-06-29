@@ -101,6 +101,7 @@
 
   @include viewport--sm {
     display: flex;
+    outline: none !important;
   }
 }
 
@@ -121,6 +122,7 @@
 
   @include viewport--sm {
     display: flex;
+    outline: none !important;
   }
 }
 

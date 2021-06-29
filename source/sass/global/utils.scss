@@ -59,6 +59,15 @@
   }
 }
 
+input,
+button,
+textarea,
+label,
+select {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
 .visible-sm {
   @media (min-width: 768px) {
     display: none;
