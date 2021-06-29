@@ -45,6 +45,10 @@
   .direction__arrow--right,
   .direction__arrow--left {
     top: 46%;
+
+    @include viewport--sm {
+      outline: none !important;
+    }
   }
 
   .direction__arrow--right {

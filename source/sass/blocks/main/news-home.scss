@@ -57,6 +57,7 @@
 
     @include viewport--sm {
       display: flex;
+      outline: none !important;
     }
   }
 

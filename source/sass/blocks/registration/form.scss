@@ -149,6 +149,9 @@
       outline: none;
       cursor: pointer;
       background-color: $color-white;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
 
       &:focus,
       &:hover {

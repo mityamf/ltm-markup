@@ -50,6 +50,8 @@
     padding: 5px 10px;
     height: 42px;
     cursor: pointer;
+    -webkit-appearance: none;
+    border-radius: 0;
 
     border-color: $color-blue;
     background-color: transparent;
