@@ -4648,7 +4648,8 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center;
   left: 8px;
-  right: auto; }
+  right: auto;
+  color: #0098c1; }
   @media (max-width: 767px) {
     .status__button-prev {
       display: -webkit-box;
@@ -4671,7 +4672,8 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center;
   right: 8px;
-  left: auto; }
+  left: auto;
+  color: #0098c1; }
   @media (max-width: 767px) {
     .status__button-next {
       display: -webkit-box;
@@ -8034,7 +8036,7 @@ textarea {
 .modal-gallery__btn-next,
 .modal-gallery__btn-prev {
   position: absolute;
-  top: 50%;
+  top: 56%;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
