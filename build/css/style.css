@@ -1922,7 +1922,7 @@ textarea {
           height: 66px; } }
     @media (max-width: 1260px) {
       .header__logo {
-        margin-right: 20px;
+        margin-right: 10px;
         padding-top: 0; } }
     @media (max-width: 767px) {
       .header__logo {
@@ -2221,6 +2221,8 @@ textarea {
       width: 97%;
       margin-right: 10px;
       border-right: solid 1px #0098c1; } }
+  .form-fiield input .input:focus:invalid {
+    outline: 2px solid #ff8282; }
 
 ::-webkit-input-placeholder {
   color: #0098c1; }
@@ -2976,8 +2978,8 @@ textarea {
     color: #0098c1;
     font-size: 38px;
     font-weight: 300;
-    padding-bottom: 22px;
-    padding-top: 4px;
+    padding-bottom: 20px;
+    padding-top: 3px;
     -webkit-line-clamp: 3; }
   .news-home__info-list {
     padding: 0;
@@ -3214,8 +3216,8 @@ textarea {
   margin-left: 55px;
   margin-top: 25px;
   height: 150px;
-  max-width: 100%;
-  width: auto;
+  max-width: 63%;
+  width: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4482,7 +4484,9 @@ textarea {
           font-size: 12px; }
       .pop-up__check {
         z-index: -1;
-        opacity: 0; }
+        opacity: 0;
+        width: 1px;
+        height: 1px; }
       .pop-up__check + label {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -5953,6 +5957,7 @@ textarea {
   margin: 0;
   vertical-align: top;
   background: #0098c1;
+  border: none;
   border-radius: 30px;
   outline: none;
   margin-left: 8px;
@@ -8706,7 +8711,7 @@ textarea {
             align-items: center;
     top: 111px;
     left: 17px;
-    z-index: 100;
+    z-index: 9;
     font-size: 14px;
     line-height: 17px;
     color: #ffffff; }
