@@ -12,9 +12,9 @@ mixin footer
       .footer__mailing.mailing
         form.mailing__form(action="#" method="POST")
           .form-fiield
-            input(type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters")
+            input(type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")
             label.visually-hidden(for="mailing") E-mail field
-          button(type="button").button.button--transparent  Ok
+          button(type="submit").button.button--transparent  Ok
           .mailing__checkbox.form-check
             input(type="checkbox" id="check" name="check" value="yes")
             label(for="check") I agree
