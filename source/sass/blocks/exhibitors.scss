@@ -7,4 +7,9 @@
   @include viewport--lg {
     justify-content: center;
   }
+
+  @include viewport--sm {
+    max-width: 450px;
+    margin: 0 auto;
+  }
 }

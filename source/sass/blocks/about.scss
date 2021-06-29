@@ -68,6 +68,7 @@
     @include viewport--sm {
       overflow: hidden;
       text-overflow: ellipsis;
+      max-height: 143px;
       display: -moz-box;
       -moz-box-orient: vertical;
       display: -webkit-box;
