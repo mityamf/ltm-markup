@@ -37,6 +37,10 @@
       margin-right: 10px;
       border-right: solid 1px #0098c1;
     }
+
+    .input:focus:invalid {
+      outline: 2px solid #ff8282;
+    }
   }
 }
 

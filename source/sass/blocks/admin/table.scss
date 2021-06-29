@@ -63,6 +63,8 @@
   }
 
   .choices__list--dropdown .choices__item--selectable {
+    font-size: 20px;
+
     @include viewport--sm {
       font-size: 16px;
     }
@@ -92,6 +94,10 @@
     column-gap: 10px;
     width: 100%;
 
+    @include viewport--sm {
+      height: 100%;
+    }
+
     .button,
     span {
       min-width: 112px;
@@ -105,6 +111,7 @@
         width: 48%;
         font-size: 12px;
         padding: 3px;
+        height: 100%;
       }
     }
   }
@@ -406,9 +413,5 @@
     @include viewport--sm {
       visibility: visible;
     }
-  }
-
-  .choices__list--dropdown .choices__item--selectable {
-    font-size: 20px;
   }
 }

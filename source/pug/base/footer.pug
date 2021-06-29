@@ -12,16 +12,16 @@ mixin footer
       .footer__mailing.mailing
         form.mailing__form(action="#" method="POST")
           .form-fiield
-            input(type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters")
+            input(type="email" id="mailing" name="mailing" placeholder="E-mail for newsletters" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")
             label.visually-hidden(for="mailing") E-mail field
-          button(type="button").button.button--transparent  Ok
+          button(type="submit").button.button--transparent  Ok
           .mailing__checkbox.form-check
             input(type="checkbox" id="check" name="check" value="yes")
             label(for="check") I agree
       .footer__menu.menu
         ul.menu__list
           li
-            a.menu__item(href="privacy-policy.html") Terms Conditions
+            a.menu__item(href="privacy-policy.html") Terms &#38; Conditions
           li
             a.menu__item(href="privacy-policy.html") Have a question?
           li
@@ -30,10 +30,10 @@ mixin footer
             a.menu__item(href="privacy-policy.html") Cookie policy
         ul.menu__account
           li
-            a.menu__account-social.menu__account-social-fb(href="#")
+            a.menu__account-social.menu__account-social-fb(href="#" aria-label="Перейти на Фейсбук")
               +icon("fb-icon", 10, 25)
           li
-            a.menu__account-social.menu__account-social-inst(href="#")
+            a.menu__account-social.menu__account-social-inst(href="#" aria-label="Перейти в Инстаграм")
               +icon("inst-icon", 22, 22)
       .footer__info
         span.footer__info-info &copy; All right reserved by Artyom Polanskiy and Travel Media LLC.

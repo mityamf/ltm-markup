@@ -1,5 +1,9 @@
 .newpage {
   margin-top: 29px;
+
+  @include viewport--sm {
+    margin-top: 0;
+  }
 }
 
 .newpage h2 {
@@ -22,7 +26,6 @@
   font-weight: 400;
   letter-spacing: 0.01em;
   color: $color-gray;
-  margin-top: 15px;
 
   @include viewport--sm {
     position: absolute;
