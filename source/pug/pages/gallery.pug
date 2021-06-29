@@ -45,7 +45,7 @@ block main
             li.gallery__block-item
               h3.title.title--h3 #{item.title} #[span #{item.titleOnlyDesktop}]
               .video__container
-                video.video__player(controls preload="metadata" poster= `${item.img}` src= `${item.src}`)
+                video.video__player(controls muted playsinline preload="metadata" poster= `${item.img}` src= `${item.src}`)
                   button.button.button--transparent(type="button")="More"
     .container
       +renderUpButton('up-button--right up-button--xl')

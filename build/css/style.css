@@ -5950,6 +5950,7 @@ textarea {
   margin: 0;
   vertical-align: top;
   background: #0098c1;
+  border: none;
   border-radius: 30px;
   outline: none;
   margin-left: 8px;
