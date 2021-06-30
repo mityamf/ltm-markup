@@ -13,12 +13,15 @@
 }
 
 .mailing__form .button--transparent {
-  padding: 13px 42px;
+  height: 42px;
 }
 
 .form-fiield {
+  height: 42px;
+
   input {
     width: 100%;
+    height: 100%;
     border: 1px solid $color-blue;
     border-radius: 1px;
     background-color: $color-white;
