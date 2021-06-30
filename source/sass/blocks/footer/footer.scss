@@ -50,8 +50,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  @include viewport--md {
+    flex-wrap: nowrap;
+  }
+
   @include viewport--sm {
     width: 100%;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 28px;
   }
