@@ -2911,10 +2911,12 @@ textarea {
         outline: none !important; } }
   .news-home__button-next {
     right: 10px;
-    left: auto; }
+    left: auto;
+    outline: 0 !important; }
   .news-home__button-prev {
     right: auto;
-    left: 10px; }
+    left: 10px;
+    outline: 0 !important; }
     .news-home__button-prev svg {
       -webkit-transform: rotate(-180deg);
               transform: rotate(-180deg); }
