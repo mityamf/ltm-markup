@@ -1900,7 +1900,8 @@ textarea {
         -ms-flex-align: center;
             align-items: center;
     padding: 0;
-    cursor: pointer; }
+    cursor: pointer;
+    background: transparent; }
     .header__top-link::before {
       position: absolute;
       content: "";
