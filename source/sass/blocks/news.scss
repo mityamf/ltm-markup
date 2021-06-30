@@ -15,6 +15,11 @@
 
   @include viewport--sm {
     padding-top: 0;
+
+    .news-home__info-content {
+      padding-right: 0;
+      padding-left: 0;
+  }
   }
 }
 
