@@ -135,6 +135,10 @@
     right: 0;
   }
 
+  @include viewport--sm {
+    outline: none !important;
+  }
+
   &:hover,
   &:focus {
     opacity: 0.8;
@@ -161,6 +165,10 @@
 
   @media (max-width: 1020px) {
     left: 0;
+  }
+
+  @include viewport--sm {
+    outline: none !important;
   }
 
   &:hover,
@@ -246,8 +254,6 @@
   }
 
   .swiper-slide {
-    //margin-right: 15px;
-
     @include viewport--lg {
       margin-right: 10px;
     }
@@ -279,6 +285,7 @@
 
   .direction__arrow--right {
     top: 72%;
+    color: $color-blue;
 
     @include viewport--lg {
       right: 41px;
@@ -288,11 +295,13 @@
     @include viewport--sm {
       right: 8px;
       top: 45%;
+      color: $color-blue;
     }
   }
 
   .direction__arrow--left {
     top: 72%;
+    color: $color-blue;
 
     @include viewport--lg {
       left: 41px;

@@ -149,10 +149,14 @@
       outline: none;
       cursor: pointer;
       background-color: $color-white;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
 
       &:focus,
       &:hover {
         opacity: 0.8;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
       }
     }
 
@@ -176,6 +180,7 @@
       &:focus,
       &:hover {
         opacity: 0.8;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
       }
     }
 
@@ -245,6 +250,7 @@
     &:focus,
     &:hover {
       opacity: 0.8;
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
     }
   }
 
@@ -277,6 +283,7 @@
       &:focus,
       &:hover {
         opacity: 0.8;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
       }
     }
   }
@@ -425,6 +432,7 @@
   &:focus,
   &:hover {
     opacity: 0.8;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
   }
 }
 
@@ -469,6 +477,7 @@
   &:focus,
   &:hover {
     opacity: 0.8;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
   }
 
   @media (min-width: 1920px) {
@@ -616,6 +625,7 @@
     &:focus,
     &:hover {
       opacity: 0.8;
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
     }
 
     @media (min-width: 1920px) {

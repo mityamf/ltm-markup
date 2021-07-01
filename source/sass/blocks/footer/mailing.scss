@@ -12,9 +12,16 @@
   }
 }
 
+.mailing__form .button--transparent {
+  height: 42px;
+}
+
 .form-fiield {
+  height: 42px;
+
   input {
     width: 100%;
+    height: 42px;
     border: 1px solid $color-blue;
     border-radius: 1px;
     background-color: $color-white;

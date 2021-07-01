@@ -103,10 +103,18 @@
 
   .direction__arrow--left {
     left: -7px;
+
+    @include viewport--sm {
+      outline: none !important;
+    }
   }
 
   .direction__arrow--right {
     right: -7px;
+
+    @include viewport--sm {
+      outline: none !important;
+    }
   }
 }
 

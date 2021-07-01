@@ -76,6 +76,12 @@
     }
   }
 
+  .choices__inner {
+    @include viewport--sm {
+      min-height: 42px !important;
+    }
+  }
+
   &__cell > span {
     display: block;
 
@@ -91,7 +97,6 @@
 
   &__button-wrapper {
     display: flex;
-    column-gap: 10px;
     width: 100%;
 
     @include viewport--sm {
@@ -113,6 +118,10 @@
         padding: 3px;
         height: 100%;
       }
+    }
+
+    .button:first-of-type {
+      margin-right: 10px;
     }
   }
 

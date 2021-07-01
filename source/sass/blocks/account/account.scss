@@ -51,10 +51,18 @@
 
   &__event-wrapper .direction__arrow--right {
     right: -40px;
+
+    @include viewport--sm {
+      outline: none !important;
+    }
   }
 
   &__event-wrapper .direction__arrow--left {
     left: -40px;
+
+    @include viewport--sm {
+      outline: none !important;
+    }
   }
 
   &__event-list {
