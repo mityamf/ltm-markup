@@ -9280,10 +9280,18 @@ textarea {
   position: fixed;
   right: 12%;
   bottom: 10%;
-  z-index: 100; }
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease; }
   @media (max-width: 1800px) {
     .up-button--fixed {
       right: 2%; } }
+
+.up-button--visible {
+  opacity: 1;
+  visibility: visible; }
 
 .up-button--mobile {
   display: block;

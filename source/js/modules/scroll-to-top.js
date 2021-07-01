@@ -21,4 +21,20 @@ const scrollToTop = () => {
   }
 };
 
-export {scrollToTop};
+const onScrollPageHandler = () => {
+  const scrollFixedBtn = document.querySelector('.up-button--fixed');
+
+  if (window.pageYOffset >= window.innerHeight) {
+    scrollFixedBtn.classList.add('up-button--visible');
+  } else {
+    scrollFixedBtn.classList.remove('up-button--visible');
+  }
+};
+
+const initScrollButton = () => {
+  window.addEventListener('scroll', onScrollPageHandler);
+};
+
+export {scrollToTop, initScrollButton};
+
+
