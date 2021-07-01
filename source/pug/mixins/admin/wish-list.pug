@@ -17,7 +17,7 @@ mixin renderWishList(wishList)
             each company in wishList.companyList.columnOne
               li.wish-list__company-item=company
         .admin__mobile-block-wrapper.visible-sm
-          button.button.button--transparent(type="button")="More"
+          button.button.button--transparent.button--more(type="button")="More"
       .wish-list__company-block
         p.wish-list__company-description=wishList.text
         .wish-list__company-wrapper
@@ -26,6 +26,6 @@ mixin renderWishList(wishList)
             each company in wishList.companyList.columnTwo
               li.wish-list__company-item=company
         .admin__button-wrapper.visible-sm
-          button.button.button--transparent(type="button")="More"
-          +renderUpButton('up-button--mobile')
+          button.button.button--transparent.button--more(type="button")="More"
+        +renderUpButton('up-button--mobile')
 

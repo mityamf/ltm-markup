@@ -21,6 +21,7 @@ import {directionSlider} from './modules/sliders/direction-swiper';
 import {initLogin} from './modules/init-login';
 import {initScrollButton, scrollToTop} from './modules/scroll-to-top';
 import {initCookies} from './modules/cookies';
+import {initMoreButton} from './modules/show-more';
 
 // Utils
 // ---------------------------------
@@ -52,3 +53,4 @@ initLogin();
 scrollToTop();
 initScrollButton();
 initCookies();
+initMoreButton();

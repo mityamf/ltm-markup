@@ -5,6 +5,7 @@ mixin renderParticipantList(participantsHeadline, participantsInfo, participants
     - var smallClass = ''
 
   .participants.hidden-sm(class=smallClass)
+    h2.title.title--h2 !{participantsHeadline}
     p.participants__info !{participantsInfo}
     ul.participants__list
       each participant in participantsList
