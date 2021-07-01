@@ -2225,7 +2225,7 @@ textarea {
   height: 42px; }
   .form-fiield input {
     width: 100%;
-    height: 100%;
+    height: 42px;
     border: 1px solid #0098c1;
     border-radius: 1px;
     background-color: #f2f2f2;
@@ -2460,9 +2460,7 @@ textarea {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top; }
+     object-fit: cover; }
 
 .promo__info {
   display: -webkit-box;
@@ -2913,10 +2911,12 @@ textarea {
         outline: none !important; } }
   .news-home__button-next {
     right: 10px;
-    left: auto; }
+    left: auto;
+    outline: 0 !important; }
   .news-home__button-prev {
     right: auto;
-    left: 10px; }
+    left: 10px;
+    outline: 0 !important; }
     .news-home__button-prev svg {
       -webkit-transform: rotate(-180deg);
               transform: rotate(-180deg); }
@@ -3012,7 +3012,7 @@ textarea {
     font-size: 38px;
     font-weight: 300;
     padding-bottom: 20px;
-    padding-top: 3px;
+    padding-top: 2px;
     -webkit-line-clamp: 3; }
   .news-home__info-list {
     padding: 0;
@@ -3770,7 +3770,9 @@ textarea {
       -moz-appearance: none;
       appearance: none; }
       .form-reg__block input:focus, .form-reg__block input:hover {
-        opacity: 0.8; }
+        opacity: 0.8;
+        -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important; }
     .form-reg__block select {
       border: 1px solid #0098c1;
       height: 42px;
@@ -3790,7 +3792,9 @@ textarea {
       text-overflow: ellipsis;
       padding-right: 31px; }
       .form-reg__block select:focus, .form-reg__block select:hover {
-        opacity: 0.8; }
+        opacity: 0.8;
+        -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important; }
     .form-reg__block h3 {
       font-size: 16px;
       margin: 0;
@@ -3837,7 +3841,9 @@ textarea {
         .form-reg__textarea textarea {
           font-size: 24px; } }
     .form-reg__textarea:focus, .form-reg__textarea:hover {
-      opacity: 0.8; }
+      opacity: 0.8;
+      -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+              box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important; }
   .form-reg__upload {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3874,7 +3880,9 @@ textarea {
           -ms-flex-pack: center;
               justify-content: center; }
       .form-reg__upload label:focus, .form-reg__upload label:hover {
-        opacity: 0.8; }
+        opacity: 0.8;
+        -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important; }
   .form-reg__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4001,7 +4009,9 @@ textarea {
     .form-reg__btn {
       font-size: 24px; } }
   .form-reg__btn:focus, .form-reg__btn:hover {
-    opacity: 0.8; }
+    opacity: 0.8;
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important; }
 
 .form-reg__dropdown--open .form-reg__btn {
   z-index: 4;
@@ -4046,7 +4056,9 @@ textarea {
   color: #0098c1;
   font-size: 21px; }
   .form-reg__check + label:focus, .form-reg__check + label:hover {
-    opacity: 0.8; }
+    opacity: 0.8;
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important; }
   @media (min-width: 1920px) {
     .form-reg__check + label {
       padding-left: 7px;
@@ -4190,7 +4202,9 @@ textarea {
     padding-top: 10px;
     padding-bottom: 10px; }
     .form-reg__slider .form-reg__check + label:focus, .form-reg__slider .form-reg__check + label:hover {
-      opacity: 0.8; }
+      opacity: 0.8;
+      -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+              box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important; }
     @media (min-width: 1920px) {
       .form-reg__slider .form-reg__check + label {
         padding-top: 0;
@@ -5766,7 +5780,10 @@ textarea {
       margin-bottom: 30px; } }
   @media (max-width: 767px) {
     .news {
-      padding-top: 0; } }
+      padding-top: 0; }
+      .news .news-home__info-content {
+        padding-right: 0;
+        padding-left: 0; } }
 
 .news__list {
   display: -ms-grid;

@@ -64,11 +64,13 @@
   &__button-next {
     right: 10px;
     left: auto;
+    outline: 0 !important;
   }
 
   &__button-prev {
     right: auto;
     left: 10px;
+    outline: 0 !important;
 
     svg {
       transform: rotate(-180deg);
@@ -191,7 +193,7 @@
     font-size: 38px;
     font-weight: 300;
     padding-bottom: 20px;
-    padding-top: 3px;
+    padding-top: 2px;
     -webkit-line-clamp: 3;
   }
 
