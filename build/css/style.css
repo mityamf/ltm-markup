@@ -1343,7 +1343,7 @@ textarea {
   .button--transparent {
     padding: 12px 42px;
     background-color: transparent; }
-    .button--transparent:hover, .button--transparent:focus {
+    .button--transparent:hover {
       border-color: transparent;
       background-color: #0098c1;
       color: #ffffff; }
@@ -1351,17 +1351,17 @@ textarea {
     background-color: transparent;
     color: #ffffff;
     border: 1px solid #ffffff; }
-    .button--white:hover, .button--white:focus {
+    .button--white:hover {
       border-color: #0098c1;
       background-color: #ffffff;
       color: #0098c1; }
-  .button:hover, .button:focus {
+  .button:hover {
     opacity: 0.8; }
   .button:disabled {
     border-color: #a7a7a7;
     background-color: transparent;
     color: #a7a7a7; }
-    .button:disabled:hover, .button:disabled:focus {
+    .button:disabled:hover {
       border-color: #a7a7a7;
       background-color: transparent;
       color: #a7a7a7;
@@ -1716,7 +1716,7 @@ textarea {
   .choices__item--choice.is-selected::before {
     content: "";
     position: absolute;
-    top: 20px;
+    top: 15px;
     left: 17px;
     width: 11px;
     height: 10px;
@@ -4318,8 +4318,7 @@ textarea {
     display: inline-block;
     background-repeat: no-repeat;
     background-image: url("../img/svg/icon-small-check.svg");
-    background-size: cover;
-    background-color: red; }
+    background-size: cover; }
   .form-reg--select .choices__list--dropdown {
     margin-top: 10px;
     max-height: 340px; }
@@ -5985,6 +5984,7 @@ textarea {
   @media (max-width: 767px) {
     .newpage__date {
       position: absolute;
+      width: auto;
       top: 5px;
       left: 17px; } }
 
@@ -6477,8 +6477,8 @@ textarea {
   .edit__wrapper {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr auto;
-    grid-template-columns: 1fr auto;
+    -ms-grid-columns: 1fr 5fr;
+    grid-template-columns: 1fr 5fr;
     grid-row-gap: 14px; }
     @media (max-width: 767px) {
       .edit__wrapper {
@@ -6519,6 +6519,39 @@ textarea {
         height: auto;
         border-right: none;
         border-left: none; } }
+  .edit textarea {
+    font-size: 16px;
+    line-height: 22px;
+    color: #505050;
+    letter-spacing: 0.1px; }
+    @media (max-width: 767px) {
+      .edit textarea {
+        letter-spacing: 0.2px; } }
+  .edit textarea::-webkit-input-placeholder {
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: lighter;
+    color: #0098c1; }
+  .edit textarea::-moz-placeholder {
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: lighter;
+    color: #0098c1; }
+  .edit textarea:-ms-input-placeholder {
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: lighter;
+    color: #0098c1; }
+  .edit textarea::-ms-input-placeholder {
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: lighter;
+    color: #0098c1; }
+  .edit textarea::placeholder {
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: lighter;
+    color: #0098c1; }
   @media (max-width: 1439px) {
     .edit__text-block p {
       margin: 5px 0 22px; } }

@@ -3,8 +3,13 @@ import Choices from 'choices.js';
 
 const choiceHandler = (choiceElement) => {
   choiceElement.containerInner.element.addEventListener('click', (evt) => {
+    if (!choiceElement.wasOpened) {
+      choiceElement.wasOpened = true;
+      return
+    }
     if (evt.target.closest('.is-open')) {
       choiceElement.hideDropdown();
+      choiceElement.wasOpened = false;
     }
   });
 
@@ -21,13 +26,21 @@ const choiceHandler = (choiceElement) => {
   );
 }
 
-document.querySelectorAll('.input-dropdown')
-  .forEach((item) => {
+const choices = Array.from(document.querySelectorAll('.input-dropdown'))
+  .map((item) => {
     const choiceElement = new Choices(item, {
       searchEnabled: false,
       itemSelectText: '',
       removeItems: false,
       renderSelectedChoices: 'always',
     });
+    choiceElement.wasOpened = false;
     choiceHandler(choiceElement);
+    return choiceElement;
   });
+
+document.documentElement.addEventListener('click', (evt) => {
+  if (!evt.target.closest('.choices')) {
+    choices.forEach((choice) => choice.wasOpened = false)
+  }
+})

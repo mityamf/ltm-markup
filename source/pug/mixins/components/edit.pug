@@ -1,4 +1,4 @@
-mixin renderEditBlock(editingBlockList, buttons, editingBlockStatus)
+mixin renderEditElements(editingBlockList, buttons, editingBlockStatus)
   .edit(class='edit--' + editingBlockStatus)
     .edit__wrapper
       each block, i in editingBlockList
@@ -6,9 +6,14 @@ mixin renderEditBlock(editingBlockList, buttons, editingBlockStatus)
           h3(class="title title--h3 title--big") !{block.title}
         else
           h3(class="title title--h3 title--small") !{block.title}
+
         if block.type === "text"
-          .edit__text-block
-            +renderTextContentBlock(block.content)
+          if editingBlockStatus === "active"
+            textarea.edit__text-block(placeholder="Enter text...") !{block.content}
+          else
+            .edit__text-block
+              +renderTextContentBlock(block.content)
+
         if block.type === "input"
           label.edit__label
             input.edit__input(type="text", placeholder=block.content)
@@ -28,3 +33,10 @@ mixin renderEditBlock(editingBlockList, buttons, editingBlockStatus)
     .edit__buttons(class=buttonModClass)
       each button in buttons.buttonList
         button(class=button.theme + " button ", type=button.type)=button.text
+
+mixin renderEditBlock(editingBlockList, buttons, editingBlockStatus)
+  if editingBlockStatus === "active"
+    form
+      +renderEditElements(editingBlockList, buttons, editingBlockStatus)
+  else
+    +renderEditElements(editingBlockList, buttons, editingBlockStatus)
