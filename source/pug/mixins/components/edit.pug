@@ -6,9 +6,14 @@ mixin renderEditElements(editingBlockList, buttons, editingBlockStatus)
           h3(class="title title--h3 title--big") !{block.title}
         else
           h3(class="title title--h3 title--small") !{block.title}
+
         if block.type === "text"
-          .edit__text-block
-            +renderTextContentBlock(block.content)
+          if editingBlockStatus === "active"
+            textarea.edit__text-block(placeholder="Enter text...") !{block.content}
+          else
+            .edit__text-block
+              +renderTextContentBlock(block.content)
+
         if block.type === "input"
           label.edit__label
             input.edit__input(type="text", placeholder=block.content)

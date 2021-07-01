@@ -6471,8 +6471,8 @@ textarea {
   .edit__wrapper {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr auto;
-    grid-template-columns: 1fr auto;
+    -ms-grid-columns: 1fr 5fr;
+    grid-template-columns: 1fr 5fr;
     grid-row-gap: 14px; }
     @media (max-width: 767px) {
       .edit__wrapper {
@@ -6513,6 +6513,39 @@ textarea {
         height: auto;
         border-right: none;
         border-left: none; } }
+  .edit textarea {
+    font-size: 16px;
+    line-height: 22px;
+    color: #505050;
+    letter-spacing: 0.1px; }
+    @media (max-width: 767px) {
+      .edit textarea {
+        letter-spacing: 0.2px; } }
+  .edit textarea::-webkit-input-placeholder {
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: lighter;
+    color: #0098c1; }
+  .edit textarea::-moz-placeholder {
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: lighter;
+    color: #0098c1; }
+  .edit textarea:-ms-input-placeholder {
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: lighter;
+    color: #0098c1; }
+  .edit textarea::-ms-input-placeholder {
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: lighter;
+    color: #0098c1; }
+  .edit textarea::placeholder {
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: lighter;
+    color: #0098c1; }
   @media (max-width: 1439px) {
     .edit__text-block p {
       margin: 5px 0 22px; } }
