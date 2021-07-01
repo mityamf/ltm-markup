@@ -9995,7 +9995,7 @@ textarea {
     margin: 0 auto;
     display: block; }
   .admin--mobile .info-block {
-    padding-bottom: 27px; } }
+    padding-bottom: 0; } }
 
 .admin__download-list {
   list-style-type: none;
