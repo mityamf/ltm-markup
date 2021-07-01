@@ -19,7 +19,7 @@ import {buyerSwiper} from './modules/sliders/buyer-swiper';
 import {directionSlider} from './modules/sliders/direction-swiper';
 // import {initResizePhotos} from './modules/admin-gallery';
 import {initLogin} from './modules/init-login';
-import {scrollToTop} from './modules/scroll-to-top';
+import {initScrollButton, scrollToTop} from './modules/scroll-to-top';
 import {initCookies} from './modules/cookies';
 
 // Utils
@@ -50,4 +50,5 @@ buyerSwiper();
 directionSlider();
 initLogin();
 scrollToTop();
+initScrollButton();
 initCookies();
