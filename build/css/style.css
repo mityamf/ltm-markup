@@ -5434,16 +5434,22 @@ textarea {
         -ms-flex-align: center;
             align-items: center;
     min-height: 55px; }
-  .gallery .button {
-    width: 222px;
-    margin-top: 38px;
-    margin-left: auto;
-    margin-right: auto; }
   .gallery .title--h2 {
     margin-bottom: 5px; }
   .gallery .title--h2,
   .gallery .title--h3 {
     letter-spacing: 0.01em; }
+  .gallery .button {
+    display: none; }
+  @media (max-width: 1023px) {
+    .gallery .button {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 222px;
+      margin-top: 38px;
+      margin-left: auto;
+      margin-right: auto; } }
   @media (max-width: 767px) {
     .gallery {
       margin-top: 30px; }
