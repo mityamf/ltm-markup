@@ -1,5 +1,43 @@
 import Choices from 'choices.js';
 
+Choices.prototype._onMouseDownOld = Choices.prototype._onMouseDown;
+Choices.prototype._onMouseDown = function(evt) {
+  if (evt.target.dataset.value && evt.target.dataset.value.toLowerCase() === 'SelectAll'.toLowerCase()) {
+    if (this.getValue().length < this._store.choices.length - 1) {
+      const elements = [];
+      this.removeActiveItems();
+      for (let choice of this._store.choices) {
+        choice.choiceId = choice.id
+        if (choice.value.toLowerCase() === 'SelectAll'.toLowerCase()) {
+          this._addItem(choice);
+        } else {
+          elements.push(choice);
+        }
+      }
+      elements.forEach((element) => this._addItem(element));
+    } else {
+      this.removeActiveItems();
+      for (let choice of this._store.choices) {
+        choice.choiceId = choice.id
+        if (choice.value.toLowerCase() === 'SelectAll'.toLowerCase()) {
+          this._addItem(choice);
+        }
+      }
+    }
+    return
+  }
+  Choices.prototype._onMouseDownOld.call(this, evt)
+}
+
+const setSelectAll = (choices) => {
+  for (let choice of choices._store.choices) {
+    if (choice.value.toLowerCase() === 'SelectAll'.toLowerCase()) {
+      choice.choiceId = choice.id
+      choices._addItem(choice);
+      return;
+    }
+  }
+}
 
 const choiceHandler = (choiceElement) => {
   choiceElement.containerInner.element.addEventListener('click', (evt) => {
@@ -36,6 +74,7 @@ const choices = Array.from(document.querySelectorAll('.input-dropdown'))
     });
     choiceElement.wasOpened = false;
     choiceHandler(choiceElement);
+    setSelectAll(choiceElement);
     return choiceElement;
   });
 

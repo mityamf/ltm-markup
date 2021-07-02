@@ -680,6 +680,10 @@
   }
 }
 
+[data-value="SelectAll"] {
+  display: none;
+}
+
 .form-reg__block--checkbox .choices__list--dropdown .choices__item--selectable::before {
   position: absolute;
   display: block;
@@ -693,6 +697,12 @@
 
 .form-reg__block--checkbox {
   position: relative;
+}
+
+.select-all {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .form-reg__checkbox-title {

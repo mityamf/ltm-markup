@@ -4246,6 +4246,9 @@ textarea {
     padding-left: 35px;
     border-color: #a7a7a7; }
 
+[data-value="SelectAll"] {
+  display: none; }
+
 .form-reg__block--checkbox .choices__list--dropdown .choices__item--selectable::before {
   position: absolute;
   display: block;
@@ -4258,6 +4261,11 @@ textarea {
 
 .form-reg__block--checkbox {
   position: relative; }
+
+.select-all {
+  position: absolute;
+  top: 0;
+  left: 0; }
 
 .form-reg__checkbox-title {
   position: absolute;
@@ -11324,10 +11332,10 @@ textarea {
 
 .info-block {
   display: inline-block;
-  padding-left: 30px; }
+  padding: 26px 0 26px 30px; }
   @media (max-width: 767px) {
     .info-block {
-      padding-left: 0; } }
+      padding: 0; } }
   .info-block__top-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
