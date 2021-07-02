@@ -3483,40 +3483,36 @@
               </div>
             </div>
           </div>
-          <div class="edit edit--active">
-            <div class="edit__wrapper">
-              <h3 class="title title--h3 title--big">Description of Company:</h3>
-              <div class="edit__text-block">
-                <p>Mandarin Oriental Hotel Group is the award-winning owner and operator of some of the world’s most prestigious hotels, resorts and residences. Over the past fifty years, the Group has grown its business from its original flagship properties in Asia – the acclaimed Mandarin Oriental, Hong Kong and Mandarin Oriental, Bangkok – to successfully operate in major business centres and key leisure destinations around the world.</p>
-                <p>Mandarin Oriental’s aim is to be recognized widely as the best global luxury hotel group, providing 21st century luxury with oriental charm in each of its hotels. Mandarin Oriental now operates 31 hotels and eight residences in 21 countries and territories, with each property reflecting the Group’s oriental heritage and unique sense of place.</p>
-                <p>The multi-award winning Spas at Mandarin Oriental are havens for contemplation and discovery. The Spa at Mandarin Oriental, Bangkok was one of the very first hotel spas to open in 1993.</p>
-                <p>A leader in the spa field, the Group was the first to launch its signature “Time Ritual” which encourages guests to book time rather than specific treatments, so that services can be tailor-made to meet specific needs.</p>
-                <p>Mandarin Oriental offers some of the most exciting hotel dining in the world today. The Group’s passion for creating memorable dining experiences has been recognized in the Michelin Guide, with a total of 21 Michelin stars being awarded to 14 diverse restaurants from around the world in the 2018 list. This is more than any other hotel brand in the world.</p>
+          <form>
+            <div class="edit edit--active">
+              <div class="edit__wrapper">
+                <h3 class="title title--h3 title--big">Description of Company:</h3>
+                <textarea class="edit__text-block" placeholder="Enter text...">Mandarin Oriental Hotel Group is the award-winning owner and operator of some of the world’s most prestigious hotels, resorts and residences. Over the past fifty years, the Group has grown its business from its original flagship properties in Asia – the acclaimed Mandarin Oriental, Hong Kong and Mandarin Oriental, Bangkok – to successfully operate in major business centres and key leisure destinations around the world.,Mandarin Oriental’s aim is to be recognized widely as the best global luxury hotel group, providing 21st century luxury with oriental charm in each of its hotels. Mandarin Oriental now operates 31 hotels and eight residences in 21 countries and territories, with each property reflecting the Group’s oriental heritage and unique sense of place.,The multi-award winning Spas at Mandarin Oriental are havens for contemplation and discovery. The Spa at Mandarin Oriental, Bangkok was one of the very first hotel spas to open in 1993.,A leader in the spa field, the Group was the first to launch its signature “Time Ritual” which encourages guests to book time rather than specific treatments, so that services can be tailor-made to meet specific needs.,Mandarin Oriental offers some of the most exciting hotel dining in the world today. The Group’s passion for creating memorable dining experiences has been recognized in the Michelin Guide, with a total of 21 Michelin stars being awarded to 14 diverse restaurants from around the world in the 2018 list. This is more than any other hotel brand in the world.</textarea>
+                <h3 class="title title--h3 title--small">Official web&#8209;site:</h3>
+                <label class="edit__label">
+                  <input class="edit__input" type="text" placeholder="https://www.mandarinoriental.com"/>
+                </label>
+                <h3 class="title title--h3 title--small">Area of business:</h3>
+                <div class="edit__select-wrapper">
+                  <select class="input-dropdown" id="hotel-editor-select-2">
+                    <option class="input-dropdown__option" value="Hotel group">Hotel group</option>
+                    <option class="input-dropdown__option" value="Hello, hello">Hello, hello</option>
+                  </select>
+                </div>
+                <h3 class="title title--h3 title--small">Country of business:</h3>
+                <div class="edit__select-wrapper">
+                  <select class="input-dropdown" id="hotel-editor-select-3">
+                    <option class="input-dropdown__option" value="Worldwide">Worldwide</option>
+                    <option class="input-dropdown__option" value="Hello, hello">Hello, hello</option>
+                  </select>
+                </div>
               </div>
-              <h3 class="title title--h3 title--small">Official web&#8209;site:</h3>
-              <label class="edit__label">
-                <input class="edit__input" type="text" placeholder="https://www.mandarinoriental.com"/>
-              </label>
-              <h3 class="title title--h3 title--small">Area of business:</h3>
-              <div class="edit__select-wrapper">
-                <select class="input-dropdown" id="hotel-editor-select-2">
-                  <option class="input-dropdown__option" value="Hotel group">Hotel group</option>
-                  <option class="input-dropdown__option" value="Hello, hello">Hello, hello</option>
-                </select>
-              </div>
-              <h3 class="title title--h3 title--small">Country of business:</h3>
-              <div class="edit__select-wrapper">
-                <select class="input-dropdown" id="hotel-editor-select-3">
-                  <option class="input-dropdown__option" value="Worldwide">Worldwide</option>
-                  <option class="input-dropdown__option" value="Hello, hello">Hello, hello</option>
-                </select>
+              <div class="edit__buttons edit__buttons--left">
+                <button class="button--transparent button " type="reset">Cancel</button>
+                <button class="button--blue button " type="submit">Save</button>
               </div>
             </div>
-            <div class="edit__buttons edit__buttons--left">
-              <button class="button--transparent button " type="reset">Cancel</button>
-              <button class="button--blue button " type="submit">Save</button>
-            </div>
-          </div>
+          </form>
         </div>
       </main>
       <footer class="container">
@@ -3591,6 +3587,11 @@
           </button>
         </div>
       </div>
+    </div>
+    <div class="hidden-sm"><a class="up-button up-button--fixed" href="#top" aria-label="Вернуться в начало">
+        <svg width="54" height="54" aria-hidden="true">
+          <use xlink:href="#icon-arrow-up"></use>
+        </svg></a>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

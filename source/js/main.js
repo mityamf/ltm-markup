@@ -19,8 +19,9 @@ import {buyerSwiper} from './modules/sliders/buyer-swiper';
 import {directionSlider} from './modules/sliders/direction-swiper';
 // import {initResizePhotos} from './modules/admin-gallery';
 import {initLogin} from './modules/init-login';
-import {scrollToTop} from './modules/scroll-to-top';
+import {initScrollButton, scrollToTop} from './modules/scroll-to-top';
 import {initCookies} from './modules/cookies';
+import {initMoreButton} from './modules/show-more';
 
 // Utils
 // ---------------------------------
@@ -50,4 +51,6 @@ buyerSwiper();
 directionSlider();
 initLogin();
 scrollToTop();
+initScrollButton();
 initCookies();
+initMoreButton();

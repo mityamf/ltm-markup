@@ -103,7 +103,7 @@
   &__control-wrapper {
     display: grid;
     grid-template-areas: "tabs tabs" "title control";
-    padding-bottom: 18px;
+    padding: 18px 0;
 
     @include viewport--sm {
       grid-template-areas: "tabs control" "title title";
@@ -222,7 +222,7 @@
       }
 
       .info-block {
-        padding-bottom: 27px;
+        padding-bottom: 0;
       }
     }
   }

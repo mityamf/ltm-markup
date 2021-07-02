@@ -69,13 +69,14 @@
       overflow: hidden;
       text-overflow: ellipsis;
       max-height: 143px;
-      display: -moz-box;
-      -moz-box-orient: vertical;
-      display: -webkit-box;
-      -webkit-line-clamp: 5;
-      -webkit-box-orient: vertical;
-      line-clamp: 5;
-      box-orient: vertical;
+      transition: max-height $default-transition-settings;
+    }
+  }
+
+  &__text-wrapper--visible > .text-content {
+    @include viewport--sm {
+      overflow: visible;
+      max-height: none;
     }
   }
 

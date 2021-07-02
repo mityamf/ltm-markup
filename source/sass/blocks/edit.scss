@@ -20,7 +20,7 @@
 
   &__wrapper {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 5fr;
     grid-row-gap: 14px;
 
     @include viewport--sm {
@@ -66,13 +66,32 @@
     border: 1px solid;
 
     @include viewport--sm {
-      padding: 14px 0 0 0;
+      padding: 14px 0;
       min-height: 231px;
       height: auto;
 
       border-right: none;
       border-left: none;
     }
+  }
+
+  textarea {
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-gray-dark;
+    letter-spacing: 0.1px;
+
+    @include viewport--sm {
+      width: 100%;
+      letter-spacing: 0.2px;
+    }
+  }
+
+  textarea::placeholder {
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: lighter;
+    color: #0098c1;
   }
 
   &__text-block p {

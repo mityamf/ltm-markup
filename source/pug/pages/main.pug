@@ -8,6 +8,34 @@ block variables
   - var hasFooter = true
   - var footerMod = ""
   - var currentPage = "main" //- для остальных страниц пишем либо пустую строку, либо индекс
+  - var hasUpButton = true
+  -
+    var modalImages = [
+      {
+        src: "gallery-1",
+        altText: "Фото"
+      },
+      {
+        src: "gallery-2",
+        altText: "Фото"
+      },
+      {
+        src: "gallery-3",
+        altText: "Фото"
+      },
+      {
+        src: "gallery-4",
+        altText: "Фото"
+      },
+      {
+        src: "gallery-5",
+        altText: "Фото"
+      },
+      {
+        src: "gallery-6",
+        altText: "Фото"
+      },
+    ]
 
 block main
   main
@@ -46,4 +74,8 @@ block main
       +news-home
       +interaction
       +partners
+
 block modals
+  +modal("modal--gallery")
+    +modal-gallery(modalImages)
+

@@ -31,8 +31,7 @@
     padding: 12px 42px;
     background-color: transparent;
 
-    &:hover,
-    &:focus {
+    &:hover {
       border-color: transparent;
       background-color: $color-blue;
 
@@ -45,8 +44,7 @@
     color: $color-default-white;
     border: 1px solid $color-default-white;
 
-    &:hover,
-    &:focus {
+    &:hover {
       border-color: $color-blue;
       background-color: $color-default-white;
 
@@ -54,8 +52,7 @@
     }
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     opacity: 0.8;
   }
 
@@ -65,8 +62,7 @@
 
     color: $color-gray;
 
-    &:hover,
-    &:focus {
+    &:hover {
       border-color: $color-gray;
       background-color: transparent;
 

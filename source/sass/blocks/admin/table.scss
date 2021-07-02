@@ -123,6 +123,10 @@
     .button:first-of-type {
       margin-right: 10px;
     }
+
+    span:first-of-type {
+      margin-right: 10px;
+    }
   }
 
   &__cell--button {
@@ -162,6 +166,11 @@
       display: block;
       width: 95%;
     }
+
+    span {
+      font-size: 12px;
+      line-height: 20px;
+    }
   }
 
   &__cell--company {
@@ -181,11 +190,13 @@
     @include viewport--sm {
       display: inline-flex;
       flex-wrap: wrap;
-      width: 48%;
+      width: 50%;
 
       span {
         display: block;
         width: 100%;
+        font-size: 12px;
+        line-height: 20px;
       }
     }
   }
