@@ -51,4 +51,5 @@ block main
                   source(type="video/mp4" src= `${item.src}`)
         button.button.button--transparent(type="button")="More"
     .container
-      +renderUpButton('up-button--right up-button--xl')
+      .visible-sm
+        +renderUpButton('up-button--mobile')

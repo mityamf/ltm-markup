@@ -8,7 +8,9 @@ const onMoreButtonHandler = () => {
 
 const initMoreButton = () => {
   const showMoreButton = document.querySelector('.open-more__button');
-  showMoreButton.addEventListener('click', onMoreButtonHandler);
+  if (showMoreButton) {
+    showMoreButton.addEventListener('click', onMoreButtonHandler);
+  }
 };
 
 export {initMoreButton};
