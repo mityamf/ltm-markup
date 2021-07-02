@@ -124,11 +124,7 @@
 
     &:hover,
     &:focus {
-      opacity: 0.8;
-    }
-
-    &:active {
-      opacity: 0.5;
+      border-color: rgba(0, 152, 193, 0.8);
     }
 
     @include viewport--sm {
