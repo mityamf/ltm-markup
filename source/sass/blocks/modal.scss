@@ -116,6 +116,8 @@
 }
 
 .modal--gallery {
+  transition: opacity $modal-transition-settings, transform $modal-transition-settings;
+
   .modal__wrapper {
     padding-left: 174px;
     padding-right: 174px;
