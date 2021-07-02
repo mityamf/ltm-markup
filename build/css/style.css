@@ -6605,9 +6605,7 @@ textarea {
     width: 100%;
     cursor: pointer; }
     .edit__label:hover, .edit__label:focus {
-      opacity: 0.8; }
-    .edit__label:active {
-      opacity: 0.5; }
+      border-color: rgba(0, 152, 193, 0.8); }
     @media (max-width: 767px) {
       .edit__label {
         margin-bottom: 20px; } }
