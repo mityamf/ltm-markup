@@ -1151,6 +1151,14 @@ label,
 select {
   -webkit-tap-highlight-color: transparent;
   outline: none; }
+  @media (max-width: 767px) {
+    input,
+    button,
+    textarea,
+    label,
+    select {
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+      -webkit-tap-highlight-color: transparent; } }
 
 @media (min-width: 768px) {
   .visible-sm {
@@ -1210,10 +1218,6 @@ textarea {
   font-size: 24px;
   line-height: 29px;
   font-weight: lighter; }
-  textarea:hover, textarea:focus {
-    opacity: 0.8; }
-  textarea:active {
-    opacity: 0.5; }
 
 .hidden {
   display: none !important; }
@@ -2637,8 +2641,8 @@ textarea {
   background-color: transparent; }
 
 .direction__arrow svg {
-  width: 11px;
-  height: 19px;
+  width: 19px;
+  height: 30px;
   color: #0098c1; }
 
 .direction__arrow--right {
@@ -2803,6 +2807,9 @@ textarea {
     .direction--exhibitors .direction__arrow--right {
       right: 41px;
       top: 75%; } }
+  @media (max-width: 1023px) {
+    .direction--exhibitors .direction__arrow--right {
+      right: 0; } }
   @media (max-width: 767px) {
     .direction--exhibitors .direction__arrow--right {
       right: 8px;
@@ -2816,6 +2823,9 @@ textarea {
     .direction--exhibitors .direction__arrow--left {
       left: 41px;
       top: 75%; } }
+  @media (max-width: 1023px) {
+    .direction--exhibitors .direction__arrow--left {
+      left: 0; } }
   @media (max-width: 767px) {
     .direction--exhibitors .direction__arrow--left {
       left: 8px;
@@ -2908,7 +2918,11 @@ textarea {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        outline: none !important; } }
+        outline: none !important;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        -webkit-tap-highlight-color: transparent; }
+        .news-home__button-next:active, .news-home__button-prev:active {
+          outline: none !important; } }
   .news-home__button-next {
     right: 10px;
     left: auto;
@@ -3962,6 +3976,20 @@ textarea {
       grid-template-columns: repeat(1, 1fr);
       row-gap: 10px; } }
 
+.form-reg__select-avaliable {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  -webkit-transition: height 0.3s ease;
+  transition: height 0.3s ease;
+  visibility: visible;
+  overflow: visible; }
+
+.form-reg__hidden {
+  height: 0;
+  overflow: hidden;
+  visibility: hidden; }
+
 .form-reg__dropdown {
   position: relative;
   max-width: 462px;
@@ -4949,7 +4977,7 @@ textarea {
         width: 100%;
         padding: 80px 40px;
         overflow: scroll;
-        max-height: 100vh;
+        max-height: 80vh;
         min-height: -webkit-max-content;
         min-height: -moz-max-content;
         min-height: max-content; } }
