@@ -121,13 +121,8 @@ select {
 
   transition: border-color $default-transition-settings;
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: rgba(0, 152, 193, 0.7);
-  }
-
-  &:active {
-    border-color: rgba(0, 152, 193, 0.5);
   }
 }
 
@@ -139,6 +134,10 @@ textarea {
   font-size: 24px;
   line-height: 29px;
   font-weight: lighter;
+
+  &:hover {
+    border-color: rgba(0, 152, 193, 0.7);
+  }
 }
 
 .hidden {

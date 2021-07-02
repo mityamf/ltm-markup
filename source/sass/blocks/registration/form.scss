@@ -377,16 +377,15 @@
 }
 
 .form-reg__select-avaliable {
-  height: max-content;
+  height: auto;
   transition: height $default-transition-settings;
   visibility: visible;
-  overflow: visible;
 }
 
 .form-reg__hidden {
   height: 0;
-  overflow: hidden;
   visibility: hidden;
+  overflow: hidden;
 }
 
 .form-reg__dropdown {

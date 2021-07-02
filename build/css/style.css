@@ -1203,13 +1203,9 @@ select {
   line-height: 29px;
   -webkit-transition: border-color 0.3s ease;
   transition: border-color 0.3s ease; }
-  .input-wrapper ~ input:hover, .input-wrapper ~ input:focus,
-  .input-wrapper > input:hover,
-  .input-wrapper > input:focus {
+  .input-wrapper ~ input:hover,
+  .input-wrapper > input:hover {
     border-color: rgba(0, 152, 193, 0.7); }
-  .input-wrapper ~ input:active,
-  .input-wrapper > input:active {
-    border-color: rgba(0, 152, 193, 0.5); }
 
 textarea {
   border: 1px solid #0098c1;
@@ -1218,6 +1214,8 @@ textarea {
   font-size: 24px;
   line-height: 29px;
   font-weight: lighter; }
+  textarea:hover {
+    border-color: rgba(0, 152, 193, 0.7); }
 
 .hidden {
   display: none !important; }
@@ -3977,18 +3975,15 @@ textarea {
       row-gap: 10px; } }
 
 .form-reg__select-avaliable {
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  height: auto;
   -webkit-transition: height 0.3s ease;
   transition: height 0.3s ease;
-  visibility: visible;
-  overflow: visible; }
+  visibility: visible; }
 
 .form-reg__hidden {
   height: 0;
-  overflow: hidden;
-  visibility: hidden; }
+  visibility: hidden;
+  overflow: hidden; }
 
 .form-reg__dropdown {
   position: relative;
