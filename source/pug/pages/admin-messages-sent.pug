@@ -17,7 +17,7 @@ block main
         +renderAdminHeadline(adminHeadline.eventName, adminHeadline.eventPlace, adminHeadline.dates, adminHeadline.backLink)
         +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText)
 
-        .admin__control-wrapper
+        .admin__control-wrapper.admin__control-wrapper--has-control
           +renderAdminTabs(adminTabs, modal=false, menu=true)
           +renderMailControl(adminMailControl.linkList, adminMailControl.isSearchInput)
           h2.title.title--h2="Sent"
