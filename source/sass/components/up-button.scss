@@ -59,7 +59,11 @@
 }
 
 .up-button--mobile {
-  display: block;
-  margin: 25px auto 25px auto;
-  text-align: center;
+  display: none;
+
+  @include viewport--sm {
+    display: block;
+    margin: 25px auto 25px auto;
+    text-align: center;
+  }
 }

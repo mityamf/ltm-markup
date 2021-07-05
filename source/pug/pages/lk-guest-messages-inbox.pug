@@ -20,7 +20,7 @@ block main
           +renderParticipantList(participantsHeadline, participantsInfo, participantsList, participantsText, true)
           +renderInfoBlock(infoBlock)
 
-        .admin__control-wrapper
+        .admin__control-wrapper.admin__control-wrapper--has-control
           +renderAdminTabs(adminTabs, modal=false, menu=true)
           +renderMailControl(adminMailControl.linkList, adminMailControl.isSearchInput)
           h2.title.title--h2.visible-sm="Входящие"

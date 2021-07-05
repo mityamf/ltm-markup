@@ -214,3 +214,11 @@
     }
   }
 }
+
+.admin__control-wrapper--has-control .tabs--menu {
+  padding-bottom: 20px;
+
+  @include viewport--sm {
+    padding-bottom: 0;
+  }
+}

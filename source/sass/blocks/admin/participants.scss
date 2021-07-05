@@ -19,7 +19,7 @@
 
   &__list {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: flex-start;
     padding: 41px 0;
     column-gap: 15px;
@@ -28,6 +28,10 @@
 
     @include viewport--lg {
       padding: 40px 0;
+    }
+
+    @media (max-width: 1275px) {
+      flex-wrap: wrap;
     }
 
     @include viewport--sm {
